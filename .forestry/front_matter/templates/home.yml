@@ -23,6 +23,28 @@ fields:
         schema:
           format: markdown
       label: body
+    - name: image
+      type: file
+      config:
+        maxSize: 250
+      label: image
+    - name: link
+      type: select
+      default: []
+      config:
+        required: false
+        options: []
+        source:
+          type: pages
+          section: 
+          file: 
+          path: 
+      label: link
+    - name: button_title
+      type: text
+      config:
+        required: false
+      label: Button title
     config:
       min: 
       max: 
