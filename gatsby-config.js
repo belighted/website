@@ -1,5 +1,5 @@
-const config = require("./config.json")
-const infoData = require("./content/data/info.json")
+const config = require("./config.json");
+const infoData = require("./content/data/info.json");
 
 module.exports = {
   //this makes the site config available to forestry cms
@@ -28,25 +28,25 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
-        path: `${__dirname}/content/posts`
+        path: `${__dirname}/en/content/posts`
       }
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "data",
-        path: `${__dirname}/content/data`,
+        path: `${__dirname}/en/content/data`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: "images",
-        path: `${__dirname}/content/images`,
+        path: `${__dirname}/en/content/images`,
       },
     },
     {
-      resolve: "gatsby-plugin-sharp", 
+      resolve: "gatsby-plugin-sharp",
       options: {
         defaultQuality: 75
       }

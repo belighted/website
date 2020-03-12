@@ -1,0 +1,14 @@
+{
+  "description": "belighted.com",
+  "cta": "A CTA",
+  "contact": {
+    "email": "info@forestry.io",
+    "twitter_handle": "belighted",
+    "github_handle": "belighted",
+    "address": {
+      "street" : "Place de l'université 25",
+      "city" : "1348 Louvain-la-Neuve"
+    }
+  },
+  "background_color": "#B1BCBC"
+}
