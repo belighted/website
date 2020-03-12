@@ -1,6 +1,11 @@
 ---
 hero:
   slide:
+  - title: SaaS development Agency
+    body: 'We help Startups, Scale ups & software publishers deliver a revolutionary
+      digital product loved by their clients '
+    link: content/home/home.fr.yml
+    button_title: Estimate project
   - title: Better Software Products Faster.
     link: content/home/home.en.yml
     button_title: Estimate project
