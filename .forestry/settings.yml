@@ -9,8 +9,6 @@ sections:
   label: Home
   create: none
   match: "**/*"
-  templates:
-  - home
 - type: heading
   label: Content
 - type: directory
