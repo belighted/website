@@ -1,4 +1,31 @@
 ---
 label: Home
 hide_body: true
-fields: []
+fields:
+- name: hero
+  type: field_group
+  config: {}
+  fields:
+  - name: slide
+    type: field_group_list
+    fields:
+    - name: title
+      type: text
+      config:
+        required: false
+      label: Title
+    - name: body
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: body
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: Slide
+  label: hero
