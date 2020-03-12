@@ -1,0 +1,88 @@
+---
+label: Home
+hide_body: true
+fields:
+- type: text
+  name: lang
+  label: lang
+- type: text
+  name: slug
+  label: slug
+- type: field_group
+  name: sections
+  label: sections
+  fields:
+  - type: field_group_list
+    name: hero
+    label: hero
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: textarea
+      name: body
+      label: body
+    - type: field_group_list
+      name: buttons
+      label: buttons
+      fields:
+      - type: text
+        name: title
+        label: title
+      - type: text
+        name: link
+        label: link
+  - type: field_group
+    name: services
+    label: services
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: textarea
+      name: body
+      label: body
+  - type: field_group
+    name: process
+    label: process
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: textarea
+      name: body
+      label: body
+  - type: field_group
+    name: cases
+    label: cases
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: textarea
+      name: body
+      label: body
+  - type: field_group
+    name: statistics
+    label: statistics
+    fields:
+    - type: text
+      name: title
+      label: title
+  - type: field_group
+    name: testimonials
+    label: testimonials
+    fields:
+    - type: textarea
+      name: title
+      label: title
+  - type: field_group
+    name: blog
+    label: blog
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: body
+      label: body
