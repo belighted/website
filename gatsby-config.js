@@ -28,14 +28,21 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "posts",
-        path: `${__dirname}/content/en/posts`
+        path: `${__dirname}/content/posts`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "cases",
+        path: `${__dirname}/content/cases`
       }
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "data",
-        path: `${__dirname}/content/en/data`,
+        path: `${__dirname}/content/data`,
       },
     },
     {
