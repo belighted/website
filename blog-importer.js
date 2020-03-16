@@ -20,12 +20,15 @@ const getArticles = async urls => {
         u =>
           new Promise((resolve, reject) => {
             console.log("reading ", u)
+              const slug = u
+                      .replace("/fr", "")
+                      .replace("https://www.belighted.com/blog/", "");
+              console.log("slug ", slug);
+
             read(u, function(err, article, meta) {
               if (err) reject(err)
               resolve({
-                slug: u
-                  .replace("/fr/", "")
-                  .replace("https://www.belighted.com/blog/", ""),
+                slug,
                 originalPath: u,
                 article: {
                   title: article.title,
