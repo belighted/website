@@ -1,4 +1,5 @@
 const fs = require("fs")
+const YAML = require("json-to-pretty-yaml")
 
 const data = [
   {
@@ -19,14 +20,12 @@ const data = [
   {
     slug: "consultation_call_resources",
     title: "Receive a 20-Minute Product Development Assessment",
+    cta: "Book your risk free call →",
   },
   {
-    slug: "Book your risk free call →",
-    title: "code_review_resources",
-  },
-  {
-    slug: "Code Review Audit",
-    title: "Learn More →",
+    slug: "code_review_resources",
+    title: "Code Review Audit",
+    cta: "Learn More →",
   },
   {
     slug: "UX_audit_resources",
@@ -48,17 +47,20 @@ const data = [
     title: "Design Sprint / Clickable Prototype",
     cta: "Get your prototype →",
   },
-];
+]
 
-data.forEach(data=>{
-  const path = `${__dirname}`
+;[{ path: "", value: "en" }, { path: "fr/", value: "fr" }].forEach(lang => {
+  data.forEach(data => {
+    const path = `${__dirname}/content/resources/${data.slug}.${lang.value}.yml`
 
-  console.log(path);
-  /*
-  fs.writeFile('helloworld.txt', 'Hello World!', function (err) {
-    if (err) return console.log(err);
-    console.log('Hello World > helloworld.txt');
-  });
-  */
-});
 
+    const content = YAML.stringify({lang: lang.value, ...data});
+    console.log(content);
+
+    fs.writeFile(path.toLowerCase(), content, function (err) {
+      if (err) return console.log(err);
+      console.log("created", path);
+    });
+
+  })
+})
