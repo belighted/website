@@ -1,0 +1,22 @@
+---
+label: Testimonial
+hide_body: true
+fields:
+- type: text
+  name: slug
+  label: slug
+- type: text
+  name: lang
+  label: lang
+- type: text
+  name: author
+  label: author
+- type: text
+  name: client
+  label: client
+- type: text
+  name: role
+  label: role
+- type: textarea
+  name: body
+  label: body
