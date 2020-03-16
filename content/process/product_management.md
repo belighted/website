@@ -3,6 +3,7 @@ lang: en
 slug: product_management
 title: Product Management
 subtitle: Scale your idea
-short_description: We are your product team on demand improving your software with agile development sprints strategically prioritized on your customers’ needs.
+intro: When you are scaling your product, you need a trusted product partner to keep on improving your software. We are your product team on demand advising your team or improving your software with agile development sprints strategically prioritized on your customers’ needs.
+description: We are your product team on demand improving your software with agile development sprints strategically prioritized on your customers’ needs.
 objective: Development sprints
 duration: On demand
