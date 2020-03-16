@@ -1,5 +1,5 @@
-const config = require("./config.json");
-const infoData = require("./content/data/info.json");
+const config = require("./config.json")
+const infoData = require("./content/data/info.json")
 
 module.exports = {
   //this makes the site config available to forestry cms
@@ -10,7 +10,7 @@ module.exports = {
     about: config.about,
     contact: config.contact,
     primaryColor: config.primary_color,
-    infoData: infoData
+    infoData: infoData,
   },
   plugins: [
     "gatsby-plugin-sass",
@@ -27,22 +27,50 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "posts",
-        path: `${__dirname}/content/posts`
-      }
+        name: "resources",
+        path: `${__dirname}/content/resources`,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "cases",
-        path: `${__dirname}/content/cases`
-      }
+        path: `${__dirname}/content/cases`,
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "data",
         path: `${__dirname}/content/data`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "partials",
+        path: `${__dirname}/content/partials`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "testimonials",
+        path: `${__dirname}/content/testimonials`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "services",
+        path: `${__dirname}/content/services`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "process",
+        path: `${__dirname}/content/process`,
       },
     },
     {
@@ -55,8 +83,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sharp",
       options: {
-        defaultQuality: 75
-      }
+        defaultQuality: 75,
+      },
     },
     `gatsby-transformer-sharp`,
     {
