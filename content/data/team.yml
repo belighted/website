@@ -1,0 +1,58 @@
+team:
+  - id: nja
+    name: Nicolas
+    role: CEO
+  - id: mal
+    name: Michael
+    role: Project Manager
+  - id: dan
+    name: Dany
+    role: Marketing Manager
+  - id: shu
+    name: Sophie
+    role: Project Manager
+  - id: pve
+    name: Philippe
+    role: Full stack developper
+  - id: she
+    name: Simon
+    role: Front-end developer
+  - id: kcl
+    name: Kathleen
+    role: FULL STACK DEVELOPPER
+  - id: dle
+    name: Dominique
+    role: FULL STACK DEVELOPER
+  - id: cgo
+    name: Christophe
+    role: full stack developer
+  - id: lgr
+    name: Lucile
+    role: User experience designer
+  - id: eto
+    name: Eddy
+    role: front-end developer
+  - id: abs
+    name: Amin
+    role: FULL STACK DEVELOPER
+  - id: ACH
+    name: Achilles
+    role: back-end developer
+  - id: skr
+    name: Sergei
+    role: full stack develOpEr
+  - id: AHU
+    name: Arnaud
+    role: FRONT-END DEVELOPER
+  - id: osz
+    name: Oskar
+    role: BACK-END DEVELOPER
+  - id: bda
+    name: Brahim
+    role: Full stack developer
+  - id: JMO
+    name: Julien
+    role: front-END DEVELOPER
+  - id: KVA
+    name: Kevin
+    role: FULL STACK DEVELOPER
