@@ -15,47 +15,60 @@ const getUrls = async () => {
 const getArticles = async urls => {
   return Promise.all(
     urls
-      .filter(u => u.includes("/blog") && !u.includes("/fr/"))
+      .filter(u => u.includes("/blog/"))
       .map(
         u =>
           new Promise((resolve, reject) => {
             console.log("reading ", u)
             read(u, function(err, article, meta) {
               if (err) reject(err)
-              return {
-                slug: u.replace("https://www.belighted.com/blog/", ""),
-                article,
-                meta,
-              }
+              resolve({
+                slug: u
+                  .replace("/fr/", "")
+                  .replace("https://www.belighted.com/blog/", ""),
+                originalPath: u,
+                article: {
+                  title: article.title,
+                  content: article.content,
+                  textBody: article.textBody,
+                  html: article.html,
+                },
+                //meta,
+              })
             })
           })
       )
   )
 }
 
+const writeFiles = async articles => {
+  console.log("writing", articles.length)
+
+  return Promise.all(
+    articles.map(article => {
+      const lang = article.originalPath.includes("/fr") ? "fr" : "en"
+      const path = `${__dirname}/content/posts/${article.slug}.${lang}.yml`
+      const content = YAML.stringify({ lang, ...article })
+
+      return new Promise((resolve, reject) => {
+        fs.writeFile(path.toLowerCase(), content, function(err) {
+          if (err) return reject(err)
+          console.log("created", path)
+          resolve(path)
+        })
+      })
+    })
+  )
+}
+
 const init = async () => {
   const urls = await getUrls()
-  console.log(urls)
-  //const articles = await getArticles(urls)
+  const articles = await getArticles(urls)
+  await writeFiles(articles)
+  console.log("done")
+  //console.log(articles)
 }
 
 init()
   .then(() => console.log("done"))
   .catch(e => console.error(e))
-/*
-;[{ path: "", value: "en" }, { path: "fr/", value: "fr" }].forEach(lang => {
-  data.forEach(data => {
-    const path = `${__dirname}/content/resources/${data.slug}.${lang.value}.yml`
-
-
-    const content = YAML.stringify({lang: lang.value, ...data});
-    console.log(content);
-
-    fs.writeFile(path.toLowerCase(), content, function (err) {
-      if (err) return console.log(err);
-      console.log("created", path);
-    });
-
-  })
-})
-*/
