@@ -5,3 +5,4 @@ author: Antoine De Beys
 client: deecide
 role: Co-founder
 body: "It's a real pleasure to work with Belighted. They are focused on delivering features with business value and they like to get stuff done. This vision allowed us to launch our products with just a couple of months of development and help us to get user feedback"
+---
