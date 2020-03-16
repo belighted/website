@@ -5,4 +5,4 @@ author: Vincent Leroy
 client: neveo
 role: CEO
 body: "Product development best practices are evolving at such a fast pace that it was difficult for me to make decisions related to the software product and the technical skills needed. Belighted's advice brought me confidence and gave me clear steps that helped me maximize my chances of success."
-
+---

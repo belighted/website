@@ -5,3 +5,4 @@ author: Xavier Lombard
 client: seraphin
 role: CEO
 body: "Working together, we were able to rapidly prototype and deploy a world-first insurance check-up algorithm. From the initial conceptualisation until the first live trials by users, it took us a rapid 3 months of close collaboration. Today Seraphin is still successfully using the same healthy technical foundations laid by Belighted."
+---
