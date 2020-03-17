@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
-import Layout from "../components/Layout"
+import Layout from "../components/layout/Layout"
 
 const BlogArticle = ({ data: { postsYaml: post }, pageContext }) => (
   <Layout context={pageContext} page={"blog"}>
