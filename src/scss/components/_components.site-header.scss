@@ -1,0 +1,22 @@
+.c-site-header {
+  padding: $inuit-global-spacing-unit 0;
+  background: $color-brand1;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    margin: 0;
+    justify-self: flex-start;
+  }
+  &__nav {
+    flex-grow: 1;
+  }
+}
+.c-site-nav{
+  display: flex;
+  justify-content: flex-end;
+  &__item{
+    padding: $inuit-global-spacing-unit-small;
+  }
+}

@@ -1,0 +1,15 @@
+.c-service-list {
+  padding: $inuit-global-spacing-unit;
+  margin:0;
+  &__item{
+    margin-bottom: $inuit-global-spacing-unit;
+    &:last-child{
+      margin: 0;
+    }
+  }
+}
+
+.c-service {
+  padding: $inuit-global-spacing-unit;
+  background: $color-gray2;
+}
