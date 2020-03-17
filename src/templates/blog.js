@@ -1,18 +1,23 @@
 import React from "react"
-import Layout from "../components/Layout"
-//import { graphql, Link } from "gatsby"
-//import useBlogData from "../static_queries/useBlogData"
-//this component handles the blur img & fade-ins
-import Img from "gatsby-image"
+import { graphql } from "gatsby"
 
-export default function Blog(props) {
-  const data = props.data
+const ComponentName = ({ data: { postsYaml: post } }) => (
+  <article>
+    <h2>{post.article.title}</h2>
+    <div dangerouslySetInnerHTML={{ __html: post.article.content }}></div>
+  </article>
+)
 
-  return (
-    <Layout>
-      <article>
-        <h1>{data.title}</h1>
-      </article>
-    </Layout>
-  )
-}
+export const query = graphql`
+  query($slug: String!) {
+    postsYaml(slug: { eq: $slug }) {
+      slug
+      article {
+        title
+        content
+      }
+    }
+  }
+`
+
+export default ComponentName
