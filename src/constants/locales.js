@@ -1,11 +1,11 @@
 module.exports = {
   en: {
     path: "",
-    locale: "English",
+    label: "English",
     default: true,
   },
   fr: {
     path: "/fr",
-    locale: "Français",
+    label: "Français",
   },
 }
