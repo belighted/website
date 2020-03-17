@@ -16,6 +16,7 @@ module.exports.onCreateNode = ({ node, actions }) => {
 }
 
 module.exports.createPages = async ({ graphql, actions }) => {
+  /*
   const { createPage } = actions
   //dynamically create pages here
   //get path to template
@@ -23,15 +24,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   //get slugs
   const response = await graphql(`
     query {
-      allMarkdownRemark {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
+      all
     }
   `)
   //create new pages with unique slug
@@ -44,4 +37,5 @@ module.exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+   */
 }
