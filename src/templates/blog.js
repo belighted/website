@@ -1,11 +1,14 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Layout from "../components/Layout"
 
-const ComponentName = ({ data: { postsYaml: post } }) => (
-  <article>
-    <h2>{post.article.title}</h2>
-    <div dangerouslySetInnerHTML={{ __html: post.article.content }}></div>
-  </article>
+const BlogArticle = ({ data: { postsYaml: post }, pageContext }) => (
+  <Layout context={pageContext} page={"blog"}>
+    <article>
+      <h2>{post.article.title}</h2>
+      <div dangerouslySetInnerHTML={{ __html: post.article.content }}></div>
+    </article>
+  </Layout>
 )
 
 export const query = graphql`
@@ -20,4 +23,4 @@ export const query = graphql`
   }
 `
 
-export default ComponentName
+export default BlogArticle

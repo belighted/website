@@ -1,15 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
-import Layout from "../components/Layout"
+import React from "react";
+import { Link } from "gatsby";
+import Layout from "../components/Layout";
 
-export default function NotFound() {
+export default function NotFound({ pageContext }) {
   return (
-    <Layout page="404" bgColor="inherit">
+    <Layout page="404" context={pageContext}>
       <div>
         <Link to="/">
           <h1>Sorry, couldn't find that page.</h1>
         </Link>
       </div>
     </Layout>
-  )
+  );
 }

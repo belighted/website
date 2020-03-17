@@ -1,14 +1,14 @@
-import React from "react"
-import Layout from "../components/Layout"
+import React from "react";
+import Layout from "../components/Layout";
 import BlogList from "../components/BlogList";
 
-export default function IndexPage() {
+export default function IndexPage({ pageContext }) {
   return (
-    <Layout page="home" bgColor="inherit">
+    <Layout context={pageContext} page={"home"}>
       <section>
-          Belighted
-          <BlogList />
+        Belighted
+        <BlogList />
       </section>
     </Layout>
-  )
+  );
 }

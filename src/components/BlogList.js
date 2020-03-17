@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql, Link, useStaticQuery } from "gatsby"
+import locales from "../constants/locales"
 
 export default function BlogList() {
   const {
@@ -10,6 +11,7 @@ export default function BlogList() {
         allPostsYaml {
           nodes {
             slug
+            lang
             article {
               title
             }
@@ -22,10 +24,10 @@ export default function BlogList() {
   return (
     <section>
       <ul>
-        {nodes.map(node => (
+        {nodes.map(post => (
           <li>
-            <Link to={`/blog/${node.slug}`}>
-              <a href="">{node.article.title}</a>
+            <Link to={`${locales[post.lang].path}/blog/${post.slug}`}>
+              {post.article.title}
             </Link>
           </li>
         ))}
