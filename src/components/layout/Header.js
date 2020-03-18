@@ -10,7 +10,7 @@ const MenuLink = ({ name, lang }) => {
   );
 };
 
-export default function Header({ page, lang }) {
+export default function Header({ page, context: { lang } }) {
   return (
     <header className="c-site-header">
       <nav

@@ -28,13 +28,20 @@ exports.onCreatePage = ({ page, actions }) => {
 module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const blogTemplate = path.resolve("./src/templates/blog.js");
+  const serviceTemplate = path.resolve("./src/templates/service.js");
 
   const {
     data: {
-      allPostsYaml: { nodes: posts }
+      allPostsYaml: { nodes: posts },
+      allServicesYaml: { nodes: services }
     }
   } = await graphql(`
     {
+      allServicesYaml {
+        nodes {
+          slug
+        }
+      }
       allPostsYaml {
         nodes {
           slug
@@ -55,6 +62,19 @@ module.exports.createPages = async ({ graphql, actions }) => {
         slug: post.slug,
         lang: post.lang
       }
+    });
+  });
+
+  services.forEach(service => {
+    Object.keys(locales).map(lang => {
+      createPage({
+        component: serviceTemplate,
+        path: `${locales[lang].path}/services/${service.slug}`,
+        context: {
+          slug: service.slug,
+          lang: lang
+        }
+      });
     });
   });
 };

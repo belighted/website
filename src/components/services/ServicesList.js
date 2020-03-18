@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import {useStaticQuery, graphql, Link} from "gatsby";
 
 const ServicesList = () => {
   const {
@@ -18,7 +18,7 @@ const ServicesList = () => {
     <ul>
       {nodes.map(node => (
         <li key={node.slug}>
-          {node.title}
+          <Link to={`/services/${node.slug}`}>{node.title}</Link>
         </li>
       ))}
     </ul>

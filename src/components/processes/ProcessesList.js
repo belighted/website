@@ -1,5 +1,6 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
+import { useStaticQuery, graphql, Link } from "gatsby";
+import LinkToService from "../services/LinkToService";
 
 const ProcessesList = () => {
   const {
@@ -16,11 +17,14 @@ const ProcessesList = () => {
     }
   `);
   return (
-    <ul>
+    <ul className="">
       {nodes.map(node => (
         <li key={node.slug}>
-          <h4>{node.title}</h4>
+          <LinkToService slug={node.slug}>
+            <h4 className={"c-h4"}>{node.title}</h4>
+          </LinkToService>
           <div>{node.intro}</div>
+          <LinkToService slug={node.slug}>More info</LinkToService>
         </li>
       ))}
     </ul>

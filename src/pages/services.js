@@ -20,7 +20,7 @@ const ServicesPage = ({
           <ProcessesList/>
       </Section>
       <Section section={findSection(sections, "categories")}>
-          <CategoriesList/>
+          <CategoriesList showServices/>
       </Section>
       <Section section={findSection(sections, "technologies")}>
           <TechnologiesList/>
