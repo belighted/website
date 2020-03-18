@@ -1,12 +1,13 @@
+slug: technologies
 technologies:
-  - ruby
-  - rails
-  - react
-  - vuejs
-  - angular
-  - nodejs
-  - meteor
-  - amazon web services
-  - google-cloud-console
-  - docker
-  - postgresql
+  - value: ruby
+  - value: rails
+  - value: react
+  - value: vuejs
+  - value: angular
+  - value: nodejs
+  - value: meteor
+  - value: amazon web services
+  - value: google-cloud-console
+  - value: docker
+  - value: postgresql

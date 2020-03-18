@@ -19,7 +19,7 @@ export default function Header({ page, lang }) {
         className="o-wrapper c-site-header__wrapper"
       >
         <Link to="/" className="c-site-header__logo">
-          <h1 className='u-margin-none'>Belighted</h1>
+          <h1 className="u-margin-none">Belighted</h1>
         </Link>
         <div className="c-site-header__nav c-site-nav">
           <MenuLink name={"services"} lang={lang} />
@@ -31,6 +31,7 @@ export default function Header({ page, lang }) {
         <div className={"c-lang-switcher"}>
           {Object.keys(locales).map(lang => (
             <Link
+              key={lang}
               to={`${locales[lang].path}/${page}`}
               className={"c-lang-switcher__item u-padding-small"}
             >

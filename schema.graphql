@@ -48,15 +48,114 @@ type CasesYamlGroupConnection {
     totalCount: Int!
 }
 
+type CategoriesYaml implements Node {
+    children: [Node!]!
+    id: ID!
+    internal: Internal!
+    lang: String
+    parent: Node
+    services: [String]
+    short_description: String
+    slug: String
+    technologies: [String]
+    title: String
+}
+
+type CategoriesYamlConnection {
+    distinct(field: CategoriesYamlFieldsEnum!): [String!]!
+    edges: [CategoriesYamlEdge!]!
+    group(field: CategoriesYamlFieldsEnum!, limit: Int, skip: Int): [CategoriesYamlGroupConnection!]!
+    nodes: [CategoriesYaml!]!
+    pageInfo: PageInfo!
+    totalCount: Int!
+}
+
+type CategoriesYamlEdge {
+    next: CategoriesYaml
+    node: CategoriesYaml!
+    previous: CategoriesYaml
+}
+
+type CategoriesYamlGroupConnection {
+    edges: [CategoriesYamlEdge!]!
+    field: String!
+    fieldValue: String
+    nodes: [CategoriesYaml!]!
+    pageInfo: PageInfo!
+    totalCount: Int!
+}
+
+type ContentYaml implements Node {
+    body: String
+    children: [Node!]!
+    history: [ContentYamlHistory]
+    id: ID!
+    internal: Internal!
+    lang: String
+    parent: Node
+    sections: [ContentYamlSections]
+    slug: String
+    title: String
+}
+
+type ContentYamlConnection {
+    distinct(field: ContentYamlFieldsEnum!): [String!]!
+    edges: [ContentYamlEdge!]!
+    group(field: ContentYamlFieldsEnum!, limit: Int, skip: Int): [ContentYamlGroupConnection!]!
+    nodes: [ContentYaml!]!
+    pageInfo: PageInfo!
+    totalCount: Int!
+}
+
+type ContentYamlEdge {
+    next: ContentYaml
+    node: ContentYaml!
+    previous: ContentYaml
+}
+
+type ContentYamlGroupConnection {
+    edges: [ContentYamlEdge!]!
+    field: String!
+    fieldValue: String
+    nodes: [ContentYaml!]!
+    pageInfo: PageInfo!
+    totalCount: Int!
+}
+
+type ContentYamlHistory {
+    date: Int
+    event: String
+    image: String
+}
+
+type ContentYamlSections {
+    body: String
+    slides: [ContentYamlSectionsSlides]
+    slug: String
+    title: String
+}
+
+type ContentYamlSectionsSlides {
+    body: String
+    buttons: [ContentYamlSectionsSlidesButtons]
+    title: String
+}
+
+type ContentYamlSectionsSlidesButtons {
+    link: String
+    title: String
+}
+
 type DataYaml implements Node {
     authors: [String]
     children: [Node!]!
     id: ID!
     internal: Internal!
     parent: Node
+    slug: String
     statistics: [DataYamlStatistics]
     team: [DataYamlTeam]
-    technologies: [String]
+    technologies: [DataYamlTechnologies]
 }
 
 type DataYamlConnection {
@@ -92,6 +191,10 @@ type DataYamlTeam {
     id: String
     name: String
     role: String
+}
+
+type DataYamlTechnologies {
+    value: String
 }
 
 type Directory implements Node {
@@ -270,6 +373,8 @@ type File implements Node {
         locale: String
     ): Date!
     childCasesYaml: CasesYaml
+    childCategoriesYaml: CategoriesYaml
+    childContentYaml: ContentYaml
     childDataYaml: DataYaml
     childImageSharp: ImageSharp
     childPartialsYaml: PartialsYaml
@@ -707,6 +812,8 @@ type ProcessYamlGroupConnection {
 
 type Query {
     allCasesYaml(filter: CasesYamlFilterInput, limit: Int, skip: Int, sort: CasesYamlSortInput): CasesYamlConnection!
+    allCategoriesYaml(filter: CategoriesYamlFilterInput, limit: Int, skip: Int, sort: CategoriesYamlSortInput): CategoriesYamlConnection!
+    allContentYaml(filter: ContentYamlFilterInput, limit: Int, skip: Int, sort: ContentYamlSortInput): ContentYamlConnection!
     allDataYaml(filter: DataYamlFilterInput, limit: Int, skip: Int, sort: DataYamlSortInput): DataYamlConnection!
     allDirectory(filter: DirectoryFilterInput, limit: Int, skip: Int, sort: DirectorySortInput): DirectoryConnection!
     allFile(filter: FileFilterInput, limit: Int, skip: Int, sort: FileSortInput): FileConnection!
@@ -723,19 +830,21 @@ type Query {
     allSitePlugin(filter: SitePluginFilterInput, limit: Int, skip: Int, sort: SitePluginSortInput): SitePluginConnection!
     allTestimonialsYaml(filter: TestimonialsYamlFilterInput, limit: Int, skip: Int, sort: TestimonialsYamlSortInput): TestimonialsYamlConnection!
     casesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, results: StringQueryOperatorInput, short_description: StringQueryOperatorInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): CasesYaml
-    dataYaml(authors: StringQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, statistics: DataYamlStatisticsFilterListInput, team: DataYamlTeamFilterListInput, technologies: StringQueryOperatorInput): DataYaml
+    categoriesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, services: StringQueryOperatorInput, short_description: StringQueryOperatorInput, slug: StringQueryOperatorInput, technologies: StringQueryOperatorInput, title: StringQueryOperatorInput): CategoriesYaml
+    contentYaml(body: StringQueryOperatorInput, children: NodeFilterListInput, history: ContentYamlHistoryFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, sections: ContentYamlSectionsFilterListInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): ContentYaml
+    dataYaml(authors: StringQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, statistics: DataYamlStatisticsFilterListInput, team: DataYamlTeamFilterListInput, technologies: DataYamlTechnologiesFilterListInput): DataYaml
     directory(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): Directory
-    file(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, childCasesYaml: CasesYamlFilterInput, childDataYaml: DataYamlFilterInput, childImageSharp: ImageSharpFilterInput, childPartialsYaml: PartialsYamlFilterInput, childPostsYaml: PostsYamlFilterInput, childProcessYaml: ProcessYamlFilterInput, childResourcesYaml: ResourcesYamlFilterInput, childServicesYaml: ServicesYamlFilterInput, childTestimonialsYaml: TestimonialsYamlFilterInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, publicURL: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): File
+    file(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, childCasesYaml: CasesYamlFilterInput, childCategoriesYaml: CategoriesYamlFilterInput, childContentYaml: ContentYamlFilterInput, childDataYaml: DataYamlFilterInput, childImageSharp: ImageSharpFilterInput, childPartialsYaml: PartialsYamlFilterInput, childPostsYaml: PostsYamlFilterInput, childProcessYaml: ProcessYamlFilterInput, childResourcesYaml: ResourcesYamlFilterInput, childServicesYaml: ServicesYamlFilterInput, childTestimonialsYaml: TestimonialsYamlFilterInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, publicURL: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): File
     imageSharp(children: NodeFilterListInput, fixed: ImageSharpFixedFilterInput, fluid: ImageSharpFluidFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, original: ImageSharpOriginalFilterInput, parent: NodeFilterInput, resize: ImageSharpResizeFilterInput, resolutions: ImageSharpResolutionsFilterInput, sizes: ImageSharpSizesFilterInput): ImageSharp
     markdownRemark(children: NodeFilterListInput, excerpt: StringQueryOperatorInput, excerptAst: JSONQueryOperatorInput, headings: MarkdownHeadingFilterListInput, html: StringQueryOperatorInput, htmlAst: JSONQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, tableOfContents: StringQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MarkdownWordCountFilterInput): MarkdownRemark
     partialsYaml(body: StringQueryOperatorInput, children: NodeFilterListInput, cta: PartialsYamlCtaFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): PartialsYaml
     postsYaml(article: PostsYamlArticleFilterInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput): PostsYaml
     processYaml(children: NodeFilterListInput, description: StringQueryOperatorInput, duration: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, intro: StringQueryOperatorInput, lang: StringQueryOperatorInput, objective: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, subtitle: StringQueryOperatorInput, title: StringQueryOperatorInput): ProcessYaml
     resourcesYaml(children: NodeFilterListInput, cta: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): ResourcesYaml
-    servicesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, services: StringQueryOperatorInput, short_description: StringQueryOperatorInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): ServicesYaml
+    servicesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): ServicesYaml
     site(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, host: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, port: IntQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput): Site
     siteBuildMetadata(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput): SiteBuildMetadata
-    sitePage(children: NodeFilterListInput, component: StringQueryOperatorInput, componentChunkName: StringQueryOperatorInput, componentPath: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, internalComponentName: StringQueryOperatorInput, isCreatedByStatefulCreatePages: BooleanQueryOperatorInput, matchPath: StringQueryOperatorInput, parent: NodeFilterInput, path: StringQueryOperatorInput, pluginCreator: SitePluginFilterInput, pluginCreatorId: StringQueryOperatorInput): SitePage
+    sitePage(children: NodeFilterListInput, component: StringQueryOperatorInput, componentChunkName: StringQueryOperatorInput, componentPath: StringQueryOperatorInput, context: SitePageContextFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, internalComponentName: StringQueryOperatorInput, isCreatedByStatefulCreatePages: BooleanQueryOperatorInput, matchPath: StringQueryOperatorInput, parent: NodeFilterInput, path: StringQueryOperatorInput, pluginCreator: SitePluginFilterInput, pluginCreatorId: StringQueryOperatorInput): SitePage
     sitePlugin(browserAPIs: StringQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, name: StringQueryOperatorInput, nodeAPIs: StringQueryOperatorInput, packageJson: SitePluginPackageJsonFilterInput, parent: NodeFilterInput, pluginFilepath: StringQueryOperatorInput, pluginOptions: SitePluginPluginOptionsFilterInput, resolve: StringQueryOperatorInput, ssrAPIs: StringQueryOperatorInput, version: StringQueryOperatorInput): SitePlugin
     testimonialsYaml(author: StringQueryOperatorInput, body: StringQueryOperatorInput, children: NodeFilterListInput, client: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, role: StringQueryOperatorInput, slug: StringQueryOperatorInput): TestimonialsYaml
 }
@@ -781,8 +890,6 @@ type ServicesYaml implements Node {
     internal: Internal!
     lang: String
     parent: Node
-    services: [String]
-    short_description: String
     slug: String
     title: String
 }
@@ -903,6 +1010,7 @@ type SitePage implements Node {
     component: String!
     componentChunkName: String!
     componentPath: String
+    context: SitePageContext
     id: ID!
     internal: Internal!
     internalComponentName: String!
@@ -921,6 +1029,11 @@ type SitePageConnection {
     nodes: [SitePage!]!
     pageInfo: PageInfo!
     totalCount: Int!
+}
+
+type SitePageContext {
+    lang: String
+    slug: String
 }
 
 type SitePageEdge {
@@ -1189,6 +1302,208 @@ enum CasesYamlFieldsEnum {
     title
 }
 
+enum CategoriesYamlFieldsEnum {
+    children
+    children___children
+    children___children___children
+    children___children___children___children
+    children___children___children___id
+    children___children___id
+    children___children___internal___content
+    children___children___internal___contentDigest
+    children___children___internal___description
+    children___children___internal___fieldOwners
+    children___children___internal___ignoreType
+    children___children___internal___mediaType
+    children___children___internal___owner
+    children___children___internal___type
+    children___children___parent___children
+    children___children___parent___id
+    children___id
+    children___internal___content
+    children___internal___contentDigest
+    children___internal___description
+    children___internal___fieldOwners
+    children___internal___ignoreType
+    children___internal___mediaType
+    children___internal___owner
+    children___internal___type
+    children___parent___children
+    children___parent___children___children
+    children___parent___children___id
+    children___parent___id
+    children___parent___internal___content
+    children___parent___internal___contentDigest
+    children___parent___internal___description
+    children___parent___internal___fieldOwners
+    children___parent___internal___ignoreType
+    children___parent___internal___mediaType
+    children___parent___internal___owner
+    children___parent___internal___type
+    children___parent___parent___children
+    children___parent___parent___id
+    id
+    internal___content
+    internal___contentDigest
+    internal___description
+    internal___fieldOwners
+    internal___ignoreType
+    internal___mediaType
+    internal___owner
+    internal___type
+    lang
+    parent___children
+    parent___children___children
+    parent___children___children___children
+    parent___children___children___id
+    parent___children___id
+    parent___children___internal___content
+    parent___children___internal___contentDigest
+    parent___children___internal___description
+    parent___children___internal___fieldOwners
+    parent___children___internal___ignoreType
+    parent___children___internal___mediaType
+    parent___children___internal___owner
+    parent___children___internal___type
+    parent___children___parent___children
+    parent___children___parent___id
+    parent___id
+    parent___internal___content
+    parent___internal___contentDigest
+    parent___internal___description
+    parent___internal___fieldOwners
+    parent___internal___ignoreType
+    parent___internal___mediaType
+    parent___internal___owner
+    parent___internal___type
+    parent___parent___children
+    parent___parent___children___children
+    parent___parent___children___id
+    parent___parent___id
+    parent___parent___internal___content
+    parent___parent___internal___contentDigest
+    parent___parent___internal___description
+    parent___parent___internal___fieldOwners
+    parent___parent___internal___ignoreType
+    parent___parent___internal___mediaType
+    parent___parent___internal___owner
+    parent___parent___internal___type
+    parent___parent___parent___children
+    parent___parent___parent___id
+    services
+    short_description
+    slug
+    technologies
+    title
+}
+
+enum ContentYamlFieldsEnum {
+    body
+    children
+    children___children
+    children___children___children
+    children___children___children___children
+    children___children___children___id
+    children___children___id
+    children___children___internal___content
+    children___children___internal___contentDigest
+    children___children___internal___description
+    children___children___internal___fieldOwners
+    children___children___internal___ignoreType
+    children___children___internal___mediaType
+    children___children___internal___owner
+    children___children___internal___type
+    children___children___parent___children
+    children___children___parent___id
+    children___id
+    children___internal___content
+    children___internal___contentDigest
+    children___internal___description
+    children___internal___fieldOwners
+    children___internal___ignoreType
+    children___internal___mediaType
+    children___internal___owner
+    children___internal___type
+    children___parent___children
+    children___parent___children___children
+    children___parent___children___id
+    children___parent___id
+    children___parent___internal___content
+    children___parent___internal___contentDigest
+    children___parent___internal___description
+    children___parent___internal___fieldOwners
+    children___parent___internal___ignoreType
+    children___parent___internal___mediaType
+    children___parent___internal___owner
+    children___parent___internal___type
+    children___parent___parent___children
+    children___parent___parent___id
+    history
+    history___date
+    history___event
+    history___image
+    id
+    internal___content
+    internal___contentDigest
+    internal___description
+    internal___fieldOwners
+    internal___ignoreType
+    internal___mediaType
+    internal___owner
+    internal___type
+    lang
+    parent___children
+    parent___children___children
+    parent___children___children___children
+    parent___children___children___id
+    parent___children___id
+    parent___children___internal___content
+    parent___children___internal___contentDigest
+    parent___children___internal___description
+    parent___children___internal___fieldOwners
+    parent___children___internal___ignoreType
+    parent___children___internal___mediaType
+    parent___children___internal___owner
+    parent___children___internal___type
+    parent___children___parent___children
+    parent___children___parent___id
+    parent___id
+    parent___internal___content
+    parent___internal___contentDigest
+    parent___internal___description
+    parent___internal___fieldOwners
+    parent___internal___ignoreType
+    parent___internal___mediaType
+    parent___internal___owner
+    parent___internal___type
+    parent___parent___children
+    parent___parent___children___children
+    parent___parent___children___id
+    parent___parent___id
+    parent___parent___internal___content
+    parent___parent___internal___contentDigest
+    parent___parent___internal___description
+    parent___parent___internal___fieldOwners
+    parent___parent___internal___ignoreType
+    parent___parent___internal___mediaType
+    parent___parent___internal___owner
+    parent___parent___internal___type
+    parent___parent___parent___children
+    parent___parent___parent___id
+    sections
+    sections___body
+    sections___slides
+    sections___slides___body
+    sections___slides___buttons
+    sections___slides___buttons___link
+    sections___slides___buttons___title
+    sections___slides___title
+    sections___slug
+    sections___title
+    slug
+    title
+}
+
 enum DataYamlFieldsEnum {
     authors
     children
@@ -1277,6 +1592,7 @@ enum DataYamlFieldsEnum {
     parent___parent___internal___type
     parent___parent___parent___children
     parent___parent___parent___id
+    slug
     statistics
     statistics___label
     statistics___value
@@ -1285,6 +1601,7 @@ enum DataYamlFieldsEnum {
     team___name
     team___role
     technologies
+    technologies___value
 }
 
 enum DirectoryFieldsEnum {
@@ -1464,6 +1781,104 @@ enum FileFieldsEnum {
     childCasesYaml___short_description
     childCasesYaml___slug
     childCasesYaml___title
+    childCategoriesYaml___children
+    childCategoriesYaml___children___children
+    childCategoriesYaml___children___children___children
+    childCategoriesYaml___children___children___id
+    childCategoriesYaml___children___id
+    childCategoriesYaml___children___internal___content
+    childCategoriesYaml___children___internal___contentDigest
+    childCategoriesYaml___children___internal___description
+    childCategoriesYaml___children___internal___fieldOwners
+    childCategoriesYaml___children___internal___ignoreType
+    childCategoriesYaml___children___internal___mediaType
+    childCategoriesYaml___children___internal___owner
+    childCategoriesYaml___children___internal___type
+    childCategoriesYaml___children___parent___children
+    childCategoriesYaml___children___parent___id
+    childCategoriesYaml___id
+    childCategoriesYaml___internal___content
+    childCategoriesYaml___internal___contentDigest
+    childCategoriesYaml___internal___description
+    childCategoriesYaml___internal___fieldOwners
+    childCategoriesYaml___internal___ignoreType
+    childCategoriesYaml___internal___mediaType
+    childCategoriesYaml___internal___owner
+    childCategoriesYaml___internal___type
+    childCategoriesYaml___lang
+    childCategoriesYaml___parent___children
+    childCategoriesYaml___parent___children___children
+    childCategoriesYaml___parent___children___id
+    childCategoriesYaml___parent___id
+    childCategoriesYaml___parent___internal___content
+    childCategoriesYaml___parent___internal___contentDigest
+    childCategoriesYaml___parent___internal___description
+    childCategoriesYaml___parent___internal___fieldOwners
+    childCategoriesYaml___parent___internal___ignoreType
+    childCategoriesYaml___parent___internal___mediaType
+    childCategoriesYaml___parent___internal___owner
+    childCategoriesYaml___parent___internal___type
+    childCategoriesYaml___parent___parent___children
+    childCategoriesYaml___parent___parent___id
+    childCategoriesYaml___services
+    childCategoriesYaml___short_description
+    childCategoriesYaml___slug
+    childCategoriesYaml___technologies
+    childCategoriesYaml___title
+    childContentYaml___body
+    childContentYaml___children
+    childContentYaml___children___children
+    childContentYaml___children___children___children
+    childContentYaml___children___children___id
+    childContentYaml___children___id
+    childContentYaml___children___internal___content
+    childContentYaml___children___internal___contentDigest
+    childContentYaml___children___internal___description
+    childContentYaml___children___internal___fieldOwners
+    childContentYaml___children___internal___ignoreType
+    childContentYaml___children___internal___mediaType
+    childContentYaml___children___internal___owner
+    childContentYaml___children___internal___type
+    childContentYaml___children___parent___children
+    childContentYaml___children___parent___id
+    childContentYaml___history
+    childContentYaml___history___date
+    childContentYaml___history___event
+    childContentYaml___history___image
+    childContentYaml___id
+    childContentYaml___internal___content
+    childContentYaml___internal___contentDigest
+    childContentYaml___internal___description
+    childContentYaml___internal___fieldOwners
+    childContentYaml___internal___ignoreType
+    childContentYaml___internal___mediaType
+    childContentYaml___internal___owner
+    childContentYaml___internal___type
+    childContentYaml___lang
+    childContentYaml___parent___children
+    childContentYaml___parent___children___children
+    childContentYaml___parent___children___id
+    childContentYaml___parent___id
+    childContentYaml___parent___internal___content
+    childContentYaml___parent___internal___contentDigest
+    childContentYaml___parent___internal___description
+    childContentYaml___parent___internal___fieldOwners
+    childContentYaml___parent___internal___ignoreType
+    childContentYaml___parent___internal___mediaType
+    childContentYaml___parent___internal___owner
+    childContentYaml___parent___internal___type
+    childContentYaml___parent___parent___children
+    childContentYaml___parent___parent___id
+    childContentYaml___sections
+    childContentYaml___sections___body
+    childContentYaml___sections___slides
+    childContentYaml___sections___slides___body
+    childContentYaml___sections___slides___buttons
+    childContentYaml___sections___slides___title
+    childContentYaml___sections___slug
+    childContentYaml___sections___title
+    childContentYaml___slug
+    childContentYaml___title
     childDataYaml___authors
     childDataYaml___children
     childDataYaml___children___children
@@ -1503,6 +1918,7 @@ enum FileFieldsEnum {
     childDataYaml___parent___internal___type
     childDataYaml___parent___parent___children
     childDataYaml___parent___parent___id
+    childDataYaml___slug
     childDataYaml___statistics
     childDataYaml___statistics___label
     childDataYaml___statistics___value
@@ -1511,6 +1927,7 @@ enum FileFieldsEnum {
     childDataYaml___team___name
     childDataYaml___team___role
     childDataYaml___technologies
+    childDataYaml___technologies___value
     childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childImageSharp___children___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childImageSharp___children___children___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -1818,8 +2235,6 @@ enum FileFieldsEnum {
     childServicesYaml___parent___internal___type
     childServicesYaml___parent___parent___children
     childServicesYaml___parent___parent___id
-    childServicesYaml___services
-    childServicesYaml___short_description
     childServicesYaml___slug
     childServicesYaml___title
     childTestimonialsYaml___author
@@ -2742,8 +3157,6 @@ enum ServicesYamlFieldsEnum {
     parent___parent___internal___type
     parent___parent___parent___children
     parent___parent___parent___id
-    services
-    short_description
     slug
     title
 }
@@ -2984,6 +3397,8 @@ enum SitePageFieldsEnum {
     component
     componentChunkName
     componentPath
+    context___lang
+    context___slug
     id
     internalComponentName
     internal___content
@@ -3365,15 +3780,92 @@ input CasesYamlSortInput {
     order: [SortOrderEnum] = [ASC]
 }
 
+input CategoriesYamlFilterInput {
+    children: NodeFilterListInput
+    id: StringQueryOperatorInput
+    internal: InternalFilterInput
+    lang: StringQueryOperatorInput
+    parent: NodeFilterInput
+    services: StringQueryOperatorInput
+    short_description: StringQueryOperatorInput
+    slug: StringQueryOperatorInput
+    technologies: StringQueryOperatorInput
+    title: StringQueryOperatorInput
+}
+
+input CategoriesYamlSortInput {
+    fields: [CategoriesYamlFieldsEnum]
+    order: [SortOrderEnum] = [ASC]
+}
+
+input ContentYamlFilterInput {
+    body: StringQueryOperatorInput
+    children: NodeFilterListInput
+    history: ContentYamlHistoryFilterListInput
+    id: StringQueryOperatorInput
+    internal: InternalFilterInput
+    lang: StringQueryOperatorInput
+    parent: NodeFilterInput
+    sections: ContentYamlSectionsFilterListInput
+    slug: StringQueryOperatorInput
+    title: StringQueryOperatorInput
+}
+
+input ContentYamlHistoryFilterInput {
+    date: IntQueryOperatorInput
+    event: StringQueryOperatorInput
+    image: StringQueryOperatorInput
+}
+
+input ContentYamlHistoryFilterListInput {
+    elemMatch: ContentYamlHistoryFilterInput
+}
+
+input ContentYamlSectionsFilterInput {
+    body: StringQueryOperatorInput
+    slides: ContentYamlSectionsSlidesFilterListInput
+    slug: StringQueryOperatorInput
+    title: StringQueryOperatorInput
+}
+
+input ContentYamlSectionsFilterListInput {
+    elemMatch: ContentYamlSectionsFilterInput
+}
+
+input ContentYamlSectionsSlidesButtonsFilterInput {
+    link: StringQueryOperatorInput
+    title: StringQueryOperatorInput
+}
+
+input ContentYamlSectionsSlidesButtonsFilterListInput {
+    elemMatch: ContentYamlSectionsSlidesButtonsFilterInput
+}
+
+input ContentYamlSectionsSlidesFilterInput {
+    body: StringQueryOperatorInput
+    buttons: ContentYamlSectionsSlidesButtonsFilterListInput
+    title: StringQueryOperatorInput
+}
+
+input ContentYamlSectionsSlidesFilterListInput {
+    elemMatch: ContentYamlSectionsSlidesFilterInput
+}
+
+input ContentYamlSortInput {
+    fields: [ContentYamlFieldsEnum]
+    order: [SortOrderEnum] = [ASC]
+}
+
 input DataYamlFilterInput {
     authors: StringQueryOperatorInput
     children: NodeFilterListInput
     id: StringQueryOperatorInput
     internal: InternalFilterInput
     parent: NodeFilterInput
+    slug: StringQueryOperatorInput
     statistics: DataYamlStatisticsFilterListInput
     team: DataYamlTeamFilterListInput
-    technologies: StringQueryOperatorInput
+    technologies: DataYamlTechnologiesFilterListInput
 }
 
 input DataYamlSortInput {
@@ -3398,6 +3890,14 @@ input DataYamlTeamFilterInput {
 
 input DataYamlTeamFilterListInput {
     elemMatch: DataYamlTeamFilterInput
+}
+
+input DataYamlTechnologiesFilterInput {
+    value: StringQueryOperatorInput
+}
+
+input DataYamlTechnologiesFilterListInput {
+    elemMatch: DataYamlTechnologiesFilterInput
 }
 
 input DateQueryOperatorInput {
@@ -3475,6 +3975,8 @@ input FileFilterInput {
     blocks: IntQueryOperatorInput
     changeTime: DateQueryOperatorInput
     childCasesYaml: CasesYamlFilterInput
+    childCategoriesYaml: CategoriesYamlFilterInput
+    childContentYaml: ContentYamlFilterInput
     childDataYaml: DataYamlFilterInput
     childImageSharp: ImageSharpFilterInput
     childPartialsYaml: PartialsYamlFilterInput
@@ -3793,8 +4295,6 @@ input ServicesYamlFilterInput {
     internal: InternalFilterInput
     lang: StringQueryOperatorInput
     parent: NodeFilterInput
-    services: StringQueryOperatorInput
-    short_description: StringQueryOperatorInput
     slug: StringQueryOperatorInput
     title: StringQueryOperatorInput
 }
@@ -3830,11 +4330,17 @@ input SiteFilterInput {
     siteMetadata: SiteSiteMetadataFilterInput
 }
 
+input SitePageContextFilterInput {
+    lang: StringQueryOperatorInput
+    slug: StringQueryOperatorInput
+}
+
 input SitePageFilterInput {
     children: NodeFilterListInput
     component: StringQueryOperatorInput
     componentChunkName: StringQueryOperatorInput
     componentPath: StringQueryOperatorInput
+    context: SitePageContextFilterInput
     id: StringQueryOperatorInput
     internal: InternalFilterInput
     internalComponentName: StringQueryOperatorInput

@@ -1,0 +1,13 @@
+slug: services
+lang: en
+title: Software development solutions
+sections:
+  - slug: hero
+    title: Let's make your idea evolve into a successful product. Together.
+  - slug: process
+    title: Our process to build successful products
+    body: We have helped hundreds of entrepreneurs like you overcome their fears of building the wrong software, by guiding them through our 4-stages process.
+  - slug: categories
+    title: We build next-gen software products every day. How can we help you achieve your goals ?
+  - slug: technologies
+    body: From front-end to back-end to infrastructure.
