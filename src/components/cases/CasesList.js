@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import LinkToCase from "./LinkToCase";
 
 const CasesList = () => {
   const {
@@ -15,13 +16,15 @@ const CasesList = () => {
     }
   `);
   return (
-      <ul>
-        {nodes.map(node => (
-            <li key={node.slug}>
-              <h4>{node.title}</h4>
-            </li>
-        ))}
-      </ul>
+    <ul>
+      {nodes.map(node => (
+        <li key={node.slug}>
+          <LinkToCase slug={node.slug}>
+            <h4>{node.title}</h4>
+          </LinkToCase>
+        </li>
+      ))}
+    </ul>
   );
 };
 

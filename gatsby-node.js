@@ -29,11 +29,13 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const blogTemplate = path.resolve("./src/templates/blog.js");
   const serviceTemplate = path.resolve("./src/templates/service.js");
+  const caseTemplate = path.resolve("./src/templates/case.js");
 
   const {
     data: {
       allPostsYaml: { nodes: posts },
-      allServicesYaml: { nodes: services }
+      allServicesYaml: { nodes: services },
+      allCasesYaml: { nodes: cases }
     }
   } = await graphql(`
     {
@@ -46,9 +48,12 @@ module.exports.createPages = async ({ graphql, actions }) => {
         nodes {
           slug
           lang
-          article {
-            title
-          }
+        }
+      }
+      allCasesYaml {
+        nodes {
+          slug
+          lang
         }
       }
     }
@@ -72,6 +77,19 @@ module.exports.createPages = async ({ graphql, actions }) => {
         path: `${locales[lang].path}/services/${service.slug}`,
         context: {
           slug: service.slug,
+          lang: lang
+        }
+      });
+    });
+  });
+
+  cases.forEach(caseStudy => {
+    Object.keys(locales).map(lang => {
+      createPage({
+        component: caseTemplate,
+        path: `${locales[lang].path}/clients/${caseStudy.slug}`,
+        context: {
+          slug: caseStudy.slug,
           lang: lang
         }
       });

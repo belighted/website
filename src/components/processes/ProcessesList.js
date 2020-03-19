@@ -17,7 +17,7 @@ const ProcessesList = () => {
     }
   `);
   return (
-    <ul className="">
+    <ol className="">
       {nodes.map(node => (
         <li key={node.slug}>
           <LinkToService slug={node.slug}>
@@ -27,7 +27,7 @@ const ProcessesList = () => {
           <LinkToService slug={node.slug}>More info</LinkToService>
         </li>
       ))}
-    </ul>
+    </ol>
   );
 };
 
