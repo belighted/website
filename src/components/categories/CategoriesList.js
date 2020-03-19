@@ -1,5 +1,5 @@
 import React from "react";
-import { useStaticQuery, graphql, Link } from "gatsby";
+import { useStaticQuery, graphql } from "gatsby";
 import LinkToService from "../services/LinkToService";
 import LinkToCategory from "./LinkToCategory";
 
@@ -28,10 +28,11 @@ const CategoriesList = ({ showServices }) => {
   return (
     <ul>
       {categories.map(node => (
-        <li key={node.slug} id={node.slug}>
-          <LinkToCategory slug={node.slug}>
-            <h4>{node.title}</h4>
-          </LinkToCategory>
+        <li key={node.slug} id={node.slug} className={"u-margin-bottom-large"}>
+          <h4>
+            <LinkToCategory slug={node.slug}>{node.title}</LinkToCategory>
+          </h4>
+
           <div>{node.short_description}</div>
           {showServices && (
             <ul>

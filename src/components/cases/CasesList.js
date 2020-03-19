@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useContext} from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import LinkToCase from "./LinkToCase";
+import {I18nContext} from "../i18n/I18n";
 
 const CasesList = () => {
   const {
@@ -11,17 +12,21 @@ const CasesList = () => {
         nodes {
           slug
           title
+          lang
         }
       }
     }
   `);
+  const lang = useContext(I18nContext);
   return (
-    <ul>
-      {nodes.map(node => (
+    <ul className={'c-cases-list'}>
+      {nodes.filter(node=>node.lang === lang).map(node => (
         <li key={node.slug}>
-          <LinkToCase slug={node.slug}>
-            <h4>{node.title}</h4>
-          </LinkToCase>
+          <h4 className="c-h4">
+            <LinkToCase slug={node.slug}>
+              {node.title ? node.title : node.slug}
+            </LinkToCase>
+          </h4>
         </li>
       ))}
     </ul>

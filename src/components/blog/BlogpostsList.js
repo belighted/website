@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import LinkToBlog from "./LinkToBlog";
 
 const BlogpostsList = () => {
   const {
@@ -19,8 +20,10 @@ const BlogpostsList = () => {
   return (
     <ul>
       {nodes.map(node => (
-        <li key={node.slug}>
-          <h4>{node.article.title}</h4>
+        <li key={node.slug} className={"u-margin-bottom"}>
+          <h4 className="c-h4 u-margin-none">
+            <LinkToBlog slug={node.slug}>{node.article.title}</LinkToBlog>
+          </h4>
         </li>
       ))}
     </ul>

@@ -7,6 +7,7 @@ import TestimonialsList from "../components/testimonials/TestimonialsList";
 import ProcessesList from "../components/processes/ProcessesList";
 import BlogpostsList from "../components/blog/BlogpostsList";
 import { findSection, Section } from "../components/sections";
+import LocalizedLink from "../components/links/LocalizedLink";
 
 export default function IndexPage({
   pageContext,
@@ -32,10 +33,12 @@ export default function IndexPage({
       </Section>
       <Section section={findSection(sections, "cases")}>
         <CasesList />
+        <LocalizedLink route={'/clients'}>See all cases</LocalizedLink>
       </Section>
 
       <Section section={findSection(sections, "statistics")}>
         <StatisticsList />
+          <LocalizedLink route={'/about'}>Find out more about us</LocalizedLink>
       </Section>
 
       <Section section={findSection(sections, "testimonials")}>

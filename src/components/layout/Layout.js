@@ -11,16 +11,16 @@ export default function Layout({ context, children, page }) {
 
   return (
     <I18nContext.Provider value={context.lang}>
-      <section>
+      <div className='l-layout'>
         <Helmet>
           <html lang={context.lang} />
           <title>{title}</title>
           <meta name="description" content={description} />
         </Helmet>
         <Header page={page} context={context} />
-        <div className={""}>{children}</div>
+        <div className={"l-layout__body"}>{children}</div>
         <Footer page={page} context={context} />
-      </section>
+      </div>
     </I18nContext.Provider>
   );
 }

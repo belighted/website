@@ -1,0 +1,8 @@
+.c-footer-services{
+  display: flex;
+  &__item{
+    @include mq($from: tablet){
+      margin-right: $inuit-global-spacing-unit
+    }
+  }
+}
