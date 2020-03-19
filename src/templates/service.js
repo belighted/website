@@ -35,7 +35,13 @@ const ServicePage = ({
         <h2>{post.title}</h2>
         <DevNote>Description of {post.slug}</DevNote>
       </section>
-      <RelatedCategory category={category} services={services} service={post} />
+      {category && (
+        <RelatedCategory
+          category={category}
+          services={services}
+          service={post}
+        />
+      )}
     </article>
   </Layout>
 );
