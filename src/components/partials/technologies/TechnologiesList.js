@@ -1,7 +1,7 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-const StatisticsList = () => {
+const TechnlologiesList = () => {
   const {
     dataYaml: { technologies }
   } = useStaticQuery(graphql`
@@ -24,4 +24,4 @@ const StatisticsList = () => {
   );
 };
 
-export default StatisticsList;
+export default TechnlologiesList;
