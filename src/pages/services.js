@@ -4,7 +4,7 @@ import { graphql } from "gatsby";
 import { findSection, Section } from "../components/sections";
 import ProcessesList from "../components/processes/ProcessesList";
 import CategoriesList from "../components/categories/CategoriesList";
-import TechnologiesList from "../components/technologies/TechnologiesList";
+import TechnologiesList from "../components/partials/technologies/TechnologiesList";
 
 const ServicesPage = ({
   pageContext,

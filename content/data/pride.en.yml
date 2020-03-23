@@ -1,0 +1,19 @@
+slug: pride
+lang: en
+pride:
+  - title: Speaking at events
+    subtitle: We like sharing our expertise
+    body: We grant the opportunity to our team to attend and speak at events about software product & development to share their expertise.
+  - title: Open Source Community
+    subtitle: Proponents & users of Open-Source Software
+    body: Being proponents and users of open source software in most of our work, we naturally give back to the community. Since the beginning of Belighted, we have patched software such as Ruby on Rails and some of its libraries, and produced our own which we maintain on our Github page.
+  - title: Conferences
+    subtitle: Room for learning & development is key at Belighted
+    body: Each Belighted member has an allocated budget to attend worldwide conferences. We have already attented conferences such as RubyConf, React Day, AWS summit, Inbound and many more.
+  - title: Working remotely
+    subtitle: Flexibility enables us to better deliver on projects
+    body: We care about our employees' well-being and work-life balance. That's why we enjoy an unlimited remote policy with flexible hours.
+  - title: Beerlighted
+    subtitle: Our Belgian DNA
+    body: Almost all Belighters are beer aficionados, the passion being part of our Belgian culture. We brewed our first batch of "Beerlighted" in 2012 as part of a dedicated team-building event and shared the tasty result with our friends and customers.
+

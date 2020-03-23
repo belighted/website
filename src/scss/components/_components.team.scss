@@ -1,0 +1,11 @@
+.c-team{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-column-gap: $inuit-global-spacing-unit;
+  grid-row-gap: $inuit-global-spacing-unit;
+  &__member{
+    border: 1px solid #838181;
+    padding: $inuit-global-spacing-unit-small;
+  }
+}
