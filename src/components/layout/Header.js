@@ -19,7 +19,7 @@ export default function Header({ page, context: { lang } }) {
         className="o-wrapper c-site-header__wrapper"
       >
         <Link to="/" className="c-site-header__logo">
-          <h1 className="u-margin-none">Belighted</h1>
+          <img src={"/logo.svg"} alt="Belighted" />
         </Link>
         <div className="c-site-header__nav c-site-nav">
           <MenuLink name={"services"} lang={lang} />

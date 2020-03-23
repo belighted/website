@@ -3,13 +3,21 @@ import React from "react";
 
 export const Section = ({ section, children }) => {
   return (
-    <section className={classNames("c-section","u-padding-vertical-large", section.slug)}>
-      <div className='o-wrapper'>
+    <section
+      className={classNames(
+        "c-section",
+        "u-padding-vertical-large",
+        section.slug
+      )}
+    >
+      <div className="o-wrapper">
         <div className="c-section__header">
           <h2 className="c-h2">{section.title}</h2>
-          <div className="c-section__body c-h3">
-            {section.body && <p>{section.body}</p>}
-          </div>
+          {section.body && (
+            <div className="c-section__body c-h4 u-margin-bottom-large">
+              {section.body}
+            </div>
+          )}
         </div>
         <div className={"c-section__content"}>{children}</div>
       </div>
@@ -18,4 +26,4 @@ export const Section = ({ section, children }) => {
 };
 
 export const findSection = (sections, slug) =>
-  sections.find(s => s.slug === slug)
+  sections.find(s => s.slug === slug);

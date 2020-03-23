@@ -1,6 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Img from 'gatsby-image';
+import Img from "gatsby-image";
 
 const Team = () => {
   const {
@@ -11,10 +11,10 @@ const Team = () => {
         team {
           name
           role
-          image{
-            childImageSharp{
-              fluid{
-                ...GatsbyImageSharpFluid
+          image {
+            childImageSharp {
+              fixed(width:150, height:150, grayscale:true) {
+                ...GatsbyImageSharpFixed
               }
             }
           }
@@ -23,15 +23,19 @@ const Team = () => {
     }
   `);
   return (
-      <ul className="o-list-bare c-team">
-        {team.map(node => (
-            <li key={node.name} className="c-team__member u-margin-bottom-small">
-              <h6 className="c-h6 u-margin-none">{node.name}</h6>
-              <span>{node.role}</span>
-              <Img fluid={node.image.childImageSharp.fluid} />
-            </li>
-        ))}
-      </ul>
+    <ul className="o-list-bare c-team">
+      {team.map(node => (
+        <li key={node.name} className="c-team__member u-margin-bottom-small c-team-member">
+          <div className='c-team-member__image'>
+            <Img fixed={node.image.childImageSharp.fixed} />
+          </div>
+          <div className="u-padding-small">
+            <h6 className="c-h6 u-margin-none">{node.name}</h6>
+            <small>{node.role}</small>
+          </div>
+        </li>
+      ))}
+    </ul>
   );
 };
 

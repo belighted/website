@@ -31,7 +31,9 @@
 //@import "node_modules/inuitcss/elements/elements.headings";
 @import "node_modules/inuitcss/elements/elements.images";
 @import "node_modules/inuitcss/elements/elements.tables";
+
 @import "elements/elements.page";
+@import "elements/elements.links";
 
 
 
@@ -79,6 +81,7 @@
 @import "components/components.testimonial";
 @import "components/components.devnote";
 @import "components/components.team";
+@import "components/components.button";
 
 
 @import "layouts/layouts.layout";

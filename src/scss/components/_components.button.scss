@@ -1,0 +1,14 @@
+.c-button {
+  // Note that! The exact path will differ depending on your folder structure.
+  @import "node_modules/buttono/buttono";
+
+  $buttono-font-family: $fontstack-alt;
+  $buttono-background-color: $color-brand4;
+  $buttono-padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-small;
+
+  @include buttono-block();
+
+  &--primary {
+    @include buttono-style-modifier();
+  }
+}

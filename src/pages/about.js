@@ -14,9 +14,6 @@ const AboutPage = ({
 }) => {
   return (
     <Layout context={pageContext} page={"services"}>
-      <div className="o-wrapper">
-        <h1>{title}</h1>
-      </div>
       <Section section={findSection(sections, "team")}>
         <Team />
       </Section>

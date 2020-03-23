@@ -8,7 +8,6 @@
   font-family: $fontstack-alt;
   line-height: 1.2;
   color: $color-gray8;
-  margin-bottom: pxtorem(18px);
 
   @include mq(tablet) {
     @include inuit-font-size(39px);
@@ -31,9 +30,6 @@
   font-family: $fontstack-alt;
   line-height: 1.2;
   color: $color-gray8;
-
-  margin-top: pxtorem(36px);
-  margin-bottom: pxtorem(18px);
 
   @include mq(tablet) {
     @include inuit-font-size(31px);
@@ -104,36 +100,19 @@
   font-family: $fontstack-alt;
   line-height: 1.2;
   color: $color-gray8;
-  margin-bottom: pxtorem(12px);
 
   @include mq(desktop) {
     @include inuit-font-size(23px);
   }
 }
 
-// -------------------------------------
-// Special titles
-// -------------------------------------
-
-.c-suptitle {
-  font-weight: 600;
-  @include inuit-font-size(13px);
-  font-family: $fontstack-main;
-  color: $color-brand4;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: pxtorem(12px);
-}
-
-.c-suptitle--dark {
-  color: $color-brand5;
-}
-
-.c-smalltitle {
-  font-weight: 700;
-  @include inuit-font-size(13px);
-  font-family: $fontstack-main;
+.c-h6 {
+  @include inuit-font-size(16px);
+  font-family: $fontstack-alt;
+  line-height: 1.2;
   color: $color-gray8;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+
+  @include mq(desktop) {
+    @include inuit-font-size(23px);
+  }
 }

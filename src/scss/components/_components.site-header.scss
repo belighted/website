@@ -1,6 +1,7 @@
 .c-site-header {
+
   padding: $inuit-global-spacing-unit 0;
-  background: $color-brand1;
+  background: $color-brand6;
   &__wrapper {
     display: flex;
     align-items: center;
@@ -18,5 +19,9 @@
   justify-content: flex-end;
   &__item{
     padding: $inuit-global-spacing-unit-small;
+    color: $color-white;
+    font-family: $fontstack-alt;
+    text-decoration: none;
+    text-transform: capitalize;
   }
 }

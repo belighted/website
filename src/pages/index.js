@@ -8,6 +8,7 @@ import ProcessesList from "../components/processes/ProcessesList";
 import BlogpostsList from "../components/blog/BlogpostsList";
 import { findSection, Section } from "../components/sections";
 import LocalizedLink from "../components/links/LocalizedLink";
+import {graphql} from 'gatsby';
 
 export default function IndexPage({
   pageContext,
