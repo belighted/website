@@ -28,7 +28,7 @@ const History = () => {
         <li key={node.date}>
           <h5 className="c-h5">{node.date}</h5>
           <p>{node.event}</p>
-          <GatsbyImage fixed={node.image.childImageSharp.fixed} />
+          {node.image && <GatsbyImage fixed={node.image.childImageSharp.fixed} />}
         </li>
       ))}
     </ul>
