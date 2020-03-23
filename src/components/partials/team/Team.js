@@ -1,5 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
+import Img from 'gatsby-image';
 
 const Team = () => {
   const {
@@ -10,6 +11,13 @@ const Team = () => {
         team {
           name
           role
+          image{
+            childImageSharp{
+              fluid{
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }
@@ -20,6 +28,7 @@ const Team = () => {
             <li key={node.name} className="c-team__member u-margin-bottom-small">
               <h6 className="c-h6 u-margin-none">{node.name}</h6>
               <span>{node.role}</span>
+              <Img fluid={node.image.childImageSharp.fluid} />
             </li>
         ))}
       </ul>

@@ -88,13 +88,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: "images",
-        path: `${__dirname}/content/images`
-      }
-    },
-    {
       resolve: "gatsby-plugin-sharp",
       options: {
         defaultQuality: 75
