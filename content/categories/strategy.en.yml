@@ -9,4 +9,3 @@ services:
   - prototyping
   - ux_audit
   - user_testing
-  - code_review

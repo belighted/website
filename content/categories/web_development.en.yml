@@ -1,10 +1,12 @@
 slug: web_development
 lang: en
-title: Web development
-short_description: We create beautiful, fast and reliable web apps tailored for your business goals. Building the next big SaaS or marketplace takes different skills, we got you covered.
+title: Development
+short_description: We create beautiful, fast and reliable web and mobile apps tailored for your business goals. Building the next big SaaS or marketplace takes different skills, we got you covered.
 services:
-  - web_development
   - web_consulting
+  - web_development
+  - mobile_consulting
+  - mobile_development
   - code_review
   - saas_marketplace
 technologies:
@@ -13,3 +15,6 @@ technologies:
   - react
   - angular
   - vuejs
+  - android
+  - ios
+  - react_native
