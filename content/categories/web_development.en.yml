@@ -1,6 +1,7 @@
 slug: web_development
 lang: en
 title: Development
+order: 2
 short_description: We create beautiful, fast and reliable web and mobile apps tailored for your business goals. Building the next big SaaS or marketplace takes different skills, we got you covered.
 services:
   - web_consulting

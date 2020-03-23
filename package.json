@@ -33,6 +33,7 @@
     "gatsby-transformer-yaml": "^2.2.26",
     "inuitcss": "^6.0.0",
     "json-to-pretty-yaml": "^1.2.2",
+    "modularscale-sass": "^3.0.10",
     "node-readability": "^3.0.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.0",

@@ -9,7 +9,7 @@ const FooterServices = ({ showServices }) => {
     allServicesYaml: { nodes: services }
   } = useStaticQuery(graphql`
     {
-      allCategoriesYaml {
+      allCategoriesYaml(sort: {fields: order}) {
         nodes {
           slug
           title

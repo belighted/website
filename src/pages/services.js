@@ -14,7 +14,6 @@ const ServicesPage = ({
 }) => {
   return (
     <Layout context={pageContext} page={"services"}>
-      <h1>{title}</h1>
       <Section section={findSection(sections, "hero")}></Section>
       <Section section={findSection(sections, "process")}>
           <ProcessesList/>

@@ -18,4 +18,4 @@ export const Section = ({ section, children }) => {
 };
 
 export const findSection = (sections, slug) =>
-  sections.find(s => s.slug === slug);
+  sections.find(s => s.slug === slug)
