@@ -18,7 +18,6 @@ export default function IndexPage({
   return (
     <Layout context={pageContext} page={"home"}>
       <Section section={findSection(sections, "hero")}>
-        <h2>Hero</h2>
         <ul>
           {findSection(sections, "hero").slides.map(slide => (
             <li key={slide.title}>{slide.title}</li>

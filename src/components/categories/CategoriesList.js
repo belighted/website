@@ -29,7 +29,7 @@ const CategoriesList = ({ showServices }) => {
     <ul>
       {categories.map(node => (
         <li key={node.slug} id={node.slug} className={"u-margin-bottom-large"}>
-          <h4>
+          <h4 className="c-h4">
             <LinkToCategory slug={node.slug}>{node.title}</LinkToCategory>
           </h4>
 
