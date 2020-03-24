@@ -1,13 +1,32 @@
 slug: technologies
 technologies:
   - value: ruby
+    image: /images/technologies/ruby.svg
+    type: small
   - value: rails
+    image: /images/technologies/rails.svg
+    type: default
   - value: react
+    image: /images/technologies/react.svg
+    type: small
   - value: vuejs
+    image: /images/technologies/vue.svg
+    type: small
   - value: angular
+    image: /images/technologies/angular.svg
+    type: small
   - value: nodejs
-  - value: meteor
+    image: /images/technologies/nodejs.svg
+    type: default
   - value: amazon web services
+    image: /images/technologies/aws.svg
+    type: large
   - value: google-cloud-console
+    image: /images/technologies/google.svg
+    type: large
   - value: docker
+    image: /images/technologies/docker.svg
+    type: large
   - value: postgresql
+    image: /images/technologies/postgresql.svg
+    type: small

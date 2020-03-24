@@ -1,0 +1,17 @@
+.c-technologies{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  &__item{
+    padding: $inuit-global-spacing-unit;
+  }
+}
+
+.c-technology{
+  width: 6rem;
+  box-sizing: content-box;
+  &--small{
+    width: 3rem;
+  }
+}
