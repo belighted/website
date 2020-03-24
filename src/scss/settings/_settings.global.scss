@@ -28,14 +28,15 @@ $color-brand4: #85ccf6;
 $color-brand5: mix(#85ccf6, #333c4e,20%);
 $color-brand6: #333c4e;
 
+$color-gray8: rgb(41,41,41);
+$color-gray4: rgb(103,103,110);
 $color-gray1: #fafafa;
-$color-gray2: #f3f3f2;
-$color-gray3: #e7e7e6;
-$color-gray4: #cfcfcd;
-$color-gray5: #bfbfbd;
-$color-gray6: #a9a8a4;
-$color-gray7: #333c4e;
-$color-gray8: darken(#333c4e,10%);
+
+$color-gray7: mix($color-gray8,$color-gray4,.2);
+$color-gray6: mix($color-gray8,$color-gray4,.4);
+$color-gray5: mix($color-gray8,$color-gray4,.6);
+$color-gray3: mix($color-gray1,$color-gray4,.2);
+$color-gray2: mix($color-gray8,$color-gray4,.6);
 
 $color-white: #ffffff;
 $color-black: #000000;

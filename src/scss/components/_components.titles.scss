@@ -1,118 +1,28 @@
-// -------------------------------------
-// Titles
-// -------------------------------------
-
-.c-h1 {
-  font-weight: 600;
-  @include inuit-font-size(31px);
+.c-heading{
   font-family: $fontstack-alt;
-  line-height: 1.2;
-  color: $color-gray8;
-
-  @include mq(tablet) {
-    @include inuit-font-size(39px);
+  &--eyebrow{
+    color: $color-gray4;
+    text-transform: uppercase;
+    font-weight: 300;
+    padding-bottom: $inuit-global-spacing-unit-tiny;
+    margin-bottom: $inuit-global-spacing-unit-tiny;
+    letter-spacing: .1em;
+    @include inuit-font-size(16px);
+    position: relative;
+    &:after{
+      content :'';
+      background: $color-brand4;
+      height: 2px;
+      position: absolute;
+      bottom: 0;
+      width: 50px;
+      left:0;
+    }
   }
-
-  @include mq(desktop) {
-    @include inuit-font-size(45px);
-  }
-}
-
-.c-h1--invert {
-  color: $color-white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.c-h2 {
-  font-weight: 600;
-  @include inuit-font-size(29px);
-  font-family: $fontstack-alt;
-  line-height: 1.2;
-  color: $color-gray8;
-
-  @include mq(tablet) {
-    @include inuit-font-size(31px);
-  }
-
-  @include mq(desktop) {
-    @include inuit-font-size(36px);
-  }
-}
-
-.c-h2--invert {
-  color: $color-white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.c-h3 {
-  font-weight: 600;
-  @include inuit-font-size(23px);
-  font-family: $fontstack-alt;
-  line-height: 1.2;
-  color: $color-gray8;
-  margin-top: pxtorem(36px);
-  margin-bottom: pxtorem(18px);
-
-  @include mq(tablet) {
-    @include inuit-font-size(25px);
-  }
-
-  @include mq(desktop) {
-    @include inuit-font-size(29px);
-  }
-}
-
-.c-h3--invert {
-  color: $color-white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.c-h4 {
-  font-weight: 700;
-  @include inuit-font-size(20px);
-  font-family: $fontstack-alt;
-  line-height: 1.2;
-  color: $color-gray8;
-  margin-top: pxtorem(36px);
-  margin-bottom: pxtorem(18px);
-
-  @include mq(tablet) {
-    @include inuit-font-size(23px);
-  }
-
-  @include mq(desktop) {
-    @include inuit-font-size(25px);
-  }
-}
-
-.c-h4--invert {
-  color: $color-white;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.c-h5 {
-  font-weight: 600;
-  @include inuit-font-size(20px);
-  font-family: $fontstack-alt;
-  line-height: 1.2;
-  color: $color-gray8;
-
-  @include mq(desktop) {
-    @include inuit-font-size(23px);
-  }
-}
-
-.c-h6 {
-  @include inuit-font-size(16px);
-  font-family: $fontstack-alt;
-  line-height: 1.2;
-  color: $color-gray8;
-
-  @include mq(desktop) {
-    @include inuit-font-size(23px);
+  &--2{
+    color: $color-gray8;
+    margin-bottom: $inuit-global-spacing-unit;
+    @include inuit-font-size(24px);
+    max-width: 22em;
   }
 }

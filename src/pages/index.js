@@ -8,7 +8,7 @@ import ProcessesList from "../components/processes/ProcessesList";
 import BlogpostsList from "../components/blog/BlogpostsList";
 import { findSection, Section } from "../components/sections";
 import LocalizedLink from "../components/links/LocalizedLink";
-import {graphql} from 'gatsby';
+import { graphql } from "gatsby";
 
 export default function IndexPage({
   pageContext,
@@ -21,7 +21,10 @@ export default function IndexPage({
       <Section section={findSection(sections, "hero")}>
         <ul>
           {findSection(sections, "hero").slides.map(slide => (
-            <li key={slide.title}>{slide.title}</li>
+            <li key={slide.title}>
+              <h1 className={"c-h1"}>{slide.title}</h1>
+              <h2 className={"c-h2"}>{slide.body}</h2>
+            </li>
           ))}
         </ul>
       </Section>
@@ -33,12 +36,12 @@ export default function IndexPage({
       </Section>
       <Section section={findSection(sections, "cases")}>
         <CasesList />
-        <LocalizedLink route={'/clients'}>See all cases</LocalizedLink>
+        <LocalizedLink route={"/clients"}>See all cases</LocalizedLink>
       </Section>
 
       <Section section={findSection(sections, "statistics")}>
         <StatisticsList />
-          <LocalizedLink route={'/about'}>Find out more about us</LocalizedLink>
+        <LocalizedLink route={"/about"}>Find out more about us</LocalizedLink>
       </Section>
 
       <Section section={findSection(sections, "testimonials")}>
@@ -61,6 +64,7 @@ export const query = graphql`
         body
         slides {
           title
+          body
         }
       }
     }

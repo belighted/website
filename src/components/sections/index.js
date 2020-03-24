@@ -12,9 +12,9 @@ export const Section = ({ section, children }) => {
     >
       <div className="o-wrapper">
         <div className="c-section__header">
-          <h2 className="c-h2">{section.title}</h2>
+          <h2 className="c-heading c-heading--eyebrow">{section.title}</h2>
           {section.body && (
-            <div className="c-section__body c-h4 u-margin-bottom-large">
+            <div className="c-heading c-heading--2">
               {section.body}
             </div>
           )}
