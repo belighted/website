@@ -1,0 +1,115 @@
+slug: about
+lang: en
+title: Let's build great things.
+  Together.
+body: Do you want to challenge the status quo & improve people's quality of life with software? Discover the team that will make your outstanding software product a reality.
+sections:
+  - slug: team
+    title: Our team
+    body: Do you want to challenge the status quo & improve people's quality of life with software? Discover the team that will make your outstanding software product a reality.
+  - slug: history
+    title: Our history
+  - slug: pride
+    title: What we are proud of
+team:
+  - id: nja
+    name: Nicolas
+    role: CEO
+    image: ./about/team/nja.jpg
+  - id: mal
+    name: Michael
+    role: Project Manager
+    image: ./about/team/mal.jpg
+  - id: shu
+    name: Sophie
+    role: Project Manager
+    image: ./about/team/shu.jpg
+  - id: pve
+    name: Philippe
+    role: Full stack developper
+    image: ./about/team/pve.jpg
+  - id: she
+    name: Simon
+    role: Front-end developer
+    image: ./about/team/she.jpg
+  - id: kcl
+    name: Kathleen
+    role: Full stack developer
+    image: ./about/team/kcl.jpg
+  - id: dle
+    name: Dominique
+    role: Full stack developer
+    image: ./about/team/dle.jpg
+  - id: cgo
+    name: Christophe
+    role: Full stack developer
+    image: ./about/team/cgo.jpg
+  - id: lgr
+    name: Lucile
+    role: User experience designer
+    image: ./about/team/lgr.jpg
+  - id: eto
+    name: Eddy
+    role: Front end developer
+    image: ./about/team/eto.jpg
+  - id: skr
+    name: Sergei
+    role: Full stack developer
+    image: ./about/team/skr.jpg
+  - id: AHU
+    name: Arnaud
+    role: Front-end developer
+    image: ./about/team/ahu.png
+  - id: osz
+    name: Oskar
+    role: Back-end developer
+    image: ./about/team/osz.jpg
+  - id: bda
+    name: Brahim
+    role: Full-stack developer
+    image: ./about/team/bda.jpg
+  - id: JMO
+    name: Julien
+    role: Front-end developer
+    image: ./about/team/jmo.png
+  - id: KVA
+    name: Kevin
+    role: Full stack developper
+    image: ./about/team/kva.png
+history:
+  - date: 2008
+    event: In 2008, on the university campus at Louvain-la-Neuve, Nicolas Jacobeus made his vision reality. He founded Belighted, a software development agency, to create innovative products that would delight users.
+    image: ./about/history/nicolas.jpg
+  - date: 2009
+    event: From the start, Belighted embraced excellence in modern, efficient technologies like Ruby and its web framework Rails. Relentless focus on quality helped Belighted grow and attract like-minded talent.  The company grew to become a passionate team of software engineers, user experience specialists, and project managers.
+    image: ./about/history/deloitte.png
+  - date: 2013
+    event: Belighted's growth got noticed. Belighted was nominated by Deloitte as one the 50 fastest growing technology firms in Benelux. We were one of the few services based businesses, and earned the 7th place among all Belgian participants. We made our first dent in the tech universe.
+    image: ./about/history/grow.png
+  - date: 2017
+    event: Over the years, the experience we have gathered on hundreds of projects has resulted in a fine-tuned methodology to set our clients’ software products up for excellent performance. Strategy Workshop > Design Sprint > Software Development / MVP > Iteration on the product
+  - date: 2018
+    event: "Belighted is growing fast with a 50% increase in yearly revenue. We have added 9 new team members to the family. Each brings skills that will enrich our work for our clients and allow us to do more of what we love: creating and developing software products that grow your business. That's why we decided to recruit our very first marketer, an UX designer and other developers to continue our journey."
+  - date: 2019
+    event: "Belighted continues scaling at the same tempo. We are not even half-way through 2019 and we are already proud of our achievements so far: a brand new website, 3 new service lines (Code Review, UX audit & User Testing package) and we continue recruiting to become 25 Belighters by the end of the year."
+pride:
+  - title: Speaking at events
+    subtitle: We like sharing our expertise
+    body: We grant the opportunity to our team to attend and speak at events about software product & development to share their expertise.
+    image: ./about/pride/event_cypress.jpg
+  - title: Open Source Community
+    subtitle: Proponents & users of Open-Source Software
+    body: Being proponents and users of open source software in most of our work, we naturally give back to the community. Since the beginning of Belighted, we have patched software such as Ruby on Rails and some of its libraries, and produced our own which we maintain on our Github page.
+    image: ./about/pride/ruby_conf.jpg
+  - title: Conferences
+    subtitle: Room for learning & development is key at Belighted
+    body: Each Belighted member has an allocated budget to attend worldwide conferences. We have already attented conferences such as RubyConf, React Day, AWS summit, Inbound and many more.
+    image: ./about/pride/management_conf.jpg
+  - title: Working remotely
+    subtitle: Flexibility enables us to better deliver on projects
+    body: We care about our employees' well-being and work-life balance. That's why we enjoy an unlimited remote policy with flexible hours.
+    image: ./about/pride/remote_working.png
+  - title: Beerlighted
+    subtitle: Our Belgian DNA
+    body: Almost all Belighters are beer aficionados, the passion being part of our Belgian culture. We brewed our first batch of "Beerlighted" in 2012 as part of a dedicated team-building event and shared the tasty result with our friends and customers.
+    image: ./about/pride/beerlighted.png
