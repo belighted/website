@@ -15,11 +15,11 @@ const StatisticsList = () => {
     }
   `);
   return (
-    <ul>
+    <ul className="o-list-bare l-grid l-grid--4cols">
       {statistics.map(node => (
-        <li key={node.label}>
-          <strong>{node.value}</strong>&nbsp;
-          <span>{node.label}</span>
+        <li key={node.label} className="l-grid__item o-box o-box--light-bg o-block">
+          <p className="o-block__img c-heading c-heading--1 u-margin-bottom-tiny">{node.value}</p>
+          <p className="c-body c-body--1 u-margin-none">{node.label}</p>
         </li>
       ))}
     </ul>

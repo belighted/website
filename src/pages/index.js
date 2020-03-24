@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
 import CategoriesList from "../components/categories/CategoriesList";
-import StatisticsList from "../components/statistics/StatisticsList";
+import StatisticsList from "../components/home/statistics/StatisticsList";
 import TestimonialsList from "../components/testimonials/TestimonialsList";
 import BlogpostsList from "../components/blog/BlogpostsList";
 import { findSection, Section } from "../components/sections";
@@ -11,6 +11,7 @@ import Hero from "../components/home/hero/Hero";
 import HomeProcess from "../components/home/process/Process";
 import * as PropTypes from "prop-types";
 import Cases from "../components/home/cases/Cases";
+import Statistics from "../components/home/statistics/Statistics";
 
 Cases.propTypes = { sections: PropTypes.any };
 export default function Homepage({
@@ -31,12 +32,7 @@ export default function Homepage({
       </Section>
       <HomeProcess section={findSection(sections, "process")} />
       <Cases section={findSection(sections, "cases")} />
-
-      <Section section={findSection(sections, "statistics")}>
-        <StatisticsList />
-        <LocalizedLink route={"/about"}>Find out more about us</LocalizedLink>
-      </Section>
-
+      <Statistics section={findSection(sections, "statistics")} />
       <Section section={findSection(sections, "testimonials")}>
         <TestimonialsList />
       </Section>
