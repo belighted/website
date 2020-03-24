@@ -21,7 +21,8 @@ const Hero = () => {
       <div>
         <h1 className="c-heading c-heading--1">{slide.title}</h1>
         <p className={"c-body c-body--3"}>{slide.body}</p>
-        <Button>Estimate project</Button>
+        <p><Button>Estimate project</Button></p>
+        <p><Button modifier="outline-primary">Book a call</Button></p>
       </div>
     </div>
   );

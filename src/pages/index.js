@@ -4,14 +4,14 @@ import CategoriesList from "../components/categories/CategoriesList";
 import StatisticsList from "../components/statistics/StatisticsList";
 import CasesList from "../components/cases/CasesList";
 import TestimonialsList from "../components/testimonials/TestimonialsList";
-import ProcessesList from "../components/processes/ProcessesList";
 import BlogpostsList from "../components/blog/BlogpostsList";
 import { findSection, Section } from "../components/sections";
 import LocalizedLink from "../components/links/LocalizedLink";
 import { graphql } from "gatsby";
 import Hero from "../components/home/hero/Hero";
+import HomeProcess from "../components/home/process/Process";
 
-export default function IndexPage({
+export default function Homepage({
   pageContext,
   data: {
     contentYaml: { sections }
@@ -21,12 +21,10 @@ export default function IndexPage({
     <Layout context={pageContext} page={"home"}>
       <Hero />
 
-      <Section section={findSection(sections, "categories")}>
+      <Section section={findSection(sections, "categories")} modifier="light-bg">
         <CategoriesList />
       </Section>
-      <Section section={findSection(sections, "process")}>
-        <ProcessesList />
-      </Section>
+      <HomeProcess section={findSection(sections, "process")} />
       <Section section={findSection(sections, "cases")}>
         <CasesList />
         <LocalizedLink route={"/clients"}>See all cases</LocalizedLink>

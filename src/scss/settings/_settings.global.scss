@@ -21,11 +21,11 @@ $fontstack-alt: ("Montserrat", "Georgia", "Times", serif);
 // Colors
 // -------------------------------------
 
-$color-brand1: #f5f0df;
+$color-brand1: #f0f7f9;
 $color-brand2: #eee0af;
 $color-brand3: #f2d87f;
 $color-brand4: #85ccf6;
-$color-brand5: mix(#85ccf6, #333c4e,90%);
+$color-brand5: darken(#85ccf6,9%);
 $color-brand6: #333c4e;
 
 $color-gray8: rgb(41,41,41);

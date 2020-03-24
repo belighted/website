@@ -9,6 +9,17 @@
   @include buttono-block();
 
   &--primary {
-    @include buttono-style-modifier();
+    @include buttono-style-modifier($border-width: 0.125rem,);
+  }
+  &--outline-primary {
+    @include buttono-style-modifier(
+      $color: $color-brand5,
+      $color-disabled: #999,
+      $border-width: 0.125rem,
+      $border-color: $color-brand5,
+      $background-color: transparent,
+      $background-color-hover: $color-brand5,
+      $border-color-disabled: $color-brand5
+    );
   }
 }

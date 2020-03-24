@@ -1,5 +1,13 @@
 .c-body{
   font-family: $fontstack-main;
+  &--1{
+    max-width: 30em;
+    @include inuit-font-size($inuit-font-size-body-1);
+  }
+  &--2{
+    max-width: 30em;
+    @include inuit-font-size($inuit-font-size-body-2);
+  }
   &--3{
     max-width: 30em;
     @include inuit-font-size($inuit-font-size-body-3);
@@ -29,7 +37,7 @@
   }
 
   &--1{
-    @include inuit-font-size($inuit-font-size-h2);
+    @include inuit-font-size($inuit-font-size-h1);
     color: $color-gray8;
     max-width: 14em;
   }
@@ -38,5 +46,16 @@
     color: $color-gray8;
     margin-bottom: $inuit-global-spacing-unit;
     max-width: 22em;
+  }
+  &--3{
+    @include inuit-font-size($inuit-font-size-h3);
+    color: $color-gray8;
+    margin-bottom: $inuit-global-spacing-unit;
+    max-width: 22em;
+  }
+  &--4{
+    color: $color-gray8;
+    @include inuit-font-size($inuit-font-size-h4);
+    max-width:22em
   }
 }

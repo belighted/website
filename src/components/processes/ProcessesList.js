@@ -18,16 +18,16 @@ const ProcessesList = () => {
     }
   `);
   return (
-    <ol className="">
+    <ol className="l-grid l-grid--2cols">
       {nodes.map(node => (
         <li key={node.slug} className={"u-margin-bottom-large"}>
-          <h4 className={"c-h4"}>
-            <LinkToService slug={node.slug}>{node.title}</LinkToService>
+          <h4 className={"c-heading c-heading--4"}>
+            {node.title}
           </h4>
 
           <div>{node.intro}</div>
           <LinkToService slug={node.slug}>
-            <Button>More info</Button>
+            More info
           </LinkToService>
         </li>
       ))}

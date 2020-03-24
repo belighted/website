@@ -1,0 +1,12 @@
+.l-introcontent {
+  display: grid;
+  grid-template-columns: 4fr 1fr 6fr 1fr;
+  grid-template-areas: "intro . main .";
+  gap: $inuit-global-spacing-unit-large;
+  &__intro {
+    grid-area: intro;
+  }
+  &__main {
+    grid-area: main;
+  }
+}

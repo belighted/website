@@ -1,24 +1,32 @@
 import classNames from "classnames";
 import React from "react";
+import * as PropTypes from "prop-types";
 
-export const Section = ({ section, children }) => {
+export function SectionHeader(props) {
+  return (
+    <div className="c-section-header">
+      <h2 className="c-heading c-heading--eyebrow">{props.title}</h2>
+      {props.body && <div className="c-heading c-heading--2">{props.body}</div>}
+    </div>
+  );
+}
+
+SectionHeader.propTypes = {
+  title: PropTypes.any,
+  body: PropTypes.any
+};
+
+export const Section = ({ section, children, modifier }) => {
   return (
     <section
       className={classNames(
         "c-section",
-        "u-padding-vertical-large",
+        modifier && `c-section--${modifier}`,
         section.slug
       )}
     >
       <div className="o-wrapper">
-        <div className="c-section__header">
-          <h2 className="c-heading c-heading--eyebrow">{section.title}</h2>
-          {section.body && (
-            <div className="c-heading c-heading--2">
-              {section.body}
-            </div>
-          )}
-        </div>
+        <SectionHeader title={section.title} body={section.body} />
         <div className={"c-section__content"}>{children}</div>
       </div>
     </section>
