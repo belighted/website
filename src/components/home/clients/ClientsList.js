@@ -17,20 +17,20 @@ const ClientsList = () => {
     }
   `);
   return (
-    <ul className="o-list-bare l-grid l-grid--2cols">
+    <ul className="o-list-bare c-logo-list">
       {clients.map(node => (
         <li
           key={node.value}
           className={classnames(
-            "c-clients__item",
-            "c-client",
-            `c-client--${node.type}`
+            "c-logo-list__item",
+            "c-logo",
+            `c-logo--${node.type}`
           )}
         >
           <img
             src={node.image}
             alt={node.value}
-            className={"c-clients__img"}
+            className={"c-logo__img"}
           />
         </li>
       ))}
