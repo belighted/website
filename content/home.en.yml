@@ -1,26 +1,6 @@
 lang: fr
 slug: home
 sections:
-  - slug: hero
-    slides:
-      - title: SaaS development Agency
-        body:
-          "We help Startups, Scale ups & software publishers deliver a revolutionary
-          digital product loved by their clients "
-        buttons:
-          - title: Estimate project
-            link: /
-          - title: Book a call
-            link: /
-      - title: Better Software Products Faster.
-        body:
-          Let’s build a software product that will grow your business and will delight
-          your users.
-        buttons:
-          - title: Estimate project
-            link: /
-          - title: Book a call
-            link: /
   - slug: categories
     title: What we do
     body: "We deliver custom software, SaaS, marketplace on demand. Our high-impact custom development provides business value."
@@ -37,3 +17,22 @@ sections:
   - slug: blog
     title: Latest SaaS & Software Stories
     body: Popular on our blog right now
+slides:
+  - title: SaaS development Agency
+    body:
+      "We help Startups, Scale ups & software publishers deliver a revolutionary
+      digital product loved by their clients "
+    buttons:
+      - title: Estimate project
+        link: /
+      - title: Book a call
+        link: /
+  - title: Better Software Products Faster.
+    body:
+      Let’s build a software product that will grow your business and will delight
+      your users.
+    buttons:
+      - title: Estimate project
+        link: /
+      - title: Book a call
+        link: /

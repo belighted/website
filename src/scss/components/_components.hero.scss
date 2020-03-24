@@ -1,4 +1,6 @@
 .c-hero{
   min-height: 70vh;
-  background: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }

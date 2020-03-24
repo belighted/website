@@ -1,28 +1,42 @@
+.c-body{
+  font-family: $fontstack-main;
+  &--3{
+    max-width: 30em;
+    @include inuit-font-size($inuit-font-size-body-3);
+  }
+}
+
 .c-heading{
   font-family: $fontstack-alt;
   &--eyebrow{
+    @include inuit-font-size($inuit-font-size-h6);
     color: $color-gray4;
     text-transform: uppercase;
     font-weight: 300;
     padding-bottom: $inuit-global-spacing-unit-tiny;
     margin-bottom: $inuit-global-spacing-unit-tiny;
     letter-spacing: .1em;
-    @include inuit-font-size(16px);
     position: relative;
     &:after{
       content :'';
       background: $color-brand4;
-      height: 2px;
+      height: 3px;
       position: absolute;
       bottom: 0;
       width: 50px;
       left:0;
     }
   }
+
+  &--1{
+    @include inuit-font-size($inuit-font-size-h2);
+    color: $color-gray8;
+    max-width: 14em;
+  }
   &--2{
+    @include inuit-font-size($inuit-font-size-h2);
     color: $color-gray8;
     margin-bottom: $inuit-global-spacing-unit;
-    @include inuit-font-size(24px);
     max-width: 22em;
   }
 }

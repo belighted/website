@@ -9,6 +9,7 @@ import BlogpostsList from "../components/blog/BlogpostsList";
 import { findSection, Section } from "../components/sections";
 import LocalizedLink from "../components/links/LocalizedLink";
 import { graphql } from "gatsby";
+import Hero from "../components/home/hero/Hero";
 
 export default function IndexPage({
   pageContext,
@@ -18,16 +19,8 @@ export default function IndexPage({
 }) {
   return (
     <Layout context={pageContext} page={"home"}>
-      <Section section={findSection(sections, "hero")}>
-        <ul>
-          {findSection(sections, "hero").slides.map(slide => (
-            <li key={slide.title}>
-              <h1 className={"c-h1"}>{slide.title}</h1>
-              <h2 className={"c-h2"}>{slide.body}</h2>
-            </li>
-          ))}
-        </ul>
-      </Section>
+      <Hero />
+
       <Section section={findSection(sections, "categories")}>
         <CategoriesList />
       </Section>
@@ -62,10 +55,6 @@ export const query = graphql`
         slug
         title
         body
-        slides {
-          title
-          body
-        }
       }
     }
   }

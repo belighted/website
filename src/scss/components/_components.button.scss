@@ -3,7 +3,7 @@
   @import "node_modules/buttono/buttono";
 
   $buttono-font-family: $fontstack-alt;
-  $buttono-background-color: $color-brand4;
+  $buttono-background-color: $color-brand5;
   $buttono-padding: $inuit-global-spacing-unit-tiny $inuit-global-spacing-unit-small;
 
   @include buttono-block();
