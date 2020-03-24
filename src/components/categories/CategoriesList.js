@@ -9,7 +9,7 @@ const CategoriesList = ({ showServices }) => {
     allServicesYaml: { nodes: services }
   } = useStaticQuery(graphql`
     {
-      allCategoriesYaml(sort:{fields:order}) {
+      allCategoriesYaml(sort: { fields: order }) {
         nodes {
           slug
           title
@@ -29,11 +29,18 @@ const CategoriesList = ({ showServices }) => {
     <ul>
       {categories.map(node => (
         <li key={node.slug} id={node.slug} className={"u-margin-bottom-large"}>
-          <h4 className="c-heading c-heading--3">
-            <LinkToCategory slug={node.slug}>{node.title}</LinkToCategory>
-          </h4>
+          <h4 className="c-heading c-heading--3">{node.title}</h4>
 
-          <div className='c-body c-body--2'>{node.short_description}</div>
+          <div className="c-body c-body--2">{node.short_description}</div>
+
+          {!showServices && (
+            <p className={"u-margin-top"}>
+              <LinkToCategory
+                slug={node.slug}
+              >{`More about ${node.title}`}</LinkToCategory>
+            </p>
+          )}
+
           {showServices && (
             <ul>
               {node.services.map(slug => (

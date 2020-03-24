@@ -1,61 +1,76 @@
-.c-body{
+.c-body {
   font-family: $fontstack-main;
-  &--1{
+  &--1 {
     max-width: 30em;
     @include inuit-font-size($inuit-font-size-body-1);
   }
-  &--2{
+  &--2 {
     max-width: 30em;
     @include inuit-font-size($inuit-font-size-body-2);
   }
-  &--3{
+  &--3 {
     max-width: 30em;
     @include inuit-font-size($inuit-font-size-body-3);
   }
 }
 
-.c-heading{
+.c-heading {
   font-family: $fontstack-alt;
-  &--eyebrow{
+  &--eyebrow {
     @include inuit-font-size($inuit-font-size-h6);
     color: $color-gray4;
     text-transform: uppercase;
     font-weight: 300;
     padding-bottom: $inuit-global-spacing-unit-tiny;
     margin-bottom: $inuit-global-spacing-unit-tiny;
-    letter-spacing: .1em;
+    letter-spacing: 0.1em;
     position: relative;
-    &:after{
-      content :'';
+    &:after {
+      content: "";
       background: $color-brand4;
       height: 3px;
       position: absolute;
       bottom: 0;
       width: 50px;
-      left:0;
+      left: 0;
+    }
+    &.c-heading--invert{
+      color: $color-gray2;
+      &:after{
+        background: $color-white;
+      }
     }
   }
 
-  &--1{
+  &--1 {
     @include inuit-font-size($inuit-font-size-h1);
     color: $color-gray8;
     max-width: 14em;
   }
-  &--2{
+  &--2 {
     @include inuit-font-size($inuit-font-size-h2);
     color: $color-gray8;
     margin-bottom: $inuit-global-spacing-unit;
     max-width: 22em;
   }
-  &--3{
+  &--3 {
     @include inuit-font-size($inuit-font-size-h3);
     color: $color-gray8;
     margin-bottom: $inuit-global-spacing-unit;
     max-width: 22em;
   }
-  &--4{
-    color: $color-gray8;
+  &--4 {
     @include inuit-font-size($inuit-font-size-h4);
-    max-width:22em
+    max-width: 22em;
+  }
+  &--5 {
+    color: $color-gray4;
+    text-transform: uppercase;
+    font-weight: 300;
+    @include inuit-font-size($inuit-font-size-h6);
+    max-width: 22em;
+  }
+  &--invert{
+    color: $color-white;
   }
 }

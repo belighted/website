@@ -3,7 +3,7 @@ import * as classnames from "classnames";
 
 
 const Button = ({ children, modifier = "primary" }) => {
-  return <div className={classnames("c-button",modifier && `c-button--${modifier}`)}>{children}</div>;
+  return <span className={classnames("c-button",modifier && `c-button--${modifier}`)}>{children}</span>;
 };
 
 export default Button;

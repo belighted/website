@@ -9,7 +9,8 @@ sections:
     body: "Belighted's signature to deliver next-gen software, faster? Our 4-stage process to build meaningful digital experiences."
   - slug: cases
     title: Success stories
-    body: Our clients have changed the world we live in, and we're proud to be a part of their success. Discover how we delivered value for them.
+    body: Our clients have changed the world we live in, and we're proud to be a part of their success.
+    subtitle: Discover how we delivered value for them.
   - slug: statistics
     title: Belighted by the numbers
   - slug: testimonials

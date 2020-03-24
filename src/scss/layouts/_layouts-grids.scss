@@ -40,7 +40,7 @@ $breakpoints-map: (
 
   display: grid;
   grid-template-columns: 1fr;
-  gap: $inuit-global-spacing-unit;
+  grid-gap: $inuit-global-spacing-unit;
 }
 
 .l-grid--fluid {

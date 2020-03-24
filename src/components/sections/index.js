@@ -2,11 +2,32 @@ import classNames from "classnames";
 import React from "react";
 import * as PropTypes from "prop-types";
 
-export function SectionHeader(props) {
+export function SectionHeader({ title, body, modifier }) {
   return (
-    <div className="c-section-header">
-      <h2 className="c-heading c-heading--eyebrow">{props.title}</h2>
-      {props.body && <div className="c-heading c-heading--2">{props.body}</div>}
+    <div
+      className={classNames(
+        "c-section-header",
+        modifier && `c-section-header--${modifier}`
+      )}
+    >
+      <h2
+        className={classNames(
+          "c-heading c-heading--eyebrow",
+          modifier && `c-heading--${modifier}`
+        )}
+      >
+        {title}
+      </h2>
+      {body && (
+        <div
+          className={classNames(
+            "c-heading c-heading--2",
+            modifier && `c-heading--${modifier}`
+          )}
+        >
+          {body}
+        </div>
+      )}
     </div>
   );
 }

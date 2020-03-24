@@ -22,7 +22,7 @@ $fontstack-alt: ("Montserrat", "Georgia", "Times", serif);
 // -------------------------------------
 
 $color-brand1: #f0f7f9;
-$color-brand2: #eee0af;
+$color-brand2: #85ccf6;
 $color-brand3: #f2d87f;
 $color-brand4: #85ccf6;
 $color-brand5: darken(#85ccf6,9%);
@@ -32,11 +32,9 @@ $color-gray8: rgb(41,41,41);
 $color-gray4: rgb(103,103,110);
 $color-gray1: #fafafa;
 
-$color-gray7: mix($color-gray8,$color-gray4,.2);
-$color-gray6: mix($color-gray8,$color-gray4,.4);
-$color-gray5: mix($color-gray8,$color-gray4,.6);
-$color-gray3: mix($color-gray1,$color-gray4,.2);
-$color-gray2: mix($color-gray8,$color-gray4,.6);
+$color-gray5: mix($color-gray1,$color-brand5,40%);
+$color-gray3: mix($color-gray1,$color-brand5,80%);
+$color-gray2: mix($color-gray1,$color-brand5,90%);
 
 $color-white: #ffffff;
 $color-black: #000000;
