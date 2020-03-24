@@ -17,20 +17,20 @@ const TechnlologiesList = () => {
     }
   `);
   return (
-    <ul className="o-list-bare c-technologies">
+    <ul className="o-list-bare c-logo-list">
       {technologies.map(node => (
         <li
           key={node.value}
           className={classnames(
-            "c-technologies__item",
-            "c-technology",
-            `c-technology--${node.type}`
+            "c-logo-list__item",
+            "c-logo",
+            `c-logo--${node.type}`
           )}
         >
           <img
             src={node.image}
             alt={node.value}
-            className={"c-technologies__img"}
+            className={"c-logo__img"}
           />
         </li>
       ))}
