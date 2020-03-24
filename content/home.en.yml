@@ -13,8 +13,9 @@ sections:
     subtitle: Discover how we delivered value for them.
   - slug: statistics
     title: Belighted by the numbers
-  - slug: testimonials
-    title: Leading brands in Belgium and in Europe trust us and rely on Belighted development to deliver perfection every day.
+  - slug: clients
+    title: Our clients
+    body: Leading brands in Belgium and in Europe trust us and rely on Belighted development to deliver perfection every day.
   - slug: blog
     title: Latest SaaS & Software Stories
     body: Popular on our blog right now

@@ -21,14 +21,14 @@ const TestimonialsList = () => {
   return (
     <ul>
       {nodes.map(node => (
-        <li className="u-margin-bottom" key={node.slug}>
-
-          <h4><LinkToCase slug={node.client}>{node.client}</LinkToCase></h4>
-
+        <li className="u-margin-bottom o-box o-box--light-bg" key={node.slug}>
           <div>{node.body}</div>
           <small>
             {node.author} {node.role}
           </small>
+          <p>
+            <LinkToCase slug={node.client}>{node.client}</LinkToCase>
+          </p>
         </li>
       ))}
     </ul>

@@ -9,4 +9,8 @@
   &__main {
     grid-area: main;
   }
+  &--invert{
+    grid-template-columns: 7fr 5fr;
+    grid-template-areas: "main intro";
+  }
 }

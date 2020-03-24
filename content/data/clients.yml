@@ -1,0 +1,32 @@
+slug: clients
+clients:
+  - value: qualifio
+    image: /images/clients/qualifio.svg
+    type: small
+  - value: sortlist
+    image: /images/clients/sortlist.svg
+    type: small
+  - value: apptweak
+    image: /images/clients/apptweak.svg
+    type: small
+  - value: pwc
+    image: /images/clients/pwc.svg
+    type: small
+  - value: arcelor
+    image: /images/clients/arcelor.svg
+    type: small
+  - value: listminut
+    image: /images/clients/listminut-logo.png
+    type: small
+  - value: mymicroinvest
+    image: /images/clients/mymicroinvest-logo.svg
+    type: small
+  - value: iba
+    image: /images/clients/iba_logo.png
+    type: small
+  - value: menu-next-door
+    image: /images/clients/menu-next-door-logo.png
+    type: small
+  - value: seraphin
+    image: /images/clients/seraphin-logo.png
+    type: small
