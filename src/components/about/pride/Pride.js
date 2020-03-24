@@ -4,10 +4,10 @@ import GatsbyImage from "gatsby-image";
 
 const Pride = () => {
   const {
-    dataYaml: { pride }
+    contentYaml: { pride }
   } = useStaticQuery(graphql`
     {
-      dataYaml(slug: { eq: "pride" }) {
+      contentYaml(slug: { eq: "about" }) {
         pride {
           title
           subtitle
@@ -29,9 +29,7 @@ const Pride = () => {
         <li key={node.title} className="u-margin-bottom">
           <div className="o-flag">
             <div className={"o-flag__img"}>
-            <GatsbyImage
-              fixed={node.image.childImageSharp.fixed}
-            />
+              <GatsbyImage fixed={node.image.childImageSharp.fixed} />
             </div>
             <div className={"o-flag__body"}>
               <h4 className="c-h4 u-margin-bottom-small">{node.title}</h4>

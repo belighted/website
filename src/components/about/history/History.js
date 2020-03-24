@@ -4,10 +4,10 @@ import GatsbyImage from "gatsby-image";
 
 const History = () => {
   const {
-    dataYaml: { history }
+    contentYaml: { history }
   } = useStaticQuery(graphql`
     {
-      dataYaml(slug: { eq: "history" }) {
+      contentYaml(slug: { eq: "about" }) {
         history {
           date
           event
