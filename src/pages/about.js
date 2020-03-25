@@ -5,18 +5,17 @@ import { findSection, Section } from "../components/sections";
 import History from "../components/about/history/History";
 import Team from "../components/about/team/Team";
 import Pride from "../components/about/pride/Pride";
-import Img from "gatsby-image";
+import LastScene from "../components/splits/LastScene";
 
 const AboutPage = ({
   pageContext,
   data: {
-    contentYaml: { title, sections },
-    lastScene: { childImageSharp: lastScene }
+    contentYaml: { sections },
   }
 }) => {
   return (
     <Layout context={pageContext} page={"services"}>
-      <Img fluid={lastScene.fluid} />
+      <LastScene />
       <Section section={findSection(sections, "team")}>
         <Team />
       </Section>
@@ -41,15 +40,6 @@ export const query = graphql`
         slug
         title
         body
-      }
-    }
-    lastScene: file(relativePath: { eq: "about/last_scene.jpeg" }) {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fluid {
-          ...GatsbyImageSharpFluid
-        }
       }
     }
   }

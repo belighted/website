@@ -10,6 +10,7 @@ import * as PropTypes from "prop-types";
 import Cases from "../components/home/cases/Cases";
 import Statistics from "../components/home/statistics/Statistics";
 import Clients from "../components/home/clients/Clients";
+import LastScene from "../components/splits/LastScene";
 
 Cases.propTypes = { sections: PropTypes.any };
 export default function Homepage({
@@ -31,6 +32,7 @@ export default function Homepage({
       <HomeProcess section={findSection(sections, "process")} />
       <Cases section={findSection(sections, "cases")} />
       <Statistics section={findSection(sections, "statistics")} />
+      <LastScene />
       <Clients section={findSection(sections, "clients")} />
       <Section section={findSection(sections, "blog")}>
         <BlogpostsList />

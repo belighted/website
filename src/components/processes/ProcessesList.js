@@ -1,7 +1,6 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import LinkToService from "../services/LinkToService";
-import Button from "../buttons/Button";
 
 const ProcessesList = () => {
   const {
@@ -19,8 +18,10 @@ const ProcessesList = () => {
   `);
   return (
     <ol className="l-grid l-grid--2cols">
-      {nodes.map(node => (
+      {nodes.map((node, index) => (
         <li key={node.slug} className={"u-margin-bottom-large"}>
+          <span className="c-heading c-heading--1">{index+1}</span>
+          <span className="c-heading c-heading--1 u-color-brand-5">.</span>
           <h4 className={"c-heading c-heading--4"}>{node.title}</h4>
 
           <div>{node.intro}</div>
