@@ -18,7 +18,7 @@ const ServicesPage = ({
       <Section section={findSection(sections, "process")}>
           <ProcessesList/>
       </Section>
-      <Section section={findSection(sections, "categories")}>
+      <Section section={findSection(sections, "categories")} modifier={"light-bg"}>
           <CategoriesList showServices/>
       </Section>
       <Section section={findSection(sections, "technologies")}>
