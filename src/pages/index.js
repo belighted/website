@@ -34,7 +34,7 @@ export default function Homepage({
       <Statistics section={findSection(sections, "statistics")} />
       <LastScene />
       <Clients section={findSection(sections, "clients")} />
-      <Section section={findSection(sections, "blog")}>
+      <Section section={findSection(sections, "blog")} modifier="light-bg">
         <BlogpostsList />
       </Section>
     </Layout>

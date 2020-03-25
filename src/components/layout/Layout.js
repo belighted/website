@@ -16,6 +16,7 @@ export default function Layout({ context, children, page }) {
           <html lang={context.lang} />
           <title>{title}</title>
           <meta name="description" content={description} />
+          <link rel="shortcut icon" href="/logo-belighted.png" />
         </Helmet>
         <Header page={page} context={context} />
         <div className={"l-layout__body"}>{children}</div>

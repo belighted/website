@@ -1,0 +1,15 @@
+.c-quote {
+  position: relative;
+  &__open-quote {
+    //position: absolute;
+    //font-size: $inuit-font-size-h1 * 2;
+    //top: $inuit-global-spacing-unit-small;
+    //left: $inuit-global-spacing-unit-small;
+  }
+  &__close-quote {
+    //position: absolute;
+    //font-size: $inuit-font-size-h1 * 2;
+    //bottom: $inuit-global-spacing-unit-small;
+    //right: $inuit-global-spacing-unit-small;
+  }
+}
