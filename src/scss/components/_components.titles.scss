@@ -16,26 +16,32 @@
 
 .c-heading {
   font-family: $fontstack-alt;
+  position: relative;
   &--eyebrow {
     @include inuit-font-size($inuit-font-size-h6);
     color: $color-gray4;
     text-transform: uppercase;
     font-weight: 300;
-    padding-bottom: $inuit-global-spacing-unit-small;
-    margin-bottom: $inuit-global-spacing-unit-small;
     letter-spacing: 0.1em;
-    position: relative;
+    margin:0;
+    &.c-heading--invert{
+      color: $color-gray2;
+    }
+  }
+
+  &--title{
+    margin-top: $inuit-global-spacing-unit-small;
+    padding-top: $inuit-global-spacing-unit-small;
     &:after {
       content: "";
       background: $color-brand4;
       height: 3px;
       position: absolute;
-      bottom: 0;
+      top: 0;
       width: 50px;
       left: 0;
     }
     &.c-heading--invert{
-      color: $color-gray2;
       &:after{
         background: $color-white;
       }

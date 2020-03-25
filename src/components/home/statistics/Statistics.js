@@ -8,7 +8,7 @@ const Statistics = ({ section: { title, body } }) => {
       <div className="o-wrapper ">
         <div className="l-narrow-header-large-content">
           <div className="l-narrow-header-large-content__header">
-            <h2 className='c-heading c-heading--2'>{title}</h2>
+            <h2 className='c-heading c-heading--2 c-heading--title'>{title}</h2>
             <LocalizedLink route={"/about"}>Find out more about us</LocalizedLink>
           </div>
           <div className="l-narrow-header-large-content__content">

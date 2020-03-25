@@ -14,6 +14,7 @@ export function SectionHeader({ title, body, modifier, withoutEyebrow }) {
         <h2
           className={classNames(
             "c-heading c-heading--2",
+            "c-heading--title",
             modifier && `c-heading--${modifier}`
           )}
         >
@@ -51,6 +52,7 @@ export function SectionHeader({ title, body, modifier, withoutEyebrow }) {
         <div
           className={classNames(
             "c-heading c-heading--2",
+            "c-heading--title",
             modifier && `c-heading--${modifier}`
           )}
         >

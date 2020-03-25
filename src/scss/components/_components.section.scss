@@ -1,5 +1,6 @@
 .c-section{
-  padding: 2 * $inuit-global-spacing-unit-large 0;
+  padding-top: 2 * $inuit-global-spacing-unit-large;
+  padding-bottom: 2 * $inuit-global-spacing-unit-large;
   &--light-bg{
     background: $color-brand1;
   }
