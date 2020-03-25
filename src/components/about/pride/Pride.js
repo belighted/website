@@ -32,8 +32,8 @@ const Pride = () => {
               <GatsbyImage fixed={node.image.childImageSharp.fixed} />
             </div>
             <div className={"o-flag__body"}>
-              <h4 className="c-h4 u-margin-bottom-small">{node.title}</h4>
-              <h5 className="c-h5">{node.subtitle}</h5>
+              <h4 className="c-heading c-heading--3 u-margin-bottom-none">{node.title}</h4>
+              <h5 className="c-heading c-heading--4">{node.subtitle}</h5>
               <span>{node.body}</span>
             </div>
           </div>

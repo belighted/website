@@ -1,0 +1,13 @@
+.l-vertical-center-7-5 {
+  display: grid;
+  gap: $inuit-global-spacing-unit-large;
+  grid-template-columns: 7fr 5fr;
+  grid-template-areas: "main intro";
+  align-items: center;
+  &__intro {
+    grid-area: intro;
+  }
+  &__main {
+    grid-area: main;
+  }
+}

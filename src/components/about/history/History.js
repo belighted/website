@@ -13,7 +13,7 @@ const History = () => {
           event
           image {
             childImageSharp {
-              fixed(width: 200, height: 200) {
+              fixed(width: 160, height: 160) {
                 ...GatsbyImageSharpFixed
               }
             }
@@ -28,7 +28,11 @@ const History = () => {
         <li key={node.date}>
           <h5 className="c-h5">{node.date}</h5>
           <p>{node.event}</p>
-          {node.image && <GatsbyImage fixed={node.image.childImageSharp.fixed} />}
+          {node.image && (
+            <div className="c-avatar c-avatar--large">
+              <GatsbyImage fixed={node.image.childImageSharp.fixed} />
+            </div>
+          )}
         </li>
       ))}
     </ul>

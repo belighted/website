@@ -13,7 +13,7 @@ const Team = () => {
           role
           image {
             childImageSharp {
-              fixed(width: 150, height: 150, grayscale: true) {
+              fixed(width: 160, height: 160, grayscale: true) {
                 ...GatsbyImageSharpFixed
               }
             }
@@ -29,7 +29,7 @@ const Team = () => {
           key={node.name}
           className="c-team__member u-margin-bottom-small c-team-member"
         >
-          <div className="c-team-member__image">
+          <div className="c-team-member__image c-avatar c-avatar--large">
             <Img fixed={node.image.childImageSharp.fixed} />
           </div>
           <div className="u-padding-small">

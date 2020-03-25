@@ -19,11 +19,10 @@ const AboutPage = ({
       <Section section={findSection(sections, "team")}>
         <Team />
       </Section>
-      <Section section={findSection(sections, "history")}>
+      <Section section={findSection(sections, "history")} modifier={'light-bg'} withoutEyebrow>
         <History />
       </Section>
-
-      <Section section={findSection(sections, "pride")}>
+      <Section section={findSection(sections, "pride")} withoutEyebrow>
         <Pride />
       </Section>
     </Layout>

@@ -1,4 +1,4 @@
-import { findSection, Section, SectionHeader } from "../../sections";
+import { SectionHeader } from "../../sections";
 import CasesList from "../../cases/CasesList";
 import LocalizedLink from "../../links/LocalizedLink";
 import React from "react";

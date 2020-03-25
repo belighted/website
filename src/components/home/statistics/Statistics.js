@@ -1,5 +1,4 @@
 import React from "react";
-import { SectionHeader } from "../../sections";
 import StatisticsList from "./StatisticsList";
 import LocalizedLink from "../../links/LocalizedLink";
 

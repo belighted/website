@@ -1,0 +1,12 @@
+.c-avatar {
+  overflow: hidden;
+  border-radius: 999px;
+  &--large {
+    height: 160px;
+    width: 160px;
+  }
+  &--small{
+    height: 80px;
+    width: 80px;
+  }
+}

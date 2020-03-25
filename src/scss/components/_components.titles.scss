@@ -62,6 +62,8 @@
   &--4 {
     @include inuit-font-size($inuit-font-size-h4);
     max-width: 22em;
+    color: $color-gray4;
+    font-weight: 300;
   }
   &--5 {
     color: $color-gray4;

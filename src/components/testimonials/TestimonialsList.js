@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import LinkToCase from "../cases/LinkToCase";
+import GatsbyImage from "gatsby-image";
 
 const TestimonialsList = () => {
   const {
@@ -14,30 +14,42 @@ const TestimonialsList = () => {
           client
           body
           role
+          image {
+            childImageSharp {
+              # Specify the image processing specifications right in the query.
+              # Makes it trivial to update as your page's design changes.
+              fixed(width: 80, height: 80, grayscale: true) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+          }
         }
       }
     }
   `);
-  const [currentIndex, setIndex] = useState(0);
+  const [currentIndex] = useState(0);
   const node = nodes[currentIndex];
   return (
-    <ul>
-      <li
-        className="u-margin-bottom o-box o-box--large o-box--brand-bg c-quote"
-        key={node.slug}
-      >
-        <div className="c-body c-body--3 u-color-white">
-          <span className="c-quote__open-quote">&quot;</span>
-          {node.body}
-          <span className="c-quote__close-quote">&quot;</span>
+    <ul className="o-list-bare">
+      <li className="u-margin-bottom c-quote" key={node.slug}>
+        <div className="o-box o-box--large o-box--brand-bg u-margin-bottom c-quote__body">
+          <div className="c-body c-body--3 u-color-white">
+            <span className="c-quote__open-quote">&quot;</span>
+            {node.body}
+            <span className="c-quote__close-quote">&quot;</span>
+          </div>
         </div>
-
-        <small>
-          {node.author} {node.role}
-        </small>
-        <p>
-          <LinkToCase slug={node.client}>{node.client}</LinkToCase>
-        </p>
+        <div className="o-flag">
+          <div className="o-flag__img">
+            <div className="c-avatar c-avatar--small">
+              <GatsbyImage fixed={node.image.childImageSharp.fixed} />
+            </div>
+          </div>
+          <p className="o-flag__body c-quote-author">
+            <span className="c-body c-body--3 c-quote-author__name">{node.author}</span>
+            <span className="c-body c-body--2 c-quote-author__role">{node.role}</span>
+          </p>
+        </div>
       </li>
     </ul>
   );
