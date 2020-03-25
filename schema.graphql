@@ -96,12 +96,16 @@ type CategoriesYamlGroupConnection {
 type ContentYaml implements Node {
     body: String
     children: [Node!]!
+    history: [ContentYamlHistory]
     id: ID!
     internal: Internal!
     lang: String
     parent: Node
+    pride: [ContentYamlPride]
     sections: [ContentYamlSections]
+    slides: [ContentYamlSlides]
     slug: String
+    team: [ContentYamlTeam]
     title: String
 }
 
@@ -129,37 +133,59 @@ type ContentYamlGroupConnection {
     totalCount: Int!
 }
 
+type ContentYamlHistory {
+    date: Int
+    event: String
+    image: File
+}
+
+type ContentYamlPride {
+    body: String
+    image: File
+    subtitle: String
+    title: String
+}
+
 type ContentYamlSections {
     body: String
-    slides: [ContentYamlSectionsSlides]
     slug: String
+    subtitle: String
     title: String
 }
 
-type ContentYamlSectionsSlides {
+type ContentYamlSlides {
     body: String
-    buttons: [ContentYamlSectionsSlidesButtons]
+    buttons: [ContentYamlSlidesButtons]
     title: String
 }
 
-type ContentYamlSectionsSlidesButtons {
+type ContentYamlSlidesButtons {
     link: String
     title: String
 }
 
+type ContentYamlTeam {
+    id: String
+    image: File
+    name: String
+    role: String
+}
+
 type DataYaml implements Node {
-    authors: [String]
     children: [Node!]!
-    history: [DataYamlHistory]
+    clients: [DataYamlClients]
     id: ID!
     internal: Internal!
-    lang: String
     parent: Node
-    pride: [DataYamlPride]
     slug: String
     statistics: [DataYamlStatistics]
-    team: [DataYamlTeam]
     technologies: [DataYamlTechnologies]
+}
+
+type DataYamlClients {
+    image: String
+    type: String
+    value: String
 }
 
 type DataYamlConnection {
@@ -186,30 +212,14 @@ type DataYamlGroupConnection {
     totalCount: Int!
 }
 
-type DataYamlHistory {
-    date: Int
-    event: String
-    image: String
-}
-
-type DataYamlPride {
-    body: String
-    subtitle: String
-    title: String
-}
-
 type DataYamlStatistics {
     label: String
     value: String
 }
 
-type DataYamlTeam {
-    id: String
-    name: String
-    role: String
-}
-
 type DataYamlTechnologies {
+    image: String
+    type: String
     value: String
 }
 
@@ -847,8 +857,8 @@ type Query {
     allTestimonialsYaml(filter: TestimonialsYamlFilterInput, limit: Int, skip: Int, sort: TestimonialsYamlSortInput): TestimonialsYamlConnection!
     casesYaml(article: CasesYamlArticleFilterInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): CasesYaml
     categoriesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, order: IntQueryOperatorInput, parent: NodeFilterInput, services: StringQueryOperatorInput, short_description: StringQueryOperatorInput, slug: StringQueryOperatorInput, technologies: StringQueryOperatorInput, title: StringQueryOperatorInput): CategoriesYaml
-    contentYaml(body: StringQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, sections: ContentYamlSectionsFilterListInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): ContentYaml
-    dataYaml(authors: StringQueryOperatorInput, children: NodeFilterListInput, history: DataYamlHistoryFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, pride: DataYamlPrideFilterListInput, slug: StringQueryOperatorInput, statistics: DataYamlStatisticsFilterListInput, team: DataYamlTeamFilterListInput, technologies: DataYamlTechnologiesFilterListInput): DataYaml
+    contentYaml(body: StringQueryOperatorInput, children: NodeFilterListInput, history: ContentYamlHistoryFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, pride: ContentYamlPrideFilterListInput, sections: ContentYamlSectionsFilterListInput, slides: ContentYamlSlidesFilterListInput, slug: StringQueryOperatorInput, team: ContentYamlTeamFilterListInput, title: StringQueryOperatorInput): ContentYaml
+    dataYaml(children: NodeFilterListInput, clients: DataYamlClientsFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, statistics: DataYamlStatisticsFilterListInput, technologies: DataYamlTechnologiesFilterListInput): DataYaml
     directory(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): Directory
     file(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, childCasesYaml: CasesYamlFilterInput, childCategoriesYaml: CategoriesYamlFilterInput, childContentYaml: ContentYamlFilterInput, childDataYaml: DataYamlFilterInput, childImageSharp: ImageSharpFilterInput, childPartialsYaml: PartialsYamlFilterInput, childPostsYaml: PostsYamlFilterInput, childProcessYaml: ProcessYamlFilterInput, childResourcesYaml: ResourcesYamlFilterInput, childServicesYaml: ServicesYamlFilterInput, childTestimonialsYaml: TestimonialsYamlFilterInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, publicURL: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): File
     imageSharp(children: NodeFilterListInput, fixed: ImageSharpFixedFilterInput, fluid: ImageSharpFluidFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, original: ImageSharpOriginalFilterInput, parent: NodeFilterInput, resize: ImageSharpResizeFilterInput, resolutions: ImageSharpResolutionsFilterInput, sizes: ImageSharpSizesFilterInput): ImageSharp
@@ -862,7 +872,7 @@ type Query {
     siteBuildMetadata(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput): SiteBuildMetadata
     sitePage(children: NodeFilterListInput, component: StringQueryOperatorInput, componentChunkName: StringQueryOperatorInput, componentPath: StringQueryOperatorInput, context: SitePageContextFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, internalComponentName: StringQueryOperatorInput, isCreatedByStatefulCreatePages: BooleanQueryOperatorInput, matchPath: StringQueryOperatorInput, parent: NodeFilterInput, path: StringQueryOperatorInput, pluginCreator: SitePluginFilterInput, pluginCreatorId: StringQueryOperatorInput): SitePage
     sitePlugin(browserAPIs: StringQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, name: StringQueryOperatorInput, nodeAPIs: StringQueryOperatorInput, packageJson: SitePluginPackageJsonFilterInput, parent: NodeFilterInput, pluginFilepath: StringQueryOperatorInput, pluginOptions: SitePluginPluginOptionsFilterInput, resolve: StringQueryOperatorInput, ssrAPIs: StringQueryOperatorInput, version: StringQueryOperatorInput): SitePlugin
-    testimonialsYaml(author: StringQueryOperatorInput, body: StringQueryOperatorInput, children: NodeFilterListInput, client: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, role: StringQueryOperatorInput, slug: StringQueryOperatorInput): TestimonialsYaml
+    testimonialsYaml(author: StringQueryOperatorInput, body: StringQueryOperatorInput, children: NodeFilterListInput, client: StringQueryOperatorInput, id: StringQueryOperatorInput, image: FileFilterInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, role: StringQueryOperatorInput, slug: StringQueryOperatorInput): TestimonialsYaml
 }
 
 type ResourcesYaml implements Node {
@@ -1193,6 +1203,7 @@ type TestimonialsYaml implements Node {
     children: [Node!]!
     client: String
     id: ID!
+    image: File
     internal: Internal!
     lang: String
     parent: Node
@@ -1458,113 +1469,131 @@ enum ContentYamlFieldsEnum {
     children___parent___internal___type
     children___parent___parent___children
     children___parent___parent___id
-    id
-    internal___content
-    internal___contentDigest
-    internal___description
-    internal___fieldOwners
-    internal___ignoreType
-    internal___mediaType
-    internal___owner
-    internal___type
-    lang
-    parent___children
-    parent___children___children
-    parent___children___children___children
-    parent___children___children___id
-    parent___children___id
-    parent___children___internal___content
-    parent___children___internal___contentDigest
-    parent___children___internal___description
-    parent___children___internal___fieldOwners
-    parent___children___internal___ignoreType
-    parent___children___internal___mediaType
-    parent___children___internal___owner
-    parent___children___internal___type
-    parent___children___parent___children
-    parent___children___parent___id
-    parent___id
-    parent___internal___content
-    parent___internal___contentDigest
-    parent___internal___description
-    parent___internal___fieldOwners
-    parent___internal___ignoreType
-    parent___internal___mediaType
-    parent___internal___owner
-    parent___internal___type
-    parent___parent___children
-    parent___parent___children___children
-    parent___parent___children___id
-    parent___parent___id
-    parent___parent___internal___content
-    parent___parent___internal___contentDigest
-    parent___parent___internal___description
-    parent___parent___internal___fieldOwners
-    parent___parent___internal___ignoreType
-    parent___parent___internal___mediaType
-    parent___parent___internal___owner
-    parent___parent___internal___type
-    parent___parent___parent___children
-    parent___parent___parent___id
-    sections
-    sections___body
-    sections___slides
-    sections___slides___body
-    sections___slides___buttons
-    sections___slides___buttons___link
-    sections___slides___buttons___title
-    sections___slides___title
-    sections___slug
-    sections___title
-    slug
-    title
-}
-
-enum DataYamlFieldsEnum {
-    authors
-    children
-    children___children
-    children___children___children
-    children___children___children___children
-    children___children___children___id
-    children___children___id
-    children___children___internal___content
-    children___children___internal___contentDigest
-    children___children___internal___description
-    children___children___internal___fieldOwners
-    children___children___internal___ignoreType
-    children___children___internal___mediaType
-    children___children___internal___owner
-    children___children___internal___type
-    children___children___parent___children
-    children___children___parent___id
-    children___id
-    children___internal___content
-    children___internal___contentDigest
-    children___internal___description
-    children___internal___fieldOwners
-    children___internal___ignoreType
-    children___internal___mediaType
-    children___internal___owner
-    children___internal___type
-    children___parent___children
-    children___parent___children___children
-    children___parent___children___id
-    children___parent___id
-    children___parent___internal___content
-    children___parent___internal___contentDigest
-    children___parent___internal___description
-    children___parent___internal___fieldOwners
-    children___parent___internal___ignoreType
-    children___parent___internal___mediaType
-    children___parent___internal___owner
-    children___parent___internal___type
-    children___parent___parent___children
-    children___parent___parent___id
     history
     history___date
     history___event
-    history___image
+    history___image___absolutePath
+    history___image___accessTime
+    history___image___atime
+    history___image___atimeMs
+    history___image___base
+    history___image___birthTime
+    history___image___birthtime
+    history___image___birthtimeMs
+    history___image___blksize
+    history___image___blocks
+    history___image___changeTime
+    history___image___childCasesYaml___children
+    history___image___childCasesYaml___id
+    history___image___childCasesYaml___lang
+    history___image___childCasesYaml___originalPath
+    history___image___childCasesYaml___slug
+    history___image___childCasesYaml___title
+    history___image___childCategoriesYaml___children
+    history___image___childCategoriesYaml___id
+    history___image___childCategoriesYaml___lang
+    history___image___childCategoriesYaml___order
+    history___image___childCategoriesYaml___services
+    history___image___childCategoriesYaml___short_description
+    history___image___childCategoriesYaml___slug
+    history___image___childCategoriesYaml___technologies
+    history___image___childCategoriesYaml___title
+    history___image___childContentYaml___body
+    history___image___childContentYaml___children
+    history___image___childContentYaml___history
+    history___image___childContentYaml___id
+    history___image___childContentYaml___lang
+    history___image___childContentYaml___pride
+    history___image___childContentYaml___sections
+    history___image___childContentYaml___slides
+    history___image___childContentYaml___slug
+    history___image___childContentYaml___team
+    history___image___childContentYaml___title
+    history___image___childDataYaml___children
+    history___image___childDataYaml___clients
+    history___image___childDataYaml___id
+    history___image___childDataYaml___slug
+    history___image___childDataYaml___statistics
+    history___image___childDataYaml___technologies
+    history___image___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    history___image___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    history___image___childPartialsYaml___body
+    history___image___childPartialsYaml___children
+    history___image___childPartialsYaml___id
+    history___image___childPartialsYaml___lang
+    history___image___childPartialsYaml___slug
+    history___image___childPartialsYaml___title
+    history___image___childPostsYaml___children
+    history___image___childPostsYaml___id
+    history___image___childPostsYaml___lang
+    history___image___childPostsYaml___originalPath
+    history___image___childPostsYaml___slug
+    history___image___childProcessYaml___children
+    history___image___childProcessYaml___description
+    history___image___childProcessYaml___duration
+    history___image___childProcessYaml___id
+    history___image___childProcessYaml___intro
+    history___image___childProcessYaml___lang
+    history___image___childProcessYaml___objective
+    history___image___childProcessYaml___slug
+    history___image___childProcessYaml___subtitle
+    history___image___childProcessYaml___title
+    history___image___childResourcesYaml___children
+    history___image___childResourcesYaml___cta
+    history___image___childResourcesYaml___id
+    history___image___childResourcesYaml___lang
+    history___image___childResourcesYaml___slug
+    history___image___childResourcesYaml___title
+    history___image___childServicesYaml___children
+    history___image___childServicesYaml___id
+    history___image___childServicesYaml___lang
+    history___image___childServicesYaml___slug
+    history___image___childServicesYaml___title
+    history___image___childTestimonialsYaml___author
+    history___image___childTestimonialsYaml___body
+    history___image___childTestimonialsYaml___children
+    history___image___childTestimonialsYaml___client
+    history___image___childTestimonialsYaml___id
+    history___image___childTestimonialsYaml___lang
+    history___image___childTestimonialsYaml___role
+    history___image___childTestimonialsYaml___slug
+    history___image___children
+    history___image___children___children
+    history___image___children___id
+    history___image___ctime
+    history___image___ctimeMs
+    history___image___dev
+    history___image___dir
+    history___image___ext
+    history___image___extension
+    history___image___gid
+    history___image___id
+    history___image___ino
+    history___image___internal___content
+    history___image___internal___contentDigest
+    history___image___internal___description
+    history___image___internal___fieldOwners
+    history___image___internal___ignoreType
+    history___image___internal___mediaType
+    history___image___internal___owner
+    history___image___internal___type
+    history___image___mode
+    history___image___modifiedTime
+    history___image___mtime
+    history___image___mtimeMs
+    history___image___name
+    history___image___nlink
+    history___image___parent___children
+    history___image___parent___id
+    history___image___prettySize
+    history___image___publicURL
+    history___image___rdev
+    history___image___relativeDirectory
+    history___image___relativePath
+    history___image___root
+    history___image___size
+    history___image___sourceInstanceName
+    history___image___uid
     id
     internal___content
     internal___contentDigest
@@ -1615,17 +1644,369 @@ enum DataYamlFieldsEnum {
     parent___parent___parent___id
     pride
     pride___body
+    pride___image___absolutePath
+    pride___image___accessTime
+    pride___image___atime
+    pride___image___atimeMs
+    pride___image___base
+    pride___image___birthTime
+    pride___image___birthtime
+    pride___image___birthtimeMs
+    pride___image___blksize
+    pride___image___blocks
+    pride___image___changeTime
+    pride___image___childCasesYaml___children
+    pride___image___childCasesYaml___id
+    pride___image___childCasesYaml___lang
+    pride___image___childCasesYaml___originalPath
+    pride___image___childCasesYaml___slug
+    pride___image___childCasesYaml___title
+    pride___image___childCategoriesYaml___children
+    pride___image___childCategoriesYaml___id
+    pride___image___childCategoriesYaml___lang
+    pride___image___childCategoriesYaml___order
+    pride___image___childCategoriesYaml___services
+    pride___image___childCategoriesYaml___short_description
+    pride___image___childCategoriesYaml___slug
+    pride___image___childCategoriesYaml___technologies
+    pride___image___childCategoriesYaml___title
+    pride___image___childContentYaml___body
+    pride___image___childContentYaml___children
+    pride___image___childContentYaml___history
+    pride___image___childContentYaml___id
+    pride___image___childContentYaml___lang
+    pride___image___childContentYaml___pride
+    pride___image___childContentYaml___sections
+    pride___image___childContentYaml___slides
+    pride___image___childContentYaml___slug
+    pride___image___childContentYaml___team
+    pride___image___childContentYaml___title
+    pride___image___childDataYaml___children
+    pride___image___childDataYaml___clients
+    pride___image___childDataYaml___id
+    pride___image___childDataYaml___slug
+    pride___image___childDataYaml___statistics
+    pride___image___childDataYaml___technologies
+    pride___image___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    pride___image___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    pride___image___childPartialsYaml___body
+    pride___image___childPartialsYaml___children
+    pride___image___childPartialsYaml___id
+    pride___image___childPartialsYaml___lang
+    pride___image___childPartialsYaml___slug
+    pride___image___childPartialsYaml___title
+    pride___image___childPostsYaml___children
+    pride___image___childPostsYaml___id
+    pride___image___childPostsYaml___lang
+    pride___image___childPostsYaml___originalPath
+    pride___image___childPostsYaml___slug
+    pride___image___childProcessYaml___children
+    pride___image___childProcessYaml___description
+    pride___image___childProcessYaml___duration
+    pride___image___childProcessYaml___id
+    pride___image___childProcessYaml___intro
+    pride___image___childProcessYaml___lang
+    pride___image___childProcessYaml___objective
+    pride___image___childProcessYaml___slug
+    pride___image___childProcessYaml___subtitle
+    pride___image___childProcessYaml___title
+    pride___image___childResourcesYaml___children
+    pride___image___childResourcesYaml___cta
+    pride___image___childResourcesYaml___id
+    pride___image___childResourcesYaml___lang
+    pride___image___childResourcesYaml___slug
+    pride___image___childResourcesYaml___title
+    pride___image___childServicesYaml___children
+    pride___image___childServicesYaml___id
+    pride___image___childServicesYaml___lang
+    pride___image___childServicesYaml___slug
+    pride___image___childServicesYaml___title
+    pride___image___childTestimonialsYaml___author
+    pride___image___childTestimonialsYaml___body
+    pride___image___childTestimonialsYaml___children
+    pride___image___childTestimonialsYaml___client
+    pride___image___childTestimonialsYaml___id
+    pride___image___childTestimonialsYaml___lang
+    pride___image___childTestimonialsYaml___role
+    pride___image___childTestimonialsYaml___slug
+    pride___image___children
+    pride___image___children___children
+    pride___image___children___id
+    pride___image___ctime
+    pride___image___ctimeMs
+    pride___image___dev
+    pride___image___dir
+    pride___image___ext
+    pride___image___extension
+    pride___image___gid
+    pride___image___id
+    pride___image___ino
+    pride___image___internal___content
+    pride___image___internal___contentDigest
+    pride___image___internal___description
+    pride___image___internal___fieldOwners
+    pride___image___internal___ignoreType
+    pride___image___internal___mediaType
+    pride___image___internal___owner
+    pride___image___internal___type
+    pride___image___mode
+    pride___image___modifiedTime
+    pride___image___mtime
+    pride___image___mtimeMs
+    pride___image___name
+    pride___image___nlink
+    pride___image___parent___children
+    pride___image___parent___id
+    pride___image___prettySize
+    pride___image___publicURL
+    pride___image___rdev
+    pride___image___relativeDirectory
+    pride___image___relativePath
+    pride___image___root
+    pride___image___size
+    pride___image___sourceInstanceName
+    pride___image___uid
     pride___subtitle
     pride___title
+    sections
+    sections___body
+    sections___slug
+    sections___subtitle
+    sections___title
+    slides
+    slides___body
+    slides___buttons
+    slides___buttons___link
+    slides___buttons___title
+    slides___title
+    slug
+    team
+    team___id
+    team___image___absolutePath
+    team___image___accessTime
+    team___image___atime
+    team___image___atimeMs
+    team___image___base
+    team___image___birthTime
+    team___image___birthtime
+    team___image___birthtimeMs
+    team___image___blksize
+    team___image___blocks
+    team___image___changeTime
+    team___image___childCasesYaml___children
+    team___image___childCasesYaml___id
+    team___image___childCasesYaml___lang
+    team___image___childCasesYaml___originalPath
+    team___image___childCasesYaml___slug
+    team___image___childCasesYaml___title
+    team___image___childCategoriesYaml___children
+    team___image___childCategoriesYaml___id
+    team___image___childCategoriesYaml___lang
+    team___image___childCategoriesYaml___order
+    team___image___childCategoriesYaml___services
+    team___image___childCategoriesYaml___short_description
+    team___image___childCategoriesYaml___slug
+    team___image___childCategoriesYaml___technologies
+    team___image___childCategoriesYaml___title
+    team___image___childContentYaml___body
+    team___image___childContentYaml___children
+    team___image___childContentYaml___history
+    team___image___childContentYaml___id
+    team___image___childContentYaml___lang
+    team___image___childContentYaml___pride
+    team___image___childContentYaml___sections
+    team___image___childContentYaml___slides
+    team___image___childContentYaml___slug
+    team___image___childContentYaml___team
+    team___image___childContentYaml___title
+    team___image___childDataYaml___children
+    team___image___childDataYaml___clients
+    team___image___childDataYaml___id
+    team___image___childDataYaml___slug
+    team___image___childDataYaml___statistics
+    team___image___childDataYaml___technologies
+    team___image___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    team___image___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    team___image___childPartialsYaml___body
+    team___image___childPartialsYaml___children
+    team___image___childPartialsYaml___id
+    team___image___childPartialsYaml___lang
+    team___image___childPartialsYaml___slug
+    team___image___childPartialsYaml___title
+    team___image___childPostsYaml___children
+    team___image___childPostsYaml___id
+    team___image___childPostsYaml___lang
+    team___image___childPostsYaml___originalPath
+    team___image___childPostsYaml___slug
+    team___image___childProcessYaml___children
+    team___image___childProcessYaml___description
+    team___image___childProcessYaml___duration
+    team___image___childProcessYaml___id
+    team___image___childProcessYaml___intro
+    team___image___childProcessYaml___lang
+    team___image___childProcessYaml___objective
+    team___image___childProcessYaml___slug
+    team___image___childProcessYaml___subtitle
+    team___image___childProcessYaml___title
+    team___image___childResourcesYaml___children
+    team___image___childResourcesYaml___cta
+    team___image___childResourcesYaml___id
+    team___image___childResourcesYaml___lang
+    team___image___childResourcesYaml___slug
+    team___image___childResourcesYaml___title
+    team___image___childServicesYaml___children
+    team___image___childServicesYaml___id
+    team___image___childServicesYaml___lang
+    team___image___childServicesYaml___slug
+    team___image___childServicesYaml___title
+    team___image___childTestimonialsYaml___author
+    team___image___childTestimonialsYaml___body
+    team___image___childTestimonialsYaml___children
+    team___image___childTestimonialsYaml___client
+    team___image___childTestimonialsYaml___id
+    team___image___childTestimonialsYaml___lang
+    team___image___childTestimonialsYaml___role
+    team___image___childTestimonialsYaml___slug
+    team___image___children
+    team___image___children___children
+    team___image___children___id
+    team___image___ctime
+    team___image___ctimeMs
+    team___image___dev
+    team___image___dir
+    team___image___ext
+    team___image___extension
+    team___image___gid
+    team___image___id
+    team___image___ino
+    team___image___internal___content
+    team___image___internal___contentDigest
+    team___image___internal___description
+    team___image___internal___fieldOwners
+    team___image___internal___ignoreType
+    team___image___internal___mediaType
+    team___image___internal___owner
+    team___image___internal___type
+    team___image___mode
+    team___image___modifiedTime
+    team___image___mtime
+    team___image___mtimeMs
+    team___image___name
+    team___image___nlink
+    team___image___parent___children
+    team___image___parent___id
+    team___image___prettySize
+    team___image___publicURL
+    team___image___rdev
+    team___image___relativeDirectory
+    team___image___relativePath
+    team___image___root
+    team___image___size
+    team___image___sourceInstanceName
+    team___image___uid
+    team___name
+    team___role
+    title
+}
+
+enum DataYamlFieldsEnum {
+    children
+    children___children
+    children___children___children
+    children___children___children___children
+    children___children___children___id
+    children___children___id
+    children___children___internal___content
+    children___children___internal___contentDigest
+    children___children___internal___description
+    children___children___internal___fieldOwners
+    children___children___internal___ignoreType
+    children___children___internal___mediaType
+    children___children___internal___owner
+    children___children___internal___type
+    children___children___parent___children
+    children___children___parent___id
+    children___id
+    children___internal___content
+    children___internal___contentDigest
+    children___internal___description
+    children___internal___fieldOwners
+    children___internal___ignoreType
+    children___internal___mediaType
+    children___internal___owner
+    children___internal___type
+    children___parent___children
+    children___parent___children___children
+    children___parent___children___id
+    children___parent___id
+    children___parent___internal___content
+    children___parent___internal___contentDigest
+    children___parent___internal___description
+    children___parent___internal___fieldOwners
+    children___parent___internal___ignoreType
+    children___parent___internal___mediaType
+    children___parent___internal___owner
+    children___parent___internal___type
+    children___parent___parent___children
+    children___parent___parent___id
+    clients
+    clients___image
+    clients___type
+    clients___value
+    id
+    internal___content
+    internal___contentDigest
+    internal___description
+    internal___fieldOwners
+    internal___ignoreType
+    internal___mediaType
+    internal___owner
+    internal___type
+    parent___children
+    parent___children___children
+    parent___children___children___children
+    parent___children___children___id
+    parent___children___id
+    parent___children___internal___content
+    parent___children___internal___contentDigest
+    parent___children___internal___description
+    parent___children___internal___fieldOwners
+    parent___children___internal___ignoreType
+    parent___children___internal___mediaType
+    parent___children___internal___owner
+    parent___children___internal___type
+    parent___children___parent___children
+    parent___children___parent___id
+    parent___id
+    parent___internal___content
+    parent___internal___contentDigest
+    parent___internal___description
+    parent___internal___fieldOwners
+    parent___internal___ignoreType
+    parent___internal___mediaType
+    parent___internal___owner
+    parent___internal___type
+    parent___parent___children
+    parent___parent___children___children
+    parent___parent___children___id
+    parent___parent___id
+    parent___parent___internal___content
+    parent___parent___internal___contentDigest
+    parent___parent___internal___description
+    parent___parent___internal___fieldOwners
+    parent___parent___internal___ignoreType
+    parent___parent___internal___mediaType
+    parent___parent___internal___owner
+    parent___parent___internal___type
+    parent___parent___parent___children
+    parent___parent___parent___id
     slug
     statistics
     statistics___label
     statistics___value
-    team
-    team___id
-    team___name
-    team___role
     technologies
+    technologies___image
+    technologies___type
     technologies___value
 }
 
@@ -1870,6 +2251,45 @@ enum FileFieldsEnum {
     childContentYaml___children___internal___type
     childContentYaml___children___parent___children
     childContentYaml___children___parent___id
+    childContentYaml___history
+    childContentYaml___history___date
+    childContentYaml___history___event
+    childContentYaml___history___image___absolutePath
+    childContentYaml___history___image___accessTime
+    childContentYaml___history___image___atime
+    childContentYaml___history___image___atimeMs
+    childContentYaml___history___image___base
+    childContentYaml___history___image___birthTime
+    childContentYaml___history___image___birthtime
+    childContentYaml___history___image___birthtimeMs
+    childContentYaml___history___image___blksize
+    childContentYaml___history___image___blocks
+    childContentYaml___history___image___changeTime
+    childContentYaml___history___image___children
+    childContentYaml___history___image___ctime
+    childContentYaml___history___image___ctimeMs
+    childContentYaml___history___image___dev
+    childContentYaml___history___image___dir
+    childContentYaml___history___image___ext
+    childContentYaml___history___image___extension
+    childContentYaml___history___image___gid
+    childContentYaml___history___image___id
+    childContentYaml___history___image___ino
+    childContentYaml___history___image___mode
+    childContentYaml___history___image___modifiedTime
+    childContentYaml___history___image___mtime
+    childContentYaml___history___image___mtimeMs
+    childContentYaml___history___image___name
+    childContentYaml___history___image___nlink
+    childContentYaml___history___image___prettySize
+    childContentYaml___history___image___publicURL
+    childContentYaml___history___image___rdev
+    childContentYaml___history___image___relativeDirectory
+    childContentYaml___history___image___relativePath
+    childContentYaml___history___image___root
+    childContentYaml___history___image___size
+    childContentYaml___history___image___sourceInstanceName
+    childContentYaml___history___image___uid
     childContentYaml___id
     childContentYaml___internal___content
     childContentYaml___internal___contentDigest
@@ -1894,17 +2314,99 @@ enum FileFieldsEnum {
     childContentYaml___parent___internal___type
     childContentYaml___parent___parent___children
     childContentYaml___parent___parent___id
+    childContentYaml___pride
+    childContentYaml___pride___body
+    childContentYaml___pride___image___absolutePath
+    childContentYaml___pride___image___accessTime
+    childContentYaml___pride___image___atime
+    childContentYaml___pride___image___atimeMs
+    childContentYaml___pride___image___base
+    childContentYaml___pride___image___birthTime
+    childContentYaml___pride___image___birthtime
+    childContentYaml___pride___image___birthtimeMs
+    childContentYaml___pride___image___blksize
+    childContentYaml___pride___image___blocks
+    childContentYaml___pride___image___changeTime
+    childContentYaml___pride___image___children
+    childContentYaml___pride___image___ctime
+    childContentYaml___pride___image___ctimeMs
+    childContentYaml___pride___image___dev
+    childContentYaml___pride___image___dir
+    childContentYaml___pride___image___ext
+    childContentYaml___pride___image___extension
+    childContentYaml___pride___image___gid
+    childContentYaml___pride___image___id
+    childContentYaml___pride___image___ino
+    childContentYaml___pride___image___mode
+    childContentYaml___pride___image___modifiedTime
+    childContentYaml___pride___image___mtime
+    childContentYaml___pride___image___mtimeMs
+    childContentYaml___pride___image___name
+    childContentYaml___pride___image___nlink
+    childContentYaml___pride___image___prettySize
+    childContentYaml___pride___image___publicURL
+    childContentYaml___pride___image___rdev
+    childContentYaml___pride___image___relativeDirectory
+    childContentYaml___pride___image___relativePath
+    childContentYaml___pride___image___root
+    childContentYaml___pride___image___size
+    childContentYaml___pride___image___sourceInstanceName
+    childContentYaml___pride___image___uid
+    childContentYaml___pride___subtitle
+    childContentYaml___pride___title
     childContentYaml___sections
     childContentYaml___sections___body
-    childContentYaml___sections___slides
-    childContentYaml___sections___slides___body
-    childContentYaml___sections___slides___buttons
-    childContentYaml___sections___slides___title
     childContentYaml___sections___slug
+    childContentYaml___sections___subtitle
     childContentYaml___sections___title
+    childContentYaml___slides
+    childContentYaml___slides___body
+    childContentYaml___slides___buttons
+    childContentYaml___slides___buttons___link
+    childContentYaml___slides___buttons___title
+    childContentYaml___slides___title
     childContentYaml___slug
+    childContentYaml___team
+    childContentYaml___team___id
+    childContentYaml___team___image___absolutePath
+    childContentYaml___team___image___accessTime
+    childContentYaml___team___image___atime
+    childContentYaml___team___image___atimeMs
+    childContentYaml___team___image___base
+    childContentYaml___team___image___birthTime
+    childContentYaml___team___image___birthtime
+    childContentYaml___team___image___birthtimeMs
+    childContentYaml___team___image___blksize
+    childContentYaml___team___image___blocks
+    childContentYaml___team___image___changeTime
+    childContentYaml___team___image___children
+    childContentYaml___team___image___ctime
+    childContentYaml___team___image___ctimeMs
+    childContentYaml___team___image___dev
+    childContentYaml___team___image___dir
+    childContentYaml___team___image___ext
+    childContentYaml___team___image___extension
+    childContentYaml___team___image___gid
+    childContentYaml___team___image___id
+    childContentYaml___team___image___ino
+    childContentYaml___team___image___mode
+    childContentYaml___team___image___modifiedTime
+    childContentYaml___team___image___mtime
+    childContentYaml___team___image___mtimeMs
+    childContentYaml___team___image___name
+    childContentYaml___team___image___nlink
+    childContentYaml___team___image___prettySize
+    childContentYaml___team___image___publicURL
+    childContentYaml___team___image___rdev
+    childContentYaml___team___image___relativeDirectory
+    childContentYaml___team___image___relativePath
+    childContentYaml___team___image___root
+    childContentYaml___team___image___size
+    childContentYaml___team___image___sourceInstanceName
+    childContentYaml___team___image___uid
+    childContentYaml___team___name
+    childContentYaml___team___role
     childContentYaml___title
-    childDataYaml___authors
     childDataYaml___children
     childDataYaml___children___children
     childDataYaml___children___children___children
@@ -1920,10 +2422,10 @@ enum FileFieldsEnum {
     childDataYaml___children___internal___type
     childDataYaml___children___parent___children
     childDataYaml___children___parent___id
-    childDataYaml___history
-    childDataYaml___history___date
-    childDataYaml___history___event
-    childDataYaml___history___image
+    childDataYaml___clients
+    childDataYaml___clients___image
+    childDataYaml___clients___type
+    childDataYaml___clients___value
     childDataYaml___id
     childDataYaml___internal___content
     childDataYaml___internal___contentDigest
@@ -1933,7 +2435,6 @@ enum FileFieldsEnum {
     childDataYaml___internal___mediaType
     childDataYaml___internal___owner
     childDataYaml___internal___type
-    childDataYaml___lang
     childDataYaml___parent___children
     childDataYaml___parent___children___children
     childDataYaml___parent___children___id
@@ -1948,19 +2449,13 @@ enum FileFieldsEnum {
     childDataYaml___parent___internal___type
     childDataYaml___parent___parent___children
     childDataYaml___parent___parent___id
-    childDataYaml___pride
-    childDataYaml___pride___body
-    childDataYaml___pride___subtitle
-    childDataYaml___pride___title
     childDataYaml___slug
     childDataYaml___statistics
     childDataYaml___statistics___label
     childDataYaml___statistics___value
-    childDataYaml___team
-    childDataYaml___team___id
-    childDataYaml___team___name
-    childDataYaml___team___role
     childDataYaml___technologies
+    childDataYaml___technologies___image
+    childDataYaml___technologies___type
     childDataYaml___technologies___value
     childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childImageSharp___children___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -2290,6 +2785,128 @@ enum FileFieldsEnum {
     childTestimonialsYaml___children___parent___id
     childTestimonialsYaml___client
     childTestimonialsYaml___id
+    childTestimonialsYaml___image___absolutePath
+    childTestimonialsYaml___image___accessTime
+    childTestimonialsYaml___image___atime
+    childTestimonialsYaml___image___atimeMs
+    childTestimonialsYaml___image___base
+    childTestimonialsYaml___image___birthTime
+    childTestimonialsYaml___image___birthtime
+    childTestimonialsYaml___image___birthtimeMs
+    childTestimonialsYaml___image___blksize
+    childTestimonialsYaml___image___blocks
+    childTestimonialsYaml___image___changeTime
+    childTestimonialsYaml___image___childCasesYaml___children
+    childTestimonialsYaml___image___childCasesYaml___id
+    childTestimonialsYaml___image___childCasesYaml___lang
+    childTestimonialsYaml___image___childCasesYaml___originalPath
+    childTestimonialsYaml___image___childCasesYaml___slug
+    childTestimonialsYaml___image___childCasesYaml___title
+    childTestimonialsYaml___image___childCategoriesYaml___children
+    childTestimonialsYaml___image___childCategoriesYaml___id
+    childTestimonialsYaml___image___childCategoriesYaml___lang
+    childTestimonialsYaml___image___childCategoriesYaml___order
+    childTestimonialsYaml___image___childCategoriesYaml___services
+    childTestimonialsYaml___image___childCategoriesYaml___short_description
+    childTestimonialsYaml___image___childCategoriesYaml___slug
+    childTestimonialsYaml___image___childCategoriesYaml___technologies
+    childTestimonialsYaml___image___childCategoriesYaml___title
+    childTestimonialsYaml___image___childContentYaml___body
+    childTestimonialsYaml___image___childContentYaml___children
+    childTestimonialsYaml___image___childContentYaml___history
+    childTestimonialsYaml___image___childContentYaml___id
+    childTestimonialsYaml___image___childContentYaml___lang
+    childTestimonialsYaml___image___childContentYaml___pride
+    childTestimonialsYaml___image___childContentYaml___sections
+    childTestimonialsYaml___image___childContentYaml___slides
+    childTestimonialsYaml___image___childContentYaml___slug
+    childTestimonialsYaml___image___childContentYaml___team
+    childTestimonialsYaml___image___childContentYaml___title
+    childTestimonialsYaml___image___childDataYaml___children
+    childTestimonialsYaml___image___childDataYaml___clients
+    childTestimonialsYaml___image___childDataYaml___id
+    childTestimonialsYaml___image___childDataYaml___slug
+    childTestimonialsYaml___image___childDataYaml___statistics
+    childTestimonialsYaml___image___childDataYaml___technologies
+    childTestimonialsYaml___image___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childTestimonialsYaml___image___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childTestimonialsYaml___image___childPartialsYaml___body
+    childTestimonialsYaml___image___childPartialsYaml___children
+    childTestimonialsYaml___image___childPartialsYaml___id
+    childTestimonialsYaml___image___childPartialsYaml___lang
+    childTestimonialsYaml___image___childPartialsYaml___slug
+    childTestimonialsYaml___image___childPartialsYaml___title
+    childTestimonialsYaml___image___childPostsYaml___children
+    childTestimonialsYaml___image___childPostsYaml___id
+    childTestimonialsYaml___image___childPostsYaml___lang
+    childTestimonialsYaml___image___childPostsYaml___originalPath
+    childTestimonialsYaml___image___childPostsYaml___slug
+    childTestimonialsYaml___image___childProcessYaml___children
+    childTestimonialsYaml___image___childProcessYaml___description
+    childTestimonialsYaml___image___childProcessYaml___duration
+    childTestimonialsYaml___image___childProcessYaml___id
+    childTestimonialsYaml___image___childProcessYaml___intro
+    childTestimonialsYaml___image___childProcessYaml___lang
+    childTestimonialsYaml___image___childProcessYaml___objective
+    childTestimonialsYaml___image___childProcessYaml___slug
+    childTestimonialsYaml___image___childProcessYaml___subtitle
+    childTestimonialsYaml___image___childProcessYaml___title
+    childTestimonialsYaml___image___childResourcesYaml___children
+    childTestimonialsYaml___image___childResourcesYaml___cta
+    childTestimonialsYaml___image___childResourcesYaml___id
+    childTestimonialsYaml___image___childResourcesYaml___lang
+    childTestimonialsYaml___image___childResourcesYaml___slug
+    childTestimonialsYaml___image___childResourcesYaml___title
+    childTestimonialsYaml___image___childServicesYaml___children
+    childTestimonialsYaml___image___childServicesYaml___id
+    childTestimonialsYaml___image___childServicesYaml___lang
+    childTestimonialsYaml___image___childServicesYaml___slug
+    childTestimonialsYaml___image___childServicesYaml___title
+    childTestimonialsYaml___image___childTestimonialsYaml___author
+    childTestimonialsYaml___image___childTestimonialsYaml___body
+    childTestimonialsYaml___image___childTestimonialsYaml___children
+    childTestimonialsYaml___image___childTestimonialsYaml___client
+    childTestimonialsYaml___image___childTestimonialsYaml___id
+    childTestimonialsYaml___image___childTestimonialsYaml___lang
+    childTestimonialsYaml___image___childTestimonialsYaml___role
+    childTestimonialsYaml___image___childTestimonialsYaml___slug
+    childTestimonialsYaml___image___children
+    childTestimonialsYaml___image___children___children
+    childTestimonialsYaml___image___children___id
+    childTestimonialsYaml___image___ctime
+    childTestimonialsYaml___image___ctimeMs
+    childTestimonialsYaml___image___dev
+    childTestimonialsYaml___image___dir
+    childTestimonialsYaml___image___ext
+    childTestimonialsYaml___image___extension
+    childTestimonialsYaml___image___gid
+    childTestimonialsYaml___image___id
+    childTestimonialsYaml___image___ino
+    childTestimonialsYaml___image___internal___content
+    childTestimonialsYaml___image___internal___contentDigest
+    childTestimonialsYaml___image___internal___description
+    childTestimonialsYaml___image___internal___fieldOwners
+    childTestimonialsYaml___image___internal___ignoreType
+    childTestimonialsYaml___image___internal___mediaType
+    childTestimonialsYaml___image___internal___owner
+    childTestimonialsYaml___image___internal___type
+    childTestimonialsYaml___image___mode
+    childTestimonialsYaml___image___modifiedTime
+    childTestimonialsYaml___image___mtime
+    childTestimonialsYaml___image___mtimeMs
+    childTestimonialsYaml___image___name
+    childTestimonialsYaml___image___nlink
+    childTestimonialsYaml___image___parent___children
+    childTestimonialsYaml___image___parent___id
+    childTestimonialsYaml___image___prettySize
+    childTestimonialsYaml___image___publicURL
+    childTestimonialsYaml___image___rdev
+    childTestimonialsYaml___image___relativeDirectory
+    childTestimonialsYaml___image___relativePath
+    childTestimonialsYaml___image___root
+    childTestimonialsYaml___image___size
+    childTestimonialsYaml___image___sourceInstanceName
+    childTestimonialsYaml___image___uid
     childTestimonialsYaml___internal___content
     childTestimonialsYaml___internal___contentDigest
     childTestimonialsYaml___internal___description
@@ -3739,6 +4356,406 @@ enum TestimonialsYamlFieldsEnum {
     children___parent___parent___id
     client
     id
+    image___absolutePath
+    image___accessTime
+    image___atime
+    image___atimeMs
+    image___base
+    image___birthTime
+    image___birthtime
+    image___birthtimeMs
+    image___blksize
+    image___blocks
+    image___changeTime
+    image___childCasesYaml___article___content
+    image___childCasesYaml___article___html
+    image___childCasesYaml___article___textBody
+    image___childCasesYaml___article___title
+    image___childCasesYaml___children
+    image___childCasesYaml___children___children
+    image___childCasesYaml___children___id
+    image___childCasesYaml___id
+    image___childCasesYaml___internal___content
+    image___childCasesYaml___internal___contentDigest
+    image___childCasesYaml___internal___description
+    image___childCasesYaml___internal___fieldOwners
+    image___childCasesYaml___internal___ignoreType
+    image___childCasesYaml___internal___mediaType
+    image___childCasesYaml___internal___owner
+    image___childCasesYaml___internal___type
+    image___childCasesYaml___lang
+    image___childCasesYaml___originalPath
+    image___childCasesYaml___parent___children
+    image___childCasesYaml___parent___id
+    image___childCasesYaml___slug
+    image___childCasesYaml___title
+    image___childCategoriesYaml___children
+    image___childCategoriesYaml___children___children
+    image___childCategoriesYaml___children___id
+    image___childCategoriesYaml___id
+    image___childCategoriesYaml___internal___content
+    image___childCategoriesYaml___internal___contentDigest
+    image___childCategoriesYaml___internal___description
+    image___childCategoriesYaml___internal___fieldOwners
+    image___childCategoriesYaml___internal___ignoreType
+    image___childCategoriesYaml___internal___mediaType
+    image___childCategoriesYaml___internal___owner
+    image___childCategoriesYaml___internal___type
+    image___childCategoriesYaml___lang
+    image___childCategoriesYaml___order
+    image___childCategoriesYaml___parent___children
+    image___childCategoriesYaml___parent___id
+    image___childCategoriesYaml___services
+    image___childCategoriesYaml___short_description
+    image___childCategoriesYaml___slug
+    image___childCategoriesYaml___technologies
+    image___childCategoriesYaml___title
+    image___childContentYaml___body
+    image___childContentYaml___children
+    image___childContentYaml___children___children
+    image___childContentYaml___children___id
+    image___childContentYaml___history
+    image___childContentYaml___history___date
+    image___childContentYaml___history___event
+    image___childContentYaml___id
+    image___childContentYaml___internal___content
+    image___childContentYaml___internal___contentDigest
+    image___childContentYaml___internal___description
+    image___childContentYaml___internal___fieldOwners
+    image___childContentYaml___internal___ignoreType
+    image___childContentYaml___internal___mediaType
+    image___childContentYaml___internal___owner
+    image___childContentYaml___internal___type
+    image___childContentYaml___lang
+    image___childContentYaml___parent___children
+    image___childContentYaml___parent___id
+    image___childContentYaml___pride
+    image___childContentYaml___pride___body
+    image___childContentYaml___pride___subtitle
+    image___childContentYaml___pride___title
+    image___childContentYaml___sections
+    image___childContentYaml___sections___body
+    image___childContentYaml___sections___slug
+    image___childContentYaml___sections___subtitle
+    image___childContentYaml___sections___title
+    image___childContentYaml___slides
+    image___childContentYaml___slides___body
+    image___childContentYaml___slides___buttons
+    image___childContentYaml___slides___title
+    image___childContentYaml___slug
+    image___childContentYaml___team
+    image___childContentYaml___team___id
+    image___childContentYaml___team___name
+    image___childContentYaml___team___role
+    image___childContentYaml___title
+    image___childDataYaml___children
+    image___childDataYaml___children___children
+    image___childDataYaml___children___id
+    image___childDataYaml___clients
+    image___childDataYaml___clients___image
+    image___childDataYaml___clients___type
+    image___childDataYaml___clients___value
+    image___childDataYaml___id
+    image___childDataYaml___internal___content
+    image___childDataYaml___internal___contentDigest
+    image___childDataYaml___internal___description
+    image___childDataYaml___internal___fieldOwners
+    image___childDataYaml___internal___ignoreType
+    image___childDataYaml___internal___mediaType
+    image___childDataYaml___internal___owner
+    image___childDataYaml___internal___type
+    image___childDataYaml___parent___children
+    image___childDataYaml___parent___id
+    image___childDataYaml___slug
+    image___childDataYaml___statistics
+    image___childDataYaml___statistics___label
+    image___childDataYaml___statistics___value
+    image___childDataYaml___technologies
+    image___childDataYaml___technologies___image
+    image___childDataYaml___technologies___type
+    image___childDataYaml___technologies___value
+    image___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___children___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___children___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___originalImg @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___presentationHeight @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___presentationWidth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___sizes @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___content @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___contentDigest @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___description @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___fieldOwners @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___ignoreType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___mediaType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___owner @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___type @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___original___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___original___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___original___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resize___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resize___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resize___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resize___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resize___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resize___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___originalImg @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___presentationHeight @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___presentationWidth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___sizes @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childPartialsYaml___body
+    image___childPartialsYaml___children
+    image___childPartialsYaml___children___children
+    image___childPartialsYaml___children___id
+    image___childPartialsYaml___cta___link
+    image___childPartialsYaml___cta___title
+    image___childPartialsYaml___id
+    image___childPartialsYaml___internal___content
+    image___childPartialsYaml___internal___contentDigest
+    image___childPartialsYaml___internal___description
+    image___childPartialsYaml___internal___fieldOwners
+    image___childPartialsYaml___internal___ignoreType
+    image___childPartialsYaml___internal___mediaType
+    image___childPartialsYaml___internal___owner
+    image___childPartialsYaml___internal___type
+    image___childPartialsYaml___lang
+    image___childPartialsYaml___parent___children
+    image___childPartialsYaml___parent___id
+    image___childPartialsYaml___slug
+    image___childPartialsYaml___title
+    image___childPostsYaml___article___content
+    image___childPostsYaml___article___html
+    image___childPostsYaml___article___textBody
+    image___childPostsYaml___article___title
+    image___childPostsYaml___children
+    image___childPostsYaml___children___children
+    image___childPostsYaml___children___id
+    image___childPostsYaml___id
+    image___childPostsYaml___internal___content
+    image___childPostsYaml___internal___contentDigest
+    image___childPostsYaml___internal___description
+    image___childPostsYaml___internal___fieldOwners
+    image___childPostsYaml___internal___ignoreType
+    image___childPostsYaml___internal___mediaType
+    image___childPostsYaml___internal___owner
+    image___childPostsYaml___internal___type
+    image___childPostsYaml___lang
+    image___childPostsYaml___originalPath
+    image___childPostsYaml___parent___children
+    image___childPostsYaml___parent___id
+    image___childPostsYaml___slug
+    image___childProcessYaml___children
+    image___childProcessYaml___children___children
+    image___childProcessYaml___children___id
+    image___childProcessYaml___description
+    image___childProcessYaml___duration
+    image___childProcessYaml___id
+    image___childProcessYaml___internal___content
+    image___childProcessYaml___internal___contentDigest
+    image___childProcessYaml___internal___description
+    image___childProcessYaml___internal___fieldOwners
+    image___childProcessYaml___internal___ignoreType
+    image___childProcessYaml___internal___mediaType
+    image___childProcessYaml___internal___owner
+    image___childProcessYaml___internal___type
+    image___childProcessYaml___intro
+    image___childProcessYaml___lang
+    image___childProcessYaml___objective
+    image___childProcessYaml___parent___children
+    image___childProcessYaml___parent___id
+    image___childProcessYaml___slug
+    image___childProcessYaml___subtitle
+    image___childProcessYaml___title
+    image___childResourcesYaml___children
+    image___childResourcesYaml___children___children
+    image___childResourcesYaml___children___id
+    image___childResourcesYaml___cta
+    image___childResourcesYaml___id
+    image___childResourcesYaml___internal___content
+    image___childResourcesYaml___internal___contentDigest
+    image___childResourcesYaml___internal___description
+    image___childResourcesYaml___internal___fieldOwners
+    image___childResourcesYaml___internal___ignoreType
+    image___childResourcesYaml___internal___mediaType
+    image___childResourcesYaml___internal___owner
+    image___childResourcesYaml___internal___type
+    image___childResourcesYaml___lang
+    image___childResourcesYaml___parent___children
+    image___childResourcesYaml___parent___id
+    image___childResourcesYaml___slug
+    image___childResourcesYaml___title
+    image___childServicesYaml___children
+    image___childServicesYaml___children___children
+    image___childServicesYaml___children___id
+    image___childServicesYaml___id
+    image___childServicesYaml___internal___content
+    image___childServicesYaml___internal___contentDigest
+    image___childServicesYaml___internal___description
+    image___childServicesYaml___internal___fieldOwners
+    image___childServicesYaml___internal___ignoreType
+    image___childServicesYaml___internal___mediaType
+    image___childServicesYaml___internal___owner
+    image___childServicesYaml___internal___type
+    image___childServicesYaml___lang
+    image___childServicesYaml___parent___children
+    image___childServicesYaml___parent___id
+    image___childServicesYaml___slug
+    image___childServicesYaml___title
+    image___childTestimonialsYaml___author
+    image___childTestimonialsYaml___body
+    image___childTestimonialsYaml___children
+    image___childTestimonialsYaml___children___children
+    image___childTestimonialsYaml___children___id
+    image___childTestimonialsYaml___client
+    image___childTestimonialsYaml___id
+    image___childTestimonialsYaml___image___absolutePath
+    image___childTestimonialsYaml___image___accessTime
+    image___childTestimonialsYaml___image___atime
+    image___childTestimonialsYaml___image___atimeMs
+    image___childTestimonialsYaml___image___base
+    image___childTestimonialsYaml___image___birthTime
+    image___childTestimonialsYaml___image___birthtime
+    image___childTestimonialsYaml___image___birthtimeMs
+    image___childTestimonialsYaml___image___blksize
+    image___childTestimonialsYaml___image___blocks
+    image___childTestimonialsYaml___image___changeTime
+    image___childTestimonialsYaml___image___children
+    image___childTestimonialsYaml___image___ctime
+    image___childTestimonialsYaml___image___ctimeMs
+    image___childTestimonialsYaml___image___dev
+    image___childTestimonialsYaml___image___dir
+    image___childTestimonialsYaml___image___ext
+    image___childTestimonialsYaml___image___extension
+    image___childTestimonialsYaml___image___gid
+    image___childTestimonialsYaml___image___id
+    image___childTestimonialsYaml___image___ino
+    image___childTestimonialsYaml___image___mode
+    image___childTestimonialsYaml___image___modifiedTime
+    image___childTestimonialsYaml___image___mtime
+    image___childTestimonialsYaml___image___mtimeMs
+    image___childTestimonialsYaml___image___name
+    image___childTestimonialsYaml___image___nlink
+    image___childTestimonialsYaml___image___prettySize
+    image___childTestimonialsYaml___image___publicURL
+    image___childTestimonialsYaml___image___rdev
+    image___childTestimonialsYaml___image___relativeDirectory
+    image___childTestimonialsYaml___image___relativePath
+    image___childTestimonialsYaml___image___root
+    image___childTestimonialsYaml___image___size
+    image___childTestimonialsYaml___image___sourceInstanceName
+    image___childTestimonialsYaml___image___uid
+    image___childTestimonialsYaml___internal___content
+    image___childTestimonialsYaml___internal___contentDigest
+    image___childTestimonialsYaml___internal___description
+    image___childTestimonialsYaml___internal___fieldOwners
+    image___childTestimonialsYaml___internal___ignoreType
+    image___childTestimonialsYaml___internal___mediaType
+    image___childTestimonialsYaml___internal___owner
+    image___childTestimonialsYaml___internal___type
+    image___childTestimonialsYaml___lang
+    image___childTestimonialsYaml___parent___children
+    image___childTestimonialsYaml___parent___id
+    image___childTestimonialsYaml___role
+    image___childTestimonialsYaml___slug
+    image___children
+    image___children___children
+    image___children___children___children
+    image___children___children___id
+    image___children___id
+    image___children___internal___content
+    image___children___internal___contentDigest
+    image___children___internal___description
+    image___children___internal___fieldOwners
+    image___children___internal___ignoreType
+    image___children___internal___mediaType
+    image___children___internal___owner
+    image___children___internal___type
+    image___children___parent___children
+    image___children___parent___id
+    image___ctime
+    image___ctimeMs
+    image___dev
+    image___dir
+    image___ext
+    image___extension
+    image___gid
+    image___id
+    image___ino
+    image___internal___content
+    image___internal___contentDigest
+    image___internal___description
+    image___internal___fieldOwners
+    image___internal___ignoreType
+    image___internal___mediaType
+    image___internal___owner
+    image___internal___type
+    image___mode
+    image___modifiedTime
+    image___mtime
+    image___mtimeMs
+    image___name
+    image___nlink
+    image___parent___children
+    image___parent___children___children
+    image___parent___children___id
+    image___parent___id
+    image___parent___internal___content
+    image___parent___internal___contentDigest
+    image___parent___internal___description
+    image___parent___internal___fieldOwners
+    image___parent___internal___ignoreType
+    image___parent___internal___mediaType
+    image___parent___internal___owner
+    image___parent___internal___type
+    image___parent___parent___children
+    image___parent___parent___id
+    image___prettySize
+    image___publicURL
+    image___rdev
+    image___relativeDirectory
+    image___relativePath
+    image___root
+    image___size
+    image___sourceInstanceName
+    image___uid
     internal___content
     internal___contentDigest
     internal___description
@@ -3843,19 +4860,44 @@ input CategoriesYamlSortInput {
 input ContentYamlFilterInput {
     body: StringQueryOperatorInput
     children: NodeFilterListInput
+    history: ContentYamlHistoryFilterListInput
     id: StringQueryOperatorInput
     internal: InternalFilterInput
     lang: StringQueryOperatorInput
     parent: NodeFilterInput
+    pride: ContentYamlPrideFilterListInput
     sections: ContentYamlSectionsFilterListInput
+    slides: ContentYamlSlidesFilterListInput
     slug: StringQueryOperatorInput
+    team: ContentYamlTeamFilterListInput
     title: StringQueryOperatorInput
+}
+
+input ContentYamlHistoryFilterInput {
+    date: IntQueryOperatorInput
+    event: StringQueryOperatorInput
+    image: FileFilterInput
+}
+
+input ContentYamlHistoryFilterListInput {
+    elemMatch: ContentYamlHistoryFilterInput
+}
+
+input ContentYamlPrideFilterInput {
+    body: StringQueryOperatorInput
+    image: FileFilterInput
+    subtitle: StringQueryOperatorInput
+    title: StringQueryOperatorInput
+}
+
+input ContentYamlPrideFilterListInput {
+    elemMatch: ContentYamlPrideFilterInput
 }
 
 input ContentYamlSectionsFilterInput {
     body: StringQueryOperatorInput
-    slides: ContentYamlSectionsSlidesFilterListInput
     slug: StringQueryOperatorInput
+    subtitle: StringQueryOperatorInput
     title: StringQueryOperatorInput
 }
 
@@ -3863,23 +4905,23 @@ input ContentYamlSectionsFilterListInput {
     elemMatch: ContentYamlSectionsFilterInput
 }
 
-input ContentYamlSectionsSlidesButtonsFilterInput {
+input ContentYamlSlidesButtonsFilterInput {
     link: StringQueryOperatorInput
     title: StringQueryOperatorInput
 }
 
-input ContentYamlSectionsSlidesButtonsFilterListInput {
-    elemMatch: ContentYamlSectionsSlidesButtonsFilterInput
+input ContentYamlSlidesButtonsFilterListInput {
+    elemMatch: ContentYamlSlidesButtonsFilterInput
 }
 
-input ContentYamlSectionsSlidesFilterInput {
+input ContentYamlSlidesFilterInput {
     body: StringQueryOperatorInput
-    buttons: ContentYamlSectionsSlidesButtonsFilterListInput
+    buttons: ContentYamlSlidesButtonsFilterListInput
     title: StringQueryOperatorInput
 }
 
-input ContentYamlSectionsSlidesFilterListInput {
-    elemMatch: ContentYamlSectionsSlidesFilterInput
+input ContentYamlSlidesFilterListInput {
+    elemMatch: ContentYamlSlidesFilterInput
 }
 
 input ContentYamlSortInput {
@@ -3887,39 +4929,36 @@ input ContentYamlSortInput {
     order: [SortOrderEnum] = [ASC]
 }
 
+input ContentYamlTeamFilterInput {
+    id: StringQueryOperatorInput
+    image: FileFilterInput
+    name: StringQueryOperatorInput
+    role: StringQueryOperatorInput
+}
+
+input ContentYamlTeamFilterListInput {
+    elemMatch: ContentYamlTeamFilterInput
+}
+
+input DataYamlClientsFilterInput {
+    image: StringQueryOperatorInput
+    type: StringQueryOperatorInput
+    value: StringQueryOperatorInput
+}
+
+input DataYamlClientsFilterListInput {
+    elemMatch: DataYamlClientsFilterInput
+}
+
 input DataYamlFilterInput {
-    authors: StringQueryOperatorInput
     children: NodeFilterListInput
-    history: DataYamlHistoryFilterListInput
+    clients: DataYamlClientsFilterListInput
     id: StringQueryOperatorInput
     internal: InternalFilterInput
-    lang: StringQueryOperatorInput
     parent: NodeFilterInput
-    pride: DataYamlPrideFilterListInput
     slug: StringQueryOperatorInput
     statistics: DataYamlStatisticsFilterListInput
-    team: DataYamlTeamFilterListInput
     technologies: DataYamlTechnologiesFilterListInput
-}
-
-input DataYamlHistoryFilterInput {
-    date: IntQueryOperatorInput
-    event: StringQueryOperatorInput
-    image: StringQueryOperatorInput
-}
-
-input DataYamlHistoryFilterListInput {
-    elemMatch: DataYamlHistoryFilterInput
-}
-
-input DataYamlPrideFilterInput {
-    body: StringQueryOperatorInput
-    subtitle: StringQueryOperatorInput
-    title: StringQueryOperatorInput
-}
-
-input DataYamlPrideFilterListInput {
-    elemMatch: DataYamlPrideFilterInput
 }
 
 input DataYamlSortInput {
@@ -3936,17 +4975,9 @@ input DataYamlStatisticsFilterListInput {
     elemMatch: DataYamlStatisticsFilterInput
 }
 
-input DataYamlTeamFilterInput {
-    id: StringQueryOperatorInput
-    name: StringQueryOperatorInput
-    role: StringQueryOperatorInput
-}
-
-input DataYamlTeamFilterListInput {
-    elemMatch: DataYamlTeamFilterInput
-}
-
 input DataYamlTechnologiesFilterInput {
+    image: StringQueryOperatorInput
+    type: StringQueryOperatorInput
     value: StringQueryOperatorInput
 }
 
@@ -4548,6 +5579,7 @@ input TestimonialsYamlFilterInput {
     children: NodeFilterListInput
     client: StringQueryOperatorInput
     id: StringQueryOperatorInput
+    image: FileFilterInput
     internal: InternalFilterInput
     lang: StringQueryOperatorInput
     parent: NodeFilterInput

@@ -29,6 +29,7 @@ slides:
         link: /
       - title: Book a call
         link: /
+        modifier: outline-default
   - title: Better Software Products Faster.
     body:
       Let’s build a software product that will grow your business and will delight

@@ -5,6 +5,7 @@ import { findSection, Section } from "../components/sections";
 import ProcessesList from "../components/processes/ProcessesList";
 import CategoriesList from "../components/categories/CategoriesList";
 import TechnologiesList from "../components/partials/technologies/TechnologiesList";
+import HeroServices from "../components/services/hero/HeroServices";
 
 const ServicesPage = ({
   pageContext,
@@ -14,15 +15,18 @@ const ServicesPage = ({
 }) => {
   return (
     <Layout context={pageContext} page={"services"}>
-      <Section section={findSection(sections, "hero")}></Section>
+      <HeroServices section={findSection(sections, "hero")}/>
       <Section section={findSection(sections, "process")}>
-          <ProcessesList/>
+        <ProcessesList />
       </Section>
-      <Section section={findSection(sections, "categories")} modifier={"light-bg"}>
-          <CategoriesList showServices/>
+      <Section
+        section={findSection(sections, "categories")}
+        modifier={"light-bg"}
+      >
+        <CategoriesList showServices />
       </Section>
       <Section section={findSection(sections, "technologies")}>
-          <TechnologiesList/>
+        <TechnologiesList />
       </Section>
     </Layout>
   );
