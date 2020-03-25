@@ -22,6 +22,7 @@ const ServicesPage = ({
       <Section
         section={findSection(sections, "categories")}
         modifier={"light-bg"}
+        withoutEyebrow={true}
       >
         <CategoriesList showServices />
       </Section>
