@@ -1,0 +1,11 @@
+.c-timeline{
+
+}
+
+.c-timeline-item{
+  display: flex;
+  align-items: center;
+  &__date{
+    margin-right: $inuit-global-spacing-unit;
+  }
+}

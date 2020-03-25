@@ -2,8 +2,8 @@
 
 .l-home-hero {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: repeat(6, 1fr);
   &__text {
     grid-area: 2 / 2 / 6 / 5;
     z-index: 3;
@@ -16,7 +16,5 @@
   }
   &__image2 {
     grid-area: 5 / 8 / 7 / 11;
-
   }
-
 }

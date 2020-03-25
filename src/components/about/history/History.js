@@ -23,14 +23,18 @@ const History = () => {
     }
   `);
   return (
-    <ul>
+    <ul className="c-timeline">
       {history.map(node => (
-        <li key={node.date}>
-          <h5 className="c-h5">{node.date}</h5>
-          <p>{node.event}</p>
+        <li key={node.date} className="c-timeline__item c-timeline-item">
+          <h5 className="c-heading c-heading--5 c-timeline-item__date">
+            {node.date}
+          </h5>
+          <p className="c-timeline-item__date">{node.event}</p>
           {node.image && (
-            <div className="c-avatar c-avatar--large">
-              <GatsbyImage fixed={node.image.childImageSharp.fixed} />
+            <div className="c-timeline-item__date">
+              <div className="c-avatar c-avatar--large ">
+                <GatsbyImage fixed={node.image.childImageSharp.fixed} />
+              </div>
             </div>
           )}
         </li>
