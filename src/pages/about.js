@@ -6,7 +6,7 @@ import History from "../components/splits/history/History";
 import Team from "../components/splits/team/Team";
 import Pride from "../components/splits/pride/Pride";
 import LastScene from "../components/splits/LastScene";
-import Jobs from "../components/splits/jobs/Jobs";
+import Jobs from "../components/about/jobs/Jobs";
 
 const AboutPage = ({
   pageContext,
@@ -27,7 +27,7 @@ const AboutPage = ({
       >
         <History />
       </Section>
-      <Jobs />
+      <Jobs section={findSection(sections, "jobs")} />
       <Section section={findSection(sections, "pride")} withoutEyebrow>
         <Pride />
       </Section>
@@ -45,6 +45,7 @@ export const query = graphql`
         slug
         title
         body
+        link
       }
     }
   }

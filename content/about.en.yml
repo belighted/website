@@ -11,6 +11,10 @@ sections:
     title: Our history
   - slug: pride
     title: What we are proud of
+  - slug: jobs
+    title: Jobs
+    body: Fancy working with us ?
+    link: View all of our openings
 team:
   - id: nja
     name: Nicolas

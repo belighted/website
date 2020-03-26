@@ -1,6 +1,6 @@
 ---
-title: Front-end developer
-slug: front-end
+title: Back-end developer
+slug: back-end
 lang: en
 ---
 

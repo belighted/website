@@ -55,8 +55,8 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "partials",
-        path: `${__dirname}/content/partials`
+        name: "splits",
+        path: `${__dirname}/content/splits`
       }
     },
     {

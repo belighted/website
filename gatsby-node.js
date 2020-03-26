@@ -50,13 +50,15 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const serviceTemplate = path.resolve("./src/templates/service.js");
   const caseTemplate = path.resolve("./src/templates/case.js");
   const resourceTemplate = path.resolve("./src/templates/resource.js");
+  const jobTemplate = path.resolve("./src/templates/job.js");
 
   const {
     data: {
       allPostsYaml: { nodes: posts },
       allServicesYaml: { nodes: services },
       allCasesYaml: { nodes: cases },
-      allResourcesYaml: { nodes: resources }
+      allResourcesYaml: { nodes: resources },
+      jobs: { nodes: jobs }
     }
   } = await graphql(`
     {
@@ -81,6 +83,15 @@ module.exports.createPages = async ({ graphql, actions }) => {
         nodes {
           slug
           lang
+        }
+      }
+      jobs: allMarkdownRemark(
+        filter: { fields: { collection: { eq: "jobs" } } }
+      ) {
+        nodes {
+          frontmatter {
+            slug
+          }
         }
       }
     }
@@ -130,6 +141,19 @@ module.exports.createPages = async ({ graphql, actions }) => {
         path: `${locales[lang].path}/resources/${resource.slug}`,
         context: {
           slug: resource.slug,
+          lang: lang
+        }
+      });
+    });
+  });
+
+  jobs.forEach(({ frontmatter: job }) => {
+    Object.keys(locales).map(lang => {
+      createPage({
+        component: jobTemplate,
+        path: `${locales[lang].path}/careers/${job.slug}`,
+        context: {
+          slug: job.slug,
           lang: lang
         }
       });
