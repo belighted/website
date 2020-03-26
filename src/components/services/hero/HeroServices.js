@@ -1,5 +1,4 @@
 import React from "react";
-import Hero from "../../hero/Hero";
 import { graphql, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 

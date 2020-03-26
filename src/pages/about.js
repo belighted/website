@@ -2,15 +2,16 @@ import React from "react";
 import Layout from "../components/layout/Layout";
 import { graphql } from "gatsby";
 import { findSection, Section } from "../components/sections";
-import History from "../components/about/history/History";
-import Team from "../components/about/team/Team";
-import Pride from "../components/about/pride/Pride";
+import History from "../components/splits/history/History";
+import Team from "../components/splits/team/Team";
+import Pride from "../components/splits/pride/Pride";
 import LastScene from "../components/splits/LastScene";
+import Jobs from "../components/splits/jobs/Jobs";
 
 const AboutPage = ({
   pageContext,
   data: {
-    contentYaml: { sections },
+    contentYaml: { sections }
   }
 }) => {
   return (
@@ -19,9 +20,14 @@ const AboutPage = ({
       <Section section={findSection(sections, "team")}>
         <Team />
       </Section>
-      <Section section={findSection(sections, "history")} modifier={'light-bg'} withoutEyebrow>
+      <Section
+        section={findSection(sections, "history")}
+        modifier={"light-bg"}
+        withoutEyebrow
+      >
         <History />
       </Section>
+      <Jobs />
       <Section section={findSection(sections, "pride")} withoutEyebrow>
         <Pride />
       </Section>
