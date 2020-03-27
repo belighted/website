@@ -20,6 +20,13 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
+        name: "testimonials",
+        path: `${__dirname}/content/testimonials`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
         name: "resources",
         path: `${__dirname}/content/resources`
       }
@@ -59,13 +66,7 @@ module.exports = {
         path: `${__dirname}/content/splits`
       }
     },
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        name: "testimonials",
-        path: `${__dirname}/content/testimonials`
-      }
-    },
+
     {
       resolve: "gatsby-source-filesystem",
       options: {
