@@ -159,7 +159,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   _.uniq(tags).forEach(tag => {
     Object.keys(locales).map(lang => {
       createPage({
-        component: blogTemplate,
+        component: blogTagTemplate,
         path: `${locales[lang].path}/tags/${tag}`,
         context: {
           tag,
