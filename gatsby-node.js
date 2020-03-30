@@ -1,9 +1,52 @@
 const path = require("path");
 const locales = require("./src/constants/locales");
 const _ = require("lodash");
+const { createRemoteFileNode } = require("gatsby-source-filesystem");
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions;
+exports.createSchemaCustomization = ({ actions }) => {
+  const { createTypes } = actions;
+  createTypes(`
+    type MarkdownRemark implements Node {
+      frontmatter: Frontmatter
+      featuredImg: File @link(from: "featuredImg___NODE")
+    }
+    type Frontmatter {
+      title: String!
+      featuredImgUrl: String
+      featuredImgAlt: String
+    }
+  `);
+};
+
+exports.onCreateNode = async ({
+  node,
+  actions,
+  getNode,
+  store,
+  cache,
+  createNodeId
+}) => {
+  const { createNodeField, createNode } = actions;
+
+  if (
+    node.internal.type === "PostsYaml" &&
+    node.image !== null &&
+    !node.image.includes("default_blogpost")
+  ) {
+    let fileNode = await createRemoteFileNode({
+      url: node.image, // string that points to the URL of the image
+      parentNodeId: node.id, // id of the parent node of the fileNode you are going to create
+      createNode, // helper function in gatsby-node to generate the node
+      createNodeId, // helper function in gatsby-node to generate the node id
+      cache, // Gatsby's cache
+      store // Gatsby's redux store
+    });
+    // if the file was created, attach the new node to the parent node
+    if (fileNode) {
+      node.featuredImage___NODE = fileNode.id;
+    }
+  }
+
   if (_.get(node, "internal.type") === `MarkdownRemark`) {
     // Get the parent node
     const parent = getNode(_.get(node, "parent"));
