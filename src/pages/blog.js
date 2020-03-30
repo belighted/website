@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
-import BlogList from "../components/BlogList";
+import BlogList from "../components/blog/BlogList";
 import { SectionHeader } from "../components/sections";
 
 const BlogPage = ({ pageContext }) => {

@@ -1,10 +1,10 @@
-import React from "react"
-import { graphql, Link, useStaticQuery } from "gatsby"
-import locales from "../constants/locales"
+import React from "react";
+import { graphql, Link, useStaticQuery } from "gatsby";
+import locales from "../../constants/locales";
 
 export default function BlogList() {
   const {
-    allPostsYaml: { nodes },
+    allPostsYaml: { nodes }
   } = useStaticQuery(
     graphql`
       {
@@ -12,26 +12,30 @@ export default function BlogList() {
           nodes {
             slug
             lang
-            article {
-              title
-            }
+            title
+            image
+            description
           }
         }
       }
     `
-  )
+  );
 
   return (
     <section>
       <ul>
         {nodes.map(post => (
           <li>
+            <h2 className="c-heading--2 c-heading">{post.title}</h2>
+            <img src={post.image} />
+            <div>{post.description}</div>
+
             <Link to={`${locales[post.lang].path}/blog/${post.slug}`}>
-              {post.article.title}
+              Read more
             </Link>
           </li>
         ))}
       </ul>
     </section>
-  )
+  );
 }

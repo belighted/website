@@ -10,9 +10,7 @@ const BlogpostsList = () => {
       allPostsYaml(limit: 3) {
         nodes {
           slug
-          article {
-            title
-          }
+          title
         }
       }
     }
@@ -22,7 +20,7 @@ const BlogpostsList = () => {
       {nodes.map(node => (
         <li key={node.slug} className={"u-margin-bottom"}>
           <h4 className="c-h4 u-margin-none">
-            <LinkToBlog slug={node.slug}>{node.article.title}</LinkToBlog>
+            <LinkToBlog slug={node.slug}>{node.title}</LinkToBlog>
           </h4>
         </li>
       ))}
