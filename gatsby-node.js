@@ -94,6 +94,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const caseTemplate = path.resolve("./src/templates/case.js");
   const resourceTemplate = path.resolve("./src/templates/resource.js");
   const jobTemplate = path.resolve("./src/templates/job.js");
+  const blogTagTemplate = path.resolve("./src/templates/blogTag.js");
 
   const {
     data: {
@@ -114,6 +115,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
         nodes {
           slug
           lang
+          tags {
+            value
+          }
         }
       }
       allResourcesYaml {
@@ -140,7 +144,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
+  let tags = [];
   posts.forEach(post => {
+    post.tags.forEach(tag => tags.push(tag.value));
     createPage({
       component: blogTemplate,
       path: `${locales[post.lang].path}/blog/${post.slug}`,
@@ -150,6 +156,20 @@ module.exports.createPages = async ({ graphql, actions }) => {
       }
     });
   });
+  _.uniq(tags).forEach(tag => {
+    Object.keys(locales).map(lang => {
+      createPage({
+        component: blogTemplate,
+        path: `${locales[lang].path}/tags/${tag}`,
+        context: {
+          tag,
+          lang
+        }
+      });
+    });
+  });
+
+  //get all post tags
 
   services.forEach(service => {
     Object.keys(locales).map(lang => {
