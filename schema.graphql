@@ -13,21 +13,19 @@ interface Node {
 }
 
 type CasesYaml implements Node {
-    article: CasesYamlArticle
+    about: String
+    challenges: String
     children: [Node!]!
+    goals: String
     id: ID!
     internal: Internal!
     lang: String
+    logo: String
     originalPath: String
     parent: Node
+    problem: String
+    results: String
     slug: String
-    title: String
-}
-
-type CasesYamlArticle {
-    content: String
-    html: String
-    textBody: String
     title: String
 }
 
@@ -840,7 +838,7 @@ type Query {
     allSitePlugin(filter: SitePluginFilterInput, limit: Int, skip: Int, sort: SitePluginSortInput): SitePluginConnection!
     allSplitsYaml(filter: SplitsYamlFilterInput, limit: Int, skip: Int, sort: SplitsYamlSortInput): SplitsYamlConnection!
     allTestimonialsYaml(filter: TestimonialsYamlFilterInput, limit: Int, skip: Int, sort: TestimonialsYamlSortInput): TestimonialsYamlConnection!
-    casesYaml(article: CasesYamlArticleFilterInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): CasesYaml
+    casesYaml(about: StringQueryOperatorInput, challenges: StringQueryOperatorInput, children: NodeFilterListInput, goals: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, logo: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, problem: StringQueryOperatorInput, results: StringQueryOperatorInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): CasesYaml
     categoriesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, order: IntQueryOperatorInput, parent: NodeFilterInput, services: StringQueryOperatorInput, short_description: StringQueryOperatorInput, slug: StringQueryOperatorInput, technologies: StringQueryOperatorInput, title: StringQueryOperatorInput): CategoriesYaml
     contentYaml(body: StringQueryOperatorInput, children: NodeFilterListInput, history: ContentYamlHistoryFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, pride: ContentYamlPrideFilterListInput, sections: ContentYamlSectionsFilterListInput, slides: ContentYamlSlidesFilterListInput, slug: StringQueryOperatorInput, team: ContentYamlTeamFilterListInput, title: StringQueryOperatorInput): ContentYaml
     dataYaml(children: NodeFilterListInput, clients: DataYamlClientsFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, statistics: DataYamlStatisticsFilterListInput, technologies: DataYamlTechnologiesFilterListInput): DataYaml
@@ -1045,6 +1043,8 @@ type SitePageConnection {
 type SitePageContext {
     lang: String
     slug: String
+    tag: String
+    title: String
 }
 
 type SitePageEdge {
@@ -1131,13 +1131,23 @@ type SitePluginPackageJsonPeerDependencies {
 }
 
 type SitePluginPluginOptions {
+    backgroundColor: String
     defaultQuality: Int
+    disableBgImage: Boolean
+    disableBgImageOnAlpha: Boolean
     linkImagesToOriginal: Boolean
+    loading: String
+    markdownCaptions: Boolean
     maxWidth: Int
     name: String
     path: String
     pathCheck: Boolean
+    pathPrefix: String
     plugins: [SitePluginPluginOptionsPlugins]
+    showCaptions: Boolean
+    tracedSVG: Boolean
+    withWebp: Boolean
+    wrapperStyle: String
 }
 
 type SitePluginPluginOptionsPlugins {
@@ -1152,8 +1162,18 @@ type SitePluginPluginOptionsPlugins {
 }
 
 type SitePluginPluginOptionsPluginsPluginOptions {
+    backgroundColor: String
+    disableBgImage: Boolean
+    disableBgImageOnAlpha: Boolean
     linkImagesToOriginal: Boolean
+    loading: String
+    markdownCaptions: Boolean
     maxWidth: Int
+    pathPrefix: String
+    showCaptions: Boolean
+    tracedSVG: Boolean
+    withWebp: Boolean
+    wrapperStyle: String
 }
 
 type SiteSiteMetadata {
@@ -1262,10 +1282,8 @@ type TestimonialsYamlGroupConnection {
 }
 
 enum CasesYamlFieldsEnum {
-    article___content
-    article___html
-    article___textBody
-    article___title
+    about
+    challenges
     children
     children___children
     children___children___children
@@ -1305,6 +1323,7 @@ enum CasesYamlFieldsEnum {
     children___parent___internal___type
     children___parent___parent___children
     children___parent___parent___id
+    goals
     id
     internal___content
     internal___contentDigest
@@ -1315,6 +1334,7 @@ enum CasesYamlFieldsEnum {
     internal___owner
     internal___type
     lang
+    logo
     originalPath
     parent___children
     parent___children___children
@@ -1354,6 +1374,8 @@ enum CasesYamlFieldsEnum {
     parent___parent___internal___type
     parent___parent___parent___children
     parent___parent___parent___id
+    problem
+    results
     slug
     title
 }
@@ -1509,10 +1531,16 @@ enum ContentYamlFieldsEnum {
     history___image___blksize
     history___image___blocks
     history___image___changeTime
+    history___image___childCasesYaml___about
+    history___image___childCasesYaml___challenges
     history___image___childCasesYaml___children
+    history___image___childCasesYaml___goals
     history___image___childCasesYaml___id
     history___image___childCasesYaml___lang
+    history___image___childCasesYaml___logo
     history___image___childCasesYaml___originalPath
+    history___image___childCasesYaml___problem
+    history___image___childCasesYaml___results
     history___image___childCasesYaml___slug
     history___image___childCasesYaml___title
     history___image___childCategoriesYaml___children
@@ -1700,10 +1728,16 @@ enum ContentYamlFieldsEnum {
     pride___image___blksize
     pride___image___blocks
     pride___image___changeTime
+    pride___image___childCasesYaml___about
+    pride___image___childCasesYaml___challenges
     pride___image___childCasesYaml___children
+    pride___image___childCasesYaml___goals
     pride___image___childCasesYaml___id
     pride___image___childCasesYaml___lang
+    pride___image___childCasesYaml___logo
     pride___image___childCasesYaml___originalPath
+    pride___image___childCasesYaml___problem
+    pride___image___childCasesYaml___results
     pride___image___childCasesYaml___slug
     pride___image___childCasesYaml___title
     pride___image___childCategoriesYaml___children
@@ -1859,10 +1893,16 @@ enum ContentYamlFieldsEnum {
     team___image___blksize
     team___image___blocks
     team___image___changeTime
+    team___image___childCasesYaml___about
+    team___image___childCasesYaml___challenges
     team___image___childCasesYaml___children
+    team___image___childCasesYaml___goals
     team___image___childCasesYaml___id
     team___image___childCasesYaml___lang
+    team___image___childCasesYaml___logo
     team___image___childCasesYaml___originalPath
+    team___image___childCasesYaml___problem
+    team___image___childCasesYaml___results
     team___image___childCasesYaml___slug
     team___image___childCasesYaml___title
     team___image___childCategoriesYaml___children
@@ -2229,10 +2269,8 @@ enum FileFieldsEnum {
     blksize
     blocks
     changeTime
-    childCasesYaml___article___content
-    childCasesYaml___article___html
-    childCasesYaml___article___textBody
-    childCasesYaml___article___title
+    childCasesYaml___about
+    childCasesYaml___challenges
     childCasesYaml___children
     childCasesYaml___children___children
     childCasesYaml___children___children___children
@@ -2248,6 +2286,7 @@ enum FileFieldsEnum {
     childCasesYaml___children___internal___type
     childCasesYaml___children___parent___children
     childCasesYaml___children___parent___id
+    childCasesYaml___goals
     childCasesYaml___id
     childCasesYaml___internal___content
     childCasesYaml___internal___contentDigest
@@ -2258,6 +2297,7 @@ enum FileFieldsEnum {
     childCasesYaml___internal___owner
     childCasesYaml___internal___type
     childCasesYaml___lang
+    childCasesYaml___logo
     childCasesYaml___originalPath
     childCasesYaml___parent___children
     childCasesYaml___parent___children___children
@@ -2273,6 +2313,8 @@ enum FileFieldsEnum {
     childCasesYaml___parent___internal___type
     childCasesYaml___parent___parent___children
     childCasesYaml___parent___parent___id
+    childCasesYaml___problem
+    childCasesYaml___results
     childCasesYaml___slug
     childCasesYaml___title
     childCategoriesYaml___children
@@ -2666,10 +2708,16 @@ enum FileFieldsEnum {
     childMarkdownRemark___featuredImg___blksize
     childMarkdownRemark___featuredImg___blocks
     childMarkdownRemark___featuredImg___changeTime
+    childMarkdownRemark___featuredImg___childCasesYaml___about
+    childMarkdownRemark___featuredImg___childCasesYaml___challenges
     childMarkdownRemark___featuredImg___childCasesYaml___children
+    childMarkdownRemark___featuredImg___childCasesYaml___goals
     childMarkdownRemark___featuredImg___childCasesYaml___id
     childMarkdownRemark___featuredImg___childCasesYaml___lang
+    childMarkdownRemark___featuredImg___childCasesYaml___logo
     childMarkdownRemark___featuredImg___childCasesYaml___originalPath
+    childMarkdownRemark___featuredImg___childCasesYaml___problem
+    childMarkdownRemark___featuredImg___childCasesYaml___results
     childMarkdownRemark___featuredImg___childCasesYaml___slug
     childMarkdownRemark___featuredImg___childCasesYaml___title
     childMarkdownRemark___featuredImg___childCategoriesYaml___children
@@ -2867,10 +2915,16 @@ enum FileFieldsEnum {
     childPostsYaml___featuredImage___blksize
     childPostsYaml___featuredImage___blocks
     childPostsYaml___featuredImage___changeTime
+    childPostsYaml___featuredImage___childCasesYaml___about
+    childPostsYaml___featuredImage___childCasesYaml___challenges
     childPostsYaml___featuredImage___childCasesYaml___children
+    childPostsYaml___featuredImage___childCasesYaml___goals
     childPostsYaml___featuredImage___childCasesYaml___id
     childPostsYaml___featuredImage___childCasesYaml___lang
+    childPostsYaml___featuredImage___childCasesYaml___logo
     childPostsYaml___featuredImage___childCasesYaml___originalPath
+    childPostsYaml___featuredImage___childCasesYaml___problem
+    childPostsYaml___featuredImage___childCasesYaml___results
     childPostsYaml___featuredImage___childCasesYaml___slug
     childPostsYaml___featuredImage___childCasesYaml___title
     childPostsYaml___featuredImage___childCategoriesYaml___children
@@ -3231,10 +3285,16 @@ enum FileFieldsEnum {
     childTestimonialsYaml___image___blksize
     childTestimonialsYaml___image___blocks
     childTestimonialsYaml___image___changeTime
+    childTestimonialsYaml___image___childCasesYaml___about
+    childTestimonialsYaml___image___childCasesYaml___challenges
     childTestimonialsYaml___image___childCasesYaml___children
+    childTestimonialsYaml___image___childCasesYaml___goals
     childTestimonialsYaml___image___childCasesYaml___id
     childTestimonialsYaml___image___childCasesYaml___lang
+    childTestimonialsYaml___image___childCasesYaml___logo
     childTestimonialsYaml___image___childCasesYaml___originalPath
+    childTestimonialsYaml___image___childCasesYaml___problem
+    childTestimonialsYaml___image___childCasesYaml___results
     childTestimonialsYaml___image___childCasesYaml___slug
     childTestimonialsYaml___image___childCasesYaml___title
     childTestimonialsYaml___image___childCategoriesYaml___children
@@ -3737,13 +3797,12 @@ enum MarkdownRemarkFieldsEnum {
     featuredImg___blksize
     featuredImg___blocks
     featuredImg___changeTime
-    featuredImg___childCasesYaml___article___content
-    featuredImg___childCasesYaml___article___html
-    featuredImg___childCasesYaml___article___textBody
-    featuredImg___childCasesYaml___article___title
+    featuredImg___childCasesYaml___about
+    featuredImg___childCasesYaml___challenges
     featuredImg___childCasesYaml___children
     featuredImg___childCasesYaml___children___children
     featuredImg___childCasesYaml___children___id
+    featuredImg___childCasesYaml___goals
     featuredImg___childCasesYaml___id
     featuredImg___childCasesYaml___internal___content
     featuredImg___childCasesYaml___internal___contentDigest
@@ -3754,9 +3813,12 @@ enum MarkdownRemarkFieldsEnum {
     featuredImg___childCasesYaml___internal___owner
     featuredImg___childCasesYaml___internal___type
     featuredImg___childCasesYaml___lang
+    featuredImg___childCasesYaml___logo
     featuredImg___childCasesYaml___originalPath
     featuredImg___childCasesYaml___parent___children
     featuredImg___childCasesYaml___parent___id
+    featuredImg___childCasesYaml___problem
+    featuredImg___childCasesYaml___results
     featuredImg___childCasesYaml___slug
     featuredImg___childCasesYaml___title
     featuredImg___childCategoriesYaml___children
@@ -4364,13 +4426,12 @@ enum PostsYamlFieldsEnum {
     featuredImage___blksize
     featuredImage___blocks
     featuredImage___changeTime
-    featuredImage___childCasesYaml___article___content
-    featuredImage___childCasesYaml___article___html
-    featuredImage___childCasesYaml___article___textBody
-    featuredImage___childCasesYaml___article___title
+    featuredImage___childCasesYaml___about
+    featuredImage___childCasesYaml___challenges
     featuredImage___childCasesYaml___children
     featuredImage___childCasesYaml___children___children
     featuredImage___childCasesYaml___children___id
+    featuredImage___childCasesYaml___goals
     featuredImage___childCasesYaml___id
     featuredImage___childCasesYaml___internal___content
     featuredImage___childCasesYaml___internal___contentDigest
@@ -4381,9 +4442,12 @@ enum PostsYamlFieldsEnum {
     featuredImage___childCasesYaml___internal___owner
     featuredImage___childCasesYaml___internal___type
     featuredImage___childCasesYaml___lang
+    featuredImage___childCasesYaml___logo
     featuredImage___childCasesYaml___originalPath
     featuredImage___childCasesYaml___parent___children
     featuredImage___childCasesYaml___parent___id
+    featuredImage___childCasesYaml___problem
+    featuredImage___childCasesYaml___results
     featuredImage___childCasesYaml___slug
     featuredImage___childCasesYaml___title
     featuredImage___childCategoriesYaml___children
@@ -5455,6 +5519,8 @@ enum SitePageFieldsEnum {
     componentPath
     context___lang
     context___slug
+    context___tag
+    context___title
     id
     internalComponentName
     internal___content
@@ -5565,12 +5631,18 @@ enum SitePageFieldsEnum {
     pluginCreator___parent___parent___children
     pluginCreator___parent___parent___id
     pluginCreator___pluginFilepath
+    pluginCreator___pluginOptions___backgroundColor
     pluginCreator___pluginOptions___defaultQuality
+    pluginCreator___pluginOptions___disableBgImage
+    pluginCreator___pluginOptions___disableBgImageOnAlpha
     pluginCreator___pluginOptions___linkImagesToOriginal
+    pluginCreator___pluginOptions___loading
+    pluginCreator___pluginOptions___markdownCaptions
     pluginCreator___pluginOptions___maxWidth
     pluginCreator___pluginOptions___name
     pluginCreator___pluginOptions___path
     pluginCreator___pluginOptions___pathCheck
+    pluginCreator___pluginOptions___pathPrefix
     pluginCreator___pluginOptions___plugins
     pluginCreator___pluginOptions___plugins___browserAPIs
     pluginCreator___pluginOptions___plugins___id
@@ -5579,6 +5651,10 @@ enum SitePageFieldsEnum {
     pluginCreator___pluginOptions___plugins___pluginFilepath
     pluginCreator___pluginOptions___plugins___resolve
     pluginCreator___pluginOptions___plugins___version
+    pluginCreator___pluginOptions___showCaptions
+    pluginCreator___pluginOptions___tracedSVG
+    pluginCreator___pluginOptions___withWebp
+    pluginCreator___pluginOptions___wrapperStyle
     pluginCreator___resolve
     pluginCreator___ssrAPIs
     pluginCreator___version
@@ -5691,22 +5767,42 @@ enum SitePluginFieldsEnum {
     parent___parent___parent___children
     parent___parent___parent___id
     pluginFilepath
+    pluginOptions___backgroundColor
     pluginOptions___defaultQuality
+    pluginOptions___disableBgImage
+    pluginOptions___disableBgImageOnAlpha
     pluginOptions___linkImagesToOriginal
+    pluginOptions___loading
+    pluginOptions___markdownCaptions
     pluginOptions___maxWidth
     pluginOptions___name
     pluginOptions___path
     pluginOptions___pathCheck
+    pluginOptions___pathPrefix
     pluginOptions___plugins
     pluginOptions___plugins___browserAPIs
     pluginOptions___plugins___id
     pluginOptions___plugins___name
     pluginOptions___plugins___nodeAPIs
     pluginOptions___plugins___pluginFilepath
+    pluginOptions___plugins___pluginOptions___backgroundColor
+    pluginOptions___plugins___pluginOptions___disableBgImage
+    pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha
     pluginOptions___plugins___pluginOptions___linkImagesToOriginal
+    pluginOptions___plugins___pluginOptions___loading
+    pluginOptions___plugins___pluginOptions___markdownCaptions
     pluginOptions___plugins___pluginOptions___maxWidth
+    pluginOptions___plugins___pluginOptions___pathPrefix
+    pluginOptions___plugins___pluginOptions___showCaptions
+    pluginOptions___plugins___pluginOptions___tracedSVG
+    pluginOptions___plugins___pluginOptions___withWebp
+    pluginOptions___plugins___pluginOptions___wrapperStyle
     pluginOptions___plugins___resolve
     pluginOptions___plugins___version
+    pluginOptions___showCaptions
+    pluginOptions___tracedSVG
+    pluginOptions___withWebp
+    pluginOptions___wrapperStyle
     resolve
     ssrAPIs
     version
@@ -5867,13 +5963,12 @@ enum TestimonialsYamlFieldsEnum {
     image___blksize
     image___blocks
     image___changeTime
-    image___childCasesYaml___article___content
-    image___childCasesYaml___article___html
-    image___childCasesYaml___article___textBody
-    image___childCasesYaml___article___title
+    image___childCasesYaml___about
+    image___childCasesYaml___challenges
     image___childCasesYaml___children
     image___childCasesYaml___children___children
     image___childCasesYaml___children___id
+    image___childCasesYaml___goals
     image___childCasesYaml___id
     image___childCasesYaml___internal___content
     image___childCasesYaml___internal___contentDigest
@@ -5884,9 +5979,12 @@ enum TestimonialsYamlFieldsEnum {
     image___childCasesYaml___internal___owner
     image___childCasesYaml___internal___type
     image___childCasesYaml___lang
+    image___childCasesYaml___logo
     image___childCasesYaml___originalPath
     image___childCasesYaml___parent___children
     image___childCasesYaml___parent___id
+    image___childCasesYaml___problem
+    image___childCasesYaml___results
     image___childCasesYaml___slug
     image___childCasesYaml___title
     image___childCategoriesYaml___children
@@ -6430,21 +6528,19 @@ input BooleanQueryOperatorInput {
     nin: [Boolean]
 }
 
-input CasesYamlArticleFilterInput {
-    content: StringQueryOperatorInput
-    html: StringQueryOperatorInput
-    textBody: StringQueryOperatorInput
-    title: StringQueryOperatorInput
-}
-
 input CasesYamlFilterInput {
-    article: CasesYamlArticleFilterInput
+    about: StringQueryOperatorInput
+    challenges: StringQueryOperatorInput
     children: NodeFilterListInput
+    goals: StringQueryOperatorInput
     id: StringQueryOperatorInput
     internal: InternalFilterInput
     lang: StringQueryOperatorInput
+    logo: StringQueryOperatorInput
     originalPath: StringQueryOperatorInput
     parent: NodeFilterInput
+    problem: StringQueryOperatorInput
+    results: StringQueryOperatorInput
     slug: StringQueryOperatorInput
     title: StringQueryOperatorInput
 }
@@ -7042,6 +7138,8 @@ input SiteFilterInput {
 input SitePageContextFilterInput {
     lang: StringQueryOperatorInput
     slug: StringQueryOperatorInput
+    tag: StringQueryOperatorInput
+    title: StringQueryOperatorInput
 }
 
 input SitePageFilterInput {
@@ -7123,13 +7221,23 @@ input SitePluginPackageJsonPeerDependenciesFilterListInput {
 }
 
 input SitePluginPluginOptionsFilterInput {
+    backgroundColor: StringQueryOperatorInput
     defaultQuality: IntQueryOperatorInput
+    disableBgImage: BooleanQueryOperatorInput
+    disableBgImageOnAlpha: BooleanQueryOperatorInput
     linkImagesToOriginal: BooleanQueryOperatorInput
+    loading: StringQueryOperatorInput
+    markdownCaptions: BooleanQueryOperatorInput
     maxWidth: IntQueryOperatorInput
     name: StringQueryOperatorInput
     path: StringQueryOperatorInput
     pathCheck: BooleanQueryOperatorInput
+    pathPrefix: StringQueryOperatorInput
     plugins: SitePluginPluginOptionsPluginsFilterListInput
+    showCaptions: BooleanQueryOperatorInput
+    tracedSVG: BooleanQueryOperatorInput
+    withWebp: BooleanQueryOperatorInput
+    wrapperStyle: StringQueryOperatorInput
 }
 
 input SitePluginPluginOptionsPluginsFilterInput {
@@ -7148,8 +7256,18 @@ input SitePluginPluginOptionsPluginsFilterListInput {
 }
 
 input SitePluginPluginOptionsPluginsPluginOptionsFilterInput {
+    backgroundColor: StringQueryOperatorInput
+    disableBgImage: BooleanQueryOperatorInput
+    disableBgImageOnAlpha: BooleanQueryOperatorInput
     linkImagesToOriginal: BooleanQueryOperatorInput
+    loading: StringQueryOperatorInput
+    markdownCaptions: BooleanQueryOperatorInput
     maxWidth: IntQueryOperatorInput
+    pathPrefix: StringQueryOperatorInput
+    showCaptions: BooleanQueryOperatorInput
+    tracedSVG: BooleanQueryOperatorInput
+    withWebp: BooleanQueryOperatorInput
+    wrapperStyle: StringQueryOperatorInput
 }
 
 input SitePluginSortInput {

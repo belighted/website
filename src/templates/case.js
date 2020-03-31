@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
+import LocalizedLink from "../components/links/LocalizedLink";
 
 const Testimonial = ({ testimonial: { body, author, role } }) => {
   return (
@@ -19,8 +20,13 @@ const CaseArticle = ({
 }) => (
   <Layout context={pageContext} page={"blog"}>
     <article className="o-wrapper">
+      <LocalizedLink route={"/clients"}>See all cases</LocalizedLink>
       <h2>{post.title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: post.article.content }}></div>
+      <div dangerouslySetInnerHTML={{ __html: post.about }}></div>
+      <div className="l-grid l-grid--2cols">
+        <div dangerouslySetInnerHTML={{ __html: post.problem }}></div>
+        <div dangerouslySetInnerHTML={{ __html: post.goals }}></div>
+      </div>
       {testimonial && (
         <section className="c-section">
           <h3 className="c-section__header c-h3">Testimonial</h3>
@@ -29,6 +35,8 @@ const CaseArticle = ({
           </div>
         </section>
       )}
+      <div dangerouslySetInnerHTML={{ __html: post.challenges }}></div>
+      <div dangerouslySetInnerHTML={{ __html: post.results }}></div>
     </article>
   </Layout>
 );
@@ -38,9 +46,11 @@ export const query = graphql`
     casesYaml(slug: { eq: $slug }) {
       slug
       title
-      article {
-        content
-      }
+      about
+      goals
+      problem
+      challenges
+      results
     }
     testimonialsYaml(slug: { eq: $slug }) {
       slug
