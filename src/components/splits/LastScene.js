@@ -5,7 +5,7 @@ import Img from "gatsby-image";
 const LastScene = () => {
   const {file:{childImageSharp}} = useStaticQuery(graphql`
     {
-      file(relativePath: { eq: "about/last_scene.jpeg" }) {
+      file(relativePath: { eq: "about/last_scene.jpg" }) {
         childImageSharp {
           # Specify the image processing specifications right in the query.
           # Makes it trivial to update as your page's design changes.
