@@ -4,6 +4,8 @@ import locales from "../../constants/locales";
 import Img from "gatsby-image";
 import moment from "moment";
 import LinkToTag from "./LinkToTag";
+import BlogpostTags from "./components/BlogpostTags";
+import LinkToBlog from "./LinkToBlog";
 
 export default function BlogList({ nodes }) {
   return (
@@ -21,25 +23,25 @@ export default function BlogList({ nodes }) {
               </div>
               <div className="o-media__body">
                 <div className="u-margin-bottom">
-                  <h2 className="c-heading--3 c-heading u-margin-bottom-small">
-                    {post.title}
-                  </h2>
+                  <LinkToBlog slug={post.slug}>
+                    <h2 className="c-heading--3 c-heading u-margin-bottom-small">
+                      {post.title}
+                    </h2>
+                  </LinkToBlog>
                   <p className="c-body c-body--3">
                     <strong>{post.author}</strong>&nbsp;
                     <span>on {moment(post.date).format("DD MMMM YYYY")}</span>
                   </p>
                 </div>
                 <div>{post.description}</div>
-                <Link to={`${locales[post.lang].path}/blog/${post.slug}`}>
-                  Read more
-                </Link>
-                <ul>
-                  {post.tags.map(tag => (
-                    <li key={tag.value}>
-                      <LinkToTag slug={tag.value}>{tag.label}</LinkToTag>
-                    </li>
-                  ))}
-                </ul>
+                <div className="u-margin-top">
+                  <Link to={`${locales[post.lang].path}/blog/${post.slug}`}>
+                    <span className="c-button c-button--outline-primary">
+                      Read more
+                    </span>
+                  </Link>
+                </div>
+                <BlogpostTags post={post} />
               </div>
             </div>
           </li>
