@@ -3,6 +3,8 @@ const YAML = require("json-to-pretty-yaml");
 const axios = require("axios");
 const xml2js = require("xml2js");
 const read = require("node-readability");
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 
 const getUrls = async () => {
   const { data } = await axios.get("https://www.belighted.com/sitemap.xml");
@@ -12,45 +14,36 @@ const getUrls = async () => {
   return urlsets.map(set => set.loc.shift());
 };
 
-const getArticles = async (resource, urls) => {
+const getArticles = async urls => {
   return Promise.all(
     urls
-      .filter(u => u.includes(`/${resource}/`))
+      .filter(u => u.includes("/clients/"))
       .map(
         u =>
-          new Promise((resolve, reject) => {
-            console.log("reading ", u);
+          new Promise(async (resolve, reject) => {
             const slug = u
               .replace("/fr", "")
-              .replace(`https://www.belighted.com/${resource}/`, "");
+              .replace("https://www.belighted.com/clients/", "");
+            console.log("reading ", slug);
 
-            read(u, function(err, article, meta) {
-              if (err) reject(err);
-              resolve({
-                slug,
-                originalPath: u,
-                title: article.title,
-                article: {
-                  title: article.title,
-                  content: article.content,
-                  textBody: article.textBody,
-                  html: article.html
-                }
-                //meta,
-              });
+            const { data } = await axios.get(u);
+            resolve({
+              slug,
+              originalPath: u,
+              originalHtml: data
             });
           })
       )
   );
 };
 
-const writeFiles = async (resource, articles) => {
+const writeFiles = async articles => {
   console.log("writing", articles.length);
 
   return Promise.all(
     articles.map(article => {
       const lang = article.originalPath.includes("/fr") ? "fr" : "en";
-      const path = `${__dirname}/content/${resource}/${article.slug}.${lang}.yml`;
+      const path = `${__dirname}/content/clients/${article.slug}.${lang}.yml`;
       const content = YAML.stringify({ lang, ...article });
 
       return new Promise((resolve, reject) => {
@@ -64,10 +57,49 @@ const writeFiles = async (resource, articles) => {
   );
 };
 
+const dateRegex = /.* /g;
+const tagRegex = /https?:\/\/.*\//g;
+
+const extractMeta = async articles => {
+  return articles.map(post => {
+    const dom = new JSDOM(post.originalHtml);
+
+    let scripts = dom.window.document.querySelectorAll("script");
+    scripts.forEach(script => script.remove());
+
+    return {
+      slug: post.slug,
+      originalPath: post.originalPath,
+      title: dom.window.document.querySelector(".hero-content h2").textContent,
+      logo: dom.window.document
+        .querySelector(
+          ".hs_cos_wrapper_widget > h2:nth-child(1) > img:nth-child(1)"
+        )
+        .getAttribute("src"),
+      about: dom.window.document.querySelector(".hs_cos_wrapper_widget")
+        .innerHTML,
+      problem: dom.window.document.querySelector(
+        ".ptb0 > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
+      ).innerHTML,
+      goals: dom.window.document.querySelector(
+        ".ptb0 > div:nth-child(1) > div:nth-child(1) > div:nth-child(2) ul"
+      ).outerHTML,
+
+      challenges: dom.window.document.querySelector(
+        "div.row-number-7:nth-child(1) > div:nth-child(1)"
+      ).innerHTML,
+      results: dom.window.document.querySelector(
+        ".row-number-11 > div:nth-child(1) > div:nth-child(1)"
+      ).innerHTML
+    };
+  });
+};
+
 const init = async () => {
   const urls = await getUrls();
-  const articles = await getArticles("clients", urls);
-  await writeFiles("cases", articles);
+  const rawArticles = await getArticles(urls);
+  const articles = await extractMeta(rawArticles);
+  await writeFiles(articles);
   console.log("done");
   //console.log(articles)
 };

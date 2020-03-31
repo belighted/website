@@ -20,6 +20,7 @@ const CaseArticle = ({
   <Layout context={pageContext} page={"blog"}>
     <article className="o-wrapper">
       <h2>{post.title}</h2>
+      <div dangerouslySetInnerHTML={{ __html: post.article.content }}></div>
       {testimonial && (
         <section className="c-section">
           <h3 className="c-section__header c-h3">Testimonial</h3>
@@ -37,6 +38,9 @@ export const query = graphql`
     casesYaml(slug: { eq: $slug }) {
       slug
       title
+      article {
+        content
+      }
     }
     testimonialsYaml(slug: { eq: $slug }) {
       slug
