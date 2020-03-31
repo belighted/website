@@ -31,7 +31,7 @@ const CategoriesList = ({ showServices }) => {
         <li key={node.slug} id={node.slug} className={"u-margin-bottom-large"}>
           <h4 className="c-heading c-heading--3">{node.title}</h4>
 
-          <div className="c-body c-body--2">{node.short_description}</div>
+          <div className="c-body c-body--2 u-margin-bottom">{node.short_description}</div>
 
           {!showServices && (
             <p className={"u-margin-top"}>
