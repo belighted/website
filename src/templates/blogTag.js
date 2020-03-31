@@ -1,8 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
-import { SectionHeader } from "../components/sections";
 import BlogList from "../components/blog/BlogList";
+import LocalizedLink from "../components/links/LocalizedLink";
 
 const BlogTag = ({
   data: {
@@ -12,7 +12,12 @@ const BlogTag = ({
 }) => (
   <Layout context={pageContext} page={"blog"}>
     <section className={"o-wrapper c-section"}>
-      <SectionHeader title={"Blog"} body={pageContext.title} />
+      <h1 className="c-heading c-heading--1">
+        <LocalizedLink route={`/blog`}>
+          Belighted blog
+        </LocalizedLink>{" >  "}
+        {pageContext.title}
+      </h1>
       <BlogList nodes={nodes} />
     </section>
   </Layout>

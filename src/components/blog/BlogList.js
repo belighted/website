@@ -10,7 +10,7 @@ export default function BlogList({ nodes }) {
     <section>
       <ul className="o-list-bare">
         {nodes.map(post => (
-          <li>
+          <li key={post.slug}>
             <div className="o-media u-margin-bottom">
               <div className="o-media__img">
                 {post.featuredImage && post.featuredImage.childImageSharp && (
