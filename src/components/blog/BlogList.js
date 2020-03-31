@@ -1,45 +1,11 @@
 import React from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { graphql, Link } from "gatsby";
 import locales from "../../constants/locales";
 import Img from "gatsby-image";
 import moment from "moment";
+import LinkToTag from "./LinkToTag";
 
-export default function BlogList() {
-  const {
-    allPostsYaml: { nodes }
-  } = useStaticQuery(
-    graphql`
-      {
-        allPostsYaml(
-          sort: { fields: [date], order: DESC }
-          filter: { lang: { eq: "en" } }
-        ) {
-          nodes {
-            slug
-            lang
-            title
-            author
-            date
-            description
-            tags {
-              label
-              value
-            }
-            featuredImage {
-              childImageSharp {
-                # Specify the image processing specifications right in the query.
-                # Makes it trivial to update as your page's design changes.
-                fixed(width: 240, height: 160) {
-                  ...GatsbyImageSharpFixed
-                }
-              }
-            }
-          }
-        }
-      }
-    `
-  );
-
+export default function BlogList({ nodes }) {
   return (
     <section>
       <ul className="o-list-bare">
@@ -69,7 +35,9 @@ export default function BlogList() {
                 </Link>
                 <ul>
                   {post.tags.map(tag => (
-                    <li key={tag.value}>{tag.label}</li>
+                    <li key={tag.value}>
+                      <LinkToTag slug={tag.value}>{tag.label}</LinkToTag>
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -80,3 +48,27 @@ export default function BlogList() {
     </section>
   );
 }
+
+export const blogPostItem = graphql`
+  fragment BlogPostItem on PostsYaml {
+    slug
+    lang
+    title
+    author
+    date
+    description
+    tags {
+      label
+      value
+    }
+    featuredImage {
+      childImageSharp {
+        # Specify the image processing specifications right in the query.
+        # Makes it trivial to update as your page's design changes.
+        fixed(width: 240, height: 160) {
+          ...GatsbyImageSharpFixed
+        }
+      }
+    }
+  }
+`;

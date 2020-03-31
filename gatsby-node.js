@@ -117,6 +117,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
           lang
           tags {
             value
+            label
           }
         }
       }
@@ -146,7 +147,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   let tags = [];
   posts.forEach(post => {
-    post.tags.forEach(tag => tags.push(tag.value));
+    post.tags.forEach(tag => tags.push(tag));
     createPage({
       component: blogTemplate,
       path: `${locales[post.lang].path}/blog/${post.slug}`,
@@ -156,14 +157,18 @@ module.exports.createPages = async ({ graphql, actions }) => {
       }
     });
   });
-  _.uniq(tags).forEach(tag => {
+  const values = tags.map(t => t.value);
+
+  _.uniq(values).forEach(slug => {
+    const tag = tags.find(t => t.value === slug);
     Object.keys(locales).map(lang => {
       createPage({
         component: blogTagTemplate,
-        path: `${locales[lang].path}/tags/${tag}`,
+        path: `${locales[lang].path}/tags/${slug}`,
         context: {
-          tag,
-          lang
+          tag: slug,
+          lang,
+          title: tag.label
         }
       });
     });
