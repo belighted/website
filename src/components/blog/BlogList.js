@@ -3,7 +3,6 @@ import { graphql, Link } from "gatsby";
 import locales from "../../constants/locales";
 import Img from "gatsby-image";
 import moment from "moment";
-import LinkToTag from "./LinkToTag";
 import BlogpostTags from "./components/BlogpostTags";
 import LinkToBlog from "./LinkToBlog";
 
