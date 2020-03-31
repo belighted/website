@@ -1,22 +1,32 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
-import CasesList from "../components/cases/CasesList";
 import { SectionHeader } from "../components/sections";
+import ClientsCasesList from "../components/cases/ClientCasesList";
+import { graphql } from "gatsby";
 
-const ClientsPage = ({ pageContext }) => {
+const ClientsPage = ({
+  pageContext,
+  data: {
+    contentYaml: { title, body }
+  }
+}) => {
   return (
     <Layout context={pageContext} page={"clients"}>
       <div className="o-wrapper c-section">
-        <SectionHeader
-          title={"Clients"}
-          body={
-            "Leading brands in Belgium and in Europe trust us and rely on Belighted development to deliver perfection every day."
-          }
-        ></SectionHeader>
-        <CasesList />
+        <SectionHeader title={title} body={body} />
+        <ClientsCasesList />
       </div>
     </Layout>
   );
 };
 
 export default ClientsPage;
+
+export const query = graphql`
+  {
+    contentYaml(slug: { eq: "clients" }) {
+      title
+      body
+    }
+  }
+`;
