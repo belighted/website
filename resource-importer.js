@@ -40,12 +40,11 @@ const options = {
   ]
 };
 
-const getUrls = async () => {
-  const { data } = await axios.get("https://www.belighted.com/sitemap.xml");
-  const {
-    urlset: { url: urlsets }
-  } = await xml2js.parseStringPromise(data);
-  return urlsets.map(set => set.loc.shift());
+const getUrls = async url => {
+  const { data } = await axios.get(url);
+  const dom = new JSDOM(data);
+  const links = dom.window.document.querySelectorAll(".content-card a");
+  return Array.from(links).map(element => element.getAttribute("href"));
 };
 
 const getArticles = async urls => {
@@ -116,8 +115,12 @@ const writeFiles = async articles => {
 };
 
 const init = async () => {
-  const urls = await getUrls();
-  const rawArticles = await getArticles(urls);
+  const urls = await Promise.all([
+    await getUrls("https://www.belighted.com/resources"),
+    await getUrls("https://www.belighted.com/fr/ressources")
+  ]);
+
+  const rawArticles = await getArticles([].concat(...urls));
   const articles = await extractMeta(rawArticles);
   await writeFiles(articles);
   console.log("done writing");
