@@ -4,22 +4,30 @@ import Layout from "../components/layout/Layout";
 import moment from "moment";
 import BlogpostTags from "../components/blog/components/BlogpostTags";
 import LocalizedLink from "../components/links/LocalizedLink";
+import TagList from "../components/blog/TagList";
 
 //TODO I18n The belighted blog
 
 const BlogArticle = ({ data: { postsYaml: post }, pageContext }) => (
   <Layout context={pageContext} page={"blog"}>
-    <article className="o-wrapper">
-      <LocalizedLink route={"blog"}>The belighted blog</LocalizedLink>
+    <div className="o-wrapper">
+      <div className="l-text-and-list">
+        <article className="l-text-and-list__text">
+          <LocalizedLink route={"blog"}>The belighted blog</LocalizedLink>
 
-      <h1 className="c-heading c-heading--2">{post.title}</h1>
-      <p className="c-body c-body--3">
-        <strong>{post.author}</strong>&nbsp;
-        <span>on {moment(post.date).format("DD MMMM YYYY")}</span>
-      </p>
-      <div dangerouslySetInnerHTML={{ __html: post.body }}></div>
-      <BlogpostTags post={post} />
-    </article>
+          <h1 className="c-heading c-heading--2">{post.title}</h1>
+          <p className="c-body c-body--3">
+            <strong>{post.author}</strong>&nbsp;
+            <span>on {moment(post.date).format("DD MMMM YYYY")}</span>
+          </p>
+          <div dangerouslySetInnerHTML={{ __html: post.body }}></div>
+          <BlogpostTags post={post} />
+        </article>
+        <aside className="l-text-and-list__list">
+          <TagList />
+        </aside>
+      </div>
+    </div>
   </Layout>
 );
 
