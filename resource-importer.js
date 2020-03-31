@@ -1,66 +1,128 @@
-const fs = require("fs")
-const YAML = require("json-to-pretty-yaml")
+const fs = require("fs");
+const YAML = require("json-to-pretty-yaml");
+const axios = require("axios");
+const xml2js = require("xml2js");
+const sanitizeHtml = require("sanitize-html");
+const jsdom = require("jsdom");
+const { JSDOM } = jsdom;
 
-const data = [
-  {
-    slug: "power_checklist_resources_2",
-    title: "How to build an outstanding software product?",
-    cta: "Download now →",
-  },
-  {
-    slug: "SaaS-download",
-    title: "Everything You Need to Know About Moving to a SaaS Model",
-    cta: "Download now →",
-  },
-  {
-    slug: "MVP-development",
-    title: "Why you should Outsource MVP Development?",
-    cta: "Download now →",
-  },
-  {
-    slug: "consultation_call_resources",
-    title: "Receive a 20-Minute Product Development Assessment",
-    cta: "Book your risk free call →",
-  },
-  {
-    slug: "code_review_resources",
-    title: "Code Review Audit",
-    cta: "Learn More →",
-  },
-  {
-    slug: "UX_audit_resources",
-    title: "User Experience Audit",
-    cta: "Learn More →",
-  },
-  {
-    slug: "user_testing_resources",
-    title: "User Testing Package",
-    cta: "Learn More →",
-  },
-  {
-    slug: "strategy_workshop_resources",
-    title: "Strategy Workshop / Product Roadmap",
-    cta: "Get your product roadmap →",
-  },
-  {
-    slug: "design_sprint_resources",
-    title: "Design Sprint / Clickable Prototype",
-    cta: "Get your prototype →",
-  },
-]
+const options = {
+  allowedTags: [
+    "h2",
+    "h3",
+    "h4",
+    "h5",
+    "h6",
+    "blockquote",
+    "p",
+    "a",
+    "ul",
+    "ol",
+    "nl",
+    "li",
+    "b",
+    "i",
+    "strong",
+    "em",
+    "strike",
+    "code",
+    "hr",
+    "br",
+    "table",
+    "thead",
+    "caption",
+    "tbody",
+    "tr",
+    "th",
+    "td",
+    "pre",
+    "iframe"
+  ]
+};
 
-;[{ path: "", value: "en" }, { path: "fr/", value: "fr" }].forEach(lang => {
-  data.forEach(data => {
-    const path = `${__dirname}/content/resources/${data.slug}.${lang.value}.yml`
+const getUrls = async () => {
+  const { data } = await axios.get("https://www.belighted.com/sitemap.xml");
+  const {
+    urlset: { url: urlsets }
+  } = await xml2js.parseStringPromise(data);
+  return urlsets.map(set => set.loc.shift());
+};
 
+const getArticles = async urls => {
+  return Promise.all(
+    urls
+      .filter(u => u.includes("/resources/"))
+      .map(
+        u =>
+          new Promise(async (resolve, reject) => {
+            const slug = u
+              .replace("/fr", "")
+              .replace("https://www.belighted.com/resources/", "");
+            console.log("reading ", slug);
 
-    const content = YAML.stringify({lang: lang.value, ...data});
-    console.log(content);
+            const { data } = await axios.get(u);
+            resolve({
+              slug,
+              originalPath: u,
+              originalHtml: data
+            });
+          })
+      )
+  );
+};
 
-    fs.writeFile(path.toLowerCase(), content, function (err) {
-      if (err) return console.log(err);
-      console.log("created", path);
-    });
+const extractMeta = async articles => {
+  return articles.map(post => {
+    const dom = new JSDOM(post.originalHtml);
 
-  })
-})
+    let scripts = dom.window.document.querySelectorAll("script");
+    scripts.forEach(script => script.remove());
+
+    return {
+      slug: post.slug,
+      originalPath: post.originalPath,
+      title: dom.window.document.querySelector("h1").textContent,
+      body: sanitizeHtml(
+        dom.window.document.querySelector("div.span8:nth-child(1)").innerHTML,
+        options
+      ),
+      image: sanitizeHtml(
+        dom.window.document.querySelector(".widget-type-linked_image")
+          .innerHTML,
+        options
+      )
+    };
+  });
+};
+
+const writeFiles = async articles => {
+  console.log("writing", articles.length);
+
+  return Promise.all(
+    articles.map(article => {
+      const lang = article.originalPath.includes("/fr") ? "fr" : "en";
+      const path = `${__dirname}/content/resources/${article.slug}.${lang}.yml`;
+      const content = YAML.stringify({ lang, ...article });
+
+      return new Promise((resolve, reject) => {
+        fs.writeFile(path.toLowerCase(), content, function(err) {
+          if (err) return reject(err);
+          console.log("created", path);
+          resolve(path);
+        });
+      });
+    })
+  );
+};
+
+const init = async () => {
+  const urls = await getUrls();
+  const rawArticles = await getArticles(urls);
+  const articles = await extractMeta(rawArticles);
+  await writeFiles(articles);
+  console.log("done writing");
+};
+
+init()
+  .then(() => console.log("done"))
+  .catch(e => console.error(e));
