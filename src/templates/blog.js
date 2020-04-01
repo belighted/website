@@ -20,7 +20,10 @@ const BlogArticle = ({ data: { postsYaml: post }, pageContext }) => (
             <strong>{post.author}</strong>&nbsp;
             <span>on {moment(post.date).format("DD MMMM YYYY")}</span>
           </p>
-          <div dangerouslySetInnerHTML={{ __html: post.body }}></div>
+          <div
+            className="c-wysiwyg"
+            dangerouslySetInnerHTML={{ __html: post.body }}
+          />
           <BlogpostTags post={post} />
         </article>
         <aside className="l-text-and-list__list">

@@ -11,7 +11,7 @@ const ServicePage = ({ data: { resourcesYaml: post }, pageContext }) => (
           post.sections.map(section => (
             <div className={"c-section"}>
               <div
-                className={"o-wrapper"}
+                className="o-wrapper c-wysiwyg"
                 dangerouslySetInnerHTML={{ __html: section }}
               />
             </div>

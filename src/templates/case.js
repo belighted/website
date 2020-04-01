@@ -22,10 +22,19 @@ const CaseArticle = ({
     <article className="o-wrapper">
       <LocalizedLink route={"/clients"}>See all cases</LocalizedLink>
       <h2>{post.title}</h2>
-      <div dangerouslySetInnerHTML={{ __html: post.about }}></div>
+      <div
+        className="c-wysiwyg"
+        dangerouslySetInnerHTML={{ __html: post.about }}
+      ></div>
       <div className="l-grid l-grid--2cols">
-        <div dangerouslySetInnerHTML={{ __html: post.problem }}></div>
-        <div dangerouslySetInnerHTML={{ __html: post.goals }}></div>
+        <div
+          className="c-wysiwyg"
+          dangerouslySetInnerHTML={{ __html: post.problem }}
+        ></div>
+        <div
+          className="c-wysiwyg"
+          dangerouslySetInnerHTML={{ __html: post.goals }}
+        ></div>
       </div>
       {testimonial && (
         <section className="c-section">
@@ -35,8 +44,14 @@ const CaseArticle = ({
           </div>
         </section>
       )}
-      <div dangerouslySetInnerHTML={{ __html: post.challenges }}></div>
-      <div dangerouslySetInnerHTML={{ __html: post.results }}></div>
+      <div
+        className="c-wysiwyg"
+        dangerouslySetInnerHTML={{ __html: post.challenges }}
+      ></div>
+      <div
+        className="c-wysiwyg"
+        dangerouslySetInnerHTML={{ __html: post.results }}
+      ></div>
     </article>
   </Layout>
 );

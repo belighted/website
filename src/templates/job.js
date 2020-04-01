@@ -21,7 +21,7 @@ const ServicePage = ({
         <h1 className="c-heading c-heading--title c-heading--1">{title}</h1>
         <div className="l-text-and-list">
           <div
-            className="l-text-and-list__text"
+            className="l-text-and-list__text c-wysiwyg"
             dangerouslySetInnerHTML={{ __html: html }}
           />
           <div className="l-text-and-list__list">
