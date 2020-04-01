@@ -9,5 +9,5 @@ services:
   - product_design
   - design_sprint
   - prototyping
-  - ux_audit
+  - ux-review
   - user_testing
