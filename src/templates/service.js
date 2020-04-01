@@ -36,7 +36,7 @@ const ServicePage = ({
 
       {post.sections &&
         post.sections.map(section => (
-          <div className={"c-section"}>
+          <div className={"c-section"} key={section}>
             <div
               className="o-wrapper c-wysiwyg"
               dangerouslySetInnerHTML={{ __html: section }}

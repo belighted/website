@@ -101,6 +101,14 @@ module.exports = {
         defaultQuality: 75
       }
     },
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: `${__dirname}/assets`
+        }
+      }
+    },
     `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-transformer-remark",

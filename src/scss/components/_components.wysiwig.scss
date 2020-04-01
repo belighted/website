@@ -5,6 +5,7 @@
  * Styles for wysisyg content
 */
 .c-wysiwyg {
+  @include inuit-font-size($inuit-font-size-body-2);
   h2,
   h3,
   h4,

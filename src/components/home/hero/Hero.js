@@ -58,7 +58,7 @@ const HomeHero = () => {
         <h1 className="c-heading c-heading--1 c-heading--title">{slide.title}</h1>
         <p className={"c-body c-body--3"}>{slide.body}</p>
         {slide.buttons.map(button => (
-          <p>
+          <p key={button.title}>
             <Button modifier={button.modifier}>{button.title}</Button>
           </p>
         ))}

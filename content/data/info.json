@@ -2,12 +2,35 @@
   "description": "belighted.com",
   "cta": "A CTA",
   "contact": {
-    "email": "info@forestry.io",
-    "twitter_handle": "belighted",
-    "github_handle": "belighted",
+    "email": "info@belighted.com",
+    "social": [
+      {
+        "link": "https://twitter.com/belighted",
+        "icon": "twitter"
+      },
+      {
+        "link": "https://www.belighted.com/blog/rss.xml",
+        "icon": "rss"
+      },
+      { "icon": "facebook", "link": "https://www.facebook.com/belighted/" },
+      { "link": "https://github.com/belighted", "icon": "github" },
+      {
+        "link": "https://www.linkedin.com/company/belighted/",
+        "icon": "linkedin"
+      },
+      {
+        "link": "https://www.instagram.com/belightedweb/",
+        "icon": "instagram"
+      },
+      {
+        "link": "https://www.youtube.com/channel/UCrSFgW5tYA3OylRx2njUFRA",
+        "icon": "youtube"
+      }
+    ],
+
     "address": {
-      "street" : "Place de l'université 25",
-      "city" : "1348 Louvain-la-Neuve"
+      "street": "Place de l'université 25",
+      "city": "1348 Louvain-la-Neuve"
     }
   },
   "background_color": "#B1BCBC"
