@@ -7,7 +7,7 @@ services:
   - market_study
   - product_strategy
   - product_design
-  - design_sprint
+  - design-sprint
   - prototyping
   - ux-review
-  - user_testing
+  - user-testing

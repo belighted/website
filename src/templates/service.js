@@ -1,7 +1,6 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
-import DevNote from "../components/dev/DevNote";
 import LinkToService from "../components/services/LinkToService";
 
 const RelatedCategory = ({ category, services, service }) => (
@@ -33,8 +32,18 @@ const ServicePage = ({
     <article className="o-wrapper">
       <section className="c-section">
         <h2>{post.title}</h2>
-        <DevNote>Description of {post.slug}</DevNote>
       </section>
+
+      {post.sections &&
+        post.sections.map(section => (
+          <div className={"c-section"}>
+            <div
+              className={"o-wrapper"}
+              dangerouslySetInnerHTML={{ __html: section }}
+            />
+          </div>
+        ))}
+
       {category && (
         <RelatedCategory
           category={category}
@@ -51,6 +60,7 @@ export const query = graphql`
     servicesYaml(slug: { eq: $slug }) {
       slug
       title
+      sections
     }
     categoriesYaml(services: { in: [$slug] }) {
       title
