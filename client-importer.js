@@ -108,34 +108,35 @@ const extractMeta = async articles => {
         )
         .getAttribute("src"),
       about: sanitizeHtml(
-        dom.window.document.querySelector(".md-centered > div:nth-child(1)").innerHTML,
+        dom.window.document.querySelector(".md-centered > div:nth-child(1)")
+          .innerHTML,
         options
-      ),
+      ).replace(/\\n/, ""),
       problem: sanitizeHtml(
         dom.window.document.querySelector(
           ".ptb0 > div:nth-child(1) > div:nth-child(1) > div:nth-child(1)"
         ).innerHTML,
         options
-      ),
+      ).replace(/\\n/, ""),
       goals: sanitizeHtml(
         dom.window.document.querySelector(
           ".ptb0 > div:nth-child(1) > div:nth-child(1) > div:nth-child(2)"
         ).innerHTML,
         options
-      ),
+      ).replace(/\\n/, ""),
 
       challenges: sanitizeHtml(
         dom.window.document.querySelector(
           "div.row-number-7:nth-child(1) > div:nth-child(1)"
         ).innerHTML,
         options
-      ),
+      ).replace(/\\n/, ""),
       results: sanitizeHtml(
         dom.window.document.querySelector(
           ".row-number-11 > div:nth-child(1) > div:nth-child(1)"
         ).innerHTML,
         options
-      )
+      ).replace(/\\n/, "")
     };
   });
 };

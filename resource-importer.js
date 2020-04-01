@@ -43,34 +43,37 @@ const options = {
 const getUrls = async url => {
   const { data } = await axios.get(url);
   const dom = new JSDOM(data);
-  const links = dom.window.document.querySelectorAll(".content-card a");
-  return Array.from(links).map(element => element.getAttribute("href"));
+  const links = dom.window.document.querySelectorAll(".content-card-link a");
+  return Array.from(links).map(element => {
+    const url = element.getAttribute("href");
+    return url.replace(/\?.*/g, "");
+  });
 };
 
 const getArticles = async urls => {
   return Promise.all(
-    urls
-      .filter(u => u.includes("/resources/"))
-      .map(
-        u =>
-          new Promise(async (resolve, reject) => {
-            const slug = u
-              .replace("/fr", "")
-              .replace("https://www.belighted.com/resources/", "");
-            console.log("reading ", slug);
+    urls.map(u => {
+      return new Promise(async (resolve, reject) => {
+        const slug = u
+          .replace("/fr", "")
+          .replace("resources/", "")
+          .replace("https://www.belighted.com/", "");
 
-            const { data } = await axios.get(u);
-            resolve({
-              slug,
-              originalPath: u,
-              originalHtml: data
-            });
-          })
-      )
+        console.log("reading ", slug);
+
+        const { data } = await axios.get(u);
+        resolve({
+          slug,
+          type: u.includes("/resources/") ? "resources" : "services",
+          originalPath: u,
+          originalHtml: data
+        });
+      });
+    })
   );
 };
 
-const extractMeta = async articles => {
+const extractResourcesMeta = async articles => {
   return articles.map(post => {
     const dom = new JSDOM(post.originalHtml);
 
@@ -78,17 +81,38 @@ const extractMeta = async articles => {
     scripts.forEach(script => script.remove());
 
     return {
+      type: "resources",
       slug: post.slug,
       originalPath: post.originalPath,
       title: dom.window.document.querySelector("h1").textContent,
       body: sanitizeHtml(
         dom.window.document.querySelector("div.span8:nth-child(1)").innerHTML,
         options
-      ),
+      ).replace(/\\n/gm, "").trim(),
       image: sanitizeHtml(
         dom.window.document.querySelector(".widget-type-linked_image")
           .innerHTML,
         options
+      )
+    };
+  });
+};
+
+const extractServicesMeta = async articles => {
+  return articles.map(post => {
+    const dom = new JSDOM(post.originalHtml);
+
+    return {
+      type: "services",
+      slug: post.slug,
+      originalPath: post.originalPath,
+      title: dom.window.document.querySelector("h1").textContent,
+      sections: Array.from(
+        dom.window.document.querySelectorAll(
+          ".body-container > .row-fluid-wrapper"
+        )
+      ).map(element =>
+        sanitizeHtml(element.innerHTML, options).replace(/\\n/gm, "").trim()
       )
     };
   });
@@ -100,7 +124,7 @@ const writeFiles = async articles => {
   return Promise.all(
     articles.map(article => {
       const lang = article.originalPath.includes("/fr") ? "fr" : "en";
-      const path = `${__dirname}/content/resources/${article.slug}.${lang}.yml`;
+      const path = `${__dirname}/content/${article.type}/${article.slug}.${lang}.yml`;
       const content = YAML.stringify({ lang, ...article });
 
       return new Promise((resolve, reject) => {
@@ -121,8 +145,13 @@ const init = async () => {
   ]);
 
   const rawArticles = await getArticles([].concat(...urls));
-  const articles = await extractMeta(rawArticles);
-  await writeFiles(articles);
+  const resources = await extractResourcesMeta(
+    rawArticles.filter(a => a.type === "resources")
+  );
+  const services = await extractServicesMeta(
+    rawArticles.filter(a => a.type === "services")
+  );
+  await writeFiles([...services, ...resources]);
   console.log("done writing");
 };
 
