@@ -1,10 +1,12 @@
 const fs = require("fs");
 const YAML = require("json-to-pretty-yaml");
 const axios = require("axios");
-const xml2js = require("xml2js");
+
 const sanitizeHtml = require("sanitize-html");
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
+const uuid = require("uuid");
+const { v4: uuidv4 } = uuid;
 
 const options = {
   allowedTags: [
@@ -88,7 +90,9 @@ const extractResourcesMeta = async articles => {
       body: sanitizeHtml(
         dom.window.document.querySelector("div.span8:nth-child(1)").innerHTML,
         options
-      ).replace(/\\n/gm, "").trim(),
+      )
+        .replace(/\\n/gm, "")
+        .trim(),
       image: sanitizeHtml(
         dom.window.document.querySelector(".widget-type-linked_image")
           .innerHTML,
@@ -111,9 +115,21 @@ const extractServicesMeta = async articles => {
         dom.window.document.querySelectorAll(
           ".body-container > .row-fluid-wrapper"
         )
-      ).map(element =>
-        sanitizeHtml(element.innerHTML, options).replace(/\\n/gm, "").trim()
-      )
+      ).map(element => {
+        const text = sanitizeHtml(element.innerHTML, options)
+          .replace(/\\n/gm, "")
+          .trim();
+        const title = Array.from(text.matchAll(/(?:<h2>)(.*)(?:<\/h2>)/gim));
+        const subtitle = Array.from(text.matchAll(/(?:<h3>)(.*)(?:<\/h3>)/gim));
+        const body = text.replace(/<h[2-3]>.*<\/h[2-3]>/gim, "");
+        return {
+          id: uuidv4(),
+          type: "default",
+          title,
+          subtitle,
+          body
+        };
+      })
     };
   });
 };

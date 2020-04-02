@@ -44,6 +44,7 @@
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
     "sanitize-html": "^1.22.1",
+    "uuid": "^7.0.3",
     "xml2js": "^0.4.23"
   },
   "devDependencies": {
