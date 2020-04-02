@@ -119,15 +119,23 @@ const extractServicesMeta = async articles => {
         const text = sanitizeHtml(element.innerHTML, options)
           .replace(/\\n/gm, "")
           .trim();
-        const title = Array.from(text.matchAll(/(?:<h2>)(.*)(?:<\/h2>)/gim));
-        const subtitle = Array.from(text.matchAll(/(?:<h3>)(.*)(?:<\/h3>)/gim));
-        const body = text.replace(/<h[2-3]>.*<\/h[2-3]>/gim, "");
+        const titles = Array.from(
+          text.matchAll(/(?:<h2>)(.*)(?:<\/h2>)/gim)
+        )[0];
+        const subtitles = Array.from(
+          text.matchAll(/(?:<h3>)(.*)(?:<\/h3>)/gim)
+        )[0];
+        const title = titles && titles.length > 1 ? titles[1] : null;
+        const subtitle =
+          subtitles && subtitles.length > 1 ? subtitles[1] : null;
+        const body = text.replace(/<h[2-3]>.*<\/h[2-3]>/gim, "").trim();
         return {
           id: uuidv4(),
           type: "default",
-          title,
+          image: null,
+          title: !title && !subtitle ? body : title,
           subtitle,
-          body
+          body: !title && !subtitle ? null : body
         };
       })
     };
