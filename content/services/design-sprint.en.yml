@@ -3,112 +3,123 @@ type: "services"
 slug: "design-sprint"
 originalPath: "https://www.belighted.com/design-sprint"
 title: "Design Sprint"
-sections:
-  - id: "95a0b7ec-bd3d-4d8b-bfc8-95a4794da17f"
-    type: "hero"
-    image: null
-    title: "Design Sprint\n\n\n\n\n\n\n\n\n\n<p>We offer an innovative design sprint service: an intense five-day project where we focus on turning your idea into a <strong>clickable prototype - in just one week.</strong></p>\n\n\n\n\n\n\n\n\n\n<a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/4c58ef80-4a42-41b4-be1c-00abb678a1f3\"></a>"
-    subtitle: null
-    body: null
-  - id: "cc2db110-9d3d-45d8-b1b6-893e5f9f7750"
-    type: "hero"
-    image: null
-    title: "Our Design Sprint has been tested &amp; approved by :"
-    subtitle: null
-    body: null
-  - id: "05f38ce2-4f85-4710-a81d-0bc499758792"
+slices:
+  - id: "bd871e15-90e0-433c-98b9-eb43c2f2a815"
     type: "default"
     image: null
-    title: "<br />Why a design sprint ?"
+    title: "Design Sprint"
+    subtitle: null
+    body: "We offer an innovative design sprint service: an intense five-day project where we focus on turning your idea into a <strong>clickable prototype - in just one week.</strong>"
+  - id: "56726c18-83c9-42fa-91d9-0ecbbda834f6"
+    type: "list"
+    image: null
+    title: "Our Design Sprint has been tested & approved by :"
+    subtitle: null
+    body: null
+  - id: "d42afbe4-eb34-4a18-871a-b096b6ec2f57"
+    type: "default"
+    image: null
+    title: "Why a design sprint ?"
     subtitle: "From idea to reality"
-    body: "<p>With a product roadmap in your hands thanks to our Strategy Workshop, it's now time to design your product, prototype it and test it. We will build it together in only one week.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p>This is an essential first step towards developing the finished version of your product. Our design sprint service is structured with the non-technical entrepreneur in mind. </p>\n\n\n\n\n\n\n\n\n\n\n\n\n    \n        \n            \n        \n    \n    \n        \n            \n            \n                \n                    <i></i>\n                \n                \n                    Get Started\n                \n                \n                    Really Fast\n                \n            \n        \n    \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p>Working with our expert team of product strategists and designers, you will explore the problem underpinning your product idea, to ensure your initial prototype is aligned with the problem you're trying to solve for your future customers.</p>"
-  - id: "62e556af-4d90-4777-85b0-94ca5c45929b"
-    type: "default"
+    body: "<p>With a product roadmap in your hands thanks to our Strategy Workshop, it's now time to design your product, prototype it and test it. We will build it together in only one week.</p><p>This is an essential first step towards developing the finished version of your product. Our design sprint service is structured with the non-technical entrepreneur in mind. </p><p>Get Started</p><p>Really Fast<p>Working with our expert team of product strategists and designers, you will explore the problem underpinning your product idea, to ensure your initial prototype is aligned with the problem you're trying to solve for your future customers.</p>"
+  - id: "efde35b4-6e9e-48ba-ac98-39866f392416"
+    type: "title"
     image: null
     title: "Get your prototype in 5 days."
     subtitle: null
     body: ""
-  - id: "12416b1c-61b3-45f8-9738-52813a5462a4"
+  - id: "e1940b06-9646-40e5-ba0f-8696ecb51820"
     type: "default"
     image: null
     title: "Why not jumping straight into coding ?"
     subtitle: null
     body: "<p>We have developed our <strong>design sprint to go from product idea to prototype to testing it with real users</strong> in just five days. At the end of the week you can already expect your non-functional clickable prototype ready for further validation with your target market to guide the development of your future application.</p>"
-  - id: "1353a9e7-6ba7-40a3-9097-1f24803fd901"
+  - id: "8624fd3e-d8c9-4b59-bf6f-69d637b45a20"
     type: "default"
     image: null
     title: "Is it for you? Expect..."
     subtitle: null
     body: "<ul>\n<li>User-focused design and development process.</li>\n<li>Accelerated early product development, reducing the risk of your competitors beating you to market.</li>\n<li>Building a clickable prototype in just 5 days.</li>\n<li>Maximising your opportunity for learning and idea validation by getting your prototype tested by real users.</li>\n<li>Shaping the next stage of your product development, based on the feedback you get on your prototype.</li>\n</ul>"
-  - id: "2d20116b-5bc4-4eb4-81ce-5880a96cc985"
+  - id: "8cb0d3d1-f3cb-4b34-843e-3313985e7350"
     type: "default"
     image: null
     title: "Good to know! "
     subtitle: null
-    body: "<p>As we will build your prototype <strong>together</strong>, we expect from our clients to attend the first 3 days. If possible, attending the User Testing on Friday is recommended. If one person of your company can only attend one day, it should be on Monday when we tackle your problem and how we could solve it. <br /><br /><strong>The only prerequisite is to own a product roadmap.</strong> Otherwise, we can't jump into design yet. If you don't have one yet, don't worry, we can make one for you in what we call a <a href=\"/strategy-workshop?hsLang=en\">strategy workshop</a>.</p>"
-  - id: "370a627e-b10b-43e5-8b28-67caeb817230"
+    body: '<p>As we will build your prototype <strong>together</strong>, we expect from our clients to attend the first 3 days. If possible, attending the User Testing on Friday is recommended. If one person of your company can only attend one day, it should be on Monday when we tackle your problem and how we could solve it. <br /><br /><strong>The only prerequisite is to own a product roadmap.</strong> Otherwise, we can''t jump into design yet. If you don''t have one yet, don''t worry, we can make one for you in what we call a <a href="/strategy-workshop?hsLang=en">strategy workshop</a>.</p>'
+  - id: "9de1a421-bcee-4fad-a520-c2c768cabbcc"
     type: "default"
     image: null
     title: "Our process"
     subtitle: null
     body: "<p>Our <strong>5-day</strong> design sprints follow our <strong>own unique</strong> process, drawing on the <strong>methodology</strong> developed by Google Ventures and combining it with our experience of working with hundreds of software innovators. </p>"
-  - id: "a766cf44-7531-4a3c-a7a6-fc076430f904"
+  - id: "a8ff68ab-b880-4285-8e2f-400c0672bf79"
     type: "default"
     image: null
     title: "Monday"
     subtitle: null
     body: "<p><strong>Understanding &amp; Mapping the Problem.</strong></p>\n<p>Our first objective is to truly understand the problem your idea will solve for its users. This first day is essential for helping us understand your customers' needs and ensure you're looking to solve a real problem for users.</p>"
-  - id: "6243154e-1b81-43b1-a017-b48b97af002b"
+  - id: "85029ef2-795c-489b-91cc-fb964d204549"
     type: "default"
     image: null
     title: "Tuesday"
     subtitle: null
     body: "<p><strong>Brainstorming Solutions by Sketching them on Paper.</strong></p>\n<p>You may think you've come up with a fantastic solution to your customers' problems - but will it really work, in practice? On day two we widen our focus to brainstorm as many potential solutions as possible to the problem your innovation is looking to solve.</p>"
-  - id: "e76aec0d-16f1-445e-a9fe-d93a2da3e85a"
+  - id: "5146f7d3-0d8e-47ad-aab1-07a795a01ffe"
     type: "default"
     image: null
     title: "Wednesday"
     subtitle: null
     body: "<p><strong>Identifying Core Functionalities &amp; Creating Mockups.</strong></p>\n<p>At this stage, we select the one solution that best solves the problem for your users. From there, we work to identify the core functionality that's required to test out this idea as a viable solution.</p>"
-  - id: "2bb972f4-c10d-43da-843b-5479618ca902"
+  - id: "2ca6ef04-c107-40ca-9d7a-a2cc253281e7"
     type: "default"
     image: null
     title: "Thursday"
     subtitle: null
     body: "<p><strong>Developing a Clickable Prototype &amp; User Testing Scenarios.</strong></p>\n<p>The fourth day is spent developing a clickable prototype of your software idea. This is where you see your idea really come to life for the first time, and turn from an idea on paper to a real product.</p>"
-  - id: "5ed98417-2d24-4015-a31e-f385abd0d796"
+  - id: "849ae317-a645-4ceb-a986-6dd88c583fdb"
     type: "default"
     image: null
     title: "Friday"
     subtitle: null
     body: "<p><strong>User Testing &amp; Gathering Feedback <br />with our UX Expert.</strong></p>\n<p>On the final day of the design sprint, we get real users to test-out your prototype. This means you start getting real, actionable feedback on your idea, just five days after starting the development process - and will help guide further product development by keeping development aligned with what your users really need from your innovation.</p>"
-  - id: "afb56525-1f07-44ae-aa5f-de881dec0dfb"
+  - id: "f4c161c3-1b72-48d7-ab85-887a186bc245"
     type: "default"
     image: null
     title: "The result is a non-functional clickable prototype "
     subtitle: null
     body: "<p>After only five days, you will have a clickable prototype that you can share with your target customers, to begin getting valuable feedback on your idea and start testing out the assumptions behind your innovation.</p>"
-  - id: "e4b041af-1e57-4d3c-89ac-cc5a931adf92"
+  - id: "18e3488c-fddc-43d0-97d4-27715c72df30"
     type: "default"
     image: null
     title: "Guaranteed Value"
     subtitle: null
-    body: "<p>Everything we'll share in our Design Sprint package is designed to offer standalone value to you, regardless of whether or not you decide to continue to work with us.<br /><br />Are you ready to kick-start product development with our 5-day design sprint? <strong>Click below to book your 20-Minute risk-free consultation call.</strong><br /><br /><a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/e94dc39d-84e8-4895-8f9b-f7e7bced2f5e\"></a><br /></p>"
-  - id: "e53fc245-65c9-4977-a485-0aae8ed39eda"
-    type: "hero"
-    image: null
-    title: ""
-    subtitle: null
-    body: null
-  - id: "f2aa3c7a-0a81-46d5-a0bb-1e4e9960a36d"
-    type: "default"
+    body: '<p>Everything we''ll share in our Design Sprint package is designed to offer standalone value to you, regardless of whether or not you decide to continue to work with us.<br /><br />Are you ready to kick-start product development with our 5-day design sprint? <strong>Click below to book your 20-Minute risk-free consultation call.</strong><br /><br /><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/e94dc39d-84e8-4895-8f9b-f7e7bced2f5e"></a><br /></p>'
+  - id: "8fb4593f-22a9-4bac-a876-13e4d41a5f22"
+    type: "testimonials"
     image: null
     title: "Customer Stories"
     subtitle: null
-    body: "<p>Hundreds of businesses trust us to create their app's prototype.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n    \n        “Belighted has enabled us to reduce our time to market on a few projects where we needed extra help. One of their developers supported by their product manager came and only 3 weeks later one project was already done. No time was wasted on onboarding, they were rapidly operational and a part of our agile scrum environment. Moreover, the value delivered in terms of product &amp; software development expertise was very much appreciated by our technical team.”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Olivier Simonis</strong><br />CEO, Qualifio</p>\n      \n    \n\n\n\n\n\n\n\n\n\n\n    \n    \n        “It's a real pleasure to work with Belighted. They are focused on delivering features with business value and they like to get stuff done. This vision allowed us to launch our products with just a couple of months of development and help us to get user feedback”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Antoine De Beys</strong><br />Co-founder, DeeCide</p>\n      \n    \n\n\n\n\n\n\n\n\n\n\n    \n    \n        “Product development best practices are evolving at such a fast pace that it was difficult for me to make decisions related to the software product and the technical skills needed. Belighted's advice brought me confidence and gave me clear steps that helped me maximize my chances of success.”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Vincent Leroy</strong><br />CEO, Neveo</p>\n      \n    \n\n\n\n\n\n\n\n\n\n\n    \n    \n        “We wanted to build a new version of our learning management software, and Belighted convinced us to do a design sprint together before jumping into development itself. This helped us make much more informed decisions on what we needed, and how best to do it. In the end, it allowed us to better prioritise our project, and prevented us from going in the wrong direction.”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Bertrand De Praetere</strong><br />COO, Dokeos</p>\n      \n    \n\n\n\n\n\n\n\n\n\n\n    \n    \n        “Working together, we were able to rapidly prototype and deploy a world-first insurance check-up algorithm. From the initial conceptualisation until the first live trials by users, it took us a rapid 3 months of close collaboration. Today Seraphin is still successfully using the same healthy technical foundations laid by Belighted.”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Xavier Lombard</strong><br />CEO, Seraphin</p>"
-  - id: "a5a244bb-968f-4245-8448-3cc503857934"
-    type: "default"
+    body: "Hundreds of businesses trust us to create their app's prototype."
+    list:
+      - quote: “Belighted has enabled us to reduce our time to market on a few projects where we needed extra help. One of their developers supported by their product manager came and only 3 weeks later one project was already done. No time was wasted on onboarding, they were rapidly operational and a part of our agile scrum environment. Moreover, the value delivered in terms of product &amp; software development expertise was very much appreciated by our technical team.”
+        author: Olivier Simonis
+        role: CEO
+        company: Qualifio
+      - quote : “It's a real pleasure to work with Belighted. They are focused on delivering features with business value and they like to get stuff done. This vision allowed us to launch our products with just a couple of months of development and help us to get user feedback”
+        author: Antoine De Beys
+        role: Co-founder
+        company: DeeCide
+      - quote: “Product development best practices are evolving at such a fast pace that it was difficult for me to make decisions related to the software product and the technical skills needed. Belighted's advice brought me confidence and gave me clear steps that helped me maximize my chances of success.”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Vincent Leroy</strong><br />CEO, Neveo</p>\n      \n    \n\n\n\n\n\n\n\n\n\n\n    \n    \n        “We wanted to build a new version of our learning management software, and Belighted convinced us to do a design sprint together before jumping into development itself. This helped us make much more informed decisions on what we needed, and how best to do it. In the end, it allowed us to better prioritise our project, and prevented us from going in the wrong direction.”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Bertrand De Praetere</strong><br />COO, Dokeos</p>\n      \n    \n\n\n\n\n\n\n\n\n\n\n    \n    \n        “Working together, we were able to rapidly prototype and deploy a world-first insurance check-up algorithm. From the initial conceptualisation until the first live trials by users, it took us a rapid 3 months of close collaboration. Today Seraphin is still successfully using the same healthy technical foundations laid by Belighted.”
+        author: Xavier Lombard
+        role: CEO
+        company: Seraphin
+  - id: "60ee717d-034c-438f-8f9e-edd5a2eba57c"
+    type: "links"
     image: null
     title: "About Software Product Design "
     subtitle: "Good to read."
-    body: ""
+    body: null
+    links:
+      - "/blog/ruby-on-rails"
+      - "/blog/why-strategy-workshop"
+      - "/blog/product-development-methodology"

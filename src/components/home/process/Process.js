@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionHeader } from "../../sections";
+import { SectionHeader } from "../../layout/Section";
 import ProcessesList from "../../processes/ProcessesList";
 
 const HomeProcess = ({ section: { title, body } }) => {

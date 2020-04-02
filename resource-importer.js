@@ -87,7 +87,7 @@ const extractResourcesMeta = async articles => {
       slug: post.slug,
       originalPath: post.originalPath,
       title: dom.window.document.querySelector("h1").textContent,
-      sections: [
+      slices: [
         {
           id: uuidv4(),
           title: null,
@@ -121,7 +121,7 @@ const extractServicesMeta = async articles => {
       slug: post.slug,
       originalPath: post.originalPath,
       title: dom.window.document.querySelector("h1").textContent,
-      sections: Array.from(
+      slices: Array.from(
         dom.window.document.querySelectorAll(
           ".body-container > .row-fluid-wrapper"
         )

@@ -3,86 +3,86 @@ type: "services"
 slug: "strategy-workshop"
 originalPath: "https://www.belighted.com/strategy-workshop"
 title: "Strategy Workshop"
-sections:
-  - id: "9d6a0aaf-5bb0-467e-9315-7e76e89205a9"
+slices:
+  - id: "a59bbb62-0623-44b8-a338-ff732ea5f5e8"
     type: "hero"
     image: null
     title: "Strategy Workshop\n\n\n\n\n\n\n\n\n\n<p>You're <strong>ready to take your idea or product to the next level</strong>. And you know the next steps are critical. But <strong>how do you know what the right next steps are ?</strong></p>\n\n\n\n\n\n\n\n\n\n<a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/4c58ef80-4a42-41b4-be1c-00abb678a1f3\"></a>"
     subtitle: null
     body: null
-  - id: "8da60aab-f91b-4446-831d-07890b9e456f"
+  - id: "a404759e-7adf-41df-9d77-a8f4d52e45d8"
     type: "hero"
     image: null
     title: "Our Strategy Workshop has been tested &amp; approved by :"
     subtitle: null
     body: null
-  - id: "c8d63618-905b-4d22-b0fc-a46d02161875"
+  - id: "0494be2e-1688-4c4a-9d58-a0d10d6e36e9"
     type: "default"
     image: null
     title: "<br />Why a strategy workshop ?"
     subtitle: "Business skills, only."
     body: "<p>Your first step is to lay the foundation with a roadmap for future product growth development. We do this with you in what we call a Strategy Workshop.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p>Our Strategy Workshop is designed with the non-technical founder in mind. We've worked with dozens of entrepreneurs on early product development.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n    \n        \n            \n        \n    \n    \n        \n            \n            \n                \n                    <i></i>\n                \n                \n                    Get Started\n                \n                \n                    Really Fast\n                \n            \n        \n    \n    \n        \n            <a href=\"https://www.belighted.com/product-development-consultation?hsLang=en\" target=\"_blank\"></a>\n        \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p>The result is a detailed action plan outlining the steps required <strong>to execute your product growth strategy.</strong></p>"
-  - id: "6fbd404c-47e5-4e09-be09-6aa4f87cdf91"
+  - id: "3bdead63-170e-47d7-ae4c-488eb90430be"
     type: "default"
     image: null
     title: null
     subtitle: "Do you have the right Product Strategy ? <a href=\"/product-development-consultation?hsLang=en\">Talk to us</a>"
     body: ""
-  - id: "49654714-9584-4383-a6eb-45d07eb4ed9e"
+  - id: "657d2fd3-371d-4048-b10a-ead59c046fb1"
     type: "default"
     image: null
     title: "What to expect ?"
     subtitle: null
     body: "<p>Our Strategy Workshop packs as much learning and analysis as possible into one full day. <br />You will work one-on-one with a Belighted senior product manager - in our offices or remotely - for 8 hours.</p>"
-  - id: "18123f8f-5562-4aef-a067-fbe237055895"
+  - id: "a4de4f60-3065-4063-9b96-f3b5579445a8"
     type: "default"
     image: null
     title: "How to be prepared ?"
     subtitle: null
     body: "<p>Be prepared to walk us through market needs, your ideas, and the problem your product solves.</p>\n<p>We expect you will have a business plan or a product vision document if you don’t already have a prototype or MVP.</p>\n<p>You should have already conducted your market research and have data on market needs, market size, competition, etc.</p>"
-  - id: "42c69525-e93f-4ca1-8f7c-796870691dc5"
+  - id: "f4ef5ec0-e2e2-460c-984e-8b2c3fe6dc68"
     type: "default"
     image: null
     title: "In the morning"
     subtitle: null
     body: "<p>We will begin by listening as you explain your project and market.</p>\n<ul>\n<li>Your business model and risks, how far along you are in market validation, who your competitors are, and so on ...</li>\n<li>Positioning of your product</li>\n<li>Decisions already made for the project</li>\n<li>Review of your spec document, mockups, or current working product</li>\n</ul>"
-  - id: "812241ed-7f5b-4179-aade-74f492263ccd"
+  - id: "bc8f68d8-f6a6-4d28-ab11-6aca589c906a"
     type: "default"
     image: null
     title: "In the afternoon"
     subtitle: null
     body: "<p>We lead you through topics like:</p>\n<ul>\n<li>Critical decisions and impact on your goals</li>\n<li>Technology options for various aspects of your product</li>\n<li>What your team looks like; resources you need</li>\n<li>Prioritization of efforts based on deadline and budget constraints</li>\n</ul>"
-  - id: "6e242748-ccb7-437f-bc8a-d8022c66f8a0"
+  - id: "62520ede-a35c-4765-9eab-c92375ba75c2"
     type: "default"
     image: null
     title: "What is the outcome ?"
     subtitle: null
     body: "<p>After our day together, we get to work strategy out the roadmap for your project.</p>\n<p>Within 5 business days after completing the workshop, you will have in hand a solid plan of action for the growth development of your new product – whether we will be building it for you or not.</p>"
-  - id: "797162cd-ce6c-4df8-a6cc-e0a9c21f21fc"
+  - id: "467798eb-7fa2-4a51-b2d2-a63e50223ce3"
     type: "default"
     image: null
     title: "What's included in your action plan ?"
     subtitle: null
     body: "<p>Your product roadmap may include:</p>\n<ul>\n<li>A planning proposition with milestones and expected features</li>\n<li>Goals and metrics</li>\n<li>Cost estimates</li>\n<li>Recommendations for next steps</li>\n<li>Technologies and providers, if not using Belighted</li>\n</ul>"
-  - id: "5399f29a-41e2-4e08-bfeb-22e04630b75e"
+  - id: "abd3d164-59b6-4000-b7cf-74f33bb19fae"
     type: "default"
     image: null
     title: "Guaranteed Value"
     subtitle: null
     body: "<p>Everything we'll share in our Strategy Workshop package is designed to offer standalone value to you, regardless of whether or not you decide to continue to work with us.<br /><br />Are you ready to make together a product roadmap with our 1-day strategy workshop? <strong>Click below to book your 20-Minute risk-free consultation call.</strong><br /><br /><a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/e94dc39d-84e8-4895-8f9b-f7e7bced2f5e\"></a></p>"
-  - id: "e9cf22a4-8f10-40cc-9fb3-2b43348253b5"
+  - id: "4eaaad49-f34b-4668-b80a-7f89ca8b23f9"
     type: "hero"
     image: null
     title: ""
     subtitle: null
     body: null
-  - id: "63b2ac2c-4a7a-43e9-a452-b0535da12a42"
+  - id: "776b9f88-ff8b-4444-bd96-49fdae306add"
     type: "default"
     image: null
     title: "Customer Stories"
     subtitle: null
     body: "<p>Hundreds of businesses trust us to make their product roadmap.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n    \n        “Belighted has enabled us to reduce our time to market on a few projects where we needed extra help. One of their developers supported by their product manager came and only 3 weeks later one project was already done. No time was wasted on onboarding, they were rapidly operational and a part of our agile scrum environment. Moreover, the value delivered in terms of product &amp; software development expertise was very much appreciated by our technical team.”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Olivier Simonis</strong><br />CEO, Qualifio</p>\n      \n    \n\n\n\n\n\n\n\n\n\n\n    \n    \n        “It's a real pleasure to work with Belighted. They are focused on delivering features with business value and they like to get stuff done. This vision allowed us to launch our products with just a couple of months of development and help us to get user feedback”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Antoine De Beys</strong><br />Co-founder, DeeCide</p>\n      \n    \n\n\n\n\n\n\n\n\n\n\n    \n    \n        “Product development best practices are evolving at such a fast pace that it was difficult for me to make decisions related to the software product and the technical skills needed. Belighted's advice brought me confidence and gave me clear steps that helped me maximize my chances of success.”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Vincent Leroy</strong><br />CEO, Neveo</p>\n      \n    \n\n\n\n\n\n\n\n\n\n\n    \n    \n        “We wanted to build a new version of our learning management software, and Belighted convinced us to do a design sprint together before jumping into development itself. This helped us make much more informed decisions on what we needed, and how best to do it. In the end, it allowed us to better prioritise our project, and prevented us from going in the wrong direction.”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Bertrand De Praetere</strong><br />COO, Dokeos</p>\n      \n    \n\n\n\n\n\n\n\n\n\n\n    \n    \n        “Working together, we were able to rapidly prototype and deploy a world-first insurance check-up algorithm. From the initial conceptualisation until the first live trials by users, it took us a rapid 3 months of close collaboration. Today Seraphin is still successfully using the same healthy technical foundations laid by Belighted.”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Xavier Lombard</strong><br />CEO, Seraphin</p>"
-  - id: "1f6934ee-a876-4711-ba20-cf584898c12a"
+  - id: "4bb80fe4-7e93-44d7-a5da-5b36eb594bd9"
     type: "default"
     image: null
     title: "More About Software <br />Product Strategy "

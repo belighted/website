@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionHeader } from "../../sections";
+import { SectionHeader } from "../../layout/Section";
 import JobsList from "../../jobs/JobsList";
 import { Link } from "gatsby";
 

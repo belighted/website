@@ -1,5 +1,5 @@
 import React from "react";
-import { SectionHeader } from "../components/sections";
+import { SectionHeader } from "../components/layout/Section";
 import Layout from "../components/layout/Layout";
 import { graphql, useStaticQuery } from "gatsby";
 import LintToJob from "../components/jobs/LinkToJob";

@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
-import { SectionHeader } from "../components/sections";
+import { SectionHeader } from "../components/layout/Section";
 import ClientsCasesList from "../components/cases/ClientCasesList";
 import { graphql } from "gatsby";
 

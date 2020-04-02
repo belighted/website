@@ -1,4 +1,4 @@
-import { SectionHeader } from "../../sections";
+import { SectionHeader } from "../../layout/Section";
 import CasesList from "../../cases/CasesList";
 import LocalizedLink from "../../links/LocalizedLink";
 import React from "react";

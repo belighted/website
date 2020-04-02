@@ -2,21 +2,24 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
 import LinkToService from "../components/services/LinkToService";
+import Slices from "../components/slices/Slices";
 
 const RelatedCategory = ({ category, services, service }) => (
   <section className="c-section">
-    <h3 className="c-section__header c-h3">
-      Discover our other services for {category.title}
-    </h3>
-    <ul>
-      {category.services
-        .filter(slug => slug !== service.slug)
-        .map(slug => (
-          <li key={slug}>
-            <LinkToService slug={slug}>{slug}</LinkToService>
-          </li>
-        ))}
-    </ul>
+    <div className="o-wrapper">
+      <h3 className="c-section__header c-h3">
+        Discover our other services for {category.title}
+      </h3>
+      <ul>
+        {category.services
+          .filter(slug => slug !== service.slug)
+          .map(slug => (
+            <li key={slug}>
+              <LinkToService slug={slug}>{slug}</LinkToService>
+            </li>
+          ))}
+      </ul>
+    </div>
   </section>
 );
 
@@ -29,20 +32,8 @@ const ServicePage = ({
   pageContext
 }) => (
   <Layout context={pageContext} page={"blog"}>
-    <article className="o-wrapper">
-      <section className="c-section">
-        <h2>{post.title}</h2>
-      </section>
-
-      {post.sections &&
-        post.sections.map(section => (
-          <div className={"c-section"} key={section}>
-            <div
-              className="o-wrapper c-wysiwyg"
-              dangerouslySetInnerHTML={{ __html: section }}
-            />
-          </div>
-        ))}
+    <article>
+      {post.slices && <Slices slices={post.slices} />}
 
       {category && (
         <RelatedCategory
@@ -60,7 +51,13 @@ export const query = graphql`
     servicesYaml(slug: { eq: $slug }) {
       slug
       title
-      sections
+      slices {
+        title
+        type
+        subtitle
+        id
+        body
+      }
     }
     categoriesYaml(services: { in: [$slug] }) {
       title

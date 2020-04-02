@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/layout/Layout";
 import CategoriesList from "../components/categories/CategoriesList";
 import BlogpostsList from "../components/blog/BlogpostsList";
-import { findSection, Section } from "../components/sections";
+import { findSection, Section } from "../components/layout/Section";
 import { graphql } from "gatsby";
 import Hero from "../components/home/hero/Hero";
 import HomeProcess from "../components/home/process/Process";

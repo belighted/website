@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
 import BlogList from "../components/blog/BlogList";
-import { SectionHeader } from "../components/sections";
+import { SectionHeader } from "../components/layout/Section";
 import { graphql } from "gatsby";
 
 const BlogPage = ({

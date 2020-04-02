@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
 import { graphql } from "gatsby";
-import { findSection, Section } from "../components/sections";
+import { findSection, Section } from "../components/layout/Section";
 import ProcessesList from "../components/processes/ProcessesList";
 import CategoriesList from "../components/categories/CategoriesList";
 import TechnologiesList from "../components/partials/technologies/TechnologiesList";

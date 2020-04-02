@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
 import ResourcesList from "../components/resources/ResourcesList";
-import { SectionHeader } from "../components/sections";
+import { SectionHeader } from "../components/layout/Section";
 
 const ResourcesPage = ({ pageContext }) => {
   return (
