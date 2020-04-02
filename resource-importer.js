@@ -87,12 +87,22 @@ const extractResourcesMeta = async articles => {
       slug: post.slug,
       originalPath: post.originalPath,
       title: dom.window.document.querySelector("h1").textContent,
-      body: sanitizeHtml(
-        dom.window.document.querySelector("div.span8:nth-child(1)").innerHTML,
-        options
-      )
-        .replace(/\\n/gm, "")
-        .trim(),
+      sections: [
+        {
+          id: uuidv4(),
+          title: null,
+          image: null,
+          subtitle: null,
+          type: "default",
+          body: sanitizeHtml(
+            dom.window.document.querySelector("div.span8:nth-child(1)")
+              .innerHTML,
+            options
+          )
+            .replace(/\\n/gm, "")
+            .trim()
+        }
+      ],
       image: sanitizeHtml(
         dom.window.document.querySelector(".widget-type-linked_image")
           .innerHTML,
