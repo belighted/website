@@ -40,7 +40,7 @@ slices:
     image: null
     title: "Is it for you? Expect..."
     subtitle: null
-    body: "<ul>\n<li>User-focused design and development process.</li>\n<li>Accelerated early product development, reducing the risk of your competitors beating you to market.</li>\n<li>Building a clickable prototype in just 5 days.</li>\n<li>Maximising your opportunity for learning and idea validation by getting your prototype tested by real users.</li>\n<li>Shaping the next stage of your product development, based on the feedback you get on your prototype.</li>\n</ul>"
+    body: "<ul><li>User-focused design and development process.</li><li>Accelerated early product development, reducing the risk of your competitors beating you to market.</li><li>Building a clickable prototype in just 5 days.</li><li>Maximising your opportunity for learning and idea validation by getting your prototype tested by real users.</li><li>Shaping the next stage of your product development, based on the feedback you get on your prototype.</li></ul>"
   - id: "8cb0d3d1-f3cb-4b34-843e-3313985e7350"
     type: "default"
     image: null
@@ -58,31 +58,31 @@ slices:
     image: null
     title: "Monday"
     subtitle: null
-    body: "<p><strong>Understanding &amp; Mapping the Problem.</strong></p>\n<p>Our first objective is to truly understand the problem your idea will solve for its users. This first day is essential for helping us understand your customers' needs and ensure you're looking to solve a real problem for users.</p>"
+    body: "<p><strong>Understanding &amp; Mapping the Problem.</strong></p><p>Our first objective is to truly understand the problem your idea will solve for its users. This first day is essential for helping us understand your customers' needs and ensure you're looking to solve a real problem for users.</p>"
   - id: "85029ef2-795c-489b-91cc-fb964d204549"
     type: "default"
     image: null
     title: "Tuesday"
     subtitle: null
-    body: "<p><strong>Brainstorming Solutions by Sketching them on Paper.</strong></p>\n<p>You may think you've come up with a fantastic solution to your customers' problems - but will it really work, in practice? On day two we widen our focus to brainstorm as many potential solutions as possible to the problem your innovation is looking to solve.</p>"
+    body: "<p><strong>Brainstorming Solutions by Sketching them on Paper.</strong></p><p>You may think you've come up with a fantastic solution to your customers' problems - but will it really work, in practice? On day two we widen our focus to brainstorm as many potential solutions as possible to the problem your innovation is looking to solve.</p>"
   - id: "5146f7d3-0d8e-47ad-aab1-07a795a01ffe"
     type: "default"
     image: null
     title: "Wednesday"
     subtitle: null
-    body: "<p><strong>Identifying Core Functionalities &amp; Creating Mockups.</strong></p>\n<p>At this stage, we select the one solution that best solves the problem for your users. From there, we work to identify the core functionality that's required to test out this idea as a viable solution.</p>"
+    body: "<p><strong>Identifying Core Functionalities &amp; Creating Mockups.</strong></p><p>At this stage, we select the one solution that best solves the problem for your users. From there, we work to identify the core functionality that's required to test out this idea as a viable solution.</p>"
   - id: "2ca6ef04-c107-40ca-9d7a-a2cc253281e7"
     type: "default"
     image: null
     title: "Thursday"
     subtitle: null
-    body: "<p><strong>Developing a Clickable Prototype &amp; User Testing Scenarios.</strong></p>\n<p>The fourth day is spent developing a clickable prototype of your software idea. This is where you see your idea really come to life for the first time, and turn from an idea on paper to a real product.</p>"
+    body: "<p><strong>Developing a Clickable Prototype &amp; User Testing Scenarios.</strong></p><p>The fourth day is spent developing a clickable prototype of your software idea. This is where you see your idea really come to life for the first time, and turn from an idea on paper to a real product.</p>"
   - id: "849ae317-a645-4ceb-a986-6dd88c583fdb"
     type: "default"
     image: null
     title: "Friday"
     subtitle: null
-    body: "<p><strong>User Testing &amp; Gathering Feedback <br />with our UX Expert.</strong></p>\n<p>On the final day of the design sprint, we get real users to test-out your prototype. This means you start getting real, actionable feedback on your idea, just five days after starting the development process - and will help guide further product development by keeping development aligned with what your users really need from your innovation.</p>"
+    body: "<p><strong>User Testing &amp; Gathering Feedback <br />with our UX Expert.</strong></p><p>On the final day of the design sprint, we get real users to test-out your prototype. This means you start getting real, actionable feedback on your idea, just five days after starting the development process - and will help guide further product development by keeping development aligned with what your users really need from your innovation.</p>"
   - id: "f4c161c3-1b72-48d7-ab85-887a186bc245"
     type: "default"
     image: null
@@ -110,7 +110,7 @@ slices:
         author: Antoine De Beys
         role: Co-founder
         company: DeeCide
-      - quote: “Product development best practices are evolving at such a fast pace that it was difficult for me to make decisions related to the software product and the technical skills needed. Belighted's advice brought me confidence and gave me clear steps that helped me maximize my chances of success.”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Vincent Leroy</strong><br />CEO, Neveo</p>\n      \n    \n\n\n\n\n\n\n\n\n\n\n    \n    \n        “We wanted to build a new version of our learning management software, and Belighted convinced us to do a design sprint together before jumping into development itself. This helped us make much more informed decisions on what we needed, and how best to do it. In the end, it allowed us to better prioritise our project, and prevented us from going in the wrong direction.”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Bertrand De Praetere</strong><br />COO, Dokeos</p>\n      \n    \n\n\n\n\n\n\n\n\n\n\n    \n    \n        “Working together, we were able to rapidly prototype and deploy a world-first insurance check-up algorithm. From the initial conceptualisation until the first live trials by users, it took us a rapid 3 months of close collaboration. Today Seraphin is still successfully using the same healthy technical foundations laid by Belighted.”
+      - quote: “Product development best practices are evolving at such a fast pace that it was difficult for me to make decisions related to the software product and the technical skills needed. Belighted's advice brought me confidence and gave me clear steps that helped me maximize my chances of success.”<p><strong>Vincent Leroy</strong><br />CEO, Neveo</p>“We wanted to build a new version of our learning management software, and Belighted convinced us to do a design sprint together before jumping into development itself. This helped us make much more informed decisions on what we needed, and how best to do it. In the end, it allowed us to better prioritise our project, and prevented us from going in the wrong direction.”<p><strong>Bertrand De Praetere</strong><br />COO, Dokeos</p>“Working together, we were able to rapidly prototype and deploy a world-first insurance check-up algorithm. From the initial conceptualisation until the first live trials by users, it took us a rapid 3 months of close collaboration. Today Seraphin is still successfully using the same healthy technical foundations laid by Belighted.”
         author: Xavier Lombard
         role: CEO
         company: Seraphin

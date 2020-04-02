@@ -7,7 +7,7 @@ slices:
   - id: "a59bbb62-0623-44b8-a338-ff732ea5f5e8"
     type: "hero"
     image: null
-    title: "Strategy Workshop<p>You're <strong>ready to take your idea or product to the next level</strong>. And you know the next steps are critical. But <strong>how do you know what the right next steps are ?</strong></p>\n\n\n\n\n\n\n\n\n\n<a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/4c58ef80-4a42-41b4-be1c-00abb678a1f3\"></a>"
+    title: "Strategy Workshop<p>You're <strong>ready to take your idea or product to the next level</strong>. And you know the next steps are critical. But <strong>how do you know what the right next steps are ?</strong></p><a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/4c58ef80-4a42-41b4-be1c-00abb678a1f3\"></a>"
     subtitle: null
     body: null
   - id: "a404759e-7adf-41df-9d77-a8f4d52e45d8"
@@ -21,7 +21,7 @@ slices:
     image: null
     title: "<br />Why a strategy workshop ?"
     subtitle: "Business skills, only."
-    body: "<p>Your first step is to lay the foundation with a roadmap for future product growth development. We do this with you in what we call a Strategy Workshop.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p>Our Strategy Workshop is designed with the non-technical founder in mind. We've worked with dozens of entrepreneurs on early product development.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n    \n        \n            \n        \n    \n    \n        \n            \n            \n                \n                    <i></i>\n                \n                \n                    Get Started\n                \n                \n                    Really Fast\n                \n            \n        \n    \n    \n        \n            <a href=\"https://www.belighted.com/product-development-consultation?hsLang=en\" target=\"_blank\"></a>\n        \n    \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<p>The result is a detailed action plan outlining the steps required <strong>to execute your product growth strategy.</strong></p>"
+    body: "<p>Your first step is to lay the foundation with a roadmap for future product growth development. We do this with you in what we call a Strategy Workshop.</p><p>Our Strategy Workshop is designed with the non-technical founder in mind. We've worked with dozens of entrepreneurs on early product development.</p><i></i>Get StartedReally Fast<a href=\"https://www.belighted.com/product-development-consultation?hsLang=en\" target=\"_blank\"></a><p>The result is a detailed action plan outlining the steps required <strong>to execute your product growth strategy.</strong></p>"
   - id: "3bdead63-170e-47d7-ae4c-488eb90430be"
     type: "default"
     image: null
@@ -39,31 +39,31 @@ slices:
     image: null
     title: "How to be prepared ?"
     subtitle: null
-    body: "<p>Be prepared to walk us through market needs, your ideas, and the problem your product solves.</p>\n<p>We expect you will have a business plan or a product vision document if you don’t already have a prototype or MVP.</p>\n<p>You should have already conducted your market research and have data on market needs, market size, competition, etc.</p>"
+    body: "<p>Be prepared to walk us through market needs, your ideas, and the problem your product solves.</p><p>We expect you will have a business plan or a product vision document if you don’t already have a prototype or MVP.</p><p>You should have already conducted your market research and have data on market needs, market size, competition, etc.</p>"
   - id: "f4ef5ec0-e2e2-460c-984e-8b2c3fe6dc68"
     type: "default"
     image: null
     title: "In the morning"
     subtitle: null
-    body: "<p>We will begin by listening as you explain your project and market.</p>\n<ul>\n<li>Your business model and risks, how far along you are in market validation, who your competitors are, and so on ...</li>\n<li>Positioning of your product</li>\n<li>Decisions already made for the project</li>\n<li>Review of your spec document, mockups, or current working product</li>\n</ul>"
+    body: "<p>We will begin by listening as you explain your project and market.</p><ul><li>Your business model and risks, how far along you are in market validation, who your competitors are, and so on ...</li><li>Positioning of your product</li><li>Decisions already made for the project</li><li>Review of your spec document, mockups, or current working product</li></ul>"
   - id: "bc8f68d8-f6a6-4d28-ab11-6aca589c906a"
     type: "default"
     image: null
     title: "In the afternoon"
     subtitle: null
-    body: "<p>We lead you through topics like:</p>\n<ul>\n<li>Critical decisions and impact on your goals</li>\n<li>Technology options for various aspects of your product</li>\n<li>What your team looks like; resources you need</li>\n<li>Prioritization of efforts based on deadline and budget constraints</li>\n</ul>"
+    body: "<p>We lead you through topics like:</p><ul><li>Critical decisions and impact on your goals</li><li>Technology options for various aspects of your product</li><li>What your team looks like; resources you need</li><li>Prioritization of efforts based on deadline and budget constraints</li></ul>"
   - id: "62520ede-a35c-4765-9eab-c92375ba75c2"
     type: "default"
     image: null
     title: "What is the outcome ?"
     subtitle: null
-    body: "<p>After our day together, we get to work strategy out the roadmap for your project.</p>\n<p>Within 5 business days after completing the workshop, you will have in hand a solid plan of action for the growth development of your new product – whether we will be building it for you or not.</p>"
+    body: "<p>After our day together, we get to work strategy out the roadmap for your project.</p><p>Within 5 business days after completing the workshop, you will have in hand a solid plan of action for the growth development of your new product – whether we will be building it for you or not.</p>"
   - id: "467798eb-7fa2-4a51-b2d2-a63e50223ce3"
     type: "default"
     image: null
     title: "What's included in your action plan ?"
     subtitle: null
-    body: "<p>Your product roadmap may include:</p>\n<ul>\n<li>A planning proposition with milestones and expected features</li>\n<li>Goals and metrics</li>\n<li>Cost estimates</li>\n<li>Recommendations for next steps</li>\n<li>Technologies and providers, if not using Belighted</li>\n</ul>"
+    body: "<p>Your product roadmap may include:</p><ul><li>A planning proposition with milestones and expected features</li><li>Goals and metrics</li><li>Cost estimates</li><li>Recommendations for next steps</li><li>Technologies and providers, if not using Belighted</li></ul>"
   - id: "abd3d164-59b6-4000-b7cf-74f33bb19fae"
     type: "default"
     image: null
