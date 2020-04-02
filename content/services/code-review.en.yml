@@ -4,20 +4,20 @@ slug: "code-review"
 originalPath: "https://www.belighted.com/code-review"
 title: "Ruby on RailsSoftware Development Audit"
 sections:
-  - id: "22b37899-b6e8-4935-a6bb-0364ad3976e4"
-    type: "default"
+  - id: "91947795-095c-4ce5-a2d0-c5df4456acf1"
+    type: "hero"
     image: null
     title: "Ruby on Rails<br />Software Development Audit\n<h4>Don't Waste Time &amp; Money on your Business because of Spaghetti Code.</h4>"
     subtitle: null
     body: null
-  - id: "f61c705f-ebbb-48e7-a0e9-09cb0ed87b55"
+  - id: "1095595f-b46e-44f8-9f1d-05c573e0f21e"
     type: "default"
     image: null
     title: "Get an action plan with recommendations based on the level of criticality encountered."
     subtitle: "Chat with us"
     body: "<p><br /><em>“We have developed a \"Code Review\" methodology that enables us to improve rapidly the overall quality of your app &amp; ease up the work of your developers. Based on a micro &amp; macro analysis, we take your codebase and optimize it for future developments so you can focus on your business and not waste time and money on a bad Ruby &amp; Rails foundation.”</em></p>\n<p><em>                            </em>Nicolas Jacobeus, CEO &amp; Senior Product Strategist, Belighted</p>\n<p><strong>We use this code review on our own clients projects to make sure we reach the highest quality standards in development &amp; coding processes. </strong></p>\n\n<ol>\n<li><strong>Versions of Ruby, Rails &amp; dependencies not up to date</strong></li>\n<li><strong>Security problems</strong></li>\n<li>Not following the clean code methodology</li>\n<li><strong>No tests coverage</strong></li>\n<li><strong>Lack of best practices</strong></li>\n<li>Bad Naming &amp; RESTful conventions</li>\n<li><strong>Database not well structured (pk, fk, index…)</strong></li>\n<li><strong>No documentation</strong></li>\n</ol>\n<p>Do these problems resonate in your company ? You are not sure if or how your technical team tackle these problems ? Have a call with one of our Ruby on Rails experts and see how a code review might help you bring your software product to the next level.</p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGet your code review now.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWe respect your <a href=\"https://www.belighted.com/privacy-policy?hsLang=en\" target=\"_blank\">privacy</a>."
-  - id: "51251a3e-ffa0-43f0-988d-c223c5306471"
-    type: "default"
+  - id: "b1b02403-a693-4db6-b285-06847a5c2d7a"
+    type: "hero"
     image: null
     title: "Trusted by 150+ leading brands in Belgium &amp; Europe\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n\n\n\n  \n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n    \n    \n        \"Nicolas' advice brought me confidence and gave me clear steps that helped me maximize my chances of success.”\n    \n     \n      \n          \n              \n          \n      \n      \n          <p><strong>Vincent Leroy</strong><br />CEO, Neveo</p>"
     subtitle: null

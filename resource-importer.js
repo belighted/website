@@ -141,7 +141,7 @@ const extractServicesMeta = async articles => {
         const body = text.replace(/<h[2-3]>.*<\/h[2-3]>/gim, "").trim();
         return {
           id: uuidv4(),
-          type: "default",
+          type: !title && !subtitle ? "hero" : "default",
           image: null,
           title: !title && !subtitle ? body : title,
           subtitle,
