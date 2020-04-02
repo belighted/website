@@ -3,6 +3,7 @@ type: "services"
 slug: "user-testing"
 originalPath: "https://www.belighted.com/user-testing"
 title: "User Testing"
+layout: "with-form"
 slices:
   - id: "0a73bf2f-8666-4117-a78c-8deb0cf4ff8b"
     type: "hero"

@@ -3,6 +3,7 @@ type: "services"
 slug: "design-sprint"
 originalPath: "https://www.belighted.com/design-sprint"
 title: "Design Sprint"
+layout: "design-sprint"
 slices:
   - id: "bd871e15-90e0-433c-98b9-eb43c2f2a815"
     type: "default"
@@ -105,7 +106,7 @@ slices:
         author: Olivier Simonis
         role: CEO
         company: Qualifio
-      - quote : “It's a real pleasure to work with Belighted. They are focused on delivering features with business value and they like to get stuff done. This vision allowed us to launch our products with just a couple of months of development and help us to get user feedback”
+      - quote: “It's a real pleasure to work with Belighted. They are focused on delivering features with business value and they like to get stuff done. This vision allowed us to launch our products with just a couple of months of development and help us to get user feedback”
         author: Antoine De Beys
         role: Co-founder
         company: DeeCide

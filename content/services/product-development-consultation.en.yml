@@ -3,6 +3,7 @@ type: "services"
 slug: "product-development-consultation"
 originalPath: "https://www.belighted.com/product-development-consultation"
 title: "Receive a 20-Minute Product Development Assessment"
+layout: "with-form"
 slices:
   - id: "bca6623e-f4bc-4b3e-82bd-1998195e0783"
     type: "hero"
