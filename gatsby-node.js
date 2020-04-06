@@ -150,7 +150,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
     post.tags.forEach(tag => tags.push(tag));
     createPage({
       component: blogTemplate,
-      path: `${locales[post.lang].path}/blog/${post.slug}`,
+      path: `${locales[post.lang].path}/articles/${post.slug}`,
       context: {
         slug: post.slug,
         lang: post.lang
@@ -169,6 +169,26 @@ module.exports.createPages = async ({ graphql, actions }) => {
           tag: slug,
           lang,
           title: tag.label
+        }
+      });
+    });
+  });
+
+  // Create blog-list pages
+  const postsPerPage = 6;
+  Object.keys(locales).map(lang => {
+    const postsInThisLang = posts.filter(post => post.lang === lang);
+    const numPages = Math.ceil(postsInThisLang.length / postsPerPage);
+    Array.from({ length: numPages }).forEach((_, i) => {
+      createPage({
+        path: i === 0 ? `${locales[lang].path}/blog` : `${locales[lang].path}/blog/${i + 1}`,
+        component: path.resolve("./src/templates/blogList.js"),
+        context: {
+          limit: postsPerPage,
+          skip: i * postsPerPage,
+          numPages,
+          currentPage: i + 1,
+          lang
         }
       });
     });

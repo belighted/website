@@ -24,9 +24,7 @@ const HomeHero = () => {
         }
       }
       image2: file(
-        relativePath: {
-          eq: "images/stock/software-developers-saas.jpg"
-        }
+        relativePath: { eq: "images/stock/software-developers-saas.jpg" }
       ) {
         childImageSharp {
           # Specify the image processing specifications right in the query.
@@ -55,19 +53,21 @@ const HomeHero = () => {
   return (
     <div className="l-home-hero">
       <div className="l-home-hero__text">
-        <h1 className="c-heading c-heading--1 c-heading--title">{slide.title}</h1>
+        <h1 className="c-heading c-heading--1 c-heading--title">
+          {slide.title}
+        </h1>
         <p className={"c-body c-body--3"}>{slide.body}</p>
         {slide.buttons.map(button => (
           <p key={button.title}>
-            <Button modifier={button.modifier}>{button.title}</Button>
+            <Button modifier={"primary"}>{button.title}</Button>
           </p>
         ))}
       </div>
       <div className="l-home-hero__image1">
-          <Img fluid={image1.childImageSharp.fluid} />
+        <Img fluid={image1.childImageSharp.fluid} />
       </div>
       <div className="l-home-hero__image2">
-          <Img fluid={image2.childImageSharp.fluid} />
+        <Img fluid={image2.childImageSharp.fluid} />
       </div>
     </div>
   );

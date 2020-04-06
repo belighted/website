@@ -20,7 +20,7 @@ const CaseArticle = ({
 }) => (
   <Layout context={pageContext} page={"blog"}>
     <article className="o-wrapper">
-      <LocalizedLink route={"/clients"}>See all cases</LocalizedLink>
+      <LocalizedLink to={"/clients"}>See all cases</LocalizedLink>
       <h2>{post.title}</h2>
       <div
         className="c-wysiwyg"

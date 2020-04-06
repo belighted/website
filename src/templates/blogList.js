@@ -1,34 +1,30 @@
 import React from "react";
+import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
 import BlogList from "../components/blog/BlogList";
-import { SectionHeader } from "../components/layout/Section";
-import { graphql } from "gatsby";
+import Pagination from "../components/blog/Pagination";
 
-const BlogPage = ({
-  pageContext,
+const BlogListPage = ({
   data: {
     allPostsYaml: { nodes }
-  }
+  },
+  pageContext
 }) => {
+  const { currentPage, numPages } = pageContext;
+
   return (
     <Layout context={pageContext} page={"blog"}>
       <section className={"o-wrapper c-section"}>
-        <SectionHeader
-          title={"Latest SaaS & Software Stories"}
-          body={"Popular on our blog right now"}
-        />
         <BlogList nodes={nodes} />
+        <Pagination currentPage={currentPage} numPages={numPages} />
       </section>
     </Layout>
   );
 };
 
 export const query = graphql`
-  {
-    allPostsYaml(
-      sort: { fields: [date], order: DESC }
-      filter: { lang: { eq: "en" } }
-    ) {
+  query BlogListPageQuery($lang: String!, $skip: Int!, $limit: Int!) {
+    allPostsYaml(filter: { lang: { eq: $lang } }, limit: $limit, skip: $skip) {
       nodes {
         ...BlogPostItem
       }
@@ -36,4 +32,4 @@ export const query = graphql`
   }
 `;
 
-export default BlogPage;
+export default BlogListPage;

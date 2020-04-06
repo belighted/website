@@ -13,7 +13,7 @@ const BlogTag = ({
   <Layout context={pageContext} page={"blog"}>
     <section className={"o-wrapper c-section"}>
       <h1 className="c-heading c-heading--1">
-        <LocalizedLink route={`/blog`}>
+        <LocalizedLink to={`/blog`}>
           Belighted blog
         </LocalizedLink>{" >  "}
         {pageContext.title}

@@ -9,7 +9,7 @@ const Statistics = ({ section: { title, body } }) => {
         <div className="l-narrow-header-large-content">
           <div className="l-narrow-header-large-content__header">
             <h2 className='c-heading c-heading--2 c-heading--title'>{title}</h2>
-            <LocalizedLink route={"/about"}>Find out more about us</LocalizedLink>
+            <LocalizedLink to={"/about"}>Find out more about us</LocalizedLink>
           </div>
           <div className="l-narrow-header-large-content__content">
             <StatisticsList />

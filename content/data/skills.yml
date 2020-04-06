@@ -1,0 +1,20 @@
+slug: skills
+skills:
+  - slug: "market_study"
+  - slug: "mobile_consulting"
+  - slug: "product_design"
+  - slug: "mvp_development"
+  - slug: "mobile_development"
+  - slug: "product_strategy"
+  - slug: "product_management"
+  - slug: "saas_marketplace"
+  - slug: "prototyping"
+  - slug: "web_consulting"
+  - slug: "web_development"
+  - slug: "code-review"
+  - slug: "design-sprint"
+  - slug: "user-testing"
+  - slug: "ux-review"
+  - slug: "strategy-workshop"
+  - slug: "product-development-consultation"
+

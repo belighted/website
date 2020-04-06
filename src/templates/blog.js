@@ -13,7 +13,7 @@ const BlogArticle = ({ data: { postsYaml: post }, pageContext }) => (
     <div className="o-wrapper">
       <div className="l-text-and-list">
         <article className="l-text-and-list__text">
-          <LocalizedLink route={"blog"}>The belighted blog</LocalizedLink>
+          <LocalizedLink to={"blog"}>The belighted blog</LocalizedLink>
 
           <h1 className="c-heading c-heading--2">{post.title}</h1>
           <p className="c-body c-body--3">

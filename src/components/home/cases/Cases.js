@@ -10,7 +10,7 @@ function Cases({ section: { title, body, subtitle } }) {
         <div className="l-text-and-list">
           <div className="l-text-and-list__text">
             <SectionHeader title={title} body={body} modifier={"invert"} />
-            <LocalizedLink route={"/clients"}>See all cases</LocalizedLink>
+            <LocalizedLink to={"/clients"}>See all cases</LocalizedLink>
           </div>
           <div className="l-text-and-list__list">
             <h5 className="c-heading c-heading--5 c-heading--invert u-margin-bottom-small">

@@ -1,0 +1,17 @@
+.c-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  &__link {
+    padding: $inuit-global-spacing-unit;
+    text-decoration: none;
+  }
+}
+.c-pagination-link {
+  &.active {
+    color: $color-gray8;
+  }
+}

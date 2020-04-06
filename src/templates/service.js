@@ -57,6 +57,7 @@ export const query = graphql`
         subtitle
         id
         body
+        list
       }
     }
     categoriesYaml(services: { in: [$slug] }) {
