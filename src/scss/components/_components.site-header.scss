@@ -1,5 +1,4 @@
 .c-site-header {
-
   padding: $inuit-global-spacing-unit 0;
   background: $color-brand6;
   &__wrapper {
@@ -14,14 +13,21 @@
     flex-grow: 1;
   }
 }
-.c-site-nav{
+.c-site-nav {
   display: flex;
   justify-content: flex-end;
-  &__item{
+  &__item {
     padding: $inuit-global-spacing-unit-small;
     color: $color-white;
     font-family: $fontstack-alt;
+
     text-decoration: none;
     text-transform: capitalize;
+  }
+  &-link {
+    &.active {
+      background: white;
+      color: $color-brand6;
+    }
   }
 }

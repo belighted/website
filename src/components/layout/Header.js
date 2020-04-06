@@ -1,10 +1,16 @@
 import React from "react";
 import { Link } from "gatsby";
 import locales from "../../constants/locales";
+import classNames from 'classnames';
 
 const MenuLink = ({ name, lang }) => {
   return (
-    <Link to={`${locales[lang].path}/${name}`} className={"c-site-nav__item"}>
+    <Link
+      to={`${locales[lang].path}/${name}`}
+      className={classNames("c-site-nav__item", "c-site-nav-link")}
+      activeClassName={"active"}
+      partiallyActive={true}
+    >
       {name}
     </Link>
   );
