@@ -5,6 +5,7 @@ import Img from "gatsby-image";
 import moment from "moment";
 import BlogpostTags from "./components/BlogpostTags";
 import LinkToBlog from "./LinkToBlog";
+import LocalizedLink from "../links/LocalizedLink";
 
 export default function BlogList({ nodes }) {
   return (
@@ -34,11 +35,11 @@ export default function BlogList({ nodes }) {
                 </div>
                 <div>{post.description}</div>
                 <div className="u-margin-top">
-                  <Link to={`${locales[post.lang].path}/blog/${post.slug}`}>
+                  <LocalizedLink to={`/articles/${post.slug}`}>
                     <span className="c-button c-button--outline-primary">
                       Read more
                     </span>
-                  </Link>
+                  </LocalizedLink>
                 </div>
                 <BlogpostTags post={post} />
               </div>
