@@ -32,7 +32,7 @@ export default function Header({ page, context: { lang } }) {
           {Object.keys(locales).map(lang => (
             <Link
               key={lang}
-              to={`${locales[lang].path}/${page}`}
+              to={`${locales[lang].path}/${page === "home" ? "" : page}`}
               className={"c-lang-switcher__item u-padding-small"}
             >
               {locales[lang].label}

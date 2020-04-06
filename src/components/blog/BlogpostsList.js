@@ -1,20 +1,7 @@
 import React from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import LinkToBlog from "./LinkToBlog";
 
-const BlogpostsList = () => {
-  const {
-    allPostsYaml: { nodes }
-  } = useStaticQuery(graphql`
-    {
-      allPostsYaml(limit: 3) {
-        nodes {
-          slug
-          title
-        }
-      }
-    }
-  `);
+const BlogpostsList = ({nodes}) => {
   return (
     <ul>
       {nodes.map(node => (
