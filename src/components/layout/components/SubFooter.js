@@ -8,12 +8,12 @@ const SubFooter = () => {
         <LocalizedLink to="/" className="c-subfooter__item">
           © 2019 Belighted - SaaS & Software Development Agency
         </LocalizedLink>
-        <LocalizedLink
-          to="/files/Belighted-GTC-2017.pdf"
+        <a
+          href="/files/Belighted-GTC-2017.pdf"
           className="c-subfooter__item"
         >
           Terms & Conditions
-        </LocalizedLink>
+        </a>
         <LocalizedLink to="/privacy" className="c-subfooter__item">
           Privacy Policy
         </LocalizedLink>
