@@ -8,7 +8,7 @@ description: In this article, I'll talk about the callback syntax. When an
   the process. In terms of sustainability, this approach presents some
   weaknesses as the global logic is spread among the code. PromiseKit proposes
   an interesting alternative inspired from JavaScript.
-image: promisekit-blogpost-img.png
+image: images/promisekit-blogpost-img.png
 date: 1420070400000
 body: >-
   <p>The feeling of smoothness given by an application is something that matters
@@ -74,10 +74,10 @@ body: >-
   <pre><code class="ruby">extension <span class="constant">SyncService</span>{
       func syncServices() -&gt; <span class="constant">Promise</span>&lt;[<span class="constant">Service</span>]&gt; {
           let lastServiceUpdateDate = <span class="constant">PersistenceManager</span>.sharedInstance.getLastUpdatedService()
-          <span class="keyword">return</span> fetchPromise = <span class="keyword">self</span>.fetchServicesFromDate(lastService!.updatedAt).<span class="keyword">then</span> { 
-              jsonResult <span class="keyword">in</span> <span class="keyword">self</span>.parseServicesJson(jsonResult) 
-          }.<span class="keyword">then</span> { 
-              serviceMaps <span class="keyword">in</span> <span class="keyword">self</span>.storeServiceInCoreData(serviceMaps) 
+          <span class="keyword">return</span> fetchPromise = <span class="keyword">self</span>.fetchServicesFromDate(lastService!.updatedAt).<span class="keyword">then</span> {
+              jsonResult <span class="keyword">in</span> <span class="keyword">self</span>.parseServicesJson(jsonResult)
+          }.<span class="keyword">then</span> {
+              serviceMaps <span class="keyword">in</span> <span class="keyword">self</span>.storeServiceInCoreData(serviceMaps)
           }
       }
       func fetchServicesFromDate(fromDate<span class="symbol">:</span> <span class="constant">NSDate</span>?) -&gt; <span class="constant">Promise</span>&lt;<span class="constant">AnyObject</span>&gt;{

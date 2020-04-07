@@ -6,7 +6,7 @@ author: Stéphane A.
 description: A short introduction to PDF.js which will guide you through the
   installation of this library aimed to manipulate PDF files within your web
   interface.
-image: pdfjs.png
+image: images/pdfjs.png
 date: 1420070400000
 body: >-
   <h2>The business need</h2>
@@ -135,7 +135,7 @@ body: >-
         var pageNumber = 1;
         renderPage(viewer, pdf, pageNumber++, function pageRenderingComplete() {
           if (pageNumber &gt; pdf.numPages) {
-            return; 
+            return;
           }
           // Continue rendering of the next page
           renderPage(viewer, pdf, pageNumber++, pageRenderingComplete);
@@ -150,7 +150,7 @@ body: >-
 
   <p>For instance:</p>
 
-  <pre><code class="ruby">var url = <span class="string">'&lt;%= product_url(product, :format =&gt; :pdf) %&gt;'</span>;       
+  <pre><code class="ruby">var url = <span class="string">'&lt;%= product_url(product, :format =&gt; :pdf) %&gt;'</span>;
 
   <span class="constant">PDFJS</span>.getDocument(url).<span class="keyword">then</span>(function(pdf) {
       <span class="regexp">//</span> you can now use *pdf* here

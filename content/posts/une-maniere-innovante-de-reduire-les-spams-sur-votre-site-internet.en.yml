@@ -6,7 +6,7 @@ author: Philippe B.
 description: Nous introduisons ici un moyen novateur de gérer le flux d'e-mails
   indésirables grâce à une nouvelle technique anti-spam en remplacement de la
   bien connue CAPTCHA.
-image: 289348-grum-spambot-shut-down-massive-botnet-created-18-percent-of-worlds-spa.jpg
+image: images/289348-grum-spambot-shut-down-massive-botnet-created-18-percent-of-worlds-spa.jpg
 date: 1420070400000
 body: >-
   <h2>Ce que nous voulions</h2>
@@ -58,8 +58,8 @@ body: >-
       contact_spam = <span class="keyword">false</span>
       time_to_comment = <span class="constant">Time</span>.now.to_time - session[<span class="string">'antispam_timer'</span>].to_time
       <span class="keyword">if</span> time_to_comment &lt; <span class="constant">Rails</span>.application.config.antispam_timer
-        spam_logger.warn(<span class="string">"There is potential spam detected 
-            for IP <span class="subst">#{request.env[<span class="string">'REMOTE_ADDR'</span>]}</span>. Antispam 
+        spam_logger.warn(<span class="string">"There is potential spam detected
+            for IP <span class="subst">#{request.env[<span class="string">'REMOTE_ADDR'</span>]}</span>. Antispam
             threshold not reached (took <span class="subst">#{time_to_comment.to_i}</span>s)."</span>)
         spam_logger.warn(<span class="string">"Params were : <span class="subst">#{params}</span>"</span>)
         contact_spam = <span class="keyword">true</span>

@@ -7,7 +7,7 @@ description: Some time ago one of our customers, for which we had already
   developed a highly specialized e-commerce/ERP, decided to add a new service to
   the one they were already offering. Discover how we handle a single sign-in
   and sign-out system through multiple applications.
-image: default_blogpost_image_6@1x.jpg
+image: images/default_blogpost_image_6@1x.jpg
 date: 1388534400000
 body: >-
   <p>Some time ago one of our customers, for which we had already developed a

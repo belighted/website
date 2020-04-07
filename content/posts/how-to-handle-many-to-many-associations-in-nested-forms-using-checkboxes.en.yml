@@ -5,7 +5,7 @@ title: How to handle many to many associations in nested forms using checkboxes 
 author: Stéphane A.
 description: How can you deal with many to many relations using check boxes.?
   Find out more of it in this post.
-image: default_blogpost_image_3@1x.jpg
+image: images/default_blogpost_image_3@1x.jpg
 date: 1325376000000
 body: >-
   <p>As everybody know thanks to one of the first awesome Ryan Bates’ railscasts

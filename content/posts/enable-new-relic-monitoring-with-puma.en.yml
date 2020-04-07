@@ -5,7 +5,7 @@ title: Enable New Relic monitoring with Puma
 author: Kévin V.
 description: Today we tried out Puma for you. This resulted in different
   feedbacks that are published in this post.
-image: default_blogpost_image_0@1x.jpg
+image: images/default_blogpost_image_0@1x.jpg
 date: 1356998400000
 body: >-
   <p>Today I wanted to try out Puma on a Heroku project. Works great, but I

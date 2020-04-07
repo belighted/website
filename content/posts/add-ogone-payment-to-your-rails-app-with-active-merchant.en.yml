@@ -6,7 +6,7 @@ author: Joel C.
 description: We recently added a few functionality to the Ogone payment
   processing gem. It's a good time to take it from the top and detail how you
   can use this service in your own Rails application.
-image: default_blogpost_image_1@1x.jpg
+image: images/default_blogpost_image_1@1x.jpg
 date: 1325376000000
 body: >-
   <p>We recently added a few functionality to the <strong><a

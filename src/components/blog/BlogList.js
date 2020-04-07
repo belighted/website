@@ -1,6 +1,5 @@
 import React from "react";
-import { graphql, Link } from "gatsby";
-import locales from "../../constants/locales";
+import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import moment from "moment";
 import BlogpostTags from "./components/BlogpostTags";
@@ -15,11 +14,11 @@ export default function BlogList({ nodes }) {
           <li key={post.slug}>
             <div className="o-media u-margin-bottom">
               <div className="o-media__img">
-                {post.featuredImage && post.featuredImage.childImageSharp && (
-                  <Img fixed={post.featuredImage.childImageSharp.fixed} />
+                {post.image && post.image.childImageSharp && (
+                  <Img fixed={post.image.childImageSharp.fixed} />
                 )}
-                {(!post.featuredImage ||
-                  !post.featuredImage.childImageSharp) && <div>Empty</div>}
+                {(!post.image ||
+                  !post.image.childImageSharp) && <div>{post.image}</div>}
               </div>
               <div className="o-media__body">
                 <div className="u-margin-bottom">
@@ -63,7 +62,7 @@ export const blogPostItem = graphql`
       label
       value
     }
-    featuredImage {
+    image {
       childImageSharp {
         # Specify the image processing specifications right in the query.
         # Makes it trivial to update as your page's design changes.

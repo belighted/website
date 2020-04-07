@@ -6,7 +6,7 @@ author: Philippe V.
 description: Last of a series of 3 articles about how we write automatic tests
   for our rails projects. This article focuses on the flow we follow to write
   tests for a single feature.
-image: flow.png
+image: images/flow.png
 date: 1451606400000
 body: >-
   <h2>Introduction</h2>

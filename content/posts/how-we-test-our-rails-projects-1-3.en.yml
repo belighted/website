@@ -5,10 +5,10 @@ title: How we test our Rails projects (1/3)
 author: Philippe V.
 description: >-
   First of a series of 3 articles about how we write automatic tests for our
-  rails projects. 
+  rails projects.
 
   This article focuses on the tools we use.
-image: default_blogpost_image_0@1x.jpg
+image: images/default_blogpost_image_0@1x.jpg
 date: 1451606400000
 body: >-
   <h2>Introduction</h2>

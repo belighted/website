@@ -5,7 +5,7 @@ title: "Development of a SaaS as an IT trainee : part 2"
 author: Samuel M.
 description: Development of a SaaS with a third-party javascript widget, what
   I’ve learned and discovered during my third week as a trainee.
-image: default_blogpost_image_2@1x.jpg
+image: images/default_blogpost_image_2@1x.jpg
 date: 1451606400000
 body: >-
   <h2>Introduction</h2>
@@ -103,8 +103,6 @@ body: >-
   <p>Step by step, increment by increment, the SaaS is progressively taking shape.</p>
 
   <p>It's only the beginning but I really enjoy working on it, and also learning valuable things every day and working with all the people at Belighted.<br><br><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><span class="hs-cta-node hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" id="hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" target="_blank"><img class="hs-cta-img" id="hs-cta-img-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png" alt="New Call-to-action"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>
-
-  <div id="disqus_thread">&nbsp;</div>
 tags:
   - label: Under the hood
     value: under-the-hood
