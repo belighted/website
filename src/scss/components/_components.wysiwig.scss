@@ -5,6 +5,9 @@
  * Styles for wysisyg content
 */
 .c-wysiwyg {
+  img{
+    max-width: 100%;
+  }
   @include inuit-font-size($inuit-font-size-body-2);
   h2,
   h3,

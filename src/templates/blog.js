@@ -11,8 +11,8 @@ import TagList from "../components/blog/TagList";
 const BlogArticle = ({ data: { postsYaml: post }, pageContext }) => (
   <Layout context={pageContext} page={"blog"}>
     <div className="o-wrapper">
-      <div className="l-text-and-list">
-        <article className="l-text-and-list__text">
+      <div className="l-content-sidebar">
+        <article className="l-content-sidebar__main">
           <LocalizedLink to={"blog"}>The belighted blog</LocalizedLink>
 
           <h1 className="c-heading c-heading--2">{post.title}</h1>
@@ -26,7 +26,7 @@ const BlogArticle = ({ data: { postsYaml: post }, pageContext }) => (
           />
           <BlogpostTags post={post} />
         </article>
-        <aside className="l-text-and-list__list">
+        <aside className="l-content-sidebar__sidebar">
           <TagList />
         </aside>
       </div>

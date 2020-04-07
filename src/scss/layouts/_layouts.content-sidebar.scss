@@ -1,0 +1,5 @@
+.l-content-sidebar{
+  display: grid;
+  gap: $inuit-global-spacing-unit;
+  grid-template-columns: minmax(50%, 3fr) 1fr;
+}
