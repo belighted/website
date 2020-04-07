@@ -2,27 +2,57 @@ const fs = require("fs");
 const YAML = require("yaml");
 const download = require("download");
 const path = require("path");
-const readFiles = async path => {
-  const files = await fs.promises.readdir(path);
+const readFiles = async directory => {
+  const files = await fs.promises.readdir(directory);
   return Promise.all(
     files.map(async file => {
-      const data = await fs.promises.readFile(`${path}/${file}`, "utf-8");
-      return YAML.parse(data);
+      const filePath = path.resolve(directory, file);
+      if (!fs.existsSync(filePath) || fs.lstatSync(filePath).isDirectory()) {
+        return null;
+      }
+      return {
+        path: filePath,
+        data: YAML.parse(await fs.promises.readFile(filePath, "utf-8"))
+      };
+    })
+  );
+};
+
+const downloadImages = async articles => {
+  return Promise.all(
+    articles.map(article => {
+      try {
+        article &&
+          download(
+            article.image,
+            path.resolve(__dirname, "content", "posts", "images")
+          );
+      } catch (e) {
+        console.log("couldnt download ", article.image);
+      }
     })
   );
 };
 
 const init = async () => {
-  const directory = __dirname + "/content/posts";
+  const directory = path.resolve(__dirname, "content", "posts");
+
   try {
     const articles = await readFiles(directory);
-    const images = articles.map(article =>
-      download(
-        article.image,
-        path.resolve(__dirname, "content", "posts", "images")
-      )
-    );
-    console.log(images);
+    articles
+      .filter(a => a)
+      .forEach(article => {
+        const image = article.data.image
+          .replace("#keepProtocol", "")
+          .replace(/https:\/\/.*\//, "");
+        fs.writeFile(article.path, YAML.stringify(), function(err) {
+          if (err) return reject(err);
+          console.log("created", path);
+          resolve(path);
+        });
+        console.log(image);
+      });
+    console.log("read everything");
   } catch (e) {
     console.error(e);
   }
