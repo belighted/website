@@ -6,7 +6,7 @@ title: Figaro gem - Simple, Heroku-friendly Rails app configuration using ENV
 author: Stéphane A.
 description: An overview of the figaro gem, a library tailored to handle app
   variables configuration on many deployment platforms including heroku.
-image: images/default_blogpost_image_2@1x.jpg
+image: ./images/default_blogpost_image_2@1x.jpg
 date: 1388534400000
 body: >-
   <p><img

@@ -5,7 +5,7 @@ title: Nomad Suite development workflow
 author: Joel C.
 description: An overview of our handcrafted development workflow for Nomad Suite
   relying on a bunch of web services.
-image: images/default_blogpost_image_4@1x.jpg
+image: ./images/default_blogpost_image_4@1x.jpg
 date: 1356998400000
 body: >-
   <p>For a few months here at Belighted, we are all committed to release what

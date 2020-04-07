@@ -7,7 +7,7 @@ author: Stéphane A.
 description: Have some performance drop in one of your application? Discover how
   we figured it out with one of our project with Memcached and the Dalli Ruby
   Gem.
-image: images/default_blogpost_image_6@1x.jpg
+image: ./images/default_blogpost_image_6@1x.jpg
 date: 1356998400000
 body: >-
   <p>Some time ago, as we were facing a performance drop in one of our projects,

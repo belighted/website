@@ -6,7 +6,7 @@ author: Dominique L.
 description: Are floats bad? What should be used in its place? I took some time
   to explain the problem behind a float number. Come have a look to this
   explanation.
-image: images/default_blogpost_image_0@1x.jpg
+image: ./images/default_blogpost_image_0@1x.jpg
 date: 1325376000000
 body: >-
   <p>Base 2 representation of real numbers is to me an artifact of the time when

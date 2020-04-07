@@ -8,7 +8,7 @@ description: >+
   tablettes, smartphones…) et dont le contenu visible s’adapte en fonction de
   l’appareil utilisé afin de faciliter l’expérience utilisateur.
 
-image: images/default_blogpost_image_0@1x.jpg
+image: ./images/default_blogpost_image_0@1x.jpg
 date: 1356998400000
 body: >-
   <p>Petit retour sur la séance informative (1) très intéressante organisée ce

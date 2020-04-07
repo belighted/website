@@ -8,7 +8,7 @@ description: >
   rails projects.
 
   This article focuses on the supporting code we wrote.
-image: images/default_blogpost_image_7@1x.jpg
+image: ./images/default_blogpost_image_7@1x.jpg
 date: 1451606400000
 body: >-
   <h2>Introduction</h2>

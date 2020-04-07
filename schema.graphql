@@ -177,6 +177,7 @@ type DataYaml implements Node {
     id: ID!
     internal: Internal!
     parent: Node
+    skills: [DataYamlSkills]
     slug: String
     statistics: [DataYamlStatistics]
     technologies: [DataYamlTechnologies]
@@ -210,6 +211,10 @@ type DataYamlGroupConnection {
     nodes: [DataYaml!]!
     pageInfo: PageInfo!
     totalCount: Int!
+}
+
+type DataYamlSkills {
+    slug: String
 }
 
 type DataYamlStatistics {
@@ -465,7 +470,6 @@ type File implements Node {
     size: Int!
     sourceInstanceName: String!
     uid: Int!
-    url: String
 }
 
 type FileConnection {
@@ -490,14 +494,6 @@ type FileGroupConnection {
     nodes: [File!]!
     pageInfo: PageInfo!
     totalCount: Int!
-}
-
-type Frontmatter {
-    featuredImgAlt: String
-    featuredImgUrl: String
-    lang: String
-    slug: String
-    title: String!
 }
 
 type ImageSharp implements Node {
@@ -674,10 +670,9 @@ type MarkdownRemark implements Node {
     children: [Node!]!
     excerpt(format: MarkdownExcerptFormats = PLAIN, pruneLength: Int = 140, truncate: Boolean = false): String
     excerptAst(pruneLength: Int = 140, truncate: Boolean = false): JSON
-    featuredImg: File
     fields: MarkdownRemarkFields
     fileAbsolutePath: String
-    frontmatter: Frontmatter
+    frontmatter: MarkdownRemarkFrontmatter
     headings(depth: MarkdownHeadingLevels): [MarkdownHeading]
     html: String
     htmlAst: JSON
@@ -707,6 +702,12 @@ type MarkdownRemarkEdge {
 
 type MarkdownRemarkFields {
     collection: String
+}
+
+type MarkdownRemarkFrontmatter {
+    lang: String
+    slug: String
+    title: String
 }
 
 type MarkdownRemarkGroupConnection {
@@ -739,9 +740,8 @@ type PostsYaml implements Node {
     children: [Node!]!
     date: Float
     description: String
-    featuredImage: File
     id: ID!
-    image: String
+    image: File
     internal: Internal!
     lang: String
     originalPath: String
@@ -841,32 +841,35 @@ type Query {
     casesYaml(about: StringQueryOperatorInput, challenges: StringQueryOperatorInput, children: NodeFilterListInput, goals: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, logo: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, problem: StringQueryOperatorInput, results: StringQueryOperatorInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): CasesYaml
     categoriesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, order: IntQueryOperatorInput, parent: NodeFilterInput, services: StringQueryOperatorInput, short_description: StringQueryOperatorInput, slug: StringQueryOperatorInput, technologies: StringQueryOperatorInput, title: StringQueryOperatorInput): CategoriesYaml
     contentYaml(body: StringQueryOperatorInput, children: NodeFilterListInput, history: ContentYamlHistoryFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, pride: ContentYamlPrideFilterListInput, sections: ContentYamlSectionsFilterListInput, slides: ContentYamlSlidesFilterListInput, slug: StringQueryOperatorInput, team: ContentYamlTeamFilterListInput, title: StringQueryOperatorInput): ContentYaml
-    dataYaml(children: NodeFilterListInput, clients: DataYamlClientsFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, statistics: DataYamlStatisticsFilterListInput, technologies: DataYamlTechnologiesFilterListInput): DataYaml
+    dataYaml(children: NodeFilterListInput, clients: DataYamlClientsFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, skills: DataYamlSkillsFilterListInput, slug: StringQueryOperatorInput, statistics: DataYamlStatisticsFilterListInput, technologies: DataYamlTechnologiesFilterListInput): DataYaml
     directory(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): Directory
-    file(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, childCasesYaml: CasesYamlFilterInput, childCategoriesYaml: CategoriesYamlFilterInput, childContentYaml: ContentYamlFilterInput, childDataYaml: DataYamlFilterInput, childImageSharp: ImageSharpFilterInput, childMarkdownRemark: MarkdownRemarkFilterInput, childPostsYaml: PostsYamlFilterInput, childProcessYaml: ProcessYamlFilterInput, childResourcesYaml: ResourcesYamlFilterInput, childServicesYaml: ServicesYamlFilterInput, childSplitsYaml: SplitsYamlFilterInput, childTestimonialsYaml: TestimonialsYamlFilterInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, publicURL: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput, url: StringQueryOperatorInput): File
+    file(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, childCasesYaml: CasesYamlFilterInput, childCategoriesYaml: CategoriesYamlFilterInput, childContentYaml: ContentYamlFilterInput, childDataYaml: DataYamlFilterInput, childImageSharp: ImageSharpFilterInput, childMarkdownRemark: MarkdownRemarkFilterInput, childPostsYaml: PostsYamlFilterInput, childProcessYaml: ProcessYamlFilterInput, childResourcesYaml: ResourcesYamlFilterInput, childServicesYaml: ServicesYamlFilterInput, childSplitsYaml: SplitsYamlFilterInput, childTestimonialsYaml: TestimonialsYamlFilterInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, publicURL: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): File
     imageSharp(children: NodeFilterListInput, fixed: ImageSharpFixedFilterInput, fluid: ImageSharpFluidFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, original: ImageSharpOriginalFilterInput, parent: NodeFilterInput, resize: ImageSharpResizeFilterInput, resolutions: ImageSharpResolutionsFilterInput, sizes: ImageSharpSizesFilterInput): ImageSharp
-    markdownRemark(children: NodeFilterListInput, excerpt: StringQueryOperatorInput, excerptAst: JSONQueryOperatorInput, featuredImg: FileFilterInput, fields: MarkdownRemarkFieldsFilterInput, fileAbsolutePath: StringQueryOperatorInput, frontmatter: FrontmatterFilterInput, headings: MarkdownHeadingFilterListInput, html: StringQueryOperatorInput, htmlAst: JSONQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, rawMarkdownBody: StringQueryOperatorInput, tableOfContents: StringQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MarkdownWordCountFilterInput): MarkdownRemark
-    postsYaml(author: StringQueryOperatorInput, body: StringQueryOperatorInput, children: NodeFilterListInput, date: FloatQueryOperatorInput, description: StringQueryOperatorInput, featuredImage: FileFilterInput, id: StringQueryOperatorInput, image: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, tags: PostsYamlTagsFilterListInput, title: StringQueryOperatorInput): PostsYaml
+    markdownRemark(children: NodeFilterListInput, excerpt: StringQueryOperatorInput, excerptAst: JSONQueryOperatorInput, fields: MarkdownRemarkFieldsFilterInput, fileAbsolutePath: StringQueryOperatorInput, frontmatter: MarkdownRemarkFrontmatterFilterInput, headings: MarkdownHeadingFilterListInput, html: StringQueryOperatorInput, htmlAst: JSONQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, rawMarkdownBody: StringQueryOperatorInput, tableOfContents: StringQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MarkdownWordCountFilterInput): MarkdownRemark
+    postsYaml(author: StringQueryOperatorInput, body: StringQueryOperatorInput, children: NodeFilterListInput, date: FloatQueryOperatorInput, description: StringQueryOperatorInput, id: StringQueryOperatorInput, image: FileFilterInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, tags: PostsYamlTagsFilterListInput, title: StringQueryOperatorInput): PostsYaml
     processYaml(children: NodeFilterListInput, description: StringQueryOperatorInput, duration: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, intro: StringQueryOperatorInput, lang: StringQueryOperatorInput, objective: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, subtitle: StringQueryOperatorInput, title: StringQueryOperatorInput): ProcessYaml
-    resourcesYaml(children: NodeFilterListInput, cta: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): ResourcesYaml
-    servicesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): ServicesYaml
-    site(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, host: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, port: IntQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput): Site
+    resourcesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, image: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, slices: ResourcesYamlSlicesFilterListInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput, type: StringQueryOperatorInput): ResourcesYaml
+    servicesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, layout: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, slices: ServicesYamlSlicesFilterListInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput, type: StringQueryOperatorInput): ServicesYaml
+    site(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, host: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, port: IntQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput): Site
     siteBuildMetadata(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput): SiteBuildMetadata
     sitePage(children: NodeFilterListInput, component: StringQueryOperatorInput, componentChunkName: StringQueryOperatorInput, componentPath: StringQueryOperatorInput, context: SitePageContextFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, internalComponentName: StringQueryOperatorInput, isCreatedByStatefulCreatePages: BooleanQueryOperatorInput, matchPath: StringQueryOperatorInput, parent: NodeFilterInput, path: StringQueryOperatorInput, pluginCreator: SitePluginFilterInput, pluginCreatorId: StringQueryOperatorInput): SitePage
     sitePlugin(browserAPIs: StringQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, name: StringQueryOperatorInput, nodeAPIs: StringQueryOperatorInput, packageJson: SitePluginPackageJsonFilterInput, parent: NodeFilterInput, pluginFilepath: StringQueryOperatorInput, pluginOptions: SitePluginPluginOptionsFilterInput, resolve: StringQueryOperatorInput, ssrAPIs: StringQueryOperatorInput, version: StringQueryOperatorInput): SitePlugin
-    splitsYaml(body: StringQueryOperatorInput, children: NodeFilterListInput, cta: SplitsYamlCtaFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): SplitsYaml
+    splitsYaml(body: StringQueryOperatorInput, children: NodeFilterListInput, cta: SplitsYamlCtaFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, list: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): SplitsYaml
     testimonialsYaml(author: StringQueryOperatorInput, body: StringQueryOperatorInput, children: NodeFilterListInput, client: StringQueryOperatorInput, id: StringQueryOperatorInput, image: FileFilterInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, role: StringQueryOperatorInput, slug: StringQueryOperatorInput): TestimonialsYaml
 }
 
 type ResourcesYaml implements Node {
     children: [Node!]!
-    cta: String
     id: ID!
+    image: String
     internal: Internal!
     lang: String
+    originalPath: String
     parent: Node
+    slices: [ResourcesYamlSlices]
     slug: String
     title: String
+    type: String
 }
 
 type ResourcesYamlConnection {
@@ -893,14 +896,26 @@ type ResourcesYamlGroupConnection {
     totalCount: Int!
 }
 
+type ResourcesYamlSlices {
+    body: String
+    id: String
+    subtitle: String
+    title: String
+    type: String
+}
+
 type ServicesYaml implements Node {
     children: [Node!]!
     id: ID!
     internal: Internal!
     lang: String
+    layout: String
+    originalPath: String
     parent: Node
+    slices: [ServicesYamlSlices]
     slug: String
     title: String
+    type: String
 }
 
 type ServicesYamlConnection {
@@ -927,6 +942,23 @@ type ServicesYamlGroupConnection {
     totalCount: Int!
 }
 
+type ServicesYamlSlices {
+    body: String
+    id: String
+    list: [String]
+    subtitle: String
+    testimonials: [ServicesYamlSlicesTestimonials]
+    title: String
+    type: String
+}
+
+type ServicesYamlSlicesTestimonials {
+    author: String
+    company: String
+    quote: String
+    role: String
+}
+
 type Site implements Node {
     buildTime(
         "Returns the difference between this date and the current time. Defaults to \"milliseconds\" but you can also pass in as the measurement \"years\", \"months\", \"weeks\", \"days\", \"hours\", \"minutes\", and \"seconds\"."
@@ -943,8 +975,6 @@ type Site implements Node {
     id: ID!
     internal: Internal!
     parent: Node
-    pathPrefix: String
-    polyfill: Boolean
     port: Int
     siteMetadata: SiteSiteMetadata
 }
@@ -1041,7 +1071,11 @@ type SitePageConnection {
 }
 
 type SitePageContext {
+    currentPage: Int
     lang: String
+    limit: Int
+    numPages: Int
+    skip: Int
     slug: String
     tag: String
     title: String
@@ -1144,6 +1178,7 @@ type SitePluginPluginOptions {
     pathCheck: Boolean
     pathPrefix: String
     plugins: [SitePluginPluginOptionsPlugins]
+    rule: SitePluginPluginOptionsRule
     showCaptions: Boolean
     tracedSVG: Boolean
     withWebp: Boolean
@@ -1176,6 +1211,10 @@ type SitePluginPluginOptionsPluginsPluginOptions {
     wrapperStyle: String
 }
 
+type SitePluginPluginOptionsRule {
+    include: String
+}
+
 type SiteSiteMetadata {
     description: String
     infoData: SiteSiteMetadataInfoData
@@ -1193,13 +1232,17 @@ type SiteSiteMetadataInfoData {
 type SiteSiteMetadataInfoDataContact {
     address: SiteSiteMetadataInfoDataContactAddress
     email: String
-    github_handle: String
-    twitter_handle: String
+    social: [SiteSiteMetadataInfoDataContactSocial]
 }
 
 type SiteSiteMetadataInfoDataContactAddress {
     city: String
     street: String
+}
+
+type SiteSiteMetadataInfoDataContactSocial {
+    icon: String
+    link: String
 }
 
 type SplitsYaml implements Node {
@@ -1209,6 +1252,7 @@ type SplitsYaml implements Node {
     id: ID!
     internal: Internal!
     lang: String
+    list: [String]
     parent: Node
     slug: String
     title: String
@@ -1566,6 +1610,7 @@ enum ContentYamlFieldsEnum {
     history___image___childDataYaml___children
     history___image___childDataYaml___clients
     history___image___childDataYaml___id
+    history___image___childDataYaml___skills
     history___image___childDataYaml___slug
     history___image___childDataYaml___statistics
     history___image___childDataYaml___technologies
@@ -1588,7 +1633,6 @@ enum ContentYamlFieldsEnum {
     history___image___childPostsYaml___date
     history___image___childPostsYaml___description
     history___image___childPostsYaml___id
-    history___image___childPostsYaml___image
     history___image___childPostsYaml___lang
     history___image___childPostsYaml___originalPath
     history___image___childPostsYaml___slug
@@ -1605,20 +1649,28 @@ enum ContentYamlFieldsEnum {
     history___image___childProcessYaml___subtitle
     history___image___childProcessYaml___title
     history___image___childResourcesYaml___children
-    history___image___childResourcesYaml___cta
     history___image___childResourcesYaml___id
+    history___image___childResourcesYaml___image
     history___image___childResourcesYaml___lang
+    history___image___childResourcesYaml___originalPath
+    history___image___childResourcesYaml___slices
     history___image___childResourcesYaml___slug
     history___image___childResourcesYaml___title
+    history___image___childResourcesYaml___type
     history___image___childServicesYaml___children
     history___image___childServicesYaml___id
     history___image___childServicesYaml___lang
+    history___image___childServicesYaml___layout
+    history___image___childServicesYaml___originalPath
+    history___image___childServicesYaml___slices
     history___image___childServicesYaml___slug
     history___image___childServicesYaml___title
+    history___image___childServicesYaml___type
     history___image___childSplitsYaml___body
     history___image___childSplitsYaml___children
     history___image___childSplitsYaml___id
     history___image___childSplitsYaml___lang
+    history___image___childSplitsYaml___list
     history___image___childSplitsYaml___slug
     history___image___childSplitsYaml___title
     history___image___childTestimonialsYaml___author
@@ -1666,7 +1718,6 @@ enum ContentYamlFieldsEnum {
     history___image___size
     history___image___sourceInstanceName
     history___image___uid
-    history___image___url
     id
     internal___content
     internal___contentDigest
@@ -1763,6 +1814,7 @@ enum ContentYamlFieldsEnum {
     pride___image___childDataYaml___children
     pride___image___childDataYaml___clients
     pride___image___childDataYaml___id
+    pride___image___childDataYaml___skills
     pride___image___childDataYaml___slug
     pride___image___childDataYaml___statistics
     pride___image___childDataYaml___technologies
@@ -1785,7 +1837,6 @@ enum ContentYamlFieldsEnum {
     pride___image___childPostsYaml___date
     pride___image___childPostsYaml___description
     pride___image___childPostsYaml___id
-    pride___image___childPostsYaml___image
     pride___image___childPostsYaml___lang
     pride___image___childPostsYaml___originalPath
     pride___image___childPostsYaml___slug
@@ -1802,20 +1853,28 @@ enum ContentYamlFieldsEnum {
     pride___image___childProcessYaml___subtitle
     pride___image___childProcessYaml___title
     pride___image___childResourcesYaml___children
-    pride___image___childResourcesYaml___cta
     pride___image___childResourcesYaml___id
+    pride___image___childResourcesYaml___image
     pride___image___childResourcesYaml___lang
+    pride___image___childResourcesYaml___originalPath
+    pride___image___childResourcesYaml___slices
     pride___image___childResourcesYaml___slug
     pride___image___childResourcesYaml___title
+    pride___image___childResourcesYaml___type
     pride___image___childServicesYaml___children
     pride___image___childServicesYaml___id
     pride___image___childServicesYaml___lang
+    pride___image___childServicesYaml___layout
+    pride___image___childServicesYaml___originalPath
+    pride___image___childServicesYaml___slices
     pride___image___childServicesYaml___slug
     pride___image___childServicesYaml___title
+    pride___image___childServicesYaml___type
     pride___image___childSplitsYaml___body
     pride___image___childSplitsYaml___children
     pride___image___childSplitsYaml___id
     pride___image___childSplitsYaml___lang
+    pride___image___childSplitsYaml___list
     pride___image___childSplitsYaml___slug
     pride___image___childSplitsYaml___title
     pride___image___childTestimonialsYaml___author
@@ -1863,7 +1922,6 @@ enum ContentYamlFieldsEnum {
     pride___image___size
     pride___image___sourceInstanceName
     pride___image___uid
-    pride___image___url
     pride___subtitle
     pride___title
     sections
@@ -1928,6 +1986,7 @@ enum ContentYamlFieldsEnum {
     team___image___childDataYaml___children
     team___image___childDataYaml___clients
     team___image___childDataYaml___id
+    team___image___childDataYaml___skills
     team___image___childDataYaml___slug
     team___image___childDataYaml___statistics
     team___image___childDataYaml___technologies
@@ -1950,7 +2009,6 @@ enum ContentYamlFieldsEnum {
     team___image___childPostsYaml___date
     team___image___childPostsYaml___description
     team___image___childPostsYaml___id
-    team___image___childPostsYaml___image
     team___image___childPostsYaml___lang
     team___image___childPostsYaml___originalPath
     team___image___childPostsYaml___slug
@@ -1967,20 +2025,28 @@ enum ContentYamlFieldsEnum {
     team___image___childProcessYaml___subtitle
     team___image___childProcessYaml___title
     team___image___childResourcesYaml___children
-    team___image___childResourcesYaml___cta
     team___image___childResourcesYaml___id
+    team___image___childResourcesYaml___image
     team___image___childResourcesYaml___lang
+    team___image___childResourcesYaml___originalPath
+    team___image___childResourcesYaml___slices
     team___image___childResourcesYaml___slug
     team___image___childResourcesYaml___title
+    team___image___childResourcesYaml___type
     team___image___childServicesYaml___children
     team___image___childServicesYaml___id
     team___image___childServicesYaml___lang
+    team___image___childServicesYaml___layout
+    team___image___childServicesYaml___originalPath
+    team___image___childServicesYaml___slices
     team___image___childServicesYaml___slug
     team___image___childServicesYaml___title
+    team___image___childServicesYaml___type
     team___image___childSplitsYaml___body
     team___image___childSplitsYaml___children
     team___image___childSplitsYaml___id
     team___image___childSplitsYaml___lang
+    team___image___childSplitsYaml___list
     team___image___childSplitsYaml___slug
     team___image___childSplitsYaml___title
     team___image___childTestimonialsYaml___author
@@ -2028,7 +2094,6 @@ enum ContentYamlFieldsEnum {
     team___image___size
     team___image___sourceInstanceName
     team___image___uid
-    team___image___url
     team___name
     team___role
     title
@@ -2125,6 +2190,8 @@ enum DataYamlFieldsEnum {
     parent___parent___internal___type
     parent___parent___parent___children
     parent___parent___parent___id
+    skills
+    skills___slug
     slug
     statistics
     statistics___label
@@ -2417,7 +2484,6 @@ enum FileFieldsEnum {
     childContentYaml___history___image___size
     childContentYaml___history___image___sourceInstanceName
     childContentYaml___history___image___uid
-    childContentYaml___history___image___url
     childContentYaml___id
     childContentYaml___internal___content
     childContentYaml___internal___contentDigest
@@ -2480,7 +2546,6 @@ enum FileFieldsEnum {
     childContentYaml___pride___image___size
     childContentYaml___pride___image___sourceInstanceName
     childContentYaml___pride___image___uid
-    childContentYaml___pride___image___url
     childContentYaml___pride___subtitle
     childContentYaml___pride___title
     childContentYaml___sections
@@ -2535,7 +2600,6 @@ enum FileFieldsEnum {
     childContentYaml___team___image___size
     childContentYaml___team___image___sourceInstanceName
     childContentYaml___team___image___uid
-    childContentYaml___team___image___url
     childContentYaml___team___name
     childContentYaml___team___role
     childContentYaml___title
@@ -2581,6 +2645,8 @@ enum FileFieldsEnum {
     childDataYaml___parent___internal___type
     childDataYaml___parent___parent___children
     childDataYaml___parent___parent___id
+    childDataYaml___skills
+    childDataYaml___skills___slug
     childDataYaml___slug
     childDataYaml___statistics
     childDataYaml___statistics___label
@@ -2697,157 +2763,8 @@ enum FileFieldsEnum {
     childMarkdownRemark___children___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childMarkdownRemark___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childMarkdownRemark___excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___featuredImg___absolutePath
-    childMarkdownRemark___featuredImg___accessTime
-    childMarkdownRemark___featuredImg___atime
-    childMarkdownRemark___featuredImg___atimeMs
-    childMarkdownRemark___featuredImg___base
-    childMarkdownRemark___featuredImg___birthTime
-    childMarkdownRemark___featuredImg___birthtime
-    childMarkdownRemark___featuredImg___birthtimeMs
-    childMarkdownRemark___featuredImg___blksize
-    childMarkdownRemark___featuredImg___blocks
-    childMarkdownRemark___featuredImg___changeTime
-    childMarkdownRemark___featuredImg___childCasesYaml___about
-    childMarkdownRemark___featuredImg___childCasesYaml___challenges
-    childMarkdownRemark___featuredImg___childCasesYaml___children
-    childMarkdownRemark___featuredImg___childCasesYaml___goals
-    childMarkdownRemark___featuredImg___childCasesYaml___id
-    childMarkdownRemark___featuredImg___childCasesYaml___lang
-    childMarkdownRemark___featuredImg___childCasesYaml___logo
-    childMarkdownRemark___featuredImg___childCasesYaml___originalPath
-    childMarkdownRemark___featuredImg___childCasesYaml___problem
-    childMarkdownRemark___featuredImg___childCasesYaml___results
-    childMarkdownRemark___featuredImg___childCasesYaml___slug
-    childMarkdownRemark___featuredImg___childCasesYaml___title
-    childMarkdownRemark___featuredImg___childCategoriesYaml___children
-    childMarkdownRemark___featuredImg___childCategoriesYaml___id
-    childMarkdownRemark___featuredImg___childCategoriesYaml___lang
-    childMarkdownRemark___featuredImg___childCategoriesYaml___order
-    childMarkdownRemark___featuredImg___childCategoriesYaml___services
-    childMarkdownRemark___featuredImg___childCategoriesYaml___short_description
-    childMarkdownRemark___featuredImg___childCategoriesYaml___slug
-    childMarkdownRemark___featuredImg___childCategoriesYaml___technologies
-    childMarkdownRemark___featuredImg___childCategoriesYaml___title
-    childMarkdownRemark___featuredImg___childContentYaml___body
-    childMarkdownRemark___featuredImg___childContentYaml___children
-    childMarkdownRemark___featuredImg___childContentYaml___history
-    childMarkdownRemark___featuredImg___childContentYaml___id
-    childMarkdownRemark___featuredImg___childContentYaml___lang
-    childMarkdownRemark___featuredImg___childContentYaml___pride
-    childMarkdownRemark___featuredImg___childContentYaml___sections
-    childMarkdownRemark___featuredImg___childContentYaml___slides
-    childMarkdownRemark___featuredImg___childContentYaml___slug
-    childMarkdownRemark___featuredImg___childContentYaml___team
-    childMarkdownRemark___featuredImg___childContentYaml___title
-    childMarkdownRemark___featuredImg___childDataYaml___children
-    childMarkdownRemark___featuredImg___childDataYaml___clients
-    childMarkdownRemark___featuredImg___childDataYaml___id
-    childMarkdownRemark___featuredImg___childDataYaml___slug
-    childMarkdownRemark___featuredImg___childDataYaml___statistics
-    childMarkdownRemark___featuredImg___childDataYaml___technologies
-    childMarkdownRemark___featuredImg___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___featuredImg___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___featuredImg___childMarkdownRemark___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___featuredImg___childMarkdownRemark___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___featuredImg___childMarkdownRemark___excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___featuredImg___childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___featuredImg___childMarkdownRemark___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___featuredImg___childMarkdownRemark___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___featuredImg___childMarkdownRemark___htmlAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___featuredImg___childMarkdownRemark___id
-    childMarkdownRemark___featuredImg___childMarkdownRemark___rawMarkdownBody @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___featuredImg___childMarkdownRemark___tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___featuredImg___childMarkdownRemark___timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___featuredImg___childPostsYaml___author
-    childMarkdownRemark___featuredImg___childPostsYaml___body
-    childMarkdownRemark___featuredImg___childPostsYaml___children
-    childMarkdownRemark___featuredImg___childPostsYaml___date
-    childMarkdownRemark___featuredImg___childPostsYaml___description
-    childMarkdownRemark___featuredImg___childPostsYaml___id
-    childMarkdownRemark___featuredImg___childPostsYaml___image
-    childMarkdownRemark___featuredImg___childPostsYaml___lang
-    childMarkdownRemark___featuredImg___childPostsYaml___originalPath
-    childMarkdownRemark___featuredImg___childPostsYaml___slug
-    childMarkdownRemark___featuredImg___childPostsYaml___tags
-    childMarkdownRemark___featuredImg___childPostsYaml___title
-    childMarkdownRemark___featuredImg___childProcessYaml___children
-    childMarkdownRemark___featuredImg___childProcessYaml___description
-    childMarkdownRemark___featuredImg___childProcessYaml___duration
-    childMarkdownRemark___featuredImg___childProcessYaml___id
-    childMarkdownRemark___featuredImg___childProcessYaml___intro
-    childMarkdownRemark___featuredImg___childProcessYaml___lang
-    childMarkdownRemark___featuredImg___childProcessYaml___objective
-    childMarkdownRemark___featuredImg___childProcessYaml___slug
-    childMarkdownRemark___featuredImg___childProcessYaml___subtitle
-    childMarkdownRemark___featuredImg___childProcessYaml___title
-    childMarkdownRemark___featuredImg___childResourcesYaml___children
-    childMarkdownRemark___featuredImg___childResourcesYaml___cta
-    childMarkdownRemark___featuredImg___childResourcesYaml___id
-    childMarkdownRemark___featuredImg___childResourcesYaml___lang
-    childMarkdownRemark___featuredImg___childResourcesYaml___slug
-    childMarkdownRemark___featuredImg___childResourcesYaml___title
-    childMarkdownRemark___featuredImg___childServicesYaml___children
-    childMarkdownRemark___featuredImg___childServicesYaml___id
-    childMarkdownRemark___featuredImg___childServicesYaml___lang
-    childMarkdownRemark___featuredImg___childServicesYaml___slug
-    childMarkdownRemark___featuredImg___childServicesYaml___title
-    childMarkdownRemark___featuredImg___childSplitsYaml___body
-    childMarkdownRemark___featuredImg___childSplitsYaml___children
-    childMarkdownRemark___featuredImg___childSplitsYaml___id
-    childMarkdownRemark___featuredImg___childSplitsYaml___lang
-    childMarkdownRemark___featuredImg___childSplitsYaml___slug
-    childMarkdownRemark___featuredImg___childSplitsYaml___title
-    childMarkdownRemark___featuredImg___childTestimonialsYaml___author
-    childMarkdownRemark___featuredImg___childTestimonialsYaml___body
-    childMarkdownRemark___featuredImg___childTestimonialsYaml___children
-    childMarkdownRemark___featuredImg___childTestimonialsYaml___client
-    childMarkdownRemark___featuredImg___childTestimonialsYaml___id
-    childMarkdownRemark___featuredImg___childTestimonialsYaml___lang
-    childMarkdownRemark___featuredImg___childTestimonialsYaml___role
-    childMarkdownRemark___featuredImg___childTestimonialsYaml___slug
-    childMarkdownRemark___featuredImg___children
-    childMarkdownRemark___featuredImg___children___children
-    childMarkdownRemark___featuredImg___children___id
-    childMarkdownRemark___featuredImg___ctime
-    childMarkdownRemark___featuredImg___ctimeMs
-    childMarkdownRemark___featuredImg___dev
-    childMarkdownRemark___featuredImg___dir
-    childMarkdownRemark___featuredImg___ext
-    childMarkdownRemark___featuredImg___extension
-    childMarkdownRemark___featuredImg___gid
-    childMarkdownRemark___featuredImg___id
-    childMarkdownRemark___featuredImg___ino
-    childMarkdownRemark___featuredImg___internal___content
-    childMarkdownRemark___featuredImg___internal___contentDigest
-    childMarkdownRemark___featuredImg___internal___description
-    childMarkdownRemark___featuredImg___internal___fieldOwners
-    childMarkdownRemark___featuredImg___internal___ignoreType
-    childMarkdownRemark___featuredImg___internal___mediaType
-    childMarkdownRemark___featuredImg___internal___owner
-    childMarkdownRemark___featuredImg___internal___type
-    childMarkdownRemark___featuredImg___mode
-    childMarkdownRemark___featuredImg___modifiedTime
-    childMarkdownRemark___featuredImg___mtime
-    childMarkdownRemark___featuredImg___mtimeMs
-    childMarkdownRemark___featuredImg___name
-    childMarkdownRemark___featuredImg___nlink
-    childMarkdownRemark___featuredImg___parent___children
-    childMarkdownRemark___featuredImg___parent___id
-    childMarkdownRemark___featuredImg___prettySize
-    childMarkdownRemark___featuredImg___publicURL
-    childMarkdownRemark___featuredImg___rdev
-    childMarkdownRemark___featuredImg___relativeDirectory
-    childMarkdownRemark___featuredImg___relativePath
-    childMarkdownRemark___featuredImg___root
-    childMarkdownRemark___featuredImg___size
-    childMarkdownRemark___featuredImg___sourceInstanceName
-    childMarkdownRemark___featuredImg___uid
-    childMarkdownRemark___featuredImg___url
     childMarkdownRemark___fields___collection @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childMarkdownRemark___frontmatter___featuredImgAlt
-    childMarkdownRemark___frontmatter___featuredImgUrl
     childMarkdownRemark___frontmatter___lang
     childMarkdownRemark___frontmatter___slug
     childMarkdownRemark___frontmatter___title
@@ -2904,155 +2821,161 @@ enum FileFieldsEnum {
     childPostsYaml___children___parent___id
     childPostsYaml___date
     childPostsYaml___description
-    childPostsYaml___featuredImage___absolutePath
-    childPostsYaml___featuredImage___accessTime
-    childPostsYaml___featuredImage___atime
-    childPostsYaml___featuredImage___atimeMs
-    childPostsYaml___featuredImage___base
-    childPostsYaml___featuredImage___birthTime
-    childPostsYaml___featuredImage___birthtime
-    childPostsYaml___featuredImage___birthtimeMs
-    childPostsYaml___featuredImage___blksize
-    childPostsYaml___featuredImage___blocks
-    childPostsYaml___featuredImage___changeTime
-    childPostsYaml___featuredImage___childCasesYaml___about
-    childPostsYaml___featuredImage___childCasesYaml___challenges
-    childPostsYaml___featuredImage___childCasesYaml___children
-    childPostsYaml___featuredImage___childCasesYaml___goals
-    childPostsYaml___featuredImage___childCasesYaml___id
-    childPostsYaml___featuredImage___childCasesYaml___lang
-    childPostsYaml___featuredImage___childCasesYaml___logo
-    childPostsYaml___featuredImage___childCasesYaml___originalPath
-    childPostsYaml___featuredImage___childCasesYaml___problem
-    childPostsYaml___featuredImage___childCasesYaml___results
-    childPostsYaml___featuredImage___childCasesYaml___slug
-    childPostsYaml___featuredImage___childCasesYaml___title
-    childPostsYaml___featuredImage___childCategoriesYaml___children
-    childPostsYaml___featuredImage___childCategoriesYaml___id
-    childPostsYaml___featuredImage___childCategoriesYaml___lang
-    childPostsYaml___featuredImage___childCategoriesYaml___order
-    childPostsYaml___featuredImage___childCategoriesYaml___services
-    childPostsYaml___featuredImage___childCategoriesYaml___short_description
-    childPostsYaml___featuredImage___childCategoriesYaml___slug
-    childPostsYaml___featuredImage___childCategoriesYaml___technologies
-    childPostsYaml___featuredImage___childCategoriesYaml___title
-    childPostsYaml___featuredImage___childContentYaml___body
-    childPostsYaml___featuredImage___childContentYaml___children
-    childPostsYaml___featuredImage___childContentYaml___history
-    childPostsYaml___featuredImage___childContentYaml___id
-    childPostsYaml___featuredImage___childContentYaml___lang
-    childPostsYaml___featuredImage___childContentYaml___pride
-    childPostsYaml___featuredImage___childContentYaml___sections
-    childPostsYaml___featuredImage___childContentYaml___slides
-    childPostsYaml___featuredImage___childContentYaml___slug
-    childPostsYaml___featuredImage___childContentYaml___team
-    childPostsYaml___featuredImage___childContentYaml___title
-    childPostsYaml___featuredImage___childDataYaml___children
-    childPostsYaml___featuredImage___childDataYaml___clients
-    childPostsYaml___featuredImage___childDataYaml___id
-    childPostsYaml___featuredImage___childDataYaml___slug
-    childPostsYaml___featuredImage___childDataYaml___statistics
-    childPostsYaml___featuredImage___childDataYaml___technologies
-    childPostsYaml___featuredImage___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childPostsYaml___featuredImage___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childPostsYaml___featuredImage___childMarkdownRemark___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childPostsYaml___featuredImage___childMarkdownRemark___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childPostsYaml___featuredImage___childMarkdownRemark___excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childPostsYaml___featuredImage___childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childPostsYaml___featuredImage___childMarkdownRemark___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childPostsYaml___featuredImage___childMarkdownRemark___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childPostsYaml___featuredImage___childMarkdownRemark___htmlAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childPostsYaml___featuredImage___childMarkdownRemark___id
-    childPostsYaml___featuredImage___childMarkdownRemark___rawMarkdownBody @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childPostsYaml___featuredImage___childMarkdownRemark___tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childPostsYaml___featuredImage___childMarkdownRemark___timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    childPostsYaml___featuredImage___childPostsYaml___author
-    childPostsYaml___featuredImage___childPostsYaml___body
-    childPostsYaml___featuredImage___childPostsYaml___children
-    childPostsYaml___featuredImage___childPostsYaml___date
-    childPostsYaml___featuredImage___childPostsYaml___description
-    childPostsYaml___featuredImage___childPostsYaml___id
-    childPostsYaml___featuredImage___childPostsYaml___image
-    childPostsYaml___featuredImage___childPostsYaml___lang
-    childPostsYaml___featuredImage___childPostsYaml___originalPath
-    childPostsYaml___featuredImage___childPostsYaml___slug
-    childPostsYaml___featuredImage___childPostsYaml___tags
-    childPostsYaml___featuredImage___childPostsYaml___title
-    childPostsYaml___featuredImage___childProcessYaml___children
-    childPostsYaml___featuredImage___childProcessYaml___description
-    childPostsYaml___featuredImage___childProcessYaml___duration
-    childPostsYaml___featuredImage___childProcessYaml___id
-    childPostsYaml___featuredImage___childProcessYaml___intro
-    childPostsYaml___featuredImage___childProcessYaml___lang
-    childPostsYaml___featuredImage___childProcessYaml___objective
-    childPostsYaml___featuredImage___childProcessYaml___slug
-    childPostsYaml___featuredImage___childProcessYaml___subtitle
-    childPostsYaml___featuredImage___childProcessYaml___title
-    childPostsYaml___featuredImage___childResourcesYaml___children
-    childPostsYaml___featuredImage___childResourcesYaml___cta
-    childPostsYaml___featuredImage___childResourcesYaml___id
-    childPostsYaml___featuredImage___childResourcesYaml___lang
-    childPostsYaml___featuredImage___childResourcesYaml___slug
-    childPostsYaml___featuredImage___childResourcesYaml___title
-    childPostsYaml___featuredImage___childServicesYaml___children
-    childPostsYaml___featuredImage___childServicesYaml___id
-    childPostsYaml___featuredImage___childServicesYaml___lang
-    childPostsYaml___featuredImage___childServicesYaml___slug
-    childPostsYaml___featuredImage___childServicesYaml___title
-    childPostsYaml___featuredImage___childSplitsYaml___body
-    childPostsYaml___featuredImage___childSplitsYaml___children
-    childPostsYaml___featuredImage___childSplitsYaml___id
-    childPostsYaml___featuredImage___childSplitsYaml___lang
-    childPostsYaml___featuredImage___childSplitsYaml___slug
-    childPostsYaml___featuredImage___childSplitsYaml___title
-    childPostsYaml___featuredImage___childTestimonialsYaml___author
-    childPostsYaml___featuredImage___childTestimonialsYaml___body
-    childPostsYaml___featuredImage___childTestimonialsYaml___children
-    childPostsYaml___featuredImage___childTestimonialsYaml___client
-    childPostsYaml___featuredImage___childTestimonialsYaml___id
-    childPostsYaml___featuredImage___childTestimonialsYaml___lang
-    childPostsYaml___featuredImage___childTestimonialsYaml___role
-    childPostsYaml___featuredImage___childTestimonialsYaml___slug
-    childPostsYaml___featuredImage___children
-    childPostsYaml___featuredImage___children___children
-    childPostsYaml___featuredImage___children___id
-    childPostsYaml___featuredImage___ctime
-    childPostsYaml___featuredImage___ctimeMs
-    childPostsYaml___featuredImage___dev
-    childPostsYaml___featuredImage___dir
-    childPostsYaml___featuredImage___ext
-    childPostsYaml___featuredImage___extension
-    childPostsYaml___featuredImage___gid
-    childPostsYaml___featuredImage___id
-    childPostsYaml___featuredImage___ino
-    childPostsYaml___featuredImage___internal___content
-    childPostsYaml___featuredImage___internal___contentDigest
-    childPostsYaml___featuredImage___internal___description
-    childPostsYaml___featuredImage___internal___fieldOwners
-    childPostsYaml___featuredImage___internal___ignoreType
-    childPostsYaml___featuredImage___internal___mediaType
-    childPostsYaml___featuredImage___internal___owner
-    childPostsYaml___featuredImage___internal___type
-    childPostsYaml___featuredImage___mode
-    childPostsYaml___featuredImage___modifiedTime
-    childPostsYaml___featuredImage___mtime
-    childPostsYaml___featuredImage___mtimeMs
-    childPostsYaml___featuredImage___name
-    childPostsYaml___featuredImage___nlink
-    childPostsYaml___featuredImage___parent___children
-    childPostsYaml___featuredImage___parent___id
-    childPostsYaml___featuredImage___prettySize
-    childPostsYaml___featuredImage___publicURL
-    childPostsYaml___featuredImage___rdev
-    childPostsYaml___featuredImage___relativeDirectory
-    childPostsYaml___featuredImage___relativePath
-    childPostsYaml___featuredImage___root
-    childPostsYaml___featuredImage___size
-    childPostsYaml___featuredImage___sourceInstanceName
-    childPostsYaml___featuredImage___uid
-    childPostsYaml___featuredImage___url
     childPostsYaml___id
-    childPostsYaml___image
+    childPostsYaml___image___absolutePath
+    childPostsYaml___image___accessTime
+    childPostsYaml___image___atime
+    childPostsYaml___image___atimeMs
+    childPostsYaml___image___base
+    childPostsYaml___image___birthTime
+    childPostsYaml___image___birthtime
+    childPostsYaml___image___birthtimeMs
+    childPostsYaml___image___blksize
+    childPostsYaml___image___blocks
+    childPostsYaml___image___changeTime
+    childPostsYaml___image___childCasesYaml___about
+    childPostsYaml___image___childCasesYaml___challenges
+    childPostsYaml___image___childCasesYaml___children
+    childPostsYaml___image___childCasesYaml___goals
+    childPostsYaml___image___childCasesYaml___id
+    childPostsYaml___image___childCasesYaml___lang
+    childPostsYaml___image___childCasesYaml___logo
+    childPostsYaml___image___childCasesYaml___originalPath
+    childPostsYaml___image___childCasesYaml___problem
+    childPostsYaml___image___childCasesYaml___results
+    childPostsYaml___image___childCasesYaml___slug
+    childPostsYaml___image___childCasesYaml___title
+    childPostsYaml___image___childCategoriesYaml___children
+    childPostsYaml___image___childCategoriesYaml___id
+    childPostsYaml___image___childCategoriesYaml___lang
+    childPostsYaml___image___childCategoriesYaml___order
+    childPostsYaml___image___childCategoriesYaml___services
+    childPostsYaml___image___childCategoriesYaml___short_description
+    childPostsYaml___image___childCategoriesYaml___slug
+    childPostsYaml___image___childCategoriesYaml___technologies
+    childPostsYaml___image___childCategoriesYaml___title
+    childPostsYaml___image___childContentYaml___body
+    childPostsYaml___image___childContentYaml___children
+    childPostsYaml___image___childContentYaml___history
+    childPostsYaml___image___childContentYaml___id
+    childPostsYaml___image___childContentYaml___lang
+    childPostsYaml___image___childContentYaml___pride
+    childPostsYaml___image___childContentYaml___sections
+    childPostsYaml___image___childContentYaml___slides
+    childPostsYaml___image___childContentYaml___slug
+    childPostsYaml___image___childContentYaml___team
+    childPostsYaml___image___childContentYaml___title
+    childPostsYaml___image___childDataYaml___children
+    childPostsYaml___image___childDataYaml___clients
+    childPostsYaml___image___childDataYaml___id
+    childPostsYaml___image___childDataYaml___skills
+    childPostsYaml___image___childDataYaml___slug
+    childPostsYaml___image___childDataYaml___statistics
+    childPostsYaml___image___childDataYaml___technologies
+    childPostsYaml___image___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childPostsYaml___image___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childPostsYaml___image___childMarkdownRemark___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childPostsYaml___image___childMarkdownRemark___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childPostsYaml___image___childMarkdownRemark___excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childPostsYaml___image___childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childPostsYaml___image___childMarkdownRemark___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childPostsYaml___image___childMarkdownRemark___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childPostsYaml___image___childMarkdownRemark___htmlAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childPostsYaml___image___childMarkdownRemark___id
+    childPostsYaml___image___childMarkdownRemark___rawMarkdownBody @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childPostsYaml___image___childMarkdownRemark___tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childPostsYaml___image___childMarkdownRemark___timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childPostsYaml___image___childPostsYaml___author
+    childPostsYaml___image___childPostsYaml___body
+    childPostsYaml___image___childPostsYaml___children
+    childPostsYaml___image___childPostsYaml___date
+    childPostsYaml___image___childPostsYaml___description
+    childPostsYaml___image___childPostsYaml___id
+    childPostsYaml___image___childPostsYaml___lang
+    childPostsYaml___image___childPostsYaml___originalPath
+    childPostsYaml___image___childPostsYaml___slug
+    childPostsYaml___image___childPostsYaml___tags
+    childPostsYaml___image___childPostsYaml___title
+    childPostsYaml___image___childProcessYaml___children
+    childPostsYaml___image___childProcessYaml___description
+    childPostsYaml___image___childProcessYaml___duration
+    childPostsYaml___image___childProcessYaml___id
+    childPostsYaml___image___childProcessYaml___intro
+    childPostsYaml___image___childProcessYaml___lang
+    childPostsYaml___image___childProcessYaml___objective
+    childPostsYaml___image___childProcessYaml___slug
+    childPostsYaml___image___childProcessYaml___subtitle
+    childPostsYaml___image___childProcessYaml___title
+    childPostsYaml___image___childResourcesYaml___children
+    childPostsYaml___image___childResourcesYaml___id
+    childPostsYaml___image___childResourcesYaml___image
+    childPostsYaml___image___childResourcesYaml___lang
+    childPostsYaml___image___childResourcesYaml___originalPath
+    childPostsYaml___image___childResourcesYaml___slices
+    childPostsYaml___image___childResourcesYaml___slug
+    childPostsYaml___image___childResourcesYaml___title
+    childPostsYaml___image___childResourcesYaml___type
+    childPostsYaml___image___childServicesYaml___children
+    childPostsYaml___image___childServicesYaml___id
+    childPostsYaml___image___childServicesYaml___lang
+    childPostsYaml___image___childServicesYaml___layout
+    childPostsYaml___image___childServicesYaml___originalPath
+    childPostsYaml___image___childServicesYaml___slices
+    childPostsYaml___image___childServicesYaml___slug
+    childPostsYaml___image___childServicesYaml___title
+    childPostsYaml___image___childServicesYaml___type
+    childPostsYaml___image___childSplitsYaml___body
+    childPostsYaml___image___childSplitsYaml___children
+    childPostsYaml___image___childSplitsYaml___id
+    childPostsYaml___image___childSplitsYaml___lang
+    childPostsYaml___image___childSplitsYaml___list
+    childPostsYaml___image___childSplitsYaml___slug
+    childPostsYaml___image___childSplitsYaml___title
+    childPostsYaml___image___childTestimonialsYaml___author
+    childPostsYaml___image___childTestimonialsYaml___body
+    childPostsYaml___image___childTestimonialsYaml___children
+    childPostsYaml___image___childTestimonialsYaml___client
+    childPostsYaml___image___childTestimonialsYaml___id
+    childPostsYaml___image___childTestimonialsYaml___lang
+    childPostsYaml___image___childTestimonialsYaml___role
+    childPostsYaml___image___childTestimonialsYaml___slug
+    childPostsYaml___image___children
+    childPostsYaml___image___children___children
+    childPostsYaml___image___children___id
+    childPostsYaml___image___ctime
+    childPostsYaml___image___ctimeMs
+    childPostsYaml___image___dev
+    childPostsYaml___image___dir
+    childPostsYaml___image___ext
+    childPostsYaml___image___extension
+    childPostsYaml___image___gid
+    childPostsYaml___image___id
+    childPostsYaml___image___ino
+    childPostsYaml___image___internal___content
+    childPostsYaml___image___internal___contentDigest
+    childPostsYaml___image___internal___description
+    childPostsYaml___image___internal___fieldOwners
+    childPostsYaml___image___internal___ignoreType
+    childPostsYaml___image___internal___mediaType
+    childPostsYaml___image___internal___owner
+    childPostsYaml___image___internal___type
+    childPostsYaml___image___mode
+    childPostsYaml___image___modifiedTime
+    childPostsYaml___image___mtime
+    childPostsYaml___image___mtimeMs
+    childPostsYaml___image___name
+    childPostsYaml___image___nlink
+    childPostsYaml___image___parent___children
+    childPostsYaml___image___parent___id
+    childPostsYaml___image___prettySize
+    childPostsYaml___image___publicURL
+    childPostsYaml___image___rdev
+    childPostsYaml___image___relativeDirectory
+    childPostsYaml___image___relativePath
+    childPostsYaml___image___root
+    childPostsYaml___image___size
+    childPostsYaml___image___sourceInstanceName
+    childPostsYaml___image___uid
     childPostsYaml___internal___content
     childPostsYaml___internal___contentDigest
     childPostsYaml___internal___description
@@ -3143,8 +3066,8 @@ enum FileFieldsEnum {
     childResourcesYaml___children___internal___type
     childResourcesYaml___children___parent___children
     childResourcesYaml___children___parent___id
-    childResourcesYaml___cta
     childResourcesYaml___id
+    childResourcesYaml___image
     childResourcesYaml___internal___content
     childResourcesYaml___internal___contentDigest
     childResourcesYaml___internal___description
@@ -3154,6 +3077,7 @@ enum FileFieldsEnum {
     childResourcesYaml___internal___owner
     childResourcesYaml___internal___type
     childResourcesYaml___lang
+    childResourcesYaml___originalPath
     childResourcesYaml___parent___children
     childResourcesYaml___parent___children___children
     childResourcesYaml___parent___children___id
@@ -3168,8 +3092,15 @@ enum FileFieldsEnum {
     childResourcesYaml___parent___internal___type
     childResourcesYaml___parent___parent___children
     childResourcesYaml___parent___parent___id
+    childResourcesYaml___slices
+    childResourcesYaml___slices___body
+    childResourcesYaml___slices___id
+    childResourcesYaml___slices___subtitle
+    childResourcesYaml___slices___title
+    childResourcesYaml___slices___type
     childResourcesYaml___slug
     childResourcesYaml___title
+    childResourcesYaml___type
     childServicesYaml___children
     childServicesYaml___children___children
     childServicesYaml___children___children___children
@@ -3195,6 +3126,8 @@ enum FileFieldsEnum {
     childServicesYaml___internal___owner
     childServicesYaml___internal___type
     childServicesYaml___lang
+    childServicesYaml___layout
+    childServicesYaml___originalPath
     childServicesYaml___parent___children
     childServicesYaml___parent___children___children
     childServicesYaml___parent___children___id
@@ -3209,8 +3142,21 @@ enum FileFieldsEnum {
     childServicesYaml___parent___internal___type
     childServicesYaml___parent___parent___children
     childServicesYaml___parent___parent___id
+    childServicesYaml___slices
+    childServicesYaml___slices___body
+    childServicesYaml___slices___id
+    childServicesYaml___slices___list
+    childServicesYaml___slices___subtitle
+    childServicesYaml___slices___testimonials
+    childServicesYaml___slices___testimonials___author
+    childServicesYaml___slices___testimonials___company
+    childServicesYaml___slices___testimonials___quote
+    childServicesYaml___slices___testimonials___role
+    childServicesYaml___slices___title
+    childServicesYaml___slices___type
     childServicesYaml___slug
     childServicesYaml___title
+    childServicesYaml___type
     childSplitsYaml___body
     childSplitsYaml___children
     childSplitsYaml___children___children
@@ -3239,6 +3185,7 @@ enum FileFieldsEnum {
     childSplitsYaml___internal___owner
     childSplitsYaml___internal___type
     childSplitsYaml___lang
+    childSplitsYaml___list
     childSplitsYaml___parent___children
     childSplitsYaml___parent___children___children
     childSplitsYaml___parent___children___id
@@ -3320,6 +3267,7 @@ enum FileFieldsEnum {
     childTestimonialsYaml___image___childDataYaml___children
     childTestimonialsYaml___image___childDataYaml___clients
     childTestimonialsYaml___image___childDataYaml___id
+    childTestimonialsYaml___image___childDataYaml___skills
     childTestimonialsYaml___image___childDataYaml___slug
     childTestimonialsYaml___image___childDataYaml___statistics
     childTestimonialsYaml___image___childDataYaml___technologies
@@ -3342,7 +3290,6 @@ enum FileFieldsEnum {
     childTestimonialsYaml___image___childPostsYaml___date
     childTestimonialsYaml___image___childPostsYaml___description
     childTestimonialsYaml___image___childPostsYaml___id
-    childTestimonialsYaml___image___childPostsYaml___image
     childTestimonialsYaml___image___childPostsYaml___lang
     childTestimonialsYaml___image___childPostsYaml___originalPath
     childTestimonialsYaml___image___childPostsYaml___slug
@@ -3359,20 +3306,28 @@ enum FileFieldsEnum {
     childTestimonialsYaml___image___childProcessYaml___subtitle
     childTestimonialsYaml___image___childProcessYaml___title
     childTestimonialsYaml___image___childResourcesYaml___children
-    childTestimonialsYaml___image___childResourcesYaml___cta
     childTestimonialsYaml___image___childResourcesYaml___id
+    childTestimonialsYaml___image___childResourcesYaml___image
     childTestimonialsYaml___image___childResourcesYaml___lang
+    childTestimonialsYaml___image___childResourcesYaml___originalPath
+    childTestimonialsYaml___image___childResourcesYaml___slices
     childTestimonialsYaml___image___childResourcesYaml___slug
     childTestimonialsYaml___image___childResourcesYaml___title
+    childTestimonialsYaml___image___childResourcesYaml___type
     childTestimonialsYaml___image___childServicesYaml___children
     childTestimonialsYaml___image___childServicesYaml___id
     childTestimonialsYaml___image___childServicesYaml___lang
+    childTestimonialsYaml___image___childServicesYaml___layout
+    childTestimonialsYaml___image___childServicesYaml___originalPath
+    childTestimonialsYaml___image___childServicesYaml___slices
     childTestimonialsYaml___image___childServicesYaml___slug
     childTestimonialsYaml___image___childServicesYaml___title
+    childTestimonialsYaml___image___childServicesYaml___type
     childTestimonialsYaml___image___childSplitsYaml___body
     childTestimonialsYaml___image___childSplitsYaml___children
     childTestimonialsYaml___image___childSplitsYaml___id
     childTestimonialsYaml___image___childSplitsYaml___lang
+    childTestimonialsYaml___image___childSplitsYaml___list
     childTestimonialsYaml___image___childSplitsYaml___slug
     childTestimonialsYaml___image___childSplitsYaml___title
     childTestimonialsYaml___image___childTestimonialsYaml___author
@@ -3420,7 +3375,6 @@ enum FileFieldsEnum {
     childTestimonialsYaml___image___size
     childTestimonialsYaml___image___sourceInstanceName
     childTestimonialsYaml___image___uid
-    childTestimonialsYaml___image___url
     childTestimonialsYaml___internal___content
     childTestimonialsYaml___internal___contentDigest
     childTestimonialsYaml___internal___description
@@ -3555,7 +3509,6 @@ enum FileFieldsEnum {
     size
     sourceInstanceName
     uid
-    url
 }
 
 enum ImageCropFocus {
@@ -3786,528 +3739,8 @@ enum MarkdownRemarkFieldsEnum {
     children___parent___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___absolutePath
-    featuredImg___accessTime
-    featuredImg___atime
-    featuredImg___atimeMs
-    featuredImg___base
-    featuredImg___birthTime
-    featuredImg___birthtime
-    featuredImg___birthtimeMs
-    featuredImg___blksize
-    featuredImg___blocks
-    featuredImg___changeTime
-    featuredImg___childCasesYaml___about
-    featuredImg___childCasesYaml___challenges
-    featuredImg___childCasesYaml___children
-    featuredImg___childCasesYaml___children___children
-    featuredImg___childCasesYaml___children___id
-    featuredImg___childCasesYaml___goals
-    featuredImg___childCasesYaml___id
-    featuredImg___childCasesYaml___internal___content
-    featuredImg___childCasesYaml___internal___contentDigest
-    featuredImg___childCasesYaml___internal___description
-    featuredImg___childCasesYaml___internal___fieldOwners
-    featuredImg___childCasesYaml___internal___ignoreType
-    featuredImg___childCasesYaml___internal___mediaType
-    featuredImg___childCasesYaml___internal___owner
-    featuredImg___childCasesYaml___internal___type
-    featuredImg___childCasesYaml___lang
-    featuredImg___childCasesYaml___logo
-    featuredImg___childCasesYaml___originalPath
-    featuredImg___childCasesYaml___parent___children
-    featuredImg___childCasesYaml___parent___id
-    featuredImg___childCasesYaml___problem
-    featuredImg___childCasesYaml___results
-    featuredImg___childCasesYaml___slug
-    featuredImg___childCasesYaml___title
-    featuredImg___childCategoriesYaml___children
-    featuredImg___childCategoriesYaml___children___children
-    featuredImg___childCategoriesYaml___children___id
-    featuredImg___childCategoriesYaml___id
-    featuredImg___childCategoriesYaml___internal___content
-    featuredImg___childCategoriesYaml___internal___contentDigest
-    featuredImg___childCategoriesYaml___internal___description
-    featuredImg___childCategoriesYaml___internal___fieldOwners
-    featuredImg___childCategoriesYaml___internal___ignoreType
-    featuredImg___childCategoriesYaml___internal___mediaType
-    featuredImg___childCategoriesYaml___internal___owner
-    featuredImg___childCategoriesYaml___internal___type
-    featuredImg___childCategoriesYaml___lang
-    featuredImg___childCategoriesYaml___order
-    featuredImg___childCategoriesYaml___parent___children
-    featuredImg___childCategoriesYaml___parent___id
-    featuredImg___childCategoriesYaml___services
-    featuredImg___childCategoriesYaml___short_description
-    featuredImg___childCategoriesYaml___slug
-    featuredImg___childCategoriesYaml___technologies
-    featuredImg___childCategoriesYaml___title
-    featuredImg___childContentYaml___body
-    featuredImg___childContentYaml___children
-    featuredImg___childContentYaml___children___children
-    featuredImg___childContentYaml___children___id
-    featuredImg___childContentYaml___history
-    featuredImg___childContentYaml___history___date
-    featuredImg___childContentYaml___history___event
-    featuredImg___childContentYaml___id
-    featuredImg___childContentYaml___internal___content
-    featuredImg___childContentYaml___internal___contentDigest
-    featuredImg___childContentYaml___internal___description
-    featuredImg___childContentYaml___internal___fieldOwners
-    featuredImg___childContentYaml___internal___ignoreType
-    featuredImg___childContentYaml___internal___mediaType
-    featuredImg___childContentYaml___internal___owner
-    featuredImg___childContentYaml___internal___type
-    featuredImg___childContentYaml___lang
-    featuredImg___childContentYaml___parent___children
-    featuredImg___childContentYaml___parent___id
-    featuredImg___childContentYaml___pride
-    featuredImg___childContentYaml___pride___body
-    featuredImg___childContentYaml___pride___subtitle
-    featuredImg___childContentYaml___pride___title
-    featuredImg___childContentYaml___sections
-    featuredImg___childContentYaml___sections___body
-    featuredImg___childContentYaml___sections___link
-    featuredImg___childContentYaml___sections___slug
-    featuredImg___childContentYaml___sections___subtitle
-    featuredImg___childContentYaml___sections___title
-    featuredImg___childContentYaml___slides
-    featuredImg___childContentYaml___slides___body
-    featuredImg___childContentYaml___slides___buttons
-    featuredImg___childContentYaml___slides___title
-    featuredImg___childContentYaml___slug
-    featuredImg___childContentYaml___team
-    featuredImg___childContentYaml___team___id
-    featuredImg___childContentYaml___team___name
-    featuredImg___childContentYaml___team___role
-    featuredImg___childContentYaml___title
-    featuredImg___childDataYaml___children
-    featuredImg___childDataYaml___children___children
-    featuredImg___childDataYaml___children___id
-    featuredImg___childDataYaml___clients
-    featuredImg___childDataYaml___clients___image
-    featuredImg___childDataYaml___clients___type
-    featuredImg___childDataYaml___clients___value
-    featuredImg___childDataYaml___id
-    featuredImg___childDataYaml___internal___content
-    featuredImg___childDataYaml___internal___contentDigest
-    featuredImg___childDataYaml___internal___description
-    featuredImg___childDataYaml___internal___fieldOwners
-    featuredImg___childDataYaml___internal___ignoreType
-    featuredImg___childDataYaml___internal___mediaType
-    featuredImg___childDataYaml___internal___owner
-    featuredImg___childDataYaml___internal___type
-    featuredImg___childDataYaml___parent___children
-    featuredImg___childDataYaml___parent___id
-    featuredImg___childDataYaml___slug
-    featuredImg___childDataYaml___statistics
-    featuredImg___childDataYaml___statistics___label
-    featuredImg___childDataYaml___statistics___value
-    featuredImg___childDataYaml___technologies
-    featuredImg___childDataYaml___technologies___image
-    featuredImg___childDataYaml___technologies___type
-    featuredImg___childDataYaml___technologies___value
-    featuredImg___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___children___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___children___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fixed___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fixed___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fixed___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fixed___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fixed___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fixed___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fixed___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fixed___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fixed___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fixed___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fluid___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fluid___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fluid___originalImg @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fluid___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fluid___presentationHeight @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fluid___presentationWidth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fluid___sizes @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fluid___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fluid___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fluid___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fluid___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___fluid___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___internal___content @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___internal___contentDigest @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___internal___description @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___internal___fieldOwners @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___internal___ignoreType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___internal___mediaType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___internal___owner @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___internal___type @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___original___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___original___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___original___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resize___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resize___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resize___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resize___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resize___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resize___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resolutions___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resolutions___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resolutions___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resolutions___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resolutions___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resolutions___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resolutions___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resolutions___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resolutions___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___resolutions___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___sizes___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___sizes___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___sizes___originalImg @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___sizes___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___sizes___presentationHeight @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___sizes___presentationWidth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___sizes___sizes @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___sizes___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___sizes___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___sizes___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___sizes___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childImageSharp___sizes___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___children___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___children___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___featuredImg___absolutePath
-    featuredImg___childMarkdownRemark___featuredImg___accessTime
-    featuredImg___childMarkdownRemark___featuredImg___atime
-    featuredImg___childMarkdownRemark___featuredImg___atimeMs
-    featuredImg___childMarkdownRemark___featuredImg___base
-    featuredImg___childMarkdownRemark___featuredImg___birthTime
-    featuredImg___childMarkdownRemark___featuredImg___birthtime
-    featuredImg___childMarkdownRemark___featuredImg___birthtimeMs
-    featuredImg___childMarkdownRemark___featuredImg___blksize
-    featuredImg___childMarkdownRemark___featuredImg___blocks
-    featuredImg___childMarkdownRemark___featuredImg___changeTime
-    featuredImg___childMarkdownRemark___featuredImg___children
-    featuredImg___childMarkdownRemark___featuredImg___ctime
-    featuredImg___childMarkdownRemark___featuredImg___ctimeMs
-    featuredImg___childMarkdownRemark___featuredImg___dev
-    featuredImg___childMarkdownRemark___featuredImg___dir
-    featuredImg___childMarkdownRemark___featuredImg___ext
-    featuredImg___childMarkdownRemark___featuredImg___extension
-    featuredImg___childMarkdownRemark___featuredImg___gid
-    featuredImg___childMarkdownRemark___featuredImg___id
-    featuredImg___childMarkdownRemark___featuredImg___ino
-    featuredImg___childMarkdownRemark___featuredImg___mode
-    featuredImg___childMarkdownRemark___featuredImg___modifiedTime
-    featuredImg___childMarkdownRemark___featuredImg___mtime
-    featuredImg___childMarkdownRemark___featuredImg___mtimeMs
-    featuredImg___childMarkdownRemark___featuredImg___name
-    featuredImg___childMarkdownRemark___featuredImg___nlink
-    featuredImg___childMarkdownRemark___featuredImg___prettySize
-    featuredImg___childMarkdownRemark___featuredImg___publicURL
-    featuredImg___childMarkdownRemark___featuredImg___rdev
-    featuredImg___childMarkdownRemark___featuredImg___relativeDirectory
-    featuredImg___childMarkdownRemark___featuredImg___relativePath
-    featuredImg___childMarkdownRemark___featuredImg___root
-    featuredImg___childMarkdownRemark___featuredImg___size
-    featuredImg___childMarkdownRemark___featuredImg___sourceInstanceName
-    featuredImg___childMarkdownRemark___featuredImg___uid
-    featuredImg___childMarkdownRemark___featuredImg___url
-    featuredImg___childMarkdownRemark___fields___collection @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___frontmatter___featuredImgAlt
-    featuredImg___childMarkdownRemark___frontmatter___featuredImgUrl
-    featuredImg___childMarkdownRemark___frontmatter___lang
-    featuredImg___childMarkdownRemark___frontmatter___slug
-    featuredImg___childMarkdownRemark___frontmatter___title
-    featuredImg___childMarkdownRemark___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___htmlAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___id
-    featuredImg___childMarkdownRemark___internal___content @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___internal___contentDigest @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___internal___description @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___internal___fieldOwners @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___internal___ignoreType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___internal___mediaType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___internal___owner @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___internal___type @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___rawMarkdownBody @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___wordCount___paragraphs @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___wordCount___sentences @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childMarkdownRemark___wordCount___words @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImg___childPostsYaml___author
-    featuredImg___childPostsYaml___body
-    featuredImg___childPostsYaml___children
-    featuredImg___childPostsYaml___children___children
-    featuredImg___childPostsYaml___children___id
-    featuredImg___childPostsYaml___date
-    featuredImg___childPostsYaml___description
-    featuredImg___childPostsYaml___featuredImage___absolutePath
-    featuredImg___childPostsYaml___featuredImage___accessTime
-    featuredImg___childPostsYaml___featuredImage___atime
-    featuredImg___childPostsYaml___featuredImage___atimeMs
-    featuredImg___childPostsYaml___featuredImage___base
-    featuredImg___childPostsYaml___featuredImage___birthTime
-    featuredImg___childPostsYaml___featuredImage___birthtime
-    featuredImg___childPostsYaml___featuredImage___birthtimeMs
-    featuredImg___childPostsYaml___featuredImage___blksize
-    featuredImg___childPostsYaml___featuredImage___blocks
-    featuredImg___childPostsYaml___featuredImage___changeTime
-    featuredImg___childPostsYaml___featuredImage___children
-    featuredImg___childPostsYaml___featuredImage___ctime
-    featuredImg___childPostsYaml___featuredImage___ctimeMs
-    featuredImg___childPostsYaml___featuredImage___dev
-    featuredImg___childPostsYaml___featuredImage___dir
-    featuredImg___childPostsYaml___featuredImage___ext
-    featuredImg___childPostsYaml___featuredImage___extension
-    featuredImg___childPostsYaml___featuredImage___gid
-    featuredImg___childPostsYaml___featuredImage___id
-    featuredImg___childPostsYaml___featuredImage___ino
-    featuredImg___childPostsYaml___featuredImage___mode
-    featuredImg___childPostsYaml___featuredImage___modifiedTime
-    featuredImg___childPostsYaml___featuredImage___mtime
-    featuredImg___childPostsYaml___featuredImage___mtimeMs
-    featuredImg___childPostsYaml___featuredImage___name
-    featuredImg___childPostsYaml___featuredImage___nlink
-    featuredImg___childPostsYaml___featuredImage___prettySize
-    featuredImg___childPostsYaml___featuredImage___publicURL
-    featuredImg___childPostsYaml___featuredImage___rdev
-    featuredImg___childPostsYaml___featuredImage___relativeDirectory
-    featuredImg___childPostsYaml___featuredImage___relativePath
-    featuredImg___childPostsYaml___featuredImage___root
-    featuredImg___childPostsYaml___featuredImage___size
-    featuredImg___childPostsYaml___featuredImage___sourceInstanceName
-    featuredImg___childPostsYaml___featuredImage___uid
-    featuredImg___childPostsYaml___featuredImage___url
-    featuredImg___childPostsYaml___id
-    featuredImg___childPostsYaml___image
-    featuredImg___childPostsYaml___internal___content
-    featuredImg___childPostsYaml___internal___contentDigest
-    featuredImg___childPostsYaml___internal___description
-    featuredImg___childPostsYaml___internal___fieldOwners
-    featuredImg___childPostsYaml___internal___ignoreType
-    featuredImg___childPostsYaml___internal___mediaType
-    featuredImg___childPostsYaml___internal___owner
-    featuredImg___childPostsYaml___internal___type
-    featuredImg___childPostsYaml___lang
-    featuredImg___childPostsYaml___originalPath
-    featuredImg___childPostsYaml___parent___children
-    featuredImg___childPostsYaml___parent___id
-    featuredImg___childPostsYaml___slug
-    featuredImg___childPostsYaml___tags
-    featuredImg___childPostsYaml___tags___label
-    featuredImg___childPostsYaml___tags___value
-    featuredImg___childPostsYaml___title
-    featuredImg___childProcessYaml___children
-    featuredImg___childProcessYaml___children___children
-    featuredImg___childProcessYaml___children___id
-    featuredImg___childProcessYaml___description
-    featuredImg___childProcessYaml___duration
-    featuredImg___childProcessYaml___id
-    featuredImg___childProcessYaml___internal___content
-    featuredImg___childProcessYaml___internal___contentDigest
-    featuredImg___childProcessYaml___internal___description
-    featuredImg___childProcessYaml___internal___fieldOwners
-    featuredImg___childProcessYaml___internal___ignoreType
-    featuredImg___childProcessYaml___internal___mediaType
-    featuredImg___childProcessYaml___internal___owner
-    featuredImg___childProcessYaml___internal___type
-    featuredImg___childProcessYaml___intro
-    featuredImg___childProcessYaml___lang
-    featuredImg___childProcessYaml___objective
-    featuredImg___childProcessYaml___parent___children
-    featuredImg___childProcessYaml___parent___id
-    featuredImg___childProcessYaml___slug
-    featuredImg___childProcessYaml___subtitle
-    featuredImg___childProcessYaml___title
-    featuredImg___childResourcesYaml___children
-    featuredImg___childResourcesYaml___children___children
-    featuredImg___childResourcesYaml___children___id
-    featuredImg___childResourcesYaml___cta
-    featuredImg___childResourcesYaml___id
-    featuredImg___childResourcesYaml___internal___content
-    featuredImg___childResourcesYaml___internal___contentDigest
-    featuredImg___childResourcesYaml___internal___description
-    featuredImg___childResourcesYaml___internal___fieldOwners
-    featuredImg___childResourcesYaml___internal___ignoreType
-    featuredImg___childResourcesYaml___internal___mediaType
-    featuredImg___childResourcesYaml___internal___owner
-    featuredImg___childResourcesYaml___internal___type
-    featuredImg___childResourcesYaml___lang
-    featuredImg___childResourcesYaml___parent___children
-    featuredImg___childResourcesYaml___parent___id
-    featuredImg___childResourcesYaml___slug
-    featuredImg___childResourcesYaml___title
-    featuredImg___childServicesYaml___children
-    featuredImg___childServicesYaml___children___children
-    featuredImg___childServicesYaml___children___id
-    featuredImg___childServicesYaml___id
-    featuredImg___childServicesYaml___internal___content
-    featuredImg___childServicesYaml___internal___contentDigest
-    featuredImg___childServicesYaml___internal___description
-    featuredImg___childServicesYaml___internal___fieldOwners
-    featuredImg___childServicesYaml___internal___ignoreType
-    featuredImg___childServicesYaml___internal___mediaType
-    featuredImg___childServicesYaml___internal___owner
-    featuredImg___childServicesYaml___internal___type
-    featuredImg___childServicesYaml___lang
-    featuredImg___childServicesYaml___parent___children
-    featuredImg___childServicesYaml___parent___id
-    featuredImg___childServicesYaml___slug
-    featuredImg___childServicesYaml___title
-    featuredImg___childSplitsYaml___body
-    featuredImg___childSplitsYaml___children
-    featuredImg___childSplitsYaml___children___children
-    featuredImg___childSplitsYaml___children___id
-    featuredImg___childSplitsYaml___cta___link
-    featuredImg___childSplitsYaml___cta___title
-    featuredImg___childSplitsYaml___id
-    featuredImg___childSplitsYaml___internal___content
-    featuredImg___childSplitsYaml___internal___contentDigest
-    featuredImg___childSplitsYaml___internal___description
-    featuredImg___childSplitsYaml___internal___fieldOwners
-    featuredImg___childSplitsYaml___internal___ignoreType
-    featuredImg___childSplitsYaml___internal___mediaType
-    featuredImg___childSplitsYaml___internal___owner
-    featuredImg___childSplitsYaml___internal___type
-    featuredImg___childSplitsYaml___lang
-    featuredImg___childSplitsYaml___parent___children
-    featuredImg___childSplitsYaml___parent___id
-    featuredImg___childSplitsYaml___slug
-    featuredImg___childSplitsYaml___title
-    featuredImg___childTestimonialsYaml___author
-    featuredImg___childTestimonialsYaml___body
-    featuredImg___childTestimonialsYaml___children
-    featuredImg___childTestimonialsYaml___children___children
-    featuredImg___childTestimonialsYaml___children___id
-    featuredImg___childTestimonialsYaml___client
-    featuredImg___childTestimonialsYaml___id
-    featuredImg___childTestimonialsYaml___image___absolutePath
-    featuredImg___childTestimonialsYaml___image___accessTime
-    featuredImg___childTestimonialsYaml___image___atime
-    featuredImg___childTestimonialsYaml___image___atimeMs
-    featuredImg___childTestimonialsYaml___image___base
-    featuredImg___childTestimonialsYaml___image___birthTime
-    featuredImg___childTestimonialsYaml___image___birthtime
-    featuredImg___childTestimonialsYaml___image___birthtimeMs
-    featuredImg___childTestimonialsYaml___image___blksize
-    featuredImg___childTestimonialsYaml___image___blocks
-    featuredImg___childTestimonialsYaml___image___changeTime
-    featuredImg___childTestimonialsYaml___image___children
-    featuredImg___childTestimonialsYaml___image___ctime
-    featuredImg___childTestimonialsYaml___image___ctimeMs
-    featuredImg___childTestimonialsYaml___image___dev
-    featuredImg___childTestimonialsYaml___image___dir
-    featuredImg___childTestimonialsYaml___image___ext
-    featuredImg___childTestimonialsYaml___image___extension
-    featuredImg___childTestimonialsYaml___image___gid
-    featuredImg___childTestimonialsYaml___image___id
-    featuredImg___childTestimonialsYaml___image___ino
-    featuredImg___childTestimonialsYaml___image___mode
-    featuredImg___childTestimonialsYaml___image___modifiedTime
-    featuredImg___childTestimonialsYaml___image___mtime
-    featuredImg___childTestimonialsYaml___image___mtimeMs
-    featuredImg___childTestimonialsYaml___image___name
-    featuredImg___childTestimonialsYaml___image___nlink
-    featuredImg___childTestimonialsYaml___image___prettySize
-    featuredImg___childTestimonialsYaml___image___publicURL
-    featuredImg___childTestimonialsYaml___image___rdev
-    featuredImg___childTestimonialsYaml___image___relativeDirectory
-    featuredImg___childTestimonialsYaml___image___relativePath
-    featuredImg___childTestimonialsYaml___image___root
-    featuredImg___childTestimonialsYaml___image___size
-    featuredImg___childTestimonialsYaml___image___sourceInstanceName
-    featuredImg___childTestimonialsYaml___image___uid
-    featuredImg___childTestimonialsYaml___image___url
-    featuredImg___childTestimonialsYaml___internal___content
-    featuredImg___childTestimonialsYaml___internal___contentDigest
-    featuredImg___childTestimonialsYaml___internal___description
-    featuredImg___childTestimonialsYaml___internal___fieldOwners
-    featuredImg___childTestimonialsYaml___internal___ignoreType
-    featuredImg___childTestimonialsYaml___internal___mediaType
-    featuredImg___childTestimonialsYaml___internal___owner
-    featuredImg___childTestimonialsYaml___internal___type
-    featuredImg___childTestimonialsYaml___lang
-    featuredImg___childTestimonialsYaml___parent___children
-    featuredImg___childTestimonialsYaml___parent___id
-    featuredImg___childTestimonialsYaml___role
-    featuredImg___childTestimonialsYaml___slug
-    featuredImg___children
-    featuredImg___children___children
-    featuredImg___children___children___children
-    featuredImg___children___children___id
-    featuredImg___children___id
-    featuredImg___children___internal___content
-    featuredImg___children___internal___contentDigest
-    featuredImg___children___internal___description
-    featuredImg___children___internal___fieldOwners
-    featuredImg___children___internal___ignoreType
-    featuredImg___children___internal___mediaType
-    featuredImg___children___internal___owner
-    featuredImg___children___internal___type
-    featuredImg___children___parent___children
-    featuredImg___children___parent___id
-    featuredImg___ctime
-    featuredImg___ctimeMs
-    featuredImg___dev
-    featuredImg___dir
-    featuredImg___ext
-    featuredImg___extension
-    featuredImg___gid
-    featuredImg___id
-    featuredImg___ino
-    featuredImg___internal___content
-    featuredImg___internal___contentDigest
-    featuredImg___internal___description
-    featuredImg___internal___fieldOwners
-    featuredImg___internal___ignoreType
-    featuredImg___internal___mediaType
-    featuredImg___internal___owner
-    featuredImg___internal___type
-    featuredImg___mode
-    featuredImg___modifiedTime
-    featuredImg___mtime
-    featuredImg___mtimeMs
-    featuredImg___name
-    featuredImg___nlink
-    featuredImg___parent___children
-    featuredImg___parent___children___children
-    featuredImg___parent___children___id
-    featuredImg___parent___id
-    featuredImg___parent___internal___content
-    featuredImg___parent___internal___contentDigest
-    featuredImg___parent___internal___description
-    featuredImg___parent___internal___fieldOwners
-    featuredImg___parent___internal___ignoreType
-    featuredImg___parent___internal___mediaType
-    featuredImg___parent___internal___owner
-    featuredImg___parent___internal___type
-    featuredImg___parent___parent___children
-    featuredImg___parent___parent___id
-    featuredImg___prettySize
-    featuredImg___publicURL
-    featuredImg___rdev
-    featuredImg___relativeDirectory
-    featuredImg___relativePath
-    featuredImg___root
-    featuredImg___size
-    featuredImg___sourceInstanceName
-    featuredImg___uid
-    featuredImg___url
     fields___collection @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    frontmatter___featuredImgAlt
-    frontmatter___featuredImgUrl
     frontmatter___lang
     frontmatter___slug
     frontmatter___title
@@ -4415,526 +3848,504 @@ enum PostsYamlFieldsEnum {
     children___parent___parent___id
     date
     description
-    featuredImage___absolutePath
-    featuredImage___accessTime
-    featuredImage___atime
-    featuredImage___atimeMs
-    featuredImage___base
-    featuredImage___birthTime
-    featuredImage___birthtime
-    featuredImage___birthtimeMs
-    featuredImage___blksize
-    featuredImage___blocks
-    featuredImage___changeTime
-    featuredImage___childCasesYaml___about
-    featuredImage___childCasesYaml___challenges
-    featuredImage___childCasesYaml___children
-    featuredImage___childCasesYaml___children___children
-    featuredImage___childCasesYaml___children___id
-    featuredImage___childCasesYaml___goals
-    featuredImage___childCasesYaml___id
-    featuredImage___childCasesYaml___internal___content
-    featuredImage___childCasesYaml___internal___contentDigest
-    featuredImage___childCasesYaml___internal___description
-    featuredImage___childCasesYaml___internal___fieldOwners
-    featuredImage___childCasesYaml___internal___ignoreType
-    featuredImage___childCasesYaml___internal___mediaType
-    featuredImage___childCasesYaml___internal___owner
-    featuredImage___childCasesYaml___internal___type
-    featuredImage___childCasesYaml___lang
-    featuredImage___childCasesYaml___logo
-    featuredImage___childCasesYaml___originalPath
-    featuredImage___childCasesYaml___parent___children
-    featuredImage___childCasesYaml___parent___id
-    featuredImage___childCasesYaml___problem
-    featuredImage___childCasesYaml___results
-    featuredImage___childCasesYaml___slug
-    featuredImage___childCasesYaml___title
-    featuredImage___childCategoriesYaml___children
-    featuredImage___childCategoriesYaml___children___children
-    featuredImage___childCategoriesYaml___children___id
-    featuredImage___childCategoriesYaml___id
-    featuredImage___childCategoriesYaml___internal___content
-    featuredImage___childCategoriesYaml___internal___contentDigest
-    featuredImage___childCategoriesYaml___internal___description
-    featuredImage___childCategoriesYaml___internal___fieldOwners
-    featuredImage___childCategoriesYaml___internal___ignoreType
-    featuredImage___childCategoriesYaml___internal___mediaType
-    featuredImage___childCategoriesYaml___internal___owner
-    featuredImage___childCategoriesYaml___internal___type
-    featuredImage___childCategoriesYaml___lang
-    featuredImage___childCategoriesYaml___order
-    featuredImage___childCategoriesYaml___parent___children
-    featuredImage___childCategoriesYaml___parent___id
-    featuredImage___childCategoriesYaml___services
-    featuredImage___childCategoriesYaml___short_description
-    featuredImage___childCategoriesYaml___slug
-    featuredImage___childCategoriesYaml___technologies
-    featuredImage___childCategoriesYaml___title
-    featuredImage___childContentYaml___body
-    featuredImage___childContentYaml___children
-    featuredImage___childContentYaml___children___children
-    featuredImage___childContentYaml___children___id
-    featuredImage___childContentYaml___history
-    featuredImage___childContentYaml___history___date
-    featuredImage___childContentYaml___history___event
-    featuredImage___childContentYaml___id
-    featuredImage___childContentYaml___internal___content
-    featuredImage___childContentYaml___internal___contentDigest
-    featuredImage___childContentYaml___internal___description
-    featuredImage___childContentYaml___internal___fieldOwners
-    featuredImage___childContentYaml___internal___ignoreType
-    featuredImage___childContentYaml___internal___mediaType
-    featuredImage___childContentYaml___internal___owner
-    featuredImage___childContentYaml___internal___type
-    featuredImage___childContentYaml___lang
-    featuredImage___childContentYaml___parent___children
-    featuredImage___childContentYaml___parent___id
-    featuredImage___childContentYaml___pride
-    featuredImage___childContentYaml___pride___body
-    featuredImage___childContentYaml___pride___subtitle
-    featuredImage___childContentYaml___pride___title
-    featuredImage___childContentYaml___sections
-    featuredImage___childContentYaml___sections___body
-    featuredImage___childContentYaml___sections___link
-    featuredImage___childContentYaml___sections___slug
-    featuredImage___childContentYaml___sections___subtitle
-    featuredImage___childContentYaml___sections___title
-    featuredImage___childContentYaml___slides
-    featuredImage___childContentYaml___slides___body
-    featuredImage___childContentYaml___slides___buttons
-    featuredImage___childContentYaml___slides___title
-    featuredImage___childContentYaml___slug
-    featuredImage___childContentYaml___team
-    featuredImage___childContentYaml___team___id
-    featuredImage___childContentYaml___team___name
-    featuredImage___childContentYaml___team___role
-    featuredImage___childContentYaml___title
-    featuredImage___childDataYaml___children
-    featuredImage___childDataYaml___children___children
-    featuredImage___childDataYaml___children___id
-    featuredImage___childDataYaml___clients
-    featuredImage___childDataYaml___clients___image
-    featuredImage___childDataYaml___clients___type
-    featuredImage___childDataYaml___clients___value
-    featuredImage___childDataYaml___id
-    featuredImage___childDataYaml___internal___content
-    featuredImage___childDataYaml___internal___contentDigest
-    featuredImage___childDataYaml___internal___description
-    featuredImage___childDataYaml___internal___fieldOwners
-    featuredImage___childDataYaml___internal___ignoreType
-    featuredImage___childDataYaml___internal___mediaType
-    featuredImage___childDataYaml___internal___owner
-    featuredImage___childDataYaml___internal___type
-    featuredImage___childDataYaml___parent___children
-    featuredImage___childDataYaml___parent___id
-    featuredImage___childDataYaml___slug
-    featuredImage___childDataYaml___statistics
-    featuredImage___childDataYaml___statistics___label
-    featuredImage___childDataYaml___statistics___value
-    featuredImage___childDataYaml___technologies
-    featuredImage___childDataYaml___technologies___image
-    featuredImage___childDataYaml___technologies___type
-    featuredImage___childDataYaml___technologies___value
-    featuredImage___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___children___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___children___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fixed___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fixed___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fixed___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fixed___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fixed___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fixed___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fixed___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fixed___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fixed___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fixed___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fluid___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fluid___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fluid___originalImg @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fluid___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fluid___presentationHeight @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fluid___presentationWidth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fluid___sizes @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fluid___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fluid___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fluid___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fluid___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___fluid___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___internal___content @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___internal___contentDigest @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___internal___description @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___internal___fieldOwners @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___internal___ignoreType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___internal___mediaType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___internal___owner @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___internal___type @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___original___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___original___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___original___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resize___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resize___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resize___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resize___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resize___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resize___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resolutions___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resolutions___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resolutions___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resolutions___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resolutions___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resolutions___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resolutions___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resolutions___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resolutions___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___resolutions___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___sizes___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___sizes___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___sizes___originalImg @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___sizes___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___sizes___presentationHeight @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___sizes___presentationWidth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___sizes___sizes @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___sizes___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___sizes___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___sizes___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___sizes___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childImageSharp___sizes___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___children___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___children___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___featuredImg___absolutePath
-    featuredImage___childMarkdownRemark___featuredImg___accessTime
-    featuredImage___childMarkdownRemark___featuredImg___atime
-    featuredImage___childMarkdownRemark___featuredImg___atimeMs
-    featuredImage___childMarkdownRemark___featuredImg___base
-    featuredImage___childMarkdownRemark___featuredImg___birthTime
-    featuredImage___childMarkdownRemark___featuredImg___birthtime
-    featuredImage___childMarkdownRemark___featuredImg___birthtimeMs
-    featuredImage___childMarkdownRemark___featuredImg___blksize
-    featuredImage___childMarkdownRemark___featuredImg___blocks
-    featuredImage___childMarkdownRemark___featuredImg___changeTime
-    featuredImage___childMarkdownRemark___featuredImg___children
-    featuredImage___childMarkdownRemark___featuredImg___ctime
-    featuredImage___childMarkdownRemark___featuredImg___ctimeMs
-    featuredImage___childMarkdownRemark___featuredImg___dev
-    featuredImage___childMarkdownRemark___featuredImg___dir
-    featuredImage___childMarkdownRemark___featuredImg___ext
-    featuredImage___childMarkdownRemark___featuredImg___extension
-    featuredImage___childMarkdownRemark___featuredImg___gid
-    featuredImage___childMarkdownRemark___featuredImg___id
-    featuredImage___childMarkdownRemark___featuredImg___ino
-    featuredImage___childMarkdownRemark___featuredImg___mode
-    featuredImage___childMarkdownRemark___featuredImg___modifiedTime
-    featuredImage___childMarkdownRemark___featuredImg___mtime
-    featuredImage___childMarkdownRemark___featuredImg___mtimeMs
-    featuredImage___childMarkdownRemark___featuredImg___name
-    featuredImage___childMarkdownRemark___featuredImg___nlink
-    featuredImage___childMarkdownRemark___featuredImg___prettySize
-    featuredImage___childMarkdownRemark___featuredImg___publicURL
-    featuredImage___childMarkdownRemark___featuredImg___rdev
-    featuredImage___childMarkdownRemark___featuredImg___relativeDirectory
-    featuredImage___childMarkdownRemark___featuredImg___relativePath
-    featuredImage___childMarkdownRemark___featuredImg___root
-    featuredImage___childMarkdownRemark___featuredImg___size
-    featuredImage___childMarkdownRemark___featuredImg___sourceInstanceName
-    featuredImage___childMarkdownRemark___featuredImg___uid
-    featuredImage___childMarkdownRemark___featuredImg___url
-    featuredImage___childMarkdownRemark___fields___collection @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___frontmatter___featuredImgAlt
-    featuredImage___childMarkdownRemark___frontmatter___featuredImgUrl
-    featuredImage___childMarkdownRemark___frontmatter___lang
-    featuredImage___childMarkdownRemark___frontmatter___slug
-    featuredImage___childMarkdownRemark___frontmatter___title
-    featuredImage___childMarkdownRemark___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___htmlAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___id
-    featuredImage___childMarkdownRemark___internal___content @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___internal___contentDigest @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___internal___description @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___internal___fieldOwners @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___internal___ignoreType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___internal___mediaType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___internal___owner @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___internal___type @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___rawMarkdownBody @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___wordCount___paragraphs @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___wordCount___sentences @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childMarkdownRemark___wordCount___words @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    featuredImage___childPostsYaml___author
-    featuredImage___childPostsYaml___body
-    featuredImage___childPostsYaml___children
-    featuredImage___childPostsYaml___children___children
-    featuredImage___childPostsYaml___children___id
-    featuredImage___childPostsYaml___date
-    featuredImage___childPostsYaml___description
-    featuredImage___childPostsYaml___featuredImage___absolutePath
-    featuredImage___childPostsYaml___featuredImage___accessTime
-    featuredImage___childPostsYaml___featuredImage___atime
-    featuredImage___childPostsYaml___featuredImage___atimeMs
-    featuredImage___childPostsYaml___featuredImage___base
-    featuredImage___childPostsYaml___featuredImage___birthTime
-    featuredImage___childPostsYaml___featuredImage___birthtime
-    featuredImage___childPostsYaml___featuredImage___birthtimeMs
-    featuredImage___childPostsYaml___featuredImage___blksize
-    featuredImage___childPostsYaml___featuredImage___blocks
-    featuredImage___childPostsYaml___featuredImage___changeTime
-    featuredImage___childPostsYaml___featuredImage___children
-    featuredImage___childPostsYaml___featuredImage___ctime
-    featuredImage___childPostsYaml___featuredImage___ctimeMs
-    featuredImage___childPostsYaml___featuredImage___dev
-    featuredImage___childPostsYaml___featuredImage___dir
-    featuredImage___childPostsYaml___featuredImage___ext
-    featuredImage___childPostsYaml___featuredImage___extension
-    featuredImage___childPostsYaml___featuredImage___gid
-    featuredImage___childPostsYaml___featuredImage___id
-    featuredImage___childPostsYaml___featuredImage___ino
-    featuredImage___childPostsYaml___featuredImage___mode
-    featuredImage___childPostsYaml___featuredImage___modifiedTime
-    featuredImage___childPostsYaml___featuredImage___mtime
-    featuredImage___childPostsYaml___featuredImage___mtimeMs
-    featuredImage___childPostsYaml___featuredImage___name
-    featuredImage___childPostsYaml___featuredImage___nlink
-    featuredImage___childPostsYaml___featuredImage___prettySize
-    featuredImage___childPostsYaml___featuredImage___publicURL
-    featuredImage___childPostsYaml___featuredImage___rdev
-    featuredImage___childPostsYaml___featuredImage___relativeDirectory
-    featuredImage___childPostsYaml___featuredImage___relativePath
-    featuredImage___childPostsYaml___featuredImage___root
-    featuredImage___childPostsYaml___featuredImage___size
-    featuredImage___childPostsYaml___featuredImage___sourceInstanceName
-    featuredImage___childPostsYaml___featuredImage___uid
-    featuredImage___childPostsYaml___featuredImage___url
-    featuredImage___childPostsYaml___id
-    featuredImage___childPostsYaml___image
-    featuredImage___childPostsYaml___internal___content
-    featuredImage___childPostsYaml___internal___contentDigest
-    featuredImage___childPostsYaml___internal___description
-    featuredImage___childPostsYaml___internal___fieldOwners
-    featuredImage___childPostsYaml___internal___ignoreType
-    featuredImage___childPostsYaml___internal___mediaType
-    featuredImage___childPostsYaml___internal___owner
-    featuredImage___childPostsYaml___internal___type
-    featuredImage___childPostsYaml___lang
-    featuredImage___childPostsYaml___originalPath
-    featuredImage___childPostsYaml___parent___children
-    featuredImage___childPostsYaml___parent___id
-    featuredImage___childPostsYaml___slug
-    featuredImage___childPostsYaml___tags
-    featuredImage___childPostsYaml___tags___label
-    featuredImage___childPostsYaml___tags___value
-    featuredImage___childPostsYaml___title
-    featuredImage___childProcessYaml___children
-    featuredImage___childProcessYaml___children___children
-    featuredImage___childProcessYaml___children___id
-    featuredImage___childProcessYaml___description
-    featuredImage___childProcessYaml___duration
-    featuredImage___childProcessYaml___id
-    featuredImage___childProcessYaml___internal___content
-    featuredImage___childProcessYaml___internal___contentDigest
-    featuredImage___childProcessYaml___internal___description
-    featuredImage___childProcessYaml___internal___fieldOwners
-    featuredImage___childProcessYaml___internal___ignoreType
-    featuredImage___childProcessYaml___internal___mediaType
-    featuredImage___childProcessYaml___internal___owner
-    featuredImage___childProcessYaml___internal___type
-    featuredImage___childProcessYaml___intro
-    featuredImage___childProcessYaml___lang
-    featuredImage___childProcessYaml___objective
-    featuredImage___childProcessYaml___parent___children
-    featuredImage___childProcessYaml___parent___id
-    featuredImage___childProcessYaml___slug
-    featuredImage___childProcessYaml___subtitle
-    featuredImage___childProcessYaml___title
-    featuredImage___childResourcesYaml___children
-    featuredImage___childResourcesYaml___children___children
-    featuredImage___childResourcesYaml___children___id
-    featuredImage___childResourcesYaml___cta
-    featuredImage___childResourcesYaml___id
-    featuredImage___childResourcesYaml___internal___content
-    featuredImage___childResourcesYaml___internal___contentDigest
-    featuredImage___childResourcesYaml___internal___description
-    featuredImage___childResourcesYaml___internal___fieldOwners
-    featuredImage___childResourcesYaml___internal___ignoreType
-    featuredImage___childResourcesYaml___internal___mediaType
-    featuredImage___childResourcesYaml___internal___owner
-    featuredImage___childResourcesYaml___internal___type
-    featuredImage___childResourcesYaml___lang
-    featuredImage___childResourcesYaml___parent___children
-    featuredImage___childResourcesYaml___parent___id
-    featuredImage___childResourcesYaml___slug
-    featuredImage___childResourcesYaml___title
-    featuredImage___childServicesYaml___children
-    featuredImage___childServicesYaml___children___children
-    featuredImage___childServicesYaml___children___id
-    featuredImage___childServicesYaml___id
-    featuredImage___childServicesYaml___internal___content
-    featuredImage___childServicesYaml___internal___contentDigest
-    featuredImage___childServicesYaml___internal___description
-    featuredImage___childServicesYaml___internal___fieldOwners
-    featuredImage___childServicesYaml___internal___ignoreType
-    featuredImage___childServicesYaml___internal___mediaType
-    featuredImage___childServicesYaml___internal___owner
-    featuredImage___childServicesYaml___internal___type
-    featuredImage___childServicesYaml___lang
-    featuredImage___childServicesYaml___parent___children
-    featuredImage___childServicesYaml___parent___id
-    featuredImage___childServicesYaml___slug
-    featuredImage___childServicesYaml___title
-    featuredImage___childSplitsYaml___body
-    featuredImage___childSplitsYaml___children
-    featuredImage___childSplitsYaml___children___children
-    featuredImage___childSplitsYaml___children___id
-    featuredImage___childSplitsYaml___cta___link
-    featuredImage___childSplitsYaml___cta___title
-    featuredImage___childSplitsYaml___id
-    featuredImage___childSplitsYaml___internal___content
-    featuredImage___childSplitsYaml___internal___contentDigest
-    featuredImage___childSplitsYaml___internal___description
-    featuredImage___childSplitsYaml___internal___fieldOwners
-    featuredImage___childSplitsYaml___internal___ignoreType
-    featuredImage___childSplitsYaml___internal___mediaType
-    featuredImage___childSplitsYaml___internal___owner
-    featuredImage___childSplitsYaml___internal___type
-    featuredImage___childSplitsYaml___lang
-    featuredImage___childSplitsYaml___parent___children
-    featuredImage___childSplitsYaml___parent___id
-    featuredImage___childSplitsYaml___slug
-    featuredImage___childSplitsYaml___title
-    featuredImage___childTestimonialsYaml___author
-    featuredImage___childTestimonialsYaml___body
-    featuredImage___childTestimonialsYaml___children
-    featuredImage___childTestimonialsYaml___children___children
-    featuredImage___childTestimonialsYaml___children___id
-    featuredImage___childTestimonialsYaml___client
-    featuredImage___childTestimonialsYaml___id
-    featuredImage___childTestimonialsYaml___image___absolutePath
-    featuredImage___childTestimonialsYaml___image___accessTime
-    featuredImage___childTestimonialsYaml___image___atime
-    featuredImage___childTestimonialsYaml___image___atimeMs
-    featuredImage___childTestimonialsYaml___image___base
-    featuredImage___childTestimonialsYaml___image___birthTime
-    featuredImage___childTestimonialsYaml___image___birthtime
-    featuredImage___childTestimonialsYaml___image___birthtimeMs
-    featuredImage___childTestimonialsYaml___image___blksize
-    featuredImage___childTestimonialsYaml___image___blocks
-    featuredImage___childTestimonialsYaml___image___changeTime
-    featuredImage___childTestimonialsYaml___image___children
-    featuredImage___childTestimonialsYaml___image___ctime
-    featuredImage___childTestimonialsYaml___image___ctimeMs
-    featuredImage___childTestimonialsYaml___image___dev
-    featuredImage___childTestimonialsYaml___image___dir
-    featuredImage___childTestimonialsYaml___image___ext
-    featuredImage___childTestimonialsYaml___image___extension
-    featuredImage___childTestimonialsYaml___image___gid
-    featuredImage___childTestimonialsYaml___image___id
-    featuredImage___childTestimonialsYaml___image___ino
-    featuredImage___childTestimonialsYaml___image___mode
-    featuredImage___childTestimonialsYaml___image___modifiedTime
-    featuredImage___childTestimonialsYaml___image___mtime
-    featuredImage___childTestimonialsYaml___image___mtimeMs
-    featuredImage___childTestimonialsYaml___image___name
-    featuredImage___childTestimonialsYaml___image___nlink
-    featuredImage___childTestimonialsYaml___image___prettySize
-    featuredImage___childTestimonialsYaml___image___publicURL
-    featuredImage___childTestimonialsYaml___image___rdev
-    featuredImage___childTestimonialsYaml___image___relativeDirectory
-    featuredImage___childTestimonialsYaml___image___relativePath
-    featuredImage___childTestimonialsYaml___image___root
-    featuredImage___childTestimonialsYaml___image___size
-    featuredImage___childTestimonialsYaml___image___sourceInstanceName
-    featuredImage___childTestimonialsYaml___image___uid
-    featuredImage___childTestimonialsYaml___image___url
-    featuredImage___childTestimonialsYaml___internal___content
-    featuredImage___childTestimonialsYaml___internal___contentDigest
-    featuredImage___childTestimonialsYaml___internal___description
-    featuredImage___childTestimonialsYaml___internal___fieldOwners
-    featuredImage___childTestimonialsYaml___internal___ignoreType
-    featuredImage___childTestimonialsYaml___internal___mediaType
-    featuredImage___childTestimonialsYaml___internal___owner
-    featuredImage___childTestimonialsYaml___internal___type
-    featuredImage___childTestimonialsYaml___lang
-    featuredImage___childTestimonialsYaml___parent___children
-    featuredImage___childTestimonialsYaml___parent___id
-    featuredImage___childTestimonialsYaml___role
-    featuredImage___childTestimonialsYaml___slug
-    featuredImage___children
-    featuredImage___children___children
-    featuredImage___children___children___children
-    featuredImage___children___children___id
-    featuredImage___children___id
-    featuredImage___children___internal___content
-    featuredImage___children___internal___contentDigest
-    featuredImage___children___internal___description
-    featuredImage___children___internal___fieldOwners
-    featuredImage___children___internal___ignoreType
-    featuredImage___children___internal___mediaType
-    featuredImage___children___internal___owner
-    featuredImage___children___internal___type
-    featuredImage___children___parent___children
-    featuredImage___children___parent___id
-    featuredImage___ctime
-    featuredImage___ctimeMs
-    featuredImage___dev
-    featuredImage___dir
-    featuredImage___ext
-    featuredImage___extension
-    featuredImage___gid
-    featuredImage___id
-    featuredImage___ino
-    featuredImage___internal___content
-    featuredImage___internal___contentDigest
-    featuredImage___internal___description
-    featuredImage___internal___fieldOwners
-    featuredImage___internal___ignoreType
-    featuredImage___internal___mediaType
-    featuredImage___internal___owner
-    featuredImage___internal___type
-    featuredImage___mode
-    featuredImage___modifiedTime
-    featuredImage___mtime
-    featuredImage___mtimeMs
-    featuredImage___name
-    featuredImage___nlink
-    featuredImage___parent___children
-    featuredImage___parent___children___children
-    featuredImage___parent___children___id
-    featuredImage___parent___id
-    featuredImage___parent___internal___content
-    featuredImage___parent___internal___contentDigest
-    featuredImage___parent___internal___description
-    featuredImage___parent___internal___fieldOwners
-    featuredImage___parent___internal___ignoreType
-    featuredImage___parent___internal___mediaType
-    featuredImage___parent___internal___owner
-    featuredImage___parent___internal___type
-    featuredImage___parent___parent___children
-    featuredImage___parent___parent___id
-    featuredImage___prettySize
-    featuredImage___publicURL
-    featuredImage___rdev
-    featuredImage___relativeDirectory
-    featuredImage___relativePath
-    featuredImage___root
-    featuredImage___size
-    featuredImage___sourceInstanceName
-    featuredImage___uid
-    featuredImage___url
     id
-    image
+    image___absolutePath
+    image___accessTime
+    image___atime
+    image___atimeMs
+    image___base
+    image___birthTime
+    image___birthtime
+    image___birthtimeMs
+    image___blksize
+    image___blocks
+    image___changeTime
+    image___childCasesYaml___about
+    image___childCasesYaml___challenges
+    image___childCasesYaml___children
+    image___childCasesYaml___children___children
+    image___childCasesYaml___children___id
+    image___childCasesYaml___goals
+    image___childCasesYaml___id
+    image___childCasesYaml___internal___content
+    image___childCasesYaml___internal___contentDigest
+    image___childCasesYaml___internal___description
+    image___childCasesYaml___internal___fieldOwners
+    image___childCasesYaml___internal___ignoreType
+    image___childCasesYaml___internal___mediaType
+    image___childCasesYaml___internal___owner
+    image___childCasesYaml___internal___type
+    image___childCasesYaml___lang
+    image___childCasesYaml___logo
+    image___childCasesYaml___originalPath
+    image___childCasesYaml___parent___children
+    image___childCasesYaml___parent___id
+    image___childCasesYaml___problem
+    image___childCasesYaml___results
+    image___childCasesYaml___slug
+    image___childCasesYaml___title
+    image___childCategoriesYaml___children
+    image___childCategoriesYaml___children___children
+    image___childCategoriesYaml___children___id
+    image___childCategoriesYaml___id
+    image___childCategoriesYaml___internal___content
+    image___childCategoriesYaml___internal___contentDigest
+    image___childCategoriesYaml___internal___description
+    image___childCategoriesYaml___internal___fieldOwners
+    image___childCategoriesYaml___internal___ignoreType
+    image___childCategoriesYaml___internal___mediaType
+    image___childCategoriesYaml___internal___owner
+    image___childCategoriesYaml___internal___type
+    image___childCategoriesYaml___lang
+    image___childCategoriesYaml___order
+    image___childCategoriesYaml___parent___children
+    image___childCategoriesYaml___parent___id
+    image___childCategoriesYaml___services
+    image___childCategoriesYaml___short_description
+    image___childCategoriesYaml___slug
+    image___childCategoriesYaml___technologies
+    image___childCategoriesYaml___title
+    image___childContentYaml___body
+    image___childContentYaml___children
+    image___childContentYaml___children___children
+    image___childContentYaml___children___id
+    image___childContentYaml___history
+    image___childContentYaml___history___date
+    image___childContentYaml___history___event
+    image___childContentYaml___id
+    image___childContentYaml___internal___content
+    image___childContentYaml___internal___contentDigest
+    image___childContentYaml___internal___description
+    image___childContentYaml___internal___fieldOwners
+    image___childContentYaml___internal___ignoreType
+    image___childContentYaml___internal___mediaType
+    image___childContentYaml___internal___owner
+    image___childContentYaml___internal___type
+    image___childContentYaml___lang
+    image___childContentYaml___parent___children
+    image___childContentYaml___parent___id
+    image___childContentYaml___pride
+    image___childContentYaml___pride___body
+    image___childContentYaml___pride___subtitle
+    image___childContentYaml___pride___title
+    image___childContentYaml___sections
+    image___childContentYaml___sections___body
+    image___childContentYaml___sections___link
+    image___childContentYaml___sections___slug
+    image___childContentYaml___sections___subtitle
+    image___childContentYaml___sections___title
+    image___childContentYaml___slides
+    image___childContentYaml___slides___body
+    image___childContentYaml___slides___buttons
+    image___childContentYaml___slides___title
+    image___childContentYaml___slug
+    image___childContentYaml___team
+    image___childContentYaml___team___id
+    image___childContentYaml___team___name
+    image___childContentYaml___team___role
+    image___childContentYaml___title
+    image___childDataYaml___children
+    image___childDataYaml___children___children
+    image___childDataYaml___children___id
+    image___childDataYaml___clients
+    image___childDataYaml___clients___image
+    image___childDataYaml___clients___type
+    image___childDataYaml___clients___value
+    image___childDataYaml___id
+    image___childDataYaml___internal___content
+    image___childDataYaml___internal___contentDigest
+    image___childDataYaml___internal___description
+    image___childDataYaml___internal___fieldOwners
+    image___childDataYaml___internal___ignoreType
+    image___childDataYaml___internal___mediaType
+    image___childDataYaml___internal___owner
+    image___childDataYaml___internal___type
+    image___childDataYaml___parent___children
+    image___childDataYaml___parent___id
+    image___childDataYaml___skills
+    image___childDataYaml___skills___slug
+    image___childDataYaml___slug
+    image___childDataYaml___statistics
+    image___childDataYaml___statistics___label
+    image___childDataYaml___statistics___value
+    image___childDataYaml___technologies
+    image___childDataYaml___technologies___image
+    image___childDataYaml___technologies___type
+    image___childDataYaml___technologies___value
+    image___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___children___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___children___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fixed___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___originalImg @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___presentationHeight @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___presentationWidth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___sizes @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___fluid___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___content @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___contentDigest @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___description @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___fieldOwners @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___ignoreType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___mediaType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___owner @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___internal___type @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___original___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___original___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___original___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resize___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resize___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resize___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resize___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resize___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resize___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___height @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___resolutions___width @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___aspectRatio @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___base64 @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___originalImg @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___originalName @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___presentationHeight @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___presentationWidth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___sizes @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___src @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___srcSet @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___srcSetWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___srcWebp @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childImageSharp___sizes___tracedSVG @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___children___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___children___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___fields___collection @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___frontmatter___lang
+    image___childMarkdownRemark___frontmatter___slug
+    image___childMarkdownRemark___frontmatter___title
+    image___childMarkdownRemark___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___htmlAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___id
+    image___childMarkdownRemark___internal___content @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___internal___contentDigest @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___internal___description @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___internal___fieldOwners @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___internal___ignoreType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___internal___mediaType @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___internal___owner @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___internal___type @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___parent___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___parent___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___rawMarkdownBody @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___wordCount___paragraphs @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___wordCount___sentences @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childMarkdownRemark___wordCount___words @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childPostsYaml___author
+    image___childPostsYaml___body
+    image___childPostsYaml___children
+    image___childPostsYaml___children___children
+    image___childPostsYaml___children___id
+    image___childPostsYaml___date
+    image___childPostsYaml___description
+    image___childPostsYaml___id
+    image___childPostsYaml___image___absolutePath
+    image___childPostsYaml___image___accessTime
+    image___childPostsYaml___image___atime
+    image___childPostsYaml___image___atimeMs
+    image___childPostsYaml___image___base
+    image___childPostsYaml___image___birthTime
+    image___childPostsYaml___image___birthtime
+    image___childPostsYaml___image___birthtimeMs
+    image___childPostsYaml___image___blksize
+    image___childPostsYaml___image___blocks
+    image___childPostsYaml___image___changeTime
+    image___childPostsYaml___image___children
+    image___childPostsYaml___image___ctime
+    image___childPostsYaml___image___ctimeMs
+    image___childPostsYaml___image___dev
+    image___childPostsYaml___image___dir
+    image___childPostsYaml___image___ext
+    image___childPostsYaml___image___extension
+    image___childPostsYaml___image___gid
+    image___childPostsYaml___image___id
+    image___childPostsYaml___image___ino
+    image___childPostsYaml___image___mode
+    image___childPostsYaml___image___modifiedTime
+    image___childPostsYaml___image___mtime
+    image___childPostsYaml___image___mtimeMs
+    image___childPostsYaml___image___name
+    image___childPostsYaml___image___nlink
+    image___childPostsYaml___image___prettySize
+    image___childPostsYaml___image___publicURL
+    image___childPostsYaml___image___rdev
+    image___childPostsYaml___image___relativeDirectory
+    image___childPostsYaml___image___relativePath
+    image___childPostsYaml___image___root
+    image___childPostsYaml___image___size
+    image___childPostsYaml___image___sourceInstanceName
+    image___childPostsYaml___image___uid
+    image___childPostsYaml___internal___content
+    image___childPostsYaml___internal___contentDigest
+    image___childPostsYaml___internal___description
+    image___childPostsYaml___internal___fieldOwners
+    image___childPostsYaml___internal___ignoreType
+    image___childPostsYaml___internal___mediaType
+    image___childPostsYaml___internal___owner
+    image___childPostsYaml___internal___type
+    image___childPostsYaml___lang
+    image___childPostsYaml___originalPath
+    image___childPostsYaml___parent___children
+    image___childPostsYaml___parent___id
+    image___childPostsYaml___slug
+    image___childPostsYaml___tags
+    image___childPostsYaml___tags___label
+    image___childPostsYaml___tags___value
+    image___childPostsYaml___title
+    image___childProcessYaml___children
+    image___childProcessYaml___children___children
+    image___childProcessYaml___children___id
+    image___childProcessYaml___description
+    image___childProcessYaml___duration
+    image___childProcessYaml___id
+    image___childProcessYaml___internal___content
+    image___childProcessYaml___internal___contentDigest
+    image___childProcessYaml___internal___description
+    image___childProcessYaml___internal___fieldOwners
+    image___childProcessYaml___internal___ignoreType
+    image___childProcessYaml___internal___mediaType
+    image___childProcessYaml___internal___owner
+    image___childProcessYaml___internal___type
+    image___childProcessYaml___intro
+    image___childProcessYaml___lang
+    image___childProcessYaml___objective
+    image___childProcessYaml___parent___children
+    image___childProcessYaml___parent___id
+    image___childProcessYaml___slug
+    image___childProcessYaml___subtitle
+    image___childProcessYaml___title
+    image___childResourcesYaml___children
+    image___childResourcesYaml___children___children
+    image___childResourcesYaml___children___id
+    image___childResourcesYaml___id
+    image___childResourcesYaml___image
+    image___childResourcesYaml___internal___content
+    image___childResourcesYaml___internal___contentDigest
+    image___childResourcesYaml___internal___description
+    image___childResourcesYaml___internal___fieldOwners
+    image___childResourcesYaml___internal___ignoreType
+    image___childResourcesYaml___internal___mediaType
+    image___childResourcesYaml___internal___owner
+    image___childResourcesYaml___internal___type
+    image___childResourcesYaml___lang
+    image___childResourcesYaml___originalPath
+    image___childResourcesYaml___parent___children
+    image___childResourcesYaml___parent___id
+    image___childResourcesYaml___slices
+    image___childResourcesYaml___slices___body
+    image___childResourcesYaml___slices___id
+    image___childResourcesYaml___slices___subtitle
+    image___childResourcesYaml___slices___title
+    image___childResourcesYaml___slices___type
+    image___childResourcesYaml___slug
+    image___childResourcesYaml___title
+    image___childResourcesYaml___type
+    image___childServicesYaml___children
+    image___childServicesYaml___children___children
+    image___childServicesYaml___children___id
+    image___childServicesYaml___id
+    image___childServicesYaml___internal___content
+    image___childServicesYaml___internal___contentDigest
+    image___childServicesYaml___internal___description
+    image___childServicesYaml___internal___fieldOwners
+    image___childServicesYaml___internal___ignoreType
+    image___childServicesYaml___internal___mediaType
+    image___childServicesYaml___internal___owner
+    image___childServicesYaml___internal___type
+    image___childServicesYaml___lang
+    image___childServicesYaml___layout
+    image___childServicesYaml___originalPath
+    image___childServicesYaml___parent___children
+    image___childServicesYaml___parent___id
+    image___childServicesYaml___slices
+    image___childServicesYaml___slices___body
+    image___childServicesYaml___slices___id
+    image___childServicesYaml___slices___list
+    image___childServicesYaml___slices___subtitle
+    image___childServicesYaml___slices___testimonials
+    image___childServicesYaml___slices___title
+    image___childServicesYaml___slices___type
+    image___childServicesYaml___slug
+    image___childServicesYaml___title
+    image___childServicesYaml___type
+    image___childSplitsYaml___body
+    image___childSplitsYaml___children
+    image___childSplitsYaml___children___children
+    image___childSplitsYaml___children___id
+    image___childSplitsYaml___cta___link
+    image___childSplitsYaml___cta___title
+    image___childSplitsYaml___id
+    image___childSplitsYaml___internal___content
+    image___childSplitsYaml___internal___contentDigest
+    image___childSplitsYaml___internal___description
+    image___childSplitsYaml___internal___fieldOwners
+    image___childSplitsYaml___internal___ignoreType
+    image___childSplitsYaml___internal___mediaType
+    image___childSplitsYaml___internal___owner
+    image___childSplitsYaml___internal___type
+    image___childSplitsYaml___lang
+    image___childSplitsYaml___list
+    image___childSplitsYaml___parent___children
+    image___childSplitsYaml___parent___id
+    image___childSplitsYaml___slug
+    image___childSplitsYaml___title
+    image___childTestimonialsYaml___author
+    image___childTestimonialsYaml___body
+    image___childTestimonialsYaml___children
+    image___childTestimonialsYaml___children___children
+    image___childTestimonialsYaml___children___id
+    image___childTestimonialsYaml___client
+    image___childTestimonialsYaml___id
+    image___childTestimonialsYaml___image___absolutePath
+    image___childTestimonialsYaml___image___accessTime
+    image___childTestimonialsYaml___image___atime
+    image___childTestimonialsYaml___image___atimeMs
+    image___childTestimonialsYaml___image___base
+    image___childTestimonialsYaml___image___birthTime
+    image___childTestimonialsYaml___image___birthtime
+    image___childTestimonialsYaml___image___birthtimeMs
+    image___childTestimonialsYaml___image___blksize
+    image___childTestimonialsYaml___image___blocks
+    image___childTestimonialsYaml___image___changeTime
+    image___childTestimonialsYaml___image___children
+    image___childTestimonialsYaml___image___ctime
+    image___childTestimonialsYaml___image___ctimeMs
+    image___childTestimonialsYaml___image___dev
+    image___childTestimonialsYaml___image___dir
+    image___childTestimonialsYaml___image___ext
+    image___childTestimonialsYaml___image___extension
+    image___childTestimonialsYaml___image___gid
+    image___childTestimonialsYaml___image___id
+    image___childTestimonialsYaml___image___ino
+    image___childTestimonialsYaml___image___mode
+    image___childTestimonialsYaml___image___modifiedTime
+    image___childTestimonialsYaml___image___mtime
+    image___childTestimonialsYaml___image___mtimeMs
+    image___childTestimonialsYaml___image___name
+    image___childTestimonialsYaml___image___nlink
+    image___childTestimonialsYaml___image___prettySize
+    image___childTestimonialsYaml___image___publicURL
+    image___childTestimonialsYaml___image___rdev
+    image___childTestimonialsYaml___image___relativeDirectory
+    image___childTestimonialsYaml___image___relativePath
+    image___childTestimonialsYaml___image___root
+    image___childTestimonialsYaml___image___size
+    image___childTestimonialsYaml___image___sourceInstanceName
+    image___childTestimonialsYaml___image___uid
+    image___childTestimonialsYaml___internal___content
+    image___childTestimonialsYaml___internal___contentDigest
+    image___childTestimonialsYaml___internal___description
+    image___childTestimonialsYaml___internal___fieldOwners
+    image___childTestimonialsYaml___internal___ignoreType
+    image___childTestimonialsYaml___internal___mediaType
+    image___childTestimonialsYaml___internal___owner
+    image___childTestimonialsYaml___internal___type
+    image___childTestimonialsYaml___lang
+    image___childTestimonialsYaml___parent___children
+    image___childTestimonialsYaml___parent___id
+    image___childTestimonialsYaml___role
+    image___childTestimonialsYaml___slug
+    image___children
+    image___children___children
+    image___children___children___children
+    image___children___children___id
+    image___children___id
+    image___children___internal___content
+    image___children___internal___contentDigest
+    image___children___internal___description
+    image___children___internal___fieldOwners
+    image___children___internal___ignoreType
+    image___children___internal___mediaType
+    image___children___internal___owner
+    image___children___internal___type
+    image___children___parent___children
+    image___children___parent___id
+    image___ctime
+    image___ctimeMs
+    image___dev
+    image___dir
+    image___ext
+    image___extension
+    image___gid
+    image___id
+    image___ino
+    image___internal___content
+    image___internal___contentDigest
+    image___internal___description
+    image___internal___fieldOwners
+    image___internal___ignoreType
+    image___internal___mediaType
+    image___internal___owner
+    image___internal___type
+    image___mode
+    image___modifiedTime
+    image___mtime
+    image___mtimeMs
+    image___name
+    image___nlink
+    image___parent___children
+    image___parent___children___children
+    image___parent___children___id
+    image___parent___id
+    image___parent___internal___content
+    image___parent___internal___contentDigest
+    image___parent___internal___description
+    image___parent___internal___fieldOwners
+    image___parent___internal___ignoreType
+    image___parent___internal___mediaType
+    image___parent___internal___owner
+    image___parent___internal___type
+    image___parent___parent___children
+    image___parent___parent___id
+    image___prettySize
+    image___publicURL
+    image___rdev
+    image___relativeDirectory
+    image___relativePath
+    image___root
+    image___size
+    image___sourceInstanceName
+    image___uid
     internal___content
     internal___contentDigest
     internal___description
@@ -5136,8 +4547,8 @@ enum ResourcesYamlFieldsEnum {
     children___parent___internal___type
     children___parent___parent___children
     children___parent___parent___id
-    cta
     id
+    image
     internal___content
     internal___contentDigest
     internal___description
@@ -5147,6 +4558,7 @@ enum ResourcesYamlFieldsEnum {
     internal___owner
     internal___type
     lang
+    originalPath
     parent___children
     parent___children___children
     parent___children___children___children
@@ -5185,8 +4597,15 @@ enum ResourcesYamlFieldsEnum {
     parent___parent___internal___type
     parent___parent___parent___children
     parent___parent___parent___id
+    slices
+    slices___body
+    slices___id
+    slices___subtitle
+    slices___title
+    slices___type
     slug
     title
+    type
 }
 
 enum ServicesYamlFieldsEnum {
@@ -5239,6 +4658,8 @@ enum ServicesYamlFieldsEnum {
     internal___owner
     internal___type
     lang
+    layout
+    originalPath
     parent___children
     parent___children___children
     parent___children___children___children
@@ -5277,8 +4698,21 @@ enum ServicesYamlFieldsEnum {
     parent___parent___internal___type
     parent___parent___parent___children
     parent___parent___parent___id
+    slices
+    slices___body
+    slices___id
+    slices___list
+    slices___subtitle
+    slices___testimonials
+    slices___testimonials___author
+    slices___testimonials___company
+    slices___testimonials___quote
+    slices___testimonials___role
+    slices___title
+    slices___type
     slug
     title
+    type
 }
 
 enum SiteBuildMetadataFieldsEnum {
@@ -5460,14 +4894,11 @@ enum SiteFieldsEnum {
     parent___parent___internal___type
     parent___parent___parent___children
     parent___parent___parent___id
-    pathPrefix
-    polyfill
     port
     siteMetadata___description
     siteMetadata___infoData___background_color
     siteMetadata___infoData___contact___email
-    siteMetadata___infoData___contact___github_handle
-    siteMetadata___infoData___contact___twitter_handle
+    siteMetadata___infoData___contact___social
     siteMetadata___infoData___cta
     siteMetadata___infoData___description
     siteMetadata___repoUrl
@@ -5517,7 +4948,11 @@ enum SitePageFieldsEnum {
     component
     componentChunkName
     componentPath
+    context___currentPage
     context___lang
+    context___limit
+    context___numPages
+    context___skip
     context___slug
     context___tag
     context___title
@@ -5651,6 +5086,7 @@ enum SitePageFieldsEnum {
     pluginCreator___pluginOptions___plugins___pluginFilepath
     pluginCreator___pluginOptions___plugins___resolve
     pluginCreator___pluginOptions___plugins___version
+    pluginCreator___pluginOptions___rule___include
     pluginCreator___pluginOptions___showCaptions
     pluginCreator___pluginOptions___tracedSVG
     pluginCreator___pluginOptions___withWebp
@@ -5799,6 +5235,7 @@ enum SitePluginFieldsEnum {
     pluginOptions___plugins___pluginOptions___wrapperStyle
     pluginOptions___plugins___resolve
     pluginOptions___plugins___version
+    pluginOptions___rule___include
     pluginOptions___showCaptions
     pluginOptions___tracedSVG
     pluginOptions___withWebp
@@ -5866,6 +5303,7 @@ enum SplitsYamlFieldsEnum {
     internal___owner
     internal___type
     lang
+    list
     parent___children
     parent___children___children
     parent___children___children___children
@@ -6065,6 +5503,8 @@ enum TestimonialsYamlFieldsEnum {
     image___childDataYaml___internal___type
     image___childDataYaml___parent___children
     image___childDataYaml___parent___id
+    image___childDataYaml___skills
+    image___childDataYaml___skills___slug
     image___childDataYaml___slug
     image___childDataYaml___statistics
     image___childDataYaml___statistics___label
@@ -6145,47 +5585,8 @@ enum TestimonialsYamlFieldsEnum {
     image___childMarkdownRemark___children___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     image___childMarkdownRemark___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     image___childMarkdownRemark___excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    image___childMarkdownRemark___featuredImg___absolutePath
-    image___childMarkdownRemark___featuredImg___accessTime
-    image___childMarkdownRemark___featuredImg___atime
-    image___childMarkdownRemark___featuredImg___atimeMs
-    image___childMarkdownRemark___featuredImg___base
-    image___childMarkdownRemark___featuredImg___birthTime
-    image___childMarkdownRemark___featuredImg___birthtime
-    image___childMarkdownRemark___featuredImg___birthtimeMs
-    image___childMarkdownRemark___featuredImg___blksize
-    image___childMarkdownRemark___featuredImg___blocks
-    image___childMarkdownRemark___featuredImg___changeTime
-    image___childMarkdownRemark___featuredImg___children
-    image___childMarkdownRemark___featuredImg___ctime
-    image___childMarkdownRemark___featuredImg___ctimeMs
-    image___childMarkdownRemark___featuredImg___dev
-    image___childMarkdownRemark___featuredImg___dir
-    image___childMarkdownRemark___featuredImg___ext
-    image___childMarkdownRemark___featuredImg___extension
-    image___childMarkdownRemark___featuredImg___gid
-    image___childMarkdownRemark___featuredImg___id
-    image___childMarkdownRemark___featuredImg___ino
-    image___childMarkdownRemark___featuredImg___mode
-    image___childMarkdownRemark___featuredImg___modifiedTime
-    image___childMarkdownRemark___featuredImg___mtime
-    image___childMarkdownRemark___featuredImg___mtimeMs
-    image___childMarkdownRemark___featuredImg___name
-    image___childMarkdownRemark___featuredImg___nlink
-    image___childMarkdownRemark___featuredImg___prettySize
-    image___childMarkdownRemark___featuredImg___publicURL
-    image___childMarkdownRemark___featuredImg___rdev
-    image___childMarkdownRemark___featuredImg___relativeDirectory
-    image___childMarkdownRemark___featuredImg___relativePath
-    image___childMarkdownRemark___featuredImg___root
-    image___childMarkdownRemark___featuredImg___size
-    image___childMarkdownRemark___featuredImg___sourceInstanceName
-    image___childMarkdownRemark___featuredImg___uid
-    image___childMarkdownRemark___featuredImg___url
     image___childMarkdownRemark___fields___collection @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     image___childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
-    image___childMarkdownRemark___frontmatter___featuredImgAlt
-    image___childMarkdownRemark___frontmatter___featuredImgUrl
     image___childMarkdownRemark___frontmatter___lang
     image___childMarkdownRemark___frontmatter___slug
     image___childMarkdownRemark___frontmatter___title
@@ -6218,45 +5619,43 @@ enum TestimonialsYamlFieldsEnum {
     image___childPostsYaml___children___id
     image___childPostsYaml___date
     image___childPostsYaml___description
-    image___childPostsYaml___featuredImage___absolutePath
-    image___childPostsYaml___featuredImage___accessTime
-    image___childPostsYaml___featuredImage___atime
-    image___childPostsYaml___featuredImage___atimeMs
-    image___childPostsYaml___featuredImage___base
-    image___childPostsYaml___featuredImage___birthTime
-    image___childPostsYaml___featuredImage___birthtime
-    image___childPostsYaml___featuredImage___birthtimeMs
-    image___childPostsYaml___featuredImage___blksize
-    image___childPostsYaml___featuredImage___blocks
-    image___childPostsYaml___featuredImage___changeTime
-    image___childPostsYaml___featuredImage___children
-    image___childPostsYaml___featuredImage___ctime
-    image___childPostsYaml___featuredImage___ctimeMs
-    image___childPostsYaml___featuredImage___dev
-    image___childPostsYaml___featuredImage___dir
-    image___childPostsYaml___featuredImage___ext
-    image___childPostsYaml___featuredImage___extension
-    image___childPostsYaml___featuredImage___gid
-    image___childPostsYaml___featuredImage___id
-    image___childPostsYaml___featuredImage___ino
-    image___childPostsYaml___featuredImage___mode
-    image___childPostsYaml___featuredImage___modifiedTime
-    image___childPostsYaml___featuredImage___mtime
-    image___childPostsYaml___featuredImage___mtimeMs
-    image___childPostsYaml___featuredImage___name
-    image___childPostsYaml___featuredImage___nlink
-    image___childPostsYaml___featuredImage___prettySize
-    image___childPostsYaml___featuredImage___publicURL
-    image___childPostsYaml___featuredImage___rdev
-    image___childPostsYaml___featuredImage___relativeDirectory
-    image___childPostsYaml___featuredImage___relativePath
-    image___childPostsYaml___featuredImage___root
-    image___childPostsYaml___featuredImage___size
-    image___childPostsYaml___featuredImage___sourceInstanceName
-    image___childPostsYaml___featuredImage___uid
-    image___childPostsYaml___featuredImage___url
     image___childPostsYaml___id
-    image___childPostsYaml___image
+    image___childPostsYaml___image___absolutePath
+    image___childPostsYaml___image___accessTime
+    image___childPostsYaml___image___atime
+    image___childPostsYaml___image___atimeMs
+    image___childPostsYaml___image___base
+    image___childPostsYaml___image___birthTime
+    image___childPostsYaml___image___birthtime
+    image___childPostsYaml___image___birthtimeMs
+    image___childPostsYaml___image___blksize
+    image___childPostsYaml___image___blocks
+    image___childPostsYaml___image___changeTime
+    image___childPostsYaml___image___children
+    image___childPostsYaml___image___ctime
+    image___childPostsYaml___image___ctimeMs
+    image___childPostsYaml___image___dev
+    image___childPostsYaml___image___dir
+    image___childPostsYaml___image___ext
+    image___childPostsYaml___image___extension
+    image___childPostsYaml___image___gid
+    image___childPostsYaml___image___id
+    image___childPostsYaml___image___ino
+    image___childPostsYaml___image___mode
+    image___childPostsYaml___image___modifiedTime
+    image___childPostsYaml___image___mtime
+    image___childPostsYaml___image___mtimeMs
+    image___childPostsYaml___image___name
+    image___childPostsYaml___image___nlink
+    image___childPostsYaml___image___prettySize
+    image___childPostsYaml___image___publicURL
+    image___childPostsYaml___image___rdev
+    image___childPostsYaml___image___relativeDirectory
+    image___childPostsYaml___image___relativePath
+    image___childPostsYaml___image___root
+    image___childPostsYaml___image___size
+    image___childPostsYaml___image___sourceInstanceName
+    image___childPostsYaml___image___uid
     image___childPostsYaml___internal___content
     image___childPostsYaml___internal___contentDigest
     image___childPostsYaml___internal___description
@@ -6299,8 +5698,8 @@ enum TestimonialsYamlFieldsEnum {
     image___childResourcesYaml___children
     image___childResourcesYaml___children___children
     image___childResourcesYaml___children___id
-    image___childResourcesYaml___cta
     image___childResourcesYaml___id
+    image___childResourcesYaml___image
     image___childResourcesYaml___internal___content
     image___childResourcesYaml___internal___contentDigest
     image___childResourcesYaml___internal___description
@@ -6310,10 +5709,18 @@ enum TestimonialsYamlFieldsEnum {
     image___childResourcesYaml___internal___owner
     image___childResourcesYaml___internal___type
     image___childResourcesYaml___lang
+    image___childResourcesYaml___originalPath
     image___childResourcesYaml___parent___children
     image___childResourcesYaml___parent___id
+    image___childResourcesYaml___slices
+    image___childResourcesYaml___slices___body
+    image___childResourcesYaml___slices___id
+    image___childResourcesYaml___slices___subtitle
+    image___childResourcesYaml___slices___title
+    image___childResourcesYaml___slices___type
     image___childResourcesYaml___slug
     image___childResourcesYaml___title
+    image___childResourcesYaml___type
     image___childServicesYaml___children
     image___childServicesYaml___children___children
     image___childServicesYaml___children___id
@@ -6327,10 +5734,21 @@ enum TestimonialsYamlFieldsEnum {
     image___childServicesYaml___internal___owner
     image___childServicesYaml___internal___type
     image___childServicesYaml___lang
+    image___childServicesYaml___layout
+    image___childServicesYaml___originalPath
     image___childServicesYaml___parent___children
     image___childServicesYaml___parent___id
+    image___childServicesYaml___slices
+    image___childServicesYaml___slices___body
+    image___childServicesYaml___slices___id
+    image___childServicesYaml___slices___list
+    image___childServicesYaml___slices___subtitle
+    image___childServicesYaml___slices___testimonials
+    image___childServicesYaml___slices___title
+    image___childServicesYaml___slices___type
     image___childServicesYaml___slug
     image___childServicesYaml___title
+    image___childServicesYaml___type
     image___childSplitsYaml___body
     image___childSplitsYaml___children
     image___childSplitsYaml___children___children
@@ -6347,6 +5765,7 @@ enum TestimonialsYamlFieldsEnum {
     image___childSplitsYaml___internal___owner
     image___childSplitsYaml___internal___type
     image___childSplitsYaml___lang
+    image___childSplitsYaml___list
     image___childSplitsYaml___parent___children
     image___childSplitsYaml___parent___id
     image___childSplitsYaml___slug
@@ -6394,7 +5813,6 @@ enum TestimonialsYamlFieldsEnum {
     image___childTestimonialsYaml___image___size
     image___childTestimonialsYaml___image___sourceInstanceName
     image___childTestimonialsYaml___image___uid
-    image___childTestimonialsYaml___image___url
     image___childTestimonialsYaml___internal___content
     image___childTestimonialsYaml___internal___contentDigest
     image___childTestimonialsYaml___internal___description
@@ -6469,7 +5887,6 @@ enum TestimonialsYamlFieldsEnum {
     image___size
     image___sourceInstanceName
     image___uid
-    image___url
     internal___content
     internal___contentDigest
     internal___description
@@ -6670,9 +6087,18 @@ input DataYamlFilterInput {
     id: StringQueryOperatorInput
     internal: InternalFilterInput
     parent: NodeFilterInput
+    skills: DataYamlSkillsFilterListInput
     slug: StringQueryOperatorInput
     statistics: DataYamlStatisticsFilterListInput
     technologies: DataYamlTechnologiesFilterListInput
+}
+
+input DataYamlSkillsFilterInput {
+    slug: StringQueryOperatorInput
+}
+
+input DataYamlSkillsFilterListInput {
+    elemMatch: DataYamlSkillsFilterInput
 }
 
 input DataYamlSortInput {
@@ -6812,7 +6238,6 @@ input FileFilterInput {
     size: IntQueryOperatorInput
     sourceInstanceName: StringQueryOperatorInput
     uid: IntQueryOperatorInput
-    url: StringQueryOperatorInput
 }
 
 input FileSortInput {
@@ -6829,14 +6254,6 @@ input FloatQueryOperatorInput {
     lte: Float
     ne: Float
     nin: [Float]
-}
-
-input FrontmatterFilterInput {
-    featuredImgAlt: StringQueryOperatorInput
-    featuredImgUrl: StringQueryOperatorInput
-    lang: StringQueryOperatorInput
-    slug: StringQueryOperatorInput
-    title: StringQueryOperatorInput
 }
 
 input ImageSharpFilterInput {
@@ -6976,10 +6393,9 @@ input MarkdownRemarkFilterInput {
     children: NodeFilterListInput
     excerpt: StringQueryOperatorInput
     excerptAst: JSONQueryOperatorInput
-    featuredImg: FileFilterInput
     fields: MarkdownRemarkFieldsFilterInput
     fileAbsolutePath: StringQueryOperatorInput
-    frontmatter: FrontmatterFilterInput
+    frontmatter: MarkdownRemarkFrontmatterFilterInput
     headings: MarkdownHeadingFilterListInput
     html: StringQueryOperatorInput
     htmlAst: JSONQueryOperatorInput
@@ -6990,6 +6406,12 @@ input MarkdownRemarkFilterInput {
     tableOfContents: StringQueryOperatorInput
     timeToRead: IntQueryOperatorInput
     wordCount: MarkdownWordCountFilterInput
+}
+
+input MarkdownRemarkFrontmatterFilterInput {
+    lang: StringQueryOperatorInput
+    slug: StringQueryOperatorInput
+    title: StringQueryOperatorInput
 }
 
 input MarkdownRemarkSortInput {
@@ -7020,9 +6442,8 @@ input PostsYamlFilterInput {
     children: NodeFilterListInput
     date: FloatQueryOperatorInput
     description: StringQueryOperatorInput
-    featuredImage: FileFilterInput
     id: StringQueryOperatorInput
-    image: StringQueryOperatorInput
+    image: FileFilterInput
     internal: InternalFilterInput
     lang: StringQueryOperatorInput
     originalPath: StringQueryOperatorInput
@@ -7080,13 +6501,28 @@ input ProcessYamlSortInput {
 
 input ResourcesYamlFilterInput {
     children: NodeFilterListInput
-    cta: StringQueryOperatorInput
     id: StringQueryOperatorInput
+    image: StringQueryOperatorInput
     internal: InternalFilterInput
     lang: StringQueryOperatorInput
+    originalPath: StringQueryOperatorInput
     parent: NodeFilterInput
+    slices: ResourcesYamlSlicesFilterListInput
     slug: StringQueryOperatorInput
     title: StringQueryOperatorInput
+    type: StringQueryOperatorInput
+}
+
+input ResourcesYamlSlicesFilterInput {
+    body: StringQueryOperatorInput
+    id: StringQueryOperatorInput
+    subtitle: StringQueryOperatorInput
+    title: StringQueryOperatorInput
+    type: StringQueryOperatorInput
+}
+
+input ResourcesYamlSlicesFilterListInput {
+    elemMatch: ResourcesYamlSlicesFilterInput
 }
 
 input ResourcesYamlSortInput {
@@ -7099,9 +6535,38 @@ input ServicesYamlFilterInput {
     id: StringQueryOperatorInput
     internal: InternalFilterInput
     lang: StringQueryOperatorInput
+    layout: StringQueryOperatorInput
+    originalPath: StringQueryOperatorInput
     parent: NodeFilterInput
+    slices: ServicesYamlSlicesFilterListInput
     slug: StringQueryOperatorInput
     title: StringQueryOperatorInput
+    type: StringQueryOperatorInput
+}
+
+input ServicesYamlSlicesFilterInput {
+    body: StringQueryOperatorInput
+    id: StringQueryOperatorInput
+    list: StringQueryOperatorInput
+    subtitle: StringQueryOperatorInput
+    testimonials: ServicesYamlSlicesTestimonialsFilterListInput
+    title: StringQueryOperatorInput
+    type: StringQueryOperatorInput
+}
+
+input ServicesYamlSlicesFilterListInput {
+    elemMatch: ServicesYamlSlicesFilterInput
+}
+
+input ServicesYamlSlicesTestimonialsFilterInput {
+    author: StringQueryOperatorInput
+    company: StringQueryOperatorInput
+    quote: StringQueryOperatorInput
+    role: StringQueryOperatorInput
+}
+
+input ServicesYamlSlicesTestimonialsFilterListInput {
+    elemMatch: ServicesYamlSlicesTestimonialsFilterInput
 }
 
 input ServicesYamlSortInput {
@@ -7129,14 +6594,16 @@ input SiteFilterInput {
     id: StringQueryOperatorInput
     internal: InternalFilterInput
     parent: NodeFilterInput
-    pathPrefix: StringQueryOperatorInput
-    polyfill: BooleanQueryOperatorInput
     port: IntQueryOperatorInput
     siteMetadata: SiteSiteMetadataFilterInput
 }
 
 input SitePageContextFilterInput {
+    currentPage: IntQueryOperatorInput
     lang: StringQueryOperatorInput
+    limit: IntQueryOperatorInput
+    numPages: IntQueryOperatorInput
+    skip: IntQueryOperatorInput
     slug: StringQueryOperatorInput
     tag: StringQueryOperatorInput
     title: StringQueryOperatorInput
@@ -7234,6 +6701,7 @@ input SitePluginPluginOptionsFilterInput {
     pathCheck: BooleanQueryOperatorInput
     pathPrefix: StringQueryOperatorInput
     plugins: SitePluginPluginOptionsPluginsFilterListInput
+    rule: SitePluginPluginOptionsRuleFilterInput
     showCaptions: BooleanQueryOperatorInput
     tracedSVG: BooleanQueryOperatorInput
     withWebp: BooleanQueryOperatorInput
@@ -7270,6 +6738,10 @@ input SitePluginPluginOptionsPluginsPluginOptionsFilterInput {
     wrapperStyle: StringQueryOperatorInput
 }
 
+input SitePluginPluginOptionsRuleFilterInput {
+    include: StringQueryOperatorInput
+}
+
 input SitePluginSortInput {
     fields: [SitePluginFieldsEnum]
     order: [SortOrderEnum] = [ASC]
@@ -7290,8 +6762,16 @@ input SiteSiteMetadataInfoDataContactAddressFilterInput {
 input SiteSiteMetadataInfoDataContactFilterInput {
     address: SiteSiteMetadataInfoDataContactAddressFilterInput
     email: StringQueryOperatorInput
-    github_handle: StringQueryOperatorInput
-    twitter_handle: StringQueryOperatorInput
+    social: SiteSiteMetadataInfoDataContactSocialFilterListInput
+}
+
+input SiteSiteMetadataInfoDataContactSocialFilterInput {
+    icon: StringQueryOperatorInput
+    link: StringQueryOperatorInput
+}
+
+input SiteSiteMetadataInfoDataContactSocialFilterListInput {
+    elemMatch: SiteSiteMetadataInfoDataContactSocialFilterInput
 }
 
 input SiteSiteMetadataInfoDataFilterInput {
@@ -7318,6 +6798,7 @@ input SplitsYamlFilterInput {
     id: StringQueryOperatorInput
     internal: InternalFilterInput
     lang: StringQueryOperatorInput
+    list: StringQueryOperatorInput
     parent: NodeFilterInput
     slug: StringQueryOperatorInput
     title: StringQueryOperatorInput

@@ -6,7 +6,7 @@ author: Stéphane A.
 description: We'll start with a review of law texts about cookie usage on your
   website then introduce you with some common use cases and finally propose a
   convenient solution via a gem.
-image: images/default_blogpost_image_8@1x.jpg
+image: ./images/default_blogpost_image_8@1x.jpg
 date: 1420070400000
 body: >-
   <h2>The law</h2>
