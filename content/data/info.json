@@ -1,6 +1,7 @@
 {
   "description": "belighted.com",
   "cta": "A CTA",
+  "siteUrl": "https://beligted.netlify.com",
   "contact": {
     "email": "info@belighted.com",
     "social": [

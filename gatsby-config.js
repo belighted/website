@@ -125,9 +125,6 @@ module.exports = {
           }
         ]
       }
-    },
-    {
-      resolve: `gatsby-plugin-feed`
     }
   ]
 };

@@ -23,7 +23,6 @@ const Social = () => {
     <div className="l-grid l-grid--4cols u-margin-top">
       {info.contact.social.map(social => {
         const Component = icons[social.icon];
-        console.log(social.icon, Component);
         return (
           <a
             href={social.link}
