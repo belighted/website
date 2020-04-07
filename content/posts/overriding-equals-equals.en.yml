@@ -5,7 +5,7 @@ title: Overriding ==, eql? and hash
 author: Dominique L.
 description: It is quite usual in object-oriented programming to redefine the
   criteria of equivalence between two instances of a class.
-image: ./images/default_blogpost_image_2@1x.jpg
+image: null
 date: 1356998400000
 body: >-
   <p>It is quite usual in object-oriented programming to redefine the criteria

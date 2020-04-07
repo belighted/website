@@ -5,7 +5,7 @@ title: Merge a bunch of Pdfs into a resulting one with Prawn
 author: Stéphane A.
 description: You have a bunch of Pdf documents? You want to concatenate them all
   into a resulting one? Using Prawn is your solution.
-image: ./images/default_blogpost_image_8@1x.jpg
+image: null
 date: 1356998400000
 body: >-
   <p>You have a bunch of Pdf documents and you want to concatenate them all into

@@ -5,7 +5,7 @@ title: will_paginate vs. Kaminari
 author: Stéphane A.
 description: What is the main differences between will_paginate and Kaminari
   gems ? Take a quick look to this post in order to discover our comparaison.
-image: ./images/default_blogpost_image_3@1x.jpg
+image: null
 date: 1325376000000
 body: >-
   <p>In order to start this comparison, let’s just explain the way of working of

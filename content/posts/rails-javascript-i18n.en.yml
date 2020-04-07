@@ -6,7 +6,7 @@ author: Stéphane A.
 description: Here are some techniques, tools and tips that will help you get
   started with I18n, in order to avoid a lot of trouble for your app in the long
   run.
-image: ./images/default_blogpost_image_7@1x.jpg
+image: null
 date: 1325376000000
 body: >-
   <p>First and foremost, internationalizing an existing application is a

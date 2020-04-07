@@ -6,7 +6,7 @@ author: Philippe V.
 description: "Le premier d'une série de 3 articles sur la manière dont nous
   écrivons des tests automatiques pour nos projets rails. Cet article traite des
   outils que nous utilisons. "
-image: ./images/default_blogpost_image_5@1x.jpg
+image: null
 date: 1451606400000
 body: >-
   <h2>Introduction</h2>

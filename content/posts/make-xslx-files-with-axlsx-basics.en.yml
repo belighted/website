@@ -5,7 +5,7 @@ title: "Make xlsx files with AXLSX : basics"
 author: Pierre M.
 description: Come discover whats hidden behind the AXLSX gem. Powerfull tool for
   exporting data from a project.
-image: ./images/default_blogpost_image_7@1x.jpg
+image: null
 date: 1325376000000
 body: >-
   <p>Many organizations need Excel’s Worksheets. Therefore, it’s not surprising

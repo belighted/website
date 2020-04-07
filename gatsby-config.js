@@ -1,11 +1,12 @@
 const config = require("./config.json");
 const infoData = require("./content/data/info.json");
-
+const feedConfig = require("./config/feed");
 module.exports = {
   //this makes the site config available to forestry cms
   siteMetadata: {
     title: config.title,
     description: config.description,
+    siteUrl: config.site_url,
     repoUrl: config.repository_url,
     about: config.about,
     contact: config.contact,
@@ -125,6 +126,7 @@ module.exports = {
           }
         ]
       }
-    }
+    },
+    feedConfig
   ]
 };
