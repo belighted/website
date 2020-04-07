@@ -5,13 +5,14 @@ import useSiteMetadata from "../../static_queries/useSiteMetadata";
 import Footer from "./Footer";
 import "../../scss/index.scss";
 import { I18nContext } from "../i18n/I18n";
+import SubFooter from "./components/SubFooter";
 
 export default function Layout({ context, children, page }) {
   const { title, description } = useSiteMetadata();
 
   return (
     <I18nContext.Provider value={context.lang}>
-      <div className='l-layout'>
+      <div className="l-layout">
         <Helmet>
           <html lang={context.lang} />
           <title>{title}</title>
@@ -21,6 +22,7 @@ export default function Layout({ context, children, page }) {
         <Header page={page} context={context} />
         <div className={"l-layout__body"}>{children}</div>
         <Footer page={page} context={context} />
+        <SubFooter page={page} context={context} />
       </div>
     </I18nContext.Provider>
   );

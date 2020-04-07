@@ -1,0 +1,15 @@
+.c-subfooter {
+  background: $color-gray7;
+  padding: $inuit-global-spacing-unit-small 0;
+  &__item {
+    padding: 0 $inuit-global-spacing-unit-small;
+    border-right: 2px solid $color-white;
+    color: $color-white;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      border: none;
+    }
+  }
+}

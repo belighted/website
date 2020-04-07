@@ -29,12 +29,15 @@ $color-brand5: darken(#85ccf6,9%);
 $color-brand6: #333c4e;
 
 $color-gray8: rgb(41,41,41);
+$color-gray7: rgb(72, 80, 96);
+$color-gray6: rgb(51, 60, 78);
 $color-gray4: rgb(103,103,110);
 $color-gray1: #fafafa;
 
 $color-gray5: mix($color-gray1,$color-brand5,40%);
 $color-gray3: mix($color-gray1,$color-brand5,80%);
 $color-gray2: mix($color-gray1,$color-brand5,90%);
+
 
 $color-white: #ffffff;
 $color-black: #000000;
