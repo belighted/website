@@ -1,12 +1,43 @@
-lang: "en"
-slug: "visyos-application-web-et-mobile-pour-chirurgiens"
-originalPath: "https://www.belighted.com/blog/visyos-application-web-et-mobile-pour-chirurgiens"
-title: "Visyos, application web et mobile pour chirurgiens"
-author: "Isabelle K."
-description: "La plateforme web Visyos assiste les chirurgiens orthopédistes dans la planification et la réalisation des découpes osseuses. Elle est disponible en version mobile pour tablettes. Après l’application web de gestion des contrats de maintenance développée pour IBA, c’est le deuxième projet que Belighted réalise dans le domaine médical.\n\n"
-image: "https://belighted-website.s3.amazonaws.com/uploads/visyos-home.png#keepProtocol"
+lang: en
+slug: visyos-application-web-et-mobile-pour-chirurgiens
+originalPath: https://www.belighted.com/blog/visyos-application-web-et-mobile-pour-chirurgiens
+title: Visyos, application web et mobile pour chirurgiens
+author: Isabelle K.
+description: >+
+  La plateforme web Visyos assiste les chirurgiens orthopédistes dans la
+  planification et la réalisation des découpes osseuses. Elle est disponible en
+  version mobile pour tablettes. Après l’application web de gestion des contrats
+  de maintenance développée pour IBA, c’est le deuxième projet que Belighted
+  réalise dans le domaine médical.
+
+image: visyos-home.png
 date: 1356998400000
-body: "<p><a href=\"https://www.visyos.com\">Visyos</a> (Visualize your osteotomy) est une spin-off de l’Université Catholique de Louvain. La <strong>plateforme web</strong> du même nom assiste les chirurgiens orthopédistes dans la planification et la réalisation des ostéotomies, c’est-à-dire la section d’un os long, à des fins thérapeutiques ou plastiques.</p>\n<!--more-->\n<p>L’aventure Visyos commence en 2010, sur base d’un projet de recherche en <strong>chirurgie tumorale</strong> lancé par le Professeur Banse, des Cliniques universitaires Saint-Luc. Dès le départ, l’existence de la spin-off implique la création d’une <strong>plateforme web</strong> afin de structurer les interactions entre les chirurgiens et les ingénieurs qui conçoivent les guides de découpe. Visyos demande alors à Belighted de réaliser cette plateforme.</p>\n<p><strong>L’application web</strong> développée doit donc permettre l’échange d’informations mais aussi servir de support au aux différentes étapes de la <strong>planification de la découpe des tumeurs osseuses</strong> et rendre possible le <strong>partage sécurisé des images médicales annotées</strong> , dans le respect de la loi, ainsi que la <strong>visualisation de ces images en 2D et 3D</strong>. Enfin, elle doit comprendre un moteur de notifications et de rappels automatiques.</p>\n<p>Rapidement, l’équipe de Belighted identifie une difficulté : comment offrir aux chirurgiens, dans une <strong>interface web</strong> , une visualisation <strong>d’images médicales</strong> (en provenance d’IRM ou de scans) similaire à celle offerte par des outils spécialisés et utilisés en milieu hospitalier ? En se basant sur les <strong>normes DICOM</strong> utilisées en imagerie médicale, Belighted obtient le résultat escompté.</p>\n<p>Un autre challenge est d’aboutir à un processus robuste limitant les interactions entre les différents acteurs. Grâce à <strong>l’intégration de l’application avec les technologies médicales</strong> telles que les <strong>systèmes PACS</strong> et l’utilisation des <strong>services de téléimagerie médicale</strong> (transfert sécurisé via internet), l’équipe parvient à contourner la difficulté.</p>\n<p>Enfin, vu le caractère sensible des données et la législation en vigueur, la plateforme utilise les protocoles HTTPS pour assurer la <strong>sécurisation des informations</strong>.</p>\n<p>Quelques mois plus tard, le projet est en ligne et opérationnel. Mais la spin-off n’en reste pas là.</p>\n<p>Etant donné le taux de pénétration des tablettes iPad au sein du public visé par Visyos, la spin-off décide de rendre son <strong>application mobile</strong>. Les données peuvent ainsi être consultées et mises à jour en temps réel. L’application iPad offre une qualité d’utilisation équivalente, voire supérieure, à celle proposée par l’interface web.</p>\n<p>Après l’application web de gestion des contrats de maintenance développée pour IBA, c’est le deuxième projet que Belighted réalise dans le <strong>domaine médical</strong>.<br><br><!--HubSpot Call-to-Action Code --><span class=\"hs-cta-wrapper\" id=\"hs-cta-wrapper-2a757af5-8c70-4e5b-bd84-3e0c399fa61d\"><span class=\"hs-cta-node hs-cta-2a757af5-8c70-4e5b-bd84-3e0c399fa61d\" id=\"hs-cta-2a757af5-8c70-4e5b-bd84-3e0c399fa61d\"><!--[if lte IE 8]><div id=\"hs-cta-ie-element\"></div><![endif]--><a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d\"><img class=\"hs-cta-img\" id=\"hs-cta-img-2a757af5-8c70-4e5b-bd84-3e0c399fa61d\" style=\"border-width:0px;\" src=\"https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png\" alt=\"You have a software idea but can't code?\"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>\n<div id=\"disqus_thread\">&nbsp;</div>"
+body: >-
+  <p><a href="https://www.visyos.com">Visyos</a> (Visualize your osteotomy) est
+  une spin-off de l’Université Catholique de Louvain. La <strong>plateforme
+  web</strong> du même nom assiste les chirurgiens orthopédistes dans la
+  planification et la réalisation des ostéotomies, c’est-à-dire la section d’un
+  os long, à des fins thérapeutiques ou plastiques.</p>
+
+  <!--more-->
+
+  <p>L’aventure Visyos commence en 2010, sur base d’un projet de recherche en <strong>chirurgie tumorale</strong> lancé par le Professeur Banse, des Cliniques universitaires Saint-Luc. Dès le départ, l’existence de la spin-off implique la création d’une <strong>plateforme web</strong> afin de structurer les interactions entre les chirurgiens et les ingénieurs qui conçoivent les guides de découpe. Visyos demande alors à Belighted de réaliser cette plateforme.</p>
+
+  <p><strong>L’application web</strong> développée doit donc permettre l’échange d’informations mais aussi servir de support au aux différentes étapes de la <strong>planification de la découpe des tumeurs osseuses</strong> et rendre possible le <strong>partage sécurisé des images médicales annotées</strong> , dans le respect de la loi, ainsi que la <strong>visualisation de ces images en 2D et 3D</strong>. Enfin, elle doit comprendre un moteur de notifications et de rappels automatiques.</p>
+
+  <p>Rapidement, l’équipe de Belighted identifie une difficulté : comment offrir aux chirurgiens, dans une <strong>interface web</strong> , une visualisation <strong>d’images médicales</strong> (en provenance d’IRM ou de scans) similaire à celle offerte par des outils spécialisés et utilisés en milieu hospitalier ? En se basant sur les <strong>normes DICOM</strong> utilisées en imagerie médicale, Belighted obtient le résultat escompté.</p>
+
+  <p>Un autre challenge est d’aboutir à un processus robuste limitant les interactions entre les différents acteurs. Grâce à <strong>l’intégration de l’application avec les technologies médicales</strong> telles que les <strong>systèmes PACS</strong> et l’utilisation des <strong>services de téléimagerie médicale</strong> (transfert sécurisé via internet), l’équipe parvient à contourner la difficulté.</p>
+
+  <p>Enfin, vu le caractère sensible des données et la législation en vigueur, la plateforme utilise les protocoles HTTPS pour assurer la <strong>sécurisation des informations</strong>.</p>
+
+  <p>Quelques mois plus tard, le projet est en ligne et opérationnel. Mais la spin-off n’en reste pas là.</p>
+
+  <p>Etant donné le taux de pénétration des tablettes iPad au sein du public visé par Visyos, la spin-off décide de rendre son <strong>application mobile</strong>. Les données peuvent ainsi être consultées et mises à jour en temps réel. L’application iPad offre une qualité d’utilisation équivalente, voire supérieure, à celle proposée par l’interface web.</p>
+
+  <p>Après l’application web de gestion des contrats de maintenance développée pour IBA, c’est le deuxième projet que Belighted réalise dans le <strong>domaine médical</strong>.<br><br><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-2a757af5-8c70-4e5b-bd84-3e0c399fa61d"><span class="hs-cta-node hs-cta-2a757af5-8c70-4e5b-bd84-3e0c399fa61d" id="hs-cta-2a757af5-8c70-4e5b-bd84-3e0c399fa61d"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d"><img class="hs-cta-img" id="hs-cta-img-2a757af5-8c70-4e5b-bd84-3e0c399fa61d" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png" alt="You have a software idea but can't code?"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>
+
+  <div id="disqus_thread">&nbsp;</div>
 tags:
-  - label: "Company news"
-    value: "company-news"
+  - label: Company news
+    value: company-news

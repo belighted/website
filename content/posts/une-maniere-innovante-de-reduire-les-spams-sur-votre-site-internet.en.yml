@@ -1,12 +1,78 @@
-lang: "en"
-slug: "une-maniere-innovante-de-reduire-les-spams-sur-votre-site-internet"
-originalPath: "https://www.belighted.com/blog/une-maniere-innovante-de-reduire-les-spams-sur-votre-site-internet"
-title: "Une manière innovante de réduire les spams sur votre site Internet"
-author: "Philippe B."
-description: "Nous introduisons ici un moyen novateur de gérer le flux d'e-mails indésirables grâce à une nouvelle technique anti-spam en remplacement de la bien connue CAPTCHA."
-image: "https://belighted-website.s3.amazonaws.com/uploads/289348-grum-spambot-shut-down-massive-botnet-created-18-percent-of-worlds-spa.jpg#keepProtocol"
+lang: en
+slug: une-maniere-innovante-de-reduire-les-spams-sur-votre-site-internet
+originalPath: https://www.belighted.com/blog/une-maniere-innovante-de-reduire-les-spams-sur-votre-site-internet
+title: Une manière innovante de réduire les spams sur votre site Internet
+author: Philippe B.
+description: Nous introduisons ici un moyen novateur de gérer le flux d'e-mails
+  indésirables grâce à une nouvelle technique anti-spam en remplacement de la
+  bien connue CAPTCHA.
+image: 289348-grum-spambot-shut-down-massive-botnet-created-18-percent-of-worlds-spa.jpg
 date: 1420070400000
-body: "<h2>Ce que nous voulions</h2>\n<p>Comme vous avez pu le constater, nous avons récemment lancé notre tout nouveau site web. En tant qu’agence de développement, le formulaire de contact est notre principal canal pour générer des leads. C’est pourquoi nous souhaitions qu’il soit le plus simple possible, afin que nos clients puissent nous contacter facilement.</p>\n<!--more-->\n<h2>Le problème</h2>\n<p>Le formulaire de contact a rapidement été utilisé par des spammeurs. Notre boîte de réception se remplissait d’emails indésirables et inutiles, dont la gestion nous coûtait du temps et de l’énergie.</p>\n<h2>La solution existante</h2>\n<p>La manière la plus courante d’éviter ces emails indésirables est d’utiliser des CAPTCHAs, bien connus des internautes. Malgré tout, nous ne voulions pas obliger nos clients à remplir cette entrée supplémentaire: l’utilisateur pourrait interrompre son action en raison d’un formulaire de contact trop compliqué.</p>\n<h2>Notre solution</h2>\n<p>Après quelques recherches, nous nous sommes rendus compte qu’en tant qu’ordinateurs, les bots ne nécessitent pas plus de 5 secondes pour visiter notre site et nous envoyer une demande de contact. Notre idée consistait donc à mettre en place une minuterie, afin de bloquer toutes demandes suspectes.</p>\n<p>Dans notre application Rails, ceci implique l’ajout du code suivant à la configuration de l’application:</p>\n<pre><code class=\"ruby\"><span class=\"comment\">#config/application.rb</span>\n<span class=\"constant\">Rails</span>.application.config.antispam_timer = <span class=\"number\">30</span>\n</code></pre>\n<p>Dans notre cas, le délai de notre antispam_timer a été fixé à 30 secondes. Vous pouvez maintenant ajouter des informations relatives à la durée à la session utilisateur dans votre contrôleur d'application en utilisant un before_filter, comme ceci:</p>\n<pre><code class=\"ruby\"><span class=\"comment\">#controllers/application.rb</span>\n<span class=\"class\"><span class=\"keyword\">class</span> <span class=\"title\">ApplicationController</span> <span class=\"inheritance\">&lt; <span class=\"parent\">ActionController::Base</span></span></span>\n   before_filter <span class=\"symbol\">:anti_spam</span>\n\n    <span class=\"function\"><span class=\"keyword\">def</span> <span class=\"title\">anti_spam</span></span>\n     session[<span class=\"string\">'antispam_timer'</span>] ||= <span class=\"constant\">Time</span>.now\n    <span class=\"keyword\">end</span>\n\n<span class=\"keyword\">end</span>\n</code></pre>\n<p>Au final, vous allez pouvoir utiliser cette information dans votre contrôleur de demande de contact. Voici comment nous l’avons utilisée:</p>\n<pre><code class=\"ruby\"><span class=\"class\"><span class=\"keyword\">class</span> <span class=\"title\">ContactRequestsController</span> <span class=\"inheritance\">&lt; <span class=\"parent\">ApplicationController</span></span></span>\n  <span class=\"function\"><span class=\"keyword\">def</span> <span class=\"title\">create</span></span>\n    <span class=\"comment\"># checking for contact spam</span>\n    contact_spam = <span class=\"keyword\">false</span>\n    time_to_comment = <span class=\"constant\">Time</span>.now.to_time - session[<span class=\"string\">'antispam_timer'</span>].to_time\n    <span class=\"keyword\">if</span> time_to_comment &lt; <span class=\"constant\">Rails</span>.application.config.antispam_timer\n      spam_logger.warn(<span class=\"string\">\"There is potential spam detected \n          for IP <span class=\"subst\">#{request.env[<span class=\"string\">'REMOTE_ADDR'</span>]}</span>. Antispam \n          threshold not reached (took <span class=\"subst\">#{time_to_comment.to_i}</span>s).\"</span>)\n      spam_logger.warn(<span class=\"string\">\"Params were : <span class=\"subst\">#{params}</span>\"</span>)\n      contact_spam = <span class=\"keyword\">true</span>\n    <span class=\"keyword\">end</span>\n    <span class=\"comment\"># U can use the contact_spam boolean to check </span>\n        <span class=\"comment\"># if you have to send or not your mail. </span>\n<span class=\"keyword\">end</span>\n</code></pre>\n<p>En complément d’information, sachez qu’il existe une autre solution implémentée dans une gem Rails: <a href=\"https://github.com/curtis/honeypot-captcha\">Honeypot CAPTCHA</a>. En pratique, un champ caché est ajouté dans votre formulaire. Celui-ci est censé rester vide puisque l’utilisateur ne le voit pas. Par contre, les bots vont le remplir. Vous pouvez ensuite facilement vérifier si la requête provient d’un réel utilisateur ou d’un bot dans votre contrôleur backend.<br><br><!--HubSpot Call-to-Action Code --><span class=\"hs-cta-wrapper\" id=\"hs-cta-wrapper-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\"><span class=\"hs-cta-node hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" id=\"hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\"><!--[if lte IE 8]><div id=\"hs-cta-ie-element\"></div><![endif]--><a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" target=\"_blank\"><img class=\"hs-cta-img\" id=\"hs-cta-img-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" style=\"border-width:0px;\" src=\"https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png\" alt=\"New Call-to-action\"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>\n<div id=\"disqus_thread\">&nbsp;</div>"
+body: >-
+  <h2>Ce que nous voulions</h2>
+
+  <p>Comme vous avez pu le constater, nous avons récemment lancé notre tout nouveau site web. En tant qu’agence de développement, le formulaire de contact est notre principal canal pour générer des leads. C’est pourquoi nous souhaitions qu’il soit le plus simple possible, afin que nos clients puissent nous contacter facilement.</p>
+
+  <!--more-->
+
+  <h2>Le problème</h2>
+
+  <p>Le formulaire de contact a rapidement été utilisé par des spammeurs. Notre boîte de réception se remplissait d’emails indésirables et inutiles, dont la gestion nous coûtait du temps et de l’énergie.</p>
+
+  <h2>La solution existante</h2>
+
+  <p>La manière la plus courante d’éviter ces emails indésirables est d’utiliser des CAPTCHAs, bien connus des internautes. Malgré tout, nous ne voulions pas obliger nos clients à remplir cette entrée supplémentaire: l’utilisateur pourrait interrompre son action en raison d’un formulaire de contact trop compliqué.</p>
+
+  <h2>Notre solution</h2>
+
+  <p>Après quelques recherches, nous nous sommes rendus compte qu’en tant qu’ordinateurs, les bots ne nécessitent pas plus de 5 secondes pour visiter notre site et nous envoyer une demande de contact. Notre idée consistait donc à mettre en place une minuterie, afin de bloquer toutes demandes suspectes.</p>
+
+  <p>Dans notre application Rails, ceci implique l’ajout du code suivant à la configuration de l’application:</p>
+
+  <pre><code class="ruby"><span class="comment">#config/application.rb</span>
+
+  <span class="constant">Rails</span>.application.config.antispam_timer = <span class="number">30</span>
+
+  </code></pre>
+
+  <p>Dans notre cas, le délai de notre antispam_timer a été fixé à 30 secondes. Vous pouvez maintenant ajouter des informations relatives à la durée à la session utilisateur dans votre contrôleur d'application en utilisant un before_filter, comme ceci:</p>
+
+  <pre><code class="ruby"><span class="comment">#controllers/application.rb</span>
+
+  <span class="class"><span class="keyword">class</span> <span class="title">ApplicationController</span> <span class="inheritance">&lt; <span class="parent">ActionController::Base</span></span></span>
+     before_filter <span class="symbol">:anti_spam</span>
+
+      <span class="function"><span class="keyword">def</span> <span class="title">anti_spam</span></span>
+       session[<span class="string">'antispam_timer'</span>] ||= <span class="constant">Time</span>.now
+      <span class="keyword">end</span>
+
+  <span class="keyword">end</span>
+
+  </code></pre>
+
+  <p>Au final, vous allez pouvoir utiliser cette information dans votre contrôleur de demande de contact. Voici comment nous l’avons utilisée:</p>
+
+  <pre><code class="ruby"><span class="class"><span class="keyword">class</span> <span class="title">ContactRequestsController</span> <span class="inheritance">&lt; <span class="parent">ApplicationController</span></span></span>
+    <span class="function"><span class="keyword">def</span> <span class="title">create</span></span>
+      <span class="comment"># checking for contact spam</span>
+      contact_spam = <span class="keyword">false</span>
+      time_to_comment = <span class="constant">Time</span>.now.to_time - session[<span class="string">'antispam_timer'</span>].to_time
+      <span class="keyword">if</span> time_to_comment &lt; <span class="constant">Rails</span>.application.config.antispam_timer
+        spam_logger.warn(<span class="string">"There is potential spam detected 
+            for IP <span class="subst">#{request.env[<span class="string">'REMOTE_ADDR'</span>]}</span>. Antispam 
+            threshold not reached (took <span class="subst">#{time_to_comment.to_i}</span>s)."</span>)
+        spam_logger.warn(<span class="string">"Params were : <span class="subst">#{params}</span>"</span>)
+        contact_spam = <span class="keyword">true</span>
+      <span class="keyword">end</span>
+      <span class="comment"># U can use the contact_spam boolean to check </span>
+          <span class="comment"># if you have to send or not your mail. </span>
+  <span class="keyword">end</span>
+
+  </code></pre>
+
+  <p>En complément d’information, sachez qu’il existe une autre solution implémentée dans une gem Rails: <a href="https://github.com/curtis/honeypot-captcha">Honeypot CAPTCHA</a>. En pratique, un champ caché est ajouté dans votre formulaire. Celui-ci est censé rester vide puisque l’utilisateur ne le voit pas. Par contre, les bots vont le remplir. Vous pouvez ensuite facilement vérifier si la requête provient d’un réel utilisateur ou d’un bot dans votre contrôleur backend.<br><br><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><span class="hs-cta-node hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" id="hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" target="_blank"><img class="hs-cta-img" id="hs-cta-img-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png" alt="New Call-to-action"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>
+
+  <div id="disqus_thread">&nbsp;</div>
 tags:
-  - label: "Under the hood"
-    value: "under-the-hood"
+  - label: Under the hood
+    value: under-the-hood

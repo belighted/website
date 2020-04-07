@@ -1,12 +1,217 @@
-lang: "en"
-slug: "figaro"
-originalPath: "https://www.belighted.com/blog/figaro"
-title: "Figaro gem - Simple, Heroku-friendly Rails app configuration using ENV and a single YAML file"
-author: "Stéphane A."
-description: "An overview of the figaro gem, a library tailored to handle app variables configuration on many deployment platforms including heroku."
-image: "https://belighted.com/images/default_blogpost_image_2@1x.jpg#keepProtocol"
+lang: en
+slug: figaro
+originalPath: https://www.belighted.com/blog/figaro
+title: Figaro gem - Simple, Heroku-friendly Rails app configuration using ENV
+  and a single YAML file
+author: Stéphane A.
+description: An overview of the figaro gem, a library tailored to handle app
+  variables configuration on many deployment platforms including heroku.
+image: default_blogpost_image_2@1x.jpg
 date: 1388534400000
-body: "<p><img src=\"https://github-camo.global.ssl.fastly.net/5172f94b51071b7f0164beb8a7dc5e9d371fd150/687474703a2f2f696d61676573322e77696b69612e6e6f636f6f6b69652e6e65742f5f5f636232303130303632383139323732322f6469736e65792f696d616765732f352f35332f50696e6f636368696f2d70696e6f636368696f2d343934373839302d3936302d3732302e6a7067\" alt=\"\"></p>\n<p>Even if you’re kind enough to offer your hard work to the community (as a just reward for all the pretty gems we use every day), it quickly comes to your mind that some parts of your credentials need to be kept private (even for an open source project). These risks can be avoided by setting ENV variables (key/value) on your local environment and calling them in your code.</p>\n<!--more-->\n<figure class=\"code\">\n<figcaption><span>config/initializers/credentials.rb </span></figcaption>\n<div class=\"highlight\">\n<table>\n<tbody>\n<tr>\n<td class=\"gutter\">\n<pre class=\"line-numbers\"><span class=\"line-number\">1</span>\n<span class=\"line-number\">2</span>\n<span class=\"line-number\">3</span>\n</pre>\n</td>\n<td class=\"code\">\n<pre><code class=\"ruby\"><span class=\"line\"><span class=\"no\"><span class=\"constant\">MyApp</span></span><span class=\"o\">.</span><span class=\"n\">app_id</span> <span class=\"o\">=</span> <span class=\"no\"><span class=\"constant\">ENV</span></span><span class=\"o\">[</span><span class=\"s2\"><span class=\"string\">\"MY_APP_ID\"</span></span><span class=\"o\">]</span>\n</span><span class=\"line\"><span class=\"no\"><span class=\"constant\">MyApp</span></span><span class=\"o\">.</span><span class=\"n\">key</span> <span class=\"o\">=</span> <span class=\"no\"><span class=\"constant\">ENV</span></span><span class=\"o\">[</span><span class=\"s2\"><span class=\"string\">\"MY_APP_KEY\"</span></span><span class=\"o\">]</span>\n</span><span class=\"line\"><span class=\"no\"><span class=\"constant\">MyApp</span></span><span class=\"o\">.</span><span class=\"n\">secret</span> <span class=\"o\">=</span> <span class=\"no\"><span class=\"constant\">ENV</span></span><span class=\"o\">[</span><span class=\"s2\"><span class=\"string\">\"MY_APP_SECRET\"</span></span><span class=\"o\">]</span>\n</span></code></pre>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</figure>\n<p>As an alternative, that could furthermore allow you to set environment specific variables, comes the figaro gem.</p>\n<p>Simply add <code>gem \"figaro\"</code> to your gemfile and run the <code>bundle install</code> command.</p>\n<p>Next step is to launch <code>rails generate figaro:install</code> which will create the <code>config/application.yml</code> file and add it into your <code>.gitignore</code>.</p>\n<p>You don’t even need to update your initialization file, the gem handle the ENV variable creation and as mentioned earlier in this post, you can now specify some values according to the environment.</p>\n<figure class=\"code\">\n<figcaption><span>config/application.yml </span></figcaption>\n<div class=\"highlight\">\n<table>\n<tbody>\n<tr>\n<td class=\"gutter\">\n<pre class=\"line-numbers\"><span class=\"line-number\">1</span>\n<span class=\"line-number\">2</span>\n<span class=\"line-number\">3</span>\n<span class=\"line-number\">4</span>\n<span class=\"line-number\">5</span>\n<span class=\"line-number\">6</span>\n<span class=\"line-number\">7</span>\n</pre>\n</td>\n<td class=\"code\">\n<pre><code class=\"yaml undefined\"><span class=\"line\"><span class=\"l-Scalar-Plain\">MY_APP_ID</span><span class=\"p-Indicator\">:</span> <span class=\"l-Scalar-Plain\">111111</span>\n</span><span class=\"line\"><span class=\"l-Scalar-Plain\">development</span><span class=\"p-Indicator\">:</span>\n</span><span class=\"line\"> <span class=\"l-Scalar-Plain\">MY_APP_ID</span><span class=\"p-Indicator\">:</span> <span class=\"l-Scalar-Plain\">222222</span>\n</span><span class=\"line\"><span class=\"l-Scalar-Plain\">staging</span><span class=\"p-Indicator\">:</span>\n</span><span class=\"line\"> <span class=\"l-Scalar-Plain\">MY_APP_ID</span><span class=\"p-Indicator\">:</span> <span class=\"l-Scalar-Plain\">333333</span>\n</span><span class=\"line\"><span class=\"l-Scalar-Plain\">production</span><span class=\"p-Indicator\">:</span>\n</span><span class=\"line\"> <span class=\"l-Scalar-Plain\">MY_APP_ID</span><span class=\"p-Indicator\">:</span> <span class=\"l-Scalar-Plain\">444444</span>\n</span></code></pre>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</figure>\n<h2>Let’s now deploy it !</h2>\n<p>Either with capistrano:</p>\n<p>And then you should consider adding something like this into your <code>deploy.rb</code> script:</p>\n<figure class=\"code\">\n<div class=\"highlight\">\n<table>\n<tbody>\n<tr>\n<td class=\"gutter\">\n<pre class=\"line-numbers\"><span class=\"line-number\">1</span>\n<span class=\"line-number\">2</span>\n<span class=\"line-number\">3</span>\n<span class=\"line-number\">4</span>\n<span class=\"line-number\">5</span>\n<span class=\"line-number\">6</span>\n</pre>\n</td>\n<td class=\"code\">\n<pre><code class=\"ruby\"><span class=\"line\"><span class=\"n\">namespace</span> <span class=\"ss\"><span class=\"symbol\">:deploy</span></span> <span class=\"k\"><span class=\"keyword\">do</span></span>\n</span><span class=\"line\"> <span class=\"n\">desc</span> <span class=\"s1\"><span class=\"string\">'Symlink shared directories and files'</span></span>\n</span><span class=\"line\"> <span class=\"n\">task</span> <span class=\"ss\"><span class=\"symbol\">:symlink_directories_and_files</span></span> <span class=\"k\"><span class=\"keyword\">do</span></span>\n</span><span class=\"line\"> <span class=\"n\">run</span> <span class=\"s2\"><span class=\"string\">\"ln -s </span></span><span class=\"string\"><span class=\"si\"><span class=\"subst\">#{</span></span><span class=\"subst\"><span class=\"n\">shared_path</span><span class=\"si\">}</span></span><span class=\"si\"></span><span class=\"s2\">/config/application.yml </span><span class=\"si\"><span class=\"subst\">#{</span></span><span class=\"subst\"><span class=\"n\">release_path</span><span class=\"si\">}</span></span><span class=\"si\"></span><span class=\"s2\">/config/application.yml\"</span></span><span class=\"s2\"></span>\n</span><span class=\"line\"> <span class=\"k\"><span class=\"keyword\">end</span></span>\n</span><span class=\"line\"><span class=\"k\"><span class=\"keyword\">end</span></span>\n</span></code></pre>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</figure>\n<p>Or, if you’re using platform like Heroku, the gem includes a nice Rake task which allows you to set all the needed ENV variables:</p>\n<p><code>rake figaro:heroku</code></p>\n<p>For further information:</p>\n<ul>\n<li><strong><a href=\"https://github.com/laserlemon/figaro\">https://github.com/laserlemon/figaro</a></strong></li>\n<li><a href=\"https://railsapps.github.io/rails-environment-variables.html\"><strong>https://railsapps.github.io/rails-environment-variables.html</strong><br></a></li>\n</ul>\n<p><!--HubSpot Call-to-Action Code --><span class=\"hs-cta-wrapper\" id=\"hs-cta-wrapper-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\"><span class=\"hs-cta-node hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" id=\"hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\"><!--[if lte IE 8]><div id=\"hs-cta-ie-element\"></div><![endif]--><a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" target=\"_blank\"><img class=\"hs-cta-img\" id=\"hs-cta-img-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" style=\"border-width:0px;\" src=\"https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png\" alt=\"New Call-to-action\"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>\n<div id=\"disqus_thread\">&nbsp;</div>"
+body: >-
+  <p><img
+  src="https://github-camo.global.ssl.fastly.net/5172f94b51071b7f0164beb8a7dc5e9d371fd150/687474703a2f2f696d61676573322e77696b69612e6e6f636f6f6b69652e6e65742f5f5f636232303130303632383139323732322f6469736e65792f696d616765732f352f35332f50696e6f636368696f2d70696e6f636368696f2d343934373839302d3936302d3732302e6a7067"
+  alt=""></p>
+
+  <p>Even if you’re kind enough to offer your hard work to the community (as a just reward for all the pretty gems we use every day), it quickly comes to your mind that some parts of your credentials need to be kept private (even for an open source project). These risks can be avoided by setting ENV variables (key/value) on your local environment and calling them in your code.</p>
+
+  <!--more-->
+
+  <figure class="code">
+
+  <figcaption><span>config/initializers/credentials.rb </span></figcaption>
+
+  <div class="highlight">
+
+  <table>
+
+  <tbody>
+
+  <tr>
+
+  <td class="gutter">
+
+  <pre class="line-numbers"><span class="line-number">1</span>
+
+  <span class="line-number">2</span>
+
+  <span class="line-number">3</span>
+
+  </pre>
+
+  </td>
+
+  <td class="code">
+
+  <pre><code class="ruby"><span class="line"><span class="no"><span class="constant">MyApp</span></span><span class="o">.</span><span class="n">app_id</span> <span class="o">=</span> <span class="no"><span class="constant">ENV</span></span><span class="o">[</span><span class="s2"><span class="string">"MY_APP_ID"</span></span><span class="o">]</span>
+
+  </span><span class="line"><span class="no"><span class="constant">MyApp</span></span><span class="o">.</span><span class="n">key</span> <span class="o">=</span> <span class="no"><span class="constant">ENV</span></span><span class="o">[</span><span class="s2"><span class="string">"MY_APP_KEY"</span></span><span class="o">]</span>
+
+  </span><span class="line"><span class="no"><span class="constant">MyApp</span></span><span class="o">.</span><span class="n">secret</span> <span class="o">=</span> <span class="no"><span class="constant">ENV</span></span><span class="o">[</span><span class="s2"><span class="string">"MY_APP_SECRET"</span></span><span class="o">]</span>
+
+  </span></code></pre>
+
+  </td>
+
+  </tr>
+
+  </tbody>
+
+  </table>
+
+  </div>
+
+  </figure>
+
+  <p>As an alternative, that could furthermore allow you to set environment specific variables, comes the figaro gem.</p>
+
+  <p>Simply add <code>gem "figaro"</code> to your gemfile and run the <code>bundle install</code> command.</p>
+
+  <p>Next step is to launch <code>rails generate figaro:install</code> which will create the <code>config/application.yml</code> file and add it into your <code>.gitignore</code>.</p>
+
+  <p>You don’t even need to update your initialization file, the gem handle the ENV variable creation and as mentioned earlier in this post, you can now specify some values according to the environment.</p>
+
+  <figure class="code">
+
+  <figcaption><span>config/application.yml </span></figcaption>
+
+  <div class="highlight">
+
+  <table>
+
+  <tbody>
+
+  <tr>
+
+  <td class="gutter">
+
+  <pre class="line-numbers"><span class="line-number">1</span>
+
+  <span class="line-number">2</span>
+
+  <span class="line-number">3</span>
+
+  <span class="line-number">4</span>
+
+  <span class="line-number">5</span>
+
+  <span class="line-number">6</span>
+
+  <span class="line-number">7</span>
+
+  </pre>
+
+  </td>
+
+  <td class="code">
+
+  <pre><code class="yaml undefined"><span class="line"><span class="l-Scalar-Plain">MY_APP_ID</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">111111</span>
+
+  </span><span class="line"><span class="l-Scalar-Plain">development</span><span class="p-Indicator">:</span>
+
+  </span><span class="line"> <span class="l-Scalar-Plain">MY_APP_ID</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">222222</span>
+
+  </span><span class="line"><span class="l-Scalar-Plain">staging</span><span class="p-Indicator">:</span>
+
+  </span><span class="line"> <span class="l-Scalar-Plain">MY_APP_ID</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">333333</span>
+
+  </span><span class="line"><span class="l-Scalar-Plain">production</span><span class="p-Indicator">:</span>
+
+  </span><span class="line"> <span class="l-Scalar-Plain">MY_APP_ID</span><span class="p-Indicator">:</span> <span class="l-Scalar-Plain">444444</span>
+
+  </span></code></pre>
+
+  </td>
+
+  </tr>
+
+  </tbody>
+
+  </table>
+
+  </div>
+
+  </figure>
+
+  <h2>Let’s now deploy it !</h2>
+
+  <p>Either with capistrano:</p>
+
+  <p>And then you should consider adding something like this into your <code>deploy.rb</code> script:</p>
+
+  <figure class="code">
+
+  <div class="highlight">
+
+  <table>
+
+  <tbody>
+
+  <tr>
+
+  <td class="gutter">
+
+  <pre class="line-numbers"><span class="line-number">1</span>
+
+  <span class="line-number">2</span>
+
+  <span class="line-number">3</span>
+
+  <span class="line-number">4</span>
+
+  <span class="line-number">5</span>
+
+  <span class="line-number">6</span>
+
+  </pre>
+
+  </td>
+
+  <td class="code">
+
+  <pre><code class="ruby"><span class="line"><span class="n">namespace</span> <span class="ss"><span class="symbol">:deploy</span></span> <span class="k"><span class="keyword">do</span></span>
+
+  </span><span class="line"> <span class="n">desc</span> <span class="s1"><span class="string">'Symlink shared directories and files'</span></span>
+
+  </span><span class="line"> <span class="n">task</span> <span class="ss"><span class="symbol">:symlink_directories_and_files</span></span> <span class="k"><span class="keyword">do</span></span>
+
+  </span><span class="line"> <span class="n">run</span> <span class="s2"><span class="string">"ln -s </span></span><span class="string"><span class="si"><span class="subst">#{</span></span><span class="subst"><span class="n">shared_path</span><span class="si">}</span></span><span class="si"></span><span class="s2">/config/application.yml </span><span class="si"><span class="subst">#{</span></span><span class="subst"><span class="n">release_path</span><span class="si">}</span></span><span class="si"></span><span class="s2">/config/application.yml"</span></span><span class="s2"></span>
+
+  </span><span class="line"> <span class="k"><span class="keyword">end</span></span>
+
+  </span><span class="line"><span class="k"><span class="keyword">end</span></span>
+
+  </span></code></pre>
+
+  </td>
+
+  </tr>
+
+  </tbody>
+
+  </table>
+
+  </div>
+
+  </figure>
+
+  <p>Or, if you’re using platform like Heroku, the gem includes a nice Rake task which allows you to set all the needed ENV variables:</p>
+
+  <p><code>rake figaro:heroku</code></p>
+
+  <p>For further information:</p>
+
+  <ul>
+
+  <li><strong><a href="https://github.com/laserlemon/figaro">https://github.com/laserlemon/figaro</a></strong></li>
+
+  <li><a href="https://railsapps.github.io/rails-environment-variables.html"><strong>https://railsapps.github.io/rails-environment-variables.html</strong><br></a></li>
+
+  </ul>
+
+  <p><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><span class="hs-cta-node hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" id="hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" target="_blank"><img class="hs-cta-img" id="hs-cta-img-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png" alt="New Call-to-action"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>
+
+  <div id="disqus_thread">&nbsp;</div>
 tags:
-  - label: "Under the hood"
-    value: "under-the-hood"
+  - label: Under the hood
+    value: under-the-hood

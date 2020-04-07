@@ -45,11 +45,14 @@ const init = async () => {
         const image = article.data.image
           .replace("#keepProtocol", "")
           .replace(/https:\/\/.*\//, "");
-        fs.writeFile(article.path, YAML.stringify(), function(err) {
-          if (err) return reject(err);
-          console.log("created", path);
-          resolve(path);
-        });
+        fs.writeFile(
+          article.path,
+          YAML.stringify({ ...article.data, image }),
+          function(err) {
+            if (err) return;
+            console.log("updated", article.path);
+          }
+        );
         console.log(image);
       });
     console.log("read everything");

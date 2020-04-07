@@ -1,12 +1,82 @@
-lang: "en"
-slug: "float-is-evil"
-originalPath: "https://www.belighted.com/blog/float-is-evil"
-title: "Float is evil"
-author: "Dominique L."
-description: "Are floats bad? What should be used in its place? I took some time to explain the problem behind a float number. Come have a look to this explanation."
-image: "https://belighted.com/images/default_blogpost_image_0@1x.jpg#keepProtocol"
+lang: en
+slug: float-is-evil
+originalPath: https://www.belighted.com/blog/float-is-evil
+title: Float is evil
+author: Dominique L.
+description: Are floats bad? What should be used in its place? I took some time
+  to explain the problem behind a float number. Come have a look to this
+  explanation.
+image: default_blogpost_image_0@1x.jpg
 date: 1325376000000
-body: "<p>Base 2 representation of real numbers is to me an artifact of the time when every single bit and every single flop mattered, but I have to admit that with the memory and computing power we have today, I don’t understand why modern languages do not use base 10 representation by default.</p>\n<!--more-->\n<p>Let me explain. It is important to remember that a number with a finite base 10 representation does not necessarily have a finite base 2 representation, and conversely. Of course, this problem is not inherent to base 2 but the fact is, in everyday life - some geeks apart - we compute in base 10: we expect 1/3 to have an infinite number of digits after the decimal point, not 12/10. In that respect, base 2 can sometime give some surprising results. To convince yourself, just type the following line in your Ruby console:</p>\n<figure class=\"code\">\n<div class=\"highlight\">\n<table>\n<tbody>\n<tr>\n<td class=\"gutter\">\n<pre class=\"line-numbers\"><span class=\"line-number\">1</span>\n</pre>\n</td>\n<td class=\"code\">\n<pre><code class=\"ruby\"><span class=\"line\"><span class=\"mi\"><span class=\"number\">1</span></span><span class=\"number\"><span class=\"o\">.</span><span class=\"mi\">2</span></span><span class=\"mi\"></span> <span class=\"o\">-</span> <span class=\"mi\"><span class=\"number\">1</span></span><span class=\"number\"><span class=\"o\">.</span><span class=\"mi\">0</span></span><span class=\"mi\"></span> <span class=\"o\">==</span> <span class=\"mi\"><span class=\"number\">0</span></span><span class=\"o\">.</span><span class=\"mi\"><span class=\"number\">2</span></span>\n</span></code></pre>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</figure>\n<p>For most computations errors are maybe small enough to ignore, but there is always the risk that they will add up. If your application handles money one way or another, this can become a real problem (accountants don’t like cents appearing or disappearing without reason).</p>\n<h2>The not so good idea: working with cents</h2>\n<p>I often read that to avoid base conversion errors when dealing with money, you should work in cents, as to only use integers. This may look like a simple and elegant solution, but it simply doesn’t work for two simple reasons.</p>\n<p>First, the cent is not <em>always</em> the smallest unit of money: just think about an application dealing with gas pump prices or exchange rates. Second, even if it is the case in your application, or you are working with nanocents, you will eventually end up with real numbers: divide 12 cents by 10 (e.g. to compute a mean) and you will be back at square one.</p>\n<h2>Decimal representation in your code and the database</h2>\n<p>Ruby and SQL allow you to store numbers in their decimal representation, using the <code>BigDecimal</code> and the <code>decimal</code> (sometimes also called <code>numeric</code>) field type, respectively. Behind the scenes, <code>Float</code> and <code>BigDecimal</code> both use a floating-point representation of the form <code>significant_digits x base^exp</code>; the difference being that the base is 2 if the first case, 10 in the second.</p>\n<p>Using <code>BigDecimal</code>, your calculations will therefore always return what a human being expects. Moreover, you can gain total control on your mathematical operations by specifying the precision (number of significant digits), scale (digits after the dot), and rounding strategy, ensuring you will never get unexpected results. <code>BigDecimal</code> also has the ability to represent special numbers such as Infinity or NaN.</p>\n<p>On the database side, just use the <code>decimal</code> type in your migration and specify a <code>precision</code> and <code>scale</code> (defaults can differ), ActiveRecord will take care of the rest. Even better: data from <code>decimal</code> fields will automatically by retrieved into <code>BigDecimal</code> objects.</p>\n<p>Read more:</p>\n<p><strong><a href=\"https://ruby-doc.org/stdlib-1.9.3/libdoc/bigdecimal/rdoc/BigDecimal.html\">BigDecimal Rdoc</a></strong></p>\n<p><strong><a href=\"https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/TableDefinition.html#method-i-column\">Precision and scale defaults of different RDBMS</a></strong></p>\n<p><br><!--HubSpot Call-to-Action Code --><span class=\"hs-cta-wrapper\" id=\"hs-cta-wrapper-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\"><span class=\"hs-cta-node hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" id=\"hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\"><!--[if lte IE 8]><div id=\"hs-cta-ie-element\"></div><![endif]--><a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" target=\"_blank\"><img class=\"hs-cta-img\" id=\"hs-cta-img-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" style=\"border-width:0px;\" src=\"https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png\" alt=\"New Call-to-action\"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>"
+body: >-
+  <p>Base 2 representation of real numbers is to me an artifact of the time when
+  every single bit and every single flop mattered, but I have to admit that with
+  the memory and computing power we have today, I don’t understand why modern
+  languages do not use base 10 representation by default.</p>
+
+  <!--more-->
+
+  <p>Let me explain. It is important to remember that a number with a finite base 10 representation does not necessarily have a finite base 2 representation, and conversely. Of course, this problem is not inherent to base 2 but the fact is, in everyday life - some geeks apart - we compute in base 10: we expect 1/3 to have an infinite number of digits after the decimal point, not 12/10. In that respect, base 2 can sometime give some surprising results. To convince yourself, just type the following line in your Ruby console:</p>
+
+  <figure class="code">
+
+  <div class="highlight">
+
+  <table>
+
+  <tbody>
+
+  <tr>
+
+  <td class="gutter">
+
+  <pre class="line-numbers"><span class="line-number">1</span>
+
+  </pre>
+
+  </td>
+
+  <td class="code">
+
+  <pre><code class="ruby"><span class="line"><span class="mi"><span class="number">1</span></span><span class="number"><span class="o">.</span><span class="mi">2</span></span><span class="mi"></span> <span class="o">-</span> <span class="mi"><span class="number">1</span></span><span class="number"><span class="o">.</span><span class="mi">0</span></span><span class="mi"></span> <span class="o">==</span> <span class="mi"><span class="number">0</span></span><span class="o">.</span><span class="mi"><span class="number">2</span></span>
+
+  </span></code></pre>
+
+  </td>
+
+  </tr>
+
+  </tbody>
+
+  </table>
+
+  </div>
+
+  </figure>
+
+  <p>For most computations errors are maybe small enough to ignore, but there is always the risk that they will add up. If your application handles money one way or another, this can become a real problem (accountants don’t like cents appearing or disappearing without reason).</p>
+
+  <h2>The not so good idea: working with cents</h2>
+
+  <p>I often read that to avoid base conversion errors when dealing with money, you should work in cents, as to only use integers. This may look like a simple and elegant solution, but it simply doesn’t work for two simple reasons.</p>
+
+  <p>First, the cent is not <em>always</em> the smallest unit of money: just think about an application dealing with gas pump prices or exchange rates. Second, even if it is the case in your application, or you are working with nanocents, you will eventually end up with real numbers: divide 12 cents by 10 (e.g. to compute a mean) and you will be back at square one.</p>
+
+  <h2>Decimal representation in your code and the database</h2>
+
+  <p>Ruby and SQL allow you to store numbers in their decimal representation, using the <code>BigDecimal</code> and the <code>decimal</code> (sometimes also called <code>numeric</code>) field type, respectively. Behind the scenes, <code>Float</code> and <code>BigDecimal</code> both use a floating-point representation of the form <code>significant_digits x base^exp</code>; the difference being that the base is 2 if the first case, 10 in the second.</p>
+
+  <p>Using <code>BigDecimal</code>, your calculations will therefore always return what a human being expects. Moreover, you can gain total control on your mathematical operations by specifying the precision (number of significant digits), scale (digits after the dot), and rounding strategy, ensuring you will never get unexpected results. <code>BigDecimal</code> also has the ability to represent special numbers such as Infinity or NaN.</p>
+
+  <p>On the database side, just use the <code>decimal</code> type in your migration and specify a <code>precision</code> and <code>scale</code> (defaults can differ), ActiveRecord will take care of the rest. Even better: data from <code>decimal</code> fields will automatically by retrieved into <code>BigDecimal</code> objects.</p>
+
+  <p>Read more:</p>
+
+  <p><strong><a href="https://ruby-doc.org/stdlib-1.9.3/libdoc/bigdecimal/rdoc/BigDecimal.html">BigDecimal Rdoc</a></strong></p>
+
+  <p><strong><a href="https://api.rubyonrails.org/classes/ActiveRecord/ConnectionAdapters/TableDefinition.html#method-i-column">Precision and scale defaults of different RDBMS</a></strong></p>
+
+  <p><br><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><span class="hs-cta-node hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" id="hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" target="_blank"><img class="hs-cta-img" id="hs-cta-img-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png" alt="New Call-to-action"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>
 tags:
-  - label: "Under the hood"
-    value: "under-the-hood"
+  - label: Under the hood
+    value: under-the-hood

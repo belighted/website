@@ -1,12 +1,88 @@
-lang: "en"
-slug: "rubymine-vs-textmate"
-originalPath: "https://www.belighted.com/blog/rubymine-vs-textmate"
-title: "RubyMine vs Textmate"
-author: "Dominique L."
-description: "Come have a look to a comparaison of RubyMine & Textmate. Both are used by the Belighters."
-image: "https://belighted.com/images/default_blogpost_image_8@1x.jpg#keepProtocol"
+lang: en
+slug: rubymine-vs-textmate
+originalPath: https://www.belighted.com/blog/rubymine-vs-textmate
+title: RubyMine vs Textmate
+author: Dominique L.
+description: Come have a look to a comparaison of RubyMine & Textmate. Both are
+  used by the Belighters.
+image: default_blogpost_image_8@1x.jpg
 date: 1325376000000
-body: "<p>Most Belighters, as probably most Rails developers, use TextMate (the most hardcore ones use Vim, of course). Yet some were seduced by <a href=\"https://www.jetbrains.com/ruby/\">RubyMine</a>. Here is a small comparison of the two tools, which will hopefully help you understand our choice (although we <em>are</em> expecting some hate mail).</p>\n<!--more-->\n<h3>Pros:</h3>\n<ul>\n<li>\n<p>RubyMine “understands” the Ruby/Rails syntax (along with JS, CSS, Haml, Coffee, …), which yields several advantages:</p>\n<ul>\n<li>lots of shortcuts to easily navigate through your code (jump to method definition, to view, …)</li>\n<li>smart autocompletion</li>\n<li>syntax errors highlighting</li>\n<li>easy refactoring (rename variable or method, extract method, …)</li>\n</ul>\n</li>\n<li>\n<p>Quick access to documentation (Ctrl-j opens RDoc in a tooltip)</p>\n</li>\n<li>\n<p>Integration with Git (file comparison), Bundler and other tools</p>\n</li>\n<li>\n<p>Visual debugger</p>\n</li>\n<li>\n<p>Cross-platform</p>\n</li>\n<li>\n<p>Updated frequently (Rails 3.2 is supported as of the latest update)</p>\n</li>\n</ul>\n<h3>Cons:</h3>\n<ul>\n<li>RubyMine is expensive (the commercial license will set you back 142€, whereas TextMate is less than 45€)</li>\n<li>As most IDEs, RubyMine loves your RAM</li>\n</ul>\n<p>It should also be noted that, Ruby being dynamically typed, the “intelligence” of RubyMine is still limited compared to similar IDEs for statically typed languages such as Java.<br><br><!--HubSpot Call-to-Action Code --><span class=\"hs-cta-wrapper\" id=\"hs-cta-wrapper-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\"><span class=\"hs-cta-node hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" id=\"hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\"><!--[if lte IE 8]><div id=\"hs-cta-ie-element\"></div><![endif]--><a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" target=\"_blank\"><img class=\"hs-cta-img\" id=\"hs-cta-img-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" style=\"border-width:0px;\" src=\"https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png\" alt=\"New Call-to-action\"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>\n<div id=\"disqus_thread\">&nbsp;</div>"
+body: >-
+  <p>Most Belighters, as probably most Rails developers, use TextMate (the most
+  hardcore ones use Vim, of course). Yet some were seduced by <a
+  href="https://www.jetbrains.com/ruby/">RubyMine</a>. Here is a small
+  comparison of the two tools, which will hopefully help you understand our
+  choice (although we <em>are</em> expecting some hate mail).</p>
+
+  <!--more-->
+
+  <h3>Pros:</h3>
+
+  <ul>
+
+  <li>
+
+  <p>RubyMine “understands” the Ruby/Rails syntax (along with JS, CSS, Haml, Coffee, …), which yields several advantages:</p>
+
+  <ul>
+
+  <li>lots of shortcuts to easily navigate through your code (jump to method definition, to view, …)</li>
+
+  <li>smart autocompletion</li>
+
+  <li>syntax errors highlighting</li>
+
+  <li>easy refactoring (rename variable or method, extract method, …)</li>
+
+  </ul>
+
+  </li>
+
+  <li>
+
+  <p>Quick access to documentation (Ctrl-j opens RDoc in a tooltip)</p>
+
+  </li>
+
+  <li>
+
+  <p>Integration with Git (file comparison), Bundler and other tools</p>
+
+  </li>
+
+  <li>
+
+  <p>Visual debugger</p>
+
+  </li>
+
+  <li>
+
+  <p>Cross-platform</p>
+
+  </li>
+
+  <li>
+
+  <p>Updated frequently (Rails 3.2 is supported as of the latest update)</p>
+
+  </li>
+
+  </ul>
+
+  <h3>Cons:</h3>
+
+  <ul>
+
+  <li>RubyMine is expensive (the commercial license will set you back 142€, whereas TextMate is less than 45€)</li>
+
+  <li>As most IDEs, RubyMine loves your RAM</li>
+
+  </ul>
+
+  <p>It should also be noted that, Ruby being dynamically typed, the “intelligence” of RubyMine is still limited compared to similar IDEs for statically typed languages such as Java.<br><br><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><span class="hs-cta-node hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" id="hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" target="_blank"><img class="hs-cta-img" id="hs-cta-img-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png" alt="New Call-to-action"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>
+
+  <div id="disqus_thread">&nbsp;</div>
 tags:
-  - label: "Under the hood"
-    value: "under-the-hood"
+  - label: Under the hood
+    value: under-the-hood

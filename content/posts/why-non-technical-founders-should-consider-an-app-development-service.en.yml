@@ -1,16 +1,59 @@
-lang: "en"
-slug: "why-non-technical-founders-should-consider-an-app-development-service"
-originalPath: "https://www.belighted.com/blog/why-non-technical-founders-should-consider-an-app-development-service"
-title: "Why Non-Technical Founders Should Consider an App Development Service"
-author: "Nicolas Jacobeus"
-description: "Building an app? Discover how app development services stack-up against freelancers, in-house developers, and hiring a CTO, "
-image: "https://www.belighted.com/hubfs/Blog/Belighted%20Blog%20Images/Why%20Non-Technical%20Founders%20Should%20Consider%20an%20App%20Development%20Service.jpg#keepProtocol"
+lang: en
+slug: why-non-technical-founders-should-consider-an-app-development-service
+originalPath: https://www.belighted.com/blog/why-non-technical-founders-should-consider-an-app-development-service
+title: Why Non-Technical Founders Should Consider an App Development Service
+author: Nicolas Jacobeus
+description: "Building an app? Discover how app development services stack-up
+  against freelancers, in-house developers, and hiring a CTO, "
+image: Why%20Non-Technical%20Founders%20Should%20Consider%20an%20App%20Development%20Service.jpg
 date: 1483228800000
-body: "<p>There are plenty of options available for non-technical founders looking to build a mobile app, even if you've never learned to code: hiring a CTO; hiring a mobile developer; outsourcing to a freelancer; or working with an agency that provides app development services.</p>\n<p>Today we're sharing the benefits of working with an app development service for developing your mobile app ideas.</p>\n<p><!--more--></p>\n<h2>Choose the Best Development Option for You</h2>\n<p>When it comes to app development, there are lots of technical decisions to be made, right from the start. Are you building an app for release via the App Store, or the Google Play store - or both? Would a native or a hybrid solution be the best option for your app?</p>\n<p>While it's likely you'll have considered whether you're building an app for Apple iOS or Android, you may not have thought about the different technical options available to you:</p>\n<ul>\n<li>Native app development uses the technical framework provided by iOS or Android, meaning your app can make use of the cutting-edge tech found in their latest devices. However, this will be different for each platform, meaning you'll essentially need to build your app twice.</li>\n<li>Hybrid app development means you'll build a<span>&nbsp;</span><em data-redactor-tag=\"em\">web</em><span>&nbsp;</span>application that can be adapted to work with a specific operating system - it'll be easier to launch onto both iOS and Android, but the trade-off is that you won't have access to all the functionality of each platform.</li>\n</ul>\n<p>Each approach has its own merits and drawbacks. There's no one-size-fits-all approach for good app development, so the best approach will vary depending on what you want your app to do. To make the decisions best suited for your app requires careful consideration, as well as an understanding of the different technical solutions. Working with an app development service gives you access to their expertise.</p>\n<h2>Ensure You Follow the Necessary Rules and Guidelines<span>&nbsp;</span></h2>\n<p>Once you've built your app, deploying it and releasing to the app store is another complex process. There are lots of rules and guidelines to follow - especially if you want to release for Apple's App Store, which is known for having much stricter restrictions and guidelines than Android's equivalent.</p>\n<p>Working with an app development service means you'll benefit from the team's previous experience: they'll already know what steps to follow to get your app accepted onto the App Store.</p>\n<h2>More than Just Development Service</h2>\n<p>If you're paying for app development services, you're benefiting from more than just the team's technical expertise: you'll also get their business expertise as well.</p>\n<p>If app development is their specialism, the team will have an up-to-date understanding of best practices around topics such as mobile notifications, as well as being able to offer advice about the pros and cons of the different ways to monetize your application after deployment - from a free model with revenue coming from adverts, to a paid subscription-based model.</p>\n<h2>A Smart Choice for Non-Technical Founders</h2>\n<p>Non-technical startup founders have a wealth of options when it comes to developing their idea into a mobile app. Working with an app development service gives you access to the technical and business knowledge and experience of a team of specialists, so you can make smart, informed choices when developing your mobile app.</p>\n<p><!--HubSpot Call-to-Action Code --><span class=\"hs-cta-wrapper\" id=\"hs-cta-wrapper-2a757af5-8c70-4e5b-bd84-3e0c399fa61d\"><span class=\"hs-cta-node hs-cta-2a757af5-8c70-4e5b-bd84-3e0c399fa61d\" id=\"hs-cta-2a757af5-8c70-4e5b-bd84-3e0c399fa61d\"><!--[if lte IE 8]><div id=\"hs-cta-ie-element\"></div><![endif]--><a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d\"><img class=\"hs-cta-img\" id=\"hs-cta-img-2a757af5-8c70-4e5b-bd84-3e0c399fa61d\" style=\"border-width:0px;margin: 0 auto; display: block; margin-top: 20px; margin-bottom: 20px\" src=\"https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png\" alt=\"You have a software idea but can't code?\" align=\"middle\"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>"
+body: >-
+  <p>There are plenty of options available for non-technical founders looking to
+  build a mobile app, even if you've never learned to code: hiring a CTO; hiring
+  a mobile developer; outsourcing to a freelancer; or working with an agency
+  that provides app development services.</p>
+
+  <p>Today we're sharing the benefits of working with an app development service for developing your mobile app ideas.</p>
+
+  <p><!--more--></p>
+
+  <h2>Choose the Best Development Option for You</h2>
+
+  <p>When it comes to app development, there are lots of technical decisions to be made, right from the start. Are you building an app for release via the App Store, or the Google Play store - or both? Would a native or a hybrid solution be the best option for your app?</p>
+
+  <p>While it's likely you'll have considered whether you're building an app for Apple iOS or Android, you may not have thought about the different technical options available to you:</p>
+
+  <ul>
+
+  <li>Native app development uses the technical framework provided by iOS or Android, meaning your app can make use of the cutting-edge tech found in their latest devices. However, this will be different for each platform, meaning you'll essentially need to build your app twice.</li>
+
+  <li>Hybrid app development means you'll build a<span>&nbsp;</span><em data-redactor-tag="em">web</em><span>&nbsp;</span>application that can be adapted to work with a specific operating system - it'll be easier to launch onto both iOS and Android, but the trade-off is that you won't have access to all the functionality of each platform.</li>
+
+  </ul>
+
+  <p>Each approach has its own merits and drawbacks. There's no one-size-fits-all approach for good app development, so the best approach will vary depending on what you want your app to do. To make the decisions best suited for your app requires careful consideration, as well as an understanding of the different technical solutions. Working with an app development service gives you access to their expertise.</p>
+
+  <h2>Ensure You Follow the Necessary Rules and Guidelines<span>&nbsp;</span></h2>
+
+  <p>Once you've built your app, deploying it and releasing to the app store is another complex process. There are lots of rules and guidelines to follow - especially if you want to release for Apple's App Store, which is known for having much stricter restrictions and guidelines than Android's equivalent.</p>
+
+  <p>Working with an app development service means you'll benefit from the team's previous experience: they'll already know what steps to follow to get your app accepted onto the App Store.</p>
+
+  <h2>More than Just Development Service</h2>
+
+  <p>If you're paying for app development services, you're benefiting from more than just the team's technical expertise: you'll also get their business expertise as well.</p>
+
+  <p>If app development is their specialism, the team will have an up-to-date understanding of best practices around topics such as mobile notifications, as well as being able to offer advice about the pros and cons of the different ways to monetize your application after deployment - from a free model with revenue coming from adverts, to a paid subscription-based model.</p>
+
+  <h2>A Smart Choice for Non-Technical Founders</h2>
+
+  <p>Non-technical startup founders have a wealth of options when it comes to developing their idea into a mobile app. Working with an app development service gives you access to the technical and business knowledge and experience of a team of specialists, so you can make smart, informed choices when developing your mobile app.</p>
+
+  <p><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-2a757af5-8c70-4e5b-bd84-3e0c399fa61d"><span class="hs-cta-node hs-cta-2a757af5-8c70-4e5b-bd84-3e0c399fa61d" id="hs-cta-2a757af5-8c70-4e5b-bd84-3e0c399fa61d"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d"><img class="hs-cta-img" id="hs-cta-img-2a757af5-8c70-4e5b-bd84-3e0c399fa61d" style="border-width:0px;margin: 0 auto; display: block; margin-top: 20px; margin-bottom: 20px" src="https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png" alt="You have a software idea but can't code?" align="middle"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>
 tags:
-  - label: "Entrepreneurship"
-    value: "entrepreneurship"
-  - label: "The Belighted Way"
-    value: "the-belighted-way"
-  - label: "SaaS development"
-    value: "saas-development"
+  - label: Entrepreneurship
+    value: entrepreneurship
+  - label: The Belighted Way
+    value: the-belighted-way
+  - label: SaaS development
+    value: saas-development

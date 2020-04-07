@@ -1,12 +1,268 @@
-lang: "en"
-slug: "memcached-dalli"
-originalPath: "https://www.belighted.com/blog/memcached-dalli"
-title: "Application performance improvement via in memory key-value store: MemCached and the Dalli Ruby Gem"
-author: "Stéphane A."
-description: "Have some performance drop in one of your application? Discover how we figured it out with one of our project with Memcached and the Dalli Ruby Gem."
-image: "https://belighted.com/images/default_blogpost_image_6@1x.jpg#keepProtocol"
+lang: en
+slug: memcached-dalli
+originalPath: https://www.belighted.com/blog/memcached-dalli
+title: "Application performance improvement via in memory key-value store:
+  MemCached and the Dalli Ruby Gem"
+author: Stéphane A.
+description: Have some performance drop in one of your application? Discover how
+  we figured it out with one of our project with Memcached and the Dalli Ruby
+  Gem.
+image: default_blogpost_image_6@1x.jpg
 date: 1356998400000
-body: "<p>Some time ago, as we were facing a performance drop in one of our projects, the decision was made to cache some intensively used data pieces and thus improve the overall system read efficiency.</p>\n<!--more-->\n<p>After some research, we found some interesting key-value stores (as MemCached, Redis,…) which could perfectly do the trick. Since one has to be chosen, we finally picked up Memcached.</p>\n<p>MemCached is an in-memory key-value store for small chunks of arbitrary data (strings, objects) coming from results of database calls, API calls, or page rendering.</p>\n<p>The system uses a client–server architecture wherein servers maintain a key–value associative array and clients populate this array and query it. To do so clients use client-side libraries to contact servers which, by default, expose their service on port 11211.</p>\n<p>Using MemCached in your applications will allow to layer your requests, resulting in faster responses coming from RAM when available and falling back on a slower store such as a database otherwise.</p>\n<p>But pay attention, values stored in MemCached are only available until the server runs out of memory. At which point, oldest data is discarded, a mechanism known as LRU. Therefore, clients must treat Memcached as a transitory cache. They cannot assume that data stored in Memcached is still there when they need it.</p>\n<p>And as quite everything is well thought and done in our ruby world, a MemCached client implementation exists through the ruby Dalli gem (Which is the officiall MemCached client since Rails 4).</p>\n<h2>Installation and usage</h2>\n<p>So, what do we need precisely to incorporate of all these features into our application?</p>\n<p>First of all, an up and running MemCached server (The set up could differ from one OS to another):</p>\n<ul>\n<li>for Mac OS (via HomeBrew):\n<figure class=\"code\">\n<div class=\"highlight\">\n<table>\n<tbody>\n<tr>\n<td class=\"gutter\">\n<pre class=\"line-numbers\"><span class=\"line-number\">1</span>\n</pre>\n</td>\n<td class=\"code\">\n<pre><code class=\"undefined\"><span class=\"line\">brew install memcached</span></code></pre>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</figure>\n</li>\n<li>for debian-based linux distributions:\n<figure class=\"code\">\n<div class=\"highlight\">\n<table>\n<tbody>\n<tr>\n<td class=\"gutter\">\n<pre class=\"line-numbers\"><span class=\"line-number\">1</span>\n</pre>\n</td>\n<td class=\"code\">\n<pre><code class=\"undefined\"><span class=\"line\">apt-get install memcached</span></code></pre>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</figure>\n</li>\n</ul>\n<p>Then you can simply install the Dalli gem (or put it into your gemfile):</p>\n<figure class=\"code\">\n<div class=\"highlight\">\n<table>\n<tbody>\n<tr>\n<td class=\"gutter\">\n<pre class=\"line-numbers\"><span class=\"line-number\">1</span>\n</pre>\n</td>\n<td class=\"code\">\n<pre><code class=\"ruby\"><span class=\"line\"><span class=\"n\">gem</span> <span class=\"n\">install</span> <span class=\"n\">dalli</span>\n</span></code></pre>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</figure>\n<p>and use it into your ruby/rails project as shown in this piece of code:</p>\n<figure class=\"code\">\n<div class=\"highlight\">\n<table>\n<tbody>\n<tr>\n<td class=\"gutter\">\n<pre class=\"line-numbers\"><span class=\"line-number\">1</span>\n<span class=\"line-number\">2</span>\n<span class=\"line-number\">3</span>\n<span class=\"line-number\">4</span>\n</pre>\n</td>\n<td class=\"code\">\n<pre><code class=\"ruby\"><span class=\"line\"><span class=\"nb\"><span class=\"keyword\">require</span></span> <span class=\"s1\"><span class=\"string\">'dalli'</span></span>\n</span><span class=\"line\"><span class=\"n\">dc</span> <span class=\"o\">=</span> <span class=\"ss\"><span class=\"constant\">Dalli</span></span><span class=\"constant\"><span class=\"p\">:</span><span class=\"ss\">:Client</span></span><span class=\"ss\"></span><span class=\"o\">.</span><span class=\"n\">new</span><span class=\"p\">(</span><span class=\"s1\"><span class=\"string\">'localhost:11211'</span></span><span class=\"p\">)</span>\n</span><span class=\"line\"><span class=\"n\">dc</span><span class=\"o\">.</span><span class=\"n\">set</span><span class=\"p\">(</span><span class=\"s1\"><span class=\"string\">'abc'</span></span><span class=\"p\">,</span> <span class=\"mi\"><span class=\"number\">123</span></span><span class=\"p\">)</span>\n</span><span class=\"line\"><span class=\"n\">value</span> <span class=\"o\">=</span> <span class=\"n\">dc</span><span class=\"o\">.</span><span class=\"n\">get</span><span class=\"p\">(</span><span class=\"s1\"><span class=\"string\">'abc'</span></span><span class=\"p\">)</span>\n</span></code></pre>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</figure>\n<h2>Some tips</h2>\n<p>If you pass an array of strings, for instance: <code>[\"offices\", \"BE\"]</code>, as key. Dalli will concatenate all those using backslashes as separator, resulting into <code>\"offices/BE\"</code> being really sent to the MemCached server.</p>\n<p>You can even contact a MemCached server without ruby or rails using telnet.</p>\n<p>If you’re in a rails project, you can even directly use MemCached as rails cache store via this additional configuration put into the desired environnement configuration file (rails 3 feature) :</p>\n<figure class=\"code\">\n<div class=\"highlight\">\n<table>\n<tbody>\n<tr>\n<td class=\"gutter\">\n<pre class=\"line-numbers\"><span class=\"line-number\">1</span>\n</pre>\n</td>\n<td class=\"code\">\n<pre><code class=\"ruby\"><span class=\"line\"><span class=\"n\">config</span><span class=\"o\">.</span><span class=\"n\">cache_store</span> <span class=\"o\">=</span> <span class=\"ss\"><span class=\"symbol\">:dalli_store</span></span>\n</span></code></pre>\n</td>\n</tr>\n</tbody>\n</table>\n</div>\n</figure>\n<p>We’ll certainly talk about some other no sql alternatives, their advantages, drawbacks and use cases in further blog posts, so stay tuned !</p>\n<h2>References</h2>\n<ul>\n<li><strong><a href=\"https://memcached.org/\">https://memcached.org/</a></strong></li>\n<li><strong><a href=\"https://github.com/mperham/dalli\">https://github.com/mperham/dalli</a></strong></li>\n<li><strong><a href=\"https://en.wikipedia.org/wiki/Memcached\">https://en.wikipedia.org/wiki/Memcached</a></strong></li>\n</ul>\n<p><!--HubSpot Call-to-Action Code --><span class=\"hs-cta-wrapper\" id=\"hs-cta-wrapper-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\"><span class=\"hs-cta-node hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" id=\"hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\"><!--[if lte IE 8]><div id=\"hs-cta-ie-element\"></div><![endif]--><a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" target=\"_blank\"><img class=\"hs-cta-img\" id=\"hs-cta-img-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" style=\"border-width:0px;\" src=\"https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png\" alt=\"New Call-to-action\"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>\n<div id=\"disqus_thread\">&nbsp;</div>"
+body: >-
+  <p>Some time ago, as we were facing a performance drop in one of our projects,
+  the decision was made to cache some intensively used data pieces and thus
+  improve the overall system read efficiency.</p>
+
+  <!--more-->
+
+  <p>After some research, we found some interesting key-value stores (as MemCached, Redis,…) which could perfectly do the trick. Since one has to be chosen, we finally picked up Memcached.</p>
+
+  <p>MemCached is an in-memory key-value store for small chunks of arbitrary data (strings, objects) coming from results of database calls, API calls, or page rendering.</p>
+
+  <p>The system uses a client–server architecture wherein servers maintain a key–value associative array and clients populate this array and query it. To do so clients use client-side libraries to contact servers which, by default, expose their service on port 11211.</p>
+
+  <p>Using MemCached in your applications will allow to layer your requests, resulting in faster responses coming from RAM when available and falling back on a slower store such as a database otherwise.</p>
+
+  <p>But pay attention, values stored in MemCached are only available until the server runs out of memory. At which point, oldest data is discarded, a mechanism known as LRU. Therefore, clients must treat Memcached as a transitory cache. They cannot assume that data stored in Memcached is still there when they need it.</p>
+
+  <p>And as quite everything is well thought and done in our ruby world, a MemCached client implementation exists through the ruby Dalli gem (Which is the officiall MemCached client since Rails 4).</p>
+
+  <h2>Installation and usage</h2>
+
+  <p>So, what do we need precisely to incorporate of all these features into our application?</p>
+
+  <p>First of all, an up and running MemCached server (The set up could differ from one OS to another):</p>
+
+  <ul>
+
+  <li>for Mac OS (via HomeBrew):
+
+  <figure class="code">
+
+  <div class="highlight">
+
+  <table>
+
+  <tbody>
+
+  <tr>
+
+  <td class="gutter">
+
+  <pre class="line-numbers"><span class="line-number">1</span>
+
+  </pre>
+
+  </td>
+
+  <td class="code">
+
+  <pre><code class="undefined"><span class="line">brew install memcached</span></code></pre>
+
+  </td>
+
+  </tr>
+
+  </tbody>
+
+  </table>
+
+  </div>
+
+  </figure>
+
+  </li>
+
+  <li>for debian-based linux distributions:
+
+  <figure class="code">
+
+  <div class="highlight">
+
+  <table>
+
+  <tbody>
+
+  <tr>
+
+  <td class="gutter">
+
+  <pre class="line-numbers"><span class="line-number">1</span>
+
+  </pre>
+
+  </td>
+
+  <td class="code">
+
+  <pre><code class="undefined"><span class="line">apt-get install memcached</span></code></pre>
+
+  </td>
+
+  </tr>
+
+  </tbody>
+
+  </table>
+
+  </div>
+
+  </figure>
+
+  </li>
+
+  </ul>
+
+  <p>Then you can simply install the Dalli gem (or put it into your gemfile):</p>
+
+  <figure class="code">
+
+  <div class="highlight">
+
+  <table>
+
+  <tbody>
+
+  <tr>
+
+  <td class="gutter">
+
+  <pre class="line-numbers"><span class="line-number">1</span>
+
+  </pre>
+
+  </td>
+
+  <td class="code">
+
+  <pre><code class="ruby"><span class="line"><span class="n">gem</span> <span class="n">install</span> <span class="n">dalli</span>
+
+  </span></code></pre>
+
+  </td>
+
+  </tr>
+
+  </tbody>
+
+  </table>
+
+  </div>
+
+  </figure>
+
+  <p>and use it into your ruby/rails project as shown in this piece of code:</p>
+
+  <figure class="code">
+
+  <div class="highlight">
+
+  <table>
+
+  <tbody>
+
+  <tr>
+
+  <td class="gutter">
+
+  <pre class="line-numbers"><span class="line-number">1</span>
+
+  <span class="line-number">2</span>
+
+  <span class="line-number">3</span>
+
+  <span class="line-number">4</span>
+
+  </pre>
+
+  </td>
+
+  <td class="code">
+
+  <pre><code class="ruby"><span class="line"><span class="nb"><span class="keyword">require</span></span> <span class="s1"><span class="string">'dalli'</span></span>
+
+  </span><span class="line"><span class="n">dc</span> <span class="o">=</span> <span class="ss"><span class="constant">Dalli</span></span><span class="constant"><span class="p">:</span><span class="ss">:Client</span></span><span class="ss"></span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s1"><span class="string">'localhost:11211'</span></span><span class="p">)</span>
+
+  </span><span class="line"><span class="n">dc</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1"><span class="string">'abc'</span></span><span class="p">,</span> <span class="mi"><span class="number">123</span></span><span class="p">)</span>
+
+  </span><span class="line"><span class="n">value</span> <span class="o">=</span> <span class="n">dc</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1"><span class="string">'abc'</span></span><span class="p">)</span>
+
+  </span></code></pre>
+
+  </td>
+
+  </tr>
+
+  </tbody>
+
+  </table>
+
+  </div>
+
+  </figure>
+
+  <h2>Some tips</h2>
+
+  <p>If you pass an array of strings, for instance: <code>["offices", "BE"]</code>, as key. Dalli will concatenate all those using backslashes as separator, resulting into <code>"offices/BE"</code> being really sent to the MemCached server.</p>
+
+  <p>You can even contact a MemCached server without ruby or rails using telnet.</p>
+
+  <p>If you’re in a rails project, you can even directly use MemCached as rails cache store via this additional configuration put into the desired environnement configuration file (rails 3 feature) :</p>
+
+  <figure class="code">
+
+  <div class="highlight">
+
+  <table>
+
+  <tbody>
+
+  <tr>
+
+  <td class="gutter">
+
+  <pre class="line-numbers"><span class="line-number">1</span>
+
+  </pre>
+
+  </td>
+
+  <td class="code">
+
+  <pre><code class="ruby"><span class="line"><span class="n">config</span><span class="o">.</span><span class="n">cache_store</span> <span class="o">=</span> <span class="ss"><span class="symbol">:dalli_store</span></span>
+
+  </span></code></pre>
+
+  </td>
+
+  </tr>
+
+  </tbody>
+
+  </table>
+
+  </div>
+
+  </figure>
+
+  <p>We’ll certainly talk about some other no sql alternatives, their advantages, drawbacks and use cases in further blog posts, so stay tuned !</p>
+
+  <h2>References</h2>
+
+  <ul>
+
+  <li><strong><a href="https://memcached.org/">https://memcached.org/</a></strong></li>
+
+  <li><strong><a href="https://github.com/mperham/dalli">https://github.com/mperham/dalli</a></strong></li>
+
+  <li><strong><a href="https://en.wikipedia.org/wiki/Memcached">https://en.wikipedia.org/wiki/Memcached</a></strong></li>
+
+  </ul>
+
+  <p><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><span class="hs-cta-node hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" id="hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" target="_blank"><img class="hs-cta-img" id="hs-cta-img-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png" alt="New Call-to-action"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>
+
+  <div id="disqus_thread">&nbsp;</div>
 tags:
-  - label: "Under the hood"
-    value: "under-the-hood"
+  - label: Under the hood
+    value: under-the-hood

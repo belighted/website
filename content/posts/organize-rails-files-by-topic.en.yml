@@ -1,12 +1,132 @@
-lang: "en"
-slug: "organize-rails-files-by-topic"
-originalPath: "https://www.belighted.com/blog/organize-rails-files-by-topic"
-title: "Organize Rails files by topic"
-author: "Philippe V."
-description: "Very often we work on rails projects which slowly grow until they reach the point when we open the controllers or models folder and must navigate between dozens of files. We propose here an alternative way of structuring folders and files to handle this problem without the hassle of splitting the projects into multiple subprojects."
-image: "https://belighted-website.s3.amazonaws.com/uploads/illu-rails-assets.jpg#keepProtocol"
+lang: en
+slug: organize-rails-files-by-topic
+originalPath: https://www.belighted.com/blog/organize-rails-files-by-topic
+title: Organize Rails files by topic
+author: Philippe V.
+description: Very often we work on rails projects which slowly grow until they
+  reach the point when we open the controllers or models folder and must
+  navigate between dozens of files. We propose here an alternative way of
+  structuring folders and files to handle this problem without the hassle of
+  splitting the projects into multiple subprojects.
+image: illu-rails-assets.jpg
 date: 1420070400000
-body: "<h2>The Problem</h2>\n<!--more-->\n<p>Rails is an opiniated framework and one of these opinions is about how the files and folders are structured. Rails has chosen to make a stereotyped structure - the files are grouped by kind : controllers, views, models, …</p>\n<p>When an app is growing, most developpers find themselves needing new stereotypes in order to keep small files : decorators, policies , inputs, interactors* …</p>\n<p>Finding new stereotypes is a very important design step. It is one of the main way to have a layered application and when it comes to code design lasagna tastes much better than spaghetti !</p>\n<p>Thankfully for us, Rails allows developers to add new subfolders to the <code>app</code> directory and it will consider all those direct subfolders as a potential source of ruby code.</p>\n<p>Unfortunately when an app continues to grow, those folders contains more and more files and the app is not able to scale very well. The folder directory is there to help us find the file we are looking for and opening a folder containing 50 files isn’t very helpful.</p>\n<p>If the app is becoming very large, we could split it in different engines or gems but this will bring new problems concerning dependencies between the components. There is a spot - somwhere between 20 and 50 models - where you have too many files to group them by stereotype but you do want to keep a monolithical app anyway. A monolithical app in this context is an app where any topic of the app might know about every other topic of the app, therefore making engine extraction really hard.</p>\n<h2>Our solution</h2>\n<p>Some time ago we started experimenting a new way of structuring files when we encountered that problem : topic folders.</p>\n<p>Since Rails allows us to put any ruby class in any direct subfolder of <code>app</code>, nothing prevents us to put controller classes in the <code>models</code> directory … except common sense.</p>\n<p>What common sense doesn’t prevent us to do is to take all the invoice related classes and put them in an <code>invoice</code> folder. Then do the same for the <code>audit</code> code, and again for every “topic” of our app.</p>\n<div class=\"aligned-row\">\n<div class=\"aligned-row_addon\"><img style=\"min-width: 200px;\" src=\"https://lh5.googleusercontent.com/15Orf5ERW2tFkbb8_tiBHlMUmeJCgIkXcSiAvx1ATCRyuspdyFTyP52wNvRwbjoC5k9IADmMsQhYU4Hn3AWAYcgGoNFcOgS_FxCqQ1s-M_GRR4XeR5qqmIY1b67E2QFjw4ouyEA\" alt=\"Organize Rails files by topic - image 01\"></div>\n<div class=\"aligned-row_cell\" style=\"padding-left: 20px;\">\n<blockquote>Example : this app is about passing surveys and getting reports from the results.\n<ul class=\"ui-list\">\n<li>- legacy_models contains models stored in an old database</li>\n<li>- survey_redaction contains code about writing new surveys</li>\n<li>- survey_take contains code about a participant taking a survey</li>\n<li>- reports contains code about the reports a participant can print after having taken a survey</li>\n</ul>\n</blockquote>\n</div>\n<p>&nbsp;</p>\n</div>\n<p>&nbsp;</p>\n<p>The size of the topic will determine how many files are in that folder so we try to keep topic about 2-to-5 resources max. If we have a topic related to 3 resources ( e.g. <code>invoice</code> will be about the <code>Invoice</code>, <code>InvoiceLine</code> and <code>Payment</code> models ) then the <code>invoice</code> folder will contain <code>3 * n</code> files, <code>n</code> being the number of stereotypes we need to handle that topic. Of course, this is also compatible with namespaces, so we can probably have an <code>invoice/admin_corner</code> and <code>invoice/user_corner</code> subfolder where we will put namespaced controllers. If there is some processing to be done with the invoice, we can also have an <code>invoice/invoice_processing</code> folder which will group all the code under the <code>InvoiceProcessing</code> namespace.</p>\n<p>One of the main advantage of doing this topic segregation is the proximity of related files. When someone adds a method to a controller, he will probably need to edit the policy and when editing the <code>InvoiceProcessor</code>, one will probbaly want to add methods to the related records. It is way easier to jump from one file to another when they are grouped by topic than grouped by stereotype !</p>\n<div class=\"aligned-row\">\n<div class=\"aligned-row_addon\"><img style=\"min-width: 276px;\" src=\"https://lh3.googleusercontent.com/8WpuMQ7ws04eVAGFHP_JocHqvo0l9uezqKnWrT22tDwQejnoicEQHNS9917H-POEFeqdTit4d8nFDHgJQs1Gii9rCmVU2RQXcdNwQgrEzkNVgE9RAYXMci2oE5T4t19lFkWBpZw\" alt=\"Organize Rails files by topic - image 02\"></div>\n<div class=\"aligned-row_cell\">\n<blockquote>The reports directory contains models at it roots, I do no want to namespace those classes. Among them we can find record classes (Report, Chapter, Variant), decorator classes (*Decorator) and POROs (ReportInstance).</blockquote>\n</div>\n</div>\n<p>&nbsp;</p>\n<h2>What about the views and assets ?</h2>\n<p>Any direct subfolder of <code>app</code> can be used to put classes, yes, but what about non ruby files : views and assets ? We think (and Rails is about opinions, isn’t it) that assets are to be kept together. Rails will concatenate all the assets files and treat them as a single bundle so we found it better to keep those files in a single folder.</p>\n<p>But the views are tightly coupled to the controllers so we should move them in the topic folder. Unfortunately Rails needs to be “configured” in order to consider the topic folder as a potential source for the views. We could easily get all the subfolders of <code>app</code> and tell Rails to add them to the lookup chain when searching a view template but it would slow down the rendering of all requests and it would not scale very well. Therefore we chose to add only the <code>views</code> subfolder related to the controller when the controller handle a request. We did so by adding the following macro on the controller <code>prepend_topic_view_path(__FILE__)</code> and defined the macro like this (we also added <code>extend TopicController</code> to ApplicationController )</p>\n<pre><code class=\"ruby\"><span class=\"class\"><span class=\"keyword\">module</span> <span class=\"title\">TopicController</span></span>\n  <span class=\"function\"><span class=\"keyword\">def</span> <span class=\"title\">prepend_topic_view_path</span><span class=\"params\">(controller_file_location)</span></span>\n    views_path = <span class=\"constant\">File</span>.expand_path(<span class=\"string\">\"../../views\"</span>, controller_file_location)\n    relative_path = <span class=\"constant\">Pathname</span>.new(views_path).relative_path_from(<span class=\"constant\">Rails</span>.root).to_s\n    prepend_view_path relative_path\n   <span class=\"keyword\">end</span>\n <span class=\"keyword\">end</span>\n</code></pre>\n<p>This particular piece of code takes into account that our controller classes are <em>always</em> namespaced. It’s an habit we have to easily add an <code>api</code> or <code>admin</code> namespace when we need it but it would be easy to change the code a little bit to recursely visit the directory path of the controller and add any <code>views</code> subfolder it finds. The good news is that this macro is run with the definition of the controller, thus for every request in dev but only once in production. This is why it is completely scalable with the number of topic folders we have.</p>\n<p>Once this is done we can have a <code>views</code> subfolder in our topic directory and when the controller handle the request it will add that folder to the lookup path.</p>\n<div class=\"aligned-row\">\n<div class=\"aligned-row_addon\"><img style=\"min-width: 290px;\" src=\"https://lh6.googleusercontent.com/7RWOoUIMRA2eP7M8A0XPF6-OjcnLpU2HQK12jiCkLid8UAwdExS7E6RTBaES2BTPDSe6Bhyokjy9EruWcs0aJCTyhyzwCKvLgLVlW7ryfYB2JbpuUOplyly4mLgPEiVIGlGa2Sw\" alt=\"Organize Rails files by topic - image 03\"></div>\n<div class=\"aligned-row_cell\">\n<blockquote>Namespace folders allow us to write very specific code like everything related to report processing (the complex mechanism to generate a report tailored for the participant ) or namespaced controllers and policies. Pundit policy classes can either be found in the root namespace (like VariantPolicy) or in a spcific namespace (like Front::VariantPolicy). We use an homemade extension to Pundit to find the correct policy. The view templates follow the same structure as usual but in the topic folder.</blockquote>\n</div>\n</div>\n<p>&nbsp;</p>\n<h2>It is just one more string to your bow</h2>\n<p>One of the best reasons we like this solution is because it can be adopted without any change. You can still have stereotyped folders for everything related to many topics - we keep a <code>User</code> class in the <code>models</code> directory and split its methods between multiple concerns placed in topics folders.</p>\n<p>You should also keep stereotyped folders for everything not tightly related to the topics of your app : we keep an <code>inputs</code> folder for our custom inputs for instance. We also keep some referential resources in their old stereotyped folders, classes like <code>Country</code>, <code>Language</code>, <code>Address</code>. But we will move <code>InvoiceAddress</code> in <code>invoice</code> folder because it will probably behave slightly differently than a vanilla address.</p>\n<p>Since this is a solution to growing apps problem, we mostly found ourselves trying to apply this solution to existing code without having the time to “topic-ify” all the code at the same time. It was no problem for us to do it gradually, starting with the pure ruby code which just had to be moved, then to the Rails-related code - except the controllers - then finally the controllers and views. The only problem with this step by step approach is that your team must be aware that the code might be found in multiple folders. Most of the time a topic can be extracted quite quickly since it is only a matter of finding groups of a few related files.</p>\n<p>Many thanks to the authors and contributors of draper, pundit, simple_form and interactor gems !<br><br><!--HubSpot Call-to-Action Code --><span class=\"hs-cta-wrapper\" id=\"hs-cta-wrapper-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\"><span class=\"hs-cta-node hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" id=\"hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\"><!--[if lte IE 8]><div id=\"hs-cta-ie-element\"></div><![endif]--><a href=\"https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" target=\"_blank\"><img class=\"hs-cta-img\" id=\"hs-cta-img-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2\" style=\"border-width:0px;\" src=\"https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png\" alt=\"New Call-to-action\"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>\n<div id=\"disqus_thread\">&nbsp;</div>"
+body: >-
+  <h2>The Problem</h2>
+
+  <!--more-->
+
+  <p>Rails is an opiniated framework and one of these opinions is about how the files and folders are structured. Rails has chosen to make a stereotyped structure - the files are grouped by kind : controllers, views, models, …</p>
+
+  <p>When an app is growing, most developpers find themselves needing new stereotypes in order to keep small files : decorators, policies , inputs, interactors* …</p>
+
+  <p>Finding new stereotypes is a very important design step. It is one of the main way to have a layered application and when it comes to code design lasagna tastes much better than spaghetti !</p>
+
+  <p>Thankfully for us, Rails allows developers to add new subfolders to the <code>app</code> directory and it will consider all those direct subfolders as a potential source of ruby code.</p>
+
+  <p>Unfortunately when an app continues to grow, those folders contains more and more files and the app is not able to scale very well. The folder directory is there to help us find the file we are looking for and opening a folder containing 50 files isn’t very helpful.</p>
+
+  <p>If the app is becoming very large, we could split it in different engines or gems but this will bring new problems concerning dependencies between the components. There is a spot - somwhere between 20 and 50 models - where you have too many files to group them by stereotype but you do want to keep a monolithical app anyway. A monolithical app in this context is an app where any topic of the app might know about every other topic of the app, therefore making engine extraction really hard.</p>
+
+  <h2>Our solution</h2>
+
+  <p>Some time ago we started experimenting a new way of structuring files when we encountered that problem : topic folders.</p>
+
+  <p>Since Rails allows us to put any ruby class in any direct subfolder of <code>app</code>, nothing prevents us to put controller classes in the <code>models</code> directory … except common sense.</p>
+
+  <p>What common sense doesn’t prevent us to do is to take all the invoice related classes and put them in an <code>invoice</code> folder. Then do the same for the <code>audit</code> code, and again for every “topic” of our app.</p>
+
+  <div class="aligned-row">
+
+  <div class="aligned-row_addon"><img style="min-width: 200px;" src="https://lh5.googleusercontent.com/15Orf5ERW2tFkbb8_tiBHlMUmeJCgIkXcSiAvx1ATCRyuspdyFTyP52wNvRwbjoC5k9IADmMsQhYU4Hn3AWAYcgGoNFcOgS_FxCqQ1s-M_GRR4XeR5qqmIY1b67E2QFjw4ouyEA" alt="Organize Rails files by topic - image 01"></div>
+
+  <div class="aligned-row_cell" style="padding-left: 20px;">
+
+  <blockquote>Example : this app is about passing surveys and getting reports from the results.
+
+  <ul class="ui-list">
+
+  <li>- legacy_models contains models stored in an old database</li>
+
+  <li>- survey_redaction contains code about writing new surveys</li>
+
+  <li>- survey_take contains code about a participant taking a survey</li>
+
+  <li>- reports contains code about the reports a participant can print after having taken a survey</li>
+
+  </ul>
+
+  </blockquote>
+
+  </div>
+
+  <p>&nbsp;</p>
+
+  </div>
+
+  <p>&nbsp;</p>
+
+  <p>The size of the topic will determine how many files are in that folder so we try to keep topic about 2-to-5 resources max. If we have a topic related to 3 resources ( e.g. <code>invoice</code> will be about the <code>Invoice</code>, <code>InvoiceLine</code> and <code>Payment</code> models ) then the <code>invoice</code> folder will contain <code>3 * n</code> files, <code>n</code> being the number of stereotypes we need to handle that topic. Of course, this is also compatible with namespaces, so we can probably have an <code>invoice/admin_corner</code> and <code>invoice/user_corner</code> subfolder where we will put namespaced controllers. If there is some processing to be done with the invoice, we can also have an <code>invoice/invoice_processing</code> folder which will group all the code under the <code>InvoiceProcessing</code> namespace.</p>
+
+  <p>One of the main advantage of doing this topic segregation is the proximity of related files. When someone adds a method to a controller, he will probably need to edit the policy and when editing the <code>InvoiceProcessor</code>, one will probbaly want to add methods to the related records. It is way easier to jump from one file to another when they are grouped by topic than grouped by stereotype !</p>
+
+  <div class="aligned-row">
+
+  <div class="aligned-row_addon"><img style="min-width: 276px;" src="https://lh3.googleusercontent.com/8WpuMQ7ws04eVAGFHP_JocHqvo0l9uezqKnWrT22tDwQejnoicEQHNS9917H-POEFeqdTit4d8nFDHgJQs1Gii9rCmVU2RQXcdNwQgrEzkNVgE9RAYXMci2oE5T4t19lFkWBpZw" alt="Organize Rails files by topic - image 02"></div>
+
+  <div class="aligned-row_cell">
+
+  <blockquote>The reports directory contains models at it roots, I do no want to namespace those classes. Among them we can find record classes (Report, Chapter, Variant), decorator classes (*Decorator) and POROs (ReportInstance).</blockquote>
+
+  </div>
+
+  </div>
+
+  <p>&nbsp;</p>
+
+  <h2>What about the views and assets ?</h2>
+
+  <p>Any direct subfolder of <code>app</code> can be used to put classes, yes, but what about non ruby files : views and assets ? We think (and Rails is about opinions, isn’t it) that assets are to be kept together. Rails will concatenate all the assets files and treat them as a single bundle so we found it better to keep those files in a single folder.</p>
+
+  <p>But the views are tightly coupled to the controllers so we should move them in the topic folder. Unfortunately Rails needs to be “configured” in order to consider the topic folder as a potential source for the views. We could easily get all the subfolders of <code>app</code> and tell Rails to add them to the lookup chain when searching a view template but it would slow down the rendering of all requests and it would not scale very well. Therefore we chose to add only the <code>views</code> subfolder related to the controller when the controller handle a request. We did so by adding the following macro on the controller <code>prepend_topic_view_path(__FILE__)</code> and defined the macro like this (we also added <code>extend TopicController</code> to ApplicationController )</p>
+
+  <pre><code class="ruby"><span class="class"><span class="keyword">module</span> <span class="title">TopicController</span></span>
+    <span class="function"><span class="keyword">def</span> <span class="title">prepend_topic_view_path</span><span class="params">(controller_file_location)</span></span>
+      views_path = <span class="constant">File</span>.expand_path(<span class="string">"../../views"</span>, controller_file_location)
+      relative_path = <span class="constant">Pathname</span>.new(views_path).relative_path_from(<span class="constant">Rails</span>.root).to_s
+      prepend_view_path relative_path
+     <span class="keyword">end</span>
+   <span class="keyword">end</span>
+  </code></pre>
+
+  <p>This particular piece of code takes into account that our controller classes are <em>always</em> namespaced. It’s an habit we have to easily add an <code>api</code> or <code>admin</code> namespace when we need it but it would be easy to change the code a little bit to recursely visit the directory path of the controller and add any <code>views</code> subfolder it finds. The good news is that this macro is run with the definition of the controller, thus for every request in dev but only once in production. This is why it is completely scalable with the number of topic folders we have.</p>
+
+  <p>Once this is done we can have a <code>views</code> subfolder in our topic directory and when the controller handle the request it will add that folder to the lookup path.</p>
+
+  <div class="aligned-row">
+
+  <div class="aligned-row_addon"><img style="min-width: 290px;" src="https://lh6.googleusercontent.com/7RWOoUIMRA2eP7M8A0XPF6-OjcnLpU2HQK12jiCkLid8UAwdExS7E6RTBaES2BTPDSe6Bhyokjy9EruWcs0aJCTyhyzwCKvLgLVlW7ryfYB2JbpuUOplyly4mLgPEiVIGlGa2Sw" alt="Organize Rails files by topic - image 03"></div>
+
+  <div class="aligned-row_cell">
+
+  <blockquote>Namespace folders allow us to write very specific code like everything related to report processing (the complex mechanism to generate a report tailored for the participant ) or namespaced controllers and policies. Pundit policy classes can either be found in the root namespace (like VariantPolicy) or in a spcific namespace (like Front::VariantPolicy). We use an homemade extension to Pundit to find the correct policy. The view templates follow the same structure as usual but in the topic folder.</blockquote>
+
+  </div>
+
+  </div>
+
+  <p>&nbsp;</p>
+
+  <h2>It is just one more string to your bow</h2>
+
+  <p>One of the best reasons we like this solution is because it can be adopted without any change. You can still have stereotyped folders for everything related to many topics - we keep a <code>User</code> class in the <code>models</code> directory and split its methods between multiple concerns placed in topics folders.</p>
+
+  <p>You should also keep stereotyped folders for everything not tightly related to the topics of your app : we keep an <code>inputs</code> folder for our custom inputs for instance. We also keep some referential resources in their old stereotyped folders, classes like <code>Country</code>, <code>Language</code>, <code>Address</code>. But we will move <code>InvoiceAddress</code> in <code>invoice</code> folder because it will probably behave slightly differently than a vanilla address.</p>
+
+  <p>Since this is a solution to growing apps problem, we mostly found ourselves trying to apply this solution to existing code without having the time to “topic-ify” all the code at the same time. It was no problem for us to do it gradually, starting with the pure ruby code which just had to be moved, then to the Rails-related code - except the controllers - then finally the controllers and views. The only problem with this step by step approach is that your team must be aware that the code might be found in multiple folders. Most of the time a topic can be extracted quite quickly since it is only a matter of finding groups of a few related files.</p>
+
+  <p>Many thanks to the authors and contributors of draper, pundit, simple_form and interactor gems !<br><br><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><span class="hs-cta-node hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" id="hs-cta-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" target="_blank"><img class="hs-cta-img" id="hs-cta-img-fb3606cc-cc1b-47d0-ae85-2c9f69837fe2" style="border-width:0px;" src="https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png" alt="New Call-to-action"></a></span></span><!-- end HubSpot Call-to-Action Code --></p>
+
+  <div id="disqus_thread">&nbsp;</div>
 tags:
-  - label: "Under the hood"
-    value: "under-the-hood"
+  - label: Under the hood
+    value: under-the-hood
