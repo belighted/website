@@ -6,6 +6,7 @@ import ProcessesList from "../components/processes/ProcessesList";
 import CategoriesList from "../components/categories/CategoriesList";
 import TechnologiesList from "../components/partials/technologies/TechnologiesList";
 import HeroServices from "../components/services/hero/HeroServices";
+import LeadingBrands from "../components/splits/LeadingBrands";
 
 const ServicesPage = ({
   pageContext,
@@ -15,7 +16,8 @@ const ServicesPage = ({
 }) => {
   return (
     <Layout context={pageContext} page={"services"}>
-      <HeroServices section={findSection(sections, "hero")}/>
+      <HeroServices section={findSection(sections, "hero")} />
+      <LeadingBrands />
       <Section section={findSection(sections, "process")}>
         <ProcessesList />
       </Section>

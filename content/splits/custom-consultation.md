@@ -1,5 +1,5 @@
 ---
-slug: "custom consultation"
+slug: "custom-consultation"
 lang: en
 title: Receive a Custom 20-Minute Product Development Consultation
 cta:
