@@ -17,10 +17,10 @@ const ServicesPage = ({
   return (
     <Layout context={pageContext} page={"services"}>
       <HeroServices section={findSection(sections, "hero")} />
-      <LeadingBrands />
       <Section section={findSection(sections, "process")}>
         <ProcessesList />
       </Section>
+      <LeadingBrands />
       <Section
         section={findSection(sections, "categories")}
         modifier={"light-bg"}

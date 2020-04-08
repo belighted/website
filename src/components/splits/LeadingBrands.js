@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
+import ClientLogo from "../clients/ClientLogo";
 
 const LeadingBrands = () => {
   const {
@@ -21,17 +22,19 @@ const LeadingBrands = () => {
     }
   `);
   return (
-    <div className="c-section">
+    <div className="c-section c-section--dark-bg">
       <div className="o-wrapper">
         <div>
-          <h3 className="c-heading c-heading--3 c-heading--title">{title}</h3>
+          <h3 className="c-heading c-heading--3 c-heading--title c-heading--invert">{title}</h3>
           <div
             className="c-wysiwyg"
             dangerouslySetInnerHTML={{ __html: html }}
           />
           <ul className="o-list-inline">
-            {list.map(brand => (
-              <li>{brand}</li>
+            {list.map(slug => (
+              <li className="o-list-inline__item">
+                <ClientLogo slug={slug} size="small" />
+              </li>
             ))}
           </ul>
         </div>

@@ -1,17 +1,25 @@
-.c-logo-list{
+.c-logo-list {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  &__item{
+  &__item {
     padding: $inuit-global-spacing-unit;
   }
 }
 
-.c-logo{
-  width: 6rem;
+.c-logo {
+  display: inline-block;
+
   box-sizing: content-box;
-  &--small{
-    width: 3rem;
+  &__img {
+    width: 6rem;
+  }
+  &--small {
+    .c-logo {
+      &__img {
+        width: 3rem;
+      }
+    }
   }
 }
