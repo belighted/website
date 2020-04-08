@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
 import LinkToService from "../components/services/LinkToService";
 import Slices from "../components/slices/Slices";
+import LeadingBrands from "../components/splits/LeadingBrands";
 
 const RelatedCategory = ({ category, services, service }) => (
   <section className="c-section">
@@ -20,6 +21,7 @@ const RelatedCategory = ({ category, services, service }) => (
           ))}
       </ul>
     </div>
+    <LeadingBrands />
   </section>
 );
 
