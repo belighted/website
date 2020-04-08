@@ -50,26 +50,12 @@
 @import "node_modules/inuitcss/objects/objects.wrapper";
 @import "node_modules/inuitcss/objects/objects.list-inline";
 @import "objects/objects.box";
-/*
-@import "node_modules/inuitcss/objects/objects.media";
-@import "node_modules/inuitcss/objects/objects.flag";
-@import "node_modules/inuitcss/objects/objects.list-bare";
-@import "node_modules/inuitcss/objects/objects.block";
-@import "node_modules/inuitcss/objects/objects.ratio";
-@import "node_modules/inuitcss/objects/objects.crop";
-@import "node_modules/inuitcss/objects/objects.table";
-@import "node_modules/inuitcss/objects/objects.pack";
-*/
-
-
 
 
 // COMPONENTS
 //
 // Build and include your project’s UI components here.
-/*
-@import "components/example.components.buttons";
-*/
+
 @import "components/components.titles";
 @import "components/components.hero";
 @import "components/components.section";
@@ -88,9 +74,11 @@
 @import "components/components.timeline";
 @import "components/components.wysiwig";
 @import "components/components.pagination";
-
-
 @import "components/components.logo-list";
+
+// Layouts
+//
+
 @import "layouts/layouts.introcontent";
 @import "layouts/layouts.vertical-centered";
 @import "layouts/layouts-grids";
@@ -103,9 +91,6 @@
 @import "layouts/layouts.layout";
 
 // UTILITIES
-/*
-@import "utilities/utilities.clearfix";
-*/
 
 // Be aware that enabling offsets produces a large chunk of classes which might
 // bloat your CSS, depending of the amount of breakpoints you defined.
@@ -117,9 +102,7 @@ $inuit-offsets: true;
 @import "node_modules/inuitcss/utilities/utilities.spacings";
 @import "utilities/utilities.colors";
 /*
-@import "utilities/utilities.widths";
-@import "utilities/utilities.headings";
-@import "utilities/utilities.spacings";
+@import "utilities/utilities.clearfix";
 @import "utilities/utilities.responsive-spacings";
 @import "utilities/utilities.print";
 @import "utilities/utilities.hide";

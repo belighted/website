@@ -3,6 +3,7 @@ slug: "our-history"
 lang: en
 title: Our history
 ---
+
 In 2008, on the university campus at Louvain-la-Neuve, Nicolas Jacobeus made his vision reality. He founded Belighted, a software development agency, to create innovative products that would delight users.
 
 From the start, Belighted embraced excellence in modern, efficient technologies like Ruby and its web framework Rails. Relentless focus on quality helped Belighted grow and attract like-minded talent, and the company is now a passionate team of software engineers, user experience specialists, and project managers.

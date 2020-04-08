@@ -2,11 +2,12 @@ import React from "react";
 import Layout from "../components/layout/Layout";
 import { graphql } from "gatsby";
 import { findSection, Section } from "../components/layout/Section";
-import History from "../components/splits/history/History";
-import Team from "../components/splits/team/Team";
-import Pride from "../components/splits/pride/Pride";
+import History from "../components/about/history/History";
+import Team from "../components/about/team/Team";
+import Pride from "../components/about/pride/Pride";
 import LastScene from "../components/splits/LastScene";
 import Jobs from "../components/about/jobs/Jobs";
+import Culture from "../components/splits/Culture";
 
 const AboutPage = ({
   pageContext,
@@ -28,6 +29,7 @@ const AboutPage = ({
         <History />
       </Section>
       <Jobs section={findSection(sections, "jobs")} />
+      <Culture/>
       <Section section={findSection(sections, "pride")} withoutEyebrow>
         <Pride />
       </Section>

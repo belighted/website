@@ -1,5 +1,8 @@
 .c-body {
   font-family: $fontstack-main;
+  &--invert {
+    color: $color-white;
+  }
   &--1 {
     max-width: 30em;
     @include inuit-font-size($inuit-font-size-body-1);
@@ -23,13 +26,13 @@
     text-transform: uppercase;
     font-weight: 300;
     letter-spacing: 0.1em;
-    margin:0;
-    &.c-heading--invert{
+    margin: 0;
+    &.c-heading--invert {
       color: $color-gray2;
     }
   }
 
-  &--title{
+  &--title {
     margin-top: $inuit-global-spacing-unit-small;
     padding-top: $inuit-global-spacing-unit-small;
     &:after {
@@ -41,8 +44,8 @@
       width: 50px;
       left: 0;
     }
-    &.c-heading--invert{
-      &:after{
+    &.c-heading--invert {
+      &:after {
         background: $color-white;
       }
     }
@@ -78,7 +81,7 @@
     @include inuit-font-size($inuit-font-size-h6);
     max-width: 22em;
   }
-  &--invert{
+  &--invert {
     color: $color-white;
   }
 }
