@@ -38,8 +38,9 @@ const config = {
             }
           }
         `,
-        output: "/rss.xml",
-        title: "Your Site's RSS Feed"
+        output: "/blog/rss.xml",
+        title: "Belighted blog",
+        description: "The latest in product development, product design, lean startup and SaaS."
       }
     ]
   }
