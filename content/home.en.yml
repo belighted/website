@@ -9,13 +9,14 @@ sections:
     body: "Belighted's signature to deliver next-gen software, faster? Our 4-stage process to build meaningful digital experiences."
   - slug: cases
     title: Success stories
-    body: Our clients have changed the world we live in, and we're proud to be a part of their success.
-    subtitle: Discover how we delivered value for them.
+    body: "Our clients have changed the world we live in, and we're proud to be a part of their success."
+    subtitle: "Discover how we delivered value for them."
+    button: See all cases
   - slug: statistics
     title: Belighted by the numbers
   - slug: clients
     title: Our clients
-    body: Leading brands in Belgium and in Europe trust us and rely on Belighted development to deliver perfection every day.
+    body: "Leading brands in Belgium and in Europe trust us and rely on Belighted development to deliver perfection every day."
   - slug: blog
     title: Latest SaaS & Software Stories
     body: Popular on our blog right now
@@ -39,3 +40,27 @@ slides:
         link: /
       - title: Book a call
         link: /
+cases:
+  - slug: rights-up
+    title: "Rights’Up gets off the ground with Belighted"
+    body: "Every industry has its challenges. The music industry is known for its legal complexities. Rights’Up is a contract management app that is intended to help small record labels collect and distribute royalties. It uses computation-intensive algorithms and processes to compare contracts with sales data from various sources. Belighted is working with Rights’Up on a plan for incremental, efficient development:"
+    results:
+      - "Put a <strong>prototype</strong> into the hands of users quickly with a Design Sprint"
+      - "Rapid movement toward a <strong>minimum sellable product</strong>"
+      - "<strong>Ongoing improvements</strong> after launch to keep development agile and efficient"
+  - slug: deecide
+    title: "Market validation prompts DeeCide to pivot from marketplace to SaaS"
+    body: "A startup may go through multiple iterations before finding product/market fit. We worked with DeeCide to develop a marketplace solution for insurance quotes initially. Thanks to proactive market validation, it quickly became obvious that the process did not work for sellers. We were able to <strong><a href=\"https://www.belighted.com/saas-guide-to-software-as-service?hsLang=en\" tabindex=\"0\"> pivot to a SaaS model</a></strong> to better serve sellers and their customers."
+    results:
+      - "Launched <strong>complex product in a few months</strong>"
+      - "Streamlined workflow for sellers by 75%"
+      - "Opportunities for <strong>market validation</strong>"
+      - "<strong>Pivot</strong> to a <a href=\"https://www.belighted.com/saas-guide-to-software-as-service?hsLang=en\" rel=\" noopener\" tabindex=\"0\">SaaS business model</a>"
+  - slug: dokeos
+    title: "Dokeos switches to SaaS model and reduces hosting costs by 75%"
+    body: "Learning management systems (LMS) have been around for a while. When it first entered the market in 1999, Dokeos had initially gained traction with a solution for e-learning tailored for businesses. But the heavily customized format was expensive to maintain. Seeking to remain competitive, the company identified opportunity in a specialized market - compliance training for highly regulated industries. Belighted helped the company pivot and meet the following goals:"
+    results:
+      - "Simplify its offering into<strong> <a href=\"https://www.belighted.com/saas-guide-to-software-as-service?hsLang=en\" rel=\" noopener\" target=\"_blank\" tabindex=\"-1\">SaaS format</a></strong> for<strong> long-term scalability</strong>"
+      - "Reduce maintenance costs"
+      - "Improve the <strong>user experience</strong> (UX)"
+      - "<strong>Competitive edge</strong> with smart reporting"

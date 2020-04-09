@@ -24,7 +24,7 @@ const HomeHero = () => {
         }
       }
       image2: file(
-        relativePath: { eq: "images/stock/software-developers-saas.jpg" }
+        relativePath: { eq: "stock/software-developers-saas.jpg" }
       ) {
         childImageSharp {
           # Specify the image processing specifications right in the query.
@@ -36,7 +36,7 @@ const HomeHero = () => {
       }
       image1: file(
         relativePath: {
-          eq: "images/stock/dylan-gillis-KdeqA3aTnBY-unsplash.jpg"
+          eq: "stock/dylan-gillis-KdeqA3aTnBY-unsplash.jpg"
         }
       ) {
         childImageSharp {

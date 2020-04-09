@@ -11,7 +11,8 @@ values:
       value: Transparency, humility, honesty.
     - key: Drive
       value: Passion for our work - and our play!
-    - key: Excellence: Precision and accuracy, continuous growth.
+    - key: Excellence
+      value: Precision and accuracy, continuous growth.
 ---
 
 Belighted's mission is to delight our customers by building high-performing software that improves users' quality of life.

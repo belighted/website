@@ -7,7 +7,9 @@ import { graphql } from "gatsby";
 const ClientsPage = ({
   pageContext,
   data: {
-    contentYaml: { title, body }
+    markdownRemark: {
+      frontmatter: { title, body }
+    }
   }
 }) => {
   return (
@@ -24,9 +26,11 @@ export default ClientsPage;
 
 export const query = graphql`
   {
-    contentYaml(slug: { eq: "clients" }) {
-      title
-      body
+    markdownRemark(frontmatter: { slug: { eq: "clients" } }) {
+      frontmatter {
+        title
+        body
+      }
     }
   }
 `;

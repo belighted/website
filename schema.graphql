@@ -93,6 +93,7 @@ type CategoriesYamlGroupConnection {
 
 type ContentYaml implements Node {
     body: String
+    cases: [ContentYamlCases]
     children: [Node!]!
     history: [ContentYamlHistory]
     id: ID!
@@ -104,6 +105,13 @@ type ContentYaml implements Node {
     slides: [ContentYamlSlides]
     slug: String
     team: [ContentYamlTeam]
+    title: String
+}
+
+type ContentYamlCases {
+    body: String
+    results: [String]
+    slug: String
     title: String
 }
 
@@ -146,6 +154,7 @@ type ContentYamlPride {
 
 type ContentYamlSections {
     body: String
+    button: String
     link: String
     slug: String
     subtitle: String
@@ -851,7 +860,7 @@ type Query {
     allTestimonialsYaml(filter: TestimonialsYamlFilterInput, limit: Int, skip: Int, sort: TestimonialsYamlSortInput): TestimonialsYamlConnection!
     casesYaml(about: StringQueryOperatorInput, challenges: StringQueryOperatorInput, children: NodeFilterListInput, goals: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, logo: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, problem: StringQueryOperatorInput, results: StringQueryOperatorInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): CasesYaml
     categoriesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, order: IntQueryOperatorInput, parent: NodeFilterInput, services: StringQueryOperatorInput, short_description: StringQueryOperatorInput, slug: StringQueryOperatorInput, technologies: StringQueryOperatorInput, title: StringQueryOperatorInput): CategoriesYaml
-    contentYaml(body: StringQueryOperatorInput, children: NodeFilterListInput, history: ContentYamlHistoryFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, pride: ContentYamlPrideFilterListInput, sections: ContentYamlSectionsFilterListInput, slides: ContentYamlSlidesFilterListInput, slug: StringQueryOperatorInput, team: ContentYamlTeamFilterListInput, title: StringQueryOperatorInput): ContentYaml
+    contentYaml(body: StringQueryOperatorInput, cases: ContentYamlCasesFilterListInput, children: NodeFilterListInput, history: ContentYamlHistoryFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, pride: ContentYamlPrideFilterListInput, sections: ContentYamlSectionsFilterListInput, slides: ContentYamlSlidesFilterListInput, slug: StringQueryOperatorInput, team: ContentYamlTeamFilterListInput, title: StringQueryOperatorInput): ContentYaml
     dataYaml(children: NodeFilterListInput, clients: DataYamlClientsFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, skills: DataYamlSkillsFilterListInput, slug: StringQueryOperatorInput, statistics: DataYamlStatisticsFilterListInput, technologies: DataYamlTechnologiesFilterListInput): DataYaml
     directory(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): Directory
     file(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, childCasesYaml: CasesYamlFilterInput, childCategoriesYaml: CategoriesYamlFilterInput, childContentYaml: ContentYamlFilterInput, childDataYaml: DataYamlFilterInput, childImageSharp: ImageSharpFilterInput, childMarkdownRemark: MarkdownRemarkFilterInput, childPostsYaml: PostsYamlFilterInput, childProcessYaml: ProcessYamlFilterInput, childResourcesYaml: ResourcesYamlFilterInput, childServicesYaml: ServicesYamlFilterInput, childTestimonialsYaml: TestimonialsYamlFilterInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, publicURL: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): File
@@ -1503,6 +1512,11 @@ enum CategoriesYamlFieldsEnum {
 
 enum ContentYamlFieldsEnum {
     body
+    cases
+    cases___body
+    cases___results
+    cases___slug
+    cases___title
     children
     children___children
     children___children___children
@@ -1578,6 +1592,7 @@ enum ContentYamlFieldsEnum {
     history___image___childCategoriesYaml___technologies
     history___image___childCategoriesYaml___title
     history___image___childContentYaml___body
+    history___image___childContentYaml___cases
     history___image___childContentYaml___children
     history___image___childContentYaml___history
     history___image___childContentYaml___id
@@ -1775,6 +1790,7 @@ enum ContentYamlFieldsEnum {
     pride___image___childCategoriesYaml___technologies
     pride___image___childCategoriesYaml___title
     pride___image___childContentYaml___body
+    pride___image___childContentYaml___cases
     pride___image___childContentYaml___children
     pride___image___childContentYaml___history
     pride___image___childContentYaml___id
@@ -1893,6 +1909,7 @@ enum ContentYamlFieldsEnum {
     pride___title
     sections
     sections___body
+    sections___button
     sections___link
     sections___slug
     sections___subtitle
@@ -1940,6 +1957,7 @@ enum ContentYamlFieldsEnum {
     team___image___childCategoriesYaml___technologies
     team___image___childCategoriesYaml___title
     team___image___childContentYaml___body
+    team___image___childContentYaml___cases
     team___image___childContentYaml___children
     team___image___childContentYaml___history
     team___image___childContentYaml___id
@@ -2390,6 +2408,11 @@ enum FileFieldsEnum {
     childCategoriesYaml___technologies
     childCategoriesYaml___title
     childContentYaml___body
+    childContentYaml___cases
+    childContentYaml___cases___body
+    childContentYaml___cases___results
+    childContentYaml___cases___slug
+    childContentYaml___cases___title
     childContentYaml___children
     childContentYaml___children___children
     childContentYaml___children___children___children
@@ -2510,6 +2533,7 @@ enum FileFieldsEnum {
     childContentYaml___pride___title
     childContentYaml___sections
     childContentYaml___sections___body
+    childContentYaml___sections___button
     childContentYaml___sections___link
     childContentYaml___sections___slug
     childContentYaml___sections___subtitle
@@ -2821,6 +2845,7 @@ enum FileFieldsEnum {
     childPostsYaml___image___childCategoriesYaml___technologies
     childPostsYaml___image___childCategoriesYaml___title
     childPostsYaml___image___childContentYaml___body
+    childPostsYaml___image___childContentYaml___cases
     childPostsYaml___image___childContentYaml___children
     childPostsYaml___image___childContentYaml___history
     childPostsYaml___image___childContentYaml___id
@@ -3168,6 +3193,7 @@ enum FileFieldsEnum {
     childTestimonialsYaml___image___childCategoriesYaml___technologies
     childTestimonialsYaml___image___childCategoriesYaml___title
     childTestimonialsYaml___image___childContentYaml___body
+    childTestimonialsYaml___image___childContentYaml___cases
     childTestimonialsYaml___image___childContentYaml___children
     childTestimonialsYaml___image___childContentYaml___history
     childTestimonialsYaml___image___childContentYaml___id
@@ -3819,6 +3845,11 @@ enum PostsYamlFieldsEnum {
     image___childCategoriesYaml___technologies
     image___childCategoriesYaml___title
     image___childContentYaml___body
+    image___childContentYaml___cases
+    image___childContentYaml___cases___body
+    image___childContentYaml___cases___results
+    image___childContentYaml___cases___slug
+    image___childContentYaml___cases___title
     image___childContentYaml___children
     image___childContentYaml___children___children
     image___childContentYaml___children___id
@@ -3843,6 +3874,7 @@ enum PostsYamlFieldsEnum {
     image___childContentYaml___pride___title
     image___childContentYaml___sections
     image___childContentYaml___sections___body
+    image___childContentYaml___sections___button
     image___childContentYaml___sections___link
     image___childContentYaml___sections___slug
     image___childContentYaml___sections___subtitle
@@ -5261,6 +5293,11 @@ enum TestimonialsYamlFieldsEnum {
     image___childCategoriesYaml___technologies
     image___childCategoriesYaml___title
     image___childContentYaml___body
+    image___childContentYaml___cases
+    image___childContentYaml___cases___body
+    image___childContentYaml___cases___results
+    image___childContentYaml___cases___slug
+    image___childContentYaml___cases___title
     image___childContentYaml___children
     image___childContentYaml___children___children
     image___childContentYaml___children___id
@@ -5285,6 +5322,7 @@ enum TestimonialsYamlFieldsEnum {
     image___childContentYaml___pride___title
     image___childContentYaml___sections
     image___childContentYaml___sections___body
+    image___childContentYaml___sections___button
     image___childContentYaml___sections___link
     image___childContentYaml___sections___slug
     image___childContentYaml___sections___subtitle
@@ -5781,8 +5819,20 @@ input CategoriesYamlSortInput {
     order: [SortOrderEnum] = [ASC]
 }
 
+input ContentYamlCasesFilterInput {
+    body: StringQueryOperatorInput
+    results: StringQueryOperatorInput
+    slug: StringQueryOperatorInput
+    title: StringQueryOperatorInput
+}
+
+input ContentYamlCasesFilterListInput {
+    elemMatch: ContentYamlCasesFilterInput
+}
+
 input ContentYamlFilterInput {
     body: StringQueryOperatorInput
+    cases: ContentYamlCasesFilterListInput
     children: NodeFilterListInput
     history: ContentYamlHistoryFilterListInput
     id: StringQueryOperatorInput
@@ -5820,6 +5870,7 @@ input ContentYamlPrideFilterListInput {
 
 input ContentYamlSectionsFilterInput {
     body: StringQueryOperatorInput
+    button: StringQueryOperatorInput
     link: StringQueryOperatorInput
     slug: StringQueryOperatorInput
     subtitle: StringQueryOperatorInput

@@ -16,7 +16,7 @@ Cases.propTypes = { sections: PropTypes.any };
 export default function Homepage({
   pageContext,
   data: {
-    contentYaml: { sections },
+    contentYaml: { sections, cases },
     allPostsYaml: { nodes: posts }
   }
 }) {
@@ -31,7 +31,7 @@ export default function Homepage({
         <CategoriesList />
       </Section>
       <HomeProcess section={findSection(sections, "process")} />
-      <Cases section={findSection(sections, "cases")} />
+      <Cases section={findSection(sections, "cases")} cases={cases} />
       <Statistics section={findSection(sections, "statistics")} />
       <LastScene />
       <Clients section={findSection(sections, "clients")} />
@@ -50,6 +50,10 @@ export const query = graphql`
         title
         body
         subtitle
+        button
+      }
+      cases {
+        ...HomeCaseItem
       }
     }
     allPostsYaml(
