@@ -1,11 +1,10 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
-import LocalizedLink from "../links/LocalizedLink";
 
 const OurHistory = () => {
   const {
     markdownRemark: {
-      frontmatter: { title, cta },
+      frontmatter: { title },
       html
     }
   } = useStaticQuery(graphql`
