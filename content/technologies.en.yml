@@ -1,0 +1,26 @@
+slug: technologies
+lang: en
+title: Our prefered tech stack
+categories:
+    - title: Front-end & Mobile
+      values:
+        - react
+        - vuejs
+        - angular
+    - title: Back-end
+      values:
+        - ruby
+        - rails
+        - elixir
+        - phoenix
+        - postgresql
+        - redis
+        - nodejs
+        - expressjs
+        - meteorjs
+    - title: Infrastructure
+      values:
+        - aws
+        - google
+        - docker
+        - kubernetes

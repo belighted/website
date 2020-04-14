@@ -1,6 +1,6 @@
 ---
 slug: clients
-lang: en
+lang: fr
 title: Clients
 clients:
   - value: qualifio
