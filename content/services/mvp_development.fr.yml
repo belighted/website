@@ -1,0 +1,91 @@
+lang: fr
+slug: mvp_development
+title: Minimum Viable Product (MVP)
+originalPath: "https://www.belighted.com/fr/developpement-mvp"
+layout: "2cols"
+slices:
+  - id: "3181d227-5329-444c-aaea-91e3c6e523b1"
+    type: "2cols"
+    image: null
+    title: "Minimum Viable Product (MVP)"
+    subtitle: "Réduisez les délais de time to market grâce à notre processus de développement rapide et agile en seulement 4 à 8 semaines. Vous obtenez une version fonctionnelle de votre produit présentant toutes les caractéristiques de base prêtes à être testées par les utilisateurs.."
+    cta: Nous contacter
+    body: null
+  - id: "76ea679d-1476-4310-b217-abce902edb2b"
+    type: "default"
+    image: null
+    title: "Pourquoi un MVP?"
+    subtitle: null
+    body: "Vous avez un prototype entre les mains grâce à notre Design Sprint, il est temps de concevoir le produit dont vous avez rêvé. Sur base de la méthodologie Lean Startup, nous ne concevons que les fonctionnalités primordiales pour conquérir les premiers adeptes. C'est ce que nous appelons un Minimum Viable Product (MVP). Les fonctionnalités à privilégier sont choisies en fonction des retours et des tests des utilisateurs du Design Sprint."
+  - id: "3cca4cc4-b363-40e4-83a8-fac5c659dd19"
+    type: "cols"
+    columns:
+      - body: "<h3>Le temps presse</h3><p>Si vous tardez à concrétiser votre idée, le risque que vos concurrents vous devancent augmente. Vous pourriez engager des développeurs internes ou un freelance pour concevoir votre logiciel...</p>"
+      - body: "<h3>Le time to market</h3><p>...mais il faut du temps pour trouver la personne compétente pour votre produit spécifique. Allez-vous <strong>risquer </strong>de perdre du temps et de l'argent en <strong>concevant un logiciel inadapté?</strong></p>"
+  - id: "1"
+    type: split
+    title: "Concevoir un logiciel qui se distingue. Rapidement."
+  - id: "2"
+    type: cols
+    columns:
+      - body:
+          "<h2>Pourquoi sous-traiter?</h2><p><span>La sous-traitance du produit sur lequel repose toute votre entreprise peut sembler déroutante. Confier le développement de votre produit à une agence est le bon choix si vous cherchez à :</span></p>
+          <ul>
+          <li><span>réduire <strong>le risque d'embaucher de mauvais développeurs </strong>en interne.</span></li>
+          <li><span>accélérer votre développement afin de <strong>devancer vos concurrents et développer votre activité</strong>.</span></li>
+          <li><span>vous concentrer sur votre entreprise et <strong>ne pas perdre de temps ni d'argent à la conception d'un logiciel inadapté à votre marche</strong>.</span></li>
+          </ul>"
+  - id: "3"
+    type: cols
+    columns:
+      - body:
+          "<h2>Est-ce pour vous? Attendez-vous à....</h2><ul><li>Un <strong>développement rapide et efficace</strong>, un processus agile.</li>
+          <li><strong>Commencer immédiatement</strong>, sans délai d'embauche.</li>
+          <li>Un Minimum Viable Product fonctionnel avec <strong>toutes les caractéristiques et fonctionnalités de base</strong>.</li>
+          <li>Un logiciel <strong>fiable</strong>, utilisable et testé.</li>
+          <li><strong>Un logiciel prêt à être testé par de vrais utilisateurs </strong>ou à présenter à des investisseurs potentiels.</li>
+          </ul>"
+  - id: "4"
+    type: cols
+    columns:
+      - body: "<h2>Une offre complète</h2>
+          <p>Concevoir une application de haute qualité qui séduira vos clients nécessite différentes compétences</p>
+          <ul>
+          <li>Des <strong>développeurs front-end et back-end </strong>pour concevoir le produit et ses fonctionnalités.</li>
+          <li>Des <strong>experts </strong><strong>UI/UX </strong>pour créer une expérience utilisateur exceptionnelle.</li>
+          <li>Un <strong>chef de produit </strong>pour consolider la stratégie et apporter de l'organisation à l'équipe.</li>
+          <li><strong>Un bon processus et du savoir-faire </strong>pour concevoir des logiciels de pointe.</li>
+          </ul>
+          <p><span>Vous bénéficierez de l'expérience et des connaissances de notre équipe, acquises grâce à la conception de centaines de logiciels de pointe.</span></p>"
+  - id: 5
+    type: cols
+    columns:
+      - body: "<h2>Processus de développement</h2><p>Notre service de développement MVP suit les bonnes pratiques du processus de développement agile. Nous travaillons avec des sprints de deux semaines intégrant le planning, le développement, les tests et les révisions pour un avancement visible et continu tout au long du projet. Nous combinons généralement la programmation et la conception de l'interface utilisateur. À la fin de chaque sprint, le travail est déployé, de telle sorte que votre produit évolue par étapes de deux semaines.</p>"
+  - id: 6
+    type: cols
+    columns:
+      - body: "<h2>Des fonctionnalités qui créent de la valeur</h2>
+          <p>À partir du prototype de votre produit, nous planifions les fonctionnalités requises pour le Minimum Viable Product. Nous les classons par ordre de priorité dans une liste d'idées, de caractéristiques et de fonctionnalités, et nous les révisons au début de chaque nouveau sprint pour avoir la certitude de travailler sur celles qui offrent le plus de valeur.<br><br>Inspirés par la méthodologie Lean Startup, nous pouvons vous aider à valider votre idée de produit avec votre marché grâce au principe: <strong>Concevoir &gt; Mesurer &gt; Apprendre</strong>.</p>"
+  - id: 7
+    type: cols
+    columns:
+      - body: "<h2>Bilan et test du sprint</h2><p>À la fin de chaque sprint, nous passons en revue le travail accompli et réévaluons nos priorités pour le prochain sprint. À ce stade, votre produit peut (et devrait) être présenté aux premiers utilisateurs, afin d'obtenir leur feedback. Ces informations peuvent être utilisées pour influencer et revoir le planning des sprints futurs, ainsi que pour guider le développement futur du produit.</p>"
+  - id: 8
+    type: cols
+    columns:
+      - body: |
+          <h2>Un MVP est-il le bon choix pour moi?</h2>
+          <p>Avant de commencer à penser à développer votre Minimum Viable Product, nous vous recommandons :</p>
+          <ul>
+          <li><strong>D'avoir un prototype initial</strong>: il constitue un point de départ pour orienter nos discussions et avoir une référence visuelle claire.</li>
+          <li><strong>De faire valider votre idée produit</strong>: partager votre prototype avec des prospects et le tester avec de vrais utilisateurs, pour mieux comprendre le problème que vous voulez résoudre.</li>
+          <li><strong>D'être prêt à démarrer</strong>: c'est un sérieux défi. Êtes-vous prêt ?</li>
+          </ul>
+          <p>Si vous ne disposez pas d'un prototype, notre service de <a href="/design-sprint?hsLang=en&amp;__hstc=753710.a79ac693a8ddf9d994db01533fac0a6e.1562732153111.1562732153111.1562732153111.1&amp;__hssc=753710.1.1562732153112&amp;__hsfp=1976050658" rel=" noopener">Design Sprint</a>, une condition préalable essentielle au développement d'un MVP, peut vous aider.</p>
+  - id: 9
+    type: cols
+    columns:
+      - body: |
+        <h2>La valeur garantie</h2>
+        <p><span>Vous êtes prêt à lancer le développement de votre logiciel avec nous? Discutons de votre projet et de la façon dont nous pouvons vous aider à relever vos défis actuels. Cliquez sur le bouton ci-dessous pour réserver votre consultation de 20 minutes sans engagement.</span></p>
+        <p><span><br><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-58980718-a34c-4004-9109-e3289bc0822b"><span class="hs-cta-node hs-cta-58980718-a34c-4004-9109-e3289bc0822b" id="hs-cta-58980718-a34c-4004-9109-e3289bc0822b" style="visibility: visible;" data-hs-drop="true"><a id="cta_button_1684659_c7a5d0d6-d97b-47a0-91e9-2e7c16490834" class="cta_button button color-1 large" href="https://www.belighted.com/cs/c/?cta_guid=c7a5d0d6-d97b-47a0-91e9-2e7c16490834&amp;placement_guid=58980718-a34c-4004-9109-e3289bc0822b&amp;portal_id=1684659&amp;canon=https%3A%2F%2Fwww.belighted.com%2Ffr%2Fdeveloppement-mvp&amp;redirect_url=APefjpHPRer8cKZ3YrZh3kRNnWfcE6r3xQ2Qcj3iYwanrTbFdwTD5LJN94k-TAdlkEqnmn-WuS82f67utS1y_WCVttAdgF5OnxofwT-RQGrbXG3v_3rIVHhjqxEolYyq4TjxDizTbrttQxyqjbE9FLv2ut8KueUoYg&amp;click=c1c80cff-66db-4735-b9c5-04d53ba2e91d&amp;hsutk=c7a00000173e15341756017178430b8c&amp;signature=AAH58kFf2Yt1u1V8csfWQqFPnGgirjNfnQ&amp;utm_referrer=https%3A%2F%2Fissue-checklist-free-1.herocoders.com%2F&amp;pageId=10767819737" style="" cta_dest_link="https://www.belighted.com/fr/evaluation-developpement-produit">Nous contacter</a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(1684659, '58980718-a34c-4004-9109-e3289bc0822b', {}); </script></span><!-- end HubSpot Call-to-Action Code --></span></p>
