@@ -2,27 +2,7 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import GatsbyImage from "gatsby-image";
 
-const Pride = () => {
-  const {
-    contentYaml: { pride }
-  } = useStaticQuery(graphql`
-    {
-      contentYaml(slug: { eq: "about" }) {
-        pride {
-          title
-          subtitle
-          body
-          image {
-            childImageSharp {
-              fixed(width: 350, height: 200) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
+const Pride = ({ pride }) => {
   return (
     <ul className={"o-list-bare"}>
       {pride.map(node => (
@@ -32,7 +12,9 @@ const Pride = () => {
               <GatsbyImage fixed={node.image.childImageSharp.fixed} />
             </div>
             <div className={"o-flag__body"}>
-              <h4 className="c-heading c-heading--3 u-margin-bottom-none">{node.title}</h4>
+              <h4 className="c-heading c-heading--3 u-margin-bottom-none">
+                {node.title}
+              </h4>
               <h5 className="c-heading c-heading--4">{node.subtitle}</h5>
               <span>{node.body}</span>
             </div>

@@ -4,21 +4,47 @@ title: MVP Development
 originalPath: "https://www.belighted.com/fr/developpement-mvp"
 layout: "2cols"
 slices:
-  - id: "3181d227-5329-444c-aaea-91e3c6e523b1"
+  - id: "15afc1c5-68d5-4e91-b41f-5ba97ad9f2f7"
     type: "hero"
-    image: null
-    title: "Ruby on Rails<br />Software Development Audit"
-    subtitle: "Don't Waste Time &amp; Money on your Business because of Spaghetti Code."
-    body: null
-  - id: "76ea679d-1476-4310-b217-abce902edb2b"
-    type: "default"
-    image: null
-    title: "Get an action plan with recommendations based on the level of criticality encountered."
-    subtitle: "Chat with us"
-    body: "<p><em>“We have developed a \"Code Review\" methodology that enables us to improve rapidly the overall quality of your app &amp; ease up the work of your developers. Based on a micro &amp; macro analysis, we take your codebase and optimize it for future developments so you can focus on your business and not waste time and money on a bad Ruby &amp; Rails foundation.”</em></p><p><em>                            </em>Nicolas Jacobeus, CEO &amp; Senior Product Strategist, Belighted</p><p><strong>We use this code review on our own clients projects to make sure we reach the highest quality standards in development &amp; coding processes. </strong></p><ol><li><strong>Versions of Ruby, Rails &amp; dependencies not up to date</strong></li><li><strong>Security problems</strong></li><li>Not following the clean code methodology</li><li><strong>No tests coverage</strong></li><li><strong>Lack of best practices</strong></li><li>Bad Naming &amp; RESTful conventions</li><li><strong>Database not well structured (pk, fk, index…)</strong></li><li><strong>No documentation</strong></li></ol><p>Do these problems resonate in your company ? You are not sure if or how your technical team tackle these problems ? Have a call with one of our Ruby on Rails experts and see how a code review might help you bring your software product to the next level.</p>Get your code review now.We respect your <a href=\"https://www.belighted.com/privacy-policy?hsLang=en\" target=\"_blank\">privacy</a>."
-  - id: "3cca4cc4-b363-40e4-83a8-fac5c659dd19"
-    type: "trusted"
-    image: null
-    title: null
-    subtitle: null
-    body: null
+    title: "Minimum Viable Product (MVP)"
+    body: '<p><strong>Reduce time-to-market</strong> with our fast &amp; agile development process - in just 4-8 weeks. <strong><br /><br /></strong>The result is a <strong>functional</strong> version of your product with all <strong>core features</strong> ready to test with users.<br /></p><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/4c58ef80-4a42-41b4-be1c-00abb678a1f3"></a>'
+  - id: "e73e23db-ce1e-459e-8f5d-3fdf998f4cbd"
+    type: "cols"
+    columns:
+      - body: "<h2><br />Why an MVP?</h2><p>With a prototype in your hands thanks to our Design Sprint, it's now time to actually build the product you have dreamed of. Based on the lean startup methodology, we only build the minimum amount of required features to acquire early adopters. This is what we call a Minimum Viable Product (MVP). The features to prioritize are chosen based on our design sprint's user stories &amp; user testing feedback.</p><h3>The clock's ticking</h3><p>The longer you hold on to your idea, the higher the risk that your competitors will beat you to it. You could hire in-house developers or a freelancer to build your software product for you...</p>                                                                                                            <i></i>                                                    Get Started                                                    Really Fast                                            <h3>Reduce Time to Market </h3><p>...but it takes time to find someone with the right mix of skills for your specific product. Can you afford the <strong>risk of</strong> losing valuable time &amp; money on<strong> building the wrong application ?</strong></p>"
+  - id: "8f7be55e-b1c1-44c8-b1b7-99ac21f9cb3e"
+    type: "cols"
+    columns:
+      - body: "<h3>Build a better product Software. Faster.</h3>"
+  - id: "343e230e-1d62-4b1d-89ad-5903a93d01cc"
+    type: "cols"
+    columns:
+      - body: "<h2>Why outsourcing ? </h2><p>It might seem scary at first glance to outsource the product on which your whole company is based, right? Outsourcing your product development to a Software House is the right choice if you want to:</p><ul><li>alleviate the<strong> risk of hiring the wrong developers</strong> internally.</li><li>fast-track your development to <strong>beat competitors and scale your business</strong>.</li><li>focus on your company and <strong>not lose precious time &amp; money on building the wrong software product</strong>.</li></ul>"
+  - id: "2252d4cc-557d-4f16-8691-24445887fab6"
+    type: "cols"
+    columns:
+      - body: "<h2>Is it for you? Expect...</h2><ul><li><strong>Fast, efficient development</strong> - agile process.</li><li><strong>Getting started right away</strong> - no lengthy hiring delays.</li><li>Functional minimum viable product - with <strong>all the core features and functionality</strong>.</li><li><strong>Reliable</strong>, usable &amp; tested software product </li><li><strong>A software product ready to be tested with real users</strong> - or to share with prospective investors.</li></ul>"
+  - id: "b0ce5d32-ee47-4781-af68-f450dd49d0d8"
+    type: "cols"
+    columns:
+      - body: "<h2>One stop-shop</h2><p>Building a high-quality app that will delight your customers requires different sets of skills : </p><ul><li><strong>Front and back end developers</strong> to build the product and features.</li><li><strong>UI/UX</strong> <strong>experts </strong>to create an outstanding user experience.</li><li><strong>A product manager</strong> to solidify strategy and bring organization to the team.</li><li><strong>A good process &amp; know-how</strong> to build cutting-edge software products.</li></ul><p>You'll benefit from our team's experience and insights, gleaned from building hundreds of cutting-edge software products.</p>"
+  - id: "4f549c5a-713e-4ccf-9bb5-ba4d1b2af577"
+    type: "cols"
+    columns:
+      - body: "<h2>Development process</h2><p>Our MVP development service follows the best practices of the agile development process. We work in two-week sprints, incorporating planning, development, testing and reviews, delivering visible and continuous progress throughout the project. We typically combine both programming as well as user interface design. At the end of each sprint, the work is deployed, so your product grows in two-week stages.</p>"
+  - id: "ee58abcd-3995-4e8e-bf32-7e7ecf76de74"
+    type: "cols"
+    columns:
+      - body: "<h2>Features that deliver value </h2><p>Working from the prototype version of your product, we plan out the features required for your minimum viable product, sort them into a prioritised backlog of ideas, features and functionality, and review at the beginning of each new sprint to ensure we’re working on the most important features that deliver maximum value.<br /><br />Inspired by the lean startup methodology, we can help you validate your product idea by the market with this principle: Build &gt; Measure &gt; Learn.</p>"
+  - id: "973e2b48-2109-4f6e-9897-9d6dc8531e64"
+    type: "cols"
+    columns:
+      - body: "<h2>Sprint review and test</h2><p>At the end of each sprint, we review the work we've completed and re-assess our priorities for the next sprint. At this stage your product can (and should) be shown to early users, so you can begin getting feedback. This can be used to influence and revise the planning for the upcoming sprints, as well as to guide future product development.</p>"
+  - id: "ff67a61a-b3cd-4358-acc2-66e4c12fcfaf"
+    type: "cols"
+    columns:
+      - body: '<h2>Is an MVP right for me ?</h2><p>Before you start thinking about developing your minimum viable product, we recommend:</p><ul><li><strong>Having an initial prototype</strong> - this gives us a starting point to focus our discussions, and a clear visual point of reference.</li><li><strong>Validating your product idea</strong> - sharing your prototype with some prospects, and testing it with real users, to better understand the problem you want to solve.</li><li><strong>Being prepared to get started</strong> - it can feel like a huge deal. Are you ready ?</li></ul><p>If you don''t have a prototype yet, our <a href="https://www.belighted.com/design-sprint?hsLang=en">Design Sprint</a> service, an essential prerequisite for our MVP development, may be a better fit for you. </p>'
+  - id: "e7192252-d3d7-4766-92b6-566282f861e0"
+    type: "cols"
+    columns:
+      - body: '<h2>Guaranteed Value</h2><p>Are you ready to kick-start your software development with us ? Let''s discuss your project, and how we can help you overcome your current challenges. Click below to book your 20-minute risk-free consultation call.<br /><br /><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/e94dc39d-84e8-4895-8f9b-f7e7bced2f5e"></a><br /></p>'

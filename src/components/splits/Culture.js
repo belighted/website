@@ -1,28 +1,12 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-const Culture = () => {
-  const {
-    markdownRemark: {
-      frontmatter: { title, values },
-      html
-    }
-  } = useStaticQuery(graphql`
-    {
-      markdownRemark(
-        frontmatter: { slug: { eq: "culture" }, lang: { eq: "en" } }
-      ) {
-        frontmatter {
-          title
-          values {
-            key
-            value
-          }
-        }
-        html
-      }
-    }
-  `);
+const Culture = ({
+  culture: {
+    frontmatter: { title, values },
+    html
+  }
+}) => {
   return (
     <div className="c-section c-section--dark-bg">
       <div className="o-wrapper">

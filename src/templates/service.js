@@ -33,7 +33,7 @@ const ServicePage = ({
   },
   pageContext
 }) => (
-  <Layout context={pageContext} page={"blog"}>
+  <Layout context={pageContext} page={"service"}>
     <article>
       {post.slices && <Slices slices={post.slices} />}
 
@@ -49,8 +49,8 @@ const ServicePage = ({
 );
 
 export const query = graphql`
-  query($slug: String!) {
-    servicesYaml(slug: { eq: $slug }) {
+  query($slug: String!, $lang: String!) {
+    servicesYaml(slug: { eq: $slug }, lang: { eq: $lang }) {
       slug
       title
       slices {
@@ -60,6 +60,9 @@ export const query = graphql`
         id
         body
         list
+        columns {
+          body
+        }
       }
     }
     categoriesYaml(services: { in: [$slug] }) {

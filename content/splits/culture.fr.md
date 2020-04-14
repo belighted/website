@@ -1,18 +1,18 @@
 ---
-lang: en
+lang: fr
 slug: culture
-title: Our culture
+title: Notre culture
 values:
-    - key: Performance
-      value: Simple, elegant solutions to problems.
-    - key: Respect
-      value: For differing opinions and individuality.
-    - key: Integrity
-      value: Transparency, humility, honesty.
-    - key: Drive
-      value: Passion for our work - and our play!
-    - key: Excellence
-      value: Precision and accuracy, continuous growth.
+  - key: Performance
+    value: Simple, elegant solutions to problems.
+  - key: Respect
+    value: For differing opinions and individuality.
+  - key: Integrity
+    value: Transparency, humility, honesty.
+  - key: Drive
+    value: Passion for our work - and our play!
+  - key: Excellence
+    value: Precision and accuracy, continuous growth.
 ---
 
 Belighted's mission is to delight our customers by building high-performing software that improves users' quality of life.

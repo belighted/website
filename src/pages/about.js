@@ -12,7 +12,8 @@ import Culture from "../components/splits/Culture";
 const AboutPage = ({
   pageContext,
   data: {
-    contentYaml: { sections }
+    contentYaml: { sections, history, pride },
+    culture
   }
 }) => {
   return (
@@ -26,12 +27,12 @@ const AboutPage = ({
         modifier={"light-bg"}
         withoutEyebrow
       >
-        <History />
+        <History history={history} />
       </Section>
       <Jobs section={findSection(sections, "jobs")} />
-      <Culture/>
+      <Culture culture={culture} />
       <Section section={findSection(sections, "pride")} withoutEyebrow>
-        <Pride />
+        <Pride pride={pride} />
       </Section>
     </Layout>
   );
@@ -40,8 +41,8 @@ const AboutPage = ({
 export default AboutPage;
 
 export const query = graphql`
-  {
-    contentYaml(slug: { eq: "about" }) {
+  query($lang: String!) {
+    contentYaml(slug: { eq: "about" }, lang: { eq: $lang }) {
       title
       sections {
         slug
@@ -49,6 +50,41 @@ export const query = graphql`
         body
         link
       }
+      pride {
+        title
+        subtitle
+        body
+        image {
+          childImageSharp {
+            fixed(width: 350, height: 200) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+      history {
+        date
+        event
+        image {
+          childImageSharp {
+            fixed(width: 160, height: 160) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
+    }
+    culture: markdownRemark(
+      frontmatter: { slug: { eq: "culture" }, lang: { eq: $lang } }
+    ) {
+      frontmatter {
+        title
+        values {
+          key
+          value
+        }
+      }
+      html
     }
   }
 `;

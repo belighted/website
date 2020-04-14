@@ -38,8 +38,8 @@ const ServicesPage = ({
 export default ServicesPage;
 
 export const query = graphql`
-  {
-    contentYaml(slug: { eq: "services" }) {
+  query ServicesPage($lang: String!) {
+    contentYaml(slug: { eq: "services" }, lang: { eq: $lang }) {
       title
       sections {
         slug

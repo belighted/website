@@ -1,5 +1,5 @@
-lang: fr
 slug: mvp_development
+lang: "fr"
 title: Minimum Viable Product (MVP)
 originalPath: "https://www.belighted.com/fr/developpement-mvp"
 layout: "2cols"
@@ -57,23 +57,23 @@ slices:
           <li><strong>Un bon processus et du savoir-faire </strong>pour concevoir des logiciels de pointe.</li>
           </ul>
           <p><span>Vous bénéficierez de l'expérience et des connaissances de notre équipe, acquises grâce à la conception de centaines de logiciels de pointe.</span></p>"
-  - id: 5
+  - id: "5"
     type: cols
     columns:
       - body: "<h2>Processus de développement</h2><p>Notre service de développement MVP suit les bonnes pratiques du processus de développement agile. Nous travaillons avec des sprints de deux semaines intégrant le planning, le développement, les tests et les révisions pour un avancement visible et continu tout au long du projet. Nous combinons généralement la programmation et la conception de l'interface utilisateur. À la fin de chaque sprint, le travail est déployé, de telle sorte que votre produit évolue par étapes de deux semaines.</p>"
-  - id: 6
+  - id: "6"
     type: cols
     columns:
       - body: "<h2>Des fonctionnalités qui créent de la valeur</h2>
           <p>À partir du prototype de votre produit, nous planifions les fonctionnalités requises pour le Minimum Viable Product. Nous les classons par ordre de priorité dans une liste d'idées, de caractéristiques et de fonctionnalités, et nous les révisons au début de chaque nouveau sprint pour avoir la certitude de travailler sur celles qui offrent le plus de valeur.<br><br>Inspirés par la méthodologie Lean Startup, nous pouvons vous aider à valider votre idée de produit avec votre marché grâce au principe: <strong>Concevoir &gt; Mesurer &gt; Apprendre</strong>.</p>"
-  - id: 7
+  - id: "7"
     type: cols
     columns:
       - body: "<h2>Bilan et test du sprint</h2><p>À la fin de chaque sprint, nous passons en revue le travail accompli et réévaluons nos priorités pour le prochain sprint. À ce stade, votre produit peut (et devrait) être présenté aux premiers utilisateurs, afin d'obtenir leur feedback. Ces informations peuvent être utilisées pour influencer et revoir le planning des sprints futurs, ainsi que pour guider le développement futur du produit.</p>"
-  - id: 8
+  - id: "8"
     type: cols
     columns:
-      - body: |
+      - body: "
           <h2>Un MVP est-il le bon choix pour moi?</h2>
           <p>Avant de commencer à penser à développer votre Minimum Viable Product, nous vous recommandons :</p>
           <ul>
@@ -81,11 +81,10 @@ slices:
           <li><strong>De faire valider votre idée produit</strong>: partager votre prototype avec des prospects et le tester avec de vrais utilisateurs, pour mieux comprendre le problème que vous voulez résoudre.</li>
           <li><strong>D'être prêt à démarrer</strong>: c'est un sérieux défi. Êtes-vous prêt ?</li>
           </ul>
-          <p>Si vous ne disposez pas d'un prototype, notre service de <a href="/design-sprint?hsLang=en&amp;__hstc=753710.a79ac693a8ddf9d994db01533fac0a6e.1562732153111.1562732153111.1562732153111.1&amp;__hssc=753710.1.1562732153112&amp;__hsfp=1976050658" rel=" noopener">Design Sprint</a>, une condition préalable essentielle au développement d'un MVP, peut vous aider.</p>
-  - id: 9
+          <p>Si vous ne disposez pas d'un prototype, notre service de <a href=\"/design-sprint?hsLang=en&amp;__hstc=753710.a79ac693a8ddf9d994db01533fac0a6e.1562732153111.1562732153111.1562732153111.1&amp;__hssc=753710.1.1562732153112&amp;__hsfp=1976050658\" rel=\"noopener\">Design Sprint</a>, une condition préalable essentielle au développement d'un MVP, peut vous aider.</p>"
+  - id: "9"
     type: cols
     columns:
-      - body: |
-        <h2>La valeur garantie</h2>
+      - body: "<h2>La valeur garantie</h2>
         <p><span>Vous êtes prêt à lancer le développement de votre logiciel avec nous? Discutons de votre projet et de la façon dont nous pouvons vous aider à relever vos défis actuels. Cliquez sur le bouton ci-dessous pour réserver votre consultation de 20 minutes sans engagement.</span></p>
-        <p><span><br><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-58980718-a34c-4004-9109-e3289bc0822b"><span class="hs-cta-node hs-cta-58980718-a34c-4004-9109-e3289bc0822b" id="hs-cta-58980718-a34c-4004-9109-e3289bc0822b" style="visibility: visible;" data-hs-drop="true"><a id="cta_button_1684659_c7a5d0d6-d97b-47a0-91e9-2e7c16490834" class="cta_button button color-1 large" href="https://www.belighted.com/cs/c/?cta_guid=c7a5d0d6-d97b-47a0-91e9-2e7c16490834&amp;placement_guid=58980718-a34c-4004-9109-e3289bc0822b&amp;portal_id=1684659&amp;canon=https%3A%2F%2Fwww.belighted.com%2Ffr%2Fdeveloppement-mvp&amp;redirect_url=APefjpHPRer8cKZ3YrZh3kRNnWfcE6r3xQ2Qcj3iYwanrTbFdwTD5LJN94k-TAdlkEqnmn-WuS82f67utS1y_WCVttAdgF5OnxofwT-RQGrbXG3v_3rIVHhjqxEolYyq4TjxDizTbrttQxyqjbE9FLv2ut8KueUoYg&amp;click=c1c80cff-66db-4735-b9c5-04d53ba2e91d&amp;hsutk=c7a00000173e15341756017178430b8c&amp;signature=AAH58kFf2Yt1u1V8csfWQqFPnGgirjNfnQ&amp;utm_referrer=https%3A%2F%2Fissue-checklist-free-1.herocoders.com%2F&amp;pageId=10767819737" style="" cta_dest_link="https://www.belighted.com/fr/evaluation-developpement-produit">Nous contacter</a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(1684659, '58980718-a34c-4004-9109-e3289bc0822b', {}); </script></span><!-- end HubSpot Call-to-Action Code --></span></p>
+        <a>Nous contacter</a>"

@@ -1,0 +1,16 @@
+slug: services
+lang: fr
+title: Software development solutions
+sections:
+  - slug: hero
+    title: Solutions de développement logiciel
+    body: Transformons votre idée en un produit à succès. Ensemble.
+    subtitle: Stratégie. Design. Développement. Consultance.
+  - slug: process
+    title: Notre processus pour concevoir des produits à succès
+    body: Nous avons aidé des centaines d'entrepreneurs à surmonter leurs craintes de concevoir un logiciel inadapté grâce à notre processus en 4 étapes.
+  - slug: categories
+    title: Nous concevons des logiciels nouvelle génération au quotidien. Besoin d'aide pour relever vos défis?
+  - slug: technologies
+    title: technologies
+    body: Du front-end au back-end en passant par l'infrastructure.
