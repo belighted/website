@@ -13,7 +13,7 @@ const AboutPage = ({
   pageContext,
   data: {
     contentYaml: { sections, history, pride },
-    culture
+    markdownRemark
   }
 }) => {
   return (
@@ -30,7 +30,7 @@ const AboutPage = ({
         <History history={history} />
       </Section>
       <Jobs section={findSection(sections, "jobs")} />
-      <Culture culture={culture} />
+      <Culture culture={markdownRemark} />
       <Section section={findSection(sections, "pride")} withoutEyebrow>
         <Pride pride={pride} />
       </Section>
@@ -74,7 +74,7 @@ export const query = graphql`
         }
       }
     }
-    culture: markdownRemark(
+    markdownRemark(
       frontmatter: { slug: { eq: "culture" }, lang: { eq: $lang } }
     ) {
       frontmatter {
