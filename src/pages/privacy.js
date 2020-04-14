@@ -29,8 +29,10 @@ const AboutPage = ({
 export default AboutPage;
 
 export const query = graphql`
-  {
-    markdownRemark(frontmatter: { slug: { eq: "privacy" } }) {
+  query PrivacyPage($lang: String!) {
+    markdownRemark(
+      frontmatter: { slug: { eq: "privacy" }, lang: { eq: $lang } }
+    ) {
       html
       frontmatter {
         title
