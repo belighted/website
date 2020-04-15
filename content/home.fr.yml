@@ -65,3 +65,12 @@ cases:
       - "Réduction des coûts de maintenance"
       - "Amélioration de <strong>l’expérience utilisateur</strong> (UX)"
       - "<strong>Avantage concurrentiel</strong> grâce à des rapports intelligents"
+statistics:
+  - value: "150+"
+    label: Projets
+  - value: "20"
+    label: Specialistes
+  - value: "15"
+    label: Années d'experience
+  - value: "40%"
+    label: Croissance annuelle

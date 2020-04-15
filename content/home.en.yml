@@ -50,17 +50,26 @@ cases:
       - "<strong>Ongoing improvements</strong> after launch to keep development agile and efficient"
   - slug: deecide
     title: "Market validation prompts DeeCide to pivot from marketplace to SaaS"
-    body: "A startup may go through multiple iterations before finding product/market fit. We worked with DeeCide to develop a marketplace solution for insurance quotes initially. Thanks to proactive market validation, it quickly became obvious that the process did not work for sellers. We were able to <strong><a href=\"https://www.belighted.com/saas-guide-to-software-as-service?hsLang=en\" tabindex=\"0\"> pivot to a SaaS model</a></strong> to better serve sellers and their customers."
+    body: 'A startup may go through multiple iterations before finding product/market fit. We worked with DeeCide to develop a marketplace solution for insurance quotes initially. Thanks to proactive market validation, it quickly became obvious that the process did not work for sellers. We were able to <strong><a href="https://www.belighted.com/saas-guide-to-software-as-service?hsLang=en" tabindex="0"> pivot to a SaaS model</a></strong> to better serve sellers and their customers.'
     results:
       - "Launched <strong>complex product in a few months</strong>"
       - "Streamlined workflow for sellers by 75%"
       - "Opportunities for <strong>market validation</strong>"
-      - "<strong>Pivot</strong> to a <a href=\"https://www.belighted.com/saas-guide-to-software-as-service?hsLang=en\" rel=\" noopener\" tabindex=\"0\">SaaS business model</a>"
+      - '<strong>Pivot</strong> to a <a href="https://www.belighted.com/saas-guide-to-software-as-service?hsLang=en" rel=" noopener" tabindex="0">SaaS business model</a>'
   - slug: dokeos
     title: "Dokeos switches to SaaS model and reduces hosting costs by 75%"
     body: "Learning management systems (LMS) have been around for a while. When it first entered the market in 1999, Dokeos had initially gained traction with a solution for e-learning tailored for businesses. But the heavily customized format was expensive to maintain. Seeking to remain competitive, the company identified opportunity in a specialized market - compliance training for highly regulated industries. Belighted helped the company pivot and meet the following goals:"
     results:
-      - "Simplify its offering into<strong> <a href=\"https://www.belighted.com/saas-guide-to-software-as-service?hsLang=en\" rel=\" noopener\" target=\"_blank\" tabindex=\"-1\">SaaS format</a></strong> for<strong> long-term scalability</strong>"
+      - 'Simplify its offering into<strong> <a href="https://www.belighted.com/saas-guide-to-software-as-service?hsLang=en" rel=" noopener" target="_blank" tabindex="-1">SaaS format</a></strong> for<strong> long-term scalability</strong>'
       - "Reduce maintenance costs"
       - "Improve the <strong>user experience</strong> (UX)"
       - "<strong>Competitive edge</strong> with smart reporting"
+statistics:
+  - value: "150+"
+    label: Projects
+  - value: "20"
+    label: Specialists
+  - value: "15"
+    label: Years of experience
+  - value: "40%"
+    label: Annual Growth
