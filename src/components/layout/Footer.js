@@ -37,6 +37,11 @@ const Footer = () => {
                   Strategy workshop
                 </LinkToService>
               </li>
+              <li>
+                <LinkToService slug={"design sprint"}>
+                  Design sprint
+                </LinkToService>
+              </li>
             </ul>
             <ul>
               <li>
