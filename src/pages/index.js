@@ -16,14 +16,13 @@ Cases.propTypes = { sections: PropTypes.any };
 export default function Homepage({
   pageContext,
   data: {
-    contentYaml: { sections, cases },
+    contentYaml: { sections, cases, slides },
     allPostsYaml: { nodes: posts }
   }
 }) {
   return (
     <Layout context={pageContext} page={"home"}>
-      <Hero />
-
+      <Hero slides={slides} />
       <Section
         section={findSection(sections, "categories")}
         modifier="light-bg"
@@ -44,7 +43,7 @@ export default function Homepage({
 
 export const query = graphql`
   query Homepage($lang: String!) {
-    contentYaml(slug: { eq: "home" }) {
+    contentYaml(slug: { eq: "home" }, lang: { eq: $lang }) {
       sections {
         slug
         title
@@ -52,6 +51,16 @@ export const query = graphql`
         subtitle
         button
       }
+
+      slides {
+        title
+        body
+        buttons {
+          title
+          modifier
+        }
+      }
+
       cases {
         ...HomeCaseItem
       }

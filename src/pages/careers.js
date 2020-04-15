@@ -24,7 +24,7 @@ const CareersPage = ({ pageContext, data }) => {
               <li className="o-box o-box--light-bg">
                 <h2>{job.frontmatter.title}</h2>
                 <LintToJob slug={job.frontmatter.slug}>
-                  see this job opening
+                  {contentYaml.cta.title}
                 </LintToJob>
               </li>
             ))}
@@ -53,6 +53,9 @@ export const query = graphql`
     contentYaml(slug: { eq: "careers" }, lang: { eq: $lang }) {
       title
       body
+      cta {
+        title
+      }
     }
   }
 `;

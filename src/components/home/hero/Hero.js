@@ -3,26 +3,12 @@ import { graphql, useStaticQuery } from "gatsby";
 import Button from "../../buttons/Button";
 import Img from "gatsby-image";
 
-//content/images/stock/software-developers-saas.jpg
-//content/images/stock/dylan-gillis-KdeqA3aTnBY-unsplash.jpg
-
-const HomeHero = () => {
+const HomeHero = ({slides}) => {
   const {
-    contentYaml: { slides },
     image1,
     image2
   } = useStaticQuery(graphql`
     {
-      contentYaml(slug: { eq: "home" }) {
-        slides {
-          title
-          body
-          buttons {
-            title
-            modifier
-          }
-        }
-      }
       image2: file(
         relativePath: { eq: "stock/software-developers-saas.jpg" }
       ) {

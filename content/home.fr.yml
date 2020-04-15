@@ -1,0 +1,67 @@
+lang: fr
+slug: home
+sections:
+  - slug: categories
+    title: Nos services
+    body:
+      "Nous concevons des logiciels, des solutions SaaS et des marketplaces à la demande.
+      Nos développements sur mesure se distinguent et maximisent votre valeur commerciale."
+  - slug: process
+    title: Notre façon de procéder
+    body: "Le secret de Belighted pour développer des logiciels nouvelle génération en un rien de temps ? Notre processus en quatre étapes pour concevoir de véritables expériences numériques."
+  - slug: cases
+    title: Témoignages clients
+    body: "Nos clients ont transformé le monde et nous sommes fiers de contribuer à leur réussite. Découvrez comment."
+    subtitle: "Découvrir nos études de cas"
+    button: "Découvrir nos études de cas"
+  - slug: statistics
+    title: Belighted en chiffres
+  - slug: clients
+    title: Témoignages
+    body: "Des marques de premier plan en Belgique et en Europe font confiance aux développements de Belighted pour atteindre chaque jour la perfection."
+  - slug: blog
+    title: Les logiciels et le SaaS sous toutes leurs coutures.
+    body: À la une sur notre blog en ce moment.
+slides:
+  - title: Votre logiciel sur mesure en un rien de temps
+    body: "Développons ensemble un logiciel qui dynamisera votre entreprise et séduira vos utilisateurs."
+    buttons:
+      - title: Estimer mon projet
+        link: /estimate
+      - title: Appel Consultatif
+        link: /estimate
+        modifier: outline-default
+  - title: Agence de développement SaaS.
+    body: Nous aidons les start-ups, les scale-ups et les éditeurs de logiciels à proposer à leurs clients un produit révolutionnaire et convivial.
+    buttons:
+      - title: Estimer mon projet
+        link: /estimate
+      - title: Appel Consultatif
+        link: /estimate
+        modifier: outline-default
+cases:
+  - slug: rights-up
+    title: "Rights'Up prend son envol grâce au Design Sprint "
+    body: 'Chaque industrie comporte son lot de difficultés. Le secteur de la musique est reconnu pour sa complexité juridique. Rights’Up est une application de gestion de contrats conçue pour aider les plus petites maisons de disques à percevoir et à reverser les royalties. Des algorithmes et des processus de calcul complexes sont utilisés pour comparer les contrats avec les données des ventes provenant de plusieurs sources. Belighted travaille avec Rights''Up sur un plan de développement progressif et efficace.<a href="/fr/clients?hsLang=fr">Lire l''étude de cas complète →</a>'
+    results:
+      - "Lancement rapide d’un <strong>prototype</strong> destiné aux utilisateurs grâce au Design Sprint"
+      - "Évolution rapide vers un <strong>produit commercialisable</strong>"
+      - "<strong>Améliorations continues</strong> après le lancement en vue de garder le produit agile et efficace"
+  - slug: deecide
+    title: "La validation du marché incite DeeCide à passer d'une marketplace au modèle SaaS"
+    body:
+      'Une start-up procède souvent par itérations pour trouver l''adéquation produit/marché. Au départ, nous avons travaillé avec DeeCide en vue de développer une place de marché pour les devis d''assurance. Grâce à une validation proactive du marché, il est rapidement devenu évident que le processus ne fonctionnait pas pour les vendeurs. Nous avons donc aidé DeeCide à pivoter vers un <a href="/fr/qu-est-ce-que-le-saas-guide?hsLang=fr">business model SaaS</a> pour attirer les vendeurs et leurs clients.
+      <a href="/fr/clients/rightsup?hsLang=fr">Lire l''étude de cas complète →</a>'
+    results:
+      - "Lancement d’un <strong>produit haut de gamme en quelques mois</strong>"
+      - "Workflow optimisé de 75% pour les vendeurs</li><li><strong>Validation marché</strong>"
+      - "Opportunities for <strong>market validation</strong>"
+      - '<strong>Adaptation</strong> vers un <a href="/fr/qu-est-ce-que-le-saas-guide?hsLang=fr">business model SaaS</a></li>'
+  - slug: dokeos
+    title: "Dokeos passe à un business model SaaS et réduit ses coûts d'hébergement de 75 %"
+    body: 'Les systèmes de gestion de l''apprentissage font leurs preuves depuis plusieurs années. Lors de son entrée sur le marché en 1999, Dokeos s’était démarqué grâce à une solution d''apprentissage en ligne adaptée aux entreprises. Cependant, le format fortement personnalisé était relativement coûteux. Afin de rester compétitive, l''entreprise s’est démarquée sur le marché spécialisé de la formation en matière de conformité pour les industries hautement réglementées. Belighted a permis à Dokeos de s’adapter et d’atteindre ses objectifs.<a href="/fr/clients/dokeos?hsLang=fr">Lire l''étude de cas complète →</a>'
+    results:
+      - 'Simplification de son offre au <a href="/fr/qu-est-ce-que-le-saas-guide?hsLang=fr">format SaaS </a>pour une <strong>évolutivité à long terme</strong>'
+      - "Réduction des coûts de maintenance"
+      - "Amélioration de <strong>l’expérience utilisateur</strong> (UX)"
+      - "<strong>Avantage concurrentiel</strong> grâce à des rapports intelligents"
