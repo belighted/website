@@ -4,18 +4,14 @@ import * as classnames from "classnames";
 
 const ClientLogo = ({ slug, size = "medium" }) => {
   const {
-    markdownRemark: {
-      frontmatter: { clients }
-    }
+    dataYaml: { clients }
   } = useStaticQuery(graphql`
     {
-      markdownRemark(frontmatter: { slug: { eq: "clients" } }) {
-        frontmatter {
-          clients {
-            value
-            image
-            type
-          }
+      dataYaml(slug: { eq: "clients" }) {
+        clients {
+          value
+          image
+          type
         }
       }
     }

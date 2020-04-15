@@ -104,6 +104,7 @@ module.exports = {
         path: `${__dirname}/content/process`
       }
     },
+    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-plugin-sharp",
       options: {
@@ -118,7 +119,6 @@ module.exports = {
         }
       }
     },
-    `gatsby-transformer-sharp`,
     {
       resolve: "gatsby-transformer-remark",
       options: {
