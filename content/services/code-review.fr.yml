@@ -1,0 +1,20 @@
+lang: "fr"
+type: "services"
+slug: "code-review"
+originalPath: "https://www.belighted.com/code-review"
+title: "Revue de code \n Ruby on Rails"
+subtitle: "Arrêtez de perdre du temps et de l'argent dans du mauvais code."
+layout: "with-form"
+slices:
+  - id: "3181d227-5329-444c-aaea-91e3c6e523b1"
+    type: "hero"
+    image: null
+    title: "Revue de code \n Ruby on Rails"
+    subtitle: "Arrêtez de perdre du temps et de l'argent dans du mauvais code."
+    body: null
+  - id: "76ea679d-1476-4310-b217-abce902edb2b"
+    type: "default"
+    image: null
+    title: "Obtenez un plan d'action avec des recommandations basées sur l'ampleur du travail à effectuer."
+    subtitle: null
+    body: "<p><em>“Nous avons développé une méthodologie de révision de code qui nous <br />permet d'améliorer rapidement la qualité globale de votre application et de faciliter le travail de vos développeurs. Nous nous appuyons sur une analyse micro et macro pour optimiser votre codebase afin que vous puissiez vous concentrer sur votre activité et ne plus gaspiller du temps ni de l’argent sur une mauvaise base Ruby On Rails.\"<br /></em></p>\n<p>Nicolas Jacobeus, CEO &amp; Senior Product Strategist, Belighted</p>\n<p><strong>Nous utilisons cette revue de code sur les projets de nos clients pour nous assurer d'atteindre les plus hauts standards de qualité en matière de processus de développement et de codage.</strong></p>\n<h2>Quelle est la qualité de votre code ? Avez-vous résolu ces problèmes habituels ?</h2>\n<ol>\n<li><strong>Versions de Ruby, Rails et dépendances pas à jour</strong></li>\n<li><strong>Problèmes de sécurité</strong></li>\n<li>Non-respect de la méthodologie du code propre</li>\n<li><strong>Aucune couverture de tests</strong></li>\n<li><strong>Absence de bonnes pratiques</strong></li>\n<li>Mauvaises conventions de naming et RESTful</li>\n<li><strong>Base de données mal structurée (pk, fk, index...)</strong></li>\n<li><strong>Absence de documentation</strong></li>\n</ol>\n<p>Ces problèmes résonnent-ils dans votre entreprise ? Vous vous posez des questions sur la façon dont votre équipe technique s'attaque à ces problèmes ? Appelez l'un de nos experts Ruby on Rails et voyez comment une revue du code peut vous aider à faire évoluer votre logiciel.</p>"

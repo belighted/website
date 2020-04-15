@@ -1,0 +1,19 @@
+lang: "en"
+type: "services"
+slug: "user-testing"
+originalPath: "https://www.belighted.com/user-testing"
+title: "Tests Utilisateurs"
+subtitle: Obtenir du feedback précieux de la part des utilisateurs est la première étape vers un excellent produit qui séduira vos clients.
+layout: "with-form"
+slices:
+  - id: "0a73bf2f-8666-4117-a78c-8deb0cf4ff8b"
+    type: "hero"
+    image: null
+    title: "Tests Utilisateurs"
+    subtitle: "Obtenir du feedback précieux de la part des utilisateurs est la première étape vers un excellent produit qui séduira vos clients."
+    body: null
+  - id: "5a5850cd-6e26-46a4-bdbc-22c6a361ceb9"
+    type: "default"
+    image: null
+    title: "Les sessions de tests utilisateurs sont conçues pour évaluer et optimiser votre application en 2 semaines."
+    body: "<p><br /><em>“L'objectif est d'obtenir un feedback qualitatif de la part des utilisateurs afin d'améliorer le positionnement du produit sur le marché et l'expérience utilisateur (UX) globale de l'application.”</em></p><p>Lucile Gratier de St Louis, Consultante UX, Belighted</p><p><strong>Nous nous occupons de :</strong></p><ul><li>Planifier et préparer les sessions de tests d'utilisateurs (lieu, scénarios de tests, repas/boissons).</li><li>Trouver les bons candidats, les sélectionner, etc.</li><li>Réaliser et contrôler les sessions de tests utilisateurs.</li><li>Résumer les principales observations dans un plan d'action avec les priorités à mettre en œuvre.</li></ul>"

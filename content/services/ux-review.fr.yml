@@ -1,0 +1,30 @@
+lang: "fr"
+type: "services"
+slug: "ux-review"
+originalPath: "https://www.belighted.com/ux-review"
+title: "Audit Expérience Utilisateur"
+subtitle:
+  "Évitez toute frustration sur votre application et séduisez vos clients
+  avec une formidable expérience utilisateur."
+layout: "with-form"
+slices:
+  - id: "f6207bbf-b388-43fa-9281-851289d3b01f"
+    type: "hero"
+    image: null
+    title: "Audit Expérience Utilisateur"
+    subtitle:
+      "Évitez toute frustration sur votre application et séduisez vos clients
+      avec une formidable expérience utilisateur."
+    body: null
+  - id: "ab860592-4e9c-4873-80a4-d57ffdfc0659"
+    type: "default"
+    image: null
+    title: "En 3 jours, obtenez un rapport d'audit UX avec des recommandations réalisables à mettre en œuvre par la suite."
+    subtitle: null
+    body: "<em>“ L'objectif est de réaliser une analyse produit par notre expert UX afin d'assurer la cohérence de l'application et des bonnes pratiques en matière d'UX.” </em></p><p>Michael Albert, Chef de produit, Belighted</p><p><strong>Au cours de cet audit UX, attendez-vous à ce que nous :</strong></p><ul><li>Vérifions la cohérence de l'architecture d'information de l'application.</li><li>Vérifions la cohérence de la communication graphique de l'application.</li><li>Vérifions la cohérence des styles.</li><li>Comparions votre application avec la concurrence.</li><li>Réalisions un rapport d'audit UX.</li></ul>"
+  - id: "9adb95ee-1915-43a0-b50d-13ce24ab230a"
+    type: "trusted"
+    image: null
+    title: null
+    subtitle: null
+    body: null

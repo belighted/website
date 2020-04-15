@@ -41,26 +41,29 @@ const options = {
   ]
 };
 
-const init = async (url, selector) => {
+const init = async url => {
   const { data } = await axios.get(url);
   const dom = new JSDOM(data);
-  const html = dom.window.document.querySelector(selector).innerHTML;
-  return sanitizeHtml(html, options)
-    .trim()
-    .replace(/(\r\n|\n|\r)/gm, "");
+  return Array.from(
+    dom.window.document.querySelectorAll(".body-container > .row-depth-1")
+  )
+    .map(section => sanitizeHtml(section.innerHTML, options))
+    .map(html => html.trim().replace(/(\r\n|\n|\r)/gm, ""))
+    .map(body => ({
+      id: uuidv4(),
+      type: "cols",
+      columns: [{ body }]
+    }));
 };
 
 function pbcopy(data) {
-  const proc = require("child_process").spawn("pbcopy");
+  var proc = require("child_process").spawn("pbcopy");
   proc.stdin.write(data);
   proc.stdin.end();
 }
 
-init(
-  "https://www.belighted.com/fr/tests-utilisateurs",
-  "div.row-number-8:nth-child(1)"
-).then(result => {
+init("https://www.belighted.com/mvp-development").then(result => {
   const data = YAML.stringify(result);
   pbcopy(data);
-  console.log(data);
+  console.log("ok");
 });

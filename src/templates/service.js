@@ -5,7 +5,7 @@ import LinkToService from "../components/services/LinkToService";
 import Slices from "../components/slices/Slices";
 import LeadingBrands from "../components/splits/LeadingBrands";
 
-const RelatedCategory = ({ category, services, service }) => (
+const RelatedCategory = ({ category, service }) => (
   <section className="c-section">
     <div className="o-wrapper">
       <h3 className="c-section__header c-h3">

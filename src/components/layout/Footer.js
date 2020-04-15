@@ -1,7 +1,7 @@
 import React from "react";
-import FooterServices from "./components/footer/Services";
 import Contact from "./components/footer/Contact";
 import Social from "./components/footer/Social";
+import LinkToService from "../services/LinkToService";
 
 const Footer = () => {
   return (
@@ -13,7 +13,19 @@ const Footer = () => {
             <Social />
           </div>
           <div className="l-introcontent__main">
-            <FooterServices />
+            <ul>
+              <li>
+                <LinkToService slug={"code-review"}>Code review</LinkToService>
+              </li>
+              <li>
+                <LinkToService slug={"ux-review"}>UX Review</LinkToService>
+              </li>
+              <li>
+                <LinkToService slug={"user-testing"}>
+                  User testing
+                </LinkToService>
+              </li>
+            </ul>
           </div>
         </div>
       </div>

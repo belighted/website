@@ -1,0 +1,21 @@
+lang: "fr"
+type: "resources"
+slug: "software-power-checklist"
+originalPath: "https://www.belighted.com/resources/software-power-checklist"
+title: "Ne concevez pas de logiciel sans cette check-list indispensable !"
+slices:
+  - id: "5311f509-2bbf-4a4c-be0c-249181070895"
+    title: null
+    image: null
+    subtitle: null
+    type: "default"
+    body:
+      "<h4>Comment passer d'une idée à un modèle d'entreprise performant ?<br><strong>Voici un aide-mémoire.</strong></h4>
+      <p>Obtenez votre exemplaire de la recette utilisée par les meilleurs concepteurs de logiciels qui s'inspirent de la méthode Running Lean. Présentée sous la forme d'une check-list pratique, c'est une sorte de parcours complet pour concevoir et faire évoluer un logiciel.</p>
+      <p><strong>Cette check-list indispensable comprend :</strong></p>
+      <ul>
+      <li><strong>Les 5 étapes de l'innovation logicielle </strong>et ce qui doit se dérouler à chaque étape pour mieux voir où vous en êtes aujourd'hui.<br><br></li>
+      <li><strong>50 points de contrôle </strong>répartis par étape et dans un langage clair. Que vous soyez un fondateur non technique ou un CTO, vous visualisez ce qui devrait déjà être fait et ce qu’il reste à faire.<br><br></li>
+      <li><strong>Quelles activités se prêtent à l’externalisation</strong> <strong>et quand?</strong>&nbsp;Il faut être agile et flexible. Il est essentiel de déterminer le budget à investir aux différents postes. N'allouez jamais de ressource sans consulter cette check-list.</li>
+      </ul>"
+image: "\n\n\n"

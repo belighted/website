@@ -1,0 +1,46 @@
+lang: "fr"
+type: "services"
+slug: "product-development-consultation"
+originalPath: "https://www.belighted.com/product-development-consultation"
+title: "Evaluez votre développement produit en 20 minutes."
+layout: "with-form"
+slices:
+  - id: "bca6623e-f4bc-4b3e-82bd-1998195e0783"
+    type: "hero"
+    image: null
+    title: "Evaluez votre développement produit en 20 minutes."
+    subtitle: null
+    body: null
+  - id: "680ad83e-4d51-4613-ba2e-5b16dc95c638"
+    type: "default"
+    image: null
+    title: "Les 7 raisons qui justifient une discussion avec nous :"
+    subtitle: null
+    body: "<ol>
+           <li>Vous avez du mal à prendre une décision quant aux prochaines étapes de votre logiciel ?</li>
+           <li>Vous devez moderniser votre logiciel démodé, mais vous ne savez pas comment ?</li>
+           <li>Vous souhaitez accélérer la croissance de votre logiciel ?</li>
+           <li>Vous hésitez sur la stratégie de développement de votre produit ?</li>
+           <li>Vous ne disposez pas de l'équipe, des processus, des capacités, des outils nécessaires ?</li>
+           <li>Vous avez peur de mal utiliser le budget alloué ?</li>
+           <li>Vous avez peur d'être trop lent et de vous faire distancer par un concurrent ?</li>
+           </ol>
+           <p><strong>Si vous avez répondu oui à l'une de ces questions, vous devez faire appel à un expert en développement de produits qui vous guidera et vous aidera à relever vos défis.</strong></p>"
+  - id: "680ad83e-4d51-4613-ba2e-5b16dc95c6397"
+    type: "default"
+    image: null
+    title: "Pendant notre consultation de 20 minutes, vous allez :"
+    subtitle: null
+    body: "<ol>
+           <li>Découvrir les meilleures stratégies pour concevoir un MVP ou faire évoluer votre produit existant.</li>
+           <li>Recevoir une analyse professionnelle sur les outils et les technologies dont vous aurez besoin pour concrétiser votre vision.</li>
+           <li>Repartir avec les prochaines étapes claires pour transformer votre vision en réalité.</li>
+           <li>Gagner un temps considérable dans vos recherches.</li>
+           </ol>
+           <p>Nous avons développé cette consultation sur le développement de produits pour aider les créateurs, les CEO et les éditeurs de produits à évaluer les processus et les capacités de développement de produits au sein de leur entreprise. Notre évaluation gratuite vous permettra de pondérer les différents aspects du développement de produit, comme la stratégie, la définition des processus, la gestion du portefeuille, les ventes et la rigueur, puis de mesurer votre efficacité globale.</p>"
+  - id: "8cbb8077-0bde-4664-b1f3-7621604debc0"
+    type: "trusted"
+    image: null
+    title: null
+    subtitle: null
+    body: null
