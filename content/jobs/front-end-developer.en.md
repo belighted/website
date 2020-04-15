@@ -2,6 +2,7 @@
 title: Front-end developer
 slug: front-end
 lang: en
+status: unpublished
 ---
 
 We’re looking for a front-end developer who is passionate about linking together the world of design and new technologies for an exceptional user experience. Efficiency, speed, and smooth functionality are top of mind, and you have the experience to make the software world a better place for users. Join us and grow with a high-caliber team that takes pride in excellence.

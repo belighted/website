@@ -2,6 +2,7 @@
 title: Product owner
 slug: product-owner
 lang: fr
+status: unpublished
 ---
 
 Nous recherchons le bon Product Owner pour rejoindre Belighted dans sa mission de création de produits extraordinaires pour les innovateurs logiciels.

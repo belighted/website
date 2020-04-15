@@ -2,6 +2,7 @@
 title: Executive assistant
 slug: executive-assistant
 lang: fr
+status: unpublished
 ---
 
 Nous recherchons le bon Executive Assistant pour rejoindre Belighted dans sa mission de création de produits extraordinaires pour les innovateurs logiciels.

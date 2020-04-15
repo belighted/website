@@ -42,6 +42,14 @@ const Footer = () => {
                   Design sprint
                 </LinkToService>
               </li>
+              <li>
+                <LocalizedLink to={"/technologies"}>
+                  Technnologies
+                </LocalizedLink>
+              </li>
+              <li>
+                <LocalizedLink to={"/careers"}>Careers</LocalizedLink>
+              </li>
             </ul>
             <ul>
               <li>

@@ -2,6 +2,7 @@
 title: Sales representative
 slug: sales-representative
 lang: fr
+status: published
 ---
 
 Nous recherchons le bon Sales Representative pour rejoindre Belighted dans sa mission de création de produits extraordinaires pour les innovateurs logiciels.
@@ -10,45 +11,45 @@ Vous avez la volonté de faire la différence ? Contribuez et grandissez avec un
 
 En tant que Sales Representative chez Belighted :
 
-* Vous prospectez activement nos cibles à Bruxelles et en Wallonie et les convertissez en clients durables
-* Vous convertissez nos leads issus de l’inbound marketing
-* Lors d’événements pertinents, vous représentez Belighted, vous nouez de nouvelles relations commerciales de valeur et nourrissez les actuelles
-* Vous atteignez des objectifs commerciaux ambitieux
-* Vous maintenez un reporting commercial clair, formel et à jour
-* Vous remontez les informations marketing issues de vos rencontres
+- Vous prospectez activement nos cibles à Bruxelles et en Wallonie et les convertissez en clients durables
+- Vous convertissez nos leads issus de l’inbound marketing
+- Lors d’événements pertinents, vous représentez Belighted, vous nouez de nouvelles relations commerciales de valeur et nourrissez les actuelles
+- Vous atteignez des objectifs commerciaux ambitieux
+- Vous maintenez un reporting commercial clair, formel et à jour
+- Vous remontez les informations marketing issues de vos rencontres
 
 ### Votre profil
 
-* Vous êtes fasciné·e par les possibilités actuelles et futures qu’offre le software
-* Commercial·e passionné·e, vous aimez les challenges ambitieux
-* Vous nouez facilement de nouvelles relations
-* Vous possédez une expérience commerciale réussie d'au moins 2 ans en B2B dans les PME
-* Des bonnes connexions activables dans les parcs scientifiques et/ou zonings technologiques est un plus
-* Les concepts de lean startup, agile, cloud, SaaS n’ont aucun secret pour vous
-* L’amélioration continue est une seconde nature pour vous
-* Vous portez une grande attention à l’orthographe, aux détails et à la qualité de ce que vous livrez
-* Vous parlez et rédigez parfaitement en français, couramment en anglais
-* Travailler dans un environnement en perpétuelle évolution est un moteur pour vous
-* Vous êtes titulaire d’un diplôme Bac+3
-* Vous êtes titulaire d’un permis de conduire catégorie B
-* Vous avez la capacité analytique d'identifier les besoins et les attentes
-* Vous avez de grandes capacités relationnelles et d’écoute
+- Vous êtes fasciné·e par les possibilités actuelles et futures qu’offre le software
+- Commercial·e passionné·e, vous aimez les challenges ambitieux
+- Vous nouez facilement de nouvelles relations
+- Vous possédez une expérience commerciale réussie d'au moins 2 ans en B2B dans les PME
+- Des bonnes connexions activables dans les parcs scientifiques et/ou zonings technologiques est un plus
+- Les concepts de lean startup, agile, cloud, SaaS n’ont aucun secret pour vous
+- L’amélioration continue est une seconde nature pour vous
+- Vous portez une grande attention à l’orthographe, aux détails et à la qualité de ce que vous livrez
+- Vous parlez et rédigez parfaitement en français, couramment en anglais
+- Travailler dans un environnement en perpétuelle évolution est un moteur pour vous
+- Vous êtes titulaire d’un diplôme Bac+3
+- Vous êtes titulaire d’un permis de conduire catégorie B
+- Vous avez la capacité analytique d'identifier les besoins et les attentes
+- Vous avez de grandes capacités relationnelles et d’écoute
 
 ###Ce que nous offrons
 
 ####Package salarial :
 
-* Rémunération mixte attractive en fonction des résultats
-* Avantages : chèques-repas, voiture de fonction, laptop, assurance hospitalisation, abonnement de téléphone mobile
+- Rémunération mixte attractive en fonction des résultats
+- Avantages : chèques-repas, voiture de fonction, laptop, assurance hospitalisation, abonnement de téléphone mobile
 
 ####Environnement de travail épanouissant :
 
-* Equipe dynamique, hautement qualifiée, accueillante et ouverte d’esprit
-* Horaires flexibles
-* 32 jours de congés par an (semaines de 40 heures)
-* Outils performants à disposition
-* Respect des personnes
-* Opportunités d’apprentissage et de développement
+- Equipe dynamique, hautement qualifiée, accueillante et ouverte d’esprit
+- Horaires flexibles
+- 32 jours de congés par an (semaines de 40 heures)
+- Outils performants à disposition
+- Respect des personnes
+- Opportunités d’apprentissage et de développement
 
 ###A propos de Belighted
 

@@ -1,33 +1,20 @@
 import React from "react";
 import { SectionHeader } from "../components/layout/Section";
 import Layout from "../components/layout/Layout";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql } from "gatsby";
 import LintToJob from "../components/jobs/LinkToJob";
 
-const CareersPage = ({ pageContext }) => {
+const CareersPage = ({ pageContext, data }) => {
   const {
-    allMarkdownRemark: { nodes: jobs }
-  } = useStaticQuery(graphql`
-    {
-      allMarkdownRemark(filter: { fields: { collection: { eq: "jobs" } } }) {
-        nodes {
-          frontmatter {
-            title
-            slug
-          }
-        }
-      }
-    }
-  `);
+    allMarkdownRemark: { nodes: jobs },
+    contentYaml
+  } = data;
 
   return (
     <Layout context={pageContext} page={"careers"}>
       <section className="c-section c-section--light-bg">
         <div className="o-wrapper">
-          <SectionHeader
-            title={"Join Our Team"}
-            body={"Pride in our craft. Pride in our team."}
-          />
+          <SectionHeader title={contentYaml.title} body={contentYaml.body} />
         </div>
       </section>
       <section className={"c-section"}>
@@ -47,5 +34,27 @@ const CareersPage = ({ pageContext }) => {
     </Layout>
   );
 };
+
+export const query = graphql`
+  query($lang: String!) {
+    allMarkdownRemark(
+      filter: {
+        fields: { collection: { eq: "jobs" } }
+        frontmatter: { status: { eq: "published" } }
+      }
+    ) {
+      nodes {
+        frontmatter {
+          title
+          slug
+        }
+      }
+    }
+    contentYaml(slug: { eq: "careers" }, lang: { eq: $lang }) {
+      title
+      body
+    }
+  }
+`;
 
 export default CareersPage;

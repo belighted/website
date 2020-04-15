@@ -2,6 +2,7 @@
 title: Back-end developer
 slug: back-end
 lang: en
+status: published
 ---
 
 We are searching for the right back-end developer to join Belighted in its mission to build extraordinary products for software innovators. Your work will provide the foundation for emerging new technologies, and you’ve got the drive to make a difference. Contribute to and grow with a high-caliber team that takes pride in excellence.
