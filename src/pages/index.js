@@ -17,7 +17,8 @@ export default function Homepage({
   pageContext,
   data: {
     contentYaml: { sections, cases, slides, statistics },
-    allPostsYaml: { nodes: posts }
+    allPostsYaml: { nodes: posts },
+    allTestimonialsYaml: { nodes: testimonials }
   }
 }) {
   return (
@@ -31,9 +32,15 @@ export default function Homepage({
       </Section>
       <HomeProcess section={findSection(sections, "process")} />
       <Cases section={findSection(sections, "cases")} cases={cases} />
-      <Statistics section={findSection(sections, "statistics")} statistics={statistics}/>
+      <Statistics
+        section={findSection(sections, "statistics")}
+        statistics={statistics}
+      />
       <LastScene />
-      <Clients section={findSection(sections, "clients")} />
+      <Clients
+        section={findSection(sections, "clients")}
+        testimonials={testimonials}
+      />
       <Section section={findSection(sections, "blog")} modifier="light-bg">
         <BlogpostsList nodes={posts} />
       </Section>
@@ -66,6 +73,24 @@ export const query = graphql`
 
       cases {
         ...HomeCaseItem
+      }
+    }
+    allTestimonialsYaml(filter: { lang: { eq: $lang } }) {
+      nodes {
+        slug
+        author
+        client
+        body
+        role
+        image {
+          childImageSharp {
+            # Specify the image processing specifications right in the query.
+            # Makes it trivial to update as your page's design changes.
+            fixed(width: 80, height: 80, grayscale: true) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     }
     allPostsYaml(

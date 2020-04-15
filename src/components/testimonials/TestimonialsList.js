@@ -1,34 +1,9 @@
 import React, { useState } from "react";
-import { useStaticQuery, graphql } from "gatsby";
 import GatsbyImage from "gatsby-image";
 
-const TestimonialsList = () => {
-  const {
-    allTestimonialsYaml: { nodes }
-  } = useStaticQuery(graphql`
-    {
-      allTestimonialsYaml {
-        nodes {
-          slug
-          author
-          client
-          body
-          role
-          image {
-            childImageSharp {
-              # Specify the image processing specifications right in the query.
-              # Makes it trivial to update as your page's design changes.
-              fixed(width: 80, height: 80, grayscale: true) {
-                ...GatsbyImageSharpFixed
-              }
-            }
-          }
-        }
-      }
-    }
-  `);
+const TestimonialsList = ({ testimonials }) => {
   const [currentIndex] = useState(0);
-  const node = nodes[currentIndex];
+  const node = testimonials[currentIndex];
   return (
     <ul className="o-list-bare">
       <li className="u-margin-bottom c-quote" key={node.slug}>
@@ -46,8 +21,12 @@ const TestimonialsList = () => {
             </div>
           </div>
           <p className="o-flag__body c-quote-author">
-            <span className="c-body c-body--3 c-quote-author__name">{node.author}</span>
-            <span className="c-body c-body--2 c-quote-author__role">{node.role}</span>
+            <span className="c-body c-body--3 c-quote-author__name">
+              {node.author}
+            </span>
+            <span className="c-body c-body--2 c-quote-author__role">
+              {node.role}
+            </span>
           </p>
         </div>
       </li>
