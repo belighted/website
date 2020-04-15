@@ -7,7 +7,7 @@ values:
     value: Des solutions simples et élégantes aux problèmes.
   - key: Respect
     value: Des opinions et des personnalités différentes.
-  - key: Integrity
+  - key: Integrité
     value: transparence, humilité, honnêteté.
   - key: Dévouement
     value: une passion pour notre travail et notre plaisir.
