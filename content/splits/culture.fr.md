@@ -4,18 +4,18 @@ slug: culture
 title: Notre culture
 values:
   - key: Performance
-    value: Simple, elegant solutions to problems.
+    value: Des solutions simples et élégantes aux problèmes.
   - key: Respect
-    value: For differing opinions and individuality.
+    value: Des opinions et des personnalités différentes.
   - key: Integrity
-    value: Transparency, humility, honesty.
-  - key: Drive
-    value: Passion for our work - and our play!
+    value: transparence, humilité, honnêteté.
+  - key: Dévouement
+    value: une passion pour notre travail et notre plaisir.
   - key: Excellence
-    value: Precision and accuracy, continuous growth.
+    value: Précision et justesse, croissance continue.
 ---
 
-Belighted's mission is to delight our customers by building high-performing software that improves users' quality of life.
+La mission de Belighted est de satisfaire ses clients en concevant des logiciels performants qui simplifient la vie des utilisateurs.
 
-Our core values reflect the
-P R I D E we take in our work and form the basis for our team culture:
+Nos valeurs fondamentales s'inspirent de la fierté (P R I D E) que nous éprouvons dans le cadre de notre travail et qui est la base de notre culture d'entreprise :
+
