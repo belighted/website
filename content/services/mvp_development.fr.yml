@@ -9,7 +9,8 @@ slices:
     image: null
     title: "Minimum Viable Product (MVP)"
     subtitle: "Réduisez les délais de time to market grâce à notre processus de développement rapide et agile en seulement 4 à 8 semaines. Vous obtenez une version fonctionnelle de votre produit présentant toutes les caractéristiques de base prêtes à être testées par les utilisateurs.."
-    cta: Nous contacter
+    cta:
+      title: Nous contacter
     body: null
   - id: "76ea679d-1476-4310-b217-abce902edb2b"
     type: "default"

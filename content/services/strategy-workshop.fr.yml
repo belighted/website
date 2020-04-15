@@ -1,0 +1,52 @@
+lang: "fr"
+type: "services"
+slug: "strategy-workshop"
+originalPath: "https://www.belighted.com/strategy-workshop"
+title: "Strategy Workshop"
+slices:
+  - id: "639e75d5-9681-4ee9-a0c9-875341b567bb"
+    type: "hero"
+    title: "Strategy Workshop"
+    subtitle: "<p>Vous êtes <strong>prêt à faire évoluer votre idée ou projet</strong>. Vous savez que les prochaines étapes sont cruciales. Mais <strong>comment être sûr des prochaines étapes?</strong></p>"
+    cta:
+      title: Nous contacter
+  - id: "04ae348d-af67-484c-a688-73d80a72e337"
+    type: "cols"
+    columns:
+      - body: '<h2>Pourquoi un Strategy Workshop ?</h2><p>Votre première étape consiste à définir les bases à l''aide d''une roadmap pour le développement futur du produit. C''est là qu''intervient notre Strategy Workshop.</p><h3>Orienté Business.</h3><p>Notre Strategy Workshop a été conçu pour des fondateurs non techniques. Nous avons travaillé avec des douzaines d''entrepreneurs sur le développement initial de leur produit.</p>                                                                                                            <i></i>                                                    Get Started                                                    Really Fast                                                                <a href="https://www.belighted.com/fr/evaluation-developpement-produit?hsLang=fr" target="_blank"></a>            <h3>Plan d''action détaillé.</h3><p>Vous obtenez un plan d''action détaillé décrivant les étapes nécessaires <strong>à l''exécution de votre stratégie de croissance produit</strong>.</p>'
+  - id: "c08e27b1-418d-4a3d-81cf-1229047b50d7"
+    type: "cols"
+    columns:
+      - body: '<h3>Avez-vous la bonne stratégie produit ? <a href="/fr/evaluation-developpement-produit?hsLang=fr">Discutons-en</a></h3>'
+  - id: "968a1f65-c012-4a8a-a8b0-4b5cfbfefe49"
+    type: "cols"
+    columns:
+      - body: "<h2>À quoi s'attendre ?</h2><p>Notre Strategy Workshop rassemble un maximum d'informations et d'analyses en une journée complète.</p><p>Vous travaillerez en tête-à-tête avec un chef de produit expérimenté de Belighted pendant 8 heures, dans nos bureaux ou à distance.</p>"
+  - id: "b7846271-ac45-41c7-a18d-5bc1e8aaffc9"
+    type: "cols"
+    columns:
+      - body: "<h2>Comment se préparer ?</h2><p>Soyez prêt à nous décrire les besoins du marché, vos idées et le problème que votre produit résout.</p><p>Nous nous attendons à ce que vous ayez un business plan ou un document stratégique si vous ne disposez pas encore d'un prototype ou d'un MVP.</p><p>Votre étude de marché doit déjà avoir été réalisée et vous devez disposer de données sur les besoins et la taille du marché, la concurrence, etc.</p>"
+  - id: "67b49ba3-7e33-4fae-a5fd-1e32579a755a"
+    type: "cols"
+    columns:
+      - body: "<h2>Le matin</h2><p>Dans un premier temps, nous vous écoutons présenter votre projet et le marché.</p><ul><li>Votre business modèle et les risques, le product-market fit, qui sont vos concurrents, etc.</li><li>Le positionnement de votre produit</li><li>Les décisions déjà prises pour le projet</li><li>Analyse de votre document technique, maquettes ou produit actuel</li></ul>"
+  - id: "34b3b9fa-3579-4bb8-ab36-e55548d64536"
+    type: "cols"
+    columns:
+      - body: "<h2>L'après-midi</h2><p>Nous vous guidons dans des sujets tels que :</p><ul><li>Les décisions critiques et leur impact sur vos objectifs</li><li>Les options technologiques pour différents aspects de votre produit</li><li>Votre équipe actuelle et les ressources dont vous avez besoin</li><li>L'établissement des priorités des mesures en fonction du délai et des contraintes budgétaires</li></ul>"
+  - id: "c307342e-b829-4a1f-8f33-c9cd5a4cf85e"
+    type: "cols"
+    columns:
+      - body: "<h2>Résultat</h2><p>Après avoir passé la journée ensemble, nous élaborons la roadmap de votre projet.</p><p>Dans les 5 jours ouvrables qui suivent le workshop, vous disposez d'un plan d'action solide pour le développement de votre nouveau produit, que vous le mettiez en œuvre ou non.</p>"
+  - id: "bc077067-6654-47e9-9710-d7308154903a"
+    type: "cols"
+    columns:
+      - body: "<h2>Que comprend votre plan d'action ?</h2><p>La roadmap de votre produit peut inclure :</p><ul><li>Une proposition de planning avec des étapes importantes et des fonctionnalités attendues</li><li>Des objectifs et métriques</li><li>Une estimation des coûts</li><li>Des recommandations pour les étapes suivantes</li><li>Des technologies et fournisseurs, si vous ne faites pas appel à Belighted</li></ul>"
+  - id: "c5709db5-850a-48f5-b4ba-71bfefd22e93"
+    type: "cols"
+    columns:
+      - body: '<h2>La valeur garantie</h2><p>Tout ce que nous partagerons dans notre package Strategy Workshop est conçu pour vous offrir de la valeur, que vous décidiez ou non de poursuivre notre collaboration.<br /><br />Êtes-vous prêt à établir ensemble une roadmap produit en un jour grâce à notre workshop sur la stratégie ? <strong>Cliquez sur le bouton ci-dessous pour réserver votre consultation de 20 minutes sans engagement.</strong><br /><br /><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/58980718-a34c-4004-9109-e3289bc0822b"></a></p>'
+  - id: "73b1dc41-a60f-4549-af75-4117aa6c0743"
+    type: "cols"
+    columns:
+      - body: "<h2>En savoir plus sur la<br />stratégie logicielle</h2>        <h3></h3>"

@@ -62,8 +62,8 @@ function pbcopy(data) {
   proc.stdin.end();
 }
 
-init("https://www.belighted.com/mvp-development").then(result => {
+init("https://www.belighted.com/fr/strategy-workshop").then(result => {
   const data = YAML.stringify(result);
   pbcopy(data);
-  console.log("ok");
+  console.log(data);
 });
