@@ -8,7 +8,7 @@ const TechnoLogo = ({ slug, size = "medium" }) => {
   } = useStaticQuery(graphql`
     {
       dataYaml(slug: { eq: "technologies" }) {
-        clients {
+        technologies {
           value
           image
           type

@@ -27,7 +27,7 @@ const RelatedCategory = ({ category, service }) => (
 
 const ServicePage = ({
   data: {
-    servicesYaml: post,
+    servicesYaml: service,
     categoriesYaml: category,
     allServicesYaml: services
   },
@@ -35,13 +35,13 @@ const ServicePage = ({
 }) => (
   <Layout context={pageContext} page={"service"}>
     <article>
-      {post.slices && <Slices slices={post.slices} />}
+      {service.slices && <Slices slices={service.slices} />}
 
       {category && (
         <RelatedCategory
           category={category}
           services={services}
-          service={post}
+          service={service}
         />
       )}
     </article>
