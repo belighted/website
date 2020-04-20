@@ -57,8 +57,8 @@ const CaseArticle = ({
 );
 
 export const query = graphql`
-  query($slug: String!) {
-    casesYaml(slug: { eq: $slug }) {
+  query($slug: String!, $lang: String!) {
+    casesYaml(slug: { eq: $slug }, lang: { eq: $lang }) {
       slug
       title
       about
