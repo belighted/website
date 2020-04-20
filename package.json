@@ -46,7 +46,9 @@
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-helmet": "^5.2.1",
+    "recursive-readdir": "^2.2.2",
     "sanitize-html": "^1.22.1",
+    "turndown": "^6.0.0",
     "uuid": "^7.0.3",
     "xml2js": "^0.4.23",
     "yaml": "^1.8.3"
