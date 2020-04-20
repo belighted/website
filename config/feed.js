@@ -15,8 +15,8 @@ const config = {
         `,
     feeds: [
       {
-        serialize: ({ query: { site, allPostsYaml } }) => {
-          return allPostsYaml.nodes.map(edge => {
+        serialize: ({ query: { site, posts } }) => {
+          return posts.nodes.map(({ frontmatter: edge }) => {
             return Object.assign({}, edge, {
               description: edge.description,
               date: edge.date,
@@ -28,19 +28,27 @@ const config = {
         },
         query: `
           {
-            allPostsYaml(sort: { order: DESC, fields: [date] }) {
+            posts: allMarkdownRemark(
+              filter: {
+                fields: { collection: { eq: "articles" } }
+              }
+              sort: { order: DESC, fields: frontmatter___date }
+            ) {
               nodes {
-                slug
-                title
-                date
-                description
+                frontmatter {
+                  slug
+                  title
+                  date
+                  description
+                }
               }
             }
           }
         `,
         output: "/blog/rss.xml",
         title: "Belighted blog",
-        description: "The latest in product development, product design, lean startup and SaaS."
+        description:
+          "The latest in product development, product design, lean startup and SaaS."
       }
     ]
   }
