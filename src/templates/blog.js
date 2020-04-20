@@ -8,7 +8,12 @@ import TagList from "../components/blog/TagList";
 
 //TODO I18n The belighted blog
 
-const BlogArticle = ({ data: { postsYaml: post }, pageContext }) => (
+const BlogArticle = ({
+  data: {
+    post: { frontmatter: post, html }
+  },
+  pageContext
+}) => (
   <Layout context={pageContext} page={"blog"}>
     <div className="o-wrapper">
       <div className="l-content-sidebar">
@@ -22,7 +27,7 @@ const BlogArticle = ({ data: { postsYaml: post }, pageContext }) => (
           </p>
           <div
             className="c-wysiwyg"
-            dangerouslySetInnerHTML={{ __html: post.body }}
+            dangerouslySetInnerHTML={{ __html: html }}
           />
           <BlogpostTags post={post} />
         </article>
@@ -36,23 +41,25 @@ const BlogArticle = ({ data: { postsYaml: post }, pageContext }) => (
 
 export const query = graphql`
   query($slug: String!) {
-    postsYaml(slug: { eq: $slug }) {
-      slug
-      lang
-      title
-      author
-      date
-      body
-      tags {
-        label
-        value
-      }
-      image {
-        childImageSharp {
-          # Specify the image processing specifications right in the query.
-          # Makes it trivial to update as your page's design changes.
-          fixed(width: 160, height: 160) {
-            ...GatsbyImageSharpFixed
+    post: markdownRemark(frontmatter: { slug: { eq: $slug } }) {
+      html
+      frontmatter {
+        slug
+        lang
+        title
+        author
+        date
+        tags {
+          label
+          value
+        }
+        image {
+          childImageSharp {
+            # Specify the image processing specifications right in the query.
+            # Makes it trivial to update as your page's design changes.
+            fixed(width: 160, height: 160) {
+              ...GatsbyImageSharpFixed
+            }
           }
         }
       }

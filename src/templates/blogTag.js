@@ -6,16 +6,15 @@ import LocalizedLink from "../components/links/LocalizedLink";
 
 const BlogTag = ({
   data: {
-    allPostsYaml: { nodes }
+    posts: { nodes }
   },
   pageContext
 }) => (
   <Layout context={pageContext} page={"blog"}>
     <section className={"o-wrapper c-section"}>
       <h1 className="c-heading c-heading--1">
-        <LocalizedLink to={`/blog`}>
-          Belighted blog
-        </LocalizedLink>{" >  "}
+        <LocalizedLink to={`/blog`}>Belighted blog</LocalizedLink>
+        {" >  "}
         {pageContext.title}
       </h1>
       <BlogList nodes={nodes} />
@@ -25,10 +24,13 @@ const BlogTag = ({
 
 export const query = graphql`
   query MyQuery($tag: String!, $lang: String!) {
-    allPostsYaml(
+    posts: allMarkdownRemark(
       filter: {
-        lang: { eq: $lang }
-        tags: { elemMatch: { value: { eq: $tag } } }
+        fields: { collection: { eq: "articles" } }
+        frontmatter: {
+          lang: { eq: $lang }
+          tags: { elemMatch: { value: { eq: $tag } } }
+        }
       }
     ) {
       nodes {

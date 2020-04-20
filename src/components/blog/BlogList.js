@@ -10,15 +10,16 @@ export default function BlogList({ nodes }) {
   return (
     <section>
       <ul className="o-list-bare">
-        {nodes.map(post => (
+        {nodes.map(({ frontmatter: post }) => (
           <li key={post.slug}>
             <div className="o-media u-margin-bottom">
               <div className="o-media__img">
                 {post.image && post.image.childImageSharp && (
                   <Img fixed={post.image.childImageSharp.fixed} />
                 )}
-                {(!post.image ||
-                  !post.image.childImageSharp) && <div>{post.image}</div>}
+                {(!post.image || !post.image.childImageSharp) && (
+                  <div>{post.image}</div>
+                )}
               </div>
               <div className="o-media__body">
                 <div className="u-margin-bottom">
@@ -51,23 +52,25 @@ export default function BlogList({ nodes }) {
 }
 
 export const blogPostItem = graphql`
-  fragment BlogPostItem on PostsYaml {
-    slug
-    lang
-    title
-    author
-    date
-    description
-    tags {
-      label
-      value
-    }
-    image {
-      childImageSharp {
-        # Specify the image processing specifications right in the query.
-        # Makes it trivial to update as your page's design changes.
-        fixed(width: 240, height: 160) {
-          ...GatsbyImageSharpFixed
+  fragment BlogPostItem on MarkdownRemark {
+    frontmatter {
+      slug
+      lang
+      title
+      author
+      date
+      description
+      tags {
+        label
+        value
+      }
+      image {
+        childImageSharp {
+          # Specify the image processing specifications right in the query.
+          # Makes it trivial to update as your page's design changes.
+          fixed(width: 240, height: 160) {
+            ...GatsbyImageSharpFixed
+          }
         }
       }
     }

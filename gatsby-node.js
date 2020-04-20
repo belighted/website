@@ -3,11 +3,7 @@ const locales = require("./src/constants/locales");
 const _ = require("lodash");
 const { createRemoteFileNode } = require("gatsby-source-filesystem");
 
-exports.onCreateNode = async ({
-  node,
-  actions,
-  getNode,
-}) => {
+exports.onCreateNode = async ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
   if (_.get(node, "internal.type") === `MarkdownRemark`) {
@@ -61,11 +57,11 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const {
     data: {
-      allPostsYaml: { nodes: posts },
       allServicesYaml: { nodes: services },
       allCasesYaml: { nodes: cases },
       allResourcesYaml: { nodes: resources },
-      jobs: { nodes: jobs }
+      jobs: { nodes: jobs },
+      articles: { nodes: articles }
     }
   } = await graphql(`
     {
@@ -74,16 +70,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
           slug
         }
       }
-      allPostsYaml {
-        nodes {
-          slug
-          lang
-          tags {
-            value
-            label
-          }
-        }
-      }
+
       allResourcesYaml {
         nodes {
           slug
@@ -105,9 +92,23 @@ module.exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      articles: allMarkdownRemark(
+        filter: { fields: { collection: { eq: "articles" } } }
+      ) {
+        nodes {
+          frontmatter {
+            slug
+            lang
+            tags {
+              value
+              label
+            }
+          }
+        }
+      }
     }
   `);
-
+  const posts = articles.map(a => a.frontmatter);
   let tags = [];
   posts.forEach(post => {
     post.tags.forEach(tag => tags.push(tag));
@@ -144,7 +145,10 @@ module.exports.createPages = async ({ graphql, actions }) => {
     const numPages = Math.ceil(postsInThisLang.length / postsPerPage);
     Array.from({ length: numPages }).forEach((_, i) => {
       createPage({
-        path: i === 0 ? `${locales[lang].path}/blog` : `${locales[lang].path}/blog/${i + 1}`,
+        path:
+          i === 0
+            ? `${locales[lang].path}/blog`
+            : `${locales[lang].path}/blog/${i + 1}`,
         component: path.resolve("./src/templates/blogList.js"),
         context: {
           limit: postsPerPage,

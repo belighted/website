@@ -6,7 +6,7 @@ import Pagination from "../components/blog/Pagination";
 
 const BlogListPage = ({
   data: {
-    allPostsYaml: { nodes }
+    posts: { nodes }
   },
   pageContext
 }) => {
@@ -24,7 +24,14 @@ const BlogListPage = ({
 
 export const query = graphql`
   query BlogListPageQuery($lang: String!, $skip: Int!, $limit: Int!) {
-    allPostsYaml(filter: { lang: { eq: $lang } }, limit: $limit, skip: $skip) {
+    posts: allMarkdownRemark(
+      filter: {
+        frontmatter: { lang: { eq: $lang } }
+        fields: { collection: { eq: "articles" } }
+      }
+      limit: $limit
+      skip: $skip
+    ) {
       nodes {
         ...BlogPostItem
       }

@@ -17,7 +17,7 @@ export default function Homepage({
   pageContext,
   data: {
     contentYaml: { sections, cases, slides, statistics },
-    allPostsYaml: { nodes: posts },
+    posts: { nodes: posts },
     allTestimonialsYaml: { nodes: testimonials }
   }
 }) {
@@ -93,14 +93,19 @@ export const query = graphql`
         }
       }
     }
-    allPostsYaml(
+    posts: allMarkdownRemark(
       limit: 3
-      sort: { fields: [date], order: [DESC] }
-      filter: { lang: { eq: $lang } }
+      sort: { fields: frontmatter___date }
+      filter: { 
+          frontmatter: { lang: { eq: $lang } },
+          fields: {collection: {eq: "articles"}}
+      }
     ) {
       nodes {
-        slug
-        title
+        frontmatter {
+          slug
+          title
+        }
       }
     }
   }

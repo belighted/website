@@ -4,22 +4,27 @@ import LinkToTag from "./LinkToTag";
 
 const TagList = () => {
   const {
-    allPostsYaml: { nodes: posts }
+    posts: { nodes }
   } = useStaticQuery(graphql`
     {
-      allPostsYaml {
+      posts: allMarkdownRemark(
+        filter: { fields: { collection: { eq: "articles" } } }
+      ) {
         nodes {
-          slug
-          lang
-          tags {
-            value
-            label
+          frontmatter {
+            slug
+            lang
+            tags {
+              value
+              label
+            }
           }
         }
       }
     }
   `);
 
+  const posts = nodes.map(n => n.frontmatter);
   let tags = {};
   posts.forEach(post => {
     post.tags.forEach(tag => (tags[tag.value] = tag.label));
@@ -28,7 +33,7 @@ const TagList = () => {
   return (
     <ul>
       {Object.keys(tags).map(tag => (
-        <li>
+        <li key={tag}>
           <LinkToTag slug={tag}>{tags[tag]}</LinkToTag>
         </li>
       ))}
