@@ -29,15 +29,15 @@ slides:
       - title: Estimer mon projet
         link: /estimate-project
       - title: Appel Consultatif
-        link: /estimate
+        link: /services/product-development-consultation
         modifier: outline-default
   - title: Agence de développement SaaS.
     body: Nous aidons les start-ups, les scale-ups et les éditeurs de logiciels à proposer à leurs clients un produit révolutionnaire et convivial.
     buttons:
       - title: Estimer mon projet
-        link: /estimate
+        link: /estimate-project
       - title: Appel Consultatif
-        link: /estimate
+        link: /services/product-development-consultation
         modifier: outline-default
 cases:
   - slug: rights-up

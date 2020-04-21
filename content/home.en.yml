@@ -29,7 +29,7 @@ slides:
       - title: Estimate project
         link: /estimate-project
       - title: Book a call
-        link: /
+        link: /services/product-development-consultation
         modifier: outline-default
   - title: Better Software Products Faster.
     body:
@@ -37,9 +37,10 @@ slides:
       your users.
     buttons:
       - title: Estimate project
-        link: /
+        link: /estimate-project
       - title: Book a call
-        link: /
+        link: /services/product-development-consultation
+        modifier: outline-default
 cases:
   - slug: rights-up
     title: "Rights’Up gets off the ground with Belighted"
