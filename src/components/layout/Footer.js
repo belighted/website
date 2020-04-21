@@ -65,11 +65,13 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div>
-            <LocalizedHubspotForm
-              en={"e33b8c5c-e1a1-472e-b521-0d87274e106f"}
-              fr={"b7dc0d8b-fcf2-4d60-befa-0f30aaf1701d"}
-            />
+          <div className="o-box o-box--light-bg">
+            <div>
+              <LocalizedHubspotForm
+                en={"e33b8c5c-e1a1-472e-b521-0d87274e106f"}
+                fr={"b7dc0d8b-fcf2-4d60-befa-0f30aaf1701d"}
+              />
+            </div>
           </div>
         </div>
       </div>

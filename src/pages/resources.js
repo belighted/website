@@ -9,7 +9,8 @@ const ResourcesPage = ({
   pageContext,
   data: {
     contentYaml: { title, body },
-    allResourcesYaml: { nodes: resources }
+    allResourcesYaml: { nodes: resources },
+    customConsultation
   }
 }) => {
   return (
@@ -17,7 +18,7 @@ const ResourcesPage = ({
       <section className="o-wrapper c-section">
         <SectionHeader title={title} body={body} />
         <ResourcesList resources={resources} />
-        <CustomConsultation />
+        <CustomConsultation customConsultation={customConsultation} />
       </section>
     </Layout>
   );
@@ -27,6 +28,18 @@ export default ResourcesPage;
 
 export const query = graphql`
   query($lang: String!) {
+    customConsultation: markdownRemark(
+      frontmatter: { slug: { eq: "custom-consultation" }, lang: { eq: $lang } }
+    ) {
+      frontmatter {
+        title
+        cta {
+          title
+          link
+        }
+      }
+      html
+    }
     contentYaml(slug: { eq: "resources" }, lang: { eq: $lang }) {
       title
       body

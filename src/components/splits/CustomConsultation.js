@@ -1,29 +1,12 @@
 import React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 import LocalizedLink from "../links/LocalizedLink";
 
-const CustomConsultation = () => {
-  const {
-    markdownRemark: {
-      frontmatter: { title, cta },
-      html
-    }
-  } = useStaticQuery(graphql`
-    {
-      markdownRemark(
-        frontmatter: { slug: { eq: "custom-consultation" }, lang: { eq: "en" } }
-      ) {
-        frontmatter {
-          title
-          cta {
-            title
-            link
-          }
-        }
-        html
-      }
-    }
-  `);
+const CustomConsultation = ({
+  customConsultation: {
+    frontmatter: { title, cta },
+    html
+  }
+}) => {
   return (
     <div className="c-section c-section--light-bg">
       <div className="o-wrapper">
