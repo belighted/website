@@ -19,6 +19,7 @@ module.exports = {
     "gatsby-transformer-remark",
     "gatsby-plugin-react-helmet",
     "gatsby-transformer-yaml",
+    "gatsby-plugin-mdx",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -38,6 +39,13 @@ module.exports = {
       options: {
         name: "resources",
         path: `${__dirname}/content/resources`
+      }
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "landings",
+        path: `${__dirname}/content/landings`
       }
     },
     {

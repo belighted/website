@@ -16,6 +16,8 @@
     "forestry-preview": "gatsby develop -p 8080 -H 0.0.0.0"
   },
   "dependencies": {
+    "@mdx-js/mdx": "^1.5.8",
+    "@mdx-js/react": "^1.5.8",
     "axios": "^0.19.2",
     "buttono": "^1.0.2",
     "classnames": "^2.2.6",
@@ -23,6 +25,7 @@
     "gatsby": "^2.19.41",
     "gatsby-image": "^2.3.0",
     "gatsby-plugin-feed": "^2.4.1",
+    "gatsby-plugin-mdx": "^1.1.9",
     "gatsby-plugin-react-helmet": "^3.1.23",
     "gatsby-plugin-react-svg": "^3.0.0",
     "gatsby-plugin-sass": "^2.1.30",

@@ -1,12 +1,12 @@
 const path = require("path");
 const locales = require("./src/constants/locales");
 const _ = require("lodash");
-const { createRemoteFileNode } = require("gatsby-source-filesystem");
+const createLandingPages = require("./gatsby/createLandingPages");
 
 exports.onCreateNode = async ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
 
-  if (_.get(node, "internal.type") === `MarkdownRemark`) {
+  if (["MarkdownRemark", "Mdx"].includes(_.get(node, "internal.type"))) {
     // Get the parent node
     const parent = getNode(_.get(node, "parent"));
 
@@ -214,4 +214,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
       });
     });
   });
+
+  await createLandingPages({ graphql, actions });
 };
