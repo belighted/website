@@ -68,6 +68,7 @@ export const query = graphql`
         buttons {
           title
           modifier
+          link
         }
       }
 
@@ -96,9 +97,9 @@ export const query = graphql`
     posts: allMarkdownRemark(
       limit: 3
       sort: { fields: frontmatter___date }
-      filter: { 
-          frontmatter: { lang: { eq: $lang } },
-          fields: {collection: {eq: "articles"}}
+      filter: {
+        frontmatter: { lang: { eq: $lang } }
+        fields: { collection: { eq: "articles" } }
       }
     ) {
       nodes {

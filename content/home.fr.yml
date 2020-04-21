@@ -27,7 +27,7 @@ slides:
     body: "Développons ensemble un logiciel qui dynamisera votre entreprise et séduira vos utilisateurs."
     buttons:
       - title: Estimer mon projet
-        link: /estimate
+        link: /estimate-project
       - title: Appel Consultatif
         link: /estimate
         modifier: outline-default

@@ -14,7 +14,9 @@ const Landing = ({
 }) => {
   return (
     <Layout context={pageContext} page={slug}>
-      <MDXRenderer>{body}</MDXRenderer>
+      <div className="o-wrapper c-wysiwyg">
+        <MDXRenderer>{body}</MDXRenderer>
+      </div>
     </Layout>
   );
 };

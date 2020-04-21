@@ -27,7 +27,7 @@ slides:
       digital product loved by their clients "
     buttons:
       - title: Estimate project
-        link: /
+        link: /estimate-project
       - title: Book a call
         link: /
         modifier: outline-default

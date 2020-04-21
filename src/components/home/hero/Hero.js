@@ -2,6 +2,7 @@ import React from "react";
 //import { graphql, useStaticQuery } from "gatsby";
 //import Img from "gatsby-image";
 import Button from "../../buttons/Button";
+import LocalizedLink from "../../links/LocalizedLink";
 
 const HomeHero = ({ slides }) => {
   /*
@@ -41,7 +42,9 @@ const HomeHero = ({ slides }) => {
             <p className={"c-body c-body--3"}>{slide.body}</p>
             {slide.buttons.map(button => (
               <p key={button.title}>
-                <Button modifier={"primary"}>{button.title}</Button>
+                <LocalizedLink to={button.link}>
+                  <Button modifier={"primary"}>{button.title}</Button>
+                </LocalizedLink>
               </p>
             ))}
           </div>
