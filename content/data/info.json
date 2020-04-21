@@ -2,6 +2,9 @@
   "description": "belighted.com",
   "cta": "A CTA",
   "site_url": "https://beligted.netlify.com",
+  "hubspot": {
+    "portal_id": 1684659
+  },
   "contact": {
     "email": "info@belighted.com",
     "social": [

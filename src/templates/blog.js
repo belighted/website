@@ -5,6 +5,7 @@ import moment from "moment";
 import BlogpostTags from "../components/blog/components/BlogpostTags";
 import LocalizedLink from "../components/links/LocalizedLink";
 import TagList from "../components/blog/TagList";
+import LocalizedHubspotForm from "../components/forms/LocalizedHubspotForm";
 
 //TODO I18n The belighted blog
 
@@ -33,6 +34,10 @@ const BlogArticle = ({
         </article>
         <aside className="l-content-sidebar__sidebar">
           <TagList />
+          <LocalizedHubspotForm
+            en={"28c0162d-16b7-4003-923b-0aaf49d4f966"}
+            fr={"feeae27a-b6d8-46f8-b2a1-66e0ae96c1ad"}
+          />
         </aside>
       </div>
     </div>

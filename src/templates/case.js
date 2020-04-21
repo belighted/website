@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
 import LocalizedLink from "../components/links/LocalizedLink";
+import LocalizedHubspotForm from "../components/forms/LocalizedHubspotForm";
 
 const Testimonial = ({ testimonial: { body, author, role } }) => {
   return (
@@ -53,6 +54,12 @@ const CaseArticle = ({
         dangerouslySetInnerHTML={{ __html: post.results }}
       ></div>
     </article>
+    <aside>
+      <LocalizedHubspotForm
+        fr={"fada6d0f-00d7-4829-a262-608aed248f92"}
+        en={"b7e184b3-302a-4d5f-8392-0669402d45d9"}
+      />
+    </aside>
   </Layout>
 );
 

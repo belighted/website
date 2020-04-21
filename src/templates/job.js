@@ -2,6 +2,7 @@ import React from "react";
 import { graphql, Link } from "gatsby";
 import Layout from "../components/layout/Layout";
 import JobsList from "../components/jobs/JobsList";
+import LocalizedHubspotForm from "../components/forms/LocalizedHubspotForm";
 
 //TODO I18n View all of our openings
 
@@ -29,6 +30,12 @@ const ServicePage = ({
           </div>
         </div>
       </article>
+      <aside>
+        <LocalizedHubspotForm
+          fr={"d0af5be0-93c5-4c23-91f1-8d36f12a94ff"}
+          en={"ba833c67-22e2-4628-b037-8b70ac75e8b7"}
+        />
+      </aside>
     </section>
   </Layout>
 );

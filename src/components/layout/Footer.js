@@ -4,17 +4,18 @@ import Social from "./components/footer/Social";
 import LinkToService from "../services/LinkToService";
 import LinkToResource from "../resources/LinkToResource";
 import LocalizedLink from "../links/LocalizedLink";
+import LocalizedHubspotForm from "../forms/LocalizedHubspotForm";
 
 const Footer = () => {
   return (
     <div className="c-footer-nav u-padding-vertical-large u-padding-horizontal">
       <div className="o-wrapper">
-        <div className="l-introcontent">
-          <div className="l-introcontent__intro">
+        <div className="l-footer">
+          <div className="l-footer__credentials">
             <Contact />
             <Social />
           </div>
-          <div className="l-introcontent__main">
+          <div className="l-footer__links">
             <ul>
               <li>
                 <LinkToService slug={"code-review"}>Code review</LinkToService>
@@ -63,6 +64,12 @@ const Footer = () => {
                 </LocalizedLink>
               </li>
             </ul>
+          </div>
+          <div>
+            <LocalizedHubspotForm
+              en={"e33b8c5c-e1a1-472e-b521-0d87274e106f"}
+              fr={"b7dc0d8b-fcf2-4d60-befa-0f30aaf1701d"}
+            />
           </div>
         </div>
       </div>
