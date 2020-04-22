@@ -2,8 +2,6 @@ import React  from "react";
 import GatsbyImage from "gatsby-image";
 
 const TestimonialsList = ({ testimonials }) => {
-  //const [currentIndex] = useState(0);
-  //const node = testimonials[currentIndex];
   return (
     <ul className="o-list-bare">
       {testimonials.map(node => (

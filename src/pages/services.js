@@ -9,12 +9,14 @@ import HeroServices from "../components/services/hero/HeroServices";
 import LeadingBrands from "../components/splits/LeadingBrands";
 import HubspotForm from "../components/forms/HubspotForm";
 import CustomConsultation from "../components/splits/CustomConsultation";
+import TestimonialsList from "../components/testimonials/TestimonialsList";
 
 const ServicesPage = ({
   pageContext,
   data: {
     contentYaml: { sections, formId },
-    customConsultation
+    customConsultation,
+    allTestimonialsYaml: { nodes: testimonials }
   }
 }) => {
   return (
@@ -33,6 +35,10 @@ const ServicesPage = ({
       </Section>
       <Section section={findSection(sections, "technologies")}>
         <TechnologiesList />
+      </Section>
+
+      <Section section={findSection(sections, "testimonials")}>
+        <TestimonialsList testimonials={testimonials} />
       </Section>
 
       <section className="c-section">
@@ -60,6 +66,24 @@ export const query = graphql`
         }
       }
       html
+    }
+    allTestimonialsYaml(filter: { lang: { eq: $lang } }) {
+      nodes {
+        slug
+        author
+        client
+        body
+        role
+        image {
+          childImageSharp {
+            # Specify the image processing specifications right in the query.
+            # Makes it trivial to update as your page's design changes.
+            fixed(width: 80, height: 80, grayscale: true) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
+      }
     }
     contentYaml(slug: { eq: "services" }, lang: { eq: $lang }) {
       title

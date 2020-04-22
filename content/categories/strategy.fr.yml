@@ -11,3 +11,11 @@ services:
   - prototyping
   - ux-review
   - user-testing
+list:
+  - Stratégie produit
+  - Design produit
+  - Design Sprint
+  - Prototypes
+  - Audit UX
+  - Tests Utilisateurs
+  - Revue de code

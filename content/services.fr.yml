@@ -15,3 +15,5 @@ sections:
   - slug: technologies
     title: technologies
     body: Du front-end au back-end en passant par l'infrastructure.
+  - slug: testimonials
+    title: Ce qu'ils pensent de Belighted

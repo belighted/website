@@ -1,14 +1,12 @@
 import React, { useContext } from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import LinkToService from "../services/LinkToService";
 import LinkToCategory from "./LinkToCategory";
 import { I18nContext } from "../i18n/I18n";
 
 const CategoriesList = ({ showServices }) => {
   const lang = useContext(I18nContext);
   const {
-    allCategoriesYaml: { nodes: categories },
-    allServicesYaml: { nodes: services }
+    allCategoriesYaml: { nodes: categories }
   } = useStaticQuery(graphql`
     {
       allCategoriesYaml(sort: { fields: order }) {
@@ -17,14 +15,7 @@ const CategoriesList = ({ showServices }) => {
           slug
           title
           short_description
-          services
-        }
-      }
-      allServicesYaml {
-        nodes {
-          lang
-          slug
-          title
+          list
         }
       }
     }
@@ -55,15 +46,9 @@ const CategoriesList = ({ showServices }) => {
 
             {showServices && (
               <ul>
-                {node.services
-                  .filter(service => service.lang === lang)
-                  .map(slug => (
-                    <li key={slug}>
-                      <LinkToService slug={slug}>
-                        {services.find(service => service.slug === slug).title}
-                      </LinkToService>
-                    </li>
-                  ))}
+                {node.list.map(slug => (
+                  <li key={slug}>{slug}</li>
+                ))}
               </ul>
             )}
           </li>
