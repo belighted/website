@@ -3,7 +3,6 @@ const locales = require("../src/constants/locales");
 
 module.exports = async ({ graphql: fetch, actions }) => {
   const { createPage } = actions;
-
   const component = path.resolve("./src/templates/job.js");
 
   const {
