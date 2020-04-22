@@ -1,8 +1,11 @@
 lang: fr
-slug: strategy_workshop
+order: 1
+slug: strategy-workshop
 title: Strategy Workshop
 subtitle: Exposez votre idée
 intro: Analysons votre proposition de valeur, le marché cible et le business model pour mettre sur pied un plan produit adapté à vos objectifs.
 description: Let’s discuss your value proposition, target market and business model and come up together with a product plan you need to achieve your goals.
 objective: Stratégie produit
 duration: 1 jour
+button:
+  label: En savoir plus

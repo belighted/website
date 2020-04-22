@@ -3,7 +3,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import LinkToService from "../services/LinkToService";
 import { I18nContext } from "../i18n/I18n";
 
-const ProcessesList = () => {
+const HomeProcessesList = () => {
   const {
     allProcessYaml: { nodes }
   } = useStaticQuery(graphql`
@@ -19,7 +19,6 @@ const ProcessesList = () => {
           }
           objective
           duration
-          description
         }
       }
     }
@@ -40,10 +39,7 @@ const ProcessesList = () => {
               <br />
               {node.duration}
             </h5>
-            <div className="u-margin-bottom">
-              <strong>{node.intro}</strong>
-            </div>
-            <div>{node.description}</div>
+            <div>{node.intro}</div>
 
             <p className={"u-margin-top"}>
               <LinkToService slug={node.slug}>
@@ -56,4 +52,4 @@ const ProcessesList = () => {
   );
 };
 
-export default ProcessesList;
+export default HomeProcessesList;

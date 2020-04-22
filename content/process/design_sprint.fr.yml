@@ -1,8 +1,11 @@
 lang: fr
-slug: design_sprint
+order: 2
+slug: design-sprint
 title: Design Sprint
 subtitle: Testez votre idée
 intro: Abordons l’expérience utilisateur (UX) en passant une semaine intensive à définir et concevoir ensemble un prototype cliquable de votre produit validé par le client.
 description: Let’s spend one intense week during which we will define and design (UX) together a customer-validated clickable prototype of your product.
 objective: Prototype cliquable
 duration: 1 semaine
+button:
+  label : En savoir plus

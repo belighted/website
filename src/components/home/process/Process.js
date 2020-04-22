@@ -1,6 +1,6 @@
 import React from "react";
 import { SectionHeader } from "../../layout/Section";
-import ProcessesList from "../../processes/ProcessesList";
+import HomeProcessesList from "../../processes/HomeProcessesList";
 
 const HomeProcess = ({ section: { title, body } }) => {
   return (
@@ -11,7 +11,7 @@ const HomeProcess = ({ section: { title, body } }) => {
             <SectionHeader title={title} body={body} />
           </div>
           <div className="l-introcontent__main">
-            <ProcessesList />
+            <HomeProcessesList />
           </div>
         </div>
       </div>

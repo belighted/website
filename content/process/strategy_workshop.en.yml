@@ -1,8 +1,11 @@
 lang: en
-slug: strategy_workshop
+order: 1
+slug: strategy-workshop
 title: Strategy Workshop
 subtitle: Challenge your idea
-intro: Passez d'une idée innovante à la roadmap produit en <strong>1 jour</strong> seulement. Vous obtenez un plan d'action détaillé décrivant les étapes nécessaires à l'exécution de votre stratégie de croissance.
-description: Abordons l’expérience utilisateur (UX) en passant une semaine intensive à définir et concevoir ensemble un prototype cliquable de votre produit validé par le client.
+intro: Go from innovative idea to product roadmap - in just 1 Day. The result is a detailed action plan outlining the steps required to execute your product growth strategy. plan you need to achieve your goals.
+description: Let’s discuss your value proposition, target market and business model and come up together with a product plan you need to achieve your goals.
 objective: Product roadmap
-duration: 1 journée
+duration: 1 day
+button:
+  label : Learn more

@@ -845,6 +845,7 @@ type PageInfo {
 }
 
 type ProcessYaml implements Node {
+    button: ProcessYamlButton
     children: [Node!]!
     description: String
     duration: String
@@ -853,10 +854,16 @@ type ProcessYaml implements Node {
     intro: String
     lang: String
     objective: String
+    order: Int
     parent: Node
     slug: String
     subtitle: String
     title: String
+}
+
+type ProcessYamlButton {
+    label: String
+    modifier: String
 }
 
 type ProcessYamlConnection {
@@ -910,7 +917,7 @@ type Query {
     imageSharp(children: NodeFilterListInput, fixed: ImageSharpFixedFilterInput, fluid: ImageSharpFluidFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, original: ImageSharpOriginalFilterInput, parent: NodeFilterInput, resize: ImageSharpResizeFilterInput, resolutions: ImageSharpResolutionsFilterInput, sizes: ImageSharpSizesFilterInput): ImageSharp
     markdownRemark(children: NodeFilterListInput, excerpt: StringQueryOperatorInput, excerptAst: JSONQueryOperatorInput, fields: MarkdownRemarkFieldsFilterInput, fileAbsolutePath: StringQueryOperatorInput, frontmatter: MarkdownRemarkFrontmatterFilterInput, headings: MarkdownHeadingFilterListInput, html: StringQueryOperatorInput, htmlAst: JSONQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, rawMarkdownBody: StringQueryOperatorInput, tableOfContents: StringQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MarkdownWordCountFilterInput): MarkdownRemark
     mdx(body: StringQueryOperatorInput, children: NodeFilterListInput, excerpt: StringQueryOperatorInput, fields: MdxFieldsFilterInput, fileAbsolutePath: StringQueryOperatorInput, frontmatter: MdxFrontmatterFilterInput, headings: MdxHeadingMdxFilterListInput, html: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, mdxAST: JSONQueryOperatorInput, parent: NodeFilterInput, rawBody: StringQueryOperatorInput, tableOfContents: JSONQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MdxWordCountFilterInput): Mdx
-    processYaml(children: NodeFilterListInput, description: StringQueryOperatorInput, duration: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, intro: StringQueryOperatorInput, lang: StringQueryOperatorInput, objective: StringQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, subtitle: StringQueryOperatorInput, title: StringQueryOperatorInput): ProcessYaml
+    processYaml(button: ProcessYamlButtonFilterInput, children: NodeFilterListInput, description: StringQueryOperatorInput, duration: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, intro: StringQueryOperatorInput, lang: StringQueryOperatorInput, objective: StringQueryOperatorInput, order: IntQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, subtitle: StringQueryOperatorInput, title: StringQueryOperatorInput): ProcessYaml
     resourcesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, image: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, slices: ResourcesYamlSlicesFilterListInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput, type: StringQueryOperatorInput): ResourcesYaml
     servicesYaml(children: NodeFilterListInput, formId: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, layout: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, slices: ServicesYamlSlicesFilterListInput, slug: StringQueryOperatorInput, subtitle: StringQueryOperatorInput, title: StringQueryOperatorInput, type: StringQueryOperatorInput): ServicesYaml
     site(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, host: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, port: IntQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput): Site
@@ -1240,26 +1247,16 @@ type SitePluginPackageJsonPeerDependencies {
 }
 
 type SitePluginPluginOptions {
-    backgroundColor: String
     defaultQuality: Int
-    disableBgImage: Boolean
-    disableBgImageOnAlpha: Boolean
     feeds: [SitePluginPluginOptionsFeeds]
     linkImagesToOriginal: Boolean
-    loading: String
-    markdownCaptions: Boolean
     maxWidth: Int
     name: String
     path: String
     pathCheck: Boolean
-    pathPrefix: String
     plugins: [SitePluginPluginOptionsPlugins]
     query: String
     rule: SitePluginPluginOptionsRule
-    showCaptions: Boolean
-    tracedSVG: Boolean
-    withWebp: Boolean
-    wrapperStyle: String
 }
 
 type SitePluginPluginOptionsFeeds {
@@ -1281,18 +1278,8 @@ type SitePluginPluginOptionsPlugins {
 }
 
 type SitePluginPluginOptionsPluginsPluginOptions {
-    backgroundColor: String
-    disableBgImage: Boolean
-    disableBgImageOnAlpha: Boolean
     linkImagesToOriginal: Boolean
-    loading: String
-    markdownCaptions: Boolean
     maxWidth: Int
-    pathPrefix: String
-    showCaptions: Boolean
-    tracedSVG: Boolean
-    withWebp: Boolean
-    wrapperStyle: String
 }
 
 type SitePluginPluginOptionsRule {
@@ -1707,6 +1694,7 @@ enum ContentYamlFieldsEnum {
     history___image___childProcessYaml___intro
     history___image___childProcessYaml___lang
     history___image___childProcessYaml___objective
+    history___image___childProcessYaml___order
     history___image___childProcessYaml___slug
     history___image___childProcessYaml___subtitle
     history___image___childProcessYaml___title
@@ -1909,6 +1897,7 @@ enum ContentYamlFieldsEnum {
     pride___image___childProcessYaml___intro
     pride___image___childProcessYaml___lang
     pride___image___childProcessYaml___objective
+    pride___image___childProcessYaml___order
     pride___image___childProcessYaml___slug
     pride___image___childProcessYaml___subtitle
     pride___image___childProcessYaml___title
@@ -2083,6 +2072,7 @@ enum ContentYamlFieldsEnum {
     team___image___childProcessYaml___intro
     team___image___childProcessYaml___lang
     team___image___childProcessYaml___objective
+    team___image___childProcessYaml___order
     team___image___childProcessYaml___slug
     team___image___childProcessYaml___subtitle
     team___image___childProcessYaml___title
@@ -2975,6 +2965,8 @@ enum FileFieldsEnum {
     childMdx___wordCount___paragraphs @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childMdx___wordCount___sentences @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childMdx___wordCount___words @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    childProcessYaml___button___label
+    childProcessYaml___button___modifier
     childProcessYaml___children
     childProcessYaml___children___children
     childProcessYaml___children___children___children
@@ -3004,6 +2996,7 @@ enum FileFieldsEnum {
     childProcessYaml___intro
     childProcessYaml___lang
     childProcessYaml___objective
+    childProcessYaml___order
     childProcessYaml___parent___children
     childProcessYaml___parent___children___children
     childProcessYaml___parent___children___id
@@ -3235,6 +3228,7 @@ enum FileFieldsEnum {
     childTestimonialsYaml___image___childProcessYaml___intro
     childTestimonialsYaml___image___childProcessYaml___lang
     childTestimonialsYaml___image___childProcessYaml___objective
+    childTestimonialsYaml___image___childProcessYaml___order
     childTestimonialsYaml___image___childProcessYaml___slug
     childTestimonialsYaml___image___childProcessYaml___subtitle
     childTestimonialsYaml___image___childProcessYaml___title
@@ -3767,6 +3761,7 @@ enum MarkdownRemarkFieldsEnum {
     frontmatter___image___childProcessYaml___intro
     frontmatter___image___childProcessYaml___lang
     frontmatter___image___childProcessYaml___objective
+    frontmatter___image___childProcessYaml___order
     frontmatter___image___childProcessYaml___slug
     frontmatter___image___childProcessYaml___subtitle
     frontmatter___image___childProcessYaml___title
@@ -4024,6 +4019,8 @@ enum PotraceTurnPolicy {
 }
 
 enum ProcessYamlFieldsEnum {
+    button___label
+    button___modifier
     children
     children___children
     children___children___children
@@ -4077,6 +4074,7 @@ enum ProcessYamlFieldsEnum {
     intro
     lang
     objective
+    order
     parent___children
     parent___children___children
     parent___children___children___children
@@ -4688,23 +4686,17 @@ enum SitePageFieldsEnum {
     pluginCreator___parent___parent___children
     pluginCreator___parent___parent___id
     pluginCreator___pluginFilepath
-    pluginCreator___pluginOptions___backgroundColor
     pluginCreator___pluginOptions___defaultQuality
-    pluginCreator___pluginOptions___disableBgImage
-    pluginCreator___pluginOptions___disableBgImageOnAlpha
     pluginCreator___pluginOptions___feeds
     pluginCreator___pluginOptions___feeds___description
     pluginCreator___pluginOptions___feeds___output
     pluginCreator___pluginOptions___feeds___query
     pluginCreator___pluginOptions___feeds___title
     pluginCreator___pluginOptions___linkImagesToOriginal
-    pluginCreator___pluginOptions___loading
-    pluginCreator___pluginOptions___markdownCaptions
     pluginCreator___pluginOptions___maxWidth
     pluginCreator___pluginOptions___name
     pluginCreator___pluginOptions___path
     pluginCreator___pluginOptions___pathCheck
-    pluginCreator___pluginOptions___pathPrefix
     pluginCreator___pluginOptions___plugins
     pluginCreator___pluginOptions___plugins___browserAPIs
     pluginCreator___pluginOptions___plugins___id
@@ -4715,10 +4707,6 @@ enum SitePageFieldsEnum {
     pluginCreator___pluginOptions___plugins___version
     pluginCreator___pluginOptions___query
     pluginCreator___pluginOptions___rule___include
-    pluginCreator___pluginOptions___showCaptions
-    pluginCreator___pluginOptions___tracedSVG
-    pluginCreator___pluginOptions___withWebp
-    pluginCreator___pluginOptions___wrapperStyle
     pluginCreator___resolve
     pluginCreator___ssrAPIs
     pluginCreator___version
@@ -4830,49 +4818,29 @@ enum SitePluginFieldsEnum {
     parent___parent___parent___children
     parent___parent___parent___id
     pluginFilepath
-    pluginOptions___backgroundColor
     pluginOptions___defaultQuality
-    pluginOptions___disableBgImage
-    pluginOptions___disableBgImageOnAlpha
     pluginOptions___feeds
     pluginOptions___feeds___description
     pluginOptions___feeds___output
     pluginOptions___feeds___query
     pluginOptions___feeds___title
     pluginOptions___linkImagesToOriginal
-    pluginOptions___loading
-    pluginOptions___markdownCaptions
     pluginOptions___maxWidth
     pluginOptions___name
     pluginOptions___path
     pluginOptions___pathCheck
-    pluginOptions___pathPrefix
     pluginOptions___plugins
     pluginOptions___plugins___browserAPIs
     pluginOptions___plugins___id
     pluginOptions___plugins___name
     pluginOptions___plugins___nodeAPIs
     pluginOptions___plugins___pluginFilepath
-    pluginOptions___plugins___pluginOptions___backgroundColor
-    pluginOptions___plugins___pluginOptions___disableBgImage
-    pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha
     pluginOptions___plugins___pluginOptions___linkImagesToOriginal
-    pluginOptions___plugins___pluginOptions___loading
-    pluginOptions___plugins___pluginOptions___markdownCaptions
     pluginOptions___plugins___pluginOptions___maxWidth
-    pluginOptions___plugins___pluginOptions___pathPrefix
-    pluginOptions___plugins___pluginOptions___showCaptions
-    pluginOptions___plugins___pluginOptions___tracedSVG
-    pluginOptions___plugins___pluginOptions___withWebp
-    pluginOptions___plugins___pluginOptions___wrapperStyle
     pluginOptions___plugins___resolve
     pluginOptions___plugins___version
     pluginOptions___query
     pluginOptions___rule___include
-    pluginOptions___showCaptions
-    pluginOptions___tracedSVG
-    pluginOptions___withWebp
-    pluginOptions___wrapperStyle
     resolve
     ssrAPIs
     version
@@ -5201,6 +5169,8 @@ enum TestimonialsYamlFieldsEnum {
     image___childMdx___wordCount___paragraphs @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     image___childMdx___wordCount___sentences @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     image___childMdx___wordCount___words @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    image___childProcessYaml___button___label
+    image___childProcessYaml___button___modifier
     image___childProcessYaml___children
     image___childProcessYaml___children___children
     image___childProcessYaml___children___id
@@ -5218,6 +5188,7 @@ enum TestimonialsYamlFieldsEnum {
     image___childProcessYaml___intro
     image___childProcessYaml___lang
     image___childProcessYaml___objective
+    image___childProcessYaml___order
     image___childProcessYaml___parent___children
     image___childProcessYaml___parent___id
     image___childProcessYaml___slug
@@ -6069,7 +6040,13 @@ input Potrace {
     turnPolicy: PotraceTurnPolicy
 }
 
+input ProcessYamlButtonFilterInput {
+    label: StringQueryOperatorInput
+    modifier: StringQueryOperatorInput
+}
+
 input ProcessYamlFilterInput {
+    button: ProcessYamlButtonFilterInput
     children: NodeFilterListInput
     description: StringQueryOperatorInput
     duration: StringQueryOperatorInput
@@ -6078,6 +6055,7 @@ input ProcessYamlFilterInput {
     intro: StringQueryOperatorInput
     lang: StringQueryOperatorInput
     objective: StringQueryOperatorInput
+    order: IntQueryOperatorInput
     parent: NodeFilterInput
     slug: StringQueryOperatorInput
     subtitle: StringQueryOperatorInput
@@ -6306,26 +6284,16 @@ input SitePluginPluginOptionsFeedsFilterListInput {
 }
 
 input SitePluginPluginOptionsFilterInput {
-    backgroundColor: StringQueryOperatorInput
     defaultQuality: IntQueryOperatorInput
-    disableBgImage: BooleanQueryOperatorInput
-    disableBgImageOnAlpha: BooleanQueryOperatorInput
     feeds: SitePluginPluginOptionsFeedsFilterListInput
     linkImagesToOriginal: BooleanQueryOperatorInput
-    loading: StringQueryOperatorInput
-    markdownCaptions: BooleanQueryOperatorInput
     maxWidth: IntQueryOperatorInput
     name: StringQueryOperatorInput
     path: StringQueryOperatorInput
     pathCheck: BooleanQueryOperatorInput
-    pathPrefix: StringQueryOperatorInput
     plugins: SitePluginPluginOptionsPluginsFilterListInput
     query: StringQueryOperatorInput
     rule: SitePluginPluginOptionsRuleFilterInput
-    showCaptions: BooleanQueryOperatorInput
-    tracedSVG: BooleanQueryOperatorInput
-    withWebp: BooleanQueryOperatorInput
-    wrapperStyle: StringQueryOperatorInput
 }
 
 input SitePluginPluginOptionsPluginsFilterInput {
@@ -6344,18 +6312,8 @@ input SitePluginPluginOptionsPluginsFilterListInput {
 }
 
 input SitePluginPluginOptionsPluginsPluginOptionsFilterInput {
-    backgroundColor: StringQueryOperatorInput
-    disableBgImage: BooleanQueryOperatorInput
-    disableBgImageOnAlpha: BooleanQueryOperatorInput
     linkImagesToOriginal: BooleanQueryOperatorInput
-    loading: StringQueryOperatorInput
-    markdownCaptions: BooleanQueryOperatorInput
     maxWidth: IntQueryOperatorInput
-    pathPrefix: StringQueryOperatorInput
-    showCaptions: BooleanQueryOperatorInput
-    tracedSVG: BooleanQueryOperatorInput
-    withWebp: BooleanQueryOperatorInput
-    wrapperStyle: StringQueryOperatorInput
 }
 
 input SitePluginPluginOptionsRuleFilterInput {
