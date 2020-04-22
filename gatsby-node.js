@@ -3,6 +3,9 @@ const locales = require("./src/constants/locales");
 const _ = require("lodash");
 const createLandingPages = require("./gatsby/createLandingPages");
 const createCaseStudies = require("./gatsby/createCaseStudies");
+const createJobPages = require("./gatsby/createJobPages");
+const createServicePages = require("./gatsby/createServicePages");
+const createResourcePages = require("./gatsby/createResourcePages");
 
 exports.onCreateNode = async ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -57,40 +60,10 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const {
     data: {
-      allServicesYaml: { nodes: services },
-      allResourcesYaml: { nodes: resources },
-      jobs: { nodes: jobs },
       articles: { nodes: articles }
     }
   } = await graphql(`
     {
-      allServicesYaml {
-        nodes {
-          slug
-        }
-      }
-
-      allResourcesYaml {
-        nodes {
-          slug
-          lang
-        }
-      }
-      allCasesYaml {
-        nodes {
-          slug
-          lang
-        }
-      }
-      jobs: allMarkdownRemark(
-        filter: { fields: { collection: { eq: "jobs" } } }
-      ) {
-        nodes {
-          frontmatter {
-            slug
-          }
-        }
-      }
       articles: allMarkdownRemark(
         filter: { fields: { collection: { eq: "articles" } } }
       ) {
@@ -162,45 +135,9 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   //get all post tags
 
-  services.forEach(service => {
-    Object.keys(locales).map(lang => {
-      createPage({
-        component: serviceTemplate,
-        path: `${locales[lang].path}/services/${service.slug}`,
-        context: {
-          slug: service.slug,
-          lang: lang
-        }
-      });
-    });
-  });
-
-  resources.forEach(resource => {
-    Object.keys(locales).map(lang => {
-      createPage({
-        component: resourceTemplate,
-        path: `${locales[lang].path}/resources/${resource.slug}`,
-        context: {
-          slug: resource.slug,
-          lang: lang
-        }
-      });
-    });
-  });
-
-  jobs.forEach(({ frontmatter: job }) => {
-    Object.keys(locales).map(lang => {
-      createPage({
-        component: jobTemplate,
-        path: `${locales[lang].path}/careers/${job.slug}`,
-        context: {
-          slug: job.slug,
-          lang: lang
-        }
-      });
-    });
-  });
-
+  await createResourcePages({ graphql, actions });
+  await createJobPages({ graphql, actions });
+  await createServicePages({ graphql, actions });
   await createCaseStudies({ graphql, actions });
   await createLandingPages({ graphql, actions });
 };
