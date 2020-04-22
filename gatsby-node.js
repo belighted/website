@@ -2,6 +2,7 @@ const path = require("path");
 const locales = require("./src/constants/locales");
 const _ = require("lodash");
 const createLandingPages = require("./gatsby/createLandingPages");
+const createCaseStudies = require("./gatsby/createCaseStudies");
 
 exports.onCreateNode = async ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
@@ -50,7 +51,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
   const blogTemplate = path.resolve("./src/templates/blog.js");
   const serviceTemplate = path.resolve("./src/templates/service.js");
-  const caseTemplate = path.resolve("./src/templates/case.js");
   const resourceTemplate = path.resolve("./src/templates/resource.js");
   const jobTemplate = path.resolve("./src/templates/job.js");
   const blogTagTemplate = path.resolve("./src/templates/blogTag.js");
@@ -58,7 +58,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
   const {
     data: {
       allServicesYaml: { nodes: services },
-      allCasesYaml: { nodes: cases },
       allResourcesYaml: { nodes: resources },
       jobs: { nodes: jobs },
       articles: { nodes: articles }
@@ -176,19 +175,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
-  cases.forEach(caseStudy => {
-    Object.keys(locales).map(lang => {
-      createPage({
-        component: caseTemplate,
-        path: `${locales[lang].path}/clients/${caseStudy.slug}`,
-        context: {
-          slug: caseStudy.slug,
-          lang: lang
-        }
-      });
-    });
-  });
-
   resources.forEach(resource => {
     Object.keys(locales).map(lang => {
       createPage({
@@ -215,5 +201,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
     });
   });
 
+  await createCaseStudies({ graphql, actions });
   await createLandingPages({ graphql, actions });
 };
