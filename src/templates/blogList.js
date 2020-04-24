@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
 import BlogList from "../components/blog/BlogList";
 import Pagination from "../components/blog/Pagination";
+import WhatIsSaas from "../components/splits/WhatIsSaas";
 
 const BlogListPage = ({
   data: {
@@ -15,8 +16,15 @@ const BlogListPage = ({
   return (
     <Layout context={pageContext} page={"blog"}>
       <section className={"o-wrapper c-section"}>
-        <BlogList nodes={nodes} />
-        <Pagination currentPage={currentPage} numPages={numPages} />
+        <div className="l-blog">
+          <main className="l-blog__main">
+            <BlogList nodes={nodes} />
+            <Pagination currentPage={currentPage} numPages={numPages} />
+          </main>
+          <aside className="l-blog__sidebar">
+            <WhatIsSaas />
+          </aside>
+        </div>
       </section>
     </Layout>
   );

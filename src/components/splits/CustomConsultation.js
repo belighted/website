@@ -1,10 +1,11 @@
 import React from "react";
 import LocalizedLink from "../links/LocalizedLink";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 const CustomConsultation = ({
   customConsultation: {
     frontmatter: { title, cta },
-    html
+    body
   }
 }) => {
   return (
@@ -12,10 +13,9 @@ const CustomConsultation = ({
       <div className="o-wrapper">
         <div>
           <h3 className="c-heading c-heading--3 c-heading--title">{title}</h3>
-          <div
-            className="c-wysiwyg"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <div className="c-wysiwyg">
+            <MDXRenderer>{body}</MDXRenderer>
+          </div>
           <div>
             <LocalizedLink to={cta.link} className="c-button c-button--primary">
               {cta.title}

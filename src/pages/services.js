@@ -55,7 +55,7 @@ export default ServicesPage;
 
 export const query = graphql`
   query ServicesPage($lang: String!) {
-    customConsultation: markdownRemark(
+    customConsultation: mdx(
       frontmatter: { slug: { eq: "custom-consultation" }, lang: { eq: $lang } }
     ) {
       frontmatter {

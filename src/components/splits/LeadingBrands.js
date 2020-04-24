@@ -1,23 +1,22 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import ClientLogo from "../clients/ClientLogo";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 const LeadingBrands = () => {
   const {
     markdownRemark: {
       frontmatter: { title, list },
-      html
+      body
     }
   } = useStaticQuery(graphql`
     {
-      markdownRemark(
-        frontmatter: { slug: { eq: "leading-brands" }, lang: { eq: "en" } }
-      ) {
+      mdx(frontmatter: { slug: { eq: "leading-brands" }, lang: { eq: "en" } }) {
         frontmatter {
           title
           list
         }
-        html
+        body
       }
     }
   `);
@@ -25,11 +24,12 @@ const LeadingBrands = () => {
     <div className="c-section c-section--dark-bg">
       <div className="o-wrapper">
         <div>
-          <h3 className="c-heading c-heading--3 c-heading--title c-heading--invert">{title}</h3>
-          <div
-            className="c-wysiwyg"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          <h3 className="c-heading c-heading--3 c-heading--title c-heading--invert">
+            {title}
+          </h3>
+          <div className="c-wysiwyg">
+            <MDXRenderer>{body}</MDXRenderer>
+          </div>
           <ul className="o-list-inline">
             {list.map(slug => (
               <li className="o-list-inline__item">

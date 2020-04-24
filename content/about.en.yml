@@ -117,3 +117,12 @@ pride:
     subtitle: Our Belgian DNA
     body: Almost all Belighters are beer aficionados, the passion being part of our Belgian culture. We brewed our first batch of "Beerlighted" in 2012 as part of a dedicated team-building event and shared the tasty result with our friends and customers.
     image: ./about/pride/beerlighted.png
+gallery:
+  - image: ./about/gallery/escape_room_fun.png
+    title: Work from anywhere
+    subtitle: That's up to you
+    icon: pin
+  - image: ./about/gallery/teambuilding_1200_800.png
+    title: Coffee, drinks and snacks
+    subtitle:
+    icon: coffee

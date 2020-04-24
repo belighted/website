@@ -28,7 +28,7 @@ export default ResourcesPage;
 
 export const query = graphql`
   query($lang: String!) {
-    customConsultation: markdownRemark(
+    customConsultation: mdx(
       frontmatter: { slug: { eq: "custom-consultation" }, lang: { eq: $lang } }
     ) {
       frontmatter {

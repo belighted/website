@@ -1,9 +1,10 @@
 import React from "react";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 const OurHistory = ({
   history: {
     frontmatter: { title },
-    html
+    body
   }
 }) => {
   return (
@@ -11,10 +12,10 @@ const OurHistory = ({
       <div className="o-wrapper">
         <div>
           <h3 className="c-heading c-heading--3 c-heading--title">{title}</h3>
-          <div
-            className="c-wysiwyg"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
+          Markdown
+          <div className="c-wysiwyg">
+            <MDXRenderer>{body}</MDXRenderer>
+          </div>
         </div>
       </div>
     </div>

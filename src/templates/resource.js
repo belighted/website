@@ -4,7 +4,7 @@ import Layout from "../components/layout/Layout";
 import Slices from "../components/slices/Slices";
 import OurHistory from "../components/splits/OurHistory";
 
-const ServicePage = ({
+const ResourcePage = ({
   data: { resourcesYaml: post, history },
   pageContext
 }) => (
@@ -34,7 +34,7 @@ export const query = graphql`
         body
       }
     }
-    history: markdownRemark(
+    history: mdx(
       frontmatter: { slug: { eq: "our-history" }, lang: { eq: $lang } }
     ) {
       frontmatter {
@@ -44,9 +44,9 @@ export const query = graphql`
           link
         }
       }
-      html
+      body
     }
   }
 `;
 
-export default ServicePage;
+export default ResourcePage;

@@ -58,6 +58,7 @@ type CategoriesYaml implements Node {
     id: ID!
     internal: Internal!
     lang: String
+    list: [String]
     order: Int
     parent: Node
     services: [String]
@@ -98,6 +99,7 @@ type ContentYaml implements Node {
     children: [Node!]!
     cta: ContentYamlCta
     formId: String
+    gallery: [ContentYamlGallery]
     history: [ContentYamlHistory]
     id: ID!
     internal: Internal!
@@ -141,6 +143,13 @@ type ContentYamlEdge {
     next: ContentYaml
     node: ContentYaml!
     previous: ContentYaml
+}
+
+type ContentYamlGallery {
+    icon: String
+    image: File
+    subtitle: String
+    title: String
 }
 
 type ContentYamlGroupConnection {
@@ -727,6 +736,7 @@ type MarkdownRemarkFields {
 
 type MarkdownRemarkFrontmatter {
     author: String
+    clients: [MarkdownRemarkFrontmatterClients]
     cta: MarkdownRemarkFrontmatterCta
     date: Float
     description: String
@@ -739,6 +749,14 @@ type MarkdownRemarkFrontmatter {
     tags: [MarkdownRemarkFrontmatterTags]
     title: String
     values: [MarkdownRemarkFrontmatterValues]
+}
+
+type MarkdownRemarkFrontmatterClients {
+    image: String
+    slug: String
+    tags: [String]
+    text: String
+    title: String
 }
 
 type MarkdownRemarkFrontmatterCta {
@@ -909,8 +927,8 @@ type Query {
     allSitePlugin(filter: SitePluginFilterInput, limit: Int, skip: Int, sort: SitePluginSortInput): SitePluginConnection!
     allTestimonialsYaml(filter: TestimonialsYamlFilterInput, limit: Int, skip: Int, sort: TestimonialsYamlSortInput): TestimonialsYamlConnection!
     casesYaml(about: StringQueryOperatorInput, challenges: StringQueryOperatorInput, children: NodeFilterListInput, goals: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, logo: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, problem: StringQueryOperatorInput, results: StringQueryOperatorInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): CasesYaml
-    categoriesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, order: IntQueryOperatorInput, parent: NodeFilterInput, services: StringQueryOperatorInput, short_description: StringQueryOperatorInput, slug: StringQueryOperatorInput, technologies: StringQueryOperatorInput, title: StringQueryOperatorInput): CategoriesYaml
-    contentYaml(body: StringQueryOperatorInput, cases: ContentYamlCasesFilterListInput, categories: ContentYamlCategoriesFilterListInput, children: NodeFilterListInput, cta: ContentYamlCtaFilterInput, formId: StringQueryOperatorInput, history: ContentYamlHistoryFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, pride: ContentYamlPrideFilterListInput, sections: ContentYamlSectionsFilterListInput, slides: ContentYamlSlidesFilterListInput, slug: StringQueryOperatorInput, statistics: ContentYamlStatisticsFilterListInput, team: ContentYamlTeamFilterListInput, title: StringQueryOperatorInput): ContentYaml
+    categoriesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, list: StringQueryOperatorInput, order: IntQueryOperatorInput, parent: NodeFilterInput, services: StringQueryOperatorInput, short_description: StringQueryOperatorInput, slug: StringQueryOperatorInput, technologies: StringQueryOperatorInput, title: StringQueryOperatorInput): CategoriesYaml
+    contentYaml(body: StringQueryOperatorInput, cases: ContentYamlCasesFilterListInput, categories: ContentYamlCategoriesFilterListInput, children: NodeFilterListInput, cta: ContentYamlCtaFilterInput, formId: StringQueryOperatorInput, gallery: ContentYamlGalleryFilterListInput, history: ContentYamlHistoryFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, pride: ContentYamlPrideFilterListInput, sections: ContentYamlSectionsFilterListInput, slides: ContentYamlSlidesFilterListInput, slug: StringQueryOperatorInput, statistics: ContentYamlStatisticsFilterListInput, team: ContentYamlTeamFilterListInput, title: StringQueryOperatorInput): ContentYaml
     dataYaml(children: NodeFilterListInput, clients: DataYamlClientsFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, skills: DataYamlSkillsFilterListInput, slug: StringQueryOperatorInput, technologies: DataYamlTechnologiesFilterListInput): DataYaml
     directory(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): Directory
     file(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, childCasesYaml: CasesYamlFilterInput, childCategoriesYaml: CategoriesYamlFilterInput, childContentYaml: ContentYamlFilterInput, childDataYaml: DataYamlFilterInput, childImageSharp: ImageSharpFilterInput, childMarkdownRemark: MarkdownRemarkFilterInput, childMdx: MdxFilterInput, childProcessYaml: ProcessYamlFilterInput, childResourcesYaml: ResourcesYamlFilterInput, childServicesYaml: ServicesYamlFilterInput, childTestimonialsYaml: TestimonialsYamlFilterInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, publicURL: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): File
@@ -1247,16 +1265,26 @@ type SitePluginPackageJsonPeerDependencies {
 }
 
 type SitePluginPluginOptions {
+    backgroundColor: String
     defaultQuality: Int
+    disableBgImage: Boolean
+    disableBgImageOnAlpha: Boolean
     feeds: [SitePluginPluginOptionsFeeds]
     linkImagesToOriginal: Boolean
+    loading: String
+    markdownCaptions: Boolean
     maxWidth: Int
     name: String
     path: String
     pathCheck: Boolean
+    pathPrefix: String
     plugins: [SitePluginPluginOptionsPlugins]
     query: String
     rule: SitePluginPluginOptionsRule
+    showCaptions: Boolean
+    tracedSVG: Boolean
+    withWebp: Boolean
+    wrapperStyle: String
 }
 
 type SitePluginPluginOptionsFeeds {
@@ -1278,8 +1306,18 @@ type SitePluginPluginOptionsPlugins {
 }
 
 type SitePluginPluginOptionsPluginsPluginOptions {
+    backgroundColor: String
+    disableBgImage: Boolean
+    disableBgImageOnAlpha: Boolean
     linkImagesToOriginal: Boolean
+    loading: String
+    markdownCaptions: Boolean
     maxWidth: Int
+    pathPrefix: String
+    showCaptions: Boolean
+    tracedSVG: Boolean
+    withWebp: Boolean
+    wrapperStyle: String
 }
 
 type SitePluginPluginOptionsRule {
@@ -1510,6 +1548,7 @@ enum CategoriesYamlFieldsEnum {
     internal___owner
     internal___type
     lang
+    list
     order
     parent___children
     parent___children___children
@@ -1607,6 +1646,165 @@ enum ContentYamlFieldsEnum {
     children___parent___parent___id
     cta___title
     formId
+    gallery
+    gallery___icon
+    gallery___image___absolutePath
+    gallery___image___accessTime
+    gallery___image___atime
+    gallery___image___atimeMs
+    gallery___image___base
+    gallery___image___birthTime
+    gallery___image___birthtime
+    gallery___image___birthtimeMs
+    gallery___image___blksize
+    gallery___image___blocks
+    gallery___image___changeTime
+    gallery___image___childCasesYaml___about
+    gallery___image___childCasesYaml___challenges
+    gallery___image___childCasesYaml___children
+    gallery___image___childCasesYaml___goals
+    gallery___image___childCasesYaml___id
+    gallery___image___childCasesYaml___lang
+    gallery___image___childCasesYaml___logo
+    gallery___image___childCasesYaml___originalPath
+    gallery___image___childCasesYaml___problem
+    gallery___image___childCasesYaml___results
+    gallery___image___childCasesYaml___slug
+    gallery___image___childCasesYaml___title
+    gallery___image___childCategoriesYaml___children
+    gallery___image___childCategoriesYaml___id
+    gallery___image___childCategoriesYaml___lang
+    gallery___image___childCategoriesYaml___list
+    gallery___image___childCategoriesYaml___order
+    gallery___image___childCategoriesYaml___services
+    gallery___image___childCategoriesYaml___short_description
+    gallery___image___childCategoriesYaml___slug
+    gallery___image___childCategoriesYaml___technologies
+    gallery___image___childCategoriesYaml___title
+    gallery___image___childContentYaml___body
+    gallery___image___childContentYaml___cases
+    gallery___image___childContentYaml___categories
+    gallery___image___childContentYaml___children
+    gallery___image___childContentYaml___formId
+    gallery___image___childContentYaml___gallery
+    gallery___image___childContentYaml___history
+    gallery___image___childContentYaml___id
+    gallery___image___childContentYaml___lang
+    gallery___image___childContentYaml___pride
+    gallery___image___childContentYaml___sections
+    gallery___image___childContentYaml___slides
+    gallery___image___childContentYaml___slug
+    gallery___image___childContentYaml___statistics
+    gallery___image___childContentYaml___team
+    gallery___image___childContentYaml___title
+    gallery___image___childDataYaml___children
+    gallery___image___childDataYaml___clients
+    gallery___image___childDataYaml___id
+    gallery___image___childDataYaml___skills
+    gallery___image___childDataYaml___slug
+    gallery___image___childDataYaml___technologies
+    gallery___image___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMarkdownRemark___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMarkdownRemark___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMarkdownRemark___excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMarkdownRemark___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMarkdownRemark___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMarkdownRemark___htmlAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMarkdownRemark___id
+    gallery___image___childMarkdownRemark___rawMarkdownBody @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMarkdownRemark___tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMarkdownRemark___timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMdx___body
+    gallery___image___childMdx___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMdx___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMdx___fileAbsolutePath
+    gallery___image___childMdx___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMdx___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMdx___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMdx___mdxAST @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMdx___rawBody
+    gallery___image___childMdx___tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childMdx___timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    gallery___image___childProcessYaml___children
+    gallery___image___childProcessYaml___description
+    gallery___image___childProcessYaml___duration
+    gallery___image___childProcessYaml___id
+    gallery___image___childProcessYaml___intro
+    gallery___image___childProcessYaml___lang
+    gallery___image___childProcessYaml___objective
+    gallery___image___childProcessYaml___order
+    gallery___image___childProcessYaml___slug
+    gallery___image___childProcessYaml___subtitle
+    gallery___image___childProcessYaml___title
+    gallery___image___childResourcesYaml___children
+    gallery___image___childResourcesYaml___id
+    gallery___image___childResourcesYaml___image
+    gallery___image___childResourcesYaml___lang
+    gallery___image___childResourcesYaml___originalPath
+    gallery___image___childResourcesYaml___slices
+    gallery___image___childResourcesYaml___slug
+    gallery___image___childResourcesYaml___title
+    gallery___image___childResourcesYaml___type
+    gallery___image___childServicesYaml___children
+    gallery___image___childServicesYaml___formId
+    gallery___image___childServicesYaml___id
+    gallery___image___childServicesYaml___lang
+    gallery___image___childServicesYaml___layout
+    gallery___image___childServicesYaml___originalPath
+    gallery___image___childServicesYaml___slices
+    gallery___image___childServicesYaml___slug
+    gallery___image___childServicesYaml___subtitle
+    gallery___image___childServicesYaml___title
+    gallery___image___childServicesYaml___type
+    gallery___image___childTestimonialsYaml___author
+    gallery___image___childTestimonialsYaml___body
+    gallery___image___childTestimonialsYaml___children
+    gallery___image___childTestimonialsYaml___client
+    gallery___image___childTestimonialsYaml___id
+    gallery___image___childTestimonialsYaml___lang
+    gallery___image___childTestimonialsYaml___role
+    gallery___image___childTestimonialsYaml___slug
+    gallery___image___children
+    gallery___image___children___children
+    gallery___image___children___id
+    gallery___image___ctime
+    gallery___image___ctimeMs
+    gallery___image___dev
+    gallery___image___dir
+    gallery___image___ext
+    gallery___image___extension
+    gallery___image___gid
+    gallery___image___id
+    gallery___image___ino
+    gallery___image___internal___content
+    gallery___image___internal___contentDigest
+    gallery___image___internal___description
+    gallery___image___internal___fieldOwners
+    gallery___image___internal___ignoreType
+    gallery___image___internal___mediaType
+    gallery___image___internal___owner
+    gallery___image___internal___type
+    gallery___image___mode
+    gallery___image___modifiedTime
+    gallery___image___mtime
+    gallery___image___mtimeMs
+    gallery___image___name
+    gallery___image___nlink
+    gallery___image___parent___children
+    gallery___image___parent___id
+    gallery___image___prettySize
+    gallery___image___publicURL
+    gallery___image___rdev
+    gallery___image___relativeDirectory
+    gallery___image___relativePath
+    gallery___image___root
+    gallery___image___size
+    gallery___image___sourceInstanceName
+    gallery___image___uid
+    gallery___subtitle
+    gallery___title
     history
     history___date
     history___event
@@ -1636,6 +1834,7 @@ enum ContentYamlFieldsEnum {
     history___image___childCategoriesYaml___children
     history___image___childCategoriesYaml___id
     history___image___childCategoriesYaml___lang
+    history___image___childCategoriesYaml___list
     history___image___childCategoriesYaml___order
     history___image___childCategoriesYaml___services
     history___image___childCategoriesYaml___short_description
@@ -1647,6 +1846,7 @@ enum ContentYamlFieldsEnum {
     history___image___childContentYaml___categories
     history___image___childContentYaml___children
     history___image___childContentYaml___formId
+    history___image___childContentYaml___gallery
     history___image___childContentYaml___history
     history___image___childContentYaml___id
     history___image___childContentYaml___lang
@@ -1839,6 +2039,7 @@ enum ContentYamlFieldsEnum {
     pride___image___childCategoriesYaml___children
     pride___image___childCategoriesYaml___id
     pride___image___childCategoriesYaml___lang
+    pride___image___childCategoriesYaml___list
     pride___image___childCategoriesYaml___order
     pride___image___childCategoriesYaml___services
     pride___image___childCategoriesYaml___short_description
@@ -1850,6 +2051,7 @@ enum ContentYamlFieldsEnum {
     pride___image___childContentYaml___categories
     pride___image___childContentYaml___children
     pride___image___childContentYaml___formId
+    pride___image___childContentYaml___gallery
     pride___image___childContentYaml___history
     pride___image___childContentYaml___id
     pride___image___childContentYaml___lang
@@ -2014,6 +2216,7 @@ enum ContentYamlFieldsEnum {
     team___image___childCategoriesYaml___children
     team___image___childCategoriesYaml___id
     team___image___childCategoriesYaml___lang
+    team___image___childCategoriesYaml___list
     team___image___childCategoriesYaml___order
     team___image___childCategoriesYaml___services
     team___image___childCategoriesYaml___short_description
@@ -2025,6 +2228,7 @@ enum ContentYamlFieldsEnum {
     team___image___childContentYaml___categories
     team___image___childContentYaml___children
     team___image___childContentYaml___formId
+    team___image___childContentYaml___gallery
     team___image___childContentYaml___history
     team___image___childContentYaml___id
     team___image___childContentYaml___lang
@@ -2454,6 +2658,7 @@ enum FileFieldsEnum {
     childCategoriesYaml___internal___owner
     childCategoriesYaml___internal___type
     childCategoriesYaml___lang
+    childCategoriesYaml___list
     childCategoriesYaml___order
     childCategoriesYaml___parent___children
     childCategoriesYaml___parent___children___children
@@ -2500,6 +2705,46 @@ enum FileFieldsEnum {
     childContentYaml___children___parent___id
     childContentYaml___cta___title
     childContentYaml___formId
+    childContentYaml___gallery
+    childContentYaml___gallery___icon
+    childContentYaml___gallery___image___absolutePath
+    childContentYaml___gallery___image___accessTime
+    childContentYaml___gallery___image___atime
+    childContentYaml___gallery___image___atimeMs
+    childContentYaml___gallery___image___base
+    childContentYaml___gallery___image___birthTime
+    childContentYaml___gallery___image___birthtime
+    childContentYaml___gallery___image___birthtimeMs
+    childContentYaml___gallery___image___blksize
+    childContentYaml___gallery___image___blocks
+    childContentYaml___gallery___image___changeTime
+    childContentYaml___gallery___image___children
+    childContentYaml___gallery___image___ctime
+    childContentYaml___gallery___image___ctimeMs
+    childContentYaml___gallery___image___dev
+    childContentYaml___gallery___image___dir
+    childContentYaml___gallery___image___ext
+    childContentYaml___gallery___image___extension
+    childContentYaml___gallery___image___gid
+    childContentYaml___gallery___image___id
+    childContentYaml___gallery___image___ino
+    childContentYaml___gallery___image___mode
+    childContentYaml___gallery___image___modifiedTime
+    childContentYaml___gallery___image___mtime
+    childContentYaml___gallery___image___mtimeMs
+    childContentYaml___gallery___image___name
+    childContentYaml___gallery___image___nlink
+    childContentYaml___gallery___image___prettySize
+    childContentYaml___gallery___image___publicURL
+    childContentYaml___gallery___image___rdev
+    childContentYaml___gallery___image___relativeDirectory
+    childContentYaml___gallery___image___relativePath
+    childContentYaml___gallery___image___root
+    childContentYaml___gallery___image___size
+    childContentYaml___gallery___image___sourceInstanceName
+    childContentYaml___gallery___image___uid
+    childContentYaml___gallery___subtitle
+    childContentYaml___gallery___title
     childContentYaml___history
     childContentYaml___history___date
     childContentYaml___history___event
@@ -2823,6 +3068,12 @@ enum FileFieldsEnum {
     childMarkdownRemark___fields___collection @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childMarkdownRemark___frontmatter___author
+    childMarkdownRemark___frontmatter___clients
+    childMarkdownRemark___frontmatter___clients___image
+    childMarkdownRemark___frontmatter___clients___slug
+    childMarkdownRemark___frontmatter___clients___tags
+    childMarkdownRemark___frontmatter___clients___text
+    childMarkdownRemark___frontmatter___clients___title
     childMarkdownRemark___frontmatter___cta___link
     childMarkdownRemark___frontmatter___cta___title
     childMarkdownRemark___frontmatter___date
@@ -3170,6 +3421,7 @@ enum FileFieldsEnum {
     childTestimonialsYaml___image___childCategoriesYaml___children
     childTestimonialsYaml___image___childCategoriesYaml___id
     childTestimonialsYaml___image___childCategoriesYaml___lang
+    childTestimonialsYaml___image___childCategoriesYaml___list
     childTestimonialsYaml___image___childCategoriesYaml___order
     childTestimonialsYaml___image___childCategoriesYaml___services
     childTestimonialsYaml___image___childCategoriesYaml___short_description
@@ -3181,6 +3433,7 @@ enum FileFieldsEnum {
     childTestimonialsYaml___image___childContentYaml___categories
     childTestimonialsYaml___image___childContentYaml___children
     childTestimonialsYaml___image___childContentYaml___formId
+    childTestimonialsYaml___image___childContentYaml___gallery
     childTestimonialsYaml___image___childContentYaml___history
     childTestimonialsYaml___image___childContentYaml___id
     childTestimonialsYaml___image___childContentYaml___lang
@@ -3673,6 +3926,12 @@ enum MarkdownRemarkFieldsEnum {
     fields___collection @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     frontmatter___author
+    frontmatter___clients
+    frontmatter___clients___image
+    frontmatter___clients___slug
+    frontmatter___clients___tags
+    frontmatter___clients___text
+    frontmatter___clients___title
     frontmatter___cta___link
     frontmatter___cta___title
     frontmatter___date
@@ -3703,6 +3962,7 @@ enum MarkdownRemarkFieldsEnum {
     frontmatter___image___childCategoriesYaml___children
     frontmatter___image___childCategoriesYaml___id
     frontmatter___image___childCategoriesYaml___lang
+    frontmatter___image___childCategoriesYaml___list
     frontmatter___image___childCategoriesYaml___order
     frontmatter___image___childCategoriesYaml___services
     frontmatter___image___childCategoriesYaml___short_description
@@ -3714,6 +3974,7 @@ enum MarkdownRemarkFieldsEnum {
     frontmatter___image___childContentYaml___categories
     frontmatter___image___childContentYaml___children
     frontmatter___image___childContentYaml___formId
+    frontmatter___image___childContentYaml___gallery
     frontmatter___image___childContentYaml___history
     frontmatter___image___childContentYaml___id
     frontmatter___image___childContentYaml___lang
@@ -4686,17 +4947,23 @@ enum SitePageFieldsEnum {
     pluginCreator___parent___parent___children
     pluginCreator___parent___parent___id
     pluginCreator___pluginFilepath
+    pluginCreator___pluginOptions___backgroundColor
     pluginCreator___pluginOptions___defaultQuality
+    pluginCreator___pluginOptions___disableBgImage
+    pluginCreator___pluginOptions___disableBgImageOnAlpha
     pluginCreator___pluginOptions___feeds
     pluginCreator___pluginOptions___feeds___description
     pluginCreator___pluginOptions___feeds___output
     pluginCreator___pluginOptions___feeds___query
     pluginCreator___pluginOptions___feeds___title
     pluginCreator___pluginOptions___linkImagesToOriginal
+    pluginCreator___pluginOptions___loading
+    pluginCreator___pluginOptions___markdownCaptions
     pluginCreator___pluginOptions___maxWidth
     pluginCreator___pluginOptions___name
     pluginCreator___pluginOptions___path
     pluginCreator___pluginOptions___pathCheck
+    pluginCreator___pluginOptions___pathPrefix
     pluginCreator___pluginOptions___plugins
     pluginCreator___pluginOptions___plugins___browserAPIs
     pluginCreator___pluginOptions___plugins___id
@@ -4707,6 +4974,10 @@ enum SitePageFieldsEnum {
     pluginCreator___pluginOptions___plugins___version
     pluginCreator___pluginOptions___query
     pluginCreator___pluginOptions___rule___include
+    pluginCreator___pluginOptions___showCaptions
+    pluginCreator___pluginOptions___tracedSVG
+    pluginCreator___pluginOptions___withWebp
+    pluginCreator___pluginOptions___wrapperStyle
     pluginCreator___resolve
     pluginCreator___ssrAPIs
     pluginCreator___version
@@ -4818,29 +5089,49 @@ enum SitePluginFieldsEnum {
     parent___parent___parent___children
     parent___parent___parent___id
     pluginFilepath
+    pluginOptions___backgroundColor
     pluginOptions___defaultQuality
+    pluginOptions___disableBgImage
+    pluginOptions___disableBgImageOnAlpha
     pluginOptions___feeds
     pluginOptions___feeds___description
     pluginOptions___feeds___output
     pluginOptions___feeds___query
     pluginOptions___feeds___title
     pluginOptions___linkImagesToOriginal
+    pluginOptions___loading
+    pluginOptions___markdownCaptions
     pluginOptions___maxWidth
     pluginOptions___name
     pluginOptions___path
     pluginOptions___pathCheck
+    pluginOptions___pathPrefix
     pluginOptions___plugins
     pluginOptions___plugins___browserAPIs
     pluginOptions___plugins___id
     pluginOptions___plugins___name
     pluginOptions___plugins___nodeAPIs
     pluginOptions___plugins___pluginFilepath
+    pluginOptions___plugins___pluginOptions___backgroundColor
+    pluginOptions___plugins___pluginOptions___disableBgImage
+    pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha
     pluginOptions___plugins___pluginOptions___linkImagesToOriginal
+    pluginOptions___plugins___pluginOptions___loading
+    pluginOptions___plugins___pluginOptions___markdownCaptions
     pluginOptions___plugins___pluginOptions___maxWidth
+    pluginOptions___plugins___pluginOptions___pathPrefix
+    pluginOptions___plugins___pluginOptions___showCaptions
+    pluginOptions___plugins___pluginOptions___tracedSVG
+    pluginOptions___plugins___pluginOptions___withWebp
+    pluginOptions___plugins___pluginOptions___wrapperStyle
     pluginOptions___plugins___resolve
     pluginOptions___plugins___version
     pluginOptions___query
     pluginOptions___rule___include
+    pluginOptions___showCaptions
+    pluginOptions___tracedSVG
+    pluginOptions___withWebp
+    pluginOptions___wrapperStyle
     resolve
     ssrAPIs
     version
@@ -4943,6 +5234,7 @@ enum TestimonialsYamlFieldsEnum {
     image___childCategoriesYaml___internal___owner
     image___childCategoriesYaml___internal___type
     image___childCategoriesYaml___lang
+    image___childCategoriesYaml___list
     image___childCategoriesYaml___order
     image___childCategoriesYaml___parent___children
     image___childCategoriesYaml___parent___id
@@ -4965,6 +5257,10 @@ enum TestimonialsYamlFieldsEnum {
     image___childContentYaml___children___id
     image___childContentYaml___cta___title
     image___childContentYaml___formId
+    image___childContentYaml___gallery
+    image___childContentYaml___gallery___icon
+    image___childContentYaml___gallery___subtitle
+    image___childContentYaml___gallery___title
     image___childContentYaml___history
     image___childContentYaml___history___date
     image___childContentYaml___history___event
@@ -5105,6 +5401,7 @@ enum TestimonialsYamlFieldsEnum {
     image___childMarkdownRemark___fields___collection @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     image___childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     image___childMarkdownRemark___frontmatter___author
+    image___childMarkdownRemark___frontmatter___clients
     image___childMarkdownRemark___frontmatter___date
     image___childMarkdownRemark___frontmatter___description
     image___childMarkdownRemark___frontmatter___lang
@@ -5453,6 +5750,7 @@ input CategoriesYamlFilterInput {
     id: StringQueryOperatorInput
     internal: InternalFilterInput
     lang: StringQueryOperatorInput
+    list: StringQueryOperatorInput
     order: IntQueryOperatorInput
     parent: NodeFilterInput
     services: StringQueryOperatorInput
@@ -5498,6 +5796,7 @@ input ContentYamlFilterInput {
     children: NodeFilterListInput
     cta: ContentYamlCtaFilterInput
     formId: StringQueryOperatorInput
+    gallery: ContentYamlGalleryFilterListInput
     history: ContentYamlHistoryFilterListInput
     id: StringQueryOperatorInput
     internal: InternalFilterInput
@@ -5510,6 +5809,17 @@ input ContentYamlFilterInput {
     statistics: ContentYamlStatisticsFilterListInput
     team: ContentYamlTeamFilterListInput
     title: StringQueryOperatorInput
+}
+
+input ContentYamlGalleryFilterInput {
+    icon: StringQueryOperatorInput
+    image: FileFilterInput
+    subtitle: StringQueryOperatorInput
+    title: StringQueryOperatorInput
+}
+
+input ContentYamlGalleryFilterListInput {
+    elemMatch: ContentYamlGalleryFilterInput
 }
 
 input ContentYamlHistoryFilterInput {
@@ -5918,6 +6228,18 @@ input MarkdownRemarkFilterInput {
     wordCount: MarkdownWordCountFilterInput
 }
 
+input MarkdownRemarkFrontmatterClientsFilterInput {
+    image: StringQueryOperatorInput
+    slug: StringQueryOperatorInput
+    tags: StringQueryOperatorInput
+    text: StringQueryOperatorInput
+    title: StringQueryOperatorInput
+}
+
+input MarkdownRemarkFrontmatterClientsFilterListInput {
+    elemMatch: MarkdownRemarkFrontmatterClientsFilterInput
+}
+
 input MarkdownRemarkFrontmatterCtaFilterInput {
     link: StringQueryOperatorInput
     title: StringQueryOperatorInput
@@ -5925,6 +6247,7 @@ input MarkdownRemarkFrontmatterCtaFilterInput {
 
 input MarkdownRemarkFrontmatterFilterInput {
     author: StringQueryOperatorInput
+    clients: MarkdownRemarkFrontmatterClientsFilterListInput
     cta: MarkdownRemarkFrontmatterCtaFilterInput
     date: FloatQueryOperatorInput
     description: StringQueryOperatorInput
@@ -6284,16 +6607,26 @@ input SitePluginPluginOptionsFeedsFilterListInput {
 }
 
 input SitePluginPluginOptionsFilterInput {
+    backgroundColor: StringQueryOperatorInput
     defaultQuality: IntQueryOperatorInput
+    disableBgImage: BooleanQueryOperatorInput
+    disableBgImageOnAlpha: BooleanQueryOperatorInput
     feeds: SitePluginPluginOptionsFeedsFilterListInput
     linkImagesToOriginal: BooleanQueryOperatorInput
+    loading: StringQueryOperatorInput
+    markdownCaptions: BooleanQueryOperatorInput
     maxWidth: IntQueryOperatorInput
     name: StringQueryOperatorInput
     path: StringQueryOperatorInput
     pathCheck: BooleanQueryOperatorInput
+    pathPrefix: StringQueryOperatorInput
     plugins: SitePluginPluginOptionsPluginsFilterListInput
     query: StringQueryOperatorInput
     rule: SitePluginPluginOptionsRuleFilterInput
+    showCaptions: BooleanQueryOperatorInput
+    tracedSVG: BooleanQueryOperatorInput
+    withWebp: BooleanQueryOperatorInput
+    wrapperStyle: StringQueryOperatorInput
 }
 
 input SitePluginPluginOptionsPluginsFilterInput {
@@ -6312,8 +6645,18 @@ input SitePluginPluginOptionsPluginsFilterListInput {
 }
 
 input SitePluginPluginOptionsPluginsPluginOptionsFilterInput {
+    backgroundColor: StringQueryOperatorInput
+    disableBgImage: BooleanQueryOperatorInput
+    disableBgImageOnAlpha: BooleanQueryOperatorInput
     linkImagesToOriginal: BooleanQueryOperatorInput
+    loading: StringQueryOperatorInput
+    markdownCaptions: BooleanQueryOperatorInput
     maxWidth: IntQueryOperatorInput
+    pathPrefix: StringQueryOperatorInput
+    showCaptions: BooleanQueryOperatorInput
+    tracedSVG: BooleanQueryOperatorInput
+    withWebp: BooleanQueryOperatorInput
+    wrapperStyle: StringQueryOperatorInput
 }
 
 input SitePluginPluginOptionsRuleFilterInput {

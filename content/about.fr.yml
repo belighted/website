@@ -116,3 +116,12 @@ pride:
     subtitle: Notre ADN belge
     body: Presque tous les Belighters sont des amateurs de bière, cette passion est ancrée dans notre culture belge. Nous avons brassé notre première «Beerlighted» en 2012 dans le cadre d'un team building et avons partagé ce résultat savoureux avec nos amis et clients.
     image: ./about/pride/beerlighted.png
+gallery:
+  - image: ./about/gallery/escape_room_fun.png
+    title: Travailler de n'importe ou
+    subtitle: ça depend de vous
+    icon: pin
+  - image: ./about/gallery/teambuilding_1200_800.png
+    title: Café, boissons et snacks
+    subtitle:
+    icon: coffee
