@@ -1,0 +1,24 @@
+slug: footer
+lang: en
+links:
+  - to: /services/code-review
+    label: Code review
+  - to: /services/ux-review
+    label: UX Review
+  - to: /services/user-testing
+    label: User testing
+  - to: /services/product-development-consultation
+    label: Free assessment
+  - to: /services/strategy-workshop
+    label: Strategy workshop
+  - to: /services/design sprint
+    label: Design sprint
+  - to: /technologies
+    label: Technnologies
+  - to: /careers
+    label: Careers
+  - to: /resources/saas-guide-to-software-as-service
+    label: Saas
+  - to: /estimate-project
+    label: Estimate project
+

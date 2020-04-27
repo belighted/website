@@ -1,12 +1,31 @@
-import React from "react";
+import React, { useContext } from "react";
 import Contact from "./components/footer/Contact";
 import Social from "./components/footer/Social";
-import LinkToService from "../services/LinkToService";
-import LinkToResource from "../resources/LinkToResource";
 import LocalizedLink from "../links/LocalizedLink";
 import LocalizedHubspotForm from "../forms/LocalizedHubspotForm";
+import { graphql, useStaticQuery } from "gatsby";
+import { I18nContext } from "../i18n/I18n";
 
 const Footer = () => {
+  const lang = useContext(I18nContext);
+  const {
+    footers: { nodes: footers }
+  } = useStaticQuery(graphql`
+    query {
+        footers: allDataYaml(filter: { slug: { eq: "footer" } }) {
+        nodes {
+          lang
+          links {
+            label
+            to
+          }
+        }
+      }
+    }
+  `);
+
+  const footer = footers.find(l => l.lang === lang);
+
   return (
     <div className="c-footer-nav u-padding-vertical-large u-padding-horizontal">
       <div className="o-wrapper">
@@ -17,52 +36,13 @@ const Footer = () => {
           </div>
           <div className="l-footer__links">
             <ul>
-              <li>
-                <LinkToService slug={"code-review"}>Code review</LinkToService>
-              </li>
-              <li>
-                <LinkToService slug={"ux-review"}>UX Review</LinkToService>
-              </li>
-              <li>
-                <LinkToService slug={"user-testing"}>
-                  User testing
-                </LinkToService>
-              </li>
-              <li>
-                <LinkToService slug={"product-development-consultation"}>
-                  Free assessment
-                </LinkToService>
-              </li>
-              <li>
-                <LinkToService slug={"strategy-workshop"}>
-                  Strategy workshop
-                </LinkToService>
-              </li>
-              <li>
-                <LinkToService slug={"design sprint"}>
-                  Design sprint
-                </LinkToService>
-              </li>
-              <li>
-                <LocalizedLink to={"/technologies"}>
-                  Technnologies
-                </LocalizedLink>
-              </li>
-              <li>
-                <LocalizedLink to={"/careers"}>Careers</LocalizedLink>
-              </li>
-            </ul>
-            <ul>
-              <li>
-                <LinkToResource slug={"saas-guide-to-software-as-service"}>
-                  Saas
-                </LinkToResource>
-              </li>
-              <li>
-                <LocalizedLink to={"/estimate-project"}>
-                  Estimate project
-                </LocalizedLink>
-              </li>
+              {footer.links.map(link => (
+                <li key={link.to}>
+                  <LocalizedLink to={link.to}>
+                    {link.label}
+                  </LocalizedLink>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="o-box o-box--light-bg">
