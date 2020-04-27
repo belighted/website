@@ -33,6 +33,7 @@ const BlogListPage = ({
 export const query = graphql`
   query BlogListPageQuery($lang: String!, $skip: Int!, $limit: Int!) {
     posts: allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: [DESC] },
       filter: {
         frontmatter: { lang: { eq: $lang } }
         fields: { collection: { eq: "articles" } }

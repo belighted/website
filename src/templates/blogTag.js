@@ -25,6 +25,7 @@ const BlogTag = ({
 export const query = graphql`
   query MyQuery($tag: String!, $lang: String!) {
     posts: allMarkdownRemark(
+      sort: { fields: frontmatter___date, order: [DESC] }
       filter: {
         fields: { collection: { eq: "articles" } }
         frontmatter: {

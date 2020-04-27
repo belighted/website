@@ -1,0 +1,5 @@
+.l-footer{
+  display: grid;
+  grid-gap: $inuit-global-spacing-unit;
+  grid-template-areas: "social links links form";
+}

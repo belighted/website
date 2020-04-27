@@ -96,7 +96,7 @@ export const query = graphql`
     }
     posts: allMarkdownRemark(
       limit: 3
-      sort: { fields: frontmatter___date }
+      sort: { fields: frontmatter___date, order: [DESC] },
       filter: {
         frontmatter: { lang: { eq: $lang } }
         fields: { collection: { eq: "articles" } }
@@ -107,6 +107,7 @@ export const query = graphql`
           slug
           title
         }
+        excerpt
       }
     }
   }
