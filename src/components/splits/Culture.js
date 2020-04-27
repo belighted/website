@@ -1,9 +1,10 @@
 import React from "react";
+import { MDXRenderer } from "gatsby-plugin-mdx";
 
 const Culture = ({
   culture: {
     frontmatter: { title, values },
-    html
+    body
   }
 }) => {
   return (
@@ -16,8 +17,9 @@ const Culture = ({
             </h3>
             <div
               className="c-wysiwyg c-wysiwyg--dark"
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
+            >
+              <MDXRenderer>{body}</MDXRenderer>
+            </div>
           </div>
           <ul className="o-list-bare">
             {values.map(value => (

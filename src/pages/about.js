@@ -102,7 +102,7 @@ export const query = graphql`
           value
         }
       }
-      html
+      body
     }
   }
 `;
