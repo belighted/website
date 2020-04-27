@@ -60,13 +60,6 @@ clients:
       - E-commerce
       - Financial_Services
       - Startup
-  - image: https://www.belighted.com/hubfs/Qualifio.png
-    slug: qualifio
-    title: "Belighted a renforcé l'équipe Qualifio pour l'aider à se développer."
-    tags:
-      - SaaS
-      - Scale-up
-      - Media&Advertising
   - text:
       Admeet est un générateur de politique de confidentialité SaaS. L'utilisateur
       se sert de l'application pour définir son profil RGPD au moyen d'un questionnaire.
@@ -169,3 +162,10 @@ clients:
     tags:
       - Corporate
       - Transport&Energy
+  - image: https://www.belighted.com/hubfs/Qualifio.png
+      slug: qualifio
+      text: "Belighted a renforcé l'équipe Qualifio pour l'aider à se développer."
+      tags:
+        - SaaS
+        - Scale-up
+        - Media&Advertising

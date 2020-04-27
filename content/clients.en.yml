@@ -47,13 +47,6 @@ clients:
       - SaaS
       - Scale-up
       - Entertainment
-  - image: https://www.belighted.com/hubfs/Qualifio.png
-    slug: qualifio
-    title: "Belighted extended Qualifio's team to help them scale"
-    tags:
-      - SaaS
-      - Scale-up
-      - Media&Advertising
   - image: https://www.belighted.com/hubfs/serpahin.png
     slug: seraphin
     title: "Seraphin outsources its product development and then recruits a CTO"
@@ -149,3 +142,10 @@ clients:
     tags:
       - Corporate
       - Transport&Energy
+  - image: https://www.belighted.com/hubfs/Qualifio.png
+    slug: qualifio
+    text: "Belighted extended Qualifio's team to help them scale"
+    tags:
+      - SaaS
+      - Scale-up
+      - Media&Advertising
