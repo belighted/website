@@ -2,11 +2,15 @@ import React from "react";
 
 import LinkToCase from "./LinkToCase";
 import { graphql, useStaticQuery } from "gatsby";
+import ClientLogo from "../clients/ClientLogo";
 
 const CaseCard = ({ node, link, cta }) => {
   return (
     <div className="o-box o-box--light-bg">
-      <img src={node.image} alt={node.slug} className="u-margin-bottom" />
+      {link && (
+        <img src={node.image} alt={node.slug} className="u-margin-bottom" />
+      )}
+      {!link && <ClientLogo slug={node.slug} />}
       <h4 className="c-heading c-heading--4">
         {link && (
           <LinkToCase slug={node.slug}>
@@ -43,11 +47,7 @@ const ClientsPageList = ({ clients, cta }) => {
     <ul className="o-list-bare c-cases-list l-grid l-grid--4cols">
       {clients.map(node => (
         <li key={node.slug} className="u-margin-bottom">
-          <CaseCard
-            node={node}
-            link={slugs.includes(node.slug)}
-            cta={cta}
-          />
+          <CaseCard node={node} link={slugs.includes(node.slug)} cta={cta} />
         </li>
       ))}
     </ul>

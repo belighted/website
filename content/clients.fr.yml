@@ -163,9 +163,9 @@ clients:
       - Corporate
       - Transport&Energy
   - image: https://www.belighted.com/hubfs/Qualifio.png
-      slug: qualifio
-      text: "Belighted a renforcé l'équipe Qualifio pour l'aider à se développer."
-      tags:
-        - SaaS
-        - Scale-up
-        - Media&Advertising
+    slug: qualifio
+    text: "Belighted a renforcé l'équipe Qualifio pour l'aider à se développer."
+    tags:
+      - SaaS
+      - Scale-up
+      - Media&Advertising
