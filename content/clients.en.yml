@@ -65,6 +65,7 @@ clients:
       Admeet is SaaS privacy policy builder. The user uses the application to define his GDPR profil through a survey. The application will then compose his own privacy policy.
     title: Admeet
     slug: admeet
+    image: /
     tags:
       - SaaS
       - Startup

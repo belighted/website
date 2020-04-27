@@ -39,3 +39,6 @@ clients:
   - value: rights-up
     image: images/clients/logo-rightsup.png
     type: default
+  - value: admeet
+    image: images/clients/admeet.png
+    type: default

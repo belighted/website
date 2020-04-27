@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { graphql } from "gatsby";
 import ClientLogo from "../../../clients/ClientLogo";
+import LinkToCase from "../../../cases/LinkToCase";
+import { I18nContext } from "../../../i18n/I18n";
 
 const Case = ({ node }) => {
+  const lang = useContext(I18nContext);
   return (
     <div className="l-grid l-grid--2cols">
       <div>
@@ -14,6 +17,13 @@ const Case = ({ node }) => {
           className="c-wysiwyg c-wysiwyg--dark"
           dangerouslySetInnerHTML={{ __html: node.body }}
         />
+        <div className="u-margin-top">
+          <LinkToCase slug={node.slug}>
+            {lang === "en"
+              ? "Read full case study"
+              : "Lire l'étude de cas complète"}
+          </LinkToCase>
+        </div>
       </div>
       <div>
         <ul>

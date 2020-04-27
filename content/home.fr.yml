@@ -40,7 +40,7 @@ slides:
         link: /services/product-development-consultation
         modifier: outline-default
 cases:
-  - slug: rights-up
+  - slug: rightsup
     title: "Rights'Up prend son envol grâce au Design Sprint "
     body: 'Chaque industrie comporte son lot de difficultés. Le secteur de la musique est reconnu pour sa complexité juridique. Rights’Up est une application de gestion de contrats conçue pour aider les plus petites maisons de disques à percevoir et à reverser les royalties. Des algorithmes et des processus de calcul complexes sont utilisés pour comparer les contrats avec les données des ventes provenant de plusieurs sources. Belighted travaille avec Rights''Up sur un plan de développement progressif et efficace.<a href="/fr/clients?hsLang=fr">Lire l''étude de cas complète →</a>'
     results:
