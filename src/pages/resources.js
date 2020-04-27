@@ -38,7 +38,7 @@ export const query = graphql`
           link
         }
       }
-      html
+      body
     }
     contentYaml(slug: { eq: "resources" }, lang: { eq: $lang }) {
       title

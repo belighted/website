@@ -5,7 +5,7 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 
 const LeadingBrands = () => {
   const {
-    markdownRemark: {
+    mdx: {
       frontmatter: { title, list },
       body
     }

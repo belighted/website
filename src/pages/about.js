@@ -14,7 +14,7 @@ const AboutPage = ({
   pageContext,
   data: {
     contentYaml: { title, sections, history, pride, gallery },
-    markdownRemark
+    culture
   }
 }) => {
   return (
@@ -38,7 +38,7 @@ const AboutPage = ({
       <Section section={findSection(sections, "pride")} withoutEyebrow>
         <Pride pride={pride} />
       </Section>
-      <Culture culture={markdownRemark} />
+      <Culture culture={culture} />
       <Jobs section={findSection(sections, "jobs")} />
       <Gallery gallery={gallery} />
     </Layout>

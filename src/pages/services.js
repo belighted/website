@@ -65,7 +65,7 @@ export const query = graphql`
           link
         }
       }
-      html
+      body
     }
     allTestimonialsYaml(filter: { lang: { eq: $lang } }) {
       nodes {
