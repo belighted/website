@@ -9,7 +9,7 @@ const SubFooter = () => {
           © 2019 Belighted - SaaS & Software Development Agency
         </LocalizedLink>
         <a
-          href="/files/Belighted-GTC-2017.pdf"
+          href="/Belighted-GTC-2017.pdf"
           className="c-subfooter__item"
         >
           Terms & Conditions
