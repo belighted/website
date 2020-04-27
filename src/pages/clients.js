@@ -6,14 +6,14 @@ import ClientsPageList from "../components/cases/ClientsPageList";
 const ClientsPage = ({
   pageContext,
   data: {
-    clients: { title, clients }
+    clients: { title, clients, cta }
   }
 }) => {
   return (
     <Layout context={pageContext} page={"clients"}>
       <div className="o-wrapper c-section">
         <h1 className="c-heading c-heading--1 c-heading--title">{title}</h1>
-        <ClientsPageList clients={clients} />
+        <ClientsPageList clients={clients} cta={cta} />
       </div>
     </Layout>
   );
@@ -25,8 +25,11 @@ export const query = graphql`
   query ClientPage($lang: String!) {
     clients: contentYaml(slug: { eq: "clients" }, lang: { eq: $lang }) {
       title
+      cta {
+        label
+      }
       clients {
-        slug  
+        slug
         image
         title
         tags

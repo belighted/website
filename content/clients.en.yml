@@ -1,6 +1,8 @@
 slug: clients
 lang: en
 title: Clients
+cta:
+  label: Learn more
 clients:
   - image: https://www.belighted.com/hubfs/Dokeos.png
     slug: dokeos
