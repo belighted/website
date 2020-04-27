@@ -1,21 +1,19 @@
 import React from "react";
 import Layout from "../components/layout/Layout";
-import ClientsCasesList from "../components/cases/ClientCasesList";
 import { graphql } from "gatsby";
+import ClientsPageList from "../components/cases/ClientsPageList";
 
 const ClientsPage = ({
   pageContext,
   data: {
-    markdownRemark: {
-      frontmatter: { title }
-    }
+    clients: { title, clients }
   }
 }) => {
   return (
     <Layout context={pageContext} page={"clients"}>
       <div className="o-wrapper c-section">
         <h1 className="c-heading c-heading--1 c-heading--title">{title}</h1>
-        <ClientsCasesList />
+        <ClientsPageList clients={clients} />
       </div>
     </Layout>
   );
@@ -25,11 +23,14 @@ export default ClientsPage;
 
 export const query = graphql`
   query ClientPage($lang: String!) {
-    markdownRemark(
-      frontmatter: { slug: { eq: "clients" }, lang: { eq: $lang } }
-    ) {
-      frontmatter {
+    clients: contentYaml(slug: { eq: "clients" }, lang: { eq: $lang }) {
+      title
+      clients {
+        slug  
+        image
         title
+        tags
+        text
       }
     }
   }

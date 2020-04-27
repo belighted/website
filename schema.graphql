@@ -212,6 +212,8 @@ type DataYaml implements Node {
     clients: [DataYamlClients]
     id: ID!
     internal: Internal!
+    lang: String
+    links: [DataYamlLinks]
     parent: Node
     skills: [DataYamlSkills]
     slug: String
@@ -246,6 +248,11 @@ type DataYamlGroupConnection {
     nodes: [DataYaml!]!
     pageInfo: PageInfo!
     totalCount: Int!
+}
+
+type DataYamlLinks {
+    label: String
+    to: String
 }
 
 type DataYamlSkills {
@@ -737,18 +744,15 @@ type MarkdownRemarkFields {
 type MarkdownRemarkFrontmatter {
     author: String
     clients: [MarkdownRemarkFrontmatterClients]
-    cta: MarkdownRemarkFrontmatterCta
     date: Float
     description: String
     image: File
     lang: String
-    list: [String]
     originalPath: String
     slug: String
     status: String
     tags: [MarkdownRemarkFrontmatterTags]
     title: String
-    values: [MarkdownRemarkFrontmatterValues]
 }
 
 type MarkdownRemarkFrontmatterClients {
@@ -759,18 +763,8 @@ type MarkdownRemarkFrontmatterClients {
     title: String
 }
 
-type MarkdownRemarkFrontmatterCta {
-    link: String
-    title: String
-}
-
 type MarkdownRemarkFrontmatterTags {
     label: String
-    value: String
-}
-
-type MarkdownRemarkFrontmatterValues {
-    key: String
     value: String
 }
 
@@ -828,9 +822,22 @@ type MdxFields {
 }
 
 type MdxFrontmatter {
+    cta: MdxFrontmatterCta
     lang: String
+    list: [String]
     slug: String
     title: String!
+    values: [MdxFrontmatterValues]
+}
+
+type MdxFrontmatterCta {
+    link: String
+    title: String
+}
+
+type MdxFrontmatterValues {
+    key: String
+    value: String
 }
 
 type MdxGroupConnection {
@@ -929,7 +936,7 @@ type Query {
     casesYaml(about: StringQueryOperatorInput, challenges: StringQueryOperatorInput, children: NodeFilterListInput, goals: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, logo: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, problem: StringQueryOperatorInput, results: StringQueryOperatorInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput): CasesYaml
     categoriesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, list: StringQueryOperatorInput, order: IntQueryOperatorInput, parent: NodeFilterInput, services: StringQueryOperatorInput, short_description: StringQueryOperatorInput, slug: StringQueryOperatorInput, technologies: StringQueryOperatorInput, title: StringQueryOperatorInput): CategoriesYaml
     contentYaml(body: StringQueryOperatorInput, cases: ContentYamlCasesFilterListInput, categories: ContentYamlCategoriesFilterListInput, children: NodeFilterListInput, cta: ContentYamlCtaFilterInput, formId: StringQueryOperatorInput, gallery: ContentYamlGalleryFilterListInput, history: ContentYamlHistoryFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, parent: NodeFilterInput, pride: ContentYamlPrideFilterListInput, sections: ContentYamlSectionsFilterListInput, slides: ContentYamlSlidesFilterListInput, slug: StringQueryOperatorInput, statistics: ContentYamlStatisticsFilterListInput, team: ContentYamlTeamFilterListInput, title: StringQueryOperatorInput): ContentYaml
-    dataYaml(children: NodeFilterListInput, clients: DataYamlClientsFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, skills: DataYamlSkillsFilterListInput, slug: StringQueryOperatorInput, technologies: DataYamlTechnologiesFilterListInput): DataYaml
+    dataYaml(children: NodeFilterListInput, clients: DataYamlClientsFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, links: DataYamlLinksFilterListInput, parent: NodeFilterInput, skills: DataYamlSkillsFilterListInput, slug: StringQueryOperatorInput, technologies: DataYamlTechnologiesFilterListInput): DataYaml
     directory(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): Directory
     file(absolutePath: StringQueryOperatorInput, accessTime: DateQueryOperatorInput, atime: DateQueryOperatorInput, atimeMs: FloatQueryOperatorInput, base: StringQueryOperatorInput, birthTime: DateQueryOperatorInput, birthtime: DateQueryOperatorInput, birthtimeMs: FloatQueryOperatorInput, blksize: IntQueryOperatorInput, blocks: IntQueryOperatorInput, changeTime: DateQueryOperatorInput, childCasesYaml: CasesYamlFilterInput, childCategoriesYaml: CategoriesYamlFilterInput, childContentYaml: ContentYamlFilterInput, childDataYaml: DataYamlFilterInput, childImageSharp: ImageSharpFilterInput, childMarkdownRemark: MarkdownRemarkFilterInput, childMdx: MdxFilterInput, childProcessYaml: ProcessYamlFilterInput, childResourcesYaml: ResourcesYamlFilterInput, childServicesYaml: ServicesYamlFilterInput, childTestimonialsYaml: TestimonialsYamlFilterInput, children: NodeFilterListInput, ctime: DateQueryOperatorInput, ctimeMs: FloatQueryOperatorInput, dev: IntQueryOperatorInput, dir: StringQueryOperatorInput, ext: StringQueryOperatorInput, extension: StringQueryOperatorInput, gid: IntQueryOperatorInput, id: StringQueryOperatorInput, ino: FloatQueryOperatorInput, internal: InternalFilterInput, mode: IntQueryOperatorInput, modifiedTime: DateQueryOperatorInput, mtime: DateQueryOperatorInput, mtimeMs: FloatQueryOperatorInput, name: StringQueryOperatorInput, nlink: IntQueryOperatorInput, parent: NodeFilterInput, prettySize: StringQueryOperatorInput, publicURL: StringQueryOperatorInput, rdev: IntQueryOperatorInput, relativeDirectory: StringQueryOperatorInput, relativePath: StringQueryOperatorInput, root: StringQueryOperatorInput, size: IntQueryOperatorInput, sourceInstanceName: StringQueryOperatorInput, uid: IntQueryOperatorInput): File
     imageSharp(children: NodeFilterListInput, fixed: ImageSharpFixedFilterInput, fluid: ImageSharpFluidFilterInput, id: StringQueryOperatorInput, internal: InternalFilterInput, original: ImageSharpOriginalFilterInput, parent: NodeFilterInput, resize: ImageSharpResizeFilterInput, resolutions: ImageSharpResolutionsFilterInput, sizes: ImageSharpSizesFilterInput): ImageSharp
@@ -1265,26 +1272,16 @@ type SitePluginPackageJsonPeerDependencies {
 }
 
 type SitePluginPluginOptions {
-    backgroundColor: String
     defaultQuality: Int
-    disableBgImage: Boolean
-    disableBgImageOnAlpha: Boolean
     feeds: [SitePluginPluginOptionsFeeds]
     linkImagesToOriginal: Boolean
-    loading: String
-    markdownCaptions: Boolean
     maxWidth: Int
     name: String
     path: String
     pathCheck: Boolean
-    pathPrefix: String
     plugins: [SitePluginPluginOptionsPlugins]
     query: String
     rule: SitePluginPluginOptionsRule
-    showCaptions: Boolean
-    tracedSVG: Boolean
-    withWebp: Boolean
-    wrapperStyle: String
 }
 
 type SitePluginPluginOptionsFeeds {
@@ -1306,18 +1303,8 @@ type SitePluginPluginOptionsPlugins {
 }
 
 type SitePluginPluginOptionsPluginsPluginOptions {
-    backgroundColor: String
-    disableBgImage: Boolean
-    disableBgImageOnAlpha: Boolean
     linkImagesToOriginal: Boolean
-    loading: String
-    markdownCaptions: Boolean
     maxWidth: Int
-    pathPrefix: String
-    showCaptions: Boolean
-    tracedSVG: Boolean
-    withWebp: Boolean
-    wrapperStyle: String
 }
 
 type SitePluginPluginOptionsRule {
@@ -1700,6 +1687,8 @@ enum ContentYamlFieldsEnum {
     gallery___image___childDataYaml___children
     gallery___image___childDataYaml___clients
     gallery___image___childDataYaml___id
+    gallery___image___childDataYaml___lang
+    gallery___image___childDataYaml___links
     gallery___image___childDataYaml___skills
     gallery___image___childDataYaml___slug
     gallery___image___childDataYaml___technologies
@@ -1860,6 +1849,8 @@ enum ContentYamlFieldsEnum {
     history___image___childDataYaml___children
     history___image___childDataYaml___clients
     history___image___childDataYaml___id
+    history___image___childDataYaml___lang
+    history___image___childDataYaml___links
     history___image___childDataYaml___skills
     history___image___childDataYaml___slug
     history___image___childDataYaml___technologies
@@ -2065,6 +2056,8 @@ enum ContentYamlFieldsEnum {
     pride___image___childDataYaml___children
     pride___image___childDataYaml___clients
     pride___image___childDataYaml___id
+    pride___image___childDataYaml___lang
+    pride___image___childDataYaml___links
     pride___image___childDataYaml___skills
     pride___image___childDataYaml___slug
     pride___image___childDataYaml___technologies
@@ -2242,6 +2235,8 @@ enum ContentYamlFieldsEnum {
     team___image___childDataYaml___children
     team___image___childDataYaml___clients
     team___image___childDataYaml___id
+    team___image___childDataYaml___lang
+    team___image___childDataYaml___links
     team___image___childDataYaml___skills
     team___image___childDataYaml___slug
     team___image___childDataYaml___technologies
@@ -2403,6 +2398,10 @@ enum DataYamlFieldsEnum {
     internal___mediaType
     internal___owner
     internal___type
+    lang
+    links
+    links___label
+    links___to
     parent___children
     parent___children___children
     parent___children___children___children
@@ -2935,6 +2934,10 @@ enum FileFieldsEnum {
     childDataYaml___internal___mediaType
     childDataYaml___internal___owner
     childDataYaml___internal___type
+    childDataYaml___lang
+    childDataYaml___links
+    childDataYaml___links___label
+    childDataYaml___links___to
     childDataYaml___parent___children
     childDataYaml___parent___children___children
     childDataYaml___parent___children___id
@@ -3074,8 +3077,6 @@ enum FileFieldsEnum {
     childMarkdownRemark___frontmatter___clients___tags
     childMarkdownRemark___frontmatter___clients___text
     childMarkdownRemark___frontmatter___clients___title
-    childMarkdownRemark___frontmatter___cta___link
-    childMarkdownRemark___frontmatter___cta___title
     childMarkdownRemark___frontmatter___date
     childMarkdownRemark___frontmatter___description
     childMarkdownRemark___frontmatter___image___absolutePath
@@ -3115,7 +3116,6 @@ enum FileFieldsEnum {
     childMarkdownRemark___frontmatter___image___sourceInstanceName
     childMarkdownRemark___frontmatter___image___uid
     childMarkdownRemark___frontmatter___lang
-    childMarkdownRemark___frontmatter___list
     childMarkdownRemark___frontmatter___originalPath
     childMarkdownRemark___frontmatter___slug
     childMarkdownRemark___frontmatter___status
@@ -3123,9 +3123,6 @@ enum FileFieldsEnum {
     childMarkdownRemark___frontmatter___tags___label
     childMarkdownRemark___frontmatter___tags___value
     childMarkdownRemark___frontmatter___title
-    childMarkdownRemark___frontmatter___values
-    childMarkdownRemark___frontmatter___values___key
-    childMarkdownRemark___frontmatter___values___value
     childMarkdownRemark___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childMarkdownRemark___headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childMarkdownRemark___headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -3179,9 +3176,15 @@ enum FileFieldsEnum {
     childMdx___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childMdx___fields___collection @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childMdx___fileAbsolutePath
+    childMdx___frontmatter___cta___link
+    childMdx___frontmatter___cta___title
     childMdx___frontmatter___lang
+    childMdx___frontmatter___list
     childMdx___frontmatter___slug
     childMdx___frontmatter___title
+    childMdx___frontmatter___values
+    childMdx___frontmatter___values___key
+    childMdx___frontmatter___values___value
     childMdx___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childMdx___headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     childMdx___headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -3447,6 +3450,8 @@ enum FileFieldsEnum {
     childTestimonialsYaml___image___childDataYaml___children
     childTestimonialsYaml___image___childDataYaml___clients
     childTestimonialsYaml___image___childDataYaml___id
+    childTestimonialsYaml___image___childDataYaml___lang
+    childTestimonialsYaml___image___childDataYaml___links
     childTestimonialsYaml___image___childDataYaml___skills
     childTestimonialsYaml___image___childDataYaml___slug
     childTestimonialsYaml___image___childDataYaml___technologies
@@ -3932,8 +3937,6 @@ enum MarkdownRemarkFieldsEnum {
     frontmatter___clients___tags
     frontmatter___clients___text
     frontmatter___clients___title
-    frontmatter___cta___link
-    frontmatter___cta___title
     frontmatter___date
     frontmatter___description
     frontmatter___image___absolutePath
@@ -3988,6 +3991,8 @@ enum MarkdownRemarkFieldsEnum {
     frontmatter___image___childDataYaml___children
     frontmatter___image___childDataYaml___clients
     frontmatter___image___childDataYaml___id
+    frontmatter___image___childDataYaml___lang
+    frontmatter___image___childDataYaml___links
     frontmatter___image___childDataYaml___skills
     frontmatter___image___childDataYaml___slug
     frontmatter___image___childDataYaml___technologies
@@ -4092,7 +4097,6 @@ enum MarkdownRemarkFieldsEnum {
     frontmatter___image___sourceInstanceName
     frontmatter___image___uid
     frontmatter___lang
-    frontmatter___list
     frontmatter___originalPath
     frontmatter___slug
     frontmatter___status
@@ -4100,9 +4104,6 @@ enum MarkdownRemarkFieldsEnum {
     frontmatter___tags___label
     frontmatter___tags___value
     frontmatter___title
-    frontmatter___values
-    frontmatter___values___key
-    frontmatter___values___value
     headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -4207,9 +4208,15 @@ enum MdxFieldsEnum {
     excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     fields___collection @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     fileAbsolutePath
+    frontmatter___cta___link
+    frontmatter___cta___title
     frontmatter___lang
+    frontmatter___list
     frontmatter___slug
     frontmatter___title
+    frontmatter___values
+    frontmatter___values___key
+    frontmatter___values___value
     headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -4947,23 +4954,17 @@ enum SitePageFieldsEnum {
     pluginCreator___parent___parent___children
     pluginCreator___parent___parent___id
     pluginCreator___pluginFilepath
-    pluginCreator___pluginOptions___backgroundColor
     pluginCreator___pluginOptions___defaultQuality
-    pluginCreator___pluginOptions___disableBgImage
-    pluginCreator___pluginOptions___disableBgImageOnAlpha
     pluginCreator___pluginOptions___feeds
     pluginCreator___pluginOptions___feeds___description
     pluginCreator___pluginOptions___feeds___output
     pluginCreator___pluginOptions___feeds___query
     pluginCreator___pluginOptions___feeds___title
     pluginCreator___pluginOptions___linkImagesToOriginal
-    pluginCreator___pluginOptions___loading
-    pluginCreator___pluginOptions___markdownCaptions
     pluginCreator___pluginOptions___maxWidth
     pluginCreator___pluginOptions___name
     pluginCreator___pluginOptions___path
     pluginCreator___pluginOptions___pathCheck
-    pluginCreator___pluginOptions___pathPrefix
     pluginCreator___pluginOptions___plugins
     pluginCreator___pluginOptions___plugins___browserAPIs
     pluginCreator___pluginOptions___plugins___id
@@ -4974,10 +4975,6 @@ enum SitePageFieldsEnum {
     pluginCreator___pluginOptions___plugins___version
     pluginCreator___pluginOptions___query
     pluginCreator___pluginOptions___rule___include
-    pluginCreator___pluginOptions___showCaptions
-    pluginCreator___pluginOptions___tracedSVG
-    pluginCreator___pluginOptions___withWebp
-    pluginCreator___pluginOptions___wrapperStyle
     pluginCreator___resolve
     pluginCreator___ssrAPIs
     pluginCreator___version
@@ -5089,49 +5086,29 @@ enum SitePluginFieldsEnum {
     parent___parent___parent___children
     parent___parent___parent___id
     pluginFilepath
-    pluginOptions___backgroundColor
     pluginOptions___defaultQuality
-    pluginOptions___disableBgImage
-    pluginOptions___disableBgImageOnAlpha
     pluginOptions___feeds
     pluginOptions___feeds___description
     pluginOptions___feeds___output
     pluginOptions___feeds___query
     pluginOptions___feeds___title
     pluginOptions___linkImagesToOriginal
-    pluginOptions___loading
-    pluginOptions___markdownCaptions
     pluginOptions___maxWidth
     pluginOptions___name
     pluginOptions___path
     pluginOptions___pathCheck
-    pluginOptions___pathPrefix
     pluginOptions___plugins
     pluginOptions___plugins___browserAPIs
     pluginOptions___plugins___id
     pluginOptions___plugins___name
     pluginOptions___plugins___nodeAPIs
     pluginOptions___plugins___pluginFilepath
-    pluginOptions___plugins___pluginOptions___backgroundColor
-    pluginOptions___plugins___pluginOptions___disableBgImage
-    pluginOptions___plugins___pluginOptions___disableBgImageOnAlpha
     pluginOptions___plugins___pluginOptions___linkImagesToOriginal
-    pluginOptions___plugins___pluginOptions___loading
-    pluginOptions___plugins___pluginOptions___markdownCaptions
     pluginOptions___plugins___pluginOptions___maxWidth
-    pluginOptions___plugins___pluginOptions___pathPrefix
-    pluginOptions___plugins___pluginOptions___showCaptions
-    pluginOptions___plugins___pluginOptions___tracedSVG
-    pluginOptions___plugins___pluginOptions___withWebp
-    pluginOptions___plugins___pluginOptions___wrapperStyle
     pluginOptions___plugins___resolve
     pluginOptions___plugins___version
     pluginOptions___query
     pluginOptions___rule___include
-    pluginOptions___showCaptions
-    pluginOptions___tracedSVG
-    pluginOptions___withWebp
-    pluginOptions___wrapperStyle
     resolve
     ssrAPIs
     version
@@ -5316,6 +5293,10 @@ enum TestimonialsYamlFieldsEnum {
     image___childDataYaml___internal___mediaType
     image___childDataYaml___internal___owner
     image___childDataYaml___internal___type
+    image___childDataYaml___lang
+    image___childDataYaml___links
+    image___childDataYaml___links___label
+    image___childDataYaml___links___to
     image___childDataYaml___parent___children
     image___childDataYaml___parent___id
     image___childDataYaml___skills
@@ -5405,13 +5386,11 @@ enum TestimonialsYamlFieldsEnum {
     image___childMarkdownRemark___frontmatter___date
     image___childMarkdownRemark___frontmatter___description
     image___childMarkdownRemark___frontmatter___lang
-    image___childMarkdownRemark___frontmatter___list
     image___childMarkdownRemark___frontmatter___originalPath
     image___childMarkdownRemark___frontmatter___slug
     image___childMarkdownRemark___frontmatter___status
     image___childMarkdownRemark___frontmatter___tags
     image___childMarkdownRemark___frontmatter___title
-    image___childMarkdownRemark___frontmatter___values
     image___childMarkdownRemark___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     image___childMarkdownRemark___headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     image___childMarkdownRemark___headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -5442,8 +5421,10 @@ enum TestimonialsYamlFieldsEnum {
     image___childMdx___fields___collection @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     image___childMdx___fileAbsolutePath
     image___childMdx___frontmatter___lang
+    image___childMdx___frontmatter___list
     image___childMdx___frontmatter___slug
     image___childMdx___frontmatter___title
+    image___childMdx___frontmatter___values
     image___childMdx___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     image___childMdx___headings___depth @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
     image___childMdx___headings___value @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
@@ -5916,10 +5897,21 @@ input DataYamlFilterInput {
     clients: DataYamlClientsFilterListInput
     id: StringQueryOperatorInput
     internal: InternalFilterInput
+    lang: StringQueryOperatorInput
+    links: DataYamlLinksFilterListInput
     parent: NodeFilterInput
     skills: DataYamlSkillsFilterListInput
     slug: StringQueryOperatorInput
     technologies: DataYamlTechnologiesFilterListInput
+}
+
+input DataYamlLinksFilterInput {
+    label: StringQueryOperatorInput
+    to: StringQueryOperatorInput
+}
+
+input DataYamlLinksFilterListInput {
+    elemMatch: DataYamlLinksFilterInput
 }
 
 input DataYamlSkillsFilterInput {
@@ -6240,26 +6232,18 @@ input MarkdownRemarkFrontmatterClientsFilterListInput {
     elemMatch: MarkdownRemarkFrontmatterClientsFilterInput
 }
 
-input MarkdownRemarkFrontmatterCtaFilterInput {
-    link: StringQueryOperatorInput
-    title: StringQueryOperatorInput
-}
-
 input MarkdownRemarkFrontmatterFilterInput {
     author: StringQueryOperatorInput
     clients: MarkdownRemarkFrontmatterClientsFilterListInput
-    cta: MarkdownRemarkFrontmatterCtaFilterInput
     date: FloatQueryOperatorInput
     description: StringQueryOperatorInput
     image: FileFilterInput
     lang: StringQueryOperatorInput
-    list: StringQueryOperatorInput
     originalPath: StringQueryOperatorInput
     slug: StringQueryOperatorInput
     status: StringQueryOperatorInput
     tags: MarkdownRemarkFrontmatterTagsFilterListInput
     title: StringQueryOperatorInput
-    values: MarkdownRemarkFrontmatterValuesFilterListInput
 }
 
 input MarkdownRemarkFrontmatterTagsFilterInput {
@@ -6269,15 +6253,6 @@ input MarkdownRemarkFrontmatterTagsFilterInput {
 
 input MarkdownRemarkFrontmatterTagsFilterListInput {
     elemMatch: MarkdownRemarkFrontmatterTagsFilterInput
-}
-
-input MarkdownRemarkFrontmatterValuesFilterInput {
-    key: StringQueryOperatorInput
-    value: StringQueryOperatorInput
-}
-
-input MarkdownRemarkFrontmatterValuesFilterListInput {
-    elemMatch: MarkdownRemarkFrontmatterValuesFilterInput
 }
 
 input MarkdownRemarkSortInput {
@@ -6314,10 +6289,27 @@ input MdxFilterInput {
     wordCount: MdxWordCountFilterInput
 }
 
+input MdxFrontmatterCtaFilterInput {
+    link: StringQueryOperatorInput
+    title: StringQueryOperatorInput
+}
+
 input MdxFrontmatterFilterInput {
+    cta: MdxFrontmatterCtaFilterInput
     lang: StringQueryOperatorInput
+    list: StringQueryOperatorInput
     slug: StringQueryOperatorInput
     title: StringQueryOperatorInput
+    values: MdxFrontmatterValuesFilterListInput
+}
+
+input MdxFrontmatterValuesFilterInput {
+    key: StringQueryOperatorInput
+    value: StringQueryOperatorInput
+}
+
+input MdxFrontmatterValuesFilterListInput {
+    elemMatch: MdxFrontmatterValuesFilterInput
 }
 
 input MdxHeadingMdxFilterInput {
@@ -6607,26 +6599,16 @@ input SitePluginPluginOptionsFeedsFilterListInput {
 }
 
 input SitePluginPluginOptionsFilterInput {
-    backgroundColor: StringQueryOperatorInput
     defaultQuality: IntQueryOperatorInput
-    disableBgImage: BooleanQueryOperatorInput
-    disableBgImageOnAlpha: BooleanQueryOperatorInput
     feeds: SitePluginPluginOptionsFeedsFilterListInput
     linkImagesToOriginal: BooleanQueryOperatorInput
-    loading: StringQueryOperatorInput
-    markdownCaptions: BooleanQueryOperatorInput
     maxWidth: IntQueryOperatorInput
     name: StringQueryOperatorInput
     path: StringQueryOperatorInput
     pathCheck: BooleanQueryOperatorInput
-    pathPrefix: StringQueryOperatorInput
     plugins: SitePluginPluginOptionsPluginsFilterListInput
     query: StringQueryOperatorInput
     rule: SitePluginPluginOptionsRuleFilterInput
-    showCaptions: BooleanQueryOperatorInput
-    tracedSVG: BooleanQueryOperatorInput
-    withWebp: BooleanQueryOperatorInput
-    wrapperStyle: StringQueryOperatorInput
 }
 
 input SitePluginPluginOptionsPluginsFilterInput {
@@ -6645,18 +6627,8 @@ input SitePluginPluginOptionsPluginsFilterListInput {
 }
 
 input SitePluginPluginOptionsPluginsPluginOptionsFilterInput {
-    backgroundColor: StringQueryOperatorInput
-    disableBgImage: BooleanQueryOperatorInput
-    disableBgImageOnAlpha: BooleanQueryOperatorInput
     linkImagesToOriginal: BooleanQueryOperatorInput
-    loading: StringQueryOperatorInput
-    markdownCaptions: BooleanQueryOperatorInput
     maxWidth: IntQueryOperatorInput
-    pathPrefix: StringQueryOperatorInput
-    showCaptions: BooleanQueryOperatorInput
-    tracedSVG: BooleanQueryOperatorInput
-    withWebp: BooleanQueryOperatorInput
-    wrapperStyle: StringQueryOperatorInput
 }
 
 input SitePluginPluginOptionsRuleFilterInput {
