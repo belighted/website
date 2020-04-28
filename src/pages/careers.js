@@ -11,7 +11,7 @@ const CareersPage = ({ pageContext, data }) => {
   } = data;
 
   return (
-    <Layout context={pageContext} page={"careers"}>
+    <Layout context={pageContext} page={"careers"} title={contentYaml.title}>
       <section className="c-section c-section--light-bg">
         <div className="o-wrapper">
           <SectionHeader title={contentYaml.title} body={contentYaml.body} />

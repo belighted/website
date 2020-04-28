@@ -19,7 +19,7 @@ const CaseArticle = ({
   data: { casesYaml: post, testimonialsYaml: testimonial },
   pageContext
 }) => (
-  <Layout context={pageContext} page={"blog"}>
+  <Layout context={pageContext} page={"blog"} title={post.title}>
     <article className="o-wrapper">
       <LocalizedLink to={"/clients"}>See all cases</LocalizedLink>
       <h2>{post.title}</h2>

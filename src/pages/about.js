@@ -18,7 +18,7 @@ const AboutPage = ({
   }
 }) => {
   return (
-    <Layout context={pageContext} page={"services"}>
+    <Layout context={pageContext} page={"services"} title={title}>
       <section className="c-section">
         <div className="o-wrapper">
           <h1 className="c-heading c-heading--1 c-heading--title">{title}</h1>

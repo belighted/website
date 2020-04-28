@@ -15,7 +15,7 @@ const ServicePage = ({
   },
   pageContext
 }) => (
-  <Layout context={pageContext} page={"blog"}>
+  <Layout context={pageContext} page={"job"} title={title}>
     <section className="c-section">
       <article className="o-wrapper">
         <Link to={"/careers"}>&#8592; View all of our openings</Link>

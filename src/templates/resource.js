@@ -2,22 +2,29 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
 import Slices from "../components/slices/Slices";
-import OurHistory from "../components/splits/OurHistory";
+import HubspotForm from "../components/forms/HubspotForm";
 
 const ResourcePage = ({
-  data: { resourcesYaml: post, history },
+  data: { resourcesYaml: post },
   pageContext
 }) => (
-  <Layout context={pageContext} page={"resource"}>
-    <section className="c-section">
-      <div className="o-wrapper">
-        <h1 className="c-heading c-heading--1 c-heading--title">
-          {post.title}
-        </h1>
-      </div>
-      <article>{post.slices && <Slices slices={post.slices} />}</article>
-    </section>
-    <OurHistory history={history} />
+  <Layout context={pageContext} page={"resource"} title={post.title}>
+    <div className="o-wrapper l-content-sidebar">
+      <main className="l-content-sidebar__content">
+        <article>
+          <h1 className="c-heading c-heading--1 c-heading--title">
+            {post.title}
+          </h1>
+          {post.slices && <Slices slices={post.slices} />}
+        </article>
+      </main>
+      {post.aside && (
+        <aside className="l-content-sidebar__sidebar">
+          <h2 className="c-heading c-heading--3">{post.aside.title}</h2>
+          <HubspotForm formId={post.aside.formId} />
+        </aside>
+      )}
+    </div>
   </Layout>
 );
 
@@ -26,6 +33,10 @@ export const query = graphql`
     resourcesYaml(slug: { eq: $slug }, lang: { eq: $lang }) {
       slug
       title
+      aside {
+        title
+        formId
+      }
       slices {
         title
         type

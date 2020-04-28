@@ -7,13 +7,13 @@ const Landing = ({
   data: {
     mdx: {
       body,
-      frontmatter: { slug }
+      frontmatter: { slug, title }
     }
   },
   pageContext
 }) => {
   return (
-    <Layout context={pageContext} page={slug}>
+    <Layout context={pageContext} page={slug} title={title}>
       <div className="o-wrapper c-wysiwyg">
         <MDXRenderer>{body}</MDXRenderer>
       </div>

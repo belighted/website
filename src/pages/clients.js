@@ -10,7 +10,7 @@ const ClientsPage = ({
   }
 }) => {
   return (
-    <Layout context={pageContext} page={"clients"}>
+    <Layout context={pageContext} page={"clients"} title={title}>
       <div className="o-wrapper c-section">
         <h1 className="c-heading c-heading--1 c-heading--title">{title}</h1>
         <ClientsPageList clients={clients} cta={cta} />

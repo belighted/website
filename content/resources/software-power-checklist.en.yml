@@ -3,6 +3,9 @@ type: "resources"
 slug: "software-power-checklist"
 originalPath: "https://www.belighted.com/resources/software-power-checklist"
 title: "Don't build your software product without this Power Checklist"
+aside:
+  formId: b7e184b3-302a-4d5f-8392-0669402d45d9
+  title: Download your Software Power Checklist today !
 slices:
   - id: "5311f509-2bbf-4a4c-be0c-249181070895"
     title: null

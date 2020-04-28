@@ -14,7 +14,7 @@ const BlogListPage = ({
   const { currentPage, numPages } = pageContext;
 
   return (
-    <Layout context={pageContext} page={"blog"}>
+    <Layout context={pageContext} page={"blog"} title={"The belighted blog"}>
       <section className={"o-wrapper c-section"}>
         <div className="l-blog">
           <main className="l-blog__main">

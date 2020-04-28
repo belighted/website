@@ -15,7 +15,7 @@ const BlogArticle = ({
   },
   pageContext
 }) => (
-  <Layout context={pageContext} page={"blog"}>
+  <Layout context={pageContext} page={"blog"} title={post.title}>
     <div className="o-wrapper">
       <div className="l-content-sidebar">
         <article className="l-content-sidebar__main">
