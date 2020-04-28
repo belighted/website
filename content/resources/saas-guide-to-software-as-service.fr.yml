@@ -3,6 +3,9 @@ type: "services"
 slug: "saas-guide-to-software-as-service"
 originalPath: "https://www.belighted.com/fr/qu-est-ce-que-le-saas-guide"
 title: "Qu'est-ce que le SaaS ? Guide de référencedu logiciel en tant que service"
+aside:
+  formId: fada6d0f-00d7-4829-a262-608aed248f92
+  title: Télécharger l'E-guide
 slices:
   - id: "45661391-227b-4762-a9ce-870e3a62e75b"
     type: "hero"

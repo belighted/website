@@ -3,6 +3,9 @@ type: "services"
 slug: "saas-guide-to-software-as-service"
 originalPath: "https://www.belighted.com/saas-guide-to-software-as-service"
 title: "What is SaaS? The Ultimate Guide  to Software as a Service"
+aside:
+  formId: b7e184b3-302a-4d5f-8392-0669402d45d9
+  title: Download the E-guide
 slices:
   - id: "d5cccf48-6913-47c3-8e6c-b73b91061721"
     type: "hero"
