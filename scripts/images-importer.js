@@ -20,10 +20,18 @@ findInFiles
         const result = results[key];
         const match = result.matches[0];
         try {
-          const stream = got.stream(url);
+          const stream = download(match);
           const { ext } = await FileType.fromStream(stream);
-          path.join("..", "content", "images", "legacy", `${nanoid}.${ext}`);
-          fs.writeFileSync(newPath, await download(match));
+
+          const newPath = path.join(
+            "..",
+            "content",
+            "images",
+            "legacy",
+            `${nanoid}.${ext}`
+          );
+          stream.pipe(fs.createWriteStream(newPath));
+
           const file = fs.readFileSync(key, "utf-8");
           fs.writeFileSync(
             key,
@@ -32,10 +40,11 @@ findInFiles
           console.log(
             'found "' + match + '" ' + result.count + ' times in "' + key + '"'
           );
-        }catch(e){
+        } catch (e) {
+          stream.destroy();
           fs.writeFileSync(
             key,
-            file.replace(match, 'https://placekeanu.com/200/150')
+            file.replace(match, "https://placekeanu.com/200/150")
           );
         }
       })
