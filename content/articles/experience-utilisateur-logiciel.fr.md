@@ -18,7 +18,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![Expérience utilisateur d'un logiciel ](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(4)-1.png?width=1200&name=Sans%20titre%20(4)-1.png)
+![Expérience utilisateur d'un logiciel ](/images/legacy/sdlgME-vHwEepcSvDU5lM.png)
 
 ### L’expérience utilisateur d'un logiciel est un point crucial pour la réussite de votre solution logicielle SaaS. Les grandes entreprises l’ont bien compris : elles soignent et améliorent sans relâche l’UX de leurs produits.
 
@@ -57,7 +57,7 @@ Proposez-leur plutôt une liste de contrôle concise et facile à suivre pour **
 
 #### **Une interface personnalisée à l'image de votre entreprise**
 
-**![expérience utilisateur logiciel](https://www.belighted.com/hs-fs/hubfs/Sans%20titre.png?width=1200&name=Sans%20titre.png)**
+**![expérience utilisateur logiciel](/images/legacy/p4qsmwcaSWXwm_-4tH8wa.png)**
 
 **Les utilisateurs préfèrent de loin les interfaces qui permettent une interaction forte.** Par exemple, il est très important de leur **donner la possibilité de contacter immédiatement via un chat un représentant de votre entreprise,** ou au pire un robot.
 

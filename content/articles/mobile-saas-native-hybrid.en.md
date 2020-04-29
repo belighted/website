@@ -44,7 +44,7 @@ A hybrid approach brings **[many advantages](https://www.clickz.com/the-pros-con
 
 Salesforce developers have broken down the strengths and weaknesses of using web, native, or hybrid technologies for your mobile app:
 
-![native](https://www.belighted.com/hs-fs/hubfs/native.png?width=1450&name=native.png)\[**[Source](https://trailhead.salesforce.com/trails/mobile_sdk_intro/modules/mobile_sdk_introduction/units/mobilesdk_intro_scenarios)**\]
+![native](/images/legacy/1LeSdbB6WV1tF5EWM9GjT.png)\[**[Source](https://trailhead.salesforce.com/trails/mobile_sdk_intro/modules/mobile_sdk_introduction/units/mobilesdk_intro_scenarios)**\]
 
 Whether you’re building a native or hybrid mobile app, your developers will want to work with a framework. This gives them access to ready-to-use code that they can incorporate as they need.
 

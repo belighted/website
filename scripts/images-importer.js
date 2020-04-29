@@ -69,7 +69,7 @@ const updatePathInContent = (results, images) => {
   Object.keys(results).forEach(file => {
     const content = fs.readFileSync(file, "utf-8");
     const updatedContent = results[file].matches.reduce((acc, match) => {
-      const filename = images[match.replace(/\?.*/, "")].newFileName;
+      const filename = images[match.replace(/\?.*/, "")];
       console.log("replace", match, "by", `/images/legacy/${filename}`);
       return acc.replace(match, `/images/legacy/${filename}`);
     }, content);
@@ -81,6 +81,11 @@ const init = async () => {
   await cleanupDestinationFolder();
   const results = await findImagesHostedOnHubspot();
   const images = getImageMap(results);
+  console.log("got images");
+  fs.writeFileSync(
+    path.join(DESTINATION_PATH, "mappings.json"),
+    JSON.stringify(images)
+  );
   await downloadImages(images);
   updatePathInContent(results, images);
 };

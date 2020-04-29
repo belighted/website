@@ -18,7 +18,7 @@ tags:
     value: saas-development
 status: published
 ---
-![stack-technique](https://www.belighted.com/hs-fs/hubfs/stack-technique.png?width=1200&name=stack-technique.png)
+![stack-technique](/images/legacy/3eEdPOsAu0Tqysq8ua7Qa.png)
 
 Avez-vous déjà entendu parler de **[AARRR](https://www.pierrelechelle.com/aarrr-pirate-metrics)** ? Et de GRRRRR ?
 

@@ -19,7 +19,7 @@ tags:
     value: saas-development
 status: published
 ---
-![Comment Belighted assure-t-elle le suivi de votre développement/projet sur le long terme ?](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(5)-2.png?width=1200&name=Sans%20titre%20(5)-2.png)
+![Comment Belighted assure-t-elle le suivi de votre développement/projet sur le long terme ?](/images/legacy/7wb7Js9WoiVV-Da6o7b6T.png)
 
 ### La réussite d'un projet de développement SaaS dépend toujours de 3 facteurs principaux : l'expérience, le savoir-faire et l'écoute. Découvrez ces éléments dans cet article !
 
@@ -33,7 +33,7 @@ Si une agence vous propose un devis après seulement une heure de discussion, el
 
 ### **Le [Design Sprint](/fr/design-sprint), tester pour mieux régner !**
 
-![Design Sprint développement projet](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(6)-1.png?width=1200&name=Sans%20titre%20(6)-1.png)
+![Design Sprint développement projet](/images/legacy/2nLqw6BNkiqS0jG-3DU3y.png)
 
 Dans le marché actuel, la vélocité est reine. Le [Design Sprint](/fr/design-sprint?hsCtaTracking=d01ceabb-c371-43d7-8dd1-98961cc0e7d6%7C3ec00ba2-92cf-4c30-8290-d7171c6d55f7) vous permettra d'éviter les écueils du surdéveloppement. Le principe du Design Sprint est simple : il consiste en une semaine intense de travail, pendant laquelle nous définirons et concevrons ensemble un prototype cliquable de votre produit validé par le client.
 

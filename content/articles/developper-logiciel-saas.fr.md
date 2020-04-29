@@ -38,7 +38,7 @@ Bien que les logiciels SaaS soient en général plus rapides à développer que 
 Pour qu'il soit durable, le logiciel SaaS doit impérativement **répondre aux enjeux spécifiques de l'entreprise** et pouvoir concrètement être développé. Il s'agira donc de **se demander si le projet est susceptible d'être accepté par la direction** et s'il sera possible de le maintenir sur le long terme. **Les considérations financières** entrent ici bien évidemment en jeu.   
   
 
-![Développer un logiciel SaaS ](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(7)-1.png?width=1200&name=Sans%20titre%20(7)-1.png)
+![Développer un logiciel SaaS ](/images/legacy/13wTZgbvL-e2gSyqdaxtb.png)
 
 #### **  
 Affiner la vision**
@@ -50,7 +50,7 @@ Une fois le projet accepté, la **création d'une maquette fonctionnelle** sera 
 Travailler seul ou en petite équipe sur un projet est parfois néfaste d'un point de vue objectif. Il est donc important de **discuter du logiciel SaaS avec le plus grand nombre de personnes et de prendre en compte leurs avis**. N'hésitez donc pas à **montrer le software à des personnes étrangères au projet, en utilisant les réseaux sociaux par exemple**. Recueillez les adresses mail des testeurs potentiels et envoyez-leur une notice explicative. S'ils sont satisfaits, proposez-leur dès maintenant de s'abonner.  
   
 
-![Développement d'un logiciel SaaS ](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(8)-1.png?width=1200&name=Sans%20titre%20(8)-1.png)
+![Développement d'un logiciel SaaS ](/images/legacy/JeITvk8KTjAnIITpWpQk7.png)
 
 ### **Combien de temps prend la création d’un SaaS en lui-même ?**
 

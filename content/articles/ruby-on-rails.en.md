@@ -32,12 +32,12 @@ While a framework is not necessary when building an app -- developers could writ
 
 There are other frameworks created to support various programming languages, but we prefer Ruby on Rails (RoR) for the back-end when building **[SaaS web applications](/saas-guide-to-software-as-service)**. And we’re not alone. Check out some very famous web apps built using Ruby on Rails:
 
-*   **Airbnb is a large web app built with Ruby on Rails.**![air bnb-1](https://www.belighted.com/hs-fs/hubfs/air%20bnb-1.png?width=1280&name=air%20bnb-1.png)  
+*   **Airbnb is a large web app built with Ruby on Rails.**![air bnb-1](/images/legacy/oMfEntUy9gI4CXAdSxr0I.png)  
       
     
-*   **Fiverr is made possible thanks to Ruby on Rails.**![Fiverr is made possible thanks to Ruby on Rails.](https://www.belighted.com/hs-fs/hubfs/fiverr.png?width=600&name=fiverr.png)  
+*   **Fiverr is made possible thanks to Ruby on Rails.**![Fiverr is made possible thanks to Ruby on Rails.](/images/legacy/pByfg92KeYqFr8vFeOZBh.png)  
     
-*   **Shopify - another site you might not have known was built on Rails.**![shopify](https://www.belighted.com/hs-fs/hubfs/shopify.png?width=600&name=shopify.png)
+*   **Shopify - another site you might not have known was built on Rails.**![shopify](/images/legacy/TNJRV6oBL7G3VE1pjh4u9.png)
 *   **Groupon** 
 *   **Kickstarter**
 *   Dribbble

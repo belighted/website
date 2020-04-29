@@ -20,7 +20,7 @@ tags:
     value: développement-mvp
 status: published
 ---
-![livraison-continue-start-up](https://www.belighted.com/hs-fs/hubfs/livraison-continue-start-up.png?width=1200&name=livraison-continue-start-up.png)
+![livraison-continue-start-up](/images/legacy/VEke_8VE4bqXcciducx31.png)
 
 Chaque fois que vous utilisez Amazon, Gmail ou **[Facebook](https://code.facebook.com/posts/270314900139291/rapid-release-at-massive-scale/)**, vous utilisez la dernière version. En fait, le logiciel a peut-être déjà été mis à jour 15 fois ce jour-là. 
 

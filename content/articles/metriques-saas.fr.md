@@ -22,7 +22,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![metriques-saas](https://www.belighted.com/hs-fs/hubfs/metriques-saas.png?width=1200&name=metriques-saas.png)
+![metriques-saas](/images/legacy/VkVxKS438mFQF7F9dXPZO.png)
 
 Si vous concevez ou développez un [produit SaaS](/fr/qu-est-ce-que-le-saas-guide), vous savez probablement déjà qu'il existe de nombreuses métriques qui permettent de mesurer la performance de votre entreprise. En fait, le nombre de métriques SaaS peut même être écrasant si vous êtes nouveau dans le monde du Software as a Service.
 

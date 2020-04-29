@@ -18,7 +18,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![SaaS pricing](https://www.belighted.com/hs-fs/hubfs/N8FROK.png?width=690&name=N8FROK.png)
+![SaaS pricing](/images/legacy/VQ-E617F98CizraEXps7C.png)
 
 ### Whether your SaaS solution is under development or in production, you are faced with a decision on what pricing structure to offer to your current and future customers. Here are number of different options available to you.
 
@@ -48,7 +48,7 @@ Within this pricing arrangement, the most common approach is pricing based on fe
 
 ### **Per-user pricing**
 
-**![Per user Saas pricing](https://www.belighted.com/hs-fs/hubfs/survey-1.png?width=1071&name=survey-1.png)**
+**![Per user Saas pricing](/images/legacy/nQ3rRh36qfQWh5ezQuWvT.png)**
 
 **Per-user pricing, or pricing per seat, is without a doubt the preferred SaaS pricing model.** A single user pays a fixed monthly price. A second user doubles the price, a third triples the price, and so on.
 

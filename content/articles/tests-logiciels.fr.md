@@ -19,7 +19,7 @@ tags:
     value: développement-mvp
 status: published
 ---
-![tests-logiciels-types-avantages-automatiser](https://www.belighted.com/hs-fs/hubfs/tests-logiciels-types-avantages-automatiser.png?width=1200&name=tests-logiciels-types-avantages-automatiser.png)
+![tests-logiciels-types-avantages-automatiser](/images/legacy/VbJ9E3wOzSQnFlH3YHebO.png)
 
 Les tests représentent un investissement. Comme pour un investissement dans la sécurité d'un logiciel, l'intérêt d'investir dans des tests n'est pas toujours évident car le retour sur investissement n'est pas immédiat. Il n'y a pas de résultats tangibles, pas de nouvelle fonctionnalité pour impressionner les utilisateurs.
 

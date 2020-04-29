@@ -20,7 +20,7 @@ tags:
     value: saas-development
 status: published
 ---
-![applications-mobiles-natives-hybrides](https://www.belighted.com/hs-fs/hubfs/applications-mobiles-natives-hybrides.png?width=1200&name=applications-mobiles-natives-hybrides.png)
+![applications-mobiles-natives-hybrides](/images/legacy/CQ7iju1-lCAX9gyi353pK.png)
 
 La plupart des créateurs d'applications SaaS se rendent compte qu'ils **[doivent développer un équivalent mobile](https://www.inc.com/rahul-varshneya/saas-businesses-don-t-screw-up-your-mobile-app.html)** de leur application web, car les utilisateurs souhaitent disposer des mêmes fonctionnalités sur leurs téléphones.
 
@@ -48,7 +48,7 @@ Une approche hybride apporte de **[nombreux avantages](https://www.clickz.com/th
 
 Des développeurs de Salesforce ont analysé les avantages et les inconvénients de l'utilisation des technologies web, natives et hybrides pour une application mobile :
 
-![native](https://www.belighted.com/hs-fs/hubfs/native.png?width=1450&name=native.png)\[**[Source](https://trailhead.salesforce.com/trails/mobile_sdk_intro/modules/mobile_sdk_introduction/units/mobilesdk_intro_scenarios)**\]
+![native](/images/legacy/1LeSdbB6WV1tF5EWM9GjT.png)\[**[Source](https://trailhead.salesforce.com/trails/mobile_sdk_intro/modules/mobile_sdk_introduction/units/mobilesdk_intro_scenarios)**\]
 
 Que vous conceviez une application mobile native ou hybride, vos développeurs voudront travailler avec un framework. Ils disposent ainsi de code prêt à l'emploi qu'ils peuvent intégrer selon leurs besoins.
 

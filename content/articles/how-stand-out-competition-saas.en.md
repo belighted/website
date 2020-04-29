@@ -18,19 +18,19 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![How to stand out from the competition with a SaaS solution](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(96).png?width=1200&name=Sans%20titre%20(96).png)
+![How to stand out from the competition with a SaaS solution](/images/legacy/LdhcEeZLcQb0g1jjdi1On.png)
 
 ### New technologies have obviously made creating high performance products easier than ever and every sector now has to contend with fierce competition. Not a day goes without some new company entering your commercial space and encroaching on your market share.  Your product urgently needs to stand apart from the competition and transform into a SaaS solution. Here’s how.
 
 ### **1 - Design a unique product**
 
-![How to stand out from the competition with a SaaS solution](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(93).png?width=1200&name=Sans%20titre%20(93).png)
+![How to stand out from the competition with a SaaS solution](/images/legacy/wF6Cm_n1-1mOGE1FpQKnL.png)
 
 Here’s an edifying discovery: most companies simply follow along and try to copy the leaders. Under these conditions, it’s impossible to dominate the market. **To stand out from the competition, it's better to have a bold and unique product that is different from all the others**. The tool or service offered must be designed with the user in mind and not the managers who will be buying it or the engineers who developed it. 
 
 ### **2 - Acquire an exact understanding of your customers and stakeholders**
 
-**![How to stand out from the competition with a SaaS solution](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(95).png?width=1200&name=Sans%20titre%20(95).png)**
+**![How to stand out from the competition with a SaaS solution](/images/legacy/gZ9oqfLmTivkzmXqkShj3.png)**
 
 Everyone prefers to buy a product that gives the impression that it was custom designed for them. You therefore have to understand who your ideal customer is in order to [create a unique product](/ux-review), This will allow you to make bold choices that will make you stand out and create a powerful identity with which customers can identify.
 
@@ -44,7 +44,7 @@ You should recognize right now, if you haven't already, that human beings genera
 
 ### **4 - Be competitive based on value and not on the price**
 
-**![How to stand out from the competition with a SaaS solution](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(94).png?width=1200&name=Sans%20titre%20(94).png)**
+**![How to stand out from the competition with a SaaS solution](/images/legacy/EYpVnhBNjuMsFCCaLr_S0.png)**
 
 It idea of offering the least costly software in an attempt to beat the competition is an attractive one because it is guaranteed attract to anyone interested in saving money. However, the lower the cost of your product, the more you have to run your business with very thin profit margins: this means you may have trouble satisfying your customers when it comes to quality. It is better to complete in terms of value and fine-tune a high-end product at a higher price. Being profitable from the outset will allow your to talk to the users, continually improve the product and regularly deliver value to your customers. There’s nothing better than promoting your reputation by word-of-mouth. 
 

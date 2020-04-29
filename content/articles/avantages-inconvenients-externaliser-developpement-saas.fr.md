@@ -22,7 +22,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![avantages-inconvenients-externaliser-developpement-saas](https://www.belighted.com/hs-fs/hubfs/avantages-inconvenients-externaliser-developpement-saas.png?width=1200&name=avantages-inconvenients-externaliser-developpement-saas.png)
+![avantages-inconvenients-externaliser-developpement-saas](/images/legacy/PNS5v9EIdj5hee1042Nvq.png)
 
 Le développement de votre produit minimum viable est une première étape cruciale dans votre lancement.
 

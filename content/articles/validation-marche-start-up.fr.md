@@ -16,7 +16,7 @@ tags:
     value: the-belighted-way
 status: published
 ---
-![rapidite-startup-validation-marche](https://www.belighted.com/hs-fs/hubfs/rapidite-startup-validation-marche.png?width=1200&name=rapidite-startup-validation-marche.png)
+![rapidite-startup-validation-marche](/images/legacy/RpjjNuH2FqTbYJxtu8sDW.png)
 
 Si vous faites fausse route, autant le savoir au plus vite.
 
