@@ -32,7 +32,7 @@ const init = async () => {
         result.matches.map(async match => {
           console.log("fetching", match);
           const [_, ext] = match.match(/(?:\.)(png|jpg|svg|jpeg|webp|gif)+/);
-          const [remoteFileWithoutParams] = match.match(/.*(?=\?)/);
+          const [remoteFileWithoutParams] = match.match(/.*(?=\?)?/);
           if (importedImages.has(remoteFileWithoutParams)) {
             console.log("already imported ", remoteFileWithoutParams);
             return importedImages.get(remoteFileWithoutParams);
