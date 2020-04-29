@@ -7,17 +7,6 @@ const del = require("del");
 
 const images = path.resolve("content", "images", "legacy");
 
-const replaceMatchInFile = ({ file, match, filename }) => {
-  return new Promise(resolve => {
-    const content = fs.readFileSync(file, "utf-8");
-    fs.writeFile(
-      file,
-      content.replace(match, `/images/legacy/${filename}`),
-      resolve
-    );
-  });
-};
-
 const init = async () => {
   //const deletedPaths = await del([`${images}/*`]);
   //console.log("Deleted files and directories:", deletedPaths.length);
@@ -60,14 +49,14 @@ const init = async () => {
         })
       );
       console.log(fetches);
-
+      let content = fs.readFileSync(file, "utf-8");
       fetches
         .filter(f => f)
-        .map(async (element, index) => {
-          await replaceMatchInFile(element);
-          console.log(`wrote ${index + 1}/${fetches.length}`);
+        .map(({ filename, match }, index) => {
+          content = content.replace(match, `/images/legacy/${filename}`);
+          console.log(`replaces ${index + 1}/${fetches.length}`);
         });
-
+      fs.writeFileSync(file, content);
       console.log(`done ${fileCounter + 1}/${Object.keys(results).length}`);
       fileCounter++;
     })
