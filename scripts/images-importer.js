@@ -9,10 +9,7 @@ const images = path.resolve("content", "images", "legacy");
 
 const init = async () => {
   const deletedPaths = await del([`${images}/*`]);
-  console.log(
-    "Deleted files and directories:",
-    deletedPaths.length
-  );
+  console.log("Deleted files and directories:", deletedPaths.length);
   const results = await findInFiles.find(
     /(https?:\/\/(www)?.belighted.com[^\[\]:]+\.(png|jpg|svg|jpeg|webp|gif)+)/,
     path.resolve(__dirname, "..", "content"),
@@ -32,28 +29,24 @@ const init = async () => {
       const result = results[file];
 
       const fetches = await Promise.all(
-        result.matches.map(
-          match =>
-            new Promise((resolve, reject) => {
-              console.log("fetching", match);
-              const stream = download(match);
-              const [_, ext] = match.match(
-                /(?:\.)(png|jpg|svg|jpeg|webp|gif)+/
-              );
-              const newPath = path.join(images, `${nanoid()}.${ext}`);
-              stream.on("error", () => resolve(null));
-              stream
-                .pipe(fs.createWriteStream(newPath))
-                .on("error", () => resolve(null))
-                .on("end", () =>
-                  resolve({
-                    file,
-                    match,
-                    newPath
-                  })
-                );
-            })
-        )
+        result.matches.map(match => async () => {
+          console.log("fetching", match);
+          const [_, ext] = match.match(/(?:\.)(png|jpg|svg|jpeg|webp|gif)+/);
+          const newPath = path.join(images, `${nanoid()}.${ext}`);
+          try {
+            fs.writeFileSync(
+              newPath,
+              await download("http://unicorn.com/foo.jpg")
+            );
+            resolve({
+              file,
+              match,
+              newPath
+            });
+          } catch (e) {
+            resolve(null);
+          }
+        })
       );
       console.log("done fetching files");
       await Promise.all(
