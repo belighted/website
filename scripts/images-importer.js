@@ -76,30 +76,17 @@ const updatePathInContent = (results, images) => {
       console.log("replace", match, "by", `/images/legacy/${filename}`);
       return acc.replace(match, `/images/legacy/${filename}`);
     }, content);
+    fs.writeFileSync(file, updatedContent);
   });
 };
 
 const init = async () => {
-  let fileCounter = 0;
   await cleanupDestinationFolder();
   const results = await findImagesHostedOnHubspot();
   const images = getImageMap(results);
   await downloadImages(images);
   updatePathInContent(results, images);
 };
-
-/*
-      let content = fs.readFileSync(file, "utf-8");
-      fetches
-        .filter(f => f)
-        .map(({ filename, match }, index) => {
-          content = content.replace(match, `/images/legacy/${filename}`);
-          console.log(`replaces ${index + 1}/${fetches.length}`);
-        });
-      fs.writeFileSync(file, content);
-      console.log(`done ${fileCounter + 1}/${Object.keys(results).length}`);
-      fileCounter++;
-      */
 
 init()
   .catch(e => console.log("big bad error", e))
