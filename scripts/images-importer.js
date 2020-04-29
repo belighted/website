@@ -25,7 +25,7 @@ const init = async () => {
   );
 
   await Promise.all(
-    Object.keys(results).map(async file => {
+    Object.keys(results).map(async (file, fileIndex) => {
       const result = results[file];
 
       const fetches = await Promise.all(
@@ -34,21 +34,19 @@ const init = async () => {
           const [_, ext] = match.match(/(?:\.)(png|jpg|svg|jpeg|webp|gif)+/);
           const newPath = path.join(images, `${nanoid()}.${ext}`);
           try {
-            fs.writeFileSync(
-              newPath,
-              await download("http://unicorn.com/foo.jpg")
-            );
+            fs.writeFileSync(newPath, await download(match));
+            console.log("created", newPath);
             resolve({
               file,
               match,
               newPath
             });
           } catch (e) {
-            resolve(null);
+            resolve();
           }
         })
       );
-      console.log("done fetching files");
+      console.log(`done fetching files ${fileIndex+1}/${results.length}`);
       await Promise.all(
         fetches
           .filter(f => f)
@@ -64,7 +62,7 @@ const init = async () => {
               })
           )
       );
-      console.log("done updating addresses");
+      console.log(`done updating files ${fileIndex+1}/${results.length}`);
     })
   );
 };
