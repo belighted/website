@@ -38,10 +38,7 @@ function getImageMap(results) {
         const remoteFileWithoutParams = remoteFile.replace(/\?.*/, "");
         return {
           ...acc,
-          [remoteFileWithoutParams]: {
-            remoteFile,
-            newFileName: `${nanoid()}.${extension}`
-          }
+          [remoteFileWithoutParams]: `${nanoid()}.${extension}`
         };
       },
       { ...previousValue }
@@ -52,13 +49,13 @@ function getImageMap(results) {
 const downloadImages = async images => {
   let counter = 0;
   await Promise.all(
-    Object.keys(images).map(async key => {
-      const image = images[key];
-      const newPath = path.join(DESTINATION_PATH, image.newFileName);
+    Object.keys(images).map(async imageUrl => {
+      const image = images[imageUrl];
+      const newPath = path.join(DESTINATION_PATH, image);
       counter++;
       console.log(counter, "/", Object.keys(images).length);
       try {
-        fs.writeFileSync(newPath, await download(image.remoteFile));
+        fs.writeFileSync(newPath, await download(imageUrl));
         return true;
       } catch (e) {
         return false;
