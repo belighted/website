@@ -15,7 +15,7 @@ tags:
     value: the-belighted-way
 status: published
 ---
-![rapidite-startup-talent](https://www.belighted.com/hs-fs/hubfs/rapidite-startup-talent.png?width=1200&name=rapidite-startup-talent.png)
+![rapidite-startup-talent](/images/legacy/9Eo0dTmw-ePvyCSEukpNA.png)
 
 Dans le dernier article, nous avons introduit le **[concept de vitesse](/fr/blog/validation-marche-start-up)** dans trois domaines critiques : le talent, les priorités et la validation du marché. Aujourd'hui, nous allons nous pencher sur la façon dont votre équipe peut avoir un impact sur la vitesse dans votre start-up.
 

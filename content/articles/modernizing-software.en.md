@@ -23,7 +23,7 @@ In an ultra-connected world such as ours, the volume of data to be managed is gr
 
 **The signs that the time comes up to replace and modernize your software**
 
-**![Modernizing your software - the signs](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(22).png?width=1200&name=Sans%20titre%20(22).png)**
+**![Modernizing your software - the signs](/images/legacy/tuyDXl57CQO9okZ-V1JFs.png)**
 
 If your company has been using the same software for more than 10 years (or even less), it is likely that it would benefit greatly from some upgrading. Does one of these situations sound familiar? Then you should absolutely consider modernizing your software!
 
@@ -40,7 +40,7 @@ Today, innovative businesses readily trust SaaS-type business software (Software
 
 **The reasons for choosing SaaS software are many:**
 
-**![Modernizing your software - reasons for choosing SaaS](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(23).png?width=1200&name=Sans%20titre%20(23).png)**
+**![Modernizing your software - reasons for choosing SaaS](/images/legacy/QR1BGN0rIKpRu2XIOHdxB.png)**
 
 *   **Fast installation:** applications are pre-installed and configured in the Cloud and time-to-deployment is reduced. This represents a considerable advantage for your present and future customers in a world that is becoming increasingly impatient.  
       

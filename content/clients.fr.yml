@@ -4,7 +4,7 @@ title: Clients
 cta:
   label: En savoir plus
 clients:
-  - image: https://www.belighted.com/hubfs/Dokeos.png
+  - image: /images/legacy/kWZ0N3ddLIxbJHfIa-XPd.png
     slug: dokeos
     title: "Dokeos a adopté le modèle SaaS et réduit ses coûts d'hébergement
       de 75 %."
@@ -12,7 +12,7 @@ clients:
       - SaaS
       - Software_Publisher
       - Education
-  - image: https://www.belighted.com/hubfs/Deecide.png
+  - image: /images/legacy/J5pDYLpzWUe0vqSKifc9u.png
     slug: deecide
     title: "DeeCide incité de pivoter d'une marketplace à un SaaS suite au
       feedback."
@@ -20,7 +20,7 @@ clients:
       - SaaS
       - Startup
       - Insurance
-  - image: https://www.belighted.com/hubfs/Sortlist-1.png
+  - image: /images/legacy/J1QlcRLtgBPEu_dnJAa8c.png
     slug: sortlist
     title: "Sortlist améliore la qualité de son app web et sa productivité
       de 20 %."
@@ -28,7 +28,7 @@ clients:
       - Marketplace
       - Scale-up
       - Media&Advertising
-  - image: https://www.belighted.com/hubfs/ListMinut.png
+  - image: /images/legacy/SDrM50asfHTTtDUvFQz4Y.png
     slug: listminut
     title: "ListMinut augmente sa vitesse de développement de produits de
       90 %."
@@ -36,7 +36,7 @@ clients:
       - Marketplace
       - Startup
       - Services
-  - image: https://www.belighted.com/hubfs/Valipat.png
+  - image: /images/legacy/zIxL2YzN_kpNNFxoLCSww.png
     slug: valipat
     title: "Valipat devait simplifier, automatiser et développer ses services
       applicatifs."
@@ -44,7 +44,7 @@ clients:
       - E-commerce
       - Corporate
       - Intellectual_Property
-  - image: https://www.belighted.com/hubfs/Neveo-3.png
+  - image: /images/legacy/vfWgKx_IaRvuG7-jLSSa-.png
     slug: neveo
     title: "Neveo externalise le développement après avoir d'abord essayé
       eux-même."
@@ -52,7 +52,7 @@ clients:
       - SaaS
       - Scale-up
       - Entertainment
-  - image: https://www.belighted.com/hubfs/serpahin.png
+  - image: /images/legacy/4_MfhPkD2mqsQGFUEcrPF.png
     slug: seraphin
     title: "Seraphin sous-traite son développement produit et recrute ensuite
       un CTO."
@@ -69,7 +69,7 @@ clients:
       - SaaS
       - Startup
       - Intellectual_Property
-  - image: https://www.belighted.com/hs-fs/hubfs/homeras.jpg?width=200&name=homeras.jpg
+  - image: /images/legacy/LthY4b4TzEMUQlLgcbo0d.jpg
     slug: homeras
     text:
       Homeras est une marketplace qui intervient en cas d'urgence et de catastrophes
@@ -78,7 +78,7 @@ clients:
       - Marketplace
       - Corp_startup
       - Insurance
-  - image: https://www.belighted.com/hs-fs/hubfs/convi.jpg?width=200&name=convi.jpg
+  - image: /images/legacy/26RpGT891KZ4tsMVB4KGp.jpg
     slug: convidencia
     text:
       Convidencia accompagne les entreprises dans la coopération, l'agilité, l'innovation
@@ -88,7 +88,7 @@ clients:
       - SaaS
       - Software_Enabler
       - Education
-  - image: https://www.belighted.com/hs-fs/hubfs/institute.jpg?width=200&name=institute.jpg
+  - image: /images/legacy/0AVoeM0gS11p4RsgqzrYo.jpg
     slug: my-personality
     text:
       Le premier modèle de personnalité (9 différents) à être validé scientifiquement
@@ -98,14 +98,14 @@ clients:
     tags:
       - Software_Enabler
       - Education
-  - image: https://www.belighted.com/hs-fs/hubfs/ubidata.jpg?width=200&name=ubidata.jpg
+  - image: /images/legacy/1q_sOahM0aiyMhEg6kNdr.jpg
     slug: ubidata
     text:
       Ubidata développe et commercialise des solutions logistiques mobiles pour
       la gestion des flottes, des marchandises, des expéditions et du fret.
     tags:
       - ""
-  - image: https://www.belighted.com/hs-fs/hubfs/sentcare.jpg?width=200&name=sentcare.jpg
+  - image: /images/legacy/IsvOUqEuqzvzrmkZ02rqe.jpg
     slug: stentcare
     text:
       Stentcare est une marketplace de soins de santé qui permet aux personnes atteintes
@@ -114,7 +114,7 @@ clients:
     tags:
       - SaaS
       - Healthcare_marketplace
-  - image: https://www.belighted.com/hs-fs/hubfs/ID.jpg?width=200&name=ID.jpg
+  - image: /images/legacy/pwMqyDbv3WSIsGDSTd8rO.jpg
     slug: id-soft
     text:
       ID-Soft s'est tourné vers Belighted pour développer son SaaS de gestion financière qui
@@ -123,7 +123,7 @@ clients:
       - SaaS
       - Software-publisher
       - Financial_services
-  - image: https://www.belighted.com/hs-fs/hubfs/DNA.jpg?width=200&name=DNA.jpg
+  - image: /images/legacy/ktcys2Tkexl8cOtEWbMnI.jpg
     slug: dna
     text:
       Data science avancées pour améliorer la prise de décision dans le domaine
@@ -131,7 +131,7 @@ clients:
     tags:
       - Startup
       - Healthcare
-  - image: https://www.belighted.com/hs-fs/hubfs/netika.jpg?width=200&name=netika.jpg
+  - image: /images/legacy/jdAoJh36X7JHgJxkWmAab.jpg
     slug: netika
     text:
       NETiKA développe des solutions logicielles immobilières. Nous les avons aidés
@@ -139,7 +139,7 @@ clients:
     tags:
       - SMB
       - Real_Estate
-  - image: https://www.belighted.com/hs-fs/hubfs/assets/iba-logo-3ce46c45ed4f6a3a8361ac33f4abc546.png?width=150&name=iba-logo-3ce46c45ed4f6a3a8361ac33f4abc546.png
+  - image: /images/legacy/1gmIUNrjQ6_Sv1IQ6bhWt.png
     slug: iba
     text:
       IBA développe, fabrique et prend en charge des dispositifs médicaux et solutions
@@ -147,7 +147,7 @@ clients:
     tags:
       - Corporate
       - Healthcare
-  - image: https://www.belighted.com/hs-fs/hubfs/assets/bombardier-logo-ec235b45f56b0726074e9a160d62a1a6-1.png?width=134&name=bombardier-logo-ec235b45f56b0726074e9a160d62a1a6-1.png
+  - image: /images/legacy/ozzpblgZAK9ekfZydeQw5.png
     slug: bombardier
     text:
       Bombardier offre des expériences de transport de calibre international qui
@@ -156,13 +156,13 @@ clients:
     tags:
       - Transport&Energy
       - Corporate
-  - image: https://www.belighted.com/hs-fs/hubfs/arcelormittal.png?width=200&name=arcelormittal.png
+  - image: /images/legacy/ZR1nEIv21pfd7ga04Y4Dp.png
     slug: arcelor
     text: ArcelorMittal est le leader mondial de l'acier et des mines.
     tags:
       - Corporate
       - Transport&Energy
-  - image: https://www.belighted.com/hubfs/Qualifio.png
+  - image: /images/legacy/Rco9XBIMeV0r6ph2iFYnX.png
     slug: qualifio
     text: "Belighted a renforcé l'équipe Qualifio pour l'aider à se développer."
     tags:

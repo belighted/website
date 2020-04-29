@@ -17,7 +17,7 @@ tags:
     value: saasify-software
 status: published
 ---
-![SaaS Development Trends in 2019](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(3)-1.png?width=690&name=Sans%20titre%20(3)-1.png)
+![SaaS Development Trends in 2019](/images/legacy/ixAIDpQwTgT4Y0nGgfRaJ.png)
 
 SaaS is rapidly evolving, shaped by technological advances and emerging consumer needs. Here are the 10 major SaaS trends worth knowing about.  
   
@@ -38,7 +38,7 @@ Today SaaS and blockchain operate at two different levels. In the future, develo
 
 SaaS software is getting available today through a simple monthly subscription (seen the example below with [SurveyMonkey](https://www.surveymonkey.com/)). Things may rapidly change and transactional models take over. This is particularly true for businesses that offer short-deadline services, such as T-shirt printing or income tax returns.
 
-![SaaS Development Trends in 2019 - Payment models](https://www.belighted.com/hs-fs/hubfs/survey.png?width=1071&name=survey.png)
+![SaaS Development Trends in 2019 - Payment models](/images/legacy/-iFIEbjDbjpARB1qUbYf_.png)
 
 **5 - From SaaS to PaaS**
 
@@ -62,7 +62,7 @@ As always, content quality is one of the major trends of SaaS development in 201
 
 **10 - Voice response**
 
-**![SaaS Development Trends in 2019 - Voice response](https://www.belighted.com/hs-fs/hubfs/Tendances%20de%CC%81veloppement%20SaaS%202019%20-%20re%CC%81ponse%20vocale.png?width=1200&name=Tendances%20de%CC%81veloppement%20SaaS%202019%20-%20re%CC%81ponse%20vocale.png)**
+**![SaaS Development Trends in 2019 - Voice response](/images/legacy/HuiQP3eQB9eIHgZvZ3Mtr.png)**
 
 The popularity of the connected home is driving the development of voice response. Today's modern technology is able to easily recognize inflections in the human voice and so it is crucial to focus on this thriving sector. This is the price of the quality of user experience.
 

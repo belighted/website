@@ -17,7 +17,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![improve software user experience](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(4)-1.png?width=1200&name=Sans%20titre%20(4)-1.png)
+![improve software user experience](/images/legacy/sdlgME-vHwEepcSvDU5lM.png)
 
 ### A user-friendly experience is vital to the success your SaaS software solution. Large corporations understand this well: they devote attention to the user's experience with their products and constantly strive to improve it.
 
@@ -53,7 +53,7 @@ Offer them a concise and easy-to-follow checklist to guide them through each ste
 
 ### **A customized interface that fits the image of your company**
 
-**![improve saas user experience](https://www.belighted.com/hs-fs/hubfs/Sans%20titre.png?width=1200&name=Sans%20titre.png)**
+**![improve saas user experience](/images/legacy/p4qsmwcaSWXwm_-4tH8wa.png)**
 
 Users overwhelmingly prefer an interface that allows enhanced interaction.
 

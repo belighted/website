@@ -20,7 +20,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![développement d'un saas - combien ça coûte ](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(9)-1.png?width=1200&name=Sans%20titre%20(9)-1.png)
+![développement d'un saas - combien ça coûte ](/images/legacy/FhrhLm9viWNG6XxmqEJl3.png)
 
 ### La compétitivité tarifaire occupe bien entendu une place importante dans toute stratégie d'entreprise pérenne. Si vous souhaitez transiter vers l’édition de logiciel SaaS, la question du coût de développement du software se posera forcément avec acuité.
 

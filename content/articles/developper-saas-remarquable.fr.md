@@ -36,7 +36,7 @@ Cette phase d'observation est essentielle. Elle vous permettra d'une part de cib
 
 Dans un secteur si intimement lié à l'univers technologique qu’est le SaaS, il est des mythes particulièrement tenaces. Pour certains néophytes, le succès d'un SaaS résulte ainsi volontiers de l'expertise de quelques geeks, réunis par pur hasard autour d'un projet motivant.
 
-![maîtriser l'exécution du business plan pour un logicial SaaS](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(5)-1.png?width=1200&name=Sans%20titre%20(5)-1.png)
+![maîtriser l'exécution du business plan pour un logicial SaaS](/images/legacy/NQZoZXTMa-Jw3C5OH7HEb.png)
 
 En réalité, **développer un SaaS pérenne nécessite des compétences managériales aiguës et un goût prononcé pour la résolution de problèmes**. Le chef de projet devra également être profondément motivé par l'idée de résoudre les soucis auxquels ses clients cibles sont confrontés. L'abnégation face aux éventuelles difficultés jouera également un rôle essentiel dans la réussite de la solution.
 
@@ -46,7 +46,7 @@ La réponse est sans appel : oui, il est bel et bien possible de développer un 
 
 Bien entendu, le langage de programmation choisi et l'architecture du logiciel ne doivent en aucun cas être négligés. Comme dans tout secteur d'activités, **il est ainsi hautement recommandé de s'entourer des bonnes personnes, c'est-à-dire de spécialistes reconnus à même de concrétiser votre vision.** 
 
-![développer soi même un saas remarquable ](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(6).png?width=1200&name=Sans%20titre%20(6).png)
+![développer soi même un saas remarquable ](/images/legacy/-5uQRnDbdqNKtAay5-Xyr.png)
 
 N'hésitez également pas à faire appel à des entreprises spécialisées dans le développement de solutions hébergées en SaaS, qui disposent des ressources et du savoir-faire nécessaires pour vous aider tout au long de votre mission.
 

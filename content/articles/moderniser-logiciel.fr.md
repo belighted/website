@@ -18,7 +18,7 @@ tags:
     value: saasify-software
 status: published
 ---
-![Moderniser son logiciel pour innover](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(2)-3.png?width=1200&name=Sans%20titre%20(2)-3.png)
+![Moderniser son logiciel pour innover](/images/legacy/JYMNxywiPIVaNkqFOpa5E.png)
 
 ### Dans une société ultra-connectée comme la nôtre, le volume de données à gérer est plus important que jamais. L'adoption d'un logiciel adapté aux usages courants est ainsi aujourd'hui indispensable.
 
@@ -41,7 +41,7 @@ Un modèle business SaaS repose sur un mode de distribution de logiciels spécif
 
 ### **Les raisons d'opter pour un logiciel SaaS sont nombreuses :**
 
-**![christopher-gower-m_HRfLhgABo-unsplash](https://www.belighted.com/hs-fs/hubfs/christopher-gower-m_HRfLhgABo-unsplash.jpg?width=536&name=christopher-gower-m_HRfLhgABo-unsplash.jpg)**
+**![christopher-gower-m_HRfLhgABo-unsplash](/images/legacy/Whux7cFTvhuP5Iy8T0XzH.jpg)**
 
 *   **Rapidité d'installation :** les applications étant déjà installées et configurées dans le cloud, les délais de déploiement sont réduits. Ce qui est un avantage considérable pour vos clients et futurs clients, dans un monde de plus en plus impatient.  
       

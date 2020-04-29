@@ -17,7 +17,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![création logiciel SaaS](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(1)-2.png?width=1200&name=Sans%20titre%20(1)-2.png)
+![création logiciel SaaS](/images/legacy/VDASzRwVAyKoh6ycIpfqb.png)
 
 ### [La création de logiciels SaaS](/fr/blog/developpement-produits-saas) est encore mal connue de certains spécialistes du développement. C'est pourquoi il nous semblait essentiel de "démystifier" un certain nombre de préconceptions à propos de leur création.
 

@@ -20,7 +20,7 @@ tags:
     value: saas-development
 status: published
 ---
-![strategy workshop développement logiciels](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(7)-2.png?width=1200&name=Sans%20titre%20(7)-2.png)
+![strategy workshop développement logiciels](/images/legacy/fjc20I7ZKSnwqjUax8NDU.png)
 
 ### Notre **[Strategy Workshop](/fr/strategy-workshop)** vous apporte bien plus qu'un simple devis !  Vous vous demandez certainement combien vous coûtera le développement de votre nouvelle application **[SaaS](/fr/qu-est-ce-que-le-saas-guide)** ou de votre logiciel. Vous espérez qu'un développeur chevronné pourra examiner vos documents, en discuter avec vous, puis vous donner une estimation ?
 

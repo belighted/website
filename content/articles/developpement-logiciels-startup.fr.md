@@ -16,7 +16,7 @@ tags:
     value: strategy-workshop
 status: published
 ---
-![Développement de logiciels pour Startups](https://www.belighted.com/hs-fs/hubfs/createurs-stat-up-non-techniques.png?width=1200&name=createurs-stat-up-non-techniques.png)
+![Développement de logiciels pour Startups](/images/legacy/DIsleFGnBRxPaWX_fukGN.png)
 
 ### Il n'est pas indispensable d'avoir une formation en informatique pour développer un nouveau logiciel, produit ou service qui fait appel à la technologie. Cependant, si vous n'avez pas de connaissances techniques, vous pouvez douter de vos décisions ou vous sentir désavantagé.
 
@@ -26,7 +26,7 @@ Il arrive parfois qu'une personne ayant des connaissances techniques soit à l'o
 
 **Au fil des années, nous avons observé des différences selon si nous travaillons avec des fondateurs de startup ayant des connaissances techniques ou non. Les créateurs non techniques seront surpris d'apprendre qu'à certains égards, ils ont un avantage.**
 
-[![FR_CTA_Belighted_iPad_saumon_DiscoverMVPDev](https://www.belighted.com/hs-fs/hubfs/FR_CTA_Belighted_iPad_saumon_DiscoverMVPDev.png?width=1990&name=FR_CTA_Belighted_iPad_saumon_DiscoverMVPDev.png)](https://www.belighted.com/fr/ressources/ebook-externaliser-developpement-mvp)
+[![FR_CTA_Belighted_iPad_saumon_DiscoverMVPDev](/images/legacy/hhS0SN8x6_gha25yj7I_n.png)](https://www.belighted.com/fr/ressources/ebook-externaliser-developpement-mvp)
 
 #### Caractéristiques des fondateurs de startup techniques
 
@@ -56,4 +56,4 @@ De nombreux fondateurs non techniques créent un produit pour résoudre un probl
 
 Nous avons vécu ce processus avec des fondateurs techniques et non techniques à de nombreuses reprises. Les **[étapes de base guident le développement de votre idée de startup](/fr/services)**, même lorsque vous n'avez pas de compétences techniques. Vous pouvez [commencer petit](/blog/when-you-should-not-issue-rfps-for-software-development) et vous faire une idée de ce que signifie travailler avec une agence de développement de logiciels, pour vous assurer qu'il s'agit d'un bon partenaire. N'hésitez pas à nous contacter **[pour en discuter](/fr/evaluation-developpement-produit?hsCtaTracking=5dced1b6-bfac-4c82-a7fa-1b0ef9c086c5%7C90218acb-e49a-44df-ae39-ab14a68c82b0)**.
 
-[![FR_CTA_Belighted_iPad_saumon_powerchecklist](https://www.belighted.com/hs-fs/hubfs/FR_CTA_Belighted_iPad_saumon_powerchecklist.png?width=1990&name=FR_CTA_Belighted_iPad_saumon_powerchecklist.png)](https://www.belighted.com/fr/ressources/software-power-checklist)
+[![FR_CTA_Belighted_iPad_saumon_powerchecklist](/images/legacy/KgPCqgzG2cg0VS_cBdQnJ.png)](https://www.belighted.com/fr/ressources/software-power-checklist)
