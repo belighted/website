@@ -7,9 +7,20 @@ const del = require("del");
 
 const images = path.resolve("content", "images", "legacy");
 
+const replaceMatchInFile = ({ file, match, filename }) => {
+  return new Promise(resolve => {
+    const content = fs.readFileSync(file, "utf-8");
+    fs.writeFile(
+      file,
+      content.replace(match, `/images/legacy/${filename}`),
+      resolve
+    );
+  });
+};
+
 const init = async () => {
-  const deletedPaths = await del([`${images}/*`]);
-  console.log("Deleted files and directories:", deletedPaths.length);
+  //const deletedPaths = await del([`${images}/*`]);
+  //console.log("Deleted files and directories:", deletedPaths.length);
   const results = await findInFiles.find(
     /(https?:\/\/(www)?.belighted.com[^\[\]:]+\.(png|jpg|svg|jpeg|webp|gif)+)/,
     path.resolve(__dirname, "..", "content"),
@@ -23,46 +34,42 @@ const init = async () => {
       0
     )} matches`
   );
-
+  let fileCounter = 0;
   await Promise.all(
     Object.keys(results).map(async (file, fileIndex) => {
       const result = results[file];
-
       const fetches = await Promise.all(
-        result.matches.map(match => async () => {
+        result.matches.map(async match => {
           console.log("fetching", match);
           const [_, ext] = match.match(/(?:\.)(png|jpg|svg|jpeg|webp|gif)+/);
-          const newPath = path.join(images, `${nanoid()}.${ext}`);
+          const filename = `${nanoid()}.${ext}`;
+          const newPath = path.join(images, filename);
           try {
             fs.writeFileSync(newPath, await download(match));
             console.log("created", newPath);
-            resolve({
+            return {
               file,
               match,
-              newPath
-            });
+              newPath,
+              filename
+            };
           } catch (e) {
-            resolve();
+            console.log(e);
+            return null;
           }
         })
       );
-      console.log(`done fetching files ${fileIndex+1}/${results.length}`);
-      await Promise.all(
-        fetches
-          .filter(f => f)
-          .map(
-            ({ file, match, newPath }) =>
-              new Promise(resolve => {
-                const content = fs.readFileSync(file, "utf-8");
-                fs.writeFile(
-                  file,
-                  content.replace(match, `/images/legacy/${newPath}`),
-                  resolve
-                );
-              })
-          )
-      );
-      console.log(`done updating files ${fileIndex+1}/${results.length}`);
+      console.log(fetches);
+
+      fetches
+        .filter(f => f)
+        .map(async (element, index) => {
+          await replaceMatchInFile(element);
+          console.log(`wrote ${index + 1}/${fetches.length}`);
+        });
+
+      console.log(`done ${fileCounter + 1}/${Object.keys(results).length}`);
+      fileCounter++;
     })
   );
 };
