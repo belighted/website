@@ -5,12 +5,13 @@ const { nanoid } = require("nanoid");
 const fs = require("fs");
 const del = require("del");
 
-const images = path.resolve("content", "images", "legacy");
-const importedImages = new Map();
+const DESTINATION_PATH = path.resolve("content", "images", "legacy");
 
-const init = async () => {
-  const deletedPaths = await del([`${images}/*`]);
+async function cleanupDestinationFolder() {
+  const deletedPaths = await del([`${DESTINATION_PATH}/*`]);
   console.log("Deleted files and directories:", deletedPaths.length);
+}
+async function findImagesHostedOnHubspot() {
   const results = await findInFiles.find(
     /(https?:\/\/(www)?.belighted.com[^\[\]:]+\.(png|jpg|svg|jpeg|webp|gif)+)/,
     path.resolve(__dirname, "..", "content"),
@@ -24,38 +25,70 @@ const init = async () => {
       0
     )} matches`
   );
-  let fileCounter = 0;
+  return results;
+}
+
+function getImageMap(results) {
+  return Object.keys(results).reduce((previousValue, contentFilePath) => {
+    return results[contentFilePath].matches.reduce(
+      (acc, remoteFile) => {
+        const [_1, extension] = remoteFile.match(
+          /(?:\.)(png|jpg|svg|jpeg|webp|gif)+/
+        );
+        const remoteFileWithoutParams = remoteFile.replace(/\?.*/, "");
+        return {
+          ...acc,
+          [remoteFileWithoutParams]: {
+            remoteFile,
+            newFileName: `${nanoid()}.${extension}`
+          }
+        };
+      },
+      { ...previousValue }
+    );
+  }, {});
+}
+
+const downloadImages = async images => {
+  let counter = 0;
   await Promise.all(
-    Object.keys(results).map(async (file, fileIndex) => {
-      const result = results[file];
-      const fetches = await Promise.all(
-        result.matches.map(async match => {
-          const [_1, ext] = match.match(/(?:\.)(png|jpg|svg|jpeg|webp|gif)+/);
-          const remoteFileWithoutParams = match.replace(/\?.*/, "");
-          console.log("fetching", remoteFileWithoutParams);
-          if (importedImages.has(remoteFileWithoutParams)) {
-            console.log("already imported ", remoteFileWithoutParams);
-            return importedImages.get(remoteFileWithoutParams);
-          }
-          const filename = `${nanoid()}.${ext}`;
-          const newPath = path.join(images, filename);
-          try {
-            fs.writeFileSync(newPath, await download(match));
-            console.log("created", newPath);
-            const remoteFile = {
-              file,
-              match,
-              newPath,
-              filename
-            };
-            importedImages.set(remoteFileWithoutParams, remoteFile);
-            return remoteFile;
-          } catch (e) {
-            console.log(e);
-            return null;
-          }
-        })
-      );
+    Object.keys(images).map(async key => {
+      const image = images[key];
+      const newPath = path.join(DESTINATION_PATH, image.newFileName);
+      counter++;
+      console.log(counter, "/", Object.keys(images).length);
+      try {
+        fs.writeFileSync(newPath, await download(image.remoteFile));
+        return true;
+      } catch (e) {
+        return false;
+      }
+    })
+  );
+  console.log("done downloading");
+};
+
+const updatePathInContent = (results, images) => {
+  Object.keys(results).forEach(file => {
+    const content = fs.readFileSync(file, "utf-8");
+    const updatedContent = results[file].matches.reduce((acc, match) => {
+      const filename = images[match.replace(/\?.*/, "")].newFileName;
+      console.log("replace", match, "by", `/images/legacy/${filename}`);
+      return acc.replace(match, `/images/legacy/${filename}`);
+    }, content);
+  });
+};
+
+const init = async () => {
+  let fileCounter = 0;
+  await cleanupDestinationFolder();
+  const results = await findImagesHostedOnHubspot();
+  const images = getImageMap(results);
+  await downloadImages(images);
+  updatePathInContent(results, images);
+};
+
+/*
       let content = fs.readFileSync(file, "utf-8");
       fetches
         .filter(f => f)
@@ -66,9 +99,8 @@ const init = async () => {
       fs.writeFileSync(file, content);
       console.log(`done ${fileCounter + 1}/${Object.keys(results).length}`);
       fileCounter++;
-    })
-  );
-};
+      */
+
 init()
   .catch(e => console.log("big bad error", e))
   .then(_ => console.log("alright its done"));
