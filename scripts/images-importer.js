@@ -6,10 +6,11 @@ const fs = require("fs");
 const del = require("del");
 
 const images = path.resolve("content", "images", "legacy");
+const importedImages = new Map();
 
 const init = async () => {
-  //const deletedPaths = await del([`${images}/*`]);
-  //console.log("Deleted files and directories:", deletedPaths.length);
+  const deletedPaths = await del([`${images}/*`]);
+  console.log("Deleted files and directories:", deletedPaths.length);
   const results = await findInFiles.find(
     /(https?:\/\/(www)?.belighted.com[^\[\]:]+\.(png|jpg|svg|jpeg|webp|gif)+)/,
     path.resolve(__dirname, "..", "content"),
@@ -31,24 +32,30 @@ const init = async () => {
         result.matches.map(async match => {
           console.log("fetching", match);
           const [_, ext] = match.match(/(?:\.)(png|jpg|svg|jpeg|webp|gif)+/);
+          const [remoteFileWithoutParams] = match.match(/.*(?=\?)/);
+          if (importedImages.has(remoteFileWithoutParams)) {
+            console.log("already imported ", remoteFileWithoutParams);
+            return importedImages.get(remoteFileWithoutParams);
+          }
           const filename = `${nanoid()}.${ext}`;
           const newPath = path.join(images, filename);
           try {
             fs.writeFileSync(newPath, await download(match));
             console.log("created", newPath);
-            return {
+            const remoteFile = {
               file,
               match,
               newPath,
               filename
             };
+            importedImages.set(remoteFileWithoutParams, remoteFile);
+            return remoteFile;
           } catch (e) {
             console.log(e);
             return null;
           }
         })
       );
-      console.log(fetches);
       let content = fs.readFileSync(file, "utf-8");
       fetches
         .filter(f => f)
