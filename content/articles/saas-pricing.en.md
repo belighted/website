@@ -68,4 +68,4 @@ You have a fairly wide range of choices when it comes to pricing your SaaS solut
 
 **As a world-recognized SaaS specialist, Belighted is able to provide you with the best advice tailored to your objectives and financial imperatives.**
 
-[![The ultimate Guide to Software as a Service](https://no-cache.hubspot.com/cta/default/1684659/0b551323-0d58-4d8c-882c-e42a03a01459.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
+[![The ultimate Guide to Software as a Service](/images/legacy-cta/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)

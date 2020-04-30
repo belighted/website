@@ -53,4 +53,4 @@ La livraison continue est massivement utilisée par des géants comme Facebook o
 
 **Pour que votre solution puisse se déployer dans la durée, la mise en place d'une stratégie sur mesure est indispensable. Chez Belighted, le suivi de votre développement de projet répond toujours à une méthodologie rigoureuse et éprouvée.**
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

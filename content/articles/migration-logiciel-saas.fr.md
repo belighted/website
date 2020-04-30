@@ -51,4 +51,4 @@ Même s'ils sont généralement plus rapides à déployer que les logiciels sous
 
 Pour assurer la pérennité du déploiement, n'hésitez pas à vous faire accompagner par des spécialistes du [développement SaaS](/fr/a-propos), parfaitement à même de mener à bien le projet en tenant compte de vos impératifs financiers et des objectifs de votre structure.
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

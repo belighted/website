@@ -100,4 +100,4 @@ Many new SaaS startups first develop a web app and then reach a point where they
 Want to learn more about **[our processes](https://www.belighted.com/blog/product-development-methodology)** for developing tomorrow’s successful **[SaaS startups](/saas-guide-to-software-as-service)**? Subscribe to get our blog via email or **[drop us an email](https://www.belighted.com/contact)**. 
 
   
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/50f74af8-9d07-4c18-a034-4214c0dc7956.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/50f74af8-9d07-4c18-a034-4214c0dc7956)
+[![New Call-to-action](/images/legacy-cta/qqshY7nqJHgHkQ8kAYhsy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/50f74af8-9d07-4c18-a034-4214c0dc7956)

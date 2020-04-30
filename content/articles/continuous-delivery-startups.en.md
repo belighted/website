@@ -99,4 +99,4 @@ If your team is not using continuous integration, it will require a shift in thi
 
 Continuous deployment requires continuous investments in educating and coaching developers as well as in building, improving and maintaining **[tool infrastructure](/blog/technology-stack)**. As we see with the success of small and large firms alike, the benefits are well worth it.
 
- Would you like to discuss how to set up a continuous integration process for your development team? [**Book a Scoping Workshop**](https://www.belighted.com/scoping-workshop#scoping-workshop) with us today. [![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+ Would you like to discuss how to set up a continuous integration process for your development team? [**Book a Scoping Workshop**](/images/legacy-cta/e-4hDUGU8jBzbj2GmAvFW.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

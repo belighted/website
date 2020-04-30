@@ -63,4 +63,4 @@ In addition to helping you gather suggestions to further improve your solution, 
 
 At Belighted, we have extensive experience with designing high-performance user interfaces from both a functional and a customer satisfaction standpoint. We’ll help you design [the most relevant user clickpath](/user-testing), making your interface user-friendly and intuitive. Our vast experience is a key asset for understanding all your needs and providing you with end-to-end SaaS interface design support.
 
-[![The ultimate Guide to Software as a Service](https://no-cache.hubspot.com/cta/default/1684659/0b551323-0d58-4d8c-882c-e42a03a01459.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
+[![The ultimate Guide to Software as a Service](/images/legacy-cta/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)

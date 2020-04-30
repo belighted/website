@@ -68,4 +68,4 @@ Plusieurs facteurs doivent être pris en compte lorsque l'on souhaite transiter 
 
 La qualité de votre transition **impactera durablement l'efficience de votre software.** N'hésitez donc pas à vous entourer des bonnes personnes ou, le cas échéant, de faire appel à une structure spécialisée dans le développement SaaS. 
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

@@ -106,7 +106,7 @@ Choosing the language and framework for your SaaS application
 
 The question of language and framework is a big one. Once you commit to a framework, it can be a challenge to migrate later.  
   
-[![The ultimate Guide to Software as a Service](https://no-cache.hubspot.com/cta/default/1684659/0b551323-0d58-4d8c-882c-e42a03a01459.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)  
+[![The ultimate Guide to Software as a Service](/images/legacy-cta/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)  
 
 We believe that Ruby on Rails is a safe bet for most **[SaaS](/saas-guide-to-software-as-service)** software startups. But it’s worth discussing. It’s a big decision, one that will shape the future of your app development for a long time to come.
 

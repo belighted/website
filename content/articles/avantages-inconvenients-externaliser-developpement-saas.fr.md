@@ -29,7 +29,7 @@ Le développement de votre produit minimum viable est une première étape cruci
 L'une des difficultés les plus courantes auxquelles sont confrontés les gestionnaires non techniques est de savoir comment gérer le processus de développement, quand ils manquent eux-mêmes de compétences techniques. Une option consiste à [externaliser le développement de votre MVP](/fr/ressources/ebook-externaliser-developpement-mvp). Est-ce la bonne idée pour votre  
 start-up ?
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/4b0783da-e328-4356-8375-9e4da3107f31.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/4b0783da-e328-4356-8375-9e4da3107f31)
+[![Nouveau call-to-action](/images/legacy-cta/aT-qcraOXB4F5eu_1iBV7.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/4b0783da-e328-4356-8375-9e4da3107f31)
 
 **Avantages de l'externalisation du développement d'un MVP**
 ------------------------------------------------------------
@@ -86,4 +86,4 @@ Les différences de relation avec une agence ou un employé peuvent être un ava
 
 Les créateurs non techniques peuvent adopter différentes approches pour le [développement d'un MVP](/fr/developpement-mvp), y compris [l’externalisation à une agence](/fr/ressources/ebook-externaliser-developpement-mvp). Pour en savoir plus sur les six différentes stratégies de développement de MVP utilisées par les start-up innovantes, téléchargez gratuitement notre guide.
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/4b0783da-e328-4356-8375-9e4da3107f31.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/4b0783da-e328-4356-8375-9e4da3107f31)
+[![Nouveau call-to-action](/images/legacy-cta/aT-qcraOXB4F5eu_1iBV7.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/4b0783da-e328-4356-8375-9e4da3107f31)

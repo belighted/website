@@ -104,4 +104,4 @@ De nombreuses start-up de SaaS développent d'abord une application web, puis ar
 
 Vous souhaitez en savoir plus sur **[nos processus](/fr/blog/methode-developpement-produits-saas)** pour aider les [start-up de SaaS](/fr/qu-est-ce-que-le-saas-guide) de demain à réussir ? Abonnez-vous pour recevoir notre blog par e-mail ou **[envoyez-nous un e-mail](/fr/evaluation-developpement-produit)**. 
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)
+[![Nouveau call-to-action](/images/legacy-cta/jLxarWVFZ4IWPcDnMDdPS.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)

@@ -25,7 +25,7 @@ This is particularly common for non-technical founders, when building the produc
 
 A **[Lean Canvas](https://leanstack.com/leancanvas)** is a startup-oriented adaptation of the Business Model Canvas, designed to help businesses develop an actionable business plan. **To help kick-start your startup, we're sharing six reasons why a Lean Canvas should be an essential part of your product development process.**
 
-[![You have a Software Idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
+[![You have a Software Idea but can't code?](/images/legacy-cta/CmbFPGk6QWSw4YLsAxURq.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
 
 1) It's a Simple Business Plan
 ------------------------------
@@ -71,4 +71,4 @@ This goal-oriented approach keeps you focused on the needs of your customers, ra
 
 In summary, a Lean Canvas is essential for helping you and key stakeholders understand the problem you're solving for customers: something which is much more important than the product you're trying to build.
 
-[![You have a software idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+[![You have a software idea but can't code?](/images/legacy-cta/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

@@ -22,7 +22,7 @@ We’ve built and worked with hundreds of different software products since 2008
 
 The way we work allows us to meet you where you are in the **[lifecycle of your product](https://www.belighted.com/blog/ultimate-checklist-developing-new-software-product).** You may have an idea that needs to be developed into a completely new product, or you may have an existing app needing improvement. Either way, we direct our efforts where they make the greatest impact for you. I’d like to show you a little more about how we do that here.
 
-[![The ultimate Guide to Software as a Service](https://no-cache.hubspot.com/cta/default/1684659/0b551323-0d58-4d8c-882c-e42a03a01459.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
+[![The ultimate Guide to Software as a Service](/images/legacy-cta/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
 
 Product strategy is at the heart of all we do
 ---------------------------------------------
@@ -68,4 +68,4 @@ The way we approach our work - the Belighted way - makes available to you the fu
 
 Are you ready to discuss your software product with us? Learn more about getting started with a **[Strategy Workshop](//www-belighted-com.sandbox.hs-sites.com/strategy-workshop)** today.  
   
-[![You have a software idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+[![You have a software idea but can't code?](/images/legacy-cta/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

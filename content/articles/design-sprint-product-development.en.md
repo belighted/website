@@ -32,7 +32,7 @@ On the first day, you start by developing your understanding of the problem you'
 A [design sprint](/design-sprint) is a fast way to test out your fundamental hypotheses, and receive feedback from real users that can help shape the next stages of development, accelerating the **[SaaS](/saas-guide-to-software-as-service)** product development process by minimising time spent discussing and debating different options and approaches, and maximising time spent testing and learning from real users.  
   
 
-[![The ultimate Guide to Software as a Service](https://no-cache.hubspot.com/cta/default/1684659/0b551323-0d58-4d8c-882c-e42a03a01459.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
+[![The ultimate Guide to Software as a Service](/images/legacy-cta/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
 
   
 How a [Design Sprint](/design-sprint) can Fast-Track Product Development ?
@@ -74,4 +74,4 @@ While it may initially feel more productive, as you're building the product rath
 
 When you reach that point, [it becomes clear that a five-day sprint incorporating feedback from real users would have been a valuable use of your time and money](/design-sprint).
 
-[![The ultimate Guide to Software as a Service](https://no-cache.hubspot.com/cta/default/1684659/0b551323-0d58-4d8c-882c-e42a03a01459.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
+[![The ultimate Guide to Software as a Service](/images/legacy-cta/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)

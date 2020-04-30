@@ -52,4 +52,4 @@ N'hésitez également pas à faire appel à des entreprises spécialisées dans 
 
 **Pour développer un SaaS plein de promesse, il s'agit souvent d'accepter de [se faire accompagner par les bonnes personnes.](/fr/evaluation-developpement-produit)** 
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

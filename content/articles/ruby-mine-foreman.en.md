@@ -25,21 +25,21 @@ Of course, you’ll need to have foreman installed.
 
 In Rubymine, go to “Edit Configurations” from the main toolbar.
 
-![](https://i.imgur.com/Qog0syh.png)
+![](/images/legacy-cta/tThQXxa5IJh4_ALNSyhwy.png)
 
 Click on the “+” icon and select “Gem Command”.
 
-![](https://i.imgur.com/G8gC9KB.png)
+![](/images/legacy-cta/6dNbGKWRzbVPsyHZ79bS2.png)
 
 Input “foreman” for the gem name and the executable name, and “start” as the command argument. You can leave the other defaults as is.
 
-![](https://i.imgur.com/2B1OCMO.png)
+![](/images/legacy-cta/c-PZOb_xeWnEFdXQEWYL2.png)
 
 And that’s it. As long as you already have a Procfile in your project directory, you’re good to go. Here’s an example of the result :
 
-![](https://i.imgur.com/ujO0H5z.png)
+![](/images/legacy-cta/aWJtN977KXGiZCVM180av.png)
 
 Note that “Gem Command” can have a lot of other clever uses. Be creative. :)  
   
 
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

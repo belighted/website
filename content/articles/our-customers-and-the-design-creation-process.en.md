@@ -39,11 +39,11 @@ In a short and simple project (in terms of time and/or cost), it is preferable t
 
 One of the fastest tools to grasp, and with limited financial impact, is **[Red Pen](https://redpen.io)**.
 
-![](https://i.imgur.com/NGbYfg6.png)
+![](/images/legacy-cta/EjV1o5cDuBPduDB5ZK1MV.png)
 
 It allows the customer to review the designs that you submit by selecting specific areas, thus avoiding any misunderstanding.
 
-![](https://i.imgur.com/28qyWhY.png)
+![](/images/legacy-cta/vV5OJ3lj4RLkZAAlUpmRN.png)
 
 Direct interaction on the document gets you fast and accurate feedback.
 
@@ -55,7 +55,7 @@ When it comes to collaboration and versioning, developers’ tool of choice is u
 
 Pricing starts at $19 per month for 3 people and 20GB of disk space.
 
-![](https://i.imgur.com/E3utZGK.png)
+![](/images/legacy-cta/LiwEaZInrHH_B3ENsA0YE.png)
 
 **Prototyping**
 
@@ -63,15 +63,15 @@ Our experience let us know that having a nice design validated by a client is fi
 
 [MarvelApp](https://marvelapp.com) is one of the most complete and interesting tools to use in terms of prototyping. It is possible to create prototypes for all types of media: phone, tablet or desktop.
 
-![](https://i.imgur.com/cvM9tPL.png)
+![](/images/legacy-cta/LCpcCaOssKFCxQ_GeQsaO.png)
 
-![](https://i.imgur.com/W41zpYK.png)
+![](/images/legacy-cta/1nQb9tYJZH6a1BzQzLMyv.png)
 
 Signing up is free, with an unlimited number of projects and uploads. There is also a commercial version, that allows you to download prototypes or add protection, among other features. At only $5 per month, this tool has an excellent feature/price ratio.
 
 Another player in this area is [InvisionApp](https://projects.invisionapp.com), which is a little more complete because it combines several tools together. If we were to compare with the tools we have seen before, it is a mixture between Red Pen and MarvelApp. It therefore combines design review and prototyping.
 
-![](https://i.imgur.com/QXmMgSN.png)
+![](/images/legacy-cta/pktFWO53chwYzGNWPNOTe.png)
 
 It costs $22 per month, with an unlimited number of projects.
 
@@ -81,7 +81,7 @@ Finally, a small newcomer made a recent entry in the game: **[Conjure](https://c
 
 One question that remains unanswered, or is actually never asked is, “How do you ensure that the actual implementation of your design conforms to what was agreed upon?”. One of the tools we find quite efficient to give quick feedback on a design implementation is called BugHerd. It allows our customers to send comments directly on the website with their specific browser.
 
-![](https://i.imgur.com/ERU15Vc.png)
+![](/images/legacy-cta/XD8JpTTBuqebXildgcYX2.png)
 
 Though primarily a bug report tool, it can be used easily to collect customer feedback on the integration of your application.
 
@@ -117,4 +117,4 @@ List of useful link from this article or from other sources:
 **[https://conjure.io](https://conjure.io)**  
 **[https://medium.com/design-ux/799d16952a56](https://medium.com/design-ux/799d16952a56)**
 
-**[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)**
+**[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)**

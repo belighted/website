@@ -75,4 +75,4 @@ Vous disposez de ressources limitées et vous devez vous assurer qu'il y a un ma
 
 Dans le prochain article, nous verrons comment vous pouvez intégrer **[la validation de marché](/fr/blog/validation-marche-start-up)** dans votre roadmap de développement de produit afin que votre start-up reste agile et que vous restiez concentré sur les bonnes priorités.
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)
+[![Nouveau call-to-action](/images/legacy-cta/jLxarWVFZ4IWPcDnMDdPS.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)

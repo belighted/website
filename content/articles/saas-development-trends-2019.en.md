@@ -66,4 +66,4 @@ As always, content quality is one of the major trends of SaaS development in 201
 
 The popularity of the connected home is driving the development of voice response. Today's modern technology is able to easily recognize inflections in the human voice and so it is crucial to focus on this thriving sector. This is the price of the quality of user experience.
 
-[![The ultimate Guide to Software as a Service](https://no-cache.hubspot.com/cta/default/1684659/0b551323-0d58-4d8c-882c-e42a03a01459.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
+[![The ultimate Guide to Software as a Service](/images/legacy-cta/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)

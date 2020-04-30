@@ -23,7 +23,7 @@ Done well, MVP development is a valuable source of insight and information that 
 
 Today, we're sharing five common MVP development mistakes that we see time and again - so you don't make the same mistakes.
 
-[![You have a Software Idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
+[![You have a Software Idea but can't code?](/images/legacy-cta/CmbFPGk6QWSw4YLsAxURq.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
 
 What is an MVP?
 ---------------
@@ -80,4 +80,4 @@ Before starting to develop your MVP, take some time to prioritise the assumption
 
 Once you've identified the single riskiest hypothesis, develop an MVP to test out that assumption. Proving this will be most valuable to you, as it provides confirmation that it's worthwhile pursuing and developing your startup idea further.
 
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

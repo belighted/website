@@ -50,4 +50,4 @@ It idea of offering the least costly software in an attempt to beat the competit
 
 An expert in the design and implementation of SaaS solutions, Belighted has, through a large number of projects, set up successful strategies for standing apart from the competition. **If there is keen competition in your sector, consider relying on a [trustworthy and experienced partner](/about) to transform your software into a unique, high-performing and top-of-the-line SaaS solution**.
 
-[![The ultimate Guide to Software as a Service](https://no-cache.hubspot.com/cta/default/1684659/0b551323-0d58-4d8c-882c-e42a03a01459.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
+[![The ultimate Guide to Software as a Service](/images/legacy-cta/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)

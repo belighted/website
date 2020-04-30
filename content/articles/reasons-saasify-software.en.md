@@ -68,4 +68,4 @@ On-Premise software does not always give users a minimum level of customer servi
 
 Greater compatibility, scalability, competitive prices, security, and flexibility: the inherent advantages of SaaS are countless. Why not experience it yourself to form your own opinion? 
 
-[![The ultimate Guide to Software as a Service](https://no-cache.hubspot.com/cta/default/1684659/0b551323-0d58-4d8c-882c-e42a03a01459.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
+[![The ultimate Guide to Software as a Service](/images/legacy-cta/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)

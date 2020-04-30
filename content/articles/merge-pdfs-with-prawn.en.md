@@ -45,4 +45,4 @@ You have a bunch of Pdf documents and you want to concatenate them all into a re
 
 If you want this feature fully integrated in the next Prawn version, just support **[my issue](https://github.com/prawnpdf/prawn/issues/376)** on Github !  
   
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

@@ -67,4 +67,4 @@ Belighted est rompu à la conception d’interfaces utilisateur performantes, ta
 
 Nous vous aidons à définir les [parcours utilisateurs les plus pertinents](/fr/tests-utilisateurs), à rendre votre interface conviviale et intuitive. Notre grande expérience est un atout pour comprendre l’intégralité de vos besoins et vous accompagner de A à Z dans votre conception d’interface utilisateur de solution SaaS.
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

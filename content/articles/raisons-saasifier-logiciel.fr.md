@@ -64,4 +64,4 @@ Les logiciels On-Premise ne permettent pas toujours d'un niveau minimum de servi
 
 Compatibilité accrue, scalabilité, compétitivité tarifaire, sécurisation, flexibilité : **les avantages inhérents au SaaS sont nombreux.** N'hésitez pas à en faire l'expérience pour vous forger votre propre idée. 
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

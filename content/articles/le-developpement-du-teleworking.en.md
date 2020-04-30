@@ -25,4 +25,4 @@ Mais on ne peut parler d’outils de télétravail sans évoquer le smartphone e
 
 En conclusion, nos habitudes sont de plus en plus conditionnées par ces innovations technologiques. Et s’il est difficile d’y renoncer en tant qu’utilisateur, il devient également difficile pour un employeur d’ignorer ses enjeux. **Pour sa part, Belighted encourage le télétravail et offre à ses employés l’opportunité de travailler à domicile, tout en restant, évidemment, joignable à tout moment.**  
   
-[![You have a software idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+[![You have a software idea but can't code?](/images/legacy-cta/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

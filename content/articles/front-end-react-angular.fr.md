@@ -104,4 +104,4 @@ Bien qu'aucun framework ne soit toujours parfait, nous apprécions React pour de
 
 Découvrez notre prochain article de la série : **[Hybride vs Native pour votre application mobile SaaS.](/fr/blog/applications-mobiles-natives-hybrides)**
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/4b0783da-e328-4356-8375-9e4da3107f31.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/4b0783da-e328-4356-8375-9e4da3107f31)
+[![Nouveau call-to-action](/images/legacy-cta/aT-qcraOXB4F5eu_1iBV7.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/4b0783da-e328-4356-8375-9e4da3107f31)

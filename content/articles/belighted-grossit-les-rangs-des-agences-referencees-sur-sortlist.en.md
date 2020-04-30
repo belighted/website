@@ -17,4 +17,4 @@ Sortlist est une plateforme web, visant à faciliter la recherche d’agences ad
 Convaincue du service proposé, Belighted est à présent référencée sur Sortlist et espère que de nombreux partenariats de qualité pourront voir le jour par l’entremise de cette plateforme.
 
 Découvrez le profil de [Belighted](https://www.sortlist.com/fr/agency/belighted).  
- [![You have a software idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+ [![You have a software idea but can't code?](/images/legacy-cta/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

@@ -59,4 +59,4 @@ Un modèle business SaaS repose sur un mode de distribution de logiciels spécif
       
     Comment Belighted peut vous aider ? [Notre objectif : accompagner les entreprises dans leur transformation digitale et moderniser leur logiciel](/fr/evaluation-developpement-produit). 
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

@@ -36,7 +36,7 @@ Un Design Sprint est un moyen rapide de tester vos hypothèses fondamentales et 
 
 Ce feedback permet d'orienter les prochaines étapes du projet et d'accélérer le [processus de développement de produits SaaS](/fr/blog/methode-developpement-produits-saas) en réduisant le temps passé à discuter et débattre des différentes options et approches et en rentabilisant le temps passé à tester et à apprendre des vrais utilisateurs. 
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
 
 ### **Comment un Design Sprint peut-il accélérer le développement d'un produit ?**
 
@@ -71,4 +71,4 @@ Bien que cette approche puisse paraître plus productive, car vous concevez le p
 **  
 Si vous atteignez ce point, il est clair qu'un [Design Sprint](/fr/design-sprint) de cinq jours intégrant le feedback de vrais utilisateurs aurait constitué un meilleur investissement en temps et en argent.**
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

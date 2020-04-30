@@ -92,4 +92,4 @@ Cet outil aide à réduire de manière drastique le bruit dans votre test afin d
 
 Il est si facile à utiliser que vous pourriez en abuser en demandant un graphe complexe alors que votre spécification pourrait être faite avec un objet simple. Le but de Factory Girl n’est pas d’être la seule manière de générer des données pour votre test mais d’avoir une manière simple et discrète de construire des graphes complexes. Et il le fait de manière très efficace.  
   
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

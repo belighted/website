@@ -103,4 +103,4 @@ Le déploiement continu nécessite des investissements continus dans la formatio
 
 Vous souhaitez discuter de la mise en place d'un processus d'intégration continu pour votre équipe de développement ? **[Réservez un Strategy Workshop](/fr/strategy-workshop)** avec nous. 
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)
+[![Nouveau call-to-action](/images/legacy-cta/jLxarWVFZ4IWPcDnMDdPS.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)

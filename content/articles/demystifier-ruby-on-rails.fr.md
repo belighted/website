@@ -121,7 +121,7 @@ Certaines applications ont migré, mais de nombreuses sont restées. Airbnb cont
 
 La question du langage et du framework est très importante. Une fois que vous utilisez un framework, il peut être difficile de migrer par la suite.
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
 
 Nous pensons que Ruby on Rails est une option sûre pour la plupart des start-up de logiciels **[SaaS](/fr/qu-est-ce-que-le-saas-guide)**. Mais ça vaut la peine d'en discuter. C'est une décision importante qui déterminera l'avenir du développement de votre application.
 

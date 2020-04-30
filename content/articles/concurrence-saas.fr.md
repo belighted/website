@@ -52,4 +52,4 @@ Expert dans la conception et la réalisation de solutions sur le marché du SaaS
 
 [Si votre secteur d’activité est très disputé, appuyez-vous sur un partenaire fiable et expérimenté pour transformer votre logiciel en un produit SaaS](/fr/evaluation-developpement-produit) unique, performant et haut de gamme.
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

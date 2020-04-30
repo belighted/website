@@ -5,7 +5,7 @@ const { nanoid } = require("nanoid");
 const fs = require("fs");
 const del = require("del");
 
-const DESTINATION_PATH = path.resolve("content", "images", "legacy");
+const DESTINATION_PATH = path.resolve("content", "images", "legacy-cta");
 
 async function cleanupDestinationFolder() {
   const deletedPaths = await del([`${DESTINATION_PATH}/*`]);
@@ -53,9 +53,9 @@ const downloadImages = async images => {
       const image = images[imageUrl];
       const newPath = path.join(DESTINATION_PATH, image);
       counter++;
-      console.log(counter, "/", Object.keys(images).length);
       try {
         fs.writeFileSync(newPath, await download(imageUrl));
+        console.log(counter, "/", Object.keys(images).length);
         return true;
       } catch (e) {
         return false;
@@ -70,8 +70,8 @@ const updatePathInContent = (results, images) => {
     const content = fs.readFileSync(file, "utf-8");
     const updatedContent = results[file].matches.reduce((acc, match) => {
       const filename = images[match.replace(/\?.*/, "")];
-      console.log("replace", match, "by", `/images/legacy/${filename}`);
-      return acc.replace(match, `/images/legacy/${filename}`);
+      console.log("replace", match, "by", `/images/legacy-cta/${filename}`);
+      return acc.replace(match, `/images/legacy-cta/${filename}`);
     }, content);
     fs.writeFileSync(file, updatedContent);
   });

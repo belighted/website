@@ -13,7 +13,7 @@ tags:
     value: under-the-hood
 status: published
 ---
-![https://i.imgur.com/frWoyic.jpg](https://i.imgur.com/frWoyic.jpg)
+![/images/legacy-cta/rR0iUW8zPzJMnZnz_3dOU.jpg)
 
 _This article will be split in two distinct parts: the first will be more “theoretical” and will explain the main principles of Gulp and Grunt, as well as what I prefer to use; in the second, we will show you how to build a boilerplate for your project (in both way)._
 
@@ -123,4 +123,4 @@ Here are some good articles about streams:
 
 *   **[https://github.com/substack/stream-handbook](https://github.com/substack/stream-handbook)**
 
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
