@@ -20,7 +20,7 @@ tags:
     value: saas-development
 status: published
 ---
-![demystifier-ruby-on-rails](/images/legacy/UZNNGEGy8eawGiWbCJgKF.png)
+![demystifier-ruby-on-rails](/content/images/legacy/UZNNGEGy8eawGiWbCJgKF.png)
 
 Le développement de logiciels est une étape coûteuse dans l'essor d'une start-up. La **[rapidité](/fr/blog/rapidite-reussite-startup)** de développement peut faire la différence entre un décollage tout en douceur et un atterrissage chaotique.
 
@@ -37,17 +37,17 @@ Il existe d'autres frameworks créés pour prendre en charge différents langage
 
 *   **Airbnb est une grande application web créée avec Ruby on Rails.**
 
-![air bnb-1](/images/legacy/oMfEntUy9gI4CXAdSxr0I.png)
+![air bnb-1](/content/images/legacy/oMfEntUy9gI4CXAdSxr0I.png)
 
   
 
 *   **Fiverr est possible grâce à Ruby on Rails.**
 
-![Fiverr is made possible thanks to Ruby on Rails.](/images/legacy/pByfg92KeYqFr8vFeOZBh.png)
+![Fiverr is made possible thanks to Ruby on Rails.](/content/images/legacy/pByfg92KeYqFr8vFeOZBh.png)
 
 *   **Saviez-vous que Shopify est également basé sur Rails ?**  
       
-    ![shopify](/images/legacy/TNJRV6oBL7G3VE1pjh4u9.png)
+    ![shopify](/content/images/legacy/TNJRV6oBL7G3VE1pjh4u9.png)
 
 *   **Groupon**
 *   **Kickstarter**
@@ -121,7 +121,7 @@ Certaines applications ont migré, mais de nombreuses sont restées. Airbnb cont
 
 La question du langage et du framework est très importante. Une fois que vous utilisez un framework, il peut être difficile de migrer par la suite.
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/content/images/legacy/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
 
 Nous pensons que Ruby on Rails est une option sûre pour la plupart des start-up de logiciels **[SaaS](/fr/qu-est-ce-que-le-saas-guide)**. Mais ça vaut la peine d'en discuter. C'est une décision importante qui déterminera l'avenir du développement de votre application.
 

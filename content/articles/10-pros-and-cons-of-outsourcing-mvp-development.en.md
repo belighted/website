@@ -23,7 +23,7 @@ Developing your minimum viable product is a crucial first step on your startup j
 
 One of the most common challenges faced by non-technical founders is how to handle the development work, when they lack the technical skills themselves. One option is to outsource development of your MVP - but is this a good option for your startup?
 
-[![You have a Software Idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
+[![You have a Software Idea but can't code?](/content/images/legacy/CmbFPGk6QWSw4YLsAxURq.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
 
   
 Pros of Outsourcing MVP Development
@@ -81,4 +81,4 @@ Should You Outsource Development of Your MVP?
 
 Non-technical founders can take several different approaches to MVP development - including outsourcing to an agency. To learn more about the six different MVP development strategies used by cutting-edge startups, download our free eGuide.
 
-[![You have a software idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+[![You have a software idea but can't code?](/content/images/legacy/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

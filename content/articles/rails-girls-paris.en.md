@@ -36,4 +36,4 @@ Des initiatives comme Rails Girls montrent que, même si les métiers informatiq
 
 Plus d’infos sur **[Rails Girls](https://railsgirls.com)** et **[Rails Girls Paris](https://railsgirls.com/paris)**.  
   
-[![You have a software idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+[![You have a software idea but can't code?](/content/images/legacy/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

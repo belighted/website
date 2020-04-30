@@ -72,4 +72,4 @@ You’ve got limited resources to make it all happen, and you need to be sure th
 
 Next time we’ll talk about how you can build **[market validation](/blog/startup-speed-market-validation)** into your product development roadmap to keep your startup nimble and focus on the right things.
 
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

@@ -75,4 +75,4 @@ Finally, you can use this information in your contact request controller. This i
 For your information, there exists another solution, implemented in a Rails gem: [Honeypot CAPTCHA](https://github.com/curtis/honeypot-captcha). Practically, it adds a hidden field in your form that must stay empty as the user isn’t able to see it, but that bots will actually fill. Then in your backend controller you can easily check if the request is coming from a real user or from a bot.
 
   
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

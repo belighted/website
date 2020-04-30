@@ -24,7 +24,7 @@ Sometimes a technical leader is behind the new company, or they’ve already **[
 
 We have observed some differences between working with technical and non-technical startup founders over the years. Non-technical founders might be surprised to learn they actually have an advantage in some ways.
 
-[![You have a Software Idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
+[![You have a Software Idea but can't code?](/content/images/legacy/CmbFPGk6QWSw4YLsAxURq.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
 
 The thing with technical startup founders
 
@@ -55,4 +55,4 @@ Without first understanding the market, all the technical skills in the world wi
 
 We have been through this process with non-technical and technical founders many times. The **[core steps guide the development of your startup idea](https://www.belighted.com/services)** through the major stages even when you have no technical skills. You can **[start small](https://www.belighted.com/blog/why-your-startup-should-not-issue-rfps-for-software-development)** and get a sense of what it’s like to work with a software agency partner first, to make sure they are a good fit for you. Let us know **[if you’d like to chat](https://www.belighted.com/contact)**.
 
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

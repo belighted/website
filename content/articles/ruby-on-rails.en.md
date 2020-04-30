@@ -32,12 +32,12 @@ While a framework is not necessary when building an app -- developers could writ
 
 There are other frameworks created to support various programming languages, but we prefer Ruby on Rails (RoR) for the back-end when building **[SaaS web applications](/saas-guide-to-software-as-service)**. And we’re not alone. Check out some very famous web apps built using Ruby on Rails:
 
-*   **Airbnb is a large web app built with Ruby on Rails.**![air bnb-1](/images/legacy/oMfEntUy9gI4CXAdSxr0I.png)  
+*   **Airbnb is a large web app built with Ruby on Rails.**![air bnb-1](/content/images/legacy/oMfEntUy9gI4CXAdSxr0I.png)  
       
     
-*   **Fiverr is made possible thanks to Ruby on Rails.**![Fiverr is made possible thanks to Ruby on Rails.](/images/legacy/pByfg92KeYqFr8vFeOZBh.png)  
+*   **Fiverr is made possible thanks to Ruby on Rails.**![Fiverr is made possible thanks to Ruby on Rails.](/content/images/legacy/pByfg92KeYqFr8vFeOZBh.png)  
     
-*   **Shopify - another site you might not have known was built on Rails.**![shopify](/images/legacy/TNJRV6oBL7G3VE1pjh4u9.png)
+*   **Shopify - another site you might not have known was built on Rails.**![shopify](/content/images/legacy/TNJRV6oBL7G3VE1pjh4u9.png)
 *   **Groupon** 
 *   **Kickstarter**
 *   Dribbble
@@ -106,7 +106,7 @@ Choosing the language and framework for your SaaS application
 
 The question of language and framework is a big one. Once you commit to a framework, it can be a challenge to migrate later.  
   
-[![The ultimate Guide to Software as a Service](https://no-cache.hubspot.com/cta/default/1684659/0b551323-0d58-4d8c-882c-e42a03a01459.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)  
+[![The ultimate Guide to Software as a Service](/content/images/legacy/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)  
 
 We believe that Ruby on Rails is a safe bet for most **[SaaS](/saas-guide-to-software-as-service)** software startups. But it’s worth discussing. It’s a big decision, one that will shape the future of your app development for a long time to come.
 

@@ -76,4 +76,4 @@ There are various models for assembling the team that will yield the greatest ne
 
 As you look to achieve the benefits of speed in your talent decisions, it’s key to keep focused on the right activities. Join us next for **[Part 2](/blog/startup-speed-focus)** of our series on the need for speed at a startup, where we discuss focusing on the right things at the right time.  
   
-[![You have a software idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+[![You have a software idea but can't code?](/content/images/legacy/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

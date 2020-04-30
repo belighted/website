@@ -21,7 +21,7 @@ When building your minimum viable product (MVP), there are lots of different opt
 
 While various frameworks will suit MVPs with very specific requirements, for more general applications you may find that Ruby on Rails is the best option. Today we're sharing five reasons why Ruby on Rails is the best framework for building an MVP.
 
-[![You have a Software Idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
+[![You have a Software Idea but can't code?](/content/images/legacy/CmbFPGk6QWSw4YLsAxURq.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
 
 1) Ruby
 -------
@@ -61,4 +61,4 @@ A prime example of this is Twitter. Originally built on Ruby on Rails, it succes
 
 There are also ways in which Ruby on Rails is _faster_ than other frameworks. Thanks to the concise language and accessibility of open source projects, Ruby is optimised to maximise developer productivity. When you're an early-stage startup, time is money: if your developer can build an MVP in Ruby on Rails in less time, then that's less money spent building, and more time and money you can spend testing, getting feedback, and shaping your product roadmap.
 
-[![You have a software idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+[![You have a software idea but can't code?](/content/images/legacy/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

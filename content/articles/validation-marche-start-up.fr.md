@@ -16,7 +16,7 @@ tags:
     value: the-belighted-way
 status: published
 ---
-![rapidite-startup-validation-marche](/images/legacy/RpjjNuH2FqTbYJxtu8sDW.png)
+![rapidite-startup-validation-marche](/content/images/legacy/RpjjNuH2FqTbYJxtu8sDW.png)
 
 Si vous faites fausse route, autant le savoir au plus vite.
 
@@ -96,4 +96,4 @@ Et bien voilà. Ceci conclut notre série sur la rapidité et la façon dont nou
 
 **[Contactez-nous](/fr/evaluation-developpement-produit)** pour découvrir comment nous pouvons vous aider à accélérer le processus de développement de vos nouveaux produits. Nous serions ravis de savoir sur quoi vous travaillez !
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)
+[![Nouveau call-to-action](/content/images/legacy/jLxarWVFZ4IWPcDnMDdPS.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)

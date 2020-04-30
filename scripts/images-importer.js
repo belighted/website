@@ -13,7 +13,7 @@ async function cleanupDestinationFolder() {
 }
 async function findImagesHostedOnHubspot() {
   const results = await findInFiles.find(
-    /(https?:\/\/(www)?.belighted.com[^\[\]:]+\.(png|jpg|svg|jpeg|webp|gif)+)/,
+    /(https?:\/\/(www)?.*.com[^\[\]:]+\.(png|jpg|svg|jpeg|webp|gif)+)/,
     path.resolve(__dirname, "..", "content"),
     /\.(mdx|yml|md)/
   );

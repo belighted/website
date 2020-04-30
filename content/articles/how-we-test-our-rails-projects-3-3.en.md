@@ -315,4 +315,4 @@ What you do not want to do is having to change your spec when something totally 
 
 We hope you enjoyed reading this series of posts and you now have a better grasp on how testing rails applications can be done. Please share with us any comments or remarks about what you think of our process or about how yours is different.
 
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

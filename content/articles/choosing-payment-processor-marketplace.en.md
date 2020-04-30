@@ -19,7 +19,7 @@ When you set up your marketplace, you need to figure out how money is going to e
 
 The transferring of money is heavily regulated and can also be a source of friction for your marketplace users. You want to get the choice right from the start. The marketplace [Listminut](https://www.belighted.com/case-studies/listminut-increases-their-product-development-speed-by-90-with-belighted) came to us wanting to speed up development, improve conversions and expand into France. Our work also involved changing from a payment gateway to a more marketplace-friendly payment processor. Stripe Connect provided a great solution.
 
-[![You have a Software Idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
+[![You have a Software Idea but can't code?](/content/images/legacy/CmbFPGk6QWSw4YLsAxURq.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
 
 Let’s take a look at some things you need to consider when choosing a payment processor for your marketplace.
 
@@ -129,4 +129,4 @@ As a development company that works with new and growing marketplace apps, we ap
 
 [Talk to us today](https://www.belighted.com/contact) about the payments processor solution that will work best for your marketplace.
 
- [![You have a software idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+ [![You have a software idea but can't code?](/content/images/legacy/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

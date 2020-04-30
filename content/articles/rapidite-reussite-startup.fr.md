@@ -17,7 +17,7 @@ tags:
     value: développement-mvp
 status: published
 ---
-![reussite-startup-rapidite](/images/legacy/DOCS2wtRDDeitGGWAsby6.png)
+![reussite-startup-rapidite](/content/images/legacy/DOCS2wtRDDeitGGWAsby6.png)
 
 Quelles ont été [leurs erreurs](https://www.cbinsights.com/research/startup-failure-reasons-top/) ? Qu'ont-elles bien fait ? Des analystes ont passé au crible des [centaines de start-up](https://www.getautopsy.com/) pour identifier les facteurs qui les conduisent à la perte et ceux qui les propulsent vers le succès. 
 
@@ -65,4 +65,4 @@ Partie 3 : **[La rapidité dans la validation du marché](/fr/blog/validation-m
   
 **  
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/4b0783da-e328-4356-8375-9e4da3107f31.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/4b0783da-e328-4356-8375-9e4da3107f31)
+[![Nouveau call-to-action](/content/images/legacy/aT-qcraOXB4F5eu_1iBV7.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/4b0783da-e328-4356-8375-9e4da3107f31)

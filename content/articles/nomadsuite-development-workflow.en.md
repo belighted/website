@@ -26,7 +26,7 @@ As with any agile project, features of **[Nomad Suite](https://nomadsuite.com/)*
 
 The first step is therefore to _start_ the first story in the backlog. This lets everybody know who is working on what and, because we use [HipChat](https://www.hipchat.com/) for internal communication and we [hooked both tools together](https://help.hipchat.com/knowledgebase/articles/64449-pivotal-tracker-integration), all stakeholders are notified.
 
-![](https://i.imgur.com/lsJhbNV.png) ![](https://i.imgur.com/pIdKtqq.png)
+![](/content/images/legacy/zA5mVivoUH-uyVgGB5SsZ.png)
 
 Next, we create a new feature branch, with a clear and concise name — it is destined to be pushed, so it shouldn’t confuse other developers. Some of us like to add the story ID from Pivotal, but the truth is we don’t really have a strict pattern. Feature branches are extremely important to us because they allow you to experiment at will, commit, share your changes, and rollback if need be, all without disrupting the work of other and, most importantly, staging and production deployments.
 
@@ -37,11 +37,11 @@ Next, we create a new feature branch, with a clear and concise name — it is de
 
 At every push to [GitHub](https://github.com), the team is notified on HipChat. This is a great way to let everybody interested know how the feature progressing.
 
-![](https://i.imgur.com/BojUetT.png)
+![](/content/images/legacy/ncuz9pHf5mcJoqkmIzu7J.png)
 
 Our CI, [Semaphore](https://semaphoreapp.com/), is also notified, and will let you know if all tests are green through — you guessed it — HipChat. This allows developers to not run the entire test suite, as some tests can take a few minutes. It is perfectly OK to break a feature branch.
 
-![](https://i.imgur.com/4kMdvqY.png)
+![](/content/images/legacy/l6n5TWqQQ4HqssEJI-Yep.png)
 
 Finishing up
 ------------
@@ -59,7 +59,7 @@ Or is it? Now is the time to look at the commits, and squash the branch if neces
 
 All commits should reference the Pivotal Tracker story ID and the last one should say it finishes it, so GitHub can [update the tracker for us](https://www.pivotaltracker.com/help/api?version=v3#scm_post_commit). The story is now automatically marked as **finished** , but it still needs review. Time to open a **Pull Request** on GitHub.
 
-![](https://i.imgur.com/96XA1HI.png)
+![](/content/images/legacy/mdSMCBN2gKb_15cLZhagg.png)
 
 Review
 ------
@@ -68,7 +68,7 @@ Because we want to make sure this is the best code we can write, and we can all 
 
 After a little back and forth (with amended commits and forced pushes), the reviewer can finally decide to merge the feature. He is also reassured by Semaphore, which tested the branch and [reports status](https://semaphoreapp.com/blog/2012/09/04/semaphore-implements-githubs-status-api-in-record-time.html) on the Pull Request.
 
-![Semaphore status on Pull Request](https://semaphoreapp.com/blog/assets/images/2012-09-04/green-request.png)
+![Semaphore status on Pull Request](/content/images/legacy/koEfpcv-nl0MsBKrSi2pF.png)
 
 Deployment
 ----------
@@ -77,8 +77,8 @@ After the merge, Semaphore will run tests on the new master. They should all be 
 
 Time for the next story!..
 
-![](https://i.imgur.com/7M3kiHH.jpg)
+![](/content/images/legacy/l4VlDVXR-Y-yhF8dd4gfd.jpg)
 
 Hoping this post could help people looking for an efficient way of organizing their job !  
   
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

@@ -17,7 +17,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![improve software user experience](/images/legacy/sdlgME-vHwEepcSvDU5lM.png)
+![improve software user experience](/content/images/legacy/sdlgME-vHwEepcSvDU5lM.png)
 
 ### A user-friendly experience is vital to the success your SaaS software solution. Large corporations understand this well: they devote attention to the user's experience with their products and constantly strive to improve it.
 
@@ -53,7 +53,7 @@ Offer them a concise and easy-to-follow checklist to guide them through each ste
 
 ### **A customized interface that fits the image of your company**
 
-**![improve saas user experience](/images/legacy/p4qsmwcaSWXwm_-4tH8wa.png)**
+**![improve saas user experience](/content/images/legacy/p4qsmwcaSWXwm_-4tH8wa.png)**
 
 Users overwhelmingly prefer an interface that allows enhanced interaction.
 
@@ -63,4 +63,4 @@ In addition to helping you gather suggestions to further improve your solution, 
 
 At Belighted, we have extensive experience with designing high-performance user interfaces from both a functional and a customer satisfaction standpoint. We’ll help you design [the most relevant user clickpath](/user-testing), making your interface user-friendly and intuitive. Our vast experience is a key asset for understanding all your needs and providing you with end-to-end SaaS interface design support.
 
-[![The ultimate Guide to Software as a Service](https://no-cache.hubspot.com/cta/default/1684659/0b551323-0d58-4d8c-882c-e42a03a01459.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
+[![The ultimate Guide to Software as a Service](/content/images/legacy/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
