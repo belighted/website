@@ -28,7 +28,7 @@ At Belighted, we discuss KPIs (key performance indicators) with clients in our *
 
 Let’s step back together and look at the most important SaaS metrics for a minute.
 
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2) 
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2) 
 
 SaaS metrics vs. KPIs
 ---------------------
@@ -164,4 +164,4 @@ And if you haven’t reached product/market fit yet, don’t even bother with Sa
   
 Want to see more about how activities break down for a new software product by stage? Check out our [**Power Checklist**](https://www.belighted.com/blog/ultimate-checklist-developing-new-software-product) covering 50 checkpoints in 5 stages.
 
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/50f74af8-9d07-4c18-a034-4214c0dc7956.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/50f74af8-9d07-4c18-a034-4214c0dc7956)
+[![New Call-to-action](/content/images/legacy/qqshY7nqJHgHkQ8kAYhsy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/50f74af8-9d07-4c18-a034-4214c0dc7956)

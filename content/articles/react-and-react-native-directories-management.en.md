@@ -133,15 +133,7 @@ And here is the architecture after:
    |_ types/  
 package.json`
 
-You can read up on the documentation for the naming of your [package.json name](https://docs.npmjs.com/files/package.json#name) files.
-
-#### Bonus
-
-Here is a way to handle your assets inside the application.
-
-The React Native documentation tells you that you can use ‘require()’ for your various images.
-
-`<Image source={require('../assets/images/branding/logo.png')} />`
+You can read up on the documentation for the naming of your [package.json name](/content/images/legacy/tzMs-PwIxQIUNaBgx0dz0.png')} />`
 
   
 But the directory path is still not great, as we saw before. Let's walk through how to improve it step by step below.
@@ -198,4 +190,4 @@ You can find examples for React and React Native management on Belighted’s Git
 
 I hope you've found this helpful. If you have a minute, please share it and spread the word for better directories management!  
   
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

@@ -21,7 +21,7 @@ status: published
 ---
 Here at Belighted, we talk about software development a lot. However, coding is only a small portion of what needs to happen when you’re creating and launching a new **[SaaS](/saas-guide-to-software-as-service)** or other software product. Recently we created a **[power checklist](https://www.belighted.com/free-eguide/power-checklist)** that walks you through 50 major checkpoints for developing, launching and growing a new app, tool or other software product.
 
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
 
   
 This is not simply a list of the stages of new product development, though you’ll see these points are woven throughout: idea generation and screening, concept development and testing, business strategy analysis and development, product development, test marketing and commercialization.
@@ -105,4 +105,4 @@ You don’t want to focus resources on these items too soon in the game or you w
 **Knowing _when_ to focus on _what_ is critical when you’re creating a new [SaaS](/saas-guide-to-software-as-service) software product or beginning a startup. This Power Checklist helps keep you focusing you on the right things at the right time.  
 **
 
-[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

@@ -20,7 +20,7 @@ tags:
     value: développement-mvp
 status: published
 ---
-![livraison-continue-start-up](/images/legacy/VEke_8VE4bqXcciducx31.png)
+![livraison-continue-start-up](/content/images/legacy/VEke_8VE4bqXcciducx31.png)
 
 Chaque fois que vous utilisez Amazon, Gmail ou **[Facebook](https://code.facebook.com/posts/270314900139291/rapid-release-at-massive-scale/)**, vous utilisez la dernière version. En fait, le logiciel a peut-être déjà été mis à jour 15 fois ce jour-là. 
 
@@ -103,4 +103,4 @@ Le déploiement continu nécessite des investissements continus dans la formatio
 
 Vous souhaitez discuter de la mise en place d'un processus d'intégration continu pour votre équipe de développement ? **[Réservez un Strategy Workshop](/fr/strategy-workshop)** avec nous. 
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)
+[![Nouveau call-to-action](/content/images/legacy/jLxarWVFZ4IWPcDnMDdPS.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)

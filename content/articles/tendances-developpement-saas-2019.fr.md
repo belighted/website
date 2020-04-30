@@ -19,7 +19,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-### ![Tendances développement SaaS 2019](/images/legacy/ixAIDpQwTgT4Y0nGgfRaJ.png)Le SaaS évolue volontiers au gré des nouvelles avancées technologiques et des besoins émergents des consommateurs. Voici les 10 grandes tendances de développement SaaS à connaître.
+### ![Tendances développement SaaS 2019](/content/images/legacy/ixAIDpQwTgT4Y0nGgfRaJ.png)Le SaaS évolue volontiers au gré des nouvelles avancées technologiques et des besoins émergents des consommateurs. Voici les 10 grandes tendances de développement SaaS à connaître.
 
 ### **1 - L'incorporation de l’intelligence artificielle (IA)**
 
@@ -37,7 +37,7 @@ Aujourd'hui, le SaaS et la blockchain opèrent à deux niveaux distincts. **À l
 
 **Les logiciels SaaS sont aujourd'hui accessibles à partir d'un simple abonnement mensuel** (voir l'exemple ci-dessous avec [SurveyMonkey](https://www.surveymonkey.com/)). **Les choses pourraient rapidement changer et les modèles transactionnels prendre le relai**s. C'est particulièrement vrai pour les entreprises proposant des services à échéance rapide, à l'image des impressions de t-shirts ou des déclarations de revenus.
 
-![Modèle de paiement logiciel SaaS](/images/legacy/j8SiVJf2gXz_Xew4OnItt.png)
+![Modèle de paiement logiciel SaaS](/content/images/legacy/j8SiVJf2gXz_Xew4OnItt.png)
 
 ### **5 - Du SaaS au PaaS**
 
@@ -61,8 +61,8 @@ Comme toujours, la qualité du contenu constitue en 2019 l'une des grandes tenda
 
 ### **10 - La réponse vocale**
 
-![Tendance SaaS - réponse vocale](/images/legacy/HuiQP3eQB9eIHgZvZ3Mtr.png)
+![Tendance SaaS - réponse vocale](/content/images/legacy/HuiQP3eQB9eIHgZvZ3Mtr.png)
 
 Le succès de la maison connectée accélère le développement des fonctionnalités de réponse vocale. **Les technologies modernes sont aujourd'hui capables de reconnaître facilement les inflexions de la voix humaine, et il est donc essentiel de se focaliser sur ce secteur porteur**. La qualité de l'expérience utilisateur est à ce prix. 
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/content/images/legacy/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

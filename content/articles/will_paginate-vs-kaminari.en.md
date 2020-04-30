@@ -163,4 +163,4 @@ will\_paginate: **[https://github.com/mislav/will\_paginate](https://github.com/
 
 Kaminari: [**https://github.com/amatsuda/kaminari**  
   
-](https://github.com/amatsuda/kaminari)[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+](/content/images/legacy/2b2rWU5vo0a2veI27optR.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

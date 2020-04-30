@@ -36,4 +36,4 @@ Etant donné le taux de pénétration des tablettes iPad au sein du public visé
 
 Après l’application web de gestion des contrats de maintenance développée pour IBA, c’est le deuxième projet que Belighted réalise dans le **domaine médical**.  
   
-[![You have a software idea but can't code?](https://no-cache.hubspot.com/cta/default/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+[![You have a software idea but can't code?](/content/images/legacy/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

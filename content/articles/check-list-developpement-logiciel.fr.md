@@ -18,7 +18,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![Développer un logiciel](/images/legacy/OYD8QcslZaO2LLlQdQ8NR.png)
+![Développer un logiciel](/content/images/legacy/OYD8QcslZaO2LLlQdQ8NR.png)
 
 ### **Chez Belighted, nous parlons beaucoup du développement de logiciels. Cependant, le codage n'est qu'une étape de la conception d’une application SaaS ou d’un autre logiciel.**
 
@@ -45,7 +45,7 @@ Nous voulions créer une analyse pratique des étapes et des tâches spécifique
 
 Chez Belighted, la méthode _Running Lean_ influence fortement notre processus de pensée. La plupart de nos clients sont des start-up et des entreprises innovantes. Nous aimons la mentalité « Lean ». De plus, nous nous sommes aussi lancés dans l'aventure start-up puisque nous avons créé et commercialisé quelques-uns de nos propres produits.
 
-[**![FR_CTA_Belighted_iPad_saumon_powerchecklist](/images/legacy/KgPCqgzG2cg0VS_cBdQnJ.png)**](https://www.belighted.com/fr/ressources/software-power-checklist)
+[**![FR_CTA_Belighted_iPad_saumon_powerchecklist](/content/images/legacy/KgPCqgzG2cg0VS_cBdQnJ.png)**](https://www.belighted.com/fr/ressources/software-power-checklist)
 
 5 étapes clés du développement
 ------------------------------
@@ -117,4 +117,4 @@ Ne concentrez pas trop tôt vos ressources sur ces étapes car elles sont préci
 
 **Savoir** **_quand_** **se concentrer sur** **_quoi_** **est essentiel lorsque vous créez un nouveau logiciel** [SaaS](/fr/qu-est-ce-que-le-saas-guide) **ou que vous lancez une start-up. Cette [check-list indispensable](/fr/ressources/software-power-checklist) vous aide à concentrer vos efforts sur les bonnes étapes au bon moment.**
 
-[**![FR_CTA_Belighted_iPad_saumon_powerchecklist](/images/legacy/KgPCqgzG2cg0VS_cBdQnJ.png)**](https://www.belighted.com/fr/ressources/software-power-checklist)
+[**![FR_CTA_Belighted_iPad_saumon_powerchecklist](/content/images/legacy/KgPCqgzG2cg0VS_cBdQnJ.png)**](https://www.belighted.com/fr/ressources/software-power-checklist)

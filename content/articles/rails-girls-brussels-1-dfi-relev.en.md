@@ -27,5 +27,5 @@ Grâce à la générosité de nos sponsors, nous avons pu offrir à nos particip
 Pour découvrir toutes les photos du Rails Girls Brussels et vous tenir au courant, consultez notre page facebook:  
 **[https://www.facebook.com/RailsGirlsBrussels  
   
-](https://www.facebook.com/RailsGirlsBrussels)[![New Call-to-action](https://no-cache.hubspot.com/cta/default/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)  
+](/content/images/legacy/pj9uuDAr1oZ20XuFZ67XN.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)  
 **

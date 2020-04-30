@@ -20,7 +20,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![développement d'un saas - combien ça coûte ](/images/legacy/FhrhLm9viWNG6XxmqEJl3.png)
+![développement d'un saas - combien ça coûte ](/content/images/legacy/FhrhLm9viWNG6XxmqEJl3.png)
 
 ### La compétitivité tarifaire occupe bien entendu une place importante dans toute stratégie d'entreprise pérenne. Si vous souhaitez transiter vers l’édition de logiciel SaaS, la question du coût de développement du software se posera forcément avec acuité.
 
@@ -51,4 +51,4 @@ Pour savoir si le développement d'un SaaS sera vraiment rentable à long terme,
 Dans une société toujours plus mobile et connectée, les **logiciels SaaS s'imposent indubitablement comme la solution technique d'avenir**. Pour la pérennité de votre projet, cernez patiemment les enjeux auxquels vous souhaitez répondre et **prévoyez votre budget en fonction du retour sur investissement possible**.  
   
 
-[![Nouveau call-to-action](https://no-cache.hubspot.com/cta/default/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/content/images/legacy/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
