@@ -19,7 +19,7 @@ tags:
     value: saas-development
 status: published
 ---
-![Comment Belighted assure-t-elle le suivi de votre développement/projet sur le long terme ?](/images/legacy/7wb7Js9WoiVV-Da6o7b6T.png)
+![Comment Belighted assure-t-elle le suivi de votre développement/projet sur le long terme ?](/content/images/legacy/7wb7Js9WoiVV-Da6o7b6T.png)
 
 ### La réussite d'un projet de développement SaaS dépend toujours de 3 facteurs principaux : l'expérience, le savoir-faire et l'écoute. Découvrez ces éléments dans cet article !
 
@@ -33,7 +33,7 @@ Si une agence vous propose un devis après seulement une heure de discussion, el
 
 ### **Le [Design Sprint](/fr/design-sprint), tester pour mieux régner !**
 
-![Design Sprint développement projet](/images/legacy/2nLqw6BNkiqS0jG-3DU3y.png)
+![Design Sprint développement projet](/content/images/legacy/2nLqw6BNkiqS0jG-3DU3y.png)
 
 Dans le marché actuel, la vélocité est reine. Le [Design Sprint](/fr/design-sprint?hsCtaTracking=d01ceabb-c371-43d7-8dd1-98961cc0e7d6%7C3ec00ba2-92cf-4c30-8290-d7171c6d55f7) vous permettra d'éviter les écueils du surdéveloppement. Le principe du Design Sprint est simple : il consiste en une semaine intense de travail, pendant laquelle nous définirons et concevrons ensemble un prototype cliquable de votre produit validé par le client.
 
@@ -53,4 +53,4 @@ La livraison continue est massivement utilisée par des géants comme Facebook o
 
 **Pour que votre solution puisse se déployer dans la durée, la mise en place d'une stratégie sur mesure est indispensable. Chez Belighted, le suivi de votre développement de projet répond toujours à une méthodologie rigoureuse et éprouvée.**
 
-[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/content/images/legacy/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

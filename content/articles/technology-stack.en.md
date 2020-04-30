@@ -43,7 +43,7 @@ As connoisseurs of code (**[and beer](https://www.belighted.com/about)**, coinci
 
 **Flexibility**: While one specific tech stack may not be appropriate for every single mobile or web application development project, our stack accommodates various projects effectively. **This means we can work on a wide variety of products using the tools we’ve mastered.**
 
-**[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)**
+**[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)**
 
 Our preferred tech stack, GRRRRR
 --------------------------------
@@ -80,4 +80,4 @@ Now you’ve learned the basic building blocks we use in our tech stack. In the 
 *   **[React vs Angular: front-end development](/blog/front-end-react-angular)**
 *   **[Hybrid vs Native for your mobile SaaS application](/blog/mobile-saas-native-hybrid)**
 
-[![You have a software idea but can't code?](/images/legacy-cta/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+[![You have a software idea but can't code?](/content/images/legacy/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

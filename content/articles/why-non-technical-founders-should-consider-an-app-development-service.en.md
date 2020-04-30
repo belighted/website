@@ -52,4 +52,4 @@ A Smart Choice for Non-Technical Founders
 
 Non-technical startup founders have a wealth of options when it comes to developing their idea into a mobile app. Working with an app development service gives you access to the technical and business knowledge and experience of a team of specialists, so you can make smart, informed choices when developing your mobile app.
 
-[![You have a software idea but can't code?](/images/legacy-cta/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+[![You have a software idea but can't code?](/content/images/legacy/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

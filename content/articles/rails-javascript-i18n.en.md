@@ -166,4 +166,4 @@ Lastly, a little tip for the text in your JavaScript: have a look at the **[i18n
 
 Read more: [**I18n on RailsGuides**  
   
-](/images/legacy-cta/tm709aCoGkL-2JfBO6CIu.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+](/content/images/legacy/tm709aCoGkL-2JfBO6CIu.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

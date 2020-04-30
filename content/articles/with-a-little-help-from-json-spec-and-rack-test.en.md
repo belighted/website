@@ -95,4 +95,4 @@ With Rack::Test, you have a lot of helpers like the classic http methods. And ac
 
 All that helped to get a working API in a couple of days. For more information about the sinatra skeleton, I recommend you another **[blog post](https://blog.yannick.io/blog/2012/07/28/sinatra-skeleton/)** I wrote on my own blog or don’t hesitate to ask as many questions as you want!  
   
-[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

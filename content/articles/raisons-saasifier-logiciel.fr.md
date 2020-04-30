@@ -16,7 +16,7 @@ tags:
     value: saasify-software
 status: published
 ---
-![SaaSifier votre logiciel ](/images/legacy/ZAlq-3b0XCmo4GqzzQCC-.png)
+![SaaSifier votre logiciel ](/content/images/legacy/ZAlq-3b0XCmo4GqzzQCC-.png)
 
 ### Pour les petites et moyennes entreprises, les logiciels SaaS constituent une solution de remplacement pérenne aux traditionnels logiciels sous licence. Voici les 10 raisons de “SaaSifier” vos applications.
 
@@ -32,7 +32,7 @@ Les logiciels sous licence n'offrent qu'un accès limité aux applications et ne
 
 En étant éditeur de logiciel SaaS, **vous offrez à vos utilisateurs des mises à jour régulières.** Celles-ci étant perçues de manière automatiques par vos utilisateurs, ils profiteront de votre logiciel de sorte qu’ils puissent se concentrer exclusivement sur leur cœur de métier. 
 
-![SaaSifier votre logiciel - lévolutivité](/images/legacy/oOiDTUcdZbV2jsyyvZVqq.png)
+![SaaSifier votre logiciel - lévolutivité](/content/images/legacy/oOiDTUcdZbV2jsyyvZVqq.png)
 
 ### **Raison n°4 : La rapidité d'installation**
 
@@ -52,7 +52,7 @@ Les problématiques énergétiques jouent un rôle de plus en plus important au 
 
 ### **Raison n°8 : La sécurisation des données**
 
-**En “SaaSifiant” votre logiciel, vous promettez une meilleure sécurisation à vos utilisateurs.** La création d'un matériel moderne et le strict respect des dernières normes de sécurité raréfient en effet grandement les pertes de données.![http_vs_https-1](/images/legacy/n-zbEsyuWz8aCm15fbMr_.jpg)
+**En “SaaSifiant” votre logiciel, vous promettez une meilleure sécurisation à vos utilisateurs.** La création d'un matériel moderne et le strict respect des dernières normes de sécurité raréfient en effet grandement les pertes de données.![http_vs_https-1](/content/images/legacy/n-zbEsyuWz8aCm15fbMr_.jpg)
 
 ### **Raison n°9 : La compatibilité**
 
@@ -64,4 +64,4 @@ Les logiciels On-Premise ne permettent pas toujours d'un niveau minimum de servi
 
 Compatibilité accrue, scalabilité, compétitivité tarifaire, sécurisation, flexibilité : **les avantages inhérents au SaaS sont nombreux.** N'hésitez pas à en faire l'expérience pour vous forger votre propre idée. 
 
-[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/content/images/legacy/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

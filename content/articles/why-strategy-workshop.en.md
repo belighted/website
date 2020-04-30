@@ -80,4 +80,4 @@ The team at Belighted is more than just a group of developers. We are highly-ski
 Our in-depth process only allows for one new client per month. Will you be our next **[success story](https://www.belighted.com/case-studies)**? **[Inquire about a Strategy Workshop now](https://www.belighted.com/scoping-workshop)**.  
   
 
-[![The ultimate Guide to Software as a Service](/images/legacy-cta/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
+[![The ultimate Guide to Software as a Service](/content/images/legacy/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)

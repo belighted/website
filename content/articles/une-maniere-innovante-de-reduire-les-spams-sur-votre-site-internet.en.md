@@ -74,4 +74,4 @@ Au final, vous allez pouvoir utiliser cette information dans votre contrôleur d
 
 En complément d’information, sachez qu’il existe une autre solution implémentée dans une gem Rails: [Honeypot CAPTCHA](https://github.com/curtis/honeypot-captcha). En pratique, un champ caché est ajouté dans votre formulaire. Celui-ci est censé rester vide puisque l’utilisateur ne le voit pas. Par contre, les bots vont le remplir. Vous pouvez ensuite facilement vérifier si la requête provient d’un réel utilisateur ou d’un bot dans votre contrôleur backend.  
   
-[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

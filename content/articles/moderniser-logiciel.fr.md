@@ -18,7 +18,7 @@ tags:
     value: saasify-software
 status: published
 ---
-![Moderniser son logiciel pour innover](/images/legacy/JYMNxywiPIVaNkqFOpa5E.png)
+![Moderniser son logiciel pour innover](/content/images/legacy/JYMNxywiPIVaNkqFOpa5E.png)
 
 ### Dans une société ultra-connectée comme la nôtre, le volume de données à gérer est plus important que jamais. L'adoption d'un logiciel adapté aux usages courants est ainsi aujourd'hui indispensable.
 
@@ -41,7 +41,7 @@ Un modèle business SaaS repose sur un mode de distribution de logiciels spécif
 
 ### **Les raisons d'opter pour un logiciel SaaS sont nombreuses :**
 
-**![christopher-gower-m_HRfLhgABo-unsplash](/images/legacy/Whux7cFTvhuP5Iy8T0XzH.jpg)**
+**![christopher-gower-m_HRfLhgABo-unsplash](/content/images/legacy/Whux7cFTvhuP5Iy8T0XzH.jpg)**
 
 *   **Rapidité d'installation :** les applications étant déjà installées et configurées dans le cloud, les délais de déploiement sont réduits. Ce qui est un avantage considérable pour vos clients et futurs clients, dans un monde de plus en plus impatient.  
       
@@ -59,4 +59,4 @@ Un modèle business SaaS repose sur un mode de distribution de logiciels spécif
       
     Comment Belighted peut vous aider ? [Notre objectif : accompagner les entreprises dans leur transformation digitale et moderniser leur logiciel](/fr/evaluation-developpement-produit). 
 
-[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/content/images/legacy/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

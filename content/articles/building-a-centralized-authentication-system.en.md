@@ -76,4 +76,4 @@ References
 *   \[2\] To be accurate, OAuth2 is not an authentication mechanism. It is an authorization mechanism to control access to resources. It can however be used for authentication, typically by requesting access to the user’s credentials.
 *   \[3\] However, since each cookie is encrypted with a different secret token, the applications are only able to read the content of their own.
 
-[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

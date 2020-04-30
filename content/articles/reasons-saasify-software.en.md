@@ -28,13 +28,13 @@ Choosing SaaS means helping your users avoid the need to spend thousands of euro
 
 Licensed software offers only limited access to applications and, as a general rule, can only be used in the office on a limited number of machines. Conversely, by “SaaSifying” your software, you make it possible for your users to access data from any device with an Internet connection. 
 
-![10 reasons to “SaaSify” your software - accessibility](/images/legacy/ZAlq-3b0XCmo4GqzzQCC-.png)
+![10 reasons to “SaaSify” your software - accessibility](/content/images/legacy/ZAlq-3b0XCmo4GqzzQCC-.png)
 
 **Reason No. 3: Scalability**
 
 As a SaaS software publisher, you’ll be able to provide your users with regular updates. As these updates are automatically included in the subscription, your users will be able to enjoy your software in a way that lets them concentrate exclusively on their core business. 
 
-![10 reasons to “SaaSify” your software - scalability](/images/legacy/oOiDTUcdZbV2jsyyvZVqq.png)
+![10 reasons to “SaaSify” your software - scalability](/content/images/legacy/oOiDTUcdZbV2jsyyvZVqq.png)
 
 **Reason No. 4: Fast installation**
 
@@ -56,7 +56,7 @@ Energy-related issues are an ever-growing concern for businesses. The good news?
 
 By “SaaSifying” your software, your promise better security to your users. The design of modern hardware and its strict compliance with the latest security standards make data loss a thing of the past.
 
-![10 reasons to “SaaSify” your software - data security](/images/legacy/n-zbEsyuWz8aCm15fbMr_.jpg)
+![10 reasons to “SaaSify” your software - data security](/content/images/legacy/n-zbEsyuWz8aCm15fbMr_.jpg)
 
 **Reason No. 9: Compatibility**
 
@@ -68,4 +68,4 @@ On-Premise software does not always give users a minimum level of customer servi
 
 Greater compatibility, scalability, competitive prices, security, and flexibility: the inherent advantages of SaaS are countless. Why not experience it yourself to form your own opinion? 
 
-[![The ultimate Guide to Software as a Service](/images/legacy-cta/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
+[![The ultimate Guide to Software as a Service](/content/images/legacy/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)

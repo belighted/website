@@ -37,4 +37,4 @@ Here is usefull links if you need more information:
 *   **[https://robots.thoughtbot.com/post/11744619917/danger-danger-high-voltage-use-rails-3-1-for-static](https://robots.thoughtbot.com/post/11744619917/danger-danger-high-voltage-use-rails-3-1-for-static)**
 *   **[https://rubygems.org/gems/high\_voltage/](https://rubygems.org/gems/high_voltage/)**
 
-[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

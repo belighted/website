@@ -20,7 +20,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![Améliorer mon SaaS ou en développer un nouveau](/images/legacy/rCU1o-TTUxrZLKv6XXafq.png)
+![Améliorer mon SaaS ou en développer un nouveau](/content/images/legacy/rCU1o-TTUxrZLKv6XXafq.png)
 
 ### Votre solution SaaS réclame des améliorations pour corriger certains problèmes ou embarquer des fonctionnalités supplémentaires. Vous devez répondre à la question de savoir s’il serait plus rentable (budget, temps, risques) de réécrire tout ou partie du code existant ou si vous devez repartir from scratch.
 
@@ -50,7 +50,7 @@ Une seule réponse positive est le signe que changer de technologie est envisage
 
 #### **2) Quand la réécriture d'une application existante en vaut-elle la peine ?**
 
-![réécrire une application existante ?](/images/legacy/EfIn2P9RENQMGVVsMB8vD.png)
+![réécrire une application existante ?](/content/images/legacy/EfIn2P9RENQMGVVsMB8vD.png)
 
 Si votre problème peut se résoudre par 2 biais, migration de technologie et autre moyen, optez pour la solution la plus facile / simple. 
 
@@ -71,4 +71,4 @@ Si votre problème peut se résoudre par 2 biais, migration de technologie et au
 
 Vous avez besoin d'une analyse rigoureuse et d'une planification parfaite, alors que réaliser des estimations de temps et de budget est extrêmement difficile. Belighted possède l’expertise et le recul nécessaires pour vous guider dans ces instants cruciaux. [Passer à une nouvelle technologie peut coûter cher](/fr/blog/co%C3%BBt-d%C3%A9veloppement-saas-application). Belighted vous assure la transparence en cas d’accroissement budgétaire et ne pratique pas la politique des coûts cachés. Pour cet investissement à long terme qu’est la refonte de votre SaaS, vous avez définitivement besoin d’un [partenaire fiable et expérimenté.](/fr/evaluation-developpement-produit)
 
-[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/content/images/legacy/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

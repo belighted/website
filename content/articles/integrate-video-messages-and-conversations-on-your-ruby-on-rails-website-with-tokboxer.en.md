@@ -25,4 +25,4 @@ Feel free to try it by simply typing “sudo gem install tokboxer” and followi
 
 We are using TokBox and TokBoxer on [iStockCV](https://www.istockcv.com/), the online recruiting social network which we are currently developing. This new feature will allows candidates and companies to interact and make online interviews, which is quite exciting.  
   
-[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

@@ -21,7 +21,7 @@ App development companies will have different specialisms and varying levels of 
 
 At this stage, the most important thing to do is assess whether the app development company is a good fit for your startup's culture, and whether your communication styles and processes are compatible. With that in mind, we've compiled a list of eight questions to ask before you hire an app development company.
 
-[![You have a Software Idea but can't code?](/images/legacy-cta/CmbFPGk6QWSw4YLsAxURq.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
+[![You have a Software Idea but can't code?](/content/images/legacy/CmbFPGk6QWSw4YLsAxURq.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
 
 1) How do they work?
 --------------------
@@ -78,4 +78,4 @@ With so many companies to choose from, it can be difficult to differentiate - es
 
 The one question to be careful with is 'how much will this cost?'; selecting an app development company on price alone means you run the risk of a terrible working relationship, and the finished product will suffer as a result.
 
-[![You have a software idea but can't code?](/images/legacy-cta/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+[![You have a software idea but can't code?](/content/images/legacy/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

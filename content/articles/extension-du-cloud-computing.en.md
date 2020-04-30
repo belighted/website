@@ -25,4 +25,4 @@ Mais outre l’accessibilité aux données partout et tout le temps et la large 
 
 De nombreux avantages dont ont su profiter les PME : selon le cabinet Markess, 51 % d’entres elles utilisent des solutions cloud, en France. En termes de dépenses, cela représenterait d’ici 2014 près d’un milliard de dollars, d’après le site Computer Reseller News. Conscient de ce succès, Belighted a déjà personnellement franchi le cap de la dématérialisation et renforcé son offre en applications cloud et mobiles sur mesure: un partenaire idéal tout trouvé pour votre décollage vers le nuage…  
   
-[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

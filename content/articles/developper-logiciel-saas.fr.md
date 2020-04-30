@@ -38,7 +38,7 @@ Bien que les logiciels SaaS soient en général plus rapides à développer que 
 Pour qu'il soit durable, le logiciel SaaS doit impérativement **répondre aux enjeux spécifiques de l'entreprise** et pouvoir concrètement être développé. Il s'agira donc de **se demander si le projet est susceptible d'être accepté par la direction** et s'il sera possible de le maintenir sur le long terme. **Les considérations financières** entrent ici bien évidemment en jeu.   
   
 
-![Développer un logiciel SaaS ](/images/legacy/13wTZgbvL-e2gSyqdaxtb.png)
+![Développer un logiciel SaaS ](/content/images/legacy/13wTZgbvL-e2gSyqdaxtb.png)
 
 #### **  
 Affiner la vision**
@@ -50,7 +50,7 @@ Une fois le projet accepté, la **création d'une maquette fonctionnelle** sera 
 Travailler seul ou en petite équipe sur un projet est parfois néfaste d'un point de vue objectif. Il est donc important de **discuter du logiciel SaaS avec le plus grand nombre de personnes et de prendre en compte leurs avis**. N'hésitez donc pas à **montrer le software à des personnes étrangères au projet, en utilisant les réseaux sociaux par exemple**. Recueillez les adresses mail des testeurs potentiels et envoyez-leur une notice explicative. S'ils sont satisfaits, proposez-leur dès maintenant de s'abonner.  
   
 
-![Développement d'un logiciel SaaS ](/images/legacy/JeITvk8KTjAnIITpWpQk7.png)
+![Développement d'un logiciel SaaS ](/content/images/legacy/JeITvk8KTjAnIITpWpQk7.png)
 
 ### **Combien de temps prend la création d’un SaaS en lui-même ?**
 
@@ -68,4 +68,4 @@ C’est pourquoi, il est plus judicieux de raisonner en terme d’investissement
 
 L'un des **principaux avantages d'un logiciel SaaS réside dans sa capacité d'évolution, qui assurera la scalabilité de votre entreprise sur le long terme**. Les solutions que nous aidons à développer peuvent ainsi facilement venir s'enrichir de nouvelles fonctionnalités. Sur le long terme, c'est la garantie de ne jamais plus avoir à perdre de temps dans la refonte totale du logiciel sous licence ou la perte de clients ne voulant pas acheter la nouvelle refonte de ce dernier. Les gains sont donc substantiels.
 
-[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/content/images/legacy/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

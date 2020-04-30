@@ -16,7 +16,7 @@ tags:
     value: saasify-software
 status: published
 ---
-### ![vieux software](/images/legacy/Le6LhwbHX7dH5tKtzccaq.png)
+### ![vieux software](/content/images/legacy/Le6LhwbHX7dH5tKtzccaq.png)
 
 ### Soucieux de profiter le plus rapidement possible des logiciels et des applications nouvelle génération, les professionnels font aujourd'hui plus que jamais confiance aux fournisseurs SaaS. Parfois, cela signifie intégrer de nouvelles fonctionnalités au software déjà existant.
 
@@ -36,7 +36,7 @@ Dans ce mode de distribution, le logiciel n'est pas installé sur les serveurs d
 
 _On peut le voir ici avec pour exemple : [Zoom](https://www.zoom.com), logiciel fournissant des outils de vidéoconférence pour l'hébergement de réunion à distance. Le rapport indique qu'il a connu une croissance de 107%._ 
 
-![mode saas](/images/legacy/EPKQhK4lyO-4hqAelpuN7.png)
+![mode saas](/content/images/legacy/EPKQhK4lyO-4hqAelpuN7.png)
 
 Autrefois réduits en nombre, les logiciels SaaS sont aujourd'hui capables de répondre aux besoins des secteurs d'activités les plus divers. Pensons par exemple à la comptabilité, à la gestion de ressources, à la bureautique, à la visioconférence ou aux relations clients.
 
@@ -56,7 +56,7 @@ Paiement mensuel, version d'essai fréquente, pas d'installation, mises à jour 
 
 Le logiciel sous licence étant en désuétude, passer à un mode SaaS est une manière innovante de proposer un service à une cible. On pourrait même dire que cela sauvera votre entreprise car vous deviendrez compétitif et gagnerez en part de marché en proposant un modèle qui, entre autre, est centré sur l’utilisateur, permet une utilisation libre du logiciel Cloud depuis n’importe où et n'importe quelle plateforme, ou encore, donne la possibilité d’intégrer de nouveaux collaborateurs sans devoir installer le logiciel sur de nouveau postes.  
 
-![transition vieux logiciel en mode saas](/images/legacy/ZnIuZsdpSyg9aRs3sxRT-.png)
+![transition vieux logiciel en mode saas](/content/images/legacy/ZnIuZsdpSyg9aRs3sxRT-.png)
 
 Plusieurs facteurs doivent être pris en compte lorsque l'on souhaite transiter d'un modèle logiciel sous licence vers un logiciel hébergé sur le Cloud. Les difficultés ne seront bien entendu pas les mêmes si vous souhaitez développer intégralement votre propre solution SaaS ou si vous avez simplement l'intention d'ajouter des couches de fonctionnalités au logiciel existant. Dans tous les cas, cette évolution nécessitera une bonne maîtrise du code, des langages de programmation et de l'architecture. Voici quelques points à considérer :
 
@@ -68,4 +68,4 @@ Plusieurs facteurs doivent être pris en compte lorsque l'on souhaite transiter 
 
 La qualité de votre transition **impactera durablement l'efficience de votre software.** N'hésitez donc pas à vous entourer des bonnes personnes ou, le cas échéant, de faire appel à une structure spécialisée dans le développement SaaS. 
 
-[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/content/images/legacy/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

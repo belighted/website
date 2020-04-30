@@ -29,15 +29,15 @@ Some examples
 
 Thomas Cook chooses to put a link in the header menu on its website:
 
-![](/images/legacy-cta/NbOE--9Uy_UPFlq3tpwQV.png)
+![](/content/images/legacy/NbOE--9Uy_UPFlq3tpwQV.png)
 
 John Lewis chooses a floating element in the header for its website:
 
-![](/images/legacy-cta/XZnl_Ba7_ZoVZ_jUqt_oK.png)
+![](/content/images/legacy/XZnl_Ba7_ZoVZ_jUqt_oK.png)
 
 BBC chooses a floating element for its mobile website:
 
-![](/images/legacy-cta/vUrepGM5M6NXlAdCuRhfe.png)
+![](/content/images/legacy/vUrepGM5M6NXlAdCuRhfe.png)
 
 But there is a gem for that
 ---------------------------
@@ -51,4 +51,4 @@ References
 *   **[20+ examples of EU cookie law 'compliance'](https://econsultancy.com/blog/10205-20-examples-of-eu-cookie-law-compliance#i.1ian6tnf8vdtvx)**
 *   **[gem 'cookies\_eu'](https://github.com/infinum/cookies_eu)**
 
-**[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)**
+**[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)**

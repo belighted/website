@@ -20,7 +20,7 @@ tags:
     value: saas-development
 status: published
 ---
-![applications-mobiles-natives-hybrides](/images/legacy/CQ7iju1-lCAX9gyi353pK.png)
+![applications-mobiles-natives-hybrides](/content/images/legacy/CQ7iju1-lCAX9gyi353pK.png)
 
 La plupart des créateurs d'applications SaaS se rendent compte qu'ils **[doivent développer un équivalent mobile](https://www.inc.com/rahul-varshneya/saas-businesses-don-t-screw-up-your-mobile-app.html)** de leur application web, car les utilisateurs souhaitent disposer des mêmes fonctionnalités sur leurs téléphones.
 
@@ -48,7 +48,7 @@ Une approche hybride apporte de **[nombreux avantages](https://www.clickz.com/th
 
 Des développeurs de Salesforce ont analysé les avantages et les inconvénients de l'utilisation des technologies web, natives et hybrides pour une application mobile :
 
-![native](/images/legacy/1LeSdbB6WV1tF5EWM9GjT.png)\[**[Source](https://trailhead.salesforce.com/trails/mobile_sdk_intro/modules/mobile_sdk_introduction/units/mobilesdk_intro_scenarios)**\]
+![native](/content/images/legacy/1LeSdbB6WV1tF5EWM9GjT.png)\[**[Source](https://trailhead.salesforce.com/trails/mobile_sdk_intro/modules/mobile_sdk_introduction/units/mobilesdk_intro_scenarios)**\]
 
 Que vous conceviez une application mobile native ou hybride, vos développeurs voudront travailler avec un framework. Ils disposent ainsi de code prêt à l'emploi qu'ils peuvent intégrer selon leurs besoins.
 
@@ -104,4 +104,4 @@ De nombreuses start-up de SaaS développent d'abord une application web, puis ar
 
 Vous souhaitez en savoir plus sur **[nos processus](/fr/blog/methode-developpement-produits-saas)** pour aider les [start-up de SaaS](/fr/qu-est-ce-que-le-saas-guide) de demain à réussir ? Abonnez-vous pour recevoir notre blog par e-mail ou **[envoyez-nous un e-mail](/fr/evaluation-developpement-produit)**. 
 
-[![Nouveau call-to-action](/images/legacy-cta/jLxarWVFZ4IWPcDnMDdPS.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)
+[![Nouveau call-to-action](/content/images/legacy/jLxarWVFZ4IWPcDnMDdPS.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)

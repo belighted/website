@@ -19,7 +19,7 @@ tags:
     value: développement-mvp
 status: published
 ---
-![tests-logiciels-types-avantages-automatiser](/images/legacy/VbJ9E3wOzSQnFlH3YHebO.png)
+![tests-logiciels-types-avantages-automatiser](/content/images/legacy/VbJ9E3wOzSQnFlH3YHebO.png)
 
 Les tests représentent un investissement. Comme pour un investissement dans la sécurité d'un logiciel, l'intérêt d'investir dans des tests n'est pas toujours évident car le retour sur investissement n'est pas immédiat. Il n'y a pas de résultats tangibles, pas de nouvelle fonctionnalité pour impressionner les utilisateurs.
 
@@ -95,4 +95,4 @@ La décision de tester ou non un logiciel dépend généralement de **[la cultur
 
 Pour en savoir plus sur la façon dont nous abordons le développement de produits, découvrez **[la méthode Belighted](/fr/blog/methode-developpement-produits-saas)** sur notre blog.
 
-[![Nouveau call-to-action](/images/legacy-cta/jLxarWVFZ4IWPcDnMDdPS.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)
+[![Nouveau call-to-action](/content/images/legacy/jLxarWVFZ4IWPcDnMDdPS.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)

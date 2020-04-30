@@ -603,4 +603,4 @@ See you soon for the next and last article, _The flow_, where we will explain ho
 
 Update : The next and last part is ready, you can find it **[here](https://belighted.com/blog/how-we-test-our-rails-projects-3-3)**
 
-[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

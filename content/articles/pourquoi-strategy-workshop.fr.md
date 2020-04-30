@@ -20,7 +20,7 @@ tags:
     value: saas-development
 status: published
 ---
-![strategy workshop développement logiciels](/images/legacy/fjc20I7ZKSnwqjUax8NDU.png)
+![strategy workshop développement logiciels](/content/images/legacy/fjc20I7ZKSnwqjUax8NDU.png)
 
 ### Notre **[Strategy Workshop](/fr/strategy-workshop)** vous apporte bien plus qu'un simple devis !  Vous vous demandez certainement combien vous coûtera le développement de votre nouvelle application **[SaaS](/fr/qu-est-ce-que-le-saas-guide)** ou de votre logiciel. Vous espérez qu'un développeur chevronné pourra examiner vos documents, en discuter avec vous, puis vous donner une estimation ?
 
@@ -74,4 +74,4 @@ L'équipe de Belighted est plus qu'un groupe de développeurs. Nous sommes des e
 
 Notre processus approfondi ne nous permet de prendre en charge qu'un seul nouveau client par mois. Ferez-vous partie de nos prochains **[clients](/fr/clients)** ? **[En savoir plus sur notre Strategy Workshop](/fr/strategy-workshop).**
 
-[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/content/images/legacy/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

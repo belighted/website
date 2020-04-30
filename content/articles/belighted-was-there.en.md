@@ -21,7 +21,7 @@ Un de nos objectifs, toujours réaffirmé, est de suivre de près les évolution
 
 C’est dans ce cadre que Belighted a assisté, durant les mois d’avril, mai et juin, à plusieurs conférences internationales dédiées à **[Ruby on Rails](https://rubyonrails.org/)**.
 
-![](/images/legacy-cta/1E_Svoc5ssM8eLNUappkP.png)
+![](/content/images/legacy/1E_Svoc5ssM8eLNUappkP.png)
 
 Du 16 au 19 mai, s’est déroulée à Baltimore la **[RailsConf](https://en.oreilly.com/rails2011)**, un des plus vastes événements consacrés à Ruby on Rails. Parmi les points forts de cette édition 2011, citons la variété des niveaux ciblés : du débutant à l’expert, chaque participant pouvait orienter sa participation en fonction de ses besoins. Par ailleurs, ces quatre jours étaient un moyen unique de découvrir les toutes dernières mises à jour du framework et de rencontrer des experts du monde entier.
 
@@ -34,4 +34,4 @@ Fin juin, nous avons emprunté la route du soleil en direction de Lyon pour assi
 Comme cela ressortait tout récemment de la rétrospective semestrielle, la Belighteam est composée de passionnés, fiers de l’être.   
   
 
-[![You have a software idea but can't code?](/images/legacy-cta/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+[![You have a software idea but can't code?](/content/images/legacy/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

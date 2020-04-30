@@ -17,7 +17,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![création logiciel SaaS](/images/legacy/VDASzRwVAyKoh6ycIpfqb.png)
+![création logiciel SaaS](/content/images/legacy/VDASzRwVAyKoh6ycIpfqb.png)
 
 ### [La création de logiciels SaaS](/fr/blog/developpement-produits-saas) est encore mal connue de certains spécialistes du développement. C'est pourquoi il nous semblait essentiel de "démystifier" un certain nombre de préconceptions à propos de leur création.
 
@@ -53,4 +53,4 @@ Si un certain nombre de fonctionnalités doivent nécessairement être intégré
 
 Pour en savoir plus, [téléchargez le guide de référence du SaaS en Belgique](/fr/qu-est-ce-que-le-saas-guide?hsCtaTracking=efa19144-ba00-4802-bd26-7c27dbad25ab%7C6f3b512d-8bef-4d1c-a020-b3f5837ad918#Formwhatissaas), ou encore, [faites évaluer gratuitement le développement de votre produit par notre équipe](/fr/evaluation-developpement-produit) !
 
-[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/content/images/legacy/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

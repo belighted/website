@@ -18,7 +18,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![Expérience utilisateur d'un logiciel ](/images/legacy/sdlgME-vHwEepcSvDU5lM.png)
+![Expérience utilisateur d'un logiciel ](/content/images/legacy/sdlgME-vHwEepcSvDU5lM.png)
 
 ### L’expérience utilisateur d'un logiciel est un point crucial pour la réussite de votre solution logicielle SaaS. Les grandes entreprises l’ont bien compris : elles soignent et améliorent sans relâche l’UX de leurs produits.
 
@@ -57,7 +57,7 @@ Proposez-leur plutôt une liste de contrôle concise et facile à suivre pour **
 
 #### **Une interface personnalisée à l'image de votre entreprise**
 
-**![expérience utilisateur logiciel](/images/legacy/p4qsmwcaSWXwm_-4tH8wa.png)**
+**![expérience utilisateur logiciel](/content/images/legacy/p4qsmwcaSWXwm_-4tH8wa.png)**
 
 **Les utilisateurs préfèrent de loin les interfaces qui permettent une interaction forte.** Par exemple, il est très important de leur **donner la possibilité de contacter immédiatement via un chat un représentant de votre entreprise,** ou au pire un robot.
 
@@ -67,4 +67,4 @@ Belighted est rompu à la conception d’interfaces utilisateur performantes, ta
 
 Nous vous aidons à définir les [parcours utilisateurs les plus pertinents](/fr/tests-utilisateurs), à rendre votre interface conviviale et intuitive. Notre grande expérience est un atout pour comprendre l’intégralité de vos besoins et vous accompagner de A à Z dans votre conception d’interface utilisateur de solution SaaS.
 
-[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/content/images/legacy/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)

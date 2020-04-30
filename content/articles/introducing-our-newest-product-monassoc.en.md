@@ -37,4 +37,4 @@ For the moment, the application only offers free accounts, with no dedicated sup
 
 We are currently working on additional features, some of which will be part of different paying plans. We will keep you updated on our progress during the next following months. In the meanwhile, feel free to try and help us improve [Monassoc](https://monassoc.com). Thanks!  
   
-[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

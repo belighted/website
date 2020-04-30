@@ -17,7 +17,7 @@ tags:
     value: saasify-software
 status: published
 ---
-![SaaS Development Trends in 2019](/images/legacy/ixAIDpQwTgT4Y0nGgfRaJ.png)
+![SaaS Development Trends in 2019](/content/images/legacy/ixAIDpQwTgT4Y0nGgfRaJ.png)
 
 SaaS is rapidly evolving, shaped by technological advances and emerging consumer needs. Here are the 10 major SaaS trends worth knowing about.  
   
@@ -38,7 +38,7 @@ Today SaaS and blockchain operate at two different levels. In the future, develo
 
 SaaS software is getting available today through a simple monthly subscription (seen the example below with [SurveyMonkey](https://www.surveymonkey.com/)). Things may rapidly change and transactional models take over. This is particularly true for businesses that offer short-deadline services, such as T-shirt printing or income tax returns.
 
-![SaaS Development Trends in 2019 - Payment models](/images/legacy/-iFIEbjDbjpARB1qUbYf_.png)
+![SaaS Development Trends in 2019 - Payment models](/content/images/legacy/-iFIEbjDbjpARB1qUbYf_.png)
 
 **5 - From SaaS to PaaS**
 
@@ -62,8 +62,8 @@ As always, content quality is one of the major trends of SaaS development in 201
 
 **10 - Voice response**
 
-**![SaaS Development Trends in 2019 - Voice response](/images/legacy/HuiQP3eQB9eIHgZvZ3Mtr.png)**
+**![SaaS Development Trends in 2019 - Voice response](/content/images/legacy/HuiQP3eQB9eIHgZvZ3Mtr.png)**
 
 The popularity of the connected home is driving the development of voice response. Today's modern technology is able to easily recognize inflections in the human voice and so it is crucial to focus on this thriving sector. This is the price of the quality of user experience.
 
-[![The ultimate Guide to Software as a Service](/images/legacy-cta/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)
+[![The ultimate Guide to Software as a Service](/content/images/legacy/axTDnlmGeCfdTR5eawUvn.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/0b551323-0d58-4d8c-882c-e42a03a01459)

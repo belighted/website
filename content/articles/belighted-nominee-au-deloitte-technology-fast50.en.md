@@ -20,4 +20,4 @@ Le **[Technology Fast50](https://www.fast50.be)** est une élection annuelle de 
 
 Parmi les 50 nominées de l’édition 2013, **10 entreprises belges** , dont **Belighted**. Le palmarès final sera dévoilé ce jeudi **10 octobre** lors d’une soirée de gala aux Pays-Bas, à laquelle assisteront **Nicolas Jacobeus** et **Julien Camillini**.  
   
-[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

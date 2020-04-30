@@ -120,4 +120,4 @@ Parvenir à avoir des tests Javascript qui tournent après m’être longtemps d
 
 J’aime aller travailler chaque jour chez Belighted, et c’est exactement ce que j’attendais de mon stage.  
   
-[![New Call-to-action](/images/legacy-cta/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)
+[![New Call-to-action](/content/images/legacy/UPTtKvQU_5rjKfQJ1Qjwk.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/fb3606cc-cc1b-47d0-ae85-2c9f69837fe2)

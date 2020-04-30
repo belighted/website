@@ -23,7 +23,7 @@ The RFP process is broken.
   
 Let me tell you why this process doesn’t work and **[what you can do instead](https://www.belighted.com/blog/why-scoping-workshop)**. You’ll learn how to shave off costs and find the right partner for your critical projects quickly.
 
-[![You have a Software Idea but can't code?](/images/legacy-cta/CmbFPGk6QWSw4YLsAxURq.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
+[![You have a Software Idea but can't code?](/content/images/legacy/CmbFPGk6QWSw4YLsAxURq.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/370139d4-de4e-4110-9c62-c564f92ccfd5)
 
 9 problems with the RFP process
 ===============================
@@ -97,4 +97,4 @@ I suggest you replace the painful RFP process with three simple steps:
         
 *   Start working with your chosen agency on a short assignment to ensure you are a good fit. A good way to do this, especially for startups, is a **[scoping workshop](/scoping-workshop)**, or a **[design sprint](/design-sprint)**, which will help you make tremendous progress in a very short amount of time - and help you test how you work together with little investment upfront.
 
-[![You have a software idea but can't code?](/images/legacy-cta/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)
+[![You have a software idea but can't code?](/content/images/legacy/2r_muYcfC0X7-yUFIS_kd.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/2a757af5-8c70-4e5b-bd84-3e0c399fa61d)

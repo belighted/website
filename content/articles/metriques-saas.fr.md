@@ -22,7 +22,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![metriques-saas](/images/legacy/VkVxKS438mFQF7F9dXPZO.png)
+![metriques-saas](/content/images/legacy/VkVxKS438mFQF7F9dXPZO.png)
 
 Si vous concevez ou développez un [produit SaaS](/fr/qu-est-ce-que-le-saas-guide), vous savez probablement déjà qu'il existe de nombreuses métriques qui permettent de mesurer la performance de votre entreprise. En fait, le nombre de métriques SaaS peut même être écrasant si vous êtes nouveau dans le monde du Software as a Service.
 
@@ -30,7 +30,7 @@ Chez Belighted, nous discutons des KPI (indicateurs clés de performance) avec n
 
 Arrêtons-nous un instant et examinons les métriques SaaS les plus importantes.
 
-[![Nouveau call-to-action](/images/legacy-cta/jLxarWVFZ4IWPcDnMDdPS.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)
+[![Nouveau call-to-action](/content/images/legacy/jLxarWVFZ4IWPcDnMDdPS.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 **Métriques Saa****S vs KPI**
@@ -168,4 +168,4 @@ Et si vous n'avez pas encore atteint l'adéquation produit/marché, ne vous pré
 
 Vous voulez en savoir plus sur les activités d'un nouveau logiciel étape par étape ? Consultez notre [**check-list indispensable**](/fr/blog/check-list-développer-un-nouveau-logiciel) qui décrit 50 points de contrôle en 5 étapes.
 
-[![Nouveau call-to-action](/images/legacy-cta/jLxarWVFZ4IWPcDnMDdPS.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)
+[![Nouveau call-to-action](/content/images/legacy/jLxarWVFZ4IWPcDnMDdPS.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/9910533f-98e7-4836-a277-f9b2eb95e8b8)

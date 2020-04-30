@@ -15,7 +15,7 @@ tags:
     value: the-belighted-way
 status: published
 ---
-![rapidite-startup-talent](/images/legacy/9Eo0dTmw-ePvyCSEukpNA.png)
+![rapidite-startup-talent](/content/images/legacy/9Eo0dTmw-ePvyCSEukpNA.png)
 
 Dans le dernier article, nous avons introduit le **[concept de vitesse](/fr/blog/validation-marche-start-up)** dans trois domaines critiques : le talent, les priorités et la validation du marché. Aujourd'hui, nous allons nous pencher sur la façon dont votre équipe peut avoir un impact sur la vitesse dans votre start-up.
 
@@ -78,4 +78,4 @@ Il existe différents modèles pour constituer l'équipe qui aura le plus d'impa
 
 Si vous cherchez à profiter des avantages de la rapidité dans vos décisions en matière de talents, il est essentiel que vous restiez concentré sur les bonnes activités. Découvrez la **[deuxième partie](/fr/blog/rapidité-priorités-start-up)** de notre série sur le besoin de rapidité dans les start-up, où nous aborderons le fait de faire ce qu'il faut au bon moment.
 
-[![Nouveau call-to-action](/images/legacy-cta/aT-qcraOXB4F5eu_1iBV7.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/4b0783da-e328-4356-8375-9e4da3107f31)
+[![Nouveau call-to-action](/content/images/legacy/aT-qcraOXB4F5eu_1iBV7.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/4b0783da-e328-4356-8375-9e4da3107f31)

@@ -16,7 +16,7 @@ tags:
     value: the-belighted-way
 status: published
 ---
-![front-end-react-angular](/images/legacy/-TiKwDEFOVqNwk3a6uWEI.png)
+![front-end-react-angular](/content/images/legacy/-TiKwDEFOVqNwk3a6uWEI.png)
 
 Pour créer le front-end d'une application web, les développeurs partent souvent d'un framework existant. React et Angular sont les deux frameworks front-end les **[plus populaires](https://medium.com/@TechMagic/reactjs-vs-angular5-vs-vue-js-what-to-choose-in-2018-b91e028fa91d)**. Aujourd'hui, nous allons évoquer les deux et indiquer lequel nous préférons.
 
@@ -68,7 +68,7 @@ Redux permet d'intégrer des données dans n'importe quelle section de la page w
 
 Prenons l'exemple de Twitter, qui doit afficher l'avatar de l'utilisateur à plusieurs endroits sur une page :
 
-![twitter-user-data.png (777×564) 2018-08-13 11-47-40](/images/legacy/Atsx0yMuqtxzSJu2ayQb0.png)
+![twitter-user-data.png (777×564) 2018-08-13 11-47-40](/content/images/legacy/Atsx0yMuqtxzSJu2ayQb0.png)
 
 Michaël Albert, chef de projet chez Belighted, explique comment Redux procède :
 
@@ -104,4 +104,4 @@ Bien qu'aucun framework ne soit toujours parfait, nous apprécions React pour de
 
 Découvrez notre prochain article de la série : **[Hybride vs Native pour votre application mobile SaaS.](/fr/blog/applications-mobiles-natives-hybrides)**
 
-[![Nouveau call-to-action](/images/legacy-cta/aT-qcraOXB4F5eu_1iBV7.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/4b0783da-e328-4356-8375-9e4da3107f31)
+[![Nouveau call-to-action](/content/images/legacy/aT-qcraOXB4F5eu_1iBV7.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/4b0783da-e328-4356-8375-9e4da3107f31)

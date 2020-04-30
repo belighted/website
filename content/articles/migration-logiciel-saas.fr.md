@@ -17,7 +17,7 @@ tags:
     value: saasify-software
 status: published
 ---
-![Migration SaaS](/images/legacy/boeVdlBIUdk0MyDRTbMhi.png)
+![Migration SaaS](/content/images/legacy/boeVdlBIUdk0MyDRTbMhi.png)
 
 ### Les journalistes spécialisés en sont friands et les professionnels ne cessent d'en vanter les mérites. Mais en fait, qu'est-ce précisément ce SaaS dont tout le monde parle ? Constitue-t-il vraiment une solution pérenne pour votre entreprise ? 
 
@@ -29,7 +29,7 @@ Le SaaS est régi par un principe d'abonnement - le plus souvent mensuel. Il est
 
 _On peut le voir dans cet exemple avec [Slack](https://www.slack.com), plateforme qui permet de s'abonner pour obtenir l'accès à l'utilisation des services moyennant le paiement d'un forfait par mois._
 
-![Migration SaaS - abonnement](/images/legacy/3kMmC3cCy2cj6gU1l_nCt.png)
+![Migration SaaS - abonnement](/content/images/legacy/3kMmC3cCy2cj6gU1l_nCt.png)
 
 ### **Les indéniables avantages d’un SaaS**
 
@@ -43,7 +43,7 @@ Certaines des sociétés les plus compétitives du monde ont aujourd'hui migré 
 
 ### **Est-ce pertinent pour votre logiciel ?**
 
-![Migration SaaS - scalabilité](/images/legacy/dIk2xjRT-auyRLIOAyJz6.jpg)Les informations diffusées ci-dessus ont déjà dû vous mettre la puce à l'oreille. La migration de votre logiciel vers le SaaS est susceptible de doter votre utilisateur d'une productivité accrue. Elle devra notamment être privilégiée si vous êtes en recherche d'agilité et souhaitez favoriser l'innovation et la croissance au sein de votre structure.  **Migrer vers le SaaS, c'est également garantir la continuité de vos services et la parfaite sécurisation de vos données.** 
+![Migration SaaS - scalabilité](/content/images/legacy/dIk2xjRT-auyRLIOAyJz6.jpg)Les informations diffusées ci-dessus ont déjà dû vous mettre la puce à l'oreille. La migration de votre logiciel vers le SaaS est susceptible de doter votre utilisateur d'une productivité accrue. Elle devra notamment être privilégiée si vous êtes en recherche d'agilité et souhaitez favoriser l'innovation et la croissance au sein de votre structure.  **Migrer vers le SaaS, c'est également garantir la continuité de vos services et la parfaite sécurisation de vos données.** 
 
 Retenez également que ce modèle de distribution présente l'avantage de la scalabilité. Grâce à lui, vous ne vous engagez pas à acquérir un logiciel définitif, vous gardez au contraire la possibilité de l'enrichir par l'intermédiaire d'applications diverses au gré de votre évolution. Les avantages sur le long terme sont donc évidents. 
 
@@ -51,4 +51,4 @@ Même s'ils sont généralement plus rapides à déployer que les logiciels sous
 
 Pour assurer la pérennité du déploiement, n'hésitez pas à vous faire accompagner par des spécialistes du [développement SaaS](/fr/a-propos), parfaitement à même de mener à bien le projet en tenant compte de vos impératifs financiers et des objectifs de votre structure.
 
-[![Nouveau call-to-action](/images/legacy-cta/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
+[![Nouveau call-to-action](/content/images/legacy/Htz_P1iMXy1bwRoC6u7Xy.png)](https://cta-redirect.hubspot.com/cta/redirect/1684659/efa19144-ba00-4802-bd26-7c27dbad25ab)
