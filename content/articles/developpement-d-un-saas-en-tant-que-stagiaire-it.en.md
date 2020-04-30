@@ -6,7 +6,7 @@ title: Développement d'un SaaS en tant que stagiaire IT
 author: Samuel M.
 description: "Développement d'un SaaS avec un widget Javascript tiers : ce que
   j'ai appris et découvert durant ma première semaine de stage."
-image: ./images/blog%20tech%20standard%20image.png
+image: ../images/blog/blog%20tech%20standard%20image.png
 date: 1451606400000
 tags:
   - label: Under the hood

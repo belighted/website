@@ -6,7 +6,7 @@ title: Belighted, Gold Partner of the next Rails Girls Brussels!
 author: Adeline W.
 description: The next edition of Rails Girls Brussels will take place the 8th &
   9th of May at Betacowork Coworking. Registration deadline April 23.
-image: ./images/railsgi.jpg
+image: ../images/blog/railsgi.jpg
 date: 1420070400000
 tags:
   - label: Events

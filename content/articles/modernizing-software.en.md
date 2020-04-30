@@ -8,7 +8,7 @@ description: >+
   Modernizing your software : Discover the signs that the time comes up when it
   comes to modernize your software !
 
-image: ./images/Sans%20titre%20%2822%29.png
+image: ../images/blog/Sans%20titre%20%2822%29.png
 date: 1546300800000
 tags:
   - label: SaaS development

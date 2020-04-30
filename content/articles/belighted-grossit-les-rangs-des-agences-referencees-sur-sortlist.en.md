@@ -5,7 +5,7 @@ originalPath: https://www.belighted.com/blog/belighted-grossit-les-rangs-des-age
 title: Belighted grossit les rangs des agences référencées sur Sortlist
 author: Adeline W.
 description: "Belighted grossit les rangs des agences référencées sur Sortlist "
-image: ./images/sortlist.png
+image: ../images/blog/sortlist.png
 date: 1420070400000
 tags:
   - label: Company news

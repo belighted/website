@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "Strategy Workshop : quels sont les avantages de commencer par un
   strategy workshop dans le développement de votre produit ? On vous explique
   tout."
-image: ./images/N5FROK.png
+image: ../images/blog/N5FROK.png
 date: 1546300800000
 tags:
   - label: Product development / Continuous Development

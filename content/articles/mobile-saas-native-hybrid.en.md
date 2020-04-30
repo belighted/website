@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Your SaaS app needs a mobile version. Now your developers are
   asking if you want a native app or a hybrid app. Learn the basics with our
   SaaS Development framework.
-image: ./images/tech_stack_react_native_banner_Blog.jpg
+image: ../images/blog/tech_stack_react_native_banner_Blog.jpg
 date: 1514764800000
 tags:
   - label: Product development / Continuous Development

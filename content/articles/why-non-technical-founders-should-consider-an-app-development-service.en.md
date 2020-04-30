@@ -6,7 +6,7 @@ title: Why Non-Technical Founders Should Consider an App Development Service
 author: Nicolas Jacobeus
 description: "Building an app? Discover how app development services stack-up
   against freelancers, in-house developers, and hiring a CTO, "
-image: ./images/Why%20Non-Technical%20Founders%20Should%20Consider%20an%20App%20Development%20Service.jpg
+image: ../images/blog/Why%20Non-Technical%20Founders%20Should%20Consider%20an%20App%20Development%20Service.jpg
 date: 1483228800000
 tags:
   - label: Entrepreneurship

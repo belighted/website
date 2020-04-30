@@ -6,7 +6,7 @@ title: Belighted, partenaire Gold du prochain Rails Girls Brussels !
 author: Adeline W.
 description: Belighted est partenaire du prochain Rails Girls Brussels qui aura
   lieu le 8 et 9 mai. Les inscriptions seront clôturées le 23 avril.
-image: ./images/railsgi.jpg
+image: ../images/blog/railsgi.jpg
 date: 1420070400000
 tags:
   - label: Events

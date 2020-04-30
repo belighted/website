@@ -6,7 +6,7 @@ title: Comment Belighted assure le succès de votre projet sur le long terme ?
 author: Nicolas Jacobeus
 description: Le succès de votre projet de développement logiciel sur le long
   terme ? Découvrez la méthode Belighted !
-image: ./images/Sans%20titre%20%285%29-2.png
+image: ../images/blog/Sans%20titre%20%285%29-2.png
 date: 1546300800000
 tags:
   - label: The Belighted Way

@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: L’expérience utilisateur d'un logiciel est un point crucial pour la
   réussite de votre solution SaaS. Découvrez dans cet article 5 façons de
   l'améliorer.
-image: ./images/N9.png
+image: ../images/blog/N9.png
 date: 1546300800000
 tags:
   - label: SaaS development

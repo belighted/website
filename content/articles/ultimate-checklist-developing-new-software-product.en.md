@@ -8,7 +8,7 @@ description: Developing a new web app, tool or other software-based product? Get
   your copy of this 50-point checklist that takes you through the priorities and
   tasks at each stage. Like a mini-course in one lean document to help you
   develop, launch and grow a new SaaS/software product or tech startup idea.
-image: ./images/businessman-and-business-plan.jpg
+image: ../images/blog/businessman-and-business-plan.jpg
 date: 1514764800000
 tags:
   - label: Product development / Continuous Development

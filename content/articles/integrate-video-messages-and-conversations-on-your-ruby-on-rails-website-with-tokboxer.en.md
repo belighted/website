@@ -10,7 +10,7 @@ description: >+
   videos and do live conversations with the user’s microphone and webcam,
   directly from the website itself. Up until now, Tok …
 
-image: ./images/blog%20tech%20standard%20image-1.png
+image: ../images/blog/blog%20tech%20standard%20image-1.png
 date: 1199145600000
 tags:
   - label: Under the hood

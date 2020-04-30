@@ -6,7 +6,7 @@ title: How to Avoid 5 Common MVP Development Mistakes
 author: Nicolas Jacobeus
 description: Learn how to side-step the biggest problems that startup founders
   encounter when developing their Minimum Viable Product.
-image: ./images/How%20to%20Avoid%205%20Common%20MVP%20Development%20Mistakes.jpg
+image: ../images/blog/How%20to%20Avoid%205%20Common%20MVP%20Development%20Mistakes.jpg
 date: 1483228800000
 tags:
   - label: Product development / Continuous Development

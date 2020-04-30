@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Vous savez déjà qu'il existe de nombreuses métriques qui permettent
   de mesurer la performance de chaque entreprise. Découvrez les spécifiques au
   SaaS !
-image: ./images/metriques-saas-1.png
+image: ../images/blog/metriques-saas-1.png
 date: 1577836800000
 tags:
   - label: Entrepreneurship

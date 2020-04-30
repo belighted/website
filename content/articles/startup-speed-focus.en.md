@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Focus is critical for startups. Wondering how to know which product
   features to build or where to invest limited resources? How to know what to
   focus on when.
-image: ./images/Untitled.jpg
+image: ../images/blog/Untitled.jpg
 date: 1514764800000
 tags:
   - label: Entrepreneurship

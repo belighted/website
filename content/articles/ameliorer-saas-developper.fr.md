@@ -9,7 +9,7 @@ description: >+
   rentable de réécrire tout ou si vous devez repartir from scratch.
 
 
-image: ./images/N10FROK.png
+image: ../images/blog/N10FROK.png
 date: 1546300800000
 tags:
   - label: SaaS development

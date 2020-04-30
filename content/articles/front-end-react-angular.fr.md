@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: La conception du front-end de votre application web commence par le
   choix d'un framework. React et Angular sont les plus populaires. Découvrez-les
   !
-image: ./images/Sans%20titre%20%286%29-2.png
+image: ../images/blog/Sans%20titre%20%286%29-2.png
 date: 1577836800000
 tags:
   - label: Product development / Continuous Development

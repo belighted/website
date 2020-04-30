@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "Développement logiciels : créateur de Startup sans connaissances
   techniques ? Cela n'est pas un frein au développement de votre produit ! On
   vous dit tout."
-image: ./images/Sans%20titre%20%2812%29-2.png
+image: ../images/blog/Sans%20titre%20%2812%29-2.png
 date: 1546300800000
 tags:
   - label: Product development / Continuous Development

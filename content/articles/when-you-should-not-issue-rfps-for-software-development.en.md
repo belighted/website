@@ -6,7 +6,7 @@ title: When you should NOT issue RFPs for software development
 author: Nicolas Jacobeus
 description: Why "Requests For Proposals" (RFPs) don't work for startups and
   what they can do instead.
-image: ./images/No%20RFS.jpg
+image: ../images/blog/No%20RFS.jpg
 date: 1483228800000
 tags:
   - label: Product development / Continuous Development

@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "Prix d'un SaaS : Voici les différentes possibilités qui s’offrent
   à vous en terme de grille tarifaire à proposer à vos clients, actuels ou
   futurs !"
-image: ./images/N8FROK.png
+image: ../images/blog/N8FROK.png
 date: 1546300800000
 tags:
   - label: SaaS development

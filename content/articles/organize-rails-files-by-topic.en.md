@@ -9,7 +9,7 @@ description: Very often we work on rails projects which slowly grow until they
   navigate between dozens of files. We propose here an alternative way of
   structuring folders and files to handle this problem without the hassle of
   splitting the projects into multiple subprojects.
-image: ./images/illu-rails-assets.jpg
+image: ../images/blog/illu-rails-assets.jpg
 date: 1420070400000
 tags:
   - label: Under the hood

@@ -6,7 +6,7 @@ title: 10 Pros and Cons of Outsourcing SaaS Development
 author: Nicolas Jacobeus
 description: Is outsourcing right for your MVP? Get a balanced view of the
   arguments for and against outsourced product development.
-image: ./images/10%20Pros%20and%20Cons%20of%20Outsourcing%20MVP%20Development.jpg
+image: ../images/blog/10%20Pros%20and%20Cons%20of%20Outsourcing%20MVP%20Development.jpg
 date: 1546300800000
 tags:
   - label: Product development / Continuous Development

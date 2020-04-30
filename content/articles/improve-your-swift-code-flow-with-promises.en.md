@@ -9,7 +9,7 @@ description: In this article, I'll talk about the callback syntax. When an
   the process. In terms of sustainability, this approach presents some
   weaknesses as the global logic is spread among the code. PromiseKit proposes
   an interesting alternative inspired from JavaScript.
-image: ./images/promisekit-blogpost-img.png
+image: ../images/blog/promisekit-blogpost-img.png
 date: 1420070400000
 tags:
   - label: Under the hood

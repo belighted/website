@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "Le développement de produits SaaS selon Belighted repose sur une
   méthode couplant stratégie efficace et validation du marché. Voici comment
   nous procédons... "
-image: ./images/N4FROK.png
+image: ../images/blog/N4FROK.png
 date: 1546300800000
 tags:
   - label: Product development / Continuous Development

@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: How to speed up your product development process with a design
   sprint ? and mitigate the risk of being outpaced by competitors - without
   burning your cash.
-image: ./images/N15ENGOK.png
+image: ../images/blog/N15ENGOK.png
 date: 1546300800000
 tags:
   - label: Product development / Continuous Development

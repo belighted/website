@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "The #1 reason software startups fail: lack of market need. Avoid
   this trap by asking the right questions. See how we build market validation
   into product development."
-image: ./images/market%20validation-2.jpg
+image: ../images/blog/market%20validation-2.jpg
 date: 1514764800000
 tags:
   - label: Entrepreneurship
