@@ -1,11 +1,13 @@
 import React from "react";
 import LinkToResource from "./LinkToResource";
+import GatsbyImage from "gatsby-image";
 
 const ResourcesList = ({ resources }) => {
   return (
-    <ul className="">
+    <ul className="o-list-bare l-grid l-grid--3cols">
       {resources.map(node => (
         <li key={node.slug} className={"u-margin-bottom"}>
+          <GatsbyImage fluid={node.image.childImageSharp.fluid} />
           <LinkToResource slug={node.slug}>{node.title}</LinkToResource>
         </li>
       ))}

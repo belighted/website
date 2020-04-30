@@ -48,6 +48,13 @@ export const query = graphql`
       nodes {
         slug
         title
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
       }
     }
   }
