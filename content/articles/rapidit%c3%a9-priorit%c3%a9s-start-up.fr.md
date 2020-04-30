@@ -17,7 +17,7 @@ tags:
     value: the-belighted-way
 status: published
 ---
-![priorites-start-up-developpement-rapide](https://www.belighted.com/hs-fs/hubfs/priorites-start-up-developpement-rapide.png?width=1200&name=priorites-start-up-developpement-rapide.png)
+![priorites-start-up-developpement-rapide](/images/legacy/pUCNdQ2ZuwB72NsToW09W.png)
 
 La plupart des créateurs de start-up savent que la rapidité est importante. Mais lors du développement d'un nouveau logiciel, aller rapidement dans la mauvaise direction peut être pire que de traîner. 
 

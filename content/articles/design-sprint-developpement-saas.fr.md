@@ -19,7 +19,7 @@ tags:
     value: saas-development
 status: published
 ---
-![Design Sprint développement projet](https://www.belighted.com/hs-fs/hubfs/La%20m%C3%A9thode%20Belighted%20pour%20le%20d%C3%A9veloppement%20de%20produits%20SaaS.png?width=1200&name=La%20m%C3%A9thode%20Belighted%20pour%20le%20d%C3%A9veloppement%20de%20produits%20SaaS.png)
+![Design Sprint développement projet](/images/legacy/0svn9jckMI8Euq0q2kA-R.png)
 
 ### Chaque minute compte pour une startup. Si vous passez trop de temps à mettre vos idées en pratique ou à développer votre produit, vous courez le risque que vos concurrents vous devancent sur le marché ou pire, que votre concept devienne obsolète. Le Design Sprint peut accélérer votre [processus de développement de produit SaaS](/fr/blog/methode-developpement-produits-saas) sans risquer de manquer de liquidités et de paralyser votre entreprise dès le départ.
 

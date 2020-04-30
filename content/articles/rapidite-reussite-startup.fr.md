@@ -17,7 +17,7 @@ tags:
     value: développement-mvp
 status: published
 ---
-![reussite-startup-rapidite](https://www.belighted.com/hs-fs/hubfs/reussite-startup-rapidite.png?width=1200&name=reussite-startup-rapidite.png)
+![reussite-startup-rapidite](/images/legacy/DOCS2wtRDDeitGGWAsby6.png)
 
 Quelles ont été [leurs erreurs](https://www.cbinsights.com/research/startup-failure-reasons-top/) ? Qu'ont-elles bien fait ? Des analystes ont passé au crible des [centaines de start-up](https://www.getautopsy.com/) pour identifier les facteurs qui les conduisent à la perte et ceux qui les propulsent vers le succès. 
 

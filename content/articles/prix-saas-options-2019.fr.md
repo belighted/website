@@ -18,7 +18,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![Prix d'un SaaS : quelles sont les différentes options en 2019?](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(2)-2.png?width=1200&name=Sans%20titre%20(2)-2.png)
+![Prix d'un SaaS : quelles sont les différentes options en 2019?](/images/legacy/Vp_aksqWVODllvBgec_L2.png)
 
 ### Votre solution SaaS est en gestation ou en cours de réalisation, et vous vous demandez quelle grille tarifaire proposer à vos clients, actuels ou futurs ? Voici les différentes possibilités qui s’offrent à vous.
 
@@ -44,7 +44,7 @@ Dans ce mode de tarification, la plus usitée est la tarification par fonctionna
 
 ### **La tarification par utilisateur**
 
-**![survey](https://www.belighted.com/hs-fs/hubfs/survey.png?width=1071&name=survey.png)**
+**![survey](/images/legacy/-iFIEbjDbjpARB1qUbYf_.png)**
 
 **La tarification par utilisateur, ou tarification par poste, est sans doute le modèle de tarification SaaS de référence.** Un unique utilisateur paie un prix mensuel fixe. Un second utilisateur double le prix, un troisième triple le prix, etc.
 

@@ -28,13 +28,13 @@ Choosing SaaS means helping your users avoid the need to spend thousands of euro
 
 Licensed software offers only limited access to applications and, as a general rule, can only be used in the office on a limited number of machines. Conversely, by “SaaSifying” your software, you make it possible for your users to access data from any device with an Internet connection. 
 
-![10 reasons to “SaaSify” your software - accessibility](https://www.belighted.com/hs-fs/hubfs/SaaSifier%20votre%20logiciel%20-%20accessibilite%CC%81.png?width=1200&name=SaaSifier%20votre%20logiciel%20-%20accessibilite%CC%81.png)
+![10 reasons to “SaaSify” your software - accessibility](/images/legacy/ZAlq-3b0XCmo4GqzzQCC-.png)
 
 **Reason No. 3: Scalability**
 
 As a SaaS software publisher, you’ll be able to provide your users with regular updates. As these updates are automatically included in the subscription, your users will be able to enjoy your software in a way that lets them concentrate exclusively on their core business. 
 
-![10 reasons to “SaaSify” your software - scalability](https://www.belighted.com/hs-fs/hubfs/SaaSifier%20votre%20logiciel%20-%20le%CC%81volutivite%CC%81.png?width=1200&name=SaaSifier%20votre%20logiciel%20-%20le%CC%81volutivite%CC%81.png)
+![10 reasons to “SaaSify” your software - scalability](/images/legacy/oOiDTUcdZbV2jsyyvZVqq.png)
 
 **Reason No. 4: Fast installation**
 
@@ -56,7 +56,7 @@ Energy-related issues are an ever-growing concern for businesses. The good news?
 
 By “SaaSifying” your software, your promise better security to your users. The design of modern hardware and its strict compliance with the latest security standards make data loss a thing of the past.
 
-![10 reasons to “SaaSify” your software - data security](https://www.belighted.com/hs-fs/hubfs/http_vs_https-1.jpg?width=578&name=http_vs_https-1.jpg)
+![10 reasons to “SaaSify” your software - data security](/images/legacy/n-zbEsyuWz8aCm15fbMr_.jpg)
 
 **Reason No. 9: Compatibility**
 

@@ -18,7 +18,7 @@ tags:
     value: saas-development
 status: published
 ---
-![Développement de produits SaaS ](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(9)-2.png?width=1200&name=Sans%20titre%20(9)-2.png)
+![Développement de produits SaaS ](/images/legacy/E5ZaeQCgLsTewwzHihqdQ.png)
 
 ### Depuis notre lancement en 2008, nous avons développés des centaines de produits SaaS différents. Au fil des ans, cette expérience s'est traduite par une méthodologie rigoureuse afin d'offrir des performances exceptionnelles aux logiciels de nos clients.
 
@@ -73,4 +73,4 @@ Nous développons des logiciels depuis 2008, et nous avons également fondé que
 
 Vous êtes prêt à discuter de votre logiciel avec nous ? Découvrez comment démarrer grâce à un [strategy workshop](/fr/strategy-workshop).
 
-[![FR_CTA_Belighted_iPad_saumon_DiscoverMVPDev](https://www.belighted.com/hs-fs/hubfs/FR_CTA_Belighted_iPad_saumon_DiscoverMVPDev.png?width=1990&name=FR_CTA_Belighted_iPad_saumon_DiscoverMVPDev.png)](https://www.belighted.com/fr/ressources/ebook-externaliser-developpement-mvp)
+[![FR_CTA_Belighted_iPad_saumon_DiscoverMVPDev](/images/legacy/hhS0SN8x6_gha25yj7I_n.png)](https://www.belighted.com/fr/ressources/ebook-externaliser-developpement-mvp)

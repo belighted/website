@@ -20,7 +20,7 @@ tags:
     value: saas-development
 status: published
 ---
-![demystifier-ruby-on-rails](https://www.belighted.com/hs-fs/hubfs/demystifier-ruby-on-rails.png?width=1200&name=demystifier-ruby-on-rails.png)
+![demystifier-ruby-on-rails](/images/legacy/UZNNGEGy8eawGiWbCJgKF.png)
 
 Le développement de logiciels est une étape coûteuse dans l'essor d'une start-up. La **[rapidité](/fr/blog/rapidite-reussite-startup)** de développement peut faire la différence entre un décollage tout en douceur et un atterrissage chaotique.
 
@@ -37,17 +37,17 @@ Il existe d'autres frameworks créés pour prendre en charge différents langage
 
 *   **Airbnb est une grande application web créée avec Ruby on Rails.**
 
-![air bnb-1](https://www.belighted.com/hs-fs/hubfs/air%20bnb-1.png?width=1280&name=air%20bnb-1.png)
+![air bnb-1](/images/legacy/oMfEntUy9gI4CXAdSxr0I.png)
 
   
 
 *   **Fiverr est possible grâce à Ruby on Rails.**
 
-![Fiverr is made possible thanks to Ruby on Rails.](https://www.belighted.com/hs-fs/hubfs/fiverr.png?width=600&name=fiverr.png)
+![Fiverr is made possible thanks to Ruby on Rails.](/images/legacy/pByfg92KeYqFr8vFeOZBh.png)
 
 *   **Saviez-vous que Shopify est également basé sur Rails ?**  
       
-    ![shopify](https://www.belighted.com/hs-fs/hubfs/shopify.png?width=600&name=shopify.png)
+    ![shopify](/images/legacy/TNJRV6oBL7G3VE1pjh4u9.png)
 
 *   **Groupon**
 *   **Kickstarter**

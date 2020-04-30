@@ -20,7 +20,7 @@ tags:
     value: build-a-new-saas
 status: published
 ---
-![Améliorer mon SaaS ou en développer un nouveau](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(2)-1.png?width=1200&name=Sans%20titre%20(2)-1.png)
+![Améliorer mon SaaS ou en développer un nouveau](/images/legacy/rCU1o-TTUxrZLKv6XXafq.png)
 
 ### Votre solution SaaS réclame des améliorations pour corriger certains problèmes ou embarquer des fonctionnalités supplémentaires. Vous devez répondre à la question de savoir s’il serait plus rentable (budget, temps, risques) de réécrire tout ou partie du code existant ou si vous devez repartir from scratch.
 
@@ -50,7 +50,7 @@ Une seule réponse positive est le signe que changer de technologie est envisage
 
 #### **2) Quand la réécriture d'une application existante en vaut-elle la peine ?**
 
-![réécrire une application existante ?](https://www.belighted.com/hs-fs/hubfs/Sans%20titre%20(1)-1.png?width=690&name=Sans%20titre%20(1)-1.png)
+![réécrire une application existante ?](/images/legacy/EfIn2P9RENQMGVVsMB8vD.png)
 
 Si votre problème peut se résoudre par 2 biais, migration de technologie et autre moyen, optez pour la solution la plus facile / simple. 
 
