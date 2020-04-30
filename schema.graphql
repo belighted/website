@@ -128,7 +128,7 @@ type ContentYamlCategories {
 }
 
 type ContentYamlClients {
-    image: String
+    image: File
     slug: String
     tags: [String]
     text: String
@@ -944,7 +944,7 @@ type Query {
     markdownRemark(children: NodeFilterListInput, excerpt: StringQueryOperatorInput, excerptAst: JSONQueryOperatorInput, fields: MarkdownRemarkFieldsFilterInput, fileAbsolutePath: StringQueryOperatorInput, frontmatter: MarkdownRemarkFrontmatterFilterInput, headings: MarkdownHeadingFilterListInput, html: StringQueryOperatorInput, htmlAst: JSONQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, rawMarkdownBody: StringQueryOperatorInput, tableOfContents: StringQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MarkdownWordCountFilterInput): MarkdownRemark
     mdx(body: StringQueryOperatorInput, children: NodeFilterListInput, excerpt: StringQueryOperatorInput, fields: MdxFieldsFilterInput, fileAbsolutePath: StringQueryOperatorInput, frontmatter: MdxFrontmatterFilterInput, headings: MdxHeadingMdxFilterListInput, html: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, mdxAST: JSONQueryOperatorInput, parent: NodeFilterInput, rawBody: StringQueryOperatorInput, tableOfContents: JSONQueryOperatorInput, timeToRead: IntQueryOperatorInput, wordCount: MdxWordCountFilterInput): Mdx
     processYaml(button: ProcessYamlButtonFilterInput, children: NodeFilterListInput, description: StringQueryOperatorInput, duration: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, intro: StringQueryOperatorInput, lang: StringQueryOperatorInput, objective: StringQueryOperatorInput, order: IntQueryOperatorInput, parent: NodeFilterInput, slug: StringQueryOperatorInput, subtitle: StringQueryOperatorInput, title: StringQueryOperatorInput): ProcessYaml
-    resourcesYaml(children: NodeFilterListInput, id: StringQueryOperatorInput, image: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, slices: ResourcesYamlSlicesFilterListInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput, type: StringQueryOperatorInput): ResourcesYaml
+    resourcesYaml(aside: ResourcesYamlAsideFilterInput, children: NodeFilterListInput, id: StringQueryOperatorInput, image: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, slices: ResourcesYamlSlicesFilterListInput, slug: StringQueryOperatorInput, title: StringQueryOperatorInput, type: StringQueryOperatorInput): ResourcesYaml
     servicesYaml(children: NodeFilterListInput, formId: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, lang: StringQueryOperatorInput, layout: StringQueryOperatorInput, originalPath: StringQueryOperatorInput, parent: NodeFilterInput, slices: ServicesYamlSlicesFilterListInput, slug: StringQueryOperatorInput, subtitle: StringQueryOperatorInput, title: StringQueryOperatorInput, type: StringQueryOperatorInput): ServicesYaml
     site(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, host: StringQueryOperatorInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput, pathPrefix: StringQueryOperatorInput, polyfill: BooleanQueryOperatorInput, port: IntQueryOperatorInput, siteMetadata: SiteSiteMetadataFilterInput): Site
     siteBuildMetadata(buildTime: DateQueryOperatorInput, children: NodeFilterListInput, id: StringQueryOperatorInput, internal: InternalFilterInput, parent: NodeFilterInput): SiteBuildMetadata
@@ -954,6 +954,7 @@ type Query {
 }
 
 type ResourcesYaml implements Node {
+    aside: ResourcesYamlAside
     children: [Node!]!
     id: ID!
     image: String
@@ -965,6 +966,11 @@ type ResourcesYaml implements Node {
     slug: String
     title: String
     type: String
+}
+
+type ResourcesYamlAside {
+    formId: String
+    title: String
 }
 
 type ResourcesYamlConnection {
@@ -1180,14 +1186,8 @@ type SitePageConnection {
 }
 
 type SitePageContext {
-    currentPage: Int
     lang: String
-    limit: Int
-    numPages: Int
-    skip: Int
     slug: String
-    tag: String
-    title: String
 }
 
 type SitePageEdge {
@@ -1653,7 +1653,164 @@ enum ContentYamlFieldsEnum {
     children___parent___parent___children
     children___parent___parent___id
     clients
-    clients___image
+    clients___image___absolutePath
+    clients___image___accessTime
+    clients___image___atime
+    clients___image___atimeMs
+    clients___image___base
+    clients___image___birthTime
+    clients___image___birthtime
+    clients___image___birthtimeMs
+    clients___image___blksize
+    clients___image___blocks
+    clients___image___changeTime
+    clients___image___childCasesYaml___about
+    clients___image___childCasesYaml___challenges
+    clients___image___childCasesYaml___children
+    clients___image___childCasesYaml___goals
+    clients___image___childCasesYaml___id
+    clients___image___childCasesYaml___lang
+    clients___image___childCasesYaml___logo
+    clients___image___childCasesYaml___originalPath
+    clients___image___childCasesYaml___problem
+    clients___image___childCasesYaml___results
+    clients___image___childCasesYaml___slug
+    clients___image___childCasesYaml___title
+    clients___image___childCategoriesYaml___children
+    clients___image___childCategoriesYaml___id
+    clients___image___childCategoriesYaml___lang
+    clients___image___childCategoriesYaml___list
+    clients___image___childCategoriesYaml___order
+    clients___image___childCategoriesYaml___services
+    clients___image___childCategoriesYaml___short_description
+    clients___image___childCategoriesYaml___slug
+    clients___image___childCategoriesYaml___technologies
+    clients___image___childCategoriesYaml___title
+    clients___image___childContentYaml___body
+    clients___image___childContentYaml___cases
+    clients___image___childContentYaml___categories
+    clients___image___childContentYaml___children
+    clients___image___childContentYaml___clients
+    clients___image___childContentYaml___formId
+    clients___image___childContentYaml___gallery
+    clients___image___childContentYaml___history
+    clients___image___childContentYaml___id
+    clients___image___childContentYaml___lang
+    clients___image___childContentYaml___pride
+    clients___image___childContentYaml___sections
+    clients___image___childContentYaml___slides
+    clients___image___childContentYaml___slug
+    clients___image___childContentYaml___statistics
+    clients___image___childContentYaml___team
+    clients___image___childContentYaml___title
+    clients___image___childDataYaml___children
+    clients___image___childDataYaml___clients
+    clients___image___childDataYaml___id
+    clients___image___childDataYaml___lang
+    clients___image___childDataYaml___links
+    clients___image___childDataYaml___skills
+    clients___image___childDataYaml___slug
+    clients___image___childDataYaml___technologies
+    clients___image___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMarkdownRemark___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMarkdownRemark___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMarkdownRemark___excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMarkdownRemark___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMarkdownRemark___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMarkdownRemark___htmlAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMarkdownRemark___id
+    clients___image___childMarkdownRemark___rawMarkdownBody @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMarkdownRemark___tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMarkdownRemark___timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMdx___body
+    clients___image___childMdx___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMdx___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMdx___fileAbsolutePath
+    clients___image___childMdx___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMdx___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMdx___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMdx___mdxAST @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMdx___rawBody
+    clients___image___childMdx___tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childMdx___timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    clients___image___childProcessYaml___children
+    clients___image___childProcessYaml___description
+    clients___image___childProcessYaml___duration
+    clients___image___childProcessYaml___id
+    clients___image___childProcessYaml___intro
+    clients___image___childProcessYaml___lang
+    clients___image___childProcessYaml___objective
+    clients___image___childProcessYaml___order
+    clients___image___childProcessYaml___slug
+    clients___image___childProcessYaml___subtitle
+    clients___image___childProcessYaml___title
+    clients___image___childResourcesYaml___children
+    clients___image___childResourcesYaml___id
+    clients___image___childResourcesYaml___image
+    clients___image___childResourcesYaml___lang
+    clients___image___childResourcesYaml___originalPath
+    clients___image___childResourcesYaml___slices
+    clients___image___childResourcesYaml___slug
+    clients___image___childResourcesYaml___title
+    clients___image___childResourcesYaml___type
+    clients___image___childServicesYaml___children
+    clients___image___childServicesYaml___formId
+    clients___image___childServicesYaml___id
+    clients___image___childServicesYaml___lang
+    clients___image___childServicesYaml___layout
+    clients___image___childServicesYaml___originalPath
+    clients___image___childServicesYaml___slices
+    clients___image___childServicesYaml___slug
+    clients___image___childServicesYaml___subtitle
+    clients___image___childServicesYaml___title
+    clients___image___childServicesYaml___type
+    clients___image___childTestimonialsYaml___author
+    clients___image___childTestimonialsYaml___body
+    clients___image___childTestimonialsYaml___children
+    clients___image___childTestimonialsYaml___client
+    clients___image___childTestimonialsYaml___id
+    clients___image___childTestimonialsYaml___lang
+    clients___image___childTestimonialsYaml___role
+    clients___image___childTestimonialsYaml___slug
+    clients___image___children
+    clients___image___children___children
+    clients___image___children___id
+    clients___image___ctime
+    clients___image___ctimeMs
+    clients___image___dev
+    clients___image___dir
+    clients___image___ext
+    clients___image___extension
+    clients___image___gid
+    clients___image___id
+    clients___image___ino
+    clients___image___internal___content
+    clients___image___internal___contentDigest
+    clients___image___internal___description
+    clients___image___internal___fieldOwners
+    clients___image___internal___ignoreType
+    clients___image___internal___mediaType
+    clients___image___internal___owner
+    clients___image___internal___type
+    clients___image___mode
+    clients___image___modifiedTime
+    clients___image___mtime
+    clients___image___mtimeMs
+    clients___image___name
+    clients___image___nlink
+    clients___image___parent___children
+    clients___image___parent___id
+    clients___image___prettySize
+    clients___image___publicURL
+    clients___image___rdev
+    clients___image___relativeDirectory
+    clients___image___relativePath
+    clients___image___root
+    clients___image___size
+    clients___image___sourceInstanceName
+    clients___image___uid
     clients___slug
     clients___tags
     clients___text
@@ -2735,7 +2892,42 @@ enum FileFieldsEnum {
     childContentYaml___children___parent___children
     childContentYaml___children___parent___id
     childContentYaml___clients
-    childContentYaml___clients___image
+    childContentYaml___clients___image___absolutePath
+    childContentYaml___clients___image___accessTime
+    childContentYaml___clients___image___atime
+    childContentYaml___clients___image___atimeMs
+    childContentYaml___clients___image___base
+    childContentYaml___clients___image___birthTime
+    childContentYaml___clients___image___birthtime
+    childContentYaml___clients___image___birthtimeMs
+    childContentYaml___clients___image___blksize
+    childContentYaml___clients___image___blocks
+    childContentYaml___clients___image___changeTime
+    childContentYaml___clients___image___children
+    childContentYaml___clients___image___ctime
+    childContentYaml___clients___image___ctimeMs
+    childContentYaml___clients___image___dev
+    childContentYaml___clients___image___dir
+    childContentYaml___clients___image___ext
+    childContentYaml___clients___image___extension
+    childContentYaml___clients___image___gid
+    childContentYaml___clients___image___id
+    childContentYaml___clients___image___ino
+    childContentYaml___clients___image___mode
+    childContentYaml___clients___image___modifiedTime
+    childContentYaml___clients___image___mtime
+    childContentYaml___clients___image___mtimeMs
+    childContentYaml___clients___image___name
+    childContentYaml___clients___image___nlink
+    childContentYaml___clients___image___prettySize
+    childContentYaml___clients___image___publicURL
+    childContentYaml___clients___image___rdev
+    childContentYaml___clients___image___relativeDirectory
+    childContentYaml___clients___image___relativePath
+    childContentYaml___clients___image___root
+    childContentYaml___clients___image___size
+    childContentYaml___clients___image___sourceInstanceName
+    childContentYaml___clients___image___uid
     childContentYaml___clients___slug
     childContentYaml___clients___tags
     childContentYaml___clients___text
@@ -3301,6 +3493,8 @@ enum FileFieldsEnum {
     childProcessYaml___slug
     childProcessYaml___subtitle
     childProcessYaml___title
+    childResourcesYaml___aside___formId
+    childResourcesYaml___aside___title
     childResourcesYaml___children
     childResourcesYaml___children___children
     childResourcesYaml___children___children___children
@@ -4416,6 +4610,8 @@ enum ProcessYamlFieldsEnum {
 }
 
 enum ResourcesYamlFieldsEnum {
+    aside___formId
+    aside___title
     children
     children___children
     children___children___children
@@ -4866,14 +5062,8 @@ enum SitePageFieldsEnum {
     component
     componentChunkName
     componentPath
-    context___currentPage
     context___lang
-    context___limit
-    context___numPages
-    context___skip
     context___slug
-    context___tag
-    context___title
     id
     internalComponentName
     internal___content
@@ -5292,7 +5482,6 @@ enum TestimonialsYamlFieldsEnum {
     image___childContentYaml___children___children
     image___childContentYaml___children___id
     image___childContentYaml___clients
-    image___childContentYaml___clients___image
     image___childContentYaml___clients___slug
     image___childContentYaml___clients___tags
     image___childContentYaml___clients___text
@@ -5537,6 +5726,8 @@ enum TestimonialsYamlFieldsEnum {
     image___childProcessYaml___slug
     image___childProcessYaml___subtitle
     image___childProcessYaml___title
+    image___childResourcesYaml___aside___formId
+    image___childResourcesYaml___aside___title
     image___childResourcesYaml___children
     image___childResourcesYaml___children___children
     image___childResourcesYaml___children___id
@@ -5832,7 +6023,7 @@ input ContentYamlCategoriesFilterListInput {
 }
 
 input ContentYamlClientsFilterInput {
-    image: StringQueryOperatorInput
+    image: FileFilterInput
     slug: StringQueryOperatorInput
     tags: StringQueryOperatorInput
     text: StringQueryOperatorInput
@@ -6448,7 +6639,13 @@ input ProcessYamlSortInput {
     order: [SortOrderEnum] = [ASC]
 }
 
+input ResourcesYamlAsideFilterInput {
+    formId: StringQueryOperatorInput
+    title: StringQueryOperatorInput
+}
+
 input ResourcesYamlFilterInput {
+    aside: ResourcesYamlAsideFilterInput
     children: NodeFilterListInput
     id: StringQueryOperatorInput
     image: StringQueryOperatorInput
@@ -6566,14 +6763,8 @@ input SiteFilterInput {
 }
 
 input SitePageContextFilterInput {
-    currentPage: IntQueryOperatorInput
     lang: StringQueryOperatorInput
-    limit: IntQueryOperatorInput
-    numPages: IntQueryOperatorInput
-    skip: IntQueryOperatorInput
     slug: StringQueryOperatorInput
-    tag: StringQueryOperatorInput
-    title: StringQueryOperatorInput
 }
 
 input SitePageFilterInput {
