@@ -1,13 +1,13 @@
 import React from "react";
 import Default from "./components/Default";
 import Hero from "./components/Hero";
-import Trusted from "./components/Trusted";
 import StrategyWorkshopApproved from "./components/StrategyWorkShopApproved";
 import Cols from "./components/Cols";
+import LeadingBrands from "../splits/LeadingBrands";
 
 const slices = new Map();
 slices.set("hero", Hero);
-slices.set("trusted", Trusted);
+slices.set("trusted", LeadingBrands);
 slices.set("cols", Cols);
 slices.set("strategy-workshop-approved", StrategyWorkshopApproved);
 

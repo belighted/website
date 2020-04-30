@@ -1,15 +1,28 @@
-import React from "react";
+import React, { useContext } from "react";
+import { graphql, useStaticQuery } from "gatsby";
+import { I18nContext } from "../../i18n/I18n";
+import TrustedBy from "../../splits/TrustedBy";
 
 const Trusted = () => {
-  return (
-    <section className="c-section">
-      <div className="o-wrapper">
-        <h4 className="c-heading c-heading--4">
-          Trusted by 150+ leading brands in Belgium & Europe
-        </h4>
-      </div>
-    </section>
-  );
+  const {
+    allMdx: { nodes }
+  } = useStaticQuery(graphql`
+    {
+      allMdx(filter: { frontmatter: { slug: { eq: "trusted-by" } } }) {
+        nodes {
+          frontmatter {
+            title
+            lang
+            list
+          }
+          body
+        }
+      }
+    }
+  `);
+  const lang = useContext(I18nContext);
+  const trusted = nodes.find(n => n.frontmatter.lang === lang);
+  return <TrustedBy trustedBy={trusted} />;
 };
 
 export default Trusted;

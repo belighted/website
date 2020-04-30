@@ -30,7 +30,13 @@ export const query = graphql`
       }
       clients {
         slug
-        image
+        image {
+          childImageSharp {
+            fluid(maxWidth: 350) {
+              ...GatsbyImageSharpFluid_tracedSVG
+            }
+          }
+        }
         title
         tags
         text
