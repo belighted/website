@@ -6,7 +6,7 @@ title: When a project goes international
 author: Philippe V.
 description: "How we helped a client expand its market from a single country to
   international. "
-image: ./images/going-international.jpg
+image: ../images/blog/going-international.jpg
 date: 1451606400000
 tags:
   - label: Under the hood

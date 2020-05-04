@@ -11,7 +11,7 @@ description: >+
   de maintenance développée pour IBA, c’est le deuxième projet que Belighted
   réalise dans le domaine médical.
 
-image: ./images/visyos-home.png
+image: ../images/blog/visyos-home.png
 date: 1356998400000
 tags:
   - label: Company news

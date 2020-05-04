@@ -8,7 +8,7 @@ description: >+
   Le travail à distance implique de nouvelles habitudes mais aussi des moyens
   technologiques mieux adaptés.
 
-image: ./images/teleworking.jpg
+image: ../images/blog/teleworking.jpg
 date: 1356998400000
 tags:
   - label: Company news

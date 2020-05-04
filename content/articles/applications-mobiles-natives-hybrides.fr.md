@@ -9,7 +9,7 @@ description: Votre application SaaS a besoin d'une version mobile.  Vos
   développeurs vous demandent donc si vous voulez une application native ou une
   application hybride. Apprenez les bases grâce à notre framework de
   développement SaaS.
-image: ./images/Sans%20titre%20%2813%29-1.png
+image: ../images/blog/Sans%20titre%20%2813%29-1.png
 date: 1577836800000
 tags:
   - label: Product development / Continuous Development

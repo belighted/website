@@ -8,7 +8,7 @@ description: Rails’ way of representing model inheritance in the database is
   called single table inheritance, but this technique is only appropriate in
   specific cases. Here we propose a simple implementation of an alternative
   representation called multiple table inheritance.
-image: ./images/What-is-Object-Relational-Mapping-.jpg
+image: ../images/blog/What-is-Object-Relational-Mapping-.jpg
 date: 1451606400000
 tags:
   - label: Under the hood

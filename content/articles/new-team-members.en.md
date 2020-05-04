@@ -6,7 +6,7 @@ title: We’re growing! Introducing our 9 new team members
 author: Nicolas Jacobeus
 description: Belighted is growing as we see our methodologies proving successful
   for our clients. Here meet the 9 latest additions to our team.
-image: ./images/ship-1.jpg
+image: ../images/blog/ship-1.jpg
 date: 1514764800000
 tags:
   - label: Company news

@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: See how we help startups reach product-market fit faster with
   continuous delivery. Simple explanation of benefits, terminology & why your
   lean startup needs it.
-image: ./images/businessman-with-tablet-pc-high-tech-skyscrapers.jpg
+image: ../images/blog/businessman-with-tablet-pc-high-tech-skyscrapers.jpg
 date: 1514764800000
 tags:
   - label: Entrepreneurship

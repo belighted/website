@@ -11,7 +11,7 @@ description: >+
   Une expérience instructive mais aussi très encourageante en ce qui concerne la
   présence féminine dans le web development.
 
-image: ./images/RG.jpeg
+image: ../images/blog/RG.jpeg
 date: 1325376000000
 tags:
   - label: Events

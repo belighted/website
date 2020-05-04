@@ -7,7 +7,7 @@ title: "Livraison continue : vers une adéquation produit/marché plus rapide po
 author: Nicolas Jacobeus
 description: "La livraison continue est un enjeu de taille pour les développeurs
   de logiciels comme pour les utilisateurs. Découvrez ses avantages ! "
-image: ./images/Sans%20titre%20%2815%29-1.png
+image: ../images/blog/Sans%20titre%20%2815%29-1.png
 date: 1577836800000
 tags:
   - label: Entrepreneurship

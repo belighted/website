@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "Moderniser logiciel: quels sont les signes qui ne trompent
   lorsqu'il s'agit de faire innover son logiciel ? Découvrez-les dans cet
   article."
-image: ./images/Sans%20titre%20%282%29-3.png
+image: ../images/blog/Sans%20titre%20%282%29-3.png
 date: 1546300800000
 tags:
   - label: Développement MVP

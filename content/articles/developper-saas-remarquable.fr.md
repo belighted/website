@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Développer un SaaS remarquable, comment faire ? Enjeux, audience,
   business plan, etc. Découvrez les étapes primordiales pour sa bonne
   réalisation.
-image: ./images/Sans%20titre%20%285%29-1.png
+image: ../images/blog/Sans%20titre%20%285%29-1.png
 date: 1546300800000
 tags:
   - label: The Belighted Way

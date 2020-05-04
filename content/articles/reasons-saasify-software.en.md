@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "SaaSify your software : a durable solution to substitute your
   traditional licensed software. Discover the 10 reasons why you should SaaSify
   !"
-image: ./images/N14OKENG.png
+image: ../images/blog/N14OKENG.png
 date: 1546300800000
 tags:
   - label: SaaS development

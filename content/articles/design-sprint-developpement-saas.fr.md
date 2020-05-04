@@ -8,7 +8,7 @@ author: Nicolas Jacobeus
 description: "Design Sprint : Les 4 avantages pour accélérer le développement
   d'un produit en intégrant le feedback et les insights des utilisateurs dès le
   départ."
-image: ./images/N3FROK.png
+image: ../images/blog/N3FROK.png
 date: 1546300800000
 tags:
   - label: Product development / Continuous Development

@@ -6,7 +6,7 @@ title: "Rapidité : la gestion du temps et des talents dans votre start-up"
 author: Nicolas Jacobeus
 description: La rapidité est essentielle pour les start-up. Que ce soit pour
   embaucher du personnel ou le développement ... Découvrez comment gérer cela !
-image: ./images/Sans%20titre%20%289%29-3.png
+image: ../images/blog/Sans%20titre%20%289%29-3.png
 date: 1577836800000
 tags:
   - label: Entrepreneurship

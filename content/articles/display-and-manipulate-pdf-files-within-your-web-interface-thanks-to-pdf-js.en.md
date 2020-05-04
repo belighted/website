@@ -7,7 +7,7 @@ author: Stéphane A.
 description: A short introduction to PDF.js which will guide you through the
   installation of this library aimed to manipulate PDF files within your web
   interface.
-image: ./images/pdfjs.png
+image: ../images/blog/pdfjs.png
 date: 1420070400000
 tags:
   - label: Under the hood

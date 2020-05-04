@@ -5,7 +5,7 @@ originalPath: https://www.belighted.com/blog/development-of-a-saas-as-an-it-trai
 title: "Development of a SaaS as an IT trainee : final part"
 author: Samuel M.
 description: My last weeks among the Belighters, last work on Pravatar and Scale.
-image: ./images/trainee-final-blog-bpost-image.jpg
+image: ../images/blog/trainee-final-blog-bpost-image.jpg
 date: 1451606400000
 tags:
   - label: Under the hood

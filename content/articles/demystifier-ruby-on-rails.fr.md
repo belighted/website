@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Ruby on Rails. Voici ce que vous devez savoir sur ce bijou de
   langage de programmation/framework si vous envisagez de développer votre
   application.
-image: ./images/Sans%20titre%20%285%29-3.png
+image: ../images/blog/Sans%20titre%20%285%29-3.png
 date: 1577836800000
 tags:
   - label: Product development / Continuous Development

@@ -9,7 +9,7 @@ description: >+
   technologiques établies au Benelux. Parmi les nominées de l’édition 2013, 10
   entreprises belges, dont Belighted.
 
-image: ./images/Tech_fast50_COL.jpg
+image: ../images/blog/Tech_fast50_COL.jpg
 date: 1356998400000
 tags:
   - label: Company news

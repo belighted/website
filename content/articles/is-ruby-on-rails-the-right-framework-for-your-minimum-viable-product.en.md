@@ -6,7 +6,7 @@ title: Is Ruby on Rails the Right Framework for Your Minimum Viable Product?
 author: Nicolas Jacobeus
 description: " Discover five reasons why Ruby on Rails is the best framework for
   building your MVP."
-image: ./images/Is%20Ruby%20on%20Rails%20the%20Right%20Framework%20for%20Your%20Minimum%20Viable%20Product.jpg
+image: ../images/blog/Is%20Ruby%20on%20Rails%20the%20Right%20Framework%20for%20Your%20Minimum%20Viable%20Product.jpg
 date: 1483228800000
 tags:
   - label: The Belighted Way

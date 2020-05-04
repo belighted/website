@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "Analysis of hundreds of startups reveals one overarching theme
   required for success: speed. See key areas where speed is critical in this
   3-part series. "
-image: ./images/1024p-2.jpg
+image: ../images/blog/1024p-2.jpg
 date: 1514764800000
 tags:
   - label: Entrepreneurship

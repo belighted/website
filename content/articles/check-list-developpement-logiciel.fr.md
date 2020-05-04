@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "Comment développer un logiciel ?  Cette check-list présente étape
   par étape les priorités et tâches à suivre pour développer votre logiciel et
   le lancer. "
-image: ./images/N2FROK.png
+image: ../images/blog/N2FROK.png
 date: 1546300800000
 tags:
   - label: Product development / Continuous Development

@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "SaaSifier votre logiciel : une solution de remplacement pérenne
   aux traditionnels logiciels sous licence. Découvrez les 10 raisons de le
   SaaSifier !"
-image: ./images/SaaSifier%20votre%20logiciel%20-%20accessibilite%CC%81.png
+image: ../images/blog/SaaSifier%20votre%20logiciel%20-%20accessibilite%CC%81.png
 date: 1546300800000
 tags:
   - label: SaaS development

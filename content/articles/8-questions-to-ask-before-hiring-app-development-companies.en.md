@@ -6,7 +6,7 @@ title: 8 Questions to Ask Before Hiring App Development Companies
 author: Nicolas Jacobeus
 description: Your choice of app development company will make (or break) your
   startup - so we've created a simple strategy for vetting app developers.
-image: ./images/8%20Questions%20to%20Ask%20Before%20Hiring%20App%20Development%20Companies.jpg
+image: ../images/blog/8%20Questions%20to%20Ask%20Before%20Hiring%20App%20Development%20Companies.jpg
 date: 1483228800000
 tags:
   - label: The Belighted Way

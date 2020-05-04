@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Speed is critical for startups. When it comes to hiring staff or
   outsourcing product development, consider the various ways your speed will be
   impacted.
-image: ./images/Speed%20blog%202%20high%20res.jpg
+image: ../images/blog/Speed%20blog%202%20high%20res.jpg
 date: 1514764800000
 tags:
   - label: Entrepreneurship

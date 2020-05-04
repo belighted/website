@@ -9,7 +9,7 @@ const HeroServicesImg = () => {
     {
       file(
         relativePath: {
-          eq: "stock/artem-maltsev-mU2lwHR6u14-unsplash.jpg"
+          eq: "images/stock/artem-maltsev-mU2lwHR6u14-unsplash.jpg"
         }
       ) {
         childImageSharp {

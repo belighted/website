@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Se démarquer de la concurrence avec un SaaS ?  Découvrez les points
   clés pour que votre produit se démarque de la concurrence en le transformant
   en SaaS.
-image: ./images/N11FROK.png
+image: ../images/blog/N11FROK.png
 date: 1546300800000
 tags:
   - label: SaaS development

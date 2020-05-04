@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: L'externalisation convient-elle à votre développement Saas ?
   Plusieurs éléments sont à prendre en compte. Découvrez-les avantages et
   inconvénients !
-image: ./images/Sans%20titre%20%2814%29.png
+image: ../images/blog/Sans%20titre%20%2814%29.png
 date: 1577836800000
 tags:
   - label: Product development / Continuous Development

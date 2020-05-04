@@ -4,14 +4,14 @@ title: Clients
 cta:
   label: Learn more
 clients:
-  - image: /content/images/legacy/kWZ0N3ddLIxbJHfIa-XPd.png
+  - image: images/legacy/kWZ0N3ddLIxbJHfIa-XPd.png
     slug: dokeos
     title: "Dokeos switches to SaaS model and reduces hosting costs by 75%"
     tags:
       - SaaS
       - Software_Publisher
       - Education
-  - image: /content/images/legacy/J5pDYLpzWUe0vqSKifc9u.png
+  - image: images/legacy/J5pDYLpzWUe0vqSKifc9u.png
     slug: deecide
     title: "Market validation prompts DeeCide to pivot from marketplace to
       SaaS"
@@ -19,35 +19,35 @@ clients:
       - SaaS
       - Startup
       - Insurance
-  - image: /content/images/legacy/J1QlcRLtgBPEu_dnJAa8c.png
+  - image: images/legacy/J1QlcRLtgBPEu_dnJAa8c.png
     slug: sortlist
     title: "Sortlist improves web app quality and team productivity by 20"
     tags:
       - Marketplace
       - Scale-up
       - Media&Advertising
-  - image: /content/images/legacy/SDrM50asfHTTtDUvFQz4Y.png
+  - image: images/legacy/SDrM50asfHTTtDUvFQz4Y.png
     slug: listminut
     title: "ListMinut increases product development speed by 90% with us"
     tags:
       - Marketplace
       - Startup
       - Services
-  - image: /content/images/legacy/zIxL2YzN_kpNNFxoLCSww.png
+  - image: images/legacy/zIxL2YzN_kpNNFxoLCSww.png
     slug: valipat
     title: "Valipat needed to simplify, automate and grow its app services"
     tags:
       - E-commerce
       - Corporate
       - Intellectual_Property
-  - image: /content/images/legacy/vfWgKx_IaRvuG7-jLSSa-.png
+  - image: images/legacy/vfWgKx_IaRvuG7-jLSSa-.png
     slug: neveo
     title: "Neveo outsources development after an unsuccessful attempt"
     tags:
       - SaaS
       - Scale-up
       - Entertainment
-  - image: /content/images/legacy/4_MfhPkD2mqsQGFUEcrPF.png
+  - image: images/legacy/4_MfhPkD2mqsQGFUEcrPF.png
     slug: seraphin
     title: "Seraphin outsources its product development and then recruits a CTO"
     tags:
@@ -63,7 +63,7 @@ clients:
       - SaaS
       - Startup
       - Intellectual_Property
-  - image: /content/images/legacy/LthY4b4TzEMUQlLgcbo0d.jpg
+  - image: images/legacy/LthY4b4TzEMUQlLgcbo0d.jpg
     slug: homeras
     text: |-
       Homeras is a marketplace that intervenes for emergencies and natural disasters for who have an AG fire insurance.
@@ -71,7 +71,7 @@ clients:
       - Marketplace
       - Corp_startup
       - Insurance
-  - image: /content/images/legacy/26RpGT891KZ4tsMVB4KGp.jpg
+  - image: images/legacy/26RpGT891KZ4tsMVB4KGp.jpg
     slug: convidencia
     text: |-
       Convidencia supports companies towards co-operation, agility, innovation and sustainable performance. We helped them build a SaaS that tackles Holigarchic Design (an innovative organigram for their clients).
@@ -79,27 +79,27 @@ clients:
       - SaaS
       - Software_Enabler
       - Education
-  - image: /content/images/legacy/0AVoeM0gS11p4RsgqzrYo.jpg
+  - image: images/legacy/0AVoeM0gS11p4RsgqzrYo.jpg
     slug: my-personality
     text: |-
       This is the first personality model (9 different ones) to be scientifically validated worldwide. We helped the institute by building the "MyPersonality" app which facilitates the billing of  personality tests reports bought by their users.
     tags:
       - Software_Enabler
       - Education
-  - image: /content/images/legacy/1q_sOahM0aiyMhEg6kNdr.jpg
+  - image: images/legacy/1q_sOahM0aiyMhEg6kNdr.jpg
     slug: ubidata
     text: Ubidata develops and commercializes mobile logistics solutions regarding fleet,
       goods, shipments and cargo management.
     tags:
       - ''
-  - image: /content/images/legacy/IsvOUqEuqzvzrmkZ02rqe.jpg
+  - image: images/legacy/IsvOUqEuqzvzrmkZ02rqe.jpg
     slug: stentcare
     text: |-
       Stentcare is a healthcare marketplace that allows people with a chronicle disease or handicaped to train, federate, meet and help each other.
     tags:
       - SaaS
       - Healthcare_marketplace
-  - image: /content/images/legacy/pwMqyDbv3WSIsGDSTd8rO.jpg
+  - image: images/legacy/pwMqyDbv3WSIsGDSTd8rO.jpg
     slug: id-soft
     text: |-
       ID-Soft turned to Belighted to develop their financial management SaaS that helps SMBs with their financial planning, forecasting and analytics.
@@ -107,42 +107,42 @@ clients:
       - SaaS
       - Software-publisher
       - Financial_services
-  - image: /content/images/legacy/ktcys2Tkexl8cOtEWbMnI.jpg
+  - image: images/legacy/ktcys2Tkexl8cOtEWbMnI.jpg
     slug: dna
     text: |-
       Advanced data science to enhance decision-making in healthcare, based on complex, heterogeneous and scarce...
     tags:
       - Startup
       - Healthcare
-  - image: /content/images/legacy/jdAoJh36X7JHgJxkWmAab.jpg
+  - image: images/legacy/jdAoJh36X7JHgJxkWmAab.jpg
     slug: netika
     text: |-
       NETiKA develops Real Estate software solutions. We helped them with their development.
     tags:
       - SMB
       - Real_Estate
-  - image: /content/images/legacy/1gmIUNrjQ6_Sv1IQ6bhWt.png
+  - image: images/legacy/1gmIUNrjQ6_Sv1IQ6bhWt.png
     slug: iba
     text: |-
       IBA develops, manufactures and supports medical devices and software solutions for cancer treatments
     tags:
       - Corporate
       - Healthcare
-  - image: /content/images/legacy/ozzpblgZAK9ekfZydeQw5.png
+  - image: images/legacy/ozzpblgZAK9ekfZydeQw5.png
     slug: bombardier
     text: |-
       Bombardier provides world-class transportation experiences that set new standards in passenger comfort, energy efficiency, reliability and safety.
     tags:
       - Transport&Energy
       - Corporate
-  - image: /content/images/legacy/ZR1nEIv21pfd7ga04Y4Dp.png
+  - image: images/legacy/ZR1nEIv21pfd7ga04Y4Dp.png
     slug: arcelor
     text: |-
       ArcelorMittal is the world’s leading steel and mining company.
     tags:
       - Corporate
       - Transport&Energy
-  - image: /content/images/legacy/Rco9XBIMeV0r6ph2iFYnX.png
+  - image: images/legacy/Rco9XBIMeV0r6ph2iFYnX.png
     slug: qualifio
     text: "Belighted extended Qualifio's team to help them scale"
     tags:

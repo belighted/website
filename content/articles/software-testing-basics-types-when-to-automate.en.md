@@ -6,7 +6,7 @@ title: "Software testing basics: types, benefits and when to automate"
 author: Nicolas Jacobeus
 description: Software testing basics - types, benefits and when to invest in
   automated testing. An overview for the non-technical startup founder.
-image: ./images/futuristic-technology-interface.jpg
+image: ../images/blog/futuristic-technology-interface.jpg
 date: 1514764800000
 tags:
   - label: Product development / Continuous Development

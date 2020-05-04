@@ -6,7 +6,7 @@ title: "Développer un logiciel SaaS : le choix de la rapidité"
 author: Nicolas Jacobeus
 description: Développer un logiciel SaaS ou un logiciel sous licence ? Découvrez
   pourquoi se tourner vers un SaaS c'est faire le choix de la rapidité !
-image: ./images/Sans%20titre%20%287%29-1.png
+image: ../images/blog/Sans%20titre%20%287%29-1.png
 date: 1546300800000
 tags:
   - label: Product development / Continuous Development

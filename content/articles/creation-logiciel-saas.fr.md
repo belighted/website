@@ -6,7 +6,7 @@ title: Création d'un logiciel SaaS ? Les 5 mythes
 author: Nicolas Jacobeus
 description: "Création d'un logiciel SaaS : Démystifions ensemble les
   préconceptions à propos de leur création."
-image: ./images/N7FROK.png
+image: ../images/blog/N7FROK.png
 date: 1546300800000
 tags:
   - label: SaaS development
