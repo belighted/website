@@ -33,7 +33,7 @@ const ServicePage = ({
   },
   pageContext
 }) => (
-  <Layout context={pageContext} page={"service"} title={service.title}>
+  <Layout context={pageContext} page={`/services/${service.slug}`} title={service.title}>
     <article>
       {service.slices && <Slices slices={service.slices} />}
 
