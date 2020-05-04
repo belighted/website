@@ -7,13 +7,14 @@ import LeadingBrands from "../splits/LeadingBrands";
 import classNames from "classnames";
 import Testimonials from "./components/Testimonials";
 import Split from "./components/Split";
+import Chapters from "./components/Chapters";
 
 const slices = new Map();
 slices.set("hero", Hero);
 slices.set("trusted", LeadingBrands);
 slices.set("cols", Cols);
 slices.set("split", Split);
-slices.set("chapters", Split);
+slices.set("chapters", Chapters);
 slices.set("strategy-workshop-approved", StrategyWorkshopApproved);
 slices.set("testimonials", Testimonials);
 

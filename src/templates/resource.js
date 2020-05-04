@@ -9,9 +9,6 @@ const ResourcePage = ({ data: { resourcesYaml: post }, pageContext }) => (
     <div className="o-wrapper l-content-sidebar">
       <main className="l-content-sidebar__content">
         <article>
-          <h1 className="c-heading c-heading--1 c-heading--title">
-            {post.title}
-          </h1>
           {post.slices && <Slices slices={post.slices} />}
         </article>
       </main>
