@@ -4,6 +4,7 @@ import Hero from "./components/Hero";
 import StrategyWorkshopApproved from "./components/StrategyWorkShopApproved";
 import Cols from "./components/Cols";
 import LeadingBrands from "../splits/LeadingBrands";
+import classNames from "classnames";
 
 const slices = new Map();
 slices.set("hero", Hero);
@@ -13,7 +14,11 @@ slices.set("strategy-workshop-approved", StrategyWorkshopApproved);
 
 const Slice = props => {
   const Component = slices.get(props.type) || Default;
-  return <Component {...props} />;
+  return (
+    <div className={classNames("c-slice", props.type)}>
+      <Component {...props} />
+    </div>
+  );
 };
 
 export default Slice;

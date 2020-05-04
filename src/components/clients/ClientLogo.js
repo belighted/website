@@ -10,13 +10,14 @@ const ClientLogo = ({ slug, size = "medium" }) => {
       dataYaml(slug: { eq: "clients" }) {
         clients {
           value
-          image
           type
+          image
         }
       }
     }
   `);
   const node = clients.find(client => client.value === slug);
+  console.log(node);
   if (node) {
     return (
       <span

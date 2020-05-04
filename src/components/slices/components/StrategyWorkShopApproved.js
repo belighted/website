@@ -1,12 +1,18 @@
 import React from "react";
+import ClientLogo from "../../clients/ClientLogo";
 
 const StrategyWorkshopApproved = ({ title, list }) => {
   return (
-    <div>
-      <h1>{title}</h1>
+    <div className="o-wrapper">
+      <h1
+        className="c-heading c-heading--1"
+        dangerouslySetInnerHTML={{ __html: title }}
+      />
       <ul>
         {list.map(item => (
-          <li key={item}>{item}</li>
+          <li key={item}>
+            <ClientLogo slug={item} />
+          </li>
         ))}
       </ul>
     </div>

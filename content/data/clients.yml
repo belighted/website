@@ -16,29 +16,32 @@ clients:
     image: /images/clients/arcelor.svg
     type: default
   - value: listminut
-    image: images/clients/listminut-logo.png
+    image: /images/clients/listminut-logo.png
     type: default
   - value: mymicroinvest
     image: /images/clients/mymicroinvest-logo.png
     type: default
   - value: iba
-    image: images/clients/iba-logo.png
+    image: /images/clients/iba-logo.png
     type: default
   - value: menu-next-door
-    image: images/clients/menu-next-door-logo.png
+    image: /images/clients/menu-next-door-logo.png
     type: default
   - value: seraphin
-    image: images/clients/seraphin-logo.png
+    image: /images/clients/seraphin-logo.png
     type: default
   - value: dokeos
-    image: images/clients/dokeos/dokeos-logo.png
-    type: default
-  - value: deecide
-    image: images/clients/deecide.webp
+    image: /images/clients/dokeos/dokeos-logo.png
     type: default
   - value: rights-up
-    image: images/clients/logo-rightsup.png
+    image: /images/clients/rightsup.webp
     type: default
   - value: admeet
     image: images/clients/admeet.png
+    type: default
+  - value: neveo
+    image: /images/clients/neveo.png
+    type: default
+  - value: deecide
+    image: /images/clients/deecide.png
     type: default

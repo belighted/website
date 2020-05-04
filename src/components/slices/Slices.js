@@ -3,7 +3,7 @@ import Slice from "./Slice";
 
 const Slices = ({ slices }) => {
   return (
-    <div>
+    <div className={"c-slices"}>
       {slices.map(slice => (
         <Slice {...slice} key={slice.id} />
       ))}
