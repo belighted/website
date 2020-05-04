@@ -5,12 +5,16 @@ import StrategyWorkshopApproved from "./components/StrategyWorkShopApproved";
 import Cols from "./components/Cols";
 import LeadingBrands from "../splits/LeadingBrands";
 import classNames from "classnames";
+import Testimonials from "./components/Testimonials";
+import Split from "./components/Split";
 
 const slices = new Map();
 slices.set("hero", Hero);
 slices.set("trusted", LeadingBrands);
 slices.set("cols", Cols);
+slices.set("split", Split);
 slices.set("strategy-workshop-approved", StrategyWorkshopApproved);
+slices.set("testimonials", Testimonials);
 
 const Slice = props => {
   const Component = slices.get(props.type) || Default;

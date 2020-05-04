@@ -2,6 +2,7 @@ import React from "react";
 import Slice from "./Slice";
 
 const Slices = ({ slices }) => {
+
   return (
     <div className={"c-slices"}>
       {slices.map(slice => (

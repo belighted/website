@@ -7,8 +7,8 @@ slices:
   - id: "a59bbb62-0623-44b8-a338-ff732ea5f5e8"
     type: "hero"
     image: null
-    title: 'Strategy Workshop<p>You''re <strong>ready to take your idea or product to the next level</strong>. And you know the next steps are critical. But <strong>how do you know what the right next steps are ?</strong></p><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/4c58ef80-4a42-41b4-be1c-00abb678a1f3"></a>'
-    subtitle: null
+    title: "Strategy Workshop"
+    subtitle: '<p>You''re <strong>ready to take your idea or product to the next level</strong>. And you know the next steps are critical. But <strong>how do you know what the right next steps are ?</strong></p><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/4c58ef80-4a42-41b4-be1c-00abb678a1f3"></a>'
     body: null
   - id: "a404759e-7adf-41df-9d77-a8f4d52e45d8"
     type: "strategy-workshop-approved"
@@ -23,17 +23,26 @@ slices:
       - dokeos
       - rights-up
   - id: "0494be2e-1688-4c4a-9d58-a0d10d6e36e9"
-    type: "default"
+    type: "center"
     image: null
-    title: "<br />Why a strategy workshop ?"
-    subtitle: "Business skills, only."
-    body: '<p>Your first step is to lay the foundation with a roadmap for future product growth development. We do this with you in what we call a Strategy Workshop.</p><p>Our Strategy Workshop is designed with the non-technical founder in mind. We''ve worked with dozens of entrepreneurs on early product development.</p><i></i>Get StartedReally Fast<a href="https://www.belighted.com/product-development-consultation?hsLang=en" target="_blank"></a><p>The result is a detailed action plan outlining the steps required <strong>to execute your product growth strategy.</strong></p>'
+    title: "Why a strategy workshop ?"
+    subtitle: null
+    body: "<p>Your first step is to lay the foundation with a roadmap for future product growth development. We do this with you in what we call a Strategy Workshop.</p>"
+  - id: "123456789987452"
+    type: "cols"
+    columns:
+      - title: "Business skills, only."
+        body: "<p>Our Strategy Workshop is designed with the non-technical founder in mind. We've worked with dozens of entrepreneurs on early product development.</p>"
+      - title: "Get Started Really Fast"
+        body: '<a href="https://www.belighted.com/product-development-consultation?hsLang=en" target="_blank">product development consultation</a>'
+      - title: "Detailed action plan"
+        body: "<p>The result is a detailed action plan outlining the steps required <strong>to execute your product growth strategy.</strong></p>"
   - id: "3bdead63-170e-47d7-ae4c-488eb90430be"
-    type: "default"
+    type: "split"
     image: null
     title: null
-    subtitle: 'Do you have the right Product Strategy ? <a href="/product-development-consultation?hsLang=en">Talk to us</a>'
-    body: ""
+    subtitle: null
+    body: 'Do you have the right Product Strategy ? <a href="/product-development-consultation?hsLang=en">Talk to us</a>'
   - id: "657d2fd3-371d-4048-b10a-ead59c046fb1"
     type: "default"
     image: null
@@ -76,22 +85,9 @@ slices:
     title: "Guaranteed Value"
     subtitle: null
     body: '<p>Everything we''ll share in our Strategy Workshop package is designed to offer standalone value to you, regardless of whether or not you decide to continue to work with us.<br /><br />Are you ready to make together a product roadmap with our 1-day strategy workshop? <strong>Click below to book your 20-Minute risk-free consultation call.</strong><br /><br /><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/e94dc39d-84e8-4895-8f9b-f7e7bced2f5e"></a></p>'
-  - id: "4eaaad49-f34b-4668-b80a-7f89ca8b23f9"
-    type: "hero"
-    image: null
-    title: ""
-    subtitle: null
-    body: null
   - id: "776b9f88-ff8b-4444-bd96-49fdae306add"
     type: "testimonials"
     image: null
     title: "Customer Stories"
     subtitle: null
     body: null
-  - id: "4bb80fe4-7e93-44d7-a5da-5b36eb594bd9"
-    type: "links"
-    image: null
-    title: "More About Software <br />Product Strategy "
-    subtitle: ""
-    body: ""
-    links:

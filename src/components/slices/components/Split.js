@@ -1,10 +1,9 @@
 import React from "react";
 import GatsbyImage from "gatsby-image";
-import CtaButton from "../../buttons/CtaButton";
 
-const Default = ({ title, subtitle, image, body, cta }) => {
+const Split = ({ title, subtitle, image, body }) => {
   return (
-    <section className="c-section">
+    <section className="c-section c-section--light-bg">
       <div className="o-wrapper">
         {title && (
           <h2
@@ -20,10 +19,9 @@ const Default = ({ title, subtitle, image, body, cta }) => {
         )}
         <div dangerouslySetInnerHTML={{ __html: body }} className="c-wysiwyg" />
         {image && <GatsbyImage fluid={image.childImageSharp.fluid} />}
-        {cta && <CtaButton cta={cta} />}
       </div>
     </section>
   );
 };
 
-export default Default;
+export default Split;

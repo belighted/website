@@ -60,8 +60,20 @@ export const query = graphql`
         id
         body
         list
+        image {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
         columns {
+          title
           body
+        }
+        cta {
+          link
+          label
         }
       }
     }
