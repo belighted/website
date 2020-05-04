@@ -4,10 +4,7 @@ import Layout from "../components/layout/Layout";
 import Slices from "../components/slices/Slices";
 import HubspotForm from "../components/forms/HubspotForm";
 
-const ResourcePage = ({
-  data: { resourcesYaml: post },
-  pageContext
-}) => (
+const ResourcePage = ({ data: { resourcesYaml: post }, pageContext }) => (
   <Layout context={pageContext} page={"resource"} title={post.title}>
     <div className="o-wrapper l-content-sidebar">
       <main className="l-content-sidebar__content">
@@ -43,6 +40,11 @@ export const query = graphql`
         subtitle
         id
         body
+        chapters {
+          title
+          body
+          intro
+        }
       }
     }
     history: mdx(

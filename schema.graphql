@@ -999,10 +999,18 @@ type ResourcesYamlGroupConnection {
 
 type ResourcesYamlSlices {
     body: String
+    chapters: [ResourcesYamlSlicesChapters]
     id: String
     subtitle: String
     title: String
     type: String
+}
+
+type ResourcesYamlSlicesChapters {
+    body: String
+    intro: String
+    slug: String
+    title: String
 }
 
 type ServicesYaml implements Node {
@@ -1050,6 +1058,7 @@ type ServicesYamlSlices {
     columns: [ServicesYamlSlicesColumns]
     cta: ServicesYamlSlicesCta
     id: String
+    image: File
     list: [String]
     subtitle: String
     testimonials: [ServicesYamlSlicesTestimonials]
@@ -1059,9 +1068,12 @@ type ServicesYamlSlices {
 
 type ServicesYamlSlicesColumns {
     body: String
+    title: String
 }
 
 type ServicesYamlSlicesCta {
+    label: String
+    link: String
     title: String
 }
 
@@ -1186,14 +1198,8 @@ type SitePageConnection {
 }
 
 type SitePageContext {
-    currentPage: Int
     lang: String
-    limit: Int
-    numPages: Int
-    skip: Int
     slug: String
-    tag: String
-    title: String
 }
 
 type SitePageEdge {
@@ -3695,6 +3701,11 @@ enum FileFieldsEnum {
     childResourcesYaml___parent___parent___id
     childResourcesYaml___slices
     childResourcesYaml___slices___body
+    childResourcesYaml___slices___chapters
+    childResourcesYaml___slices___chapters___body
+    childResourcesYaml___slices___chapters___intro
+    childResourcesYaml___slices___chapters___slug
+    childResourcesYaml___slices___chapters___title
     childResourcesYaml___slices___id
     childResourcesYaml___slices___subtitle
     childResourcesYaml___slices___title
@@ -3748,8 +3759,47 @@ enum FileFieldsEnum {
     childServicesYaml___slices___body
     childServicesYaml___slices___columns
     childServicesYaml___slices___columns___body
+    childServicesYaml___slices___columns___title
+    childServicesYaml___slices___cta___label
+    childServicesYaml___slices___cta___link
     childServicesYaml___slices___cta___title
     childServicesYaml___slices___id
+    childServicesYaml___slices___image___absolutePath
+    childServicesYaml___slices___image___accessTime
+    childServicesYaml___slices___image___atime
+    childServicesYaml___slices___image___atimeMs
+    childServicesYaml___slices___image___base
+    childServicesYaml___slices___image___birthTime
+    childServicesYaml___slices___image___birthtime
+    childServicesYaml___slices___image___birthtimeMs
+    childServicesYaml___slices___image___blksize
+    childServicesYaml___slices___image___blocks
+    childServicesYaml___slices___image___changeTime
+    childServicesYaml___slices___image___children
+    childServicesYaml___slices___image___ctime
+    childServicesYaml___slices___image___ctimeMs
+    childServicesYaml___slices___image___dev
+    childServicesYaml___slices___image___dir
+    childServicesYaml___slices___image___ext
+    childServicesYaml___slices___image___extension
+    childServicesYaml___slices___image___gid
+    childServicesYaml___slices___image___id
+    childServicesYaml___slices___image___ino
+    childServicesYaml___slices___image___mode
+    childServicesYaml___slices___image___modifiedTime
+    childServicesYaml___slices___image___mtime
+    childServicesYaml___slices___image___mtimeMs
+    childServicesYaml___slices___image___name
+    childServicesYaml___slices___image___nlink
+    childServicesYaml___slices___image___prettySize
+    childServicesYaml___slices___image___publicURL
+    childServicesYaml___slices___image___rdev
+    childServicesYaml___slices___image___relativeDirectory
+    childServicesYaml___slices___image___relativePath
+    childServicesYaml___slices___image___root
+    childServicesYaml___slices___image___size
+    childServicesYaml___slices___image___sourceInstanceName
+    childServicesYaml___slices___image___uid
     childServicesYaml___slices___list
     childServicesYaml___slices___subtitle
     childServicesYaml___slices___testimonials
@@ -5177,6 +5227,7 @@ enum ResourcesYamlFieldsEnum {
     image___childResourcesYaml___parent___id
     image___childResourcesYaml___slices
     image___childResourcesYaml___slices___body
+    image___childResourcesYaml___slices___chapters
     image___childResourcesYaml___slices___id
     image___childResourcesYaml___slices___subtitle
     image___childResourcesYaml___slices___title
@@ -5382,6 +5433,11 @@ enum ResourcesYamlFieldsEnum {
     parent___parent___parent___id
     slices
     slices___body
+    slices___chapters
+    slices___chapters___body
+    slices___chapters___intro
+    slices___chapters___slug
+    slices___chapters___title
     slices___id
     slices___subtitle
     slices___title
@@ -5486,8 +5542,168 @@ enum ServicesYamlFieldsEnum {
     slices___body
     slices___columns
     slices___columns___body
+    slices___columns___title
+    slices___cta___label
+    slices___cta___link
     slices___cta___title
     slices___id
+    slices___image___absolutePath
+    slices___image___accessTime
+    slices___image___atime
+    slices___image___atimeMs
+    slices___image___base
+    slices___image___birthTime
+    slices___image___birthtime
+    slices___image___birthtimeMs
+    slices___image___blksize
+    slices___image___blocks
+    slices___image___changeTime
+    slices___image___childCasesYaml___about
+    slices___image___childCasesYaml___challenges
+    slices___image___childCasesYaml___children
+    slices___image___childCasesYaml___goals
+    slices___image___childCasesYaml___id
+    slices___image___childCasesYaml___lang
+    slices___image___childCasesYaml___logo
+    slices___image___childCasesYaml___originalPath
+    slices___image___childCasesYaml___problem
+    slices___image___childCasesYaml___results
+    slices___image___childCasesYaml___slug
+    slices___image___childCasesYaml___title
+    slices___image___childCategoriesYaml___children
+    slices___image___childCategoriesYaml___id
+    slices___image___childCategoriesYaml___lang
+    slices___image___childCategoriesYaml___list
+    slices___image___childCategoriesYaml___order
+    slices___image___childCategoriesYaml___services
+    slices___image___childCategoriesYaml___short_description
+    slices___image___childCategoriesYaml___slug
+    slices___image___childCategoriesYaml___technologies
+    slices___image___childCategoriesYaml___title
+    slices___image___childContentYaml___body
+    slices___image___childContentYaml___cases
+    slices___image___childContentYaml___categories
+    slices___image___childContentYaml___children
+    slices___image___childContentYaml___clients
+    slices___image___childContentYaml___formId
+    slices___image___childContentYaml___gallery
+    slices___image___childContentYaml___history
+    slices___image___childContentYaml___id
+    slices___image___childContentYaml___lang
+    slices___image___childContentYaml___pride
+    slices___image___childContentYaml___sections
+    slices___image___childContentYaml___slides
+    slices___image___childContentYaml___slug
+    slices___image___childContentYaml___statistics
+    slices___image___childContentYaml___team
+    slices___image___childContentYaml___title
+    slices___image___childDataYaml___children
+    slices___image___childDataYaml___clients
+    slices___image___childDataYaml___id
+    slices___image___childDataYaml___lang
+    slices___image___childDataYaml___links
+    slices___image___childDataYaml___skills
+    slices___image___childDataYaml___slug
+    slices___image___childDataYaml___technologies
+    slices___image___childImageSharp___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childImageSharp___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMarkdownRemark___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMarkdownRemark___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMarkdownRemark___excerptAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMarkdownRemark___fileAbsolutePath @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMarkdownRemark___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMarkdownRemark___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMarkdownRemark___htmlAst @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMarkdownRemark___id
+    slices___image___childMarkdownRemark___rawMarkdownBody @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMarkdownRemark___tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMarkdownRemark___timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMdx___body
+    slices___image___childMdx___children @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMdx___excerpt @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMdx___fileAbsolutePath
+    slices___image___childMdx___headings @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMdx___html @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMdx___id @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMdx___mdxAST @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMdx___rawBody
+    slices___image___childMdx___tableOfContents @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childMdx___timeToRead @deprecated(reason : "Sorting on fields that need arguments to resolve is deprecated.")
+    slices___image___childProcessYaml___children
+    slices___image___childProcessYaml___description
+    slices___image___childProcessYaml___duration
+    slices___image___childProcessYaml___id
+    slices___image___childProcessYaml___intro
+    slices___image___childProcessYaml___lang
+    slices___image___childProcessYaml___objective
+    slices___image___childProcessYaml___order
+    slices___image___childProcessYaml___slug
+    slices___image___childProcessYaml___subtitle
+    slices___image___childProcessYaml___title
+    slices___image___childResourcesYaml___children
+    slices___image___childResourcesYaml___id
+    slices___image___childResourcesYaml___lang
+    slices___image___childResourcesYaml___originalPath
+    slices___image___childResourcesYaml___slices
+    slices___image___childResourcesYaml___slug
+    slices___image___childResourcesYaml___title
+    slices___image___childResourcesYaml___type
+    slices___image___childServicesYaml___children
+    slices___image___childServicesYaml___formId
+    slices___image___childServicesYaml___id
+    slices___image___childServicesYaml___lang
+    slices___image___childServicesYaml___layout
+    slices___image___childServicesYaml___originalPath
+    slices___image___childServicesYaml___slices
+    slices___image___childServicesYaml___slug
+    slices___image___childServicesYaml___subtitle
+    slices___image___childServicesYaml___title
+    slices___image___childServicesYaml___type
+    slices___image___childTestimonialsYaml___author
+    slices___image___childTestimonialsYaml___body
+    slices___image___childTestimonialsYaml___children
+    slices___image___childTestimonialsYaml___client
+    slices___image___childTestimonialsYaml___id
+    slices___image___childTestimonialsYaml___lang
+    slices___image___childTestimonialsYaml___role
+    slices___image___childTestimonialsYaml___slug
+    slices___image___children
+    slices___image___children___children
+    slices___image___children___id
+    slices___image___ctime
+    slices___image___ctimeMs
+    slices___image___dev
+    slices___image___dir
+    slices___image___ext
+    slices___image___extension
+    slices___image___gid
+    slices___image___id
+    slices___image___ino
+    slices___image___internal___content
+    slices___image___internal___contentDigest
+    slices___image___internal___description
+    slices___image___internal___fieldOwners
+    slices___image___internal___ignoreType
+    slices___image___internal___mediaType
+    slices___image___internal___owner
+    slices___image___internal___type
+    slices___image___mode
+    slices___image___modifiedTime
+    slices___image___mtime
+    slices___image___mtimeMs
+    slices___image___name
+    slices___image___nlink
+    slices___image___parent___children
+    slices___image___parent___id
+    slices___image___prettySize
+    slices___image___publicURL
+    slices___image___rdev
+    slices___image___relativeDirectory
+    slices___image___relativePath
+    slices___image___root
+    slices___image___size
+    slices___image___sourceInstanceName
+    slices___image___uid
     slices___list
     slices___subtitle
     slices___testimonials
@@ -5741,14 +5957,8 @@ enum SitePageFieldsEnum {
     component
     componentChunkName
     componentPath
-    context___currentPage
     context___lang
-    context___limit
-    context___numPages
-    context___skip
     context___slug
-    context___tag
-    context___title
     id
     internalComponentName
     internal___content
@@ -6467,6 +6677,7 @@ enum TestimonialsYamlFieldsEnum {
     image___childResourcesYaml___parent___id
     image___childResourcesYaml___slices
     image___childResourcesYaml___slices___body
+    image___childResourcesYaml___slices___chapters
     image___childResourcesYaml___slices___id
     image___childResourcesYaml___slices___subtitle
     image___childResourcesYaml___slices___title
@@ -7379,8 +7590,20 @@ input ResourcesYamlFilterInput {
     type: StringQueryOperatorInput
 }
 
+input ResourcesYamlSlicesChaptersFilterInput {
+    body: StringQueryOperatorInput
+    intro: StringQueryOperatorInput
+    slug: StringQueryOperatorInput
+    title: StringQueryOperatorInput
+}
+
+input ResourcesYamlSlicesChaptersFilterListInput {
+    elemMatch: ResourcesYamlSlicesChaptersFilterInput
+}
+
 input ResourcesYamlSlicesFilterInput {
     body: StringQueryOperatorInput
+    chapters: ResourcesYamlSlicesChaptersFilterListInput
     id: StringQueryOperatorInput
     subtitle: StringQueryOperatorInput
     title: StringQueryOperatorInput
@@ -7414,6 +7637,7 @@ input ServicesYamlFilterInput {
 
 input ServicesYamlSlicesColumnsFilterInput {
     body: StringQueryOperatorInput
+    title: StringQueryOperatorInput
 }
 
 input ServicesYamlSlicesColumnsFilterListInput {
@@ -7421,6 +7645,8 @@ input ServicesYamlSlicesColumnsFilterListInput {
 }
 
 input ServicesYamlSlicesCtaFilterInput {
+    label: StringQueryOperatorInput
+    link: StringQueryOperatorInput
     title: StringQueryOperatorInput
 }
 
@@ -7429,6 +7655,7 @@ input ServicesYamlSlicesFilterInput {
     columns: ServicesYamlSlicesColumnsFilterListInput
     cta: ServicesYamlSlicesCtaFilterInput
     id: StringQueryOperatorInput
+    image: FileFilterInput
     list: StringQueryOperatorInput
     subtitle: StringQueryOperatorInput
     testimonials: ServicesYamlSlicesTestimonialsFilterListInput
@@ -7483,14 +7710,8 @@ input SiteFilterInput {
 }
 
 input SitePageContextFilterInput {
-    currentPage: IntQueryOperatorInput
     lang: StringQueryOperatorInput
-    limit: IntQueryOperatorInput
-    numPages: IntQueryOperatorInput
-    skip: IntQueryOperatorInput
     slug: StringQueryOperatorInput
-    tag: StringQueryOperatorInput
-    title: StringQueryOperatorInput
 }
 
 input SitePageFilterInput {

@@ -13,6 +13,7 @@ slices.set("hero", Hero);
 slices.set("trusted", LeadingBrands);
 slices.set("cols", Cols);
 slices.set("split", Split);
+slices.set("chapters", Split);
 slices.set("strategy-workshop-approved", StrategyWorkshopApproved);
 slices.set("testimonials", Testimonials);
 
