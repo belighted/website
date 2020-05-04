@@ -7,7 +7,7 @@ const ResourcesList = ({ resources }) => {
     <ul className="o-list-bare l-grid l-grid--3cols">
       {resources.map(node => (
         <li key={node.slug} className={"u-margin-bottom"}>
-          <GatsbyImage fluid={node.image.childImageSharp.fluid} />
+          {node.image && <GatsbyImage fluid={node.image.childImageSharp.fluid} />}
           <LinkToResource slug={node.slug}>{node.title}</LinkToResource>
         </li>
       ))}
