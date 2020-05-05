@@ -58,6 +58,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
   await createServicePages({ graphql, actions });
   await createJobPages({ graphql, actions });
 
-  //await createLandingPages({ graphql, actions });
-  //await createBlog({ graphql, actions });
+  await createLandingPages({ graphql, actions });
+  await createBlog({ graphql, actions });
 };

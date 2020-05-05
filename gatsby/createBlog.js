@@ -7,7 +7,6 @@ module.exports = async ({ graphql, actions }) => {
   const blogTemplate = path.resolve("./src/templates/blog.js");
   const blogTagTemplate = path.resolve("./src/templates/blogTag.js");
 
-  /*
   const {
     data: {
       articles: { nodes: articles }
@@ -82,5 +81,4 @@ module.exports = async ({ graphql, actions }) => {
       });
     });
   });
-  */
 };
