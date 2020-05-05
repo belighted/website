@@ -18,6 +18,7 @@ slices:
     type: "chapters"
     chapters:
       - title: Saas Introduction
+        menu: Intro
         slug: introduction
         intro: What is Software-as-a-Service ?
         body: >
@@ -34,6 +35,7 @@ slices:
           <p>Good examples of SaaS applications include Google Apps, Dropbox, and Salesforce. PaaS examples include AWS Elastic Beanstalk and Google App Engine.</p>
           <p>Is a SaaS model right for your company? Find out all you need to know about moving to a SaaS model in our complete eguide (download the PDF at the end of the page).</p>
       - title: Moving to SaaS
+        menu: Moving to SaaS
         slug: moving_SaaS
         intro: Why switching to a SaaS model is the right move.
         body: >
@@ -79,6 +81,7 @@ slices:
           <h5>Easy to Review Usage and Billing</h5>
           <p>Built-in analytics allow customers to easily review their usage and what they’re getting for their money. Customers who aren’t making full use of their features can be guided to downgrade rather than drop the service entirely as a result of feeling overcharged. Those near their usage limits can plan for a potential cost increase. Finally, those who are currently paying the right amount can see exactly what value they’re getting for their money so that they’re less likely to explore other options.</p>
       - title: Is SaaS for You?
+        menu: Is it for you?
         slug: SaaS_for_you
         intro: Is a SaaS model the right solution for your company ?
         body: >
@@ -102,6 +105,7 @@ slices:
           <p>Software owners must be able to provide a much higher level of ongoing customer service after the initial onboarding period. The SaaS meaning itself requires ongoing service. Otherwise, customers won’t feel that they’re getting anything for the ongoing fee and will seek to change providers or look for a one-time purchase option.</p>
           <p>Similarly, software owners must be willing and able to constantly track metrics to adapt the product to their customers’ needs. With increased flexibility a key benefit of using SaaS, customers will quickly be on the hunt for a new provider if their needs aren’t met — at times, this will even be if you haven’t heard any complaints from them.</p>
       - intro: building_SaaS
+        menu: Building a SaaS
         title: Building a SaaS Product
         body: >
           <h3>What is the process to build a great SaaS product?</h3>
@@ -171,6 +175,7 @@ slices:
           </p>
       - title: SaaS Pricing
         slug: Saas-pricing
+        menu: Pricing
         intro: How much to make my app ?
         body: >
           <h3>How much does it cost to build a SaaS product?</h3>
@@ -236,6 +241,7 @@ slices:
             make customers aware of your product and what it can do for them.
           </p>
       - title: SaaS examples
+        menu: Examples
         slug: saas-examples
         intro: Click on the image to learn more about Dokeos story and how we turned their old software into a successful SaaS business.
         body: >
@@ -277,6 +283,7 @@ slices:
           <img alt="dokeos cs" src="images/resources/dokeos_cs_page.webp" />
       - title: Conclusion
         slug: conclusion
+        menu: Conclusion
         intro: Ready to make the leap and switch to a SaaS model ? <a href="/services/product-development-consultation">We would be happy to discuss it with you.</a>
         body: >
           <h3>Conclusion</h3>
