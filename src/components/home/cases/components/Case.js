@@ -41,7 +41,7 @@ const Case = ({ node }) => {
 };
 
 export const HomeCaseItem = graphql`
-  fragment HomeCaseItem on ContentYamlCases {
+  fragment HomeCaseItem on SinglesYamlCases {
     slug
     title
     results

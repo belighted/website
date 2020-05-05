@@ -14,7 +14,7 @@ import TestimonialsList from "../components/testimonials/TestimonialsList";
 const ServicesPage = ({
   pageContext,
   data: {
-    contentYaml: { sections, formId },
+    singlesYaml: { sections, formId },
     customConsultation,
     allTestimonialsYaml: { nodes: testimonials }
   }
@@ -85,7 +85,7 @@ export const query = graphql`
         }
       }
     }
-    contentYaml(slug: { eq: "services" }, lang: { eq: $lang }) {
+    singlesYaml(slug: { eq: "services" }, lang: { eq: $lang }) {
       title
       formId
       sections {

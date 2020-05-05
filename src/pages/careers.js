@@ -7,14 +7,14 @@ import LintToJob from "../components/jobs/LinkToJob";
 const CareersPage = ({ pageContext, data }) => {
   const {
     allMarkdownRemark: { nodes: jobs },
-    contentYaml
+    singlesYaml
   } = data;
 
   return (
-    <Layout context={pageContext} page={"careers"} title={contentYaml.title}>
+    <Layout context={pageContext} page={"careers"} title={singlesYaml.title}>
       <section className="c-section c-section--light-bg">
         <div className="o-wrapper">
-          <SectionHeader title={contentYaml.title} body={contentYaml.body} />
+          <SectionHeader title={singlesYaml.title} body={singlesYaml.body} />
         </div>
       </section>
       <section className={"c-section"}>
@@ -24,7 +24,7 @@ const CareersPage = ({ pageContext, data }) => {
               <li className="o-box o-box--light-bg">
                 <h2>{job.frontmatter.title}</h2>
                 <LintToJob slug={job.frontmatter.slug}>
-                  {contentYaml.cta.title}
+                  {singlesYaml.cta.title}
                 </LintToJob>
               </li>
             ))}
@@ -50,7 +50,7 @@ export const query = graphql`
         }
       }
     }
-    contentYaml(slug: { eq: "careers" }, lang: { eq: $lang }) {
+    singlesYaml(slug: { eq: "careers" }, lang: { eq: $lang }) {
       title
       body
       cta {

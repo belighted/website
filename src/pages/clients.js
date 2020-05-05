@@ -23,7 +23,7 @@ export default ClientsPage;
 
 export const query = graphql`
   query ClientPage($lang: String!) {
-    clients: contentYaml(slug: { eq: "clients" }, lang: { eq: $lang }) {
+    clients: singlesYaml(slug: { eq: "clients" }, lang: { eq: $lang }) {
       title
       cta {
         label

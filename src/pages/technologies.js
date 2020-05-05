@@ -6,7 +6,7 @@ import TechnoLogo from "../components/clients/TechnoLogo";
 const ClientsPage = ({
   pageContext,
   data: {
-    contentYaml: { title, categories }
+    singlesYaml: { title, categories }
   }
 }) => {
   return (
@@ -39,7 +39,7 @@ export default ClientsPage;
 
 export const query = graphql`
   query TechnologiesPage($lang: String!) {
-    contentYaml(slug: { eq: "technologies" }, lang: { eq: $lang }) {
+    singlesYaml(slug: { eq: "technologies" }, lang: { eq: $lang }) {
       title
       categories {
         title

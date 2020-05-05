@@ -8,7 +8,7 @@ import ApplicationCost from "../components/splits/ApplicationCost";
 const ResourcesPage = ({
   pageContext,
   data: {
-    contentYaml: { title, body },
+    singlesYaml: { title, body },
     allResourcesYaml: { nodes: resources }
   }
 }) => {
@@ -27,7 +27,7 @@ export default ResourcesPage;
 
 export const query = graphql`
   query($lang: String!) {
-    contentYaml(slug: { eq: "resources" }, lang: { eq: $lang }) {
+    singlesYaml(slug: { eq: "resources" }, lang: { eq: $lang }) {
       title
       body
     }

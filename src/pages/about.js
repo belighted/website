@@ -13,7 +13,7 @@ import Gallery from "../components/about/Gallery";
 const AboutPage = ({
   pageContext,
   data: {
-    contentYaml: { title, sections, history, pride, gallery },
+    singlesYaml: { title, sections, history, pride, gallery },
     culture
   }
 }) => {
@@ -49,7 +49,7 @@ export default AboutPage;
 
 export const query = graphql`
   query($lang: String!) {
-    contentYaml(slug: { eq: "about" }, lang: { eq: $lang }) {
+    singlesYaml(slug: { eq: "about" }, lang: { eq: $lang }) {
       title
       sections {
         slug

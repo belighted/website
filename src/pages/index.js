@@ -16,7 +16,7 @@ Cases.propTypes = { sections: PropTypes.any };
 export default function Homepage({
   pageContext,
   data: {
-    contentYaml: { sections, cases, slides, statistics },
+    singlesYaml: { sections, cases, slides, statistics },
     posts: { nodes: posts },
     allTestimonialsYaml: { nodes: testimonials }
   }
@@ -50,7 +50,7 @@ export default function Homepage({
 
 export const query = graphql`
   query Homepage($lang: String!) {
-    contentYaml(slug: { eq: "home" }, lang: { eq: $lang }) {
+    singlesYaml(slug: { eq: "home" }, lang: { eq: $lang }) {
       sections {
         slug
         title

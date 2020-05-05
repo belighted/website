@@ -52,10 +52,12 @@ exports.onCreatePage = ({ page, actions }) => {
 };
 
 module.exports.createPages = async ({ graphql, actions }) => {
-  await createBlog({ graphql, actions });
+
   await createResourcePages({ graphql, actions });
-  await createJobPages({ graphql, actions });
-  await createServicePages({ graphql, actions });
   await createCaseStudies({ graphql, actions });
-  await createLandingPages({ graphql, actions });
+  await createServicePages({ graphql, actions });
+  await createJobPages({ graphql, actions });
+
+  //await createLandingPages({ graphql, actions });
+  //await createBlog({ graphql, actions });
 };

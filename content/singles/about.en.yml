@@ -19,77 +19,77 @@ team:
   - id: nja
     name: Nicolas
     role: CEO
-    image: ./images/about/team/nja.jpg
+    image: ../images/about/team/nja.jpg
   - id: mal
     name: Michael
     role: Project Manager
-    image: ./images/about/team/mal.jpg
+    image: ../images/about/team/mal.jpg
   - id: shu
     name: Sophie
     role: Project Manager
-    image: ./images/about/team/shu.jpg
+    image: ../images/about/team/shu.jpg
   - id: pve
     name: Philippe
     role: Full stack developper
-    image: ./images/about/team/pve.jpg
+    image: ../images/about/team/pve.jpg
   - id: she
     name: Simon
     role: Front-end developer
-    image: ./images/about/team/she.jpg
+    image: ../images/about/team/she.jpg
   - id: kcl
     name: Kathleen
     role: Full stack developer
-    image: ./images/about/team/kcl.jpg
+    image: ../images/about/team/kcl.jpg
   - id: dle
     name: Dominique
     role: Full stack developer
-    image: ./images/about/team/dle.jpg
+    image: ../images/about/team/dle.jpg
   - id: cgo
     name: Christophe
     role: Full stack developer
-    image: ./images/about/team/cgo.jpg
+    image: ../images/about/team/cgo.jpg
   - id: lgr
     name: Lucile
     role: User experience designer
-    image: ./images/about/team/lgr.jpg
+    image: ../images/about/team/lgr.jpg
   - id: eto
     name: Eddy
     role: Front end developer
-    image: ./images/about/team/eto.jpg
+    image: ../images/about/team/eto.jpg
   - id: skr
     name: Sergei
     role: Full stack developer
-    image: ./images/about/team/skr.jpg
+    image: ../images/about/team/skr.jpg
   - id: AHU
     name: Arnaud
     role: Front-end developer
-    image: ./images/about/team/ahu.png
+    image: ../images/about/team/ahu.png
   - id: osz
     name: Oskar
     role: Back-end developer
-    image: ./images/about/team/osz.jpg
+    image: ../images/about/team/osz.jpg
   - id: bda
     name: Brahim
     role: Full-stack developer
-    image: ./images/about/team/bda.jpg
+    image: ../images/about/team/bda.jpg
   - id: JMO
     name: Julien
     role: Front-end developer
-    image: ./images/about/team/jmo.png
+    image: ../images/about/team/jmo.png
   - id: KVA
     name: Kevin
     role: Full stack developper
-    image: ./images/about/team/kva.png
+    image: ../images/about/team/kva.png
 history:
   - date: 2008
     event: In 2008, on the university campus at Louvain-la-Neuve, Nicolas Jacobeus made his vision reality. He founded Belighted, a software development agency, to create innovative products that would delight users.
-    image: ./images/about/history/nicolas.jpg
+    image: ../images/about/history/nicolas.jpg
   - date: 2009
     event: From the start, Belighted embraced excellence in modern, efficient technologies like Ruby and its web framework Rails. Relentless focus on quality helped Belighted grow and attract like-minded talent.  The company grew to become a passionate team of software engineers, user experience specialists, and project managers.
-    image: ./images/about/history/deloitte.png
+    image: ../images/about/history/deloitte.png
   - date: 2013
     event: Belighted's growth got noticed. Belighted was nominated by Deloitte as one the 50 fastest growing technology firms in Benelux. We were one of the few services based businesses, and earned the 7th place among all Belgian participants. We made our first dent in the tech universe.
-    image: ./images/about/history/grow.png
+    image: ../images/about/history/grow.png
   - date: 2017
     event: Over the years, the experience we have gathered on hundreds of projects has resulted in a fine-tuned methodology to set our clients’ software products up for excellent performance. Strategy Workshop > Design Sprint > Software Development / MVP > Iteration on the product
   - date: 2018
@@ -100,29 +100,29 @@ pride:
   - title: Speaking at events
     subtitle: We like sharing our expertise
     body: We grant the opportunity to our team to attend and speak at events about software product & development to share their expertise.
-    image: ./images/about/pride/event_cypress.jpg
+    image: ../images/about/pride/event_cypress.jpg
   - title: Open Source Community
     subtitle: Proponents & users of Open-Source Software
     body: Being proponents and users of open source software in most of our work, we naturally give back to the community. Since the beginning of Belighted, we have patched software such as Ruby on Rails and some of its libraries, and produced our own which we maintain on our Github page.
-    image: ./images/about/pride/ruby_conf.jpg
+    image: ../images/about/pride/ruby_conf.jpg
   - title: Conferences
     subtitle: Room for learning & development is key at Belighted
     body: Each Belighted member has an allocated budget to attend worldwide conferences. We have already attented conferences such as RubyConf, React Day, AWS summit, Inbound and many more.
-    image: ./images/about/pride/management_conf.jpg
+    image: ../images/about/pride/management_conf.jpg
   - title: Working remotely
     subtitle: Flexibility enables us to better deliver on projects
     body: We care about our employees' well-being and work-life balance. That's why we enjoy an unlimited remote policy with flexible hours.
-    image: ./images/about/pride/remote_working.png
+    image: ../images/about/pride/remote_working.png
   - title: Beerlighted
     subtitle: Our Belgian DNA
     body: Almost all Belighters are beer aficionados, the passion being part of our Belgian culture. We brewed our first batch of "Beerlighted" in 2012 as part of a dedicated team-building event and shared the tasty result with our friends and customers.
-    image: ./images/about/pride/beerlighted.png
+    image: ../images/about/pride/beerlighted.png
 gallery:
-  - image: ./images/about/gallery/escape_room_fun.png
+  - image: ../images/about/gallery/escape_room_fun.png
     title: Work from anywhere
     subtitle: That's up to you
     icon: pin
-  - image: ./images/about/gallery/teambuilding_1200_800.png
+  - image: ../images/about/gallery/teambuilding_1200_800.png
     title: Coffee, drinks and snacks
     subtitle:
     icon: coffee

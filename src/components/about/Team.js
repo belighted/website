@@ -4,10 +4,10 @@ import Img from "gatsby-image";
 
 const Team = () => {
   const {
-    contentYaml: { team }
+    singlesYaml: { team }
   } = useStaticQuery(graphql`
     {
-      contentYaml(slug: { eq: "about" }) {
+      singlesYaml(slug: { eq: "about" }) {
         team {
           name
           role

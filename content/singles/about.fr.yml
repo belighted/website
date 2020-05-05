@@ -18,77 +18,77 @@ team:
   - id: nja
     name: Nicolas
     role: CEO
-    image: ./images/about/team/nja.jpg
+    image: ../images/about/team/nja.jpg
   - id: mal
     name: Michael
     role: Project Manager
-    image: ./images/about/team/mal.jpg
+    image: ../images/about/team/mal.jpg
   - id: shu
     name: Sophie
     role: Project Manager
-    image: ./images/about/team/shu.jpg
+    image: ../images/about/team/shu.jpg
   - id: pve
     name: Philippe
     role: Full stack developper
-    image: ./images/about/team/pve.jpg
+    image: ../images/about/team/pve.jpg
   - id: she
     name: Simon
     role: Front-end developer
-    image: ./images/about/team/she.jpg
+    image: ../images/about/team/she.jpg
   - id: kcl
     name: Kathleen
     role: Full stack developer
-    image: ./images/about/team/kcl.jpg
+    image: ../images/about/team/kcl.jpg
   - id: dle
     name: Dominique
     role: Full stack developer
-    image: ./images/about/team/dle.jpg
+    image: ../images/about/team/dle.jpg
   - id: cgo
     name: Christophe
     role: Full stack developer
-    image: ./images/about/team/cgo.jpg
+    image: ../images/about/team/cgo.jpg
   - id: lgr
     name: Lucile
     role: User experience designer
-    image: ./images/about/team/lgr.jpg
+    image: ../images/about/team/lgr.jpg
   - id: eto
     name: Eddy
     role: Front end developer
-    image: ./images/about/team/eto.jpg
+    image: ../images/about/team/eto.jpg
   - id: skr
     name: Sergei
     role: Full stack developer
-    image: ./images/about/team/skr.jpg
+    image: ../images/about/team/skr.jpg
   - id: AHU
     name: Arnaud
     role: Front-end developer
-    image: ./images/about/team/ahu.png
+    image: ../images/about/team/ahu.png
   - id: osz
     name: Oskar
     role: Back-end developer
-    image: ./images/about/team/osz.jpg
+    image: ../images/about/team/osz.jpg
   - id: bda
     name: Brahim
     role: Full-stack developer
-    image: ./images/about/team/bda.jpg
+    image: ../images/about/team/bda.jpg
   - id: JMO
     name: Julien
     role: Front-end developer
-    image: ./images/about/team/jmo.png
+    image: ../images/about/team/jmo.png
   - id: KVA
     name: Kevin
     role: Full stack developper
-    image: ./images/about/team/kva.png
+    image: ../images/about/team/kva.png
 history:
   - date: 2008
     event: En 2008, sur le campus universitaire de Louvain-la-Neuve, Nicolas Jacobeus a transformé sa vision en réalité. Il a fondé Belighted, une agence de développement de logiciels, avec pour mission de créer des produits innovants qui séduisent les utilisateurs.
-    image: ./images/about/history/nicolas.jpg
+    image: ../images/about/history/nicolas.jpg
   - date: 2009
     event: Dès le début, Belighted a adopté les technologies les plus modernes et les plus efficaces, comme Ruby et son framework web Rails. L'attention constante apportée à la qualité a permis à Belighted de se développer et d'attirer des talents partageant les mêmes idées.  L'entreprise s'est développée pour devenir une équipe passionnée d'ingénieurs logiciels, de spécialistes de l'expérience utilisateur et de chefs de projet.
-    image: ./images/about/history/deloitte.png
+    image: ../images/about/history/deloitte.png
   - date: 2013
     event: La croissance de Belighted a été remarquée. Belighted a été nominée par Deloitte comme l'une des 50 entreprises technologiques à la croissance la plus rapide au sein du Benelux. Nous étions l'une des rares entreprises de services et nous avons obtenu la 7ème place au classement de l'ensemble des participants belges. Nous avons marqué notre premier point dans l'univers de la technologie.
-    image: ./images/about/history/grow.png
+    image: ../images/about/history/grow.png
   - date: 2017
     event: Au fil des ans, l'expérience acquise sur des centaines de projets nous a permis de créer notre méthodologie et d'offrir des performances exceptionnelles aux logiciels de nos clients. Strategy Workshop > Design Sprint > Développement logiciel / MVP > Itérations sur le produit.
   - date: 2018
@@ -99,29 +99,29 @@ pride:
   - title: Interventions lors d'évènements
     subtitle: Nous aimons partager notre expertise
     body: WNous permettons à notre équipe d'assister et de prendre la parole lors d'événements relatifs aux logiciels et à leur développement afin de partager leur expertise.
-    image: ./images/about/pride/event_cypress.jpg
+    image: ../images/about/pride/event_cypress.jpg
   - title: Communauté Open Source
     subtitle: Promoteurs et utilisateurs de logiciels Open Source
     body: En tant que partisans et utilisateurs de logiciels Open Source dans la plupart de nos projets, nous sommes bien évidemment impliqués dans la communauté. Depuis le début de Belighted, nous avons apporté des correctifs à des logiciels tels que Ruby on Rails et certaines de ses bibliothèques, et avons produit les nôtres que nous maintenons sur notre page Github..
-    image: ./images/about/pride/ruby_conf.jpg
+    image: ../images/about/pride/ruby_conf.jpg
   - title: Conférences
     subtitle: Du temps réservé à l'apprentissage et au développement est primordial chez Belighted
     body: Chaque membre de Belighted dispose d'un budget pour assister à des conférences mondiales. Nous avons déjà assisté à des conférences telles que RubyConf, React Day, AWS summit, Inbound et bien d'autres.
-    image: ./images/about/pride/management_conf.jpg
+    image: ../images/about/pride/management_conf.jpg
   - title: Travailler à distance
     subtitle: La flexibilité nous permet de mieux réaliser les projets
     body: Nous nous soucions du bien-être de nos employés et de l'équilibre entre le travail et la vie personnelle. C'est pourquoi nous profitons d'une politique de télé-travail illimitée avec des horaires flexibles.
-    image: ./images/about/pride/remote_working.png
+    image: ../images/about/pride/remote_working.png
   - title: Beerlighted
     subtitle: Notre ADN belge
     body: Presque tous les Belighters sont des amateurs de bière, cette passion est ancrée dans notre culture belge. Nous avons brassé notre première «Beerlighted» en 2012 dans le cadre d'un team building et avons partagé ce résultat savoureux avec nos amis et clients.
-    image: ./images/about/pride/beerlighted.png
+    image: ../images/about/pride/beerlighted.png
 gallery:
-  - image: ./images/about/gallery/escape_room_fun.png
+  - image: ../images/about/gallery/escape_room_fun.png
     title: Travailler de n'importe ou
     subtitle: ça depend de vous
     icon: pin
-  - image: ./images/about/gallery/teambuilding_1200_800.png
+  - image: ../images/about/gallery/teambuilding_1200_800.png
     title: Café, boissons et snacks
     subtitle:
     icon: coffee
