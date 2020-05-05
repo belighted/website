@@ -26,6 +26,9 @@ const TestimonialsList = ({ testimonials }) => {
               <span className="c-body c-body--2 c-quote-author__role">
                 {node.role}
               </span>
+              <span className="c-body c-body--2 c-quote-author__company">
+                {node.client}
+              </span>
             </p>
           </div>
         </li>
