@@ -1,0 +1,15 @@
+.c-referal{
+  padding: $inuit-global-spacing-unit 0;
+  text-align: center;
+  &__quote{
+    font-family: $fontstack-alt;
+    font-size: $inuit-font-size-h3;
+    max-width: 40rem;
+    margin:auto;
+    margin-bottom: $inuit-global-spacing-unit;
+  }
+  &__image{
+    width:150px;
+    height: auto;
+  }
+}
