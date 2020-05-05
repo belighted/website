@@ -1,4 +1,12 @@
 .c-resource{
+  &.saas-guide-to-software-as-service{
+    .c-resource{
+      &__image{
+        display: none;
+      }
+    }
+  }
+  &.ebook-mvp-development-outsourcing,
   &.software-power-checklist{
     display: grid;
     grid-template-columns: 3fr 1fr minmax(25%, 1fr);
