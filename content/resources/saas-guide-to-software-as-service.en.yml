@@ -78,11 +78,11 @@ slices:
           <p>On-premises software that is highly customized or designed for anticipated future needs can be needlessly complex. By focusing on core features, current needs, and continuous incremental improvement, subscription software and services can be much more user-friendly.
           <h5>Easy to Review Usage and Billing</h5>
           <p>Built-in analytics allow customers to easily review their usage and what they’re getting for their money. Customers who aren’t making full use of their features can be guided to downgrade rather than drop the service entirely as a result of feeling overcharged. Those near their usage limits can plan for a potential cost increase. Finally, those who are currently paying the right amount can see exactly what value they’re getting for their money so that they’re less likely to explore other options.</p>
-      - title : Is SaaS for You?
+      - title: Is SaaS for You?
         slug: SaaS_for_you
         intro: Is a SaaS model the right solution for your company ?
         body: >
-          <p>Want to learn more about SaaS and why it could be the right solution for your company? </p>
+          <h3>Who is a SaaS model right for ?</h3>
           <p>As shown by the above benefits, the answer to when to use SaaS is when you're looking to:</p>
           <ul>
               <li>Reduce your time to benefit</li>
@@ -104,63 +104,188 @@ slices:
       - intro: building_SaaS
         title: Building a SaaS Product
         body: >
-          <p>Building a SaaS product is similar to building any other product or making other business decisions. Of course, you will need to tailor the process to the business model.</p>
-          <p>Review the above advantages along with the scenarios where a SaaS model may not work. Once you’ve convinced yourself, be sure to get total buy-in from your team. This includes not just getting them to agree with you but having them raise any concerns for discussion with the entire team so that you can move forward without any lingering doubts.</p>
-          <p>There are three key questions that you should ask yourself when you begin to build a SaaS product. First, how will the new model create a better customer experience? Second, how do you measure success by changing to SaaS focused metrics that emphasize retention and longevity over the one-time sale? Third, how do your product requirements change to answer these questions and help you to gain market share?</p>
-          <p>Once you’ve established an overall strategy, you should design a product that meets these needs. Remember that it will likely need to have broad enough appeal to attract a number of clients while also having enough customizability that clients consider it the best option for their needs.</p>
-          <p>After you’re satisfied with the design, begin the development process but don’t be afraid to make changes if you encounter new challenges or come up with new ideas once you’re putting your plan into action.</p>
-          <p>No software is complete without beta testing. You simply can’t anticipate every customer need and usage pattern. You will typically start with a small group of customers at a free or greatly reduced price as compensation for their feedback and time spent dealing with any unexpected problems. Once you are satisfied with the results, you can bring in new customers at your planned price point.</p>
-          <p>Customer onboarding is a critical moment in the SaaS business cycle. A customer’s early experiences will determine if they will stick with your product or begin shopping for a new option.</p>
-          <p>Onboarding includes both initial training and ongoing support. It should last until clients are fully comfortable with your product and have had a chance to use all of the features that they plan to use.</p>
-          <p>Even though SaaS provides recurring revenue, it’s important to remember that that revenue isn’t guaranteed. You must continue to deliver value to your clients on an ongoing basis even and especially when their needs change in order to keep them as subscribers. Since some clients will still inevitably move on to new business areas or have changing needs that you can’t reasonably meet, you should also continue marketing to keep an incoming pipeline of clients.</p>SaaS_pricing
-          <h4>Chapter 5:<br />SaaS Pricing</h4>
-          <p>How much to build my app ?</p>
-          <p> </p>
-          <p>Want to learn more about SaaS and why it could be the right solution for your company? </p>
-          <p><strong><strong><strong><a href=\"#pdf\">Download our Ultimate Software-as-a-Service guide.</a><br /><br /><a href=\"#pdf\">DOWNLOAD</a></strong></strong>
-              </strong>
-          </p>
-          <p>Building a SaaS product is a never-ending cycle of design, strategy, development, and back to design based on client feedback and new needs. The only certainty is uncertainty as to how much of the cycle you need to repeat in incremental development based on customer demand as well as your own internal testing for bugs and other problems.</p>
-          <p>Long-term development costs typically run €10-20k per month. You can obtain a minimum viable product after just two to three months, but you should not consider this a finished product. After release, you should obtain feedback and continue to make improvements until you're satisfied with the finished product.</p>
-          <p>If you stick with the minimum viable product, it will be difficult to carve out sustainable market share in all but the least competitive markets, as competitors will find it easy to create a better alternative to your product. Keep this in mind when you're choosing how to emphasize costs, time, and scope when deciding on your budget.</p>
-          <p>Customers also need to consider secondary costs such as hosting and support. Hosting is relatively inconsequential in today’s market but should still receive a line item in the project budget. Support may be handled by the customer’s existing staff, but their time should be allocated to the project in order to properly track total costs and set profitable pricing.</p>
-          <p>Finally, it may not be in your or your client's best interest to truly handle every single feature. For example, you may want to integrate with existing user authentication, billing, account management, or communication services. These ongoing costs will also have to be built into your pricing model.</p>
-          <p>Client acquisition cost is one of the biggest expenses in software sales. You can reduce marketing costs to some degree by establishing yourself as the best in your niche so that customers don't leave for competitors. However, since you will likely have other competitors claiming to be the best, you will need to invest in convincing customers to choose you if you wish to expand your customer base.</p>
-          <p>Consider the <strong><a href=\"https://www.forbes.com/sites/forbestechcouncil/2018/08/28/the-costs-of-making-a-saas-product-and-is-it-worth-it/#5c1f9eab39cc\">example of Monday</a></strong>, a time tracking and project management app that has raised €74.1 million in total investor contributions. It didn’t raise this funding because it costs anywhere near that much to make a viable time tracking and project management tool. Instead, it spent what it needed to create the best possible tool and then put the bulk of its funding into marketing.</p>
-          <p>The vast majority of small to mid-sized businesses don't need to invest millions in marketing to achieve profitability, but you will need a plan to make customers aware of your product and what it can do for them.</p>SaaS_examples
-          <h4>Chapter 6:<br />SaaS Examples</h4>
-          <p>Click on the image to learn more about Dokeos story and how we turned their old software into a successful SaaS business.</p>
-          <p> </p>
-          <a href=\ "https://www.belighted.com/case-studies/dokeos-moves-its-software-to-saas-model?hsLang=en\" target=\ "_blank\"></a>
-          <p>Want to learn more about SaaS and why it could be the right solution for your company?</p>
-          <p><strong> <strong><strong><a href=\"#pdf\">Download our Ultimate Software-as-a-Service guide.</a><br /><br /><a href=\"#pdf\">DOWNLOAD</a></strong></strong>
-              </strong>
-          </p>
-          <p><strong><a href=\"https://www.belighted.com/case-studies/dokeos-moves-its-software-to-saas-model?hsLang=en\">Dokeos reduced their hosting costs by 75% after switching to a softwareas a service model</a></strong>.
-              <br />
-              <br />Other key advantages they gained included the following:</p>
-          <ul>
-              <li>Simplifying their offering to provide for long-term scalability</li>
-              <li>Improving the user experience</li>
-              <li>Differentiating with smart reporting that capitalized on industry experience</li>
-              <li>Reducing other maintenance and support costs.</li>
-          </ul>
-          <p>If you are intrigued if their story might resonate with your company, read the <a href=\ "https://www.belighted.com/case-studies/dokeos-moves-its-software-to-saas-model?hsLang=en\">business case</a> we did about them and how we helped them in their journey from outdated software to a state-of-the-art SaaS loved by their users. Here is what you can expect of the business case:</p>
+          <h3>What is the process to build a great SaaS product?</h3>
           <p>
-              <br />
-              <a href=\ "https://www.belighted.com/case-studies/dokeos-moves-its-software-to-saas-model?hsLang=en\"></a>
-          </p>conclusion
-          <h4>Chapter 7:<br />Conclusion</h4>
-          <p>Ready to make the leap and switch to a SaaS model ? <a href=\ "https://www.belighted.com/product-development-consultation?hsLang=en\">We would be happy to discuss it with you.</a></p>
-          <p> </p>
-          <p>Want to learn more about SaaS and why it could be the right solution for your company?</p>
-          <p><strong><strong><strong><a href=\"#pdf\">Download our Ultimate Software-as-a-Service guide.</a><br /><br /><a href=\"#pdf\">DOWNLOAD</a></strong></strong>
-              </strong>
+            Building a SaaS product is similar to building any other product or making
+            other business decisions. Of course, you will need to tailor the process to
+            the business model.
           </p>
-          <p>SaaS models aren’t gaining popularity — to the degree that few people ask what is SaaS — because of smart marketing or because developers are forcing them on clients. They’re gaining the majority of market share of business applications because they provide substantial benefits for both the developers and users. While switching to a SaaS model may require an overhaul of your business strategy, there is a strong likelihood that the switch will vastly increase your odds of long-term success.</p>
+          <h4>1. Determine if It’s Right For You</h4>
+          <p>
+            Review the above advantages along with the scenarios where a SaaS model may
+            not work. Once you’ve convinced yourself, be sure to get total buy-in from
+            your team. This includes not just getting them to agree with you but having
+            them raise any concerns for discussion with the entire team so that you can
+            move forward without any lingering doubts.
+          </p>
+          <h4>2. Design a Roadmap and Strategy for the Switch</h4>
+          <p>
+            There are three key questions that you should ask yourself when you begin to
+            build a SaaS product. First, how will the new model create a better customer
+            experience? Second, how do you measure success by changing to SaaS focused
+            metrics that emphasize retention and longevity over the one-time sale? Third,
+            how do your product requirements change to answer these questions and help you
+            to gain market share?
+          </p>
+          <h4>3. Design and Development</h4>
+          <p>
+            Once you’ve established an overall strategy, you should design a product that
+            meets these needs. Remember that it will likely need to have broad enough
+            appeal to attract a number of clients while also having enough customizability
+            that clients consider it the best option for their needs.
+          </p>
+          <p>
+            After you’re satisfied with the design, begin the development process but
+            don’t be afraid to make changes if you encounter new challenges or come up
+            with new ideas once you’re putting your plan into action.
+          </p>
+          <h4>4. Beta Testing</h4>
+          <p>
+            No software is complete without beta testing. You simply can’t anticipate
+            every customer need and usage pattern. You will typically start with a small
+            group of customers at a free or greatly reduced price as compensation for
+            their feedback and time spent dealing with any unexpected problems. Once you
+            are satisfied with the results, you can bring in new customers at your planned
+            price point.
+          </p>
+          <h4>5. Customer Onboarding</h4>
+          <p>
+            Customer onboarding is a critical moment in the SaaS business cycle. A
+            customer’s early experiences will determine if they will stick with your
+            product or begin shopping for a new option.
+          </p>
+          <p>
+            Onboarding includes both initial training and ongoing support. It should last
+            until clients are fully comfortable with your product and have had a chance to
+            use all of the features that they plan to use.
+          </p>
+          <h4>6. Continue to Deliver Value and Market</h4>
+          <p>
+            Even though SaaS provides recurring revenue, it’s important to remember that
+            that revenue isn’t guaranteed. You must continue to deliver value to your
+            clients on an ongoing basis even and especially when their needs change in
+            order to keep them as subscribers. Since some clients will still inevitably
+            move on to new business areas or have changing needs that you can’t reasonably
+            meet, you should also continue marketing to keep an incoming pipeline of
+            clients.
+          </p>
+      - title: SaaS Pricing
+        slug: Saas-pricing
+        intro: How much to make my app ?
+        body: >
+          <h3>How much does it cost to build a SaaS product?</h3>
+          <p>
+            Building a SaaS product is a never-ending cycle of design, strategy,
+            development, and back to design based on client feedback and new needs. The
+            only certainty is uncertainty as to how much of the cycle you need to repeat
+            in incremental development based on customer demand as well as your own
+            internal testing for bugs and other problems.
+          </p>
+          <h4>Direct Development Costs</h4>
+          <p>
+            Long-term development costs typically run €10-20k per month. You can obtain a
+            minimum viable product after just two to three months, but you should not
+            consider this a finished product. After release, you should obtain feedback
+            and continue to make improvements until you're satisfied with the finished
+            product.
+          </p>
+          <p>
+            If you stick with the minimum viable product, it will be difficult to carve
+            out sustainable market share in all but the least competitive markets, as
+            competitors will find it easy to create a better alternative to your product.
+            Keep this in mind when you're choosing how to emphasize costs, time, and scope
+            when deciding on your budget.
+          </p>
+          <h4>Indirect Costs</h4>
+          <p>
+            Customers also need to consider secondary costs such as hosting and support.
+            Hosting is relatively inconsequential in today’s market but should still
+            receive a line item in the project budget. Support may be handled by the
+            customer’s existing staff, but their time should be allocated to the project
+            in order to properly track total costs and set profitable pricing.
+          </p>
+          <p>
+            Finally, it may not be in your or your client's best interest to truly handle
+            every single feature. For example, you may want to integrate with existing
+            user authentication, billing, account management, or communication services.
+            These ongoing costs will also have to be built into your pricing model.
+          </p>
+          <h4>Marketing Costs</h4>
+          <p>
+            Client acquisition cost is one of the biggest expenses in software sales. You
+            can reduce marketing costs to some degree by establishing yourself as the best
+            in your niche so that customers don't leave for competitors. However, since
+            you will likely have other competitors claiming to be the best, you will need
+            to invest in convincing customers to choose you if you wish to expand your
+            customer base.
+          </p>
+          <p>
+            Consider the&nbsp;<a
+              href="https://www.forbes.com/sites/forbestechcouncil/2018/08/28/the-costs-of-making-a-saas-product-and-is-it-worth-it/#5c1f9eab39cc"
+              rel="noopener noreferrer nofollow"
+              ><strong>example of Monday</strong></a
+            >, a time tracking and project management app that has raised €74.1 million in
+            total investor contributions. It didn’t raise this funding because it costs
+            anywhere near that much to make a viable time tracking and project management
+            tool. Instead, it spent what it needed to create the best possible tool and
+            then put the bulk of its funding into marketing.
+          </p>
+          <p>
+            The vast majority of small to mid-sized businesses don't need to invest
+            millions in marketing to achieve profitability, but you will need a plan to
+            make customers aware of your product and what it can do for them.
+          </p>
+      - title: SaaS examples
+        slug: saas-examples
+        intro: Click on the image to learn more about Dokeos story and how we turned their old software into a successful SaaS business.
+        body: >
+          <h2>Story of a company we helped switch to SaaS</h2>
+          <p>
+            <a
+              href="https://www.belighted.com/case-studies/dokeos-moves-its-software-to-saas-model?hsLang=en"
+              rel="noopener noreferrer nofollow"
+              ><strong
+                >Dokeos reduced their hosting costs by 75% after switching to a softwareas
+                a service model</strong
+              ></a
+            >. <br /><br />Other key advantages they gained included the following:
+          </p>
+          <ul>
+            <li>
+              <p>Simplifying their offering to provide for long-term scalability</p>
+            </li>
+            <li><p>Improving the user experience</p></li>
+            <li>
+              <p>
+                Differentiating with smart reporting that capitalized on industry
+                experience
+              </p>
+            </li>
+            <li><p>Reducing other maintenance and support costs.</p></li>
+          </ul>
+          <p>
+            If you are intrigued if their story might resonate with your company, read the
+            <a
+              href="https://www.belighted.com/case-studies/dokeos-moves-its-software-to-saas-model?hsLang=en"
+              rel="noopener noreferrer nofollow"
+              >business case</a
+            >
+            we did about them and how we helped them in their journey from outdated
+            software to a state-of-the-art SaaS loved by their users. Here is what you can
+            expect of the business case:
+          </p>
+          <img alt="dokeos cs" src="images/resources/dokeos_cs_page.webp" />
+      - title: Conclusion
+        slug: conclusion
+        intro: Ready to make the leap and switch to a SaaS model ? <a href="/services/product-development-consultation">We would be happy to discuss it with you.</a>
+        body: >
+          <h3>Conclusion</h3>
+          <p>
+            SaaS models aren’t gaining popularity — to the degree that few people ask what is SaaS — because of smart marketing or because developers are forcing them on clients. They’re gaining the majority of market share of business applications because they provide substantial benefits for both the developers and users. While switching to a SaaS model may require an overhaul of your business strategy, there is a strong likelihood that the switch will vastly increase your odds of long-term success.
+          </p>
   - id: "52afc8d5-1ac9-4284-a6c8-0bfbcafd4b76"
     type: "default"
     image: null
     title: null
     subtitle: "Download the E-guide"
-    body: "What is SaaS? The Ultimate Guide to Software as a Service<p>Are you unsure of what SaaS is? <strong>This ultimate guide to Software as a Service</strong> <strong>answers ALL the questions you have about SaaS.</strong><br /><br />A SaaS model may not be right for your business - <strong>this guide explains you when you should be using SaaS AND when you shouldn’t.</strong><strong> </strong><br /><br />There is no one size fits all when it comes to building a SaaS product, but <strong>this guide fills you in on everything you need to consider before you get started</strong>.</p><p> </p><p></p>We respect your <a href=\"https://www.belighted.com/privacy-policy?hsLang=en\" target=\"_blank\">privacy</a>."
+    body: 'What is SaaS? The Ultimate Guide to Software as a Service<p>Are you unsure of what SaaS is? <strong>This ultimate guide to Software as a Service</strong> <strong>answers ALL the questions you have about SaaS.</strong><br /><br />A SaaS model may not be right for your business - <strong>this guide explains you when you should be using SaaS AND when you shouldn’t.</strong><strong> </strong><br /><br />There is no one size fits all when it comes to building a SaaS product, but <strong>this guide fills you in on everything you need to consider before you get started</strong>.</p><p> </p><p></p>We respect your <a href="https://www.belighted.com/privacy-policy?hsLang=en" target="_blank">privacy</a>.'
