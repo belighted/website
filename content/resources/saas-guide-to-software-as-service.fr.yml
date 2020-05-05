@@ -1,5 +1,6 @@
 lang: "fr"
 type: "chapters"
+order: 2
 slug: "saas-guide-to-software-as-service"
 originalPath: "https://www.belighted.com/fr/qu-est-ce-que-le-saas-guide"
 title: "Qu'est-ce que le SaaS ? Guide de référencedu logiciel en tant que service"

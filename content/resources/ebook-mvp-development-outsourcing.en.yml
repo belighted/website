@@ -3,6 +3,7 @@ type: "resources"
 slug: "ebook-mvp-development-outsourcing"
 originalPath: "https://www.belighted.com/resources/ebook-mvp-development-outsourcing"
 title: "Why Cutting-Edge Startups Outsource MVP Development"
+order: 3
 aside:
   formId: b7e184b3-302a-4d5f-8392-0669402d45d9
   title: Download your Software Power Checklist today !
