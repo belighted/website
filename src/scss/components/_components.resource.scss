@@ -1,0 +1,10 @@
+.c-resource{
+  &.software-power-checklist{
+    display: grid;
+    grid-template-columns: 3fr 1fr minmax(25%, 1fr);
+    grid-gap: $inuit-global-spacing-unit;
+  }
+  &__form{
+    overflow: hidden;
+  }
+}

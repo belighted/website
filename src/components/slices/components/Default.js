@@ -4,7 +4,7 @@ import CtaButton from "../../buttons/CtaButton";
 
 const Default = ({ title, subtitle, image, body, cta }) => {
   return (
-    <section className="c-section">
+    <section className="c-slice">
       <div className="o-wrapper">
         {title && (
           <h2
