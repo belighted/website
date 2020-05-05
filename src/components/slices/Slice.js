@@ -8,6 +8,7 @@ import classNames from "classnames";
 import Testimonials from "./components/Testimonials";
 import Split from "./components/Split";
 import Chapters from "./components/Chapters";
+import Referal from "./components/Referal";
 
 const slices = new Map();
 slices.set("hero", Hero);
@@ -17,6 +18,7 @@ slices.set("split", Split);
 slices.set("chapters", Chapters);
 slices.set("strategy-workshop-approved", StrategyWorkshopApproved);
 slices.set("testimonials", Testimonials);
+slices.set("referal", Referal);
 
 const Slice = props => {
   const Component = slices.get(props.type) || Default;

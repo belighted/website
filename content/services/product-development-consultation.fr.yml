@@ -41,7 +41,5 @@ slices:
            <p>Nous avons développé cette consultation sur le développement de produits pour aider les créateurs, les CEO et les éditeurs de produits à évaluer les processus et les capacités de développement de produits au sein de leur entreprise. Notre évaluation gratuite vous permettra de pondérer les différents aspects du développement de produit, comme la stratégie, la définition des processus, la gestion du portefeuille, les ventes et la rigueur, puis de mesurer votre efficacité globale.</p>"
   - id: "8cbb8077-0bde-4664-b1f3-7621604debc0"
     type: "trusted"
-    image: null
-    title: null
-    subtitle: null
-    body: null
+  - id: "8cbb8077-0bde-4664-b1f3-7621604debc0a"
+    type: "referal"
