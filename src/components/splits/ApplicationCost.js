@@ -24,11 +24,13 @@ const ApplicationCost = () => {
       }
     }
   `);
+
   const lang = useContext(I18nContext);
   const {
     body,
     frontmatter: { cta, title }
   } = nodes.find(n => n.frontmatter.lang === lang);
+
   return (
     <div className="c-section c-section--light-bg">
       <div className="o-wrapper">
