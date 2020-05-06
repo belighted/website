@@ -5,7 +5,7 @@ const StrategyWorkshopApproved = ({ title, list }) => {
   return (
     <div className="o-wrapper">
       <h1
-        className="c-heading c-heading--1"
+        className="c-heading c-heading--3"
         dangerouslySetInnerHTML={{ __html: title }}
       />
       <ul>

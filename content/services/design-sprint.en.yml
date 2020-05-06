@@ -9,35 +9,48 @@ slices:
     type: "default"
     image: null
     title: "Design Sprint"
-    subtitle: null
-    body: "We offer an innovative design sprint service: an intense five-day project where we focus on turning your idea into a <strong>clickable prototype - in just one week.</strong>"
+    body: null
+    subtitle: "We offer an innovative design sprint service: an intense five-day project where we focus on turning your idea into a <strong>clickable prototype - in just one week.</strong>"
+    cta:
+      label: Get in touch
+      link: /services/product-development-consultation
   - id: "56726c18-83c9-42fa-91d9-0ecbbda834f6"
-    type: "list"
+    type: "approved-by"
     image: null
     title: "Our Design Sprint has been tested & approved by :"
     subtitle: null
     body: null
+    list:
+      - neveo
+      - deecide
+      - seraphin
+      - dokeos
+      - rights-up
   - id: "d42afbe4-eb34-4a18-871a-b096b6ec2f57"
     type: "default"
-    image: null
+    image: ../images/services/design-sprint_1.jpg
     title: "Why a design sprint ?"
-    subtitle: "From idea to reality"
-    body: "<p>With a product roadmap in your hands thanks to our Strategy Workshop, it's now time to design your product, prototype it and test it. We will build it together in only one week.</p><p>This is an essential first step towards developing the finished version of your product. Our design sprint service is structured with the non-technical entrepreneur in mind. </p><p>Get Started</p><p>Really Fast<p>Working with our expert team of product strategists and designers, you will explore the problem underpinning your product idea, to ensure your initial prototype is aligned with the problem you're trying to solve for your future customers.</p>"
+    subtitle: "With a product roadmap in your hands thanks to our Strategy Workshop, it's now time to design your product, prototype it and test it. We will build it together in only one week."
+    body: >
+      <h3>From idea to reality</h3>
+      <p>This is an essential first step towards developing the finished version of your product. Our design sprint service is structured with the non-technical entrepreneur in mind.</p>
+      <h3>Challenge your ideas</h3>
+      <p>Working with our expert team of product strategists and designers, you will explore the problem underpinning your product idea, to ensure your initial prototype is aligned with the problem you're trying to solve for your future customers.</p>
   - id: "efde35b4-6e9e-48ba-ac98-39866f392416"
-    type: "title"
+    type: "split"
     image: null
     title: "Get your prototype in 5 days."
     subtitle: null
     body: ""
   - id: "e1940b06-9646-40e5-ba0f-8696ecb51820"
     type: "default"
-    image: null
+    image: "../images/services/design-sprint_2.png"
     title: "Why not jumping straight into coding ?"
     subtitle: null
     body: "<p>We have developed our <strong>design sprint to go from product idea to prototype to testing it with real users</strong> in just five days. At the end of the week you can already expect your non-functional clickable prototype ready for further validation with your target market to guide the development of your future application.</p>"
   - id: "8624fd3e-d8c9-4b59-bf6f-69d637b45a20"
     type: "default"
-    image: null
+    image: "../images/services/design-sprint_3.jpg"
     title: "Is it for you? Expect..."
     subtitle: null
     body: "<ul><li>User-focused design and development process.</li><li>Accelerated early product development, reducing the risk of your competitors beating you to market.</li><li>Building a clickable prototype in just 5 days.</li><li>Maximising your opportunity for learning and idea validation by getting your prototype tested by real users.</li><li>Shaping the next stage of your product development, based on the feedback you get on your prototype.</li></ul>"
@@ -46,46 +59,48 @@ slices:
     image: null
     title: "Good to know! "
     subtitle: null
-    body: '<p>As we will build your prototype <strong>together</strong>, we expect from our clients to attend the first 3 days. If possible, attending the User Testing on Friday is recommended. If one person of your company can only attend one day, it should be on Monday when we tackle your problem and how we could solve it. <br /><br /><strong>The only prerequisite is to own a product roadmap.</strong> Otherwise, we can''t jump into design yet. If you don''t have one yet, don''t worry, we can make one for you in what we call a <a href="/strategy-workshop?hsLang=en">strategy workshop</a>.</p>'
+    body: >
+      <p>As we will build your prototype <strong>together</strong>, we expect from our clients to attend the first 3 days. If possible, attending the User Testing on Friday is recommended. If one person of your company can only attend one day, it should be on Monday when we tackle your problem and how we could solve it. <br /><br /><strong>The only prerequisite is to own a product roadmap.</strong> Otherwise, we can''t jump into design yet. If you don''t have one yet, don''t worry, we can make one for you in what we call a <a href="/services/strategy-workshop">strategy workshop</a>.</p>
   - id: "9de1a421-bcee-4fad-a520-c2c768cabbcc"
-    type: "default"
-    image: null
+    type: "process"
+    image: "../images/services/design-sprint_4.png"
     title: "Our process"
     subtitle: null
     body: "<p>Our <strong>5-day</strong> design sprints follow our <strong>own unique</strong> process, drawing on the <strong>methodology</strong> developed by Google Ventures and combining it with our experience of working with hundreds of software innovators. </p>"
-  - id: "a8ff68ab-b880-4285-8e2f-400c0672bf79"
-    type: "default"
-    image: null
-    title: "Monday"
-    subtitle: null
-    body: "<p><strong>Understanding &amp; Mapping the Problem.</strong></p><p>Our first objective is to truly understand the problem your idea will solve for its users. This first day is essential for helping us understand your customers' needs and ensure you're looking to solve a real problem for users.</p>"
-  - id: "85029ef2-795c-489b-91cc-fb964d204549"
-    type: "default"
-    image: null
-    title: "Tuesday"
-    subtitle: null
-    body: "<p><strong>Brainstorming Solutions by Sketching them on Paper.</strong></p><p>You may think you've come up with a fantastic solution to your customers' problems - but will it really work, in practice? On day two we widen our focus to brainstorm as many potential solutions as possible to the problem your innovation is looking to solve.</p>"
-  - id: "5146f7d3-0d8e-47ad-aab1-07a795a01ffe"
-    type: "default"
-    image: null
-    title: "Wednesday"
-    subtitle: null
-    body: "<p><strong>Identifying Core Functionalities &amp; Creating Mockups.</strong></p><p>At this stage, we select the one solution that best solves the problem for your users. From there, we work to identify the core functionality that's required to test out this idea as a viable solution.</p>"
-  - id: "2ca6ef04-c107-40ca-9d7a-a2cc253281e7"
-    type: "default"
-    image: null
-    title: "Thursday"
-    subtitle: null
-    body: "<p><strong>Developing a Clickable Prototype &amp; User Testing Scenarios.</strong></p><p>The fourth day is spent developing a clickable prototype of your software idea. This is where you see your idea really come to life for the first time, and turn from an idea on paper to a real product.</p>"
-  - id: "849ae317-a645-4ceb-a986-6dd88c583fdb"
-    type: "default"
-    image: null
-    title: "Friday"
-    subtitle: null
-    body: "<p><strong>User Testing &amp; Gathering Feedback <br />with our UX Expert.</strong></p><p>On the final day of the design sprint, we get real users to test-out your prototype. This means you start getting real, actionable feedback on your idea, just five days after starting the development process - and will help guide further product development by keeping development aligned with what your users really need from your innovation.</p>"
+    process:
+      - id: "a8ff68ab-b880-4285-8e2f-400c0672bf79"
+        type: "default"
+        image: null
+        title: "Monday"
+        subtitle: null
+        body: "<p><strong>Understanding &amp; Mapping the Problem.</strong></p><p>Our first objective is to truly understand the problem your idea will solve for its users. This first day is essential for helping us understand your customers' needs and ensure you're looking to solve a real problem for users.</p>"
+      - id: "85029ef2-795c-489b-91cc-fb964d204549"
+        type: "default"
+        image: null
+        title: "Tuesday"
+        subtitle: null
+        body: "<p><strong>Brainstorming Solutions by Sketching them on Paper.</strong></p><p>You may think you've come up with a fantastic solution to your customers' problems - but will it really work, in practice? On day two we widen our focus to brainstorm as many potential solutions as possible to the problem your innovation is looking to solve.</p>"
+      - id: "5146f7d3-0d8e-47ad-aab1-07a795a01ffe"
+        type: "default"
+        image: null
+        title: "Wednesday"
+        subtitle: null
+        body: "<p><strong>Identifying Core Functionalities &amp; Creating Mockups.</strong></p><p>At this stage, we select the one solution that best solves the problem for your users. From there, we work to identify the core functionality that's required to test out this idea as a viable solution.</p>"
+      - id: "2ca6ef04-c107-40ca-9d7a-a2cc253281e7"
+        type: "default"
+        image: null
+        title: "Thursday"
+        subtitle: null
+        body: "<p><strong>Developing a Clickable Prototype &amp; User Testing Scenarios.</strong></p><p>The fourth day is spent developing a clickable prototype of your software idea. This is where you see your idea really come to life for the first time, and turn from an idea on paper to a real product.</p>"
+      - id: "849ae317-a645-4ceb-a986-6dd88c583fdb"
+        type: "default"
+        image: null
+        title: "Friday"
+        subtitle: null
+        body: "<p><strong>User Testing &amp; Gathering Feedback <br />with our UX Expert.</strong></p><p>On the final day of the design sprint, we get real users to test-out your prototype. This means you start getting real, actionable feedback on your idea, just five days after starting the development process - and will help guide further product development by keeping development aligned with what your users really need from your innovation.</p>"
   - id: "f4c161c3-1b72-48d7-ab85-887a186bc245"
     type: "default"
-    image: null
+    image: ../images/services/design-sprint_5.png
     title: "The result is a non-functional clickable prototype "
     subtitle: null
     body: "<p>After only five days, you will have a clickable prototype that you can share with your target customers, to begin getting valuable feedback on your idea and start testing out the assumptions behind your innovation.</p>"
@@ -95,25 +110,15 @@ slices:
     title: "Guaranteed Value"
     subtitle: null
     body: '<p>Everything we''ll share in our Design Sprint package is designed to offer standalone value to you, regardless of whether or not you decide to continue to work with us.<br /><br />Are you ready to kick-start product development with our 5-day design sprint? <strong>Click below to book your 20-Minute risk-free consultation call.</strong><br /><br /><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/e94dc39d-84e8-4895-8f9b-f7e7bced2f5e"></a><br /></p>'
+    cta:
+      link: /services/product-development-consultation
+      label: Get in touch
   - id: "8fb4593f-22a9-4bac-a876-13e4d41a5f22"
     type: "testimonials"
     image: null
     title: "Customer Stories"
     subtitle: null
     body: "Hundreds of businesses trust us to create their app's prototype."
-    testimonials:
-      - quote: “Belighted has enabled us to reduce our time to market on a few projects where we needed extra help. One of their developers supported by their product manager came and only 3 weeks later one project was already done. No time was wasted on onboarding, they were rapidly operational and a part of our agile scrum environment. Moreover, the value delivered in terms of product &amp; software development expertise was very much appreciated by our technical team.”
-        author: Olivier Simonis
-        role: CEO
-        company: Qualifio
-      - quote: “It's a real pleasure to work with Belighted. They are focused on delivering features with business value and they like to get stuff done. This vision allowed us to launch our products with just a couple of months of development and help us to get user feedback”
-        author: Antoine De Beys
-        role: Co-founder
-        company: DeeCide
-      - quote: “Product development best practices are evolving at such a fast pace that it was difficult for me to make decisions related to the software product and the technical skills needed. Belighted's advice brought me confidence and gave me clear steps that helped me maximize my chances of success.”<p><strong>Vincent Leroy</strong><br />CEO, Neveo</p>“We wanted to build a new version of our learning management software, and Belighted convinced us to do a design sprint together before jumping into development itself. This helped us make much more informed decisions on what we needed, and how best to do it. In the end, it allowed us to better prioritise our project, and prevented us from going in the wrong direction.”<p><strong>Bertrand De Praetere</strong><br />COO, Dokeos</p>“Working together, we were able to rapidly prototype and deploy a world-first insurance check-up algorithm. From the initial conceptualisation until the first live trials by users, it took us a rapid 3 months of close collaboration. Today Seraphin is still successfully using the same healthy technical foundations laid by Belighted.”
-        author: Xavier Lombard
-        role: CEO
-        company: Seraphin
   - id: "60ee717d-034c-438f-8f9e-edd5a2eba57c"
     type: "links"
     image: null
@@ -121,6 +126,6 @@ slices:
     subtitle: "Good to read."
     body: null
     list:
-      - "/blog/ruby-on-rails"
-      - "/blog/why-strategy-workshop"
-      - "/blog/product-development-methodology"
+      - "ruby-on-rails"
+      - "why-strategy-workshop"
+      - "product-development-methodology"

@@ -9,6 +9,8 @@ import Testimonials from "./components/Testimonials";
 import Split from "./components/Split";
 import Chapters from "./components/Chapters";
 import Referal from "./components/Referal";
+import Process from "./components/Process";
+import Links from "./components/Links";
 
 const slices = new Map();
 slices.set("hero", Hero);
@@ -16,8 +18,11 @@ slices.set("trusted", LeadingBrands);
 slices.set("cols", Cols);
 slices.set("split", Split);
 slices.set("chapters", Chapters);
-slices.set("strategy-workshop-approved", StrategyWorkshopApproved);
+slices.set("process", Process);
+slices.set("approved-by", StrategyWorkshopApproved);
 slices.set("testimonials", Testimonials);
+slices.set("stories", Testimonials);
+slices.set("links", Links);
 slices.set("referal", Referal);
 
 const Slice = props => {

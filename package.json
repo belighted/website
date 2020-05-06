@@ -17,6 +17,7 @@
     "forestry-preview": "gatsby develop -p 8080 -H 0.0.0.0"
   },
   "dependencies": {
+    "@farbenmeer/react-spring-slider": "^1.1.1",
     "@mdx-js/mdx": "^1.6.1",
     "@mdx-js/react": "^1.6.1",
     "axios": "^0.19.2",

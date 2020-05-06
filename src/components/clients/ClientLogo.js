@@ -17,7 +17,6 @@ const ClientLogo = ({ slug, size = "medium" }) => {
     }
   `);
   const node = clients.find(client => client.value === slug);
-  console.log(node);
   if (node) {
     return (
       <span

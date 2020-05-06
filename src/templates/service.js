@@ -1,29 +1,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
-import LinkToService from "../components/services/LinkToService";
 import Slices from "../components/slices/Slices";
-import LeadingBrands from "../components/splits/LeadingBrands";
-
-const RelatedCategory = ({ category, service }) => (
-  <section className="c-section">
-    <div className="o-wrapper">
-      <h3 className="c-section__header c-h3">
-        Discover our other services for {category.title}
-      </h3>
-      <ul>
-        {category.services
-          .filter(slug => slug !== service.slug)
-          .map(slug => (
-            <li key={slug}>
-              <LinkToService slug={slug}>{slug}</LinkToService>
-            </li>
-          ))}
-      </ul>
-    </div>
-    <LeadingBrands />
-  </section>
-);
 
 const ServicePage = ({
   data: {
@@ -33,18 +11,12 @@ const ServicePage = ({
   },
   pageContext
 }) => (
-  <Layout context={pageContext} page={`/services/${service.slug}`} title={service.title}>
-    <article>
-      {service.slices && <Slices slices={service.slices} />}
-
-      {category && (
-        <RelatedCategory
-          category={category}
-          services={services}
-          service={service}
-        />
-      )}
-    </article>
+  <Layout
+    context={pageContext}
+    page={`/services/${service.slug}`}
+    title={service.title}
+  >
+    <article>{service.slices && <Slices slices={service.slices} />}</article>
   </Layout>
 );
 
@@ -67,13 +39,18 @@ export const query = graphql`
             }
           }
         }
+        process {
+          id
+          title
+          body
+        }
         columns {
           title
           body
         }
         cta {
-          link
-          label
+            link
+            label
         }
       }
     }

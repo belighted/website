@@ -3,6 +3,7 @@ import React from "react";
 //import Img from "gatsby-image";
 import Button from "../../buttons/Button";
 import LocalizedLink from "../../links/LocalizedLink";
+import Slider from "@farbenmeer/react-spring-slider/dist";
 
 const HomeHero = ({ slides }) => {
   /*
@@ -32,24 +33,26 @@ const HomeHero = ({ slides }) => {
   `);
   */
   return (
-    <div className="o-wrapper">
-      {slides.map(slide => (
-        <div className="l-home-hero" key={slide.title}>
-          <div className="l-home-hero__text">
-            <h1 className="c-heading c-heading--1 c-heading--title">
-              {slide.title}
-            </h1>
-            <p className={"c-body c-body--3"}>{slide.body}</p>
-            {slide.buttons.map(button => (
-              <p key={button.title}>
-                <LocalizedLink to={button.link}>
-                  <Button modifier={"primary"}>{button.title}</Button>
-                </LocalizedLink>
-              </p>
-            ))}
+    <div style={{ height: "60vh" }} className="o-wrapper">
+      <Slider auto={3000}>
+        {slides.map(slide => (
+          <div className="l-home-hero" key={slide.title}>
+            <div className="l-home-hero__text">
+              <h1 className="c-heading c-heading--1 c-heading--title">
+                {slide.title}
+              </h1>
+              <p className={"c-body c-body--3"}>{slide.body}</p>
+              {slide.buttons.map(button => (
+                <p key={button.title}>
+                  <LocalizedLink to={button.link}>
+                    <Button modifier={"primary"}>{button.title}</Button>
+                  </LocalizedLink>
+                </p>
+              ))}
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </Slider>
     </div>
   );
 };
