@@ -25,7 +25,6 @@ const Footer = () => {
   `);
 
   const footer = footers.find(l => l.lang === lang);
-
   return (
     <div className="c-footer-nav u-padding-vertical-large u-padding-horizontal">
       <div className="o-wrapper">
@@ -46,6 +45,11 @@ const Footer = () => {
           <div className="l-footer__form">
             <div className="o-box o-box--light-bg">
               <div>
+                <h2 className="c-heading c-heading--2">
+                  {lang === "fr"
+                    ? "Parlons de votre projet"
+                    : "Let's talk about your project"}
+                </h2>
                 <LocalizedHubspotForm
                   en={"e33b8c5c-e1a1-472e-b521-0d87274e106f"}
                   fr={"b7dc0d8b-fcf2-4d60-befa-0f30aaf1701d"}
