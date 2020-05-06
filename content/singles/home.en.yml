@@ -43,6 +43,7 @@ slides:
         modifier: outline-default
 cases:
   - slug: rights-up
+    link: clients
     title: "Rights’Up gets off the ground with Belighted"
     body: "Every industry has its challenges. The music industry is known for its legal complexities. Rights’Up is a contract management app that is intended to help small record labels collect and distribute royalties. It uses computation-intensive algorithms and processes to compare contracts with sales data from various sources. Belighted is working with Rights’Up on a plan for incremental, efficient development:"
     results:

@@ -3,6 +3,7 @@ import { graphql } from "gatsby";
 import ClientLogo from "../../../clients/ClientLogo";
 import LinkToCase from "../../../cases/LinkToCase";
 import { I18nContext } from "../../../i18n/I18n";
+import LocalizedLink from "../../../links/LocalizedLink";
 
 const Case = ({ node }) => {
   const lang = useContext(I18nContext);
@@ -18,11 +19,20 @@ const Case = ({ node }) => {
           dangerouslySetInnerHTML={{ __html: node.body }}
         />
         <div className="u-margin-top">
-          <LinkToCase slug={node.slug}>
-            {lang === "en"
-              ? "Read full case study"
-              : "Lire l'étude de cas complète"}
-          </LinkToCase>
+          {!node.link && (
+            <LinkToCase slug={node.slug}>
+              {lang === "en"
+                ? "Read full case study"
+                : "Lire l'étude de cas complète"}
+            </LinkToCase>
+          )}
+          {node.link && (
+            <LocalizedLink to={node.link}>
+              {lang === "en"
+                ? "Read full case study"
+                : "Lire l'étude de cas complète"}
+            </LocalizedLink>
+          )}
         </div>
       </div>
       <div>
@@ -45,6 +55,7 @@ export const HomeCaseItem = graphql`
     slug
     title
     results
+    link
     body
   }
 `;
