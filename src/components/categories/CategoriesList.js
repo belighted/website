@@ -21,7 +21,7 @@ const CategoriesList = ({ showServices }) => {
     }
   `);
   return (
-    <ul>
+    <ul className="o-list-bare l-grid l-grid--2cols@medium">
       {categories
         .filter(c => c.lang === lang)
         .map(node => (

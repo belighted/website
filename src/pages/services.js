@@ -7,7 +7,7 @@ import CategoriesList from "../components/categories/CategoriesList";
 import TechnologiesList from "../components/partials/technologies/TechnologiesList";
 import HeroServices from "../components/services/hero/HeroServices";
 import LeadingBrands from "../components/splits/LeadingBrands";
-import HubspotForm from "../components/forms/HubspotForm";
+//import HubspotForm from "../components/forms/HubspotForm";
 import CustomConsultation from "../components/splits/CustomConsultation";
 import TestimonialsList from "../components/testimonials/TestimonialsList";
 
@@ -28,7 +28,6 @@ const ServicesPage = ({
       <LeadingBrands />
       <Section
         section={findSection(sections, "categories")}
-        modifier={"light-bg"}
         withoutEyebrow={true}
       >
         <CategoriesList showServices />
@@ -41,11 +40,6 @@ const ServicesPage = ({
         <TestimonialsList testimonials={testimonials} />
       </Section>
 
-      <section className="c-section">
-        <div className="o-wrapper">
-          <HubspotForm formId={formId} />
-        </div>
-      </section>
       <CustomConsultation customConsultation={customConsultation} />
     </Layout>
   );
