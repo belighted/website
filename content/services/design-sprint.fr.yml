@@ -5,59 +5,139 @@ originalPath: "https://www.belighted.com/design-sprint"
 title: "Design Sprint"
 layout: "design-sprint"
 slices:
-  - id: "ea3cf78c-4ebc-457f-97e7-95d3a4708712"
+  - id: "bd871e15-90e0-433c-98b9-eb43c2f2a815"
+    type: "default"
+    image: null
     title: "Design Sprint"
-    type: "hero"
-    body: '<p>Nous proposons un service de Design Sprint innovant : un travail intensif sur cinq jours où nous nous concentrons sur la transformation de votre idée en un <strong>prototype cliquable, en seulement une semaine !</strong></p><a href="https://cta-redirect.hubspot.com/cta/redirect/1684659/a27ad2a1-bec2-4ce0-ab2d-1d83492c6d50"></a>'
-  - id: "f6ba1c83-6df2-4e51-bf01-d89868f16e06"
-    type: "cols"
-    columns:
-      - body: "<h2>Pourquoi un Design Sprint ?</h2><p>Vous disposez d'une roadmap produit grâce à notre workshop sur la stratégie, il est temps de passer au design, au prototypage et au test de votre produit. Nous concevrons cela ensemble en une semaine seulement.</p><h3>De l'idée à la réalité</h3><p>Cette première étape est essentielle pour développer la version finale de votre produit. Notre service de Design Sprint est conçu pour l'entrepreneur non technique.</p>                                                                                                            <i></i>                                                    Get Started                                                    Really Fast                                            <h3>Exposez vos idées</h3><p>En travaillant avec nos experts en stratégie et en design de produits, vous explorerez la problématique de votre idée de produit et veillerez à ce que votre prototype initial soit bien en phase avec les besoins de vos futurs clients.</p>"
-  - id: "f33a42f2-0f4e-4283-89f0-890af092bc7c"
-    type: "cols"
-    columns:
-      - body: "<h2>Concevez votre prototype en 5 jours.</h2>"
-  - id: "3a3e9c16-86f5-42da-9f3c-d42afcfb5e44"
-    type: "cols"
-    columns:
-      - body: "<h2>Pourquoi ne pas plonger directement dans le code ?</h2><p>Nous avons développé notre <strong>Design Sprint pour passer de l'idée d'un produit à un prototype à tester avec de vrais utilisateurs </strong>en seulement cinq jours. À la fin de la semaine, vous obtenez un prototype cliquable non fonctionnel prêt à être validé par votre marché cible afin de guider le développement de votre future application.</p>"
-  - id: "040715c5-38e3-42de-9007-7f7c9783446d"
-    type: "cols"
-    columns:
-      - body: "<h2>Est-ce pour vous ? Attendez-vous à....</h2><ul><li>Un processus de design et de développement axé sur l'utilisateur.</li><li>Une accélération du développement initial de votre produit, réduisant ainsi le risque que vos concurrents vous devancent sur le marché.</li><li>Concevoir un prototype cliquable en seulement 5 jours.</li><li>Augmenter vos possibilités d'apprentissage et de validation d'idée en faisant tester votre prototype par de vrais utilisateurs.</li><li>Préparer la prochaine étape du développement de votre produit, en fonction du feedback reçu pour votre prototype.</li></ul>"
-  - id: "df678bf0-adf6-4ec6-8ee7-2c2f65d68bce"
-    type: "cols"
-    columns:
-      - body: '<h2>Bon à savoir !</h2><p>Puisque nous concevons votre prototype <strong>ensemble</strong>, nous comptons sur la participation de nos clients durant les 3 premiers jours. Dans la mesure du possible, il est recommandé d''assister au test d''utilisateurs le vendredi. Si une personne de votre entreprise ne peut participer qu''une seule journée, ce devrait être le lundi lorsque nous nous attaquons à votre problématique et à la façon de la résoudre.<br /><br /><strong>La seule condition préalable est de disposer d''une roadmap produit. </strong>Faute de quoi, nous ne pourrons pas encore passer au design. Si vous ne l''avez pas encore, rassurez-vous, nous pouvons vous aider en organisant ce que nous appelons un <a href="/strategy-workshop?hsLang=en&amp;__hstc=753710.7b666bb0077e8da0c413fd9a7208705f.1562731121181.1562731121181.1562731121181.1&amp;__hssc=753710.1.1562731121181&amp;__hsfp=1976050658">Strategy Workshop</a>.</p>'
-  - id: "04d31d89-9e20-46db-9da1-e4162ec33e02"
-    type: "cols"
-    columns:
-      - body: "<h2>Notre processus</h2><p>Nos Design Sprints de <strong>5 jours </strong>suivent notre <strong>processus unique </strong>qui s'appuie sur la <strong>méthodologie </strong>développée par Google Ventures combinée à notre expérience avec des centaines d'innovateurs logiciels.</p>"
-  - id: "753b6725-5bcd-4e8e-b7d2-efe86fc9834f"
-    type: "cols"
-    columns:
-      - body: "<h2>Lundi</h2><p><strong>Comprendre et schématiser le problème.</strong></p><p>Notre premier objectif est de bien comprendre le problème que votre idée peut résoudre. Ce premier jour est essentiel pour nous aider à cerner les attentes de vos clients et veiller à ce que votre proposition soit bien en phase avec leurs besoins.</p>"
-  - id: "d24c69fa-063b-4ea9-b0f6-28d017400917"
-    type: "cols"
-    columns:
-      - body: "<h2>Mardi</h2><p><strong>Brainstormer pour trouver des solutions en les dessinant sur papier.</strong></p><p>Vous pensez peut-être avoir trouvé la solution fantastique aux problèmes de vos clients, mais fonctionnera-t-elle vraiment, en pratique? Le deuxième jour, nous élargissons notre champ de vision pour trouver le plus grand nombre de solutions possibles au problème que votre innovation cherche à résoudre.</p>"
-  - id: "bd7de040-f567-4d5f-b5b4-667fe244a1fa"
-    type: "cols"
-    columns:
-      - body: "<h2>Mercredi</h2><p><strong>Identifier les fonctionnalités de base et créer des maquettes.</strong></p><p>À ce stade, nous retenons la solution qui répond le mieux au problème de vos utilisateurs. Nous cherchons ensuite à identifier les fonctionnalités de base nécessaires pour tester cette idée en tant que solution viable.</p>"
-  - id: "dcd3f979-7ba8-42c2-b664-ead42cda5655"
-    type: "cols"
-    columns:
-      - body: "<h2>Jeudi</h2><p><strong>Développer un prototype cliquable et des scénarios de tests d'utilisateurs.</strong></p><p>Le quatrième jour est consacré au développement du prototype cliquable de votre idée de logiciel. Pour la première fois, vous découvrez votre concept et passez d'une idée sur papier à un produit réel.</p>"
-  - id: "9f737fc6-5a86-47fb-b9b6-b885bd56520f"
-    type: "cols"
-    columns:
-      - body: "<h2>Vendredi</h2><p><strong>Tests des utilisateurs et feedback avec notre expert UX.</strong></p><p>Le dernier jour du Design Sprint, nous faisons tester votre prototype par de vrais utilisateurs. Cela signifie que vous commencez à recevoir un feedback réel et exploitable sur votre idée, seulement cinq jours après le début du processus de développement. Il vous aidera à orienter le développement futur de votre innovation en restant en phase avec les besoins de vos utilisateurs.</p>"
-  - id: "5b9a505a-6662-4616-98ba-9563cb81c0c3"
-    type: "cols"
-    columns:
-      - body: "<h2>Vous obtenez un prototype cliquable non fonctionnel.</h2><p>Après seulement cinq jours, vous disposez d'un prototype cliquable que vous pouvez partager avec vos clients cibles afin d'obtenir un précieux feedback et commencer à valider les idées de votre innovation.</p>"
-  - id: "737aae34-8ad0-4fea-a00d-c28d96a54824"
-    type: "cols"
-    columns:
-      - body: "<h2>La valeur garantie</h2><p>Tout ce que nous partagerons dans notre package de Design Sprint est conçu pour vous offrir de la valeur, que vous décidiez ou non de poursuivre notre collaboration.<br /><br />Êtes-vous prêt à lancer le développement d'un produit avec notre Design Sprint de 5 jours ?<strong>Cliquez sur le bouton ci-dessous pour réserver votre consultation de 20 minutes sans engagement.</strong></p><p></p>"
+    body: null
+    subtitle: "Nous proposons un service de Design Sprint innovant : un travail intensif sur cinq jours où nous nous concentrons sur la transformation de votre idée en un <strong>prototype cliquable, en seulement une semaine !</strong>"
+    cta:
+      label: Get in touch
+      link: /services/product-development-consultation
+  - id: "56726c18-83c9-42fa-91d9-0ecbbda834f6"
+    type: "approved-by"
+    image: null
+    title: "Notre Design Sprint a été testé et approuvé par : "
+    subtitle: null
+    body: null
+    list:
+      - neveo
+      - deecide
+      - seraphin
+      - dokeos
+      - rights-up
+  - id: "d42afbe4-eb34-4a18-871a-b096b6ec2f57"
+    type: "default"
+    image: ../images/services/design-sprint_1.jpg
+    title: "Pourquoi un Design Sprint ?"
+    subtitle: "Vous disposez d'une roadmap produit grâce à notre workshop sur la stratégie, il est temps de passer au design, au prototypage et au test de votre produit. Nous concevrons cela ensemble en une semaine seulement."
+    body: >
+      <h3>De l'idée à la réalité</h3>
+      <p>Cette première étape est essentielle pour développer la version finale de votre produit. Notre service de Design Sprint est conçu pour l'entrepreneur non technique.</p>
+      <h3>Exposez vos idées</h3>
+      <p>En travaillant avec nos experts en stratégie et en design de produits, vous explorerez la problématique de votre idée de produit et veillerez à ce que votre prototype initial soit bien en phase avec les besoins de vos futurs clients.</p>
+  - id: "efde35b4-6e9e-48ba-ac98-39866f392416"
+    type: "split"
+    image: null
+    title: "Concevez votre prototype en 5 jours."
+    subtitle: null
+    body: ""
+  - id: "e1940b06-9646-40e5-ba0f-8696ecb51820"
+    type: "default"
+    image: "../images/services/design-sprint_2.png"
+    title: "Pourquoi ne pas plonger directement dans le code ?"
+    subtitle: null
+    body: "<p>Nous avons développé notre Design Sprint pour passer de l'idée d'un produit à un prototype à tester avec de vrais utilisateurs en seulement cinq jours. À la fin de la semaine, vous obtenez un prototype cliquable non fonctionnel prêt à être validé par votre marché cible afin de guider le développement de votre future application.</p>"
+  - id: "8624fd3e-d8c9-4b59-bf6f-69d637b45a20"
+    type: "default"
+    image: "../images/services/design-sprint_3.jpg"
+    title: "Est-ce pour vous ? Attendez-vous à...."
+    subtitle: null
+    body: >
+      <ul><li><p>Un processus de design et de développement axé sur l'utilisateur.</p></li><li><p>Une accélération du développement initial de votre produit, réduisant ainsi le risque que vos concurrents vous devancent sur le marché.</p></li><li><p>Concevoir un prototype cliquable en seulement 5 jours.</p></li><li><p>Augmenter vos possibilités d'apprentissage et de validation d'idée en faisant tester votre prototype par de vrais utilisateurs.</p></li><li><p>Préparer la prochaine étape du développement de votre produit, en fonction du feedback reçu pour votre prototype.</p></li></ul>
+  - id: "8cb0d3d1-f3cb-4b34-843e-3313985e7350"
+    type: "default"
+    image: null
+    title: "Bon à savoir !"
+    subtitle: null
+    body: >
+      <p>
+        Puisque nous concevons votre prototype <strong>ensemble</strong>, nous comptons sur la participation de nos clients durant les 3 premiers jours. Dans la mesure du possible, il est recommandé d'assister au test d'utilisateurs le vendredi. Si une personne de votre entreprise ne peut participer qu'une seule journée, ce devrait être le lundi lorsque nous nous attaquons à votre problématique et à la façon de la résoudre.<br>
+        <strong>La seule condition préalable est de disposer d'une roadmap produit. </strong>Faute de quoi, nous ne pourrons pas encore passer au design. Si vous ne l'avez pas encore, rassurez-vous, nous pouvons vous aider en organisant ce que nous appelons un <a href="https://www.belighted.com/services/strategy-workshop" rel="noopener noreferrer nofollow">Strategy Workshop</a>.
+      </p>
+  - id: "9de1a421-bcee-4fad-a520-c2c768cabbcc"
+    type: "process"
+    image: "../images/services/design-sprint_4.png"
+    title: "Notre processus"
+    subtitle: null
+    body: >
+      <p>Nos Design Sprints de <strong>5 jours </strong>suivent notre <strong>processus unique </strong>qui s'appuie sur la <strong>méthodologie </strong>développée par Google Ventures combinée à notre expérience avec des centaines d'innovateurs logiciels.</p>
+    process:
+      - id: "a8ff68ab-b880-4285-8e2f-400c0672bf79"
+        type: "default"
+        image: null
+        title: "Lundi"
+        subtitle: "Comprendre et schématiser le problème."
+        body: >
+          <p>Notre premier objectif est de bien comprendre le problème que votre idée peut résoudre. Ce premier jour est essentiel pour nous aider à cerner les attentes de vos clients et veiller à ce que votre proposition soit bien en phase avec leurs besoins.</p>
+      - id: "85029ef2-795c-489b-91cc-fb964d204549"
+        type: "default"
+        image: null
+        title: "Mardi"
+        subtitle: Brainstormer pour trouver des solutions en les dessinant sur papier.
+        body: >
+          <p>Vous pensez peut-être avoir trouvé la solution fantastique aux problèmes de vos clients, mais fonctionnera-t-elle vraiment, en pratique? Le deuxième jour, nous élargissons notre champ de vision pour trouver le plus grand nombre de solutions possibles au problème que votre innovation cherche à résoudre.</p>
+      - id: "5146f7d3-0d8e-47ad-aab1-07a795a01ffe"
+        type: "default"
+        image: null
+        title: "Mercredi"
+        subtitle: Identifier les fonctionnalités de base et créer des maquettes.
+        body: >
+          À ce stade, nous retenons la solution qui répond le mieux au problème de vos utilisateurs. Nous cherchons ensuite à identifier les fonctionnalités de base nécessaires pour tester cette idée en tant que solution viable.
+      - id: "2ca6ef04-c107-40ca-9d7a-a2cc253281e7"
+        type: "default"
+        image: null
+        title: "Jeudi"
+        subtitle: Développer un prototype cliquable et des scénarios de tests d'utilisateurs.
+        body: >
+          <p>Le quatrième jour est consacré au développement du prototype cliquable de votre idée de logiciel. Pour la première fois, vous découvrez votre concept et passez d'une idée sur papier à un produit réel.</p>
+      - id: "849ae317-a645-4ceb-a986-6dd88c583fdb"
+        type: "default"
+        image: null
+        title: "Vendredi"
+        subtitle: Tests des utilisateurs et feedback avec notre expert UX.
+        body: >
+          <p>Le dernier jour du Design Sprint, nous faisons tester votre prototype par de vrais utilisateurs. Cela signifie que vous commencez à recevoir un feedback réel et exploitable sur votre idée, seulement cinq jours après le début du processus de développement. Il vous aidera à orienter le développement futur de votre innovation en restant en phase avec les besoins de vos utilisateurs.</p>
+  - id: "f4c161c3-1b72-48d7-ab85-887a186bc245"
+    type: "default"
+    image: ../images/services/design-sprint_5.png
+    title: "Vous obtenez un prototype cliquable non fonctionnel."
+    subtitle: null
+    body: >
+      <p>Après seulement cinq jours, vous disposez d'un prototype cliquable que vous pouvez partager avec vos clients cibles afin d'obtenir un précieux feedback et commencer à valider les idées de votre innovation.</p>
+  - id: "18e3488c-fddc-43d0-97d4-27715c72df30"
+    type: "default"
+    image: null
+    title: "Guaranteed Value"
+    subtitle: null
+    body: >
+      <p>Tout ce que nous partagerons dans notre package de Design Sprint est conçu pour vous offrir de la valeur, que vous décidiez ou non de poursuivre notre collaboration.<br><br>Êtes-vous prêt à lancer le développement d'un produit avec notre Design Sprint de 5 jours ?<strong>Cliquez sur le bouton ci-dessous pour réserver votre consultation de 20 minutes sans engagement.</strong></p>
+    cta:
+      link: /services/product-development-consultation
+      label: Nous contacter
+  - id: "8fb4593f-22a9-4bac-a876-13e4d41a5f22"
+    type: "testimonials"
+    image: null
+    title: "Témoignages clients"
+    subtitle: null
+    body: "Des centaines d'entreprises nous font confiance pour concevoir le prototype de leur application.Des centaines d'entreprises nous font confiance pour concevoir le prototype de leur application."
+  - id: "60ee717d-034c-438f-8f9e-edd5a2eba57c"
+    type: "links"
+    image: null
+    title: "À propos du design de logiciels"
+    subtitle: "Bonne lecture."
+    body: null
+    list:
+      - "ruby-on-rails"
+      - "why-strategy-workshop"
+      - "product-development-methodology"

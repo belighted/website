@@ -11,7 +11,7 @@ links:
     label: Free assessment
   - to: /services/strategy-workshop
     label: Strategy workshop
-  - to: /services/design sprint
+  - to: /services/design-sprint
     label: Design sprint
   - to: /technologies
     label: Technnologies
