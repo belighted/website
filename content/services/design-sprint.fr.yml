@@ -28,7 +28,7 @@ slices:
       - rights-up
   - id: "d42afbe4-eb34-4a18-871a-b096b6ec2f57"
     type: "default"
-    image: ../images/services/design-sprint_1.jpg
+    image: "services/design-sprint_1.jpg"
     title: "Pourquoi un Design Sprint ?"
     subtitle: "Vous disposez d'une roadmap produit grâce à notre workshop sur la stratégie, il est temps de passer au design, au prototypage et au test de votre produit. Nous concevrons cela ensemble en une semaine seulement."
     body: >
@@ -44,13 +44,13 @@ slices:
     body: ""
   - id: "e1940b06-9646-40e5-ba0f-8696ecb51820"
     type: "default"
-    image: "../images/services/design-sprint_2.png"
+    image: "services/design-sprint_2.png"
     title: "Pourquoi ne pas plonger directement dans le code ?"
     subtitle: null
     body: "<p>Nous avons développé notre Design Sprint pour passer de l'idée d'un produit à un prototype à tester avec de vrais utilisateurs en seulement cinq jours. À la fin de la semaine, vous obtenez un prototype cliquable non fonctionnel prêt à être validé par votre marché cible afin de guider le développement de votre future application.</p>"
   - id: "8624fd3e-d8c9-4b59-bf6f-69d637b45a20"
     type: "default"
-    image: "../images/services/design-sprint_3.jpg"
+    image: "services/design-sprint_3.jpg"
     title: "Est-ce pour vous ? Attendez-vous à...."
     subtitle: null
     body: >
@@ -67,7 +67,7 @@ slices:
       </p>
   - id: "9de1a421-bcee-4fad-a520-c2c768cabbcc"
     type: "process"
-    image: "../images/services/design-sprint_4.png"
+    image: "services/design-sprint_4.png"
     title: "Notre processus"
     subtitle: null
     body: >
@@ -110,7 +110,7 @@ slices:
           <p>Le dernier jour du Design Sprint, nous faisons tester votre prototype par de vrais utilisateurs. Cela signifie que vous commencez à recevoir un feedback réel et exploitable sur votre idée, seulement cinq jours après le début du processus de développement. Il vous aidera à orienter le développement futur de votre innovation en restant en phase avec les besoins de vos utilisateurs.</p>
   - id: "f4c161c3-1b72-48d7-ab85-887a186bc245"
     type: "default"
-    image: ../images/services/design-sprint_5.png
+    image: "services/design-sprint_5.png"
     title: "Vous obtenez un prototype cliquable non fonctionnel."
     subtitle: null
     body: >
@@ -137,7 +137,7 @@ slices:
     title: "À propos du design de logiciels"
     subtitle: "Bonne lecture."
     body: null
-    list:
+    links:
       - "ruby-on-rails"
       - "why-strategy-workshop"
       - "product-development-methodology"

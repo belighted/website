@@ -30,7 +30,7 @@ slices:
   - id: "b7846271-ac45-41c7-a18d-5bc1e8aaffc9"
     type: "default"
     title: Comment se préparer ?
-    image: ../images/services/strategy-workshop-1.png
+    image: "services/strategy-workshop-1.png"
     body: "<p>Soyez prêt à nous décrire les besoins du marché, vos idées et le problème que votre produit résout.</p><p>Nous nous attendons à ce que vous ayez un business plan ou un document stratégique si vous ne disposez pas encore d'un prototype ou d'un MVP.</p><p>Votre étude de marché doit déjà avoir été réalisée et vous devez disposer de données sur les besoins et la taille du marché, la concurrence, etc.</p>"
   - id: "67b49ba3-7e33-4fae-a5fd-1e32579a755a"
     type: "default"

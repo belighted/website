@@ -1,7 +1,7 @@
 import React from "react";
-import LinkToBlog from "../../blog/LinkToBlog";
+import BlogpostsList from "../../blog/BlogpostsList";
 
-const Links = ({ title, subtitle, list, body }) => {
+const Links = ({ title, subtitle, links, body }) => {
   return (
     <section className="c-slice">
       <div className="o-wrapper">
@@ -23,15 +23,7 @@ const Links = ({ title, subtitle, list, body }) => {
             className="c-wysiwyg"
           />
         )}
-        {list && (
-          <ul>
-            {list.map(link => (
-              <li key={link}>
-                <LinkToBlog slug={link}>{link}</LinkToBlog>
-              </li>
-            ))}
-          </ul>
-        )}
+        {links && <BlogpostsList nodes={links} />}
       </div>
     </section>
   );

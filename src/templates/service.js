@@ -32,6 +32,19 @@ export const query = graphql`
         id
         body
         list
+        links {
+          excerpt
+          frontmatter {
+            title
+            image {
+              childImageSharp {
+                fluid(maxWidth: 250) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
+          }
+        }
         image {
           childImageSharp {
             fluid {
@@ -49,8 +62,8 @@ export const query = graphql`
           body
         }
         cta {
-            link
-            label
+          link
+          label
         }
       }
     }

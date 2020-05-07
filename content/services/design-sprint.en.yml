@@ -28,7 +28,7 @@ slices:
       - rights-up
   - id: "d42afbe4-eb34-4a18-871a-b096b6ec2f57"
     type: "default"
-    image: ../images/services/design-sprint_1.jpg
+    image: "services/design-sprint_1.jpg"
     title: "Why a design sprint ?"
     subtitle: "With a product roadmap in your hands thanks to our Strategy Workshop, it's now time to design your product, prototype it and test it. We will build it together in only one week."
     body: >
@@ -44,13 +44,13 @@ slices:
     body: ""
   - id: "e1940b06-9646-40e5-ba0f-8696ecb51820"
     type: "default"
-    image: "../images/services/design-sprint_2.png"
+    image: "services/design-sprint_2.png"
     title: "Why not jumping straight into coding ?"
     subtitle: null
     body: "<p>We have developed our <strong>design sprint to go from product idea to prototype to testing it with real users</strong> in just five days. At the end of the week you can already expect your non-functional clickable prototype ready for further validation with your target market to guide the development of your future application.</p>"
   - id: "8624fd3e-d8c9-4b59-bf6f-69d637b45a20"
     type: "default"
-    image: "../images/services/design-sprint_3.jpg"
+    image: "services/design-sprint_3.jpg"
     title: "Is it for you? Expect..."
     subtitle: null
     body: "<ul><li>User-focused design and development process.</li><li>Accelerated early product development, reducing the risk of your competitors beating you to market.</li><li>Building a clickable prototype in just 5 days.</li><li>Maximising your opportunity for learning and idea validation by getting your prototype tested by real users.</li><li>Shaping the next stage of your product development, based on the feedback you get on your prototype.</li></ul>"
@@ -63,7 +63,7 @@ slices:
       <p>As we will build your prototype <strong>together</strong>, we expect from our clients to attend the first 3 days. If possible, attending the User Testing on Friday is recommended. If one person of your company can only attend one day, it should be on Monday when we tackle your problem and how we could solve it. <br /><br /><strong>The only prerequisite is to own a product roadmap.</strong> Otherwise, we can''t jump into design yet. If you don''t have one yet, don''t worry, we can make one for you in what we call a <a href="/services/strategy-workshop">strategy workshop</a>.</p>
   - id: "9de1a421-bcee-4fad-a520-c2c768cabbcc"
     type: "process"
-    image: "../images/services/design-sprint_4.png"
+    image: "services/design-sprint_4.png"
     title: "Our process"
     subtitle: null
     body: "<p>Our <strong>5-day</strong> design sprints follow our <strong>own unique</strong> process, drawing on the <strong>methodology</strong> developed by Google Ventures and combining it with our experience of working with hundreds of software innovators. </p>"
@@ -100,7 +100,7 @@ slices:
         body: "<p><strong>User Testing &amp; Gathering Feedback <br />with our UX Expert.</strong></p><p>On the final day of the design sprint, we get real users to test-out your prototype. This means you start getting real, actionable feedback on your idea, just five days after starting the development process - and will help guide further product development by keeping development aligned with what your users really need from your innovation.</p>"
   - id: "f4c161c3-1b72-48d7-ab85-887a186bc245"
     type: "default"
-    image: ../images/services/design-sprint_5.png
+    image: "services/design-sprint_5.png"
     title: "The result is a non-functional clickable prototype "
     subtitle: null
     body: "<p>After only five days, you will have a clickable prototype that you can share with your target customers, to begin getting valuable feedback on your idea and start testing out the assumptions behind your innovation.</p>"
@@ -125,7 +125,7 @@ slices:
     title: "About Software Product Design "
     subtitle: "Good to read."
     body: null
-    list:
+    links:
       - "ruby-on-rails"
       - "why-strategy-workshop"
       - "product-development-methodology"

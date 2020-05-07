@@ -61,3 +61,12 @@ module.exports.createPages = async ({ graphql, actions }) => {
   await createLandingPages({ graphql, actions });
   await createBlog({ graphql, actions });
 };
+
+
+exports.createSchemaCustomization = ({ actions, schema }) => {
+  const { createTypes } = actions
+  const typeDefs = [
+    'type ServicesYamlSlices implements Node { image: File @link(by: "relativePath"), links: [MarkdownRemark] @link(by: "frontmatter.slug") }',
+  ]
+  createTypes(typeDefs)
+}
