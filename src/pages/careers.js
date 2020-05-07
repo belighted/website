@@ -3,11 +3,15 @@ import { SectionHeader } from "../components/layout/Section";
 import Layout from "../components/layout/Layout";
 import { graphql } from "gatsby";
 import LintToJob from "../components/jobs/LinkToJob";
+import OurHistory from "../components/splits/OurHistory";
+import Culture from "../components/splits/Culture";
 
 const CareersPage = ({ pageContext, data }) => {
   const {
     allMarkdownRemark: { nodes: jobs },
-    singlesYaml
+    singlesYaml,
+    history,
+    culture
   } = data;
 
   return (
@@ -31,6 +35,9 @@ const CareersPage = ({ pageContext, data }) => {
           </ul>
         </div>
       </section>
+
+      <Culture culture={culture} />
+      <OurHistory history={history} />
     </Layout>
   );
 };
@@ -49,6 +56,26 @@ export const query = graphql`
           slug
         }
       }
+    }
+    history: mdx(
+      frontmatter: { slug: { eq: "our-history" }, lang: { eq: $lang } }
+    ) {
+      frontmatter {
+        title
+      }
+      body
+    }
+    culture: mdx(
+      frontmatter: { slug: { eq: "culture" }, lang: { eq: $lang } }
+    ) {
+      frontmatter {
+        title
+        values {
+          key
+          value
+        }
+      }
+      body
     }
     singlesYaml(slug: { eq: "careers" }, lang: { eq: $lang }) {
       title

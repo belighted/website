@@ -7,7 +7,12 @@ const JobsList = () => {
     allMarkdownRemark: { nodes: jobs }
   } = useStaticQuery(graphql`
     {
-      allMarkdownRemark(filter: { fields: { collection: { eq: "jobs" } } }) {
+      allMarkdownRemark(
+        filter: {
+          frontmatter: { status: { eq: "published" } }
+          fields: { collection: { eq: "jobs" } }
+        }
+      ) {
         nodes {
           frontmatter {
             title

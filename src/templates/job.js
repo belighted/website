@@ -16,7 +16,7 @@ const ServicePage = ({
   pageContext
 }) => (
   <Layout context={pageContext} page={"job"} title={title}>
-    <section className="c-section">
+    <div className="l-content-sidebar o-wrapper">
       <article className="o-wrapper">
         <Link to={"/careers"}>&#8592; View all of our openings</Link>
         <h1 className="c-heading c-heading--title c-heading--1">{title}</h1>
@@ -36,7 +36,7 @@ const ServicePage = ({
           en={"ba833c67-22e2-4628-b037-8b70ac75e8b7"}
         />
       </aside>
-    </section>
+    </div>
   </Layout>
 );
 
