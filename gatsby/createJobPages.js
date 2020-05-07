@@ -26,7 +26,7 @@ module.exports = async ({ graphql: fetch, actions }) => {
   nodes.forEach(({ frontmatter: { slug, lang } }) => {
     createPage({
       component,
-      path: `${locales[lang].path}/careers/${slug}`,
+      path: `careers/${slug}`,
       context: {
         slug,
         lang

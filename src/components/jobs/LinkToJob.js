@@ -1,8 +1,8 @@
 import React from "react";
-import LocalizedLink from "../links/LocalizedLink";
+import { Link } from "gatsby";
 
 const LinkToJob = ({ slug, children }) => {
-  return <LocalizedLink children={children} to={`/careers/${slug}`} />;
+  return <Link children={children} to={`/careers/${slug}`} />;
 };
 
 export default LinkToJob;
