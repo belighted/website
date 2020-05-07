@@ -62,7 +62,7 @@ export const query = graphql`
         subtitle
         image {
           childImageSharp {
-            fluid(maxWidth: 960, maxHeight: 48, cropFocus: ATTENTION) {
+            fluid(maxWidth: 480, maxHeight: 200, cropFocus: ATTENTION) {
               ...GatsbyImageSharpFluid
             }
           }
