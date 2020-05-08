@@ -1,6 +1,7 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import * as classnames from "classnames";
+import GatsbyImage from "gatsby-image";
 
 const ClientLogo = ({ slug, size = "medium" }) => {
   const {
@@ -11,12 +12,21 @@ const ClientLogo = ({ slug, size = "medium" }) => {
         clients {
           value
           type
-          image
+          image {
+            childImageSharp {
+              fixed(width: 100) {
+                ...GatsbyImageSharpFixed
+              }
+            }
+            extension
+            publicURL
+          }
         }
       }
     }
   `);
   const node = clients.find(client => client.value === slug);
+
   if (node) {
     return (
       <span
@@ -27,7 +37,12 @@ const ClientLogo = ({ slug, size = "medium" }) => {
           `c-logo--${size}`
         )}
       >
-        <img src={node.image} alt={node.value} className={"c-logo__img"} />
+        {node.image && node.image.extension === "svg" && (
+            <img src={node.image.publicURL} alt={slug} className={"c-logo__img"} />
+          )}
+        {node.image && node.image.childImageSharp && (
+          <GatsbyImage fixed={node.image.childImageSharp.fixed} alt={slug} />
+        )}
       </span>
     );
   }
