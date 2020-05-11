@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { graphql } from "gatsby";
 import Img from "gatsby-image";
 import moment from "moment";
 import BlogpostTags from "./components/BlogpostTags";
 import LinkToBlog from "./LinkToBlog";
 import LocalizedLink from "../links/LocalizedLink";
+import { I18nContext } from "../i18n/I18n";
 
 export default function BlogList({ nodes }) {
+  const lang = useContext(I18nContext);
   return (
     <section>
       <ul className="o-list-bare">
@@ -31,13 +33,14 @@ export default function BlogList({ nodes }) {
                   <p className="c-body c-body--3">
                     <strong>{post.author}</strong>&nbsp;
                     <span>on {moment(post.date).format("DD MMMM YYYY")}</span>
+                    <span>on {post.date}</span>
                   </p>
                 </div>
                 <div>{post.description}</div>
                 <div className="u-margin-top">
                   <LocalizedLink to={`/articles/${post.slug}`}>
                     <span className="c-button c-button--outline-primary">
-                      Read more
+                      {lang === "en" ? "Read more" : "Lire plus"}
                     </span>
                   </LocalizedLink>
                 </div>
