@@ -29,7 +29,7 @@ export default function Header({ page, context: { lang } }) {
         aria-label="main navigation"
         className="o-wrapper c-site-header__wrapper"
       >
-        <div className='c-site-header__header'>
+        <div className="c-site-header__header">
           <Link to="/" className="c-site-header__logo">
             <img src={"/logo.svg"} alt="Belighted" />
           </Link>
@@ -47,7 +47,13 @@ export default function Header({ page, context: { lang } }) {
             active
           })}
         >
-          <ul className={"o-list-bare"}>
+          <ul
+            className={classNames(
+              "o-list-bare",
+              "u-margin-none",
+              "c-site-nav__links"
+            )}
+          >
             <li className="c-site-nav__item">
               <MenuLink name={"services"} lang={lang} />
             </li>
@@ -64,17 +70,22 @@ export default function Header({ page, context: { lang } }) {
               <MenuLink name={"blog"} lang={lang} />
             </li>
           </ul>
-          <div className={"c-lang-switcher"}>
+          <ul
+            className={
+              "o-list-bare c-site-nav__links c-lang-switcher u-margin-none"
+            }
+          >
             {Object.keys(locales).map(lang => (
-              <Link
-                key={lang}
-                to={`${locales[lang].path}/${page === "home" ? "" : page}`}
-                className={"c-lang-switcher__item u-padding-small"}
-              >
-                {locales[lang].label}
-              </Link>
+              <li className="c-lang-switcher__item" key={lang}>
+                <Link
+                  to={`${locales[lang].path}/${page === "home" ? "" : page}`}
+                  className={classNames("c-site-nav__link", "c-site-nav-link")}
+                >
+                  {locales[lang].label}
+                </Link>
+              </li>
             ))}
-          </div>
+          </ul>
         </div>
       </nav>
     </header>

@@ -38,6 +38,7 @@
 }
 .c-site-nav {
   position: relative;
+
   @include mq($until: tablet) {
     display: none;
     position: fixed;
@@ -50,6 +51,11 @@
   }
   &.active{
     display: block;
+  }
+  &__links{
+    @include mq($from: tablet) {
+      display: flex;
+    }
   }
   @include mq($from: tablet) {
     display: flex;

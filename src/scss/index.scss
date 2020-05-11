@@ -105,9 +105,10 @@ $inuit-offsets: true;
 @import "node_modules/inuitcss/utilities/utilities.widths";
 @import "node_modules/inuitcss/utilities/utilities.spacings";
 @import "utilities/utilities.colors";
+@import "utilities/utilities.responsive-spacings";
+
 /*
 @import "utilities/utilities.clearfix";
-@import "utilities/utilities.responsive-spacings";
 @import "utilities/utilities.print";
 @import "utilities/utilities.hide";
 */

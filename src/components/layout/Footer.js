@@ -26,7 +26,7 @@ const Footer = () => {
 
   const footer = footers.find(l => l.lang === lang);
   return (
-    <div className="c-footer-nav u-padding-vertical-large u-padding-horizontal">
+    <div className="c-footer-nav u-padding-vertical-large@tablet u-padding-horizontal@tablet">
       <div className="o-wrapper">
         <div className="l-footer">
           <div className="l-footer__credentials">
