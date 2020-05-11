@@ -20,7 +20,7 @@ const ClientsCasesList = ({ limit = 50 }) => {
   const lang = useContext(I18nContext);
 
   return (
-    <ul className="o-list-bare c-cases-list l-grid l-grid--4cols">
+    <ul className="o-list-bare c-cases-list l-grid--4cols@wide l-grid--2cols@medium">
       {nodes
         .filter(node => node.lang === lang)
         .slice(0, limit)

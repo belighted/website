@@ -3,7 +3,7 @@ import GatsbyImage from "gatsby-image";
 
 const Gallery = ({ gallery }) => {
   return (
-    <div className="l-grid l-grid--2cols">
+    <div className="l-grid l-grid--2cols@medium">
       {gallery.map(item => (
         <div key={item.title}>
           <GatsbyImage fluid={item.image.childImageSharp.fluid} />

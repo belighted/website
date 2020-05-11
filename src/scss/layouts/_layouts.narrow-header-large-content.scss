@@ -1,13 +1,15 @@
-.l-narrow-header-large-content{
-  display: grid;
-  grid-template-columns: 2fr 1fr 9fr;
-  grid-template-areas: "header . content .";
-  grid-gap: $inuit-global-spacing-unit;
-  align-items: center;
-  &__header{
-    grid-area: header;
-  }
-  &__content{
-    grid-area: content;
+.l-narrow-header-large-content {
+  @include mq($from: tablet) {
+    display: grid;
+    grid-template-columns: 2fr 1fr 9fr;
+    grid-template-areas: "header . content .";
+    grid-gap: $inuit-global-spacing-unit;
+    align-items: center;
+    &__header {
+      grid-area: header;
+    }
+    &__content {
+      grid-area: content;
+    }
   }
 }

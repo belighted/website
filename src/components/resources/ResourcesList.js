@@ -4,7 +4,7 @@ import GatsbyImage from "gatsby-image";
 
 const ResourcesList = ({ resources }) => {
   return (
-    <ul className="o-list-bare l-grid l-grid--3cols">
+    <ul className="o-list-bare l-grid l-grid--2cols@medium l-grid--3cols@wide">
       {resources.map(node => (
         <li key={node.slug} className={"u-margin-bottom"}>
           {node.image && <GatsbyImage fluid={node.image.childImageSharp.fluid} />}

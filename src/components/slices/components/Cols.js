@@ -5,7 +5,7 @@ const Cols = ({ columns }) => {
   return (
     <section className="c-section">
       <div className="o-wrapper">
-        <div className={classNames('l-grid', `l-grid--${columns.length}cols`)}>
+        <div className={classNames('l-grid', 'l-grid--2cols@medium', `l-grid--${columns.length}cols@wide`)}>
           {columns.map(col => (
             <div key={col.body}>
               {col.title && (

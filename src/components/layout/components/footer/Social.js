@@ -20,7 +20,7 @@ const icons = {
 
 const Social = () => {
   return (
-    <div className="l-grid l-grid--4cols u-margin-top">
+    <div className="l-grid l-grid--4cols@wide l-grid--2cols@medium u-margin-top">
       {info.contact.social.map(social => {
         const Component = icons[social.icon];
         return (

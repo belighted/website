@@ -10,7 +10,7 @@ const Culture = ({
   return (
     <div className="c-section c-section--dark-bg">
       <div className="o-wrapper">
-        <div className="l-grid l-grid--2cols">
+        <div className="l-grid l-grid--2cols@medium">
           <div>
             <h3 className="c-heading c-heading--3 c-heading--invert c-heading--title">
               {title}

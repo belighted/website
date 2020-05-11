@@ -1,0 +1,10 @@
+.l-global-layout {
+  overflow: hidden;
+  &__nav{
+    position: relative;
+    z-index: 100;
+  }
+  &__body {
+    min-height: 90vh;
+  }
+}

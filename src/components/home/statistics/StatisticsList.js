@@ -2,7 +2,7 @@ import React from "react";
 
 const StatisticsList = ({ statistics }) => {
   return (
-    <ul className="o-list-bare l-grid l-grid--4cols">
+    <ul className="o-list-bare l-grid l-grid--2cols@medium l-grid--4cols@wide ">
       {statistics.map(node => (
         <li
           key={node.label}

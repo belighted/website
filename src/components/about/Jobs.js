@@ -7,7 +7,7 @@ const Jobs = ({ section: { title, body, link } }) => {
   return (
     <div className="c-section">
       <div className="o-wrapper">
-        <div className="l-grid l-grid--2cols">
+        <div className="l-grid l-grid--2cols@medium">
           <div>
             <SectionHeader title={title} body={body} />
             <JobsList />

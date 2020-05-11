@@ -48,7 +48,7 @@ const ClientsPageList = ({ clients, cta }) => {
   `);
   const slugs = cases.map(c => c.slug);
   return (
-    <ul className="o-list-bare c-cases-list l-grid l-grid--4cols">
+    <ul className="o-list-bare c-cases-list l-grid l-grid--4cols@wide l-grid--2cols@medium">
       {clients.map(node => (
         <li key={node.slug} className="u-margin-bottom">
           <CaseCard node={node} link={slugs.includes(node.slug)} cta={cta} />

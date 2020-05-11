@@ -1,5 +1,7 @@
-.l-footer{
-  display: grid;
-  grid-gap: $inuit-global-spacing-unit;
-  grid-template-columns: 1fr 2fr 1fr;
+.l-footer {
+  @include mq($from: tablet) {
+    display: grid;
+    grid-gap: $inuit-global-spacing-unit;
+    grid-template-columns: 1fr 2fr 1fr;
+  }
 }

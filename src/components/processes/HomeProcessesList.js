@@ -27,7 +27,7 @@ const HomeProcessesList = () => {
 
   const lang = useContext(I18nContext);
   return (
-    <ol className="l-grid l-grid--2cols">
+    <ol className="l-grid l-grid--2cols@medium">
       {nodes
         .filter(node => node.lang === lang)
         .map((node, index) => (

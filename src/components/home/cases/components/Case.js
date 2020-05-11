@@ -8,7 +8,7 @@ import LocalizedLink from "../../../links/LocalizedLink";
 const Case = ({ node }) => {
   const lang = useContext(I18nContext);
   return (
-    <div className="l-grid l-grid--2cols">
+    <div className="l-grid l-grid--2cols@medium">
       <div>
         <ClientLogo slug={node.slug} />
         <h5 className="c-heading c-heading--invert c-heading--5">
