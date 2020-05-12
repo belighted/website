@@ -4,7 +4,7 @@ links:
   - to: /services/code-review
     label: Code review
   - to: /services/ux-review
-    label: UX Review
+    label: UX Audit
   - to: /services/user-testing
     label: User testing
   - to: /services/product-development-consultation
