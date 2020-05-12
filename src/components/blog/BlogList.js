@@ -32,8 +32,10 @@ export default function BlogList({ nodes }) {
                   </LinkToBlog>
                   <p className="c-body c-body--3">
                     <strong>{post.author}</strong>&nbsp;
-                    <span>on {moment(post.date).format("DD MMMM YYYY")}</span>
-                    <span>on {post.date}</span>
+                    <span>
+                      &nbsp;-&nbsp;
+                      {moment(post.date, "YYYY-MM-DD").format("DD MMMM YYYY")}
+                    </span>
                   </p>
                 </div>
                 <div>{post.description}</div>

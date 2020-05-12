@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Header from "./Header";
 import Helmet from "react-helmet";
 import useSiteMetadata from "../../static_queries/useSiteMetadata";
@@ -6,13 +6,19 @@ import Footer from "./Footer";
 import "../../scss/index.scss";
 import { I18nContext } from "../i18n/I18n";
 import SubFooter from "./components/SubFooter";
-import { MDXProvider } from "@mdx-js/react"
+import { MDXProvider } from "@mdx-js/react";
 import HubspotForm from "../forms/HubspotForm";
+import moment from "moment";
+import 'moment/locale/fr';
 
-const shortcodes = { HubspotForm }
+const shortcodes = { HubspotForm };
 
 export default function Layout({ context, children, page, title }) {
   const { description } = useSiteMetadata();
+  useEffect(() => {
+    moment.locale(context.lang);
+    return () => {};
+  }, [context.lang]);
 
   return (
     <MDXProvider components={shortcodes}>

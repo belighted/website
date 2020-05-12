@@ -24,7 +24,10 @@ const BlogArticle = ({
           <h1 className="c-heading c-heading--2">{post.title}</h1>
           <p className="c-body c-body--3">
             <strong>{post.author}</strong>&nbsp;
-            <span>on {moment(post.date).format("DD MMMM YYYY")}</span>
+            <span>
+              &nbsp;-&nbsp;
+              {moment(post.date, "YYYY-MM-DD").format("DD MMMM YYYY")}
+            </span>
           </p>
           <div
             className="c-wysiwyg"
