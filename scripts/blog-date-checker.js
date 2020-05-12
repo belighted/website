@@ -28,7 +28,7 @@ const init = async () => {
     const articles = await readFiles(directory);
     await Promise.all(
       articles
-        //.slice(0, 3)
+        .slice(0, 2)
         .filter(a => a)
         .map(async article => {
           const pathMatchs = article.data.match(/originalPath: .*/gm);
@@ -40,7 +40,16 @@ const init = async () => {
               .querySelector(".post-body > p:nth-child(2)")
               .textContent.replace(/.*on /, "");
             moment.locale(pathToFetch.match(/\/fr\//) ? "fr" : "en");
-            console.log(moment(authorString, "DD MMMM YYYY"));
+            const date = moment(authorString, "DD MMMM YYYY").format(
+              "YYYY-MM-DD"
+            );
+            const newArticle = article.data.replace(
+              /date: [0-9]*/gm,
+              `date: ${date}`
+            );
+            await new Promise(resolve =>
+              fs.writeFile(article.path, newArticle, resolve)
+            );
           }
         })
     );
