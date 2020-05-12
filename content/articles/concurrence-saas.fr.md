@@ -8,7 +8,7 @@ description: Se démarquer de la concurrence avec un SaaS ?  Découvrez les poin
   clés pour que votre produit se démarque de la concurrence en le transformant
   en SaaS.
 image: ../images/blog/N11FROK.png
-date: 1546300800000
+date: 2019-09-16
 tags:
   - label: SaaS development
     value: saas-development

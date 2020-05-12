@@ -10,7 +10,7 @@ description: Votre application SaaS a besoin d'une version mobile.  Vos
   application hybride. Apprenez les bases grâce à notre framework de
   développement SaaS.
 image: ../images/blog/Sans%20titre%20%2813%29-1.png
-date: 1577836800000
+date: 2020-02-07
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

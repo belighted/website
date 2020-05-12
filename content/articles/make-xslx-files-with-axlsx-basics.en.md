@@ -7,7 +7,7 @@ author: Pierre M.
 description: Come discover whats hidden behind the AXLSX gem. Powerfull tool for
   exporting data from a project.
 image: null
-date: 1325376000000
+date: 2012-08-29
 tags:
   - label: Under the hood
     value: under-the-hood

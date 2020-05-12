@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: To help kick-start your startup, we're sharing six reasons why a
   Lean Canvas is essential to any product development process.
 image: null
-date: 1483228800000
+date: 2017-06-14
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

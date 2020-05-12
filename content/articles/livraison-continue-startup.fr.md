@@ -8,7 +8,7 @@ author: Nicolas Jacobeus
 description: "La livraison continue est un enjeu de taille pour les développeurs
   de logiciels comme pour les utilisateurs. Découvrez ses avantages ! "
 image: ../images/blog/Sans%20titre%20%2815%29-1.png
-date: 1577836800000
+date: 2020-02-05
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

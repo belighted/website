@@ -10,7 +10,7 @@ description: >+
   entreprises belges, dont Belighted.
 
 image: ../images/blog/Tech_fast50_COL.jpg
-date: 1356998400000
+date: 2013-10-08
 tags:
   - label: Company news
     value: company-news

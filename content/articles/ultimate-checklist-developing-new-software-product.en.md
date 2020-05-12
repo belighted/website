@@ -9,7 +9,7 @@ description: Developing a new web app, tool or other software-based product? Get
   tasks at each stage. Like a mini-course in one lean document to help you
   develop, launch and grow a new SaaS/software product or tech startup idea.
 image: ../images/blog/businessman-and-business-plan.jpg
-date: 1514764800000
+date: 2018-02-23
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

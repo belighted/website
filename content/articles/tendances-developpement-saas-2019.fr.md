@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "Les 10 grandes tendances de développement SaaS en 2019 : une
   évolution au gré des nouvelles technologies et des besoins des consommateurs."
 image: ../images/blog/Sans%20titre%20%283%29-1.png
-date: 1546300800000
+date: 2019-09-10
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

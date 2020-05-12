@@ -7,7 +7,7 @@ author: Dominique L.
 description: It is quite usual in object-oriented programming to redefine the
   criteria of equivalence between two instances of a class.
 image: null
-date: 1356998400000
+date: 2013-02-08
 tags:
   - label: Under the hood
     value: under-the-hood

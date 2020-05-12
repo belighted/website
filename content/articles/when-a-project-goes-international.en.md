@@ -7,7 +7,7 @@ author: Philippe V.
 description: "How we helped a client expand its market from a single country to
   international. "
 image: ../images/blog/going-international.jpg
-date: 1451606400000
+date: 2016-11-24
 tags:
   - label: Under the hood
     value: under-the-hood

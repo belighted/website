@@ -12,7 +12,7 @@ description: >+
   réalise dans le domaine médical.
 
 image: ../images/blog/visyos-home.png
-date: 1356998400000
+date: 2013-10-16
 tags:
   - label: Company news
     value: company-news

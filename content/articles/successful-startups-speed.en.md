@@ -8,7 +8,7 @@ description: "Analysis of hundreds of startups reveals one overarching theme
   required for success: speed. See key areas where speed is critical in this
   3-part series. "
 image: ../images/blog/1024p-2.jpg
-date: 1514764800000
+date: 2018-05-24
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

@@ -11,7 +11,7 @@ description: >+
   directly from the website itself. Up until now, Tok …
 
 image: ../images/blog/blog%20tech%20standard%20image-1.png
-date: 1199145600000
+date: 2008-11-30
 tags:
   - label: Under the hood
     value: under-the-hood

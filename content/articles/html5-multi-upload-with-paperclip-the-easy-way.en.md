@@ -7,7 +7,7 @@ author: Yannick S.
 description: You sometimes need to attach many files to a rails model, you can
   find a lot of tutorials on the web. Here is a simple way to do it.
 image: null
-date: 1325376000000
+date: 2012-04-14
 tags:
   - label: Under the hood
     value: under-the-hood

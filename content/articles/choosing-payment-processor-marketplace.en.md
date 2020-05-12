@@ -9,7 +9,7 @@ description: Payment processing is one of the big questions for a new or growing
   marketplace model best. See why we chose Stripe Connect for a marketplace
   client recently.
 image: ../images/blog/woman-typing-credit-card-number-for-online-shopping.jpg
-date: 1514764800000
+date: 2018-03-21
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

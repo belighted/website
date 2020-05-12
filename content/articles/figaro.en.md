@@ -8,7 +8,7 @@ author: Stéphane A.
 description: An overview of the figaro gem, a library tailored to handle app
   variables configuration on many deployment platforms including heroku.
 image: null
-date: 1388534400000
+date: 2014-01-20
 tags:
   - label: Under the hood
     value: under-the-hood

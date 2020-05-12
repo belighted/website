@@ -8,7 +8,7 @@ description: Lorsque vous concevez un nouveau produit, la validation du marché
   est plus importante que tout autre facteur. Découvrez pourquoi dans cet
   article !
 image: ../images/blog/rapidite-startup-validation-marche-1.png
-date: 1577836800000
+date: 2020-01-31
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

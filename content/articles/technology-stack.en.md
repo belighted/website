@@ -8,7 +8,7 @@ description: Serious thought should go into the tech stack behind your new
   software product. See what we use and why we think it’s the best way to
   approach most projects.
 image: ../images/blog/AdobeStock_90785872_1024p.jpg
-date: 1514764800000
+date: 2018-07-19
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

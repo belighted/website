@@ -8,7 +8,7 @@ description: "Comment le mode SaaS peut-il sauver votre vieux Software ?
   Découvrez qu'est-ce qu'un vieux Software, un SaaS et la transition de l'un
   vers l'autre. "
 image: ../images/blog/Sans%20titre%20%2810%29-1.png
-date: 1546300800000
+date: 2019-08-10
 tags:
   - label: SaaS development
     value: saas-development

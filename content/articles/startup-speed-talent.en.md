@@ -8,7 +8,7 @@ description: Speed is critical for startups. When it comes to hiring staff or
   outsourcing product development, consider the various ways your speed will be
   impacted.
 image: ../images/blog/Speed%20blog%202%20high%20res.jpg
-date: 1514764800000
+date: 2018-05-31
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

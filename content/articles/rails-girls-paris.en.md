@@ -12,7 +12,7 @@ description: >+
   L’objectif : doter la gent féminine d’outils lui permettant de (mieux) comprendre la technologie et de développer ses idées.
 
 image: null
-date: 1325376000000
+date: 2012-06-14
 tags:
   - label: Events
     value: events

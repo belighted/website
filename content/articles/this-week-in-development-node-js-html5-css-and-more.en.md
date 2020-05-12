@@ -7,7 +7,7 @@ author: Stéphane A.
 description: Most interesting information coming from the Belighted dev chat
   room summarized for you.
 image: null
-date: 1420070400000
+date: 2015-03-12
 tags:
   - label: Under the hood
     value: under-the-hood

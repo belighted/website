@@ -8,7 +8,7 @@ description: Techniques to avoid inconsistencies in the backup data in
   applications (and especially avoid problems of the kind, order two times the
   same objects in a store so that there is more)
 image: null
-date: 1356998400000
+date: 2013-04-07
 tags:
   - label: Under the hood
     value: under-the-hood

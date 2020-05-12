@@ -9,7 +9,7 @@ description: Have some performance drop in one of your application? Discover how
   we figured it out with one of our project with Memcached and the Dalli Ruby
   Gem.
 image: null
-date: 1356998400000
+date: 2013-03-21
 tags:
   - label: Under the hood
     value: under-the-hood

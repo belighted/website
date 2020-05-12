@@ -28,7 +28,7 @@ const init = async () => {
     const articles = await readFiles(directory);
     await Promise.all(
       articles
-        .slice(0, 2)
+        //.slice(0, 2)
         .filter(a => a)
         .map(async article => {
           const pathMatchs = article.data.match(/originalPath: .*/gm);

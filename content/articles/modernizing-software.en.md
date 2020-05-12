@@ -9,7 +9,7 @@ description: >+
   comes to modernize your software !
 
 image: ../images/blog/Sans%20titre%20%2822%29.png
-date: 1546300800000
+date: 2019-08-20
 tags:
   - label: SaaS development
     value: saas-development

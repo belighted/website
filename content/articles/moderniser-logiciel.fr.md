@@ -8,7 +8,7 @@ description: "Moderniser logiciel: quels sont les signes qui ne trompent
   lorsqu'il s'agit de faire innover son logiciel ? Découvrez-les dans cet
   article."
 image: ../images/blog/Sans%20titre%20%282%29-3.png
-date: 1546300800000
+date: 2019-08-05
 tags:
   - label: Développement MVP
     value: développement-mvp

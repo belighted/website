@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Développer un logiciel SaaS ou un logiciel sous licence ? Découvrez
   pourquoi se tourner vers un SaaS c'est faire le choix de la rapidité !
 image: ../images/blog/Sans%20titre%20%287%29-1.png
-date: 1546300800000
+date: 2019-08-30
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

@@ -8,7 +8,7 @@ description: Nous introduisons ici un moyen novateur de gérer le flux d'e-mails
   indésirables grâce à une nouvelle technique anti-spam en remplacement de la
   bien connue CAPTCHA.
 image: ../images/blog/289348-grum-spambot-shut-down-massive-botnet-created-18-percent-of-worlds-spa.jpg
-date: 1420070400000
+date: 2015-12-28
 tags:
   - label: Under the hood
     value: under-the-hood

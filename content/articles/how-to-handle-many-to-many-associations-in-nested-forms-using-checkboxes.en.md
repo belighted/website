@@ -7,7 +7,7 @@ author: Stéphane A.
 description: How can you deal with many to many relations using check boxes.?
   Find out more of it in this post.
 image: null
-date: 1325376000000
+date: 2012-06-25
 tags:
   - label: Under the hood
     value: under-the-hood

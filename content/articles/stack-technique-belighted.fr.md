@@ -8,7 +8,7 @@ description: Un créateur de start-up qui n'a pas de compétences techniques doi
   comprendre les bases de la « stack ». Découvrez la stack technique de
   Belighted !
 image: ../images/blog/Sans%20titre%20%287%29-3.png
-date: 1577836800000
+date: 2020-02-01
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

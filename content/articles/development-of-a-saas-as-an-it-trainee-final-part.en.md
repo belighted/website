@@ -6,7 +6,7 @@ title: "Development of a SaaS as an IT trainee : final part"
 author: Samuel M.
 description: My last weeks among the Belighters, last work on Pravatar and Scale.
 image: ../images/blog/trainee-final-blog-bpost-image.jpg
-date: 1451606400000
+date: 2016-05-11
 tags:
   - label: Under the hood
     value: under-the-hood

@@ -8,7 +8,7 @@ description: "Le développement de produits SaaS selon Belighted repose sur une
   méthode couplant stratégie efficace et validation du marché. Voici comment
   nous procédons... "
 image: ../images/blog/N4FROK.png
-date: 1546300800000
+date: 2019-11-06
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

@@ -6,7 +6,7 @@ title: Rubymine & Foreman
 author: Kévin V.
 description: Discover by practice Rubymine & Foreman gem.
 image: null
-date: 1356998400000
+date: 2013-11-07
 tags:
   - label: Under the hood
     value: under-the-hood

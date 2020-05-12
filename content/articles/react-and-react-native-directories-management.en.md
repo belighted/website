@@ -8,7 +8,7 @@ description: How to create absolute pathways for React and React Native
   directories instead of relative. Step-by-step instructions and examples to
   handle folders and assets.
 image: null
-date: 1483228800000
+date: 2017-12-12
 tags:
   - label: Under the hood
     value: under-the-hood

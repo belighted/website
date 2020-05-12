@@ -7,7 +7,7 @@ author: Stéphane A.
 description: The high voltage gem allows you to create easilly static pages in
   your Rails application.
 image: null
-date: 1325376000000
+date: 2012-09-24
 tags:
   - label: Under the hood
     value: under-the-hood

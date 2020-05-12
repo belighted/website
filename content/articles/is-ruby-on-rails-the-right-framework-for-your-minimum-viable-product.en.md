@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: " Discover five reasons why Ruby on Rails is the best framework for
   building your MVP."
 image: ../images/blog/Is%20Ruby%20on%20Rails%20the%20Right%20Framework%20for%20Your%20Minimum%20Viable%20Product.jpg
-date: 1483228800000
+date: 2017-06-30
 tags:
   - label: The Belighted Way
     value: the-belighted-way

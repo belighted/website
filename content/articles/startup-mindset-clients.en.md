@@ -8,7 +8,7 @@ description: We love the startup mindset. It brings so much passion to software
   projects. It doesn’t make for easy clients, but that’s ok. We’re changing the
   world.
 image: ../images/blog/startup-business-indicates-self-employed-3d-rendering.jpg
-date: 1483228800000
+date: 2017-11-06
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

@@ -9,7 +9,7 @@ description: Se concentrer sur les bonnes priorités est essentiel pour les
   startups. Quelles fonctionnalités développer, où investir et quand ...
   Découvrez-le !
 image: ../images/blog/Sans%20titre%20%2810%29-3.png
-date: 1577836800000
+date: 2020-01-31
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

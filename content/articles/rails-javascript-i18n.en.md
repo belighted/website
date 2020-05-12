@@ -8,7 +8,7 @@ description: Here are some techniques, tools and tips that will help you get
   started with I18n, in order to avoid a lot of trouble for your app in the long
   run.
 image: null
-date: 1325376000000
+date: 2012-05-02
 tags:
   - label: Under the hood
     value: under-the-hood

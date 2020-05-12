@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "La rapidité est un facteur clé pour les start-up selon une analyse
   de centaines de celles-ci. Talent, priorités, validation du marché ... "
 image: ../images/blog/Sans%20titre%20%2811%29-2.png
-date: 1577836800000
+date: 2020-01-31
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

@@ -10,7 +10,7 @@ description: Very often we work on rails projects which slowly grow until they
   structuring folders and files to handle this problem without the hassle of
   splitting the projects into multiple subprojects.
 image: ../images/blog/illu-rails-assets.jpg
-date: 1420070400000
+date: 2015-07-07
 tags:
   - label: Under the hood
     value: under-the-hood

@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "Création d'un logiciel SaaS : Démystifions ensemble les
   préconceptions à propos de leur création."
 image: ../images/blog/N7FROK.png
-date: 1546300800000
+date: 2019-10-16
 tags:
   - label: SaaS development
     value: saas-development

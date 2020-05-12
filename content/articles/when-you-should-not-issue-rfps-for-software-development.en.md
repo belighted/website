@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Why "Requests For Proposals" (RFPs) don't work for startups and
   what they can do instead.
 image: ../images/blog/No%20RFS.jpg
-date: 1483228800000
+date: 2017-10-11
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "Migration SaaS ? Découvrez ses indéniables avantages  et la
   pertinence du changement pour votre projet. "
 image: ../images/blog/Migration%20SaaS%20.png
-date: 1546300800000
+date: 2019-08-20
 tags:
   - label: Design Sprint
     value: design-sprint

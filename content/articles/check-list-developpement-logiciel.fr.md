@@ -8,7 +8,7 @@ description: "Comment développer un logiciel ?  Cette check-list présente éta
   par étape les priorités et tâches à suivre pour développer votre logiciel et
   le lancer. "
 image: ../images/blog/N2FROK.png
-date: 1546300800000
+date: 2019-11-08
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

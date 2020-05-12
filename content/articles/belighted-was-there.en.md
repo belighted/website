@@ -11,7 +11,7 @@ description: >+
   C’est dans ce cadre que Belighted a assisté, durant les mois d’avril …
 
 image: null
-date: 1483228800000
+date: 2017-03-17
 tags:
   - label: Company news
     value: company-news

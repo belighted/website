@@ -8,7 +8,7 @@ description: After two years of trying out remote work, I thought it was time to
   share my feelings about it. I'll try to point out some tips, benefits and
   disadvantages about remote work. I hope you'll enjoy reading this article.
 image: ../images/blog/desk-notebook-office-macbook.jpg
-date: 1483228800000
+date: 2017-01-17
 tags:
   - label: Company news
     value: company-news

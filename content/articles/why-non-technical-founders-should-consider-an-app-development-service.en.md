@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: "Building an app? Discover how app development services stack-up
   against freelancers, in-house developers, and hiring a CTO, "
 image: ../images/blog/Why%20Non-Technical%20Founders%20Should%20Consider%20an%20App%20Development%20Service.jpg
-date: 1483228800000
+date: 2017-07-03
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Belighted is growing as we see our methodologies proving successful
   for our clients. Here meet the 9 latest additions to our team.
 image: ../images/blog/ship-1.jpg
-date: 1514764800000
+date: 2018-06-22
 tags:
   - label: Company news
     value: company-news

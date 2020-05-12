@@ -8,7 +8,7 @@ description: Le coût de développement de votre SaaS ou application est une
   question essentielle pour définir le budget inhérent au développement de votre
   produit.
 image: ../images/blog/Sans%20titre%20%289%29-1.png
-date: 1546300800000
+date: 2019-08-15
 tags:
   - label: Strategy Workshop
     value: strategy-workshop

@@ -8,7 +8,7 @@ description: Focus is critical for startups. Wondering how to know which product
   features to build or where to invest limited resources? How to know what to
   focus on when.
 image: ../images/blog/Untitled.jpg
-date: 1514764800000
+date: 2018-06-11
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

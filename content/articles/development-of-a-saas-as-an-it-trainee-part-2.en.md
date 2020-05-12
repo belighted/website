@@ -7,7 +7,7 @@ author: Samuel M.
 description: Development of a SaaS with a third-party javascript widget, what
   I’ve learned and discovered during my third week as a trainee.
 image: null
-date: 1451606400000
+date: 2016-03-30
 tags:
   - label: Under the hood
     value: under-the-hood

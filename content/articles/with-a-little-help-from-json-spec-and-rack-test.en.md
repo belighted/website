@@ -7,7 +7,7 @@ author: Yannick S.
 description: How to use Sinatra, to design a json API in a few days. Discover a
   small example.
 image: null
-date: 1325376000000
+date: 2012-08-15
 tags:
   - label: Under the hood
     value: under-the-hood

@@ -7,7 +7,7 @@ author: Dominique L.
 description: Come have a look to a comparaison of RubyMine & Textmate. Both are
   used by the Belighters.
 image: null
-date: 1325376000000
+date: 2012-04-27
 tags:
   - label: Under the hood
     value: under-the-hood

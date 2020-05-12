@@ -7,7 +7,7 @@ author: Kévin V.
 description: Today we tried out Puma for you. This resulted in different
   feedbacks that are published in this post.
 image: null
-date: 1356998400000
+date: 2013-02-28
 tags:
   - label: Under the hood
     value: under-the-hood

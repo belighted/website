@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Learn how to side-step the biggest problems that startup founders
   encounter when developing their Minimum Viable Product.
 image: ../images/blog/How%20to%20Avoid%205%20Common%20MVP%20Development%20Mistakes.jpg
-date: 1483228800000
+date: 2017-06-26
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

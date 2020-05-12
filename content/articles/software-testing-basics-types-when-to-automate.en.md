@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Software testing basics - types, benefits and when to invest in
   automated testing. An overview for the non-technical startup founder.
 image: ../images/blog/futuristic-technology-interface.jpg
-date: 1514764800000
+date: 2018-02-09
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

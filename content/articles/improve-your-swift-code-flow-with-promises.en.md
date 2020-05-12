@@ -10,7 +10,7 @@ description: In this article, I'll talk about the callback syntax. When an
   weaknesses as the global logic is spread among the code. PromiseKit proposes
   an interesting alternative inspired from JavaScript.
 image: ../images/blog/promisekit-blogpost-img.png
-date: 1420070400000
+date: 2015-12-30
 tags:
   - label: Under the hood
     value: under-the-hood

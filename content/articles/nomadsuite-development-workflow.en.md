@@ -7,7 +7,7 @@ author: Joel C.
 description: An overview of our handcrafted development workflow for Nomad Suite
   relying on a bunch of web services.
 image: null
-date: 1356998400000
+date: 2013-12-10
 tags:
   - label: Under the hood
     value: under-the-hood

@@ -7,7 +7,7 @@ author: Adeline W.
 description: The next edition of Rails Girls Brussels will take place the 8th &
   9th of May at Betacowork Coworking. Registration deadline April 23.
 image: ../images/blog/railsgi.jpg
-date: 1420070400000
+date: 2015-04-17
 tags:
   - label: Events
     value: events

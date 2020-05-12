@@ -8,7 +8,7 @@ description: Want a quote for development work? Learn why we ask new clients to
   complete a Strategy Workshop with us first. You’ll come away with a plan for
   turning your new product vision into reality and a better sense of costs.
 image: ../images/blog/priorites-start-up-developpement-rapide.png
-date: 1546300800000
+date: 2019-03-14
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

@@ -8,7 +8,7 @@ description: "Strategy Workshop : quels sont les avantages de commencer par un
   strategy workshop dans le développement de votre produit ? On vous explique
   tout."
 image: ../images/blog/N5FROK.png
-date: 1546300800000
+date: 2019-11-05
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

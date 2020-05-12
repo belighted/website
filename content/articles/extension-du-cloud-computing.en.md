@@ -9,7 +9,7 @@ description: >+
   d’arguments pour séduire particuliers et grandes boîtes.
 
 image: ../images/blog/Capture_d__cran_2013-02-08___10.34.47.png
-date: 1356998400000
+date: 2013-02-08
 tags:
   - label: IT news
     value: it-news

@@ -8,7 +8,7 @@ description: Last of a series of 3 articles about how we write automatic tests
   for our rails projects. This article focuses on the flow we follow to write
   tests for a single feature.
 image: ../images/blog/flow.png
-date: 1451606400000
+date: 2016-06-13
 tags:
   - label: Under the hood
     value: under-the-hood

@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Le succès de votre projet de développement logiciel sur le long
   terme ? Découvrez la méthode Belighted !
 image: ../images/blog/Sans%20titre%20%285%29-2.png
-date: 1546300800000
+date: 2019-10-21
 tags:
   - label: The Belighted Way
     value: the-belighted-way

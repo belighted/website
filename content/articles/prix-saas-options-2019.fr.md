@@ -8,7 +8,7 @@ description: "Prix d'un SaaS : Voici les différentes possibilités qui s’offr
   à vous en terme de grille tarifaire à proposer à vos clients, actuels ou
   futurs !"
 image: ../images/blog/N8FROK.png
-date: 1546300800000
+date: 2019-10-04
 tags:
   - label: SaaS development
     value: saas-development

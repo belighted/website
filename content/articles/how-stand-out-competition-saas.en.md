@@ -8,7 +8,7 @@ description: "SaaS Solution : How to stand out from the competition? Discover
   the key points to make your product stand out from the competition or
   transform it into SaaS"
 image: ../images/blog/how-stand-out-competition-saas.png
-date: 1546300800000
+date: 2019-10-10
 tags:
   - label: SaaS development
     value: saas-development

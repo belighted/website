@@ -8,7 +8,7 @@ description: Vous savez déjà qu'il existe de nombreuses métriques qui permett
   de mesurer la performance de chaque entreprise. Découvrez les spécifiques au
   SaaS !
 image: ../images/blog/metriques-saas-1.png
-date: 1577836800000
+date: 2020-01-31
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

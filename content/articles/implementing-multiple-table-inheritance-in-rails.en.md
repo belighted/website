@@ -9,7 +9,7 @@ description: Rails’ way of representing model inheritance in the database is
   specific cases. Here we propose a simple implementation of an alternative
   representation called multiple table inheritance.
 image: ../images/blog/What-is-Object-Relational-Mapping-.jpg
-date: 1451606400000
+date: 2016-01-08
 tags:
   - label: Under the hood
     value: under-the-hood

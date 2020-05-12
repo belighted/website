@@ -8,7 +8,7 @@ description: "Le premier d'une série de 3 articles sur la manière dont nous
   écrivons des tests automatiques pour nos projets rails. Cet article traite des
   outils que nous utilisons. "
 image: null
-date: 1451606400000
+date: 2016-02-25
 tags:
   - label: Under the hood
     value: under-the-hood

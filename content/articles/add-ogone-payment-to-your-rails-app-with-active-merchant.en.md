@@ -8,7 +8,7 @@ description: We recently added a few functionality to the Ogone payment
   processing gem. It's a good time to take it from the top and detail how you
   can use this service in your own Rails application.
 image: null
-date: 1325376000000
+date: 2012-04-20
 tags:
   - label: Under the hood
     value: under-the-hood

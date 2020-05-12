@@ -8,7 +8,7 @@ description: Our methodology builds in strategy, efficiency, and opportunity for
   market validation no matter where you are in the software product life cycle.
   See how we approach product development for our clients.
 image: ../images/blog/Sans%20titre%20%289%29-2.png
-date: 1546300800000
+date: 2019-03-14
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

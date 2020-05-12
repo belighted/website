@@ -8,7 +8,7 @@ description: Just how essential is a Chief Technical Officer? Does your startup
   need to hire ASAP - or are you worrying about problems best solved in the
   future?
 image: ../images/blog/Do%20You%20Really%20Need%20to%20Hire%20a%20CTO%20to%20Launch%20Your%20Startup.jpg
-date: 1483228800000
+date: 2017-07-10
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

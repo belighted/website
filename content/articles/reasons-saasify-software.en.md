@@ -8,7 +8,7 @@ description: "SaaSify your software : a durable solution to substitute your
   traditional licensed software. Discover the 10 reasons why you should SaaSify
   !"
 image: ../images/blog/N14OKENG.png
-date: 1546300800000
+date: 2019-08-15
 tags:
   - label: SaaS development
     value: saas-development

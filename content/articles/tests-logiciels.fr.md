@@ -9,7 +9,7 @@ description: Notions de base des tests logiciels - types, avantages et quand
   investir dans des tests automatisés. Voici une vue d'ensemble pour les
   fondateurs de startups non techniques.
 image: ../images/blog/Sans%20titre%20%2816%29.png
-date: 1577836800000
+date: 2020-02-04
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

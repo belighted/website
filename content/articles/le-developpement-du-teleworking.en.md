@@ -9,7 +9,7 @@ description: >+
   technologiques mieux adaptés.
 
 image: ../images/blog/teleworking.jpg
-date: 1356998400000
+date: 2013-02-06
 tags:
   - label: Company news
     value: company-news

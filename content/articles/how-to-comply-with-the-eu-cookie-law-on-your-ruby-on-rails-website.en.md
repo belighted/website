@@ -8,7 +8,7 @@ description: We'll start with a review of law texts about cookie usage on your
   website then introduce you with some common use cases and finally propose a
   convenient solution via a gem.
 image: null
-date: 1420070400000
+date: 2015-01-22
 tags:
   - label: Under the hood
     value: under-the-hood

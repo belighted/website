@@ -8,7 +8,7 @@ description: Are floats bad? What should be used in its place? I took some time
   to explain the problem behind a float number. Come have a look to this
   explanation.
 image: null
-date: 1325376000000
+date: 2012-04-24
 tags:
   - label: Under the hood
     value: under-the-hood

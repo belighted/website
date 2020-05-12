@@ -12,7 +12,7 @@ description: >+
   présence féminine dans le web development.
 
 image: ../images/blog/RG.jpeg
-date: 1325376000000
+date: 2012-10-23
 tags:
   - label: Events
     value: events

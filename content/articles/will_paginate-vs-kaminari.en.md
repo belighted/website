@@ -7,7 +7,7 @@ author: Stéphane A.
 description: What is the main differences between will_paginate and Kaminari
   gems ? Take a quick look to this post in order to discover our comparaison.
 image: null
-date: 1325376000000
+date: 2012-04-02
 tags:
   - label: Under the hood
     value: under-the-hood

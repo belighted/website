@@ -8,7 +8,7 @@ description: "SaaS Pricing : When switching to a SaaS solution, it is not always
   easy to define a price list for current or future customers.  Find out in this
   article how to fix it."
 image: ../images/blog/Sans%20titre%20%282%29-2-small-1.png
-date: 1546300800000
+date: 2019-10-28
 tags:
   - label: SaaS development
     value: saas-development

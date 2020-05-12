@@ -9,7 +9,7 @@ description: Some time ago one of our customers, for which we had already
   the one they were already offering. Discover how we handle a single sign-in
   and sign-out system through multiple applications.
 image: null
-date: 1388534400000
+date: 2014-09-23
 tags:
   - label: Under the hood
     value: under-the-hood

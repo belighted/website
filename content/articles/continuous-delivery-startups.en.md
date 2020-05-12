@@ -8,7 +8,7 @@ description: See how we help startups reach product-market fit faster with
   continuous delivery. Simple explanation of benefits, terminology & why your
   lean startup needs it.
 image: ../images/blog/businessman-with-tablet-pc-high-tech-skyscrapers.jpg
-date: 1514764800000
+date: 2018-01-18
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

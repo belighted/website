@@ -7,7 +7,7 @@ author: Simon H.
 description: An introduction to some new tools that make your life easier as a
   front-end developer.
 image: null
-date: 1388534400000
+date: 2014-03-26
 tags:
   - label: Under the hood
     value: under-the-hood

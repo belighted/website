@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: La rapidité est essentielle pour les start-up. Que ce soit pour
   embaucher du personnel ou le développement ... Découvrez comment gérer cela !
 image: ../images/blog/Sans%20titre%20%289%29-3.png
-date: 1577836800000
+date: 2020-01-31
 tags:
   - label: Entrepreneurship
     value: entrepreneurship

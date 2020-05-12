@@ -8,7 +8,7 @@ description: A short introduction to PDF.js which will guide you through the
   installation of this library aimed to manipulate PDF files within your web
   interface.
 image: ../images/blog/pdfjs.png
-date: 1420070400000
+date: 2015-05-18
 tags:
   - label: Under the hood
     value: under-the-hood

@@ -6,7 +6,7 @@ title: Backup gem
 author: Philippe V.
 description: The ultimate tool to manage your backup policy !
 image: null
-date: 1356998400000
+date: 2013-11-15
 tags:
   - label: Under the hood
     value: under-the-hood

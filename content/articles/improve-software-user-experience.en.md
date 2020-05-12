@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Your software's user experience is a crucial factor in the success
   of your SaaS solution. In this article, discover 5 ways to improve it.
 image: ../images/blog/improve-user-experience-software.png
-date: 1546300800000
+date: 2019-10-18
 tags:
   - label: SaaS development
     value: saas-development

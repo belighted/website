@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Your choice of app development company will make (or break) your
   startup - so we've created a simple strategy for vetting app developers.
 image: ../images/blog/8%20Questions%20to%20Ask%20Before%20Hiring%20App%20Development%20Companies.jpg
-date: 1483228800000
+date: 2017-07-07
 tags:
   - label: The Belighted Way
     value: the-belighted-way

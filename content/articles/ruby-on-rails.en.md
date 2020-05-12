@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Ruby on Rails. See what you need to know about this jewel of a
   language/framework pair if you’re considering dev of your app.
 image: ../images/blog/Demystifier%20ruby%20on%20rails.png
-date: 1546300800000
+date: 2019-03-14
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

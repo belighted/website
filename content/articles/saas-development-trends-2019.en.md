@@ -7,7 +7,7 @@ author: Nicolas Jacobeus
 description: Discover the SaaS development trends of 2019 ! SaaS is evolving
   quickly, shaped by technological advances and emerging consumer needs.
 image: ../images/blog/Sans%20titre%20%283%29-1.png
-date: 1546300800000
+date: 2019-09-10
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

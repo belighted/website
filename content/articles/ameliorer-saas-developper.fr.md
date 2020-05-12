@@ -10,7 +10,7 @@ description: >+
 
 
 image: ../images/blog/N10FROK.png
-date: 1546300800000
+date: 2019-09-20
 tags:
   - label: SaaS development
     value: saas-development

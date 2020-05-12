@@ -8,7 +8,7 @@ description: Ruby on Rails. Voici ce que vous devez savoir sur ce bijou de
   langage de programmation/framework si vous envisagez de développer votre
   application.
 image: ../images/blog/Sans%20titre%20%285%29-3.png
-date: 1577836800000
+date: 2020-02-03
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development

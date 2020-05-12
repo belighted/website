@@ -6,7 +6,7 @@ title: Handcrafted xml files with Ruby!
 author: Stéphane A.
 description: How to easily write your own XML files in Ruby ! 2 methods accessible for all !
 image: ../images/blog/%20tech%20standard%20image-1.png
-date: 1388534400000
+date: 2014-02-12
 tags:
   - label: Under the hood
     value: under-the-hood

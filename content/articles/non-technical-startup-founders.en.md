@@ -8,7 +8,7 @@ description: Founding a software startup does not require technical skills. But
   many non-tech skills are important for success. A good development agency
   partner can help.
 image: ../images/blog/futuristic-technology-interface.jpg
-date: 1483228800000
+date: 2017-11-27
 tags:
   - label: Product development / Continuous Development
     value: product-development-continuous-development
