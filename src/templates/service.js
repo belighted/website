@@ -2,6 +2,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
 import Slices from "../components/slices/Slices";
+import HubspotForm from "../components/forms/HubspotForm";
 
 const ServicePage = ({
   data: {
@@ -16,7 +17,15 @@ const ServicePage = ({
     page={`/services/${service.slug}`}
     title={service.title}
   >
-    <article>{service.slices && <Slices slices={service.slices} />}</article>
+    <div className="o-wrapper l-content-sidebar">
+      <article>{service.slices && <Slices slices={service.slices} />}</article>
+      {service.aside && (
+        <aside className="u-padding-vertical">
+          <h2 className="c-heading c-heading--3">{service.aside.title}</h2>
+          <HubspotForm formId={service.aside.formId} />
+        </aside>
+      )}
+    </div>
   </Layout>
 );
 
@@ -24,6 +33,11 @@ export const query = graphql`
   query($slug: String!, $lang: String!) {
     servicesYaml(slug: { eq: $slug }, lang: { eq: $lang }) {
       slug
+      layout
+      aside {
+        title
+        formId
+      }
       title
       slices {
         title

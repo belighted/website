@@ -16,7 +16,7 @@ const ResourcePage = ({ data: { resourcesYaml: post }, pageContext }) => (
         <GatsbyImage fluid={post.image.childImageSharp.fluid} />
       </div>
       {post.aside && (
-        <aside className="c-resource__form">
+        <aside className="c-resource__form u-padding-vertical">
           <h2 className="c-heading c-heading--3">{post.aside.title}</h2>
           <HubspotForm formId={post.aside.formId} />
         </aside>
