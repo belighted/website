@@ -3,7 +3,7 @@ import { graphql } from "gatsby";
 import Layout from "../components/layout/Layout";
 import Slices from "../components/slices/Slices";
 import HubspotForm from "../components/forms/HubspotForm";
-
+import classNames from "classnames";
 const ServicePage = ({
   data: {
     servicesYaml: service,
@@ -17,7 +17,12 @@ const ServicePage = ({
     page={`/services/${service.slug}`}
     title={service.title}
   >
-    <div className="o-wrapper l-content-sidebar">
+    <div
+      className={classNames(
+        "o-wrapper",
+        service.aside ? "l-content-sidebar" : null
+      )}
+    >
       <article>{service.slices && <Slices slices={service.slices} />}</article>
       {service.aside && (
         <aside className="u-padding-vertical">
