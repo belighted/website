@@ -4,6 +4,10 @@ slug: "ux-review"
 originalPath: "https://www.belighted.com/ux-review"
 title: "User Experience Audit"
 layout: "with-form"
+aside:
+  title: Chat with us
+  subtitle:  Get your UX Audit Report now.
+  formId: 43584890-cd98-4985-ab1f-8cafcc61ab91
 slices:
   - id: "f6207bbf-b388-43fa-9281-851289d3b01f"
     type: "hero"

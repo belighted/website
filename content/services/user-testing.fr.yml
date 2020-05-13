@@ -5,6 +5,9 @@ originalPath: "https://www.belighted.com/user-testing"
 title: "Tests Utilisateurs"
 subtitle: Obtenir du feedback précieux de la part des utilisateurs est la première étape vers un excellent produit qui séduira vos clients.
 layout: "with-form"
+aside:
+  title: Contactez-nous
+  formId: f2b1fbc6-6f48-4c8a-bc62-fa996ecfe986
 slices:
   - id: "0a73bf2f-8666-4117-a78c-8deb0cf4ff8b"
     type: "hero"

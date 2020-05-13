@@ -5,6 +5,9 @@ originalPath: "https://www.belighted.com/code-review"
 title: "Revue de code \n Ruby on Rails"
 subtitle: "Arrêtez de perdre du temps et de l'argent dans du mauvais code."
 layout: "with-form"
+aside:
+  title: Contactez-nous
+  formId: f2b1fbc6-6f48-4c8a-bc62-fa996ecfe986
 slices:
   - id: "3181d227-5329-444c-aaea-91e3c6e523b1"
     type: "hero"

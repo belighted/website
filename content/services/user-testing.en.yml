@@ -4,6 +4,10 @@ slug: "user-testing"
 originalPath: "https://www.belighted.com/user-testing"
 title: "User Testing"
 layout: "with-form"
+aside:
+  title: Chat with us
+  subtitle: Evaluate & Optimize your App now.
+  formId: 43584890-cd98-4985-ab1f-8cafcc61ab91
 slices:
   - id: "0a73bf2f-8666-4117-a78c-8deb0cf4ff8b"
     type: "hero"
@@ -16,10 +20,10 @@ slices:
     image: null
     title: "In 2 weeks, User Testing sessions are designed to evaluate &amp; optimize your app."
     subtitle: "Chat with us"
-    body: "<p><br /><em>“The objective is to gather qualitative feedback from users to improve the positioning of the product on the market &amp; to enhance the global user experience (UX) of the application.”</em></p><p>Lucile Gratier de St Louis, UX Consultant, Belighted</p><p><strong><br />What we will take care of :</strong></p><ul><li>Planning &amp; preparing the user testing sessions (venue, tests scenarios, food/drinks)</li><li>Finding the right candidates, screening them, etc.</li><li>Running and monitoring the User Testing sessions</li><li>Recap of the main observations in an action plan with priorities to implement</li></ul>Evaluate &amp; Optimize your App now.We respect your <a href=\"https://www.belighted.com/privacy-policy?hsLang=en\" target=\"_blank\">privacy</a>."
+    body: '<p><br /><em>“The objective is to gather qualitative feedback from users to improve the positioning of the product on the market &amp; to enhance the global user experience (UX) of the application.”</em></p><p>Lucile Gratier de St Louis, UX Consultant, Belighted</p><p><strong><br />What we will take care of :</strong></p><ul><li>Planning &amp; preparing the user testing sessions (venue, tests scenarios, food/drinks)</li><li>Finding the right candidates, screening them, etc.</li><li>Running and monitoring the User Testing sessions</li><li>Recap of the main observations in an action plan with priorities to implement</li></ul>Evaluate &amp; Optimize your App now.We respect your <a href="https://www.belighted.com/privacy-policy?hsLang=en" target="_blank">privacy</a>.'
   - id: "2198ea1a-1a7b-481a-b669-8a3d47457bf0"
     type: "hero"
     image: null
-    title: "Trusted by 150+ leading brands in Belgium &amp; Europe\"Nicolas' advice brought me confidence and gave me clear steps that helped me maximize my chances of success.”<p><strong>Vincent Leroy</strong><br />CEO, Neveo</p>"
+    title: 'Trusted by 150+ leading brands in Belgium &amp; Europe"Nicolas'' advice brought me confidence and gave me clear steps that helped me maximize my chances of success.”<p><strong>Vincent Leroy</strong><br />CEO, Neveo</p>'
     subtitle: null
     body: null

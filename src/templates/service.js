@@ -22,6 +22,9 @@ const ServicePage = ({
       {service.aside && (
         <aside className="u-padding-vertical">
           <h2 className="c-heading c-heading--3">{service.aside.title}</h2>
+          {service.aside.subtitle && (
+            <h3 className="c-heading c-heading--4">{service.aside.subtitle}</h3>
+          )}
           <HubspotForm formId={service.aside.formId} />
         </aside>
       )}
@@ -36,6 +39,7 @@ export const query = graphql`
       layout
       aside {
         title
+        subtitle
         formId
       }
       title
