@@ -12,6 +12,13 @@ const WhatIsSaas = () => {
         nodes {
           frontmatter {
             lang
+            images {
+              childImageSharp {
+                fluid {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           body
         }
@@ -19,8 +26,16 @@ const WhatIsSaas = () => {
     }
   `);
   const lang = useContext(I18nContext);
-  const { body } = nodes.find(n => n.frontmatter.lang === lang);
-  return <MDXRenderer>{body}</MDXRenderer>;
+  const {
+    body,
+    frontmatter: { images }
+  } = nodes.find(n => n.frontmatter.lang === lang);
+
+  return (
+    <MDXRenderer images={images.map(i => i.childImageSharp)}>
+      {body}
+    </MDXRenderer>
+  );
 };
 
 export default WhatIsSaas;

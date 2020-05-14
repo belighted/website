@@ -1,32 +1,23 @@
 ---
 slug: what-is-saas
 lang: en
+images:
+  - ../images/splits/what-is-saas.png
 ---
 
-### What is saas
+import GatsbyImage from "gatsby-image"
+import {Link} from "gatsby"
 
-<p>
-  <img
-    src="/content/images/legacy/rpskrH8fQ8mXYMCIZfefG.png"
-    alt="what-is-saas-2"
-  />
-  Everything You Need to Know About Moving to a SaaS Model.&nbsp;
-  <strong>
-    <a
-      href="https://www.belighted.com/saas-guide-to-software-as-service"
-      rel=" noopener"
-    >
-      &nbsp;
-    </a>
-  </strong>
-</p>
-<p>
-  <strong>
-    <a
-      href="https://www.belighted.com/saas-guide-to-software-as-service"
-      rel=" noopener"
-    >
-      Get the Guide Now →
-    </a>
-  </strong>
-</p>
+<div className="o-box o-box--dark c-wysiwig c-wysiwig--dark">
+    <GatsbyImage fluid={props.images[0].fluid} />
+    <h3>What is saas</h3>
+    <p>
+        Everything You Need to Know About Moving to a SaaS Model
+    </p>
+    <p>
+        <Link to="/resources/saas-guide-to-software-as-service">
+            <strong>Get the Guide Now →</strong>
+        </Link>
+    </p>
+
+</div>
