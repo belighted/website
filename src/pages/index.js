@@ -6,13 +6,11 @@ import { findSection, Section } from "../components/layout/Section";
 import { graphql } from "gatsby";
 import Hero from "../components/home/hero/Hero";
 import HomeProcess from "../components/home/process/Process";
-import * as PropTypes from "prop-types";
 import Cases from "../components/home/cases/Cases";
 import Statistics from "../components/home/statistics/Statistics";
 import Clients from "../components/home/clients/Clients";
 import LastScene from "../components/splits/LastScene";
 
-Cases.propTypes = { sections: PropTypes.any };
 export default function Homepage({
   pageContext,
   data: {
